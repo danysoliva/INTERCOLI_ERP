@@ -1,4 +1,6 @@
 ﻿
+using DevExpress.XtraTab;
+
 namespace ERP_INTECOLI
 {
     partial class frmMainMenu
@@ -30,13 +32,22 @@ namespace ERP_INTECOLI
         private void InitializeComponent()
         {
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.TabAdministracion = new DevExpress.XtraTab.XtraTabPage();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
+            this.navBarEstudiantes = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarSeparatorItem2 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
+            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarSeparatorItem3 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
-            this.xtraTabPage1.SuspendLayout();
+            this.TabAdministracion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,55 +55,132 @@ namespace ERP_INTECOLI
             // 
             this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 83);
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 63);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(858, 476);
+            this.xtraTabControl1.SelectedTabPage = this.TabAdministracion;
+            this.xtraTabControl1.Size = new System.Drawing.Size(1036, 644);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
+            this.TabAdministracion,
             this.xtraTabPage2});
             // 
-            // xtraTabPage1
+            // TabAdministracion
             // 
-            this.xtraTabPage1.Controls.Add(this.navBarControl1);
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(856, 451);
-            this.xtraTabPage1.Text = "xtraTabPage1";
-            // 
-            // xtraTabPage2
-            // 
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(856, 451);
-            this.xtraTabPage2.Text = "xtraTabPage2";
+            this.TabAdministracion.Controls.Add(this.navBarControl1);
+            this.TabAdministracion.Name = "TabAdministracion";
+            this.TabAdministracion.Size = new System.Drawing.Size(1034, 619);
+            this.TabAdministracion.Text = "Administracion";
             // 
             // navBarControl1
             // 
             this.navBarControl1.ActiveGroup = this.navBarGroup1;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup1});
+            this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.navBarItem1,
+            this.navBarItem2,
+            this.navBarSeparatorItem1,
+            this.navBarEstudiantes,
+            this.navBarItem4,
+            this.navBarItem5,
+            this.navBarSeparatorItem2,
+            this.navBarItem3,
+            this.navBarSeparatorItem3});
             this.navBarControl1.Location = new System.Drawing.Point(3, 3);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.Size = new System.Drawing.Size(140, 445);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 183;
+            this.navBarControl1.Size = new System.Drawing.Size(183, 535);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
             // navBarGroup1
             // 
-            this.navBarGroup1.Caption = "navBarGroup1";
+            this.navBarGroup1.Caption = "Acciones";
+            this.navBarGroup1.Expanded = true;
+            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem1),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarEstudiantes),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem5),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem2),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem3)});
             this.navBarGroup1.Name = "navBarGroup1";
+            // 
+            // navBarItem1
+            // 
+            this.navBarItem1.Caption = "navBarItem1";
+            this.navBarItem1.Name = "navBarItem1";
+            // 
+            // navBarItem2
+            // 
+            this.navBarItem2.Caption = "navBarItem2";
+            this.navBarItem2.Name = "navBarItem2";
+            // 
+            // navBarSeparatorItem1
+            // 
+            this.navBarSeparatorItem1.CanDrag = false;
+            this.navBarSeparatorItem1.Enabled = false;
+            this.navBarSeparatorItem1.Hint = null;
+            this.navBarSeparatorItem1.Name = "navBarSeparatorItem1";
+            // 
+            // navBarEstudiantes
+            // 
+            this.navBarEstudiantes.Caption = "Estudiantes";
+            this.navBarEstudiantes.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.Estudiantex32;
+            this.navBarEstudiantes.Name = "navBarEstudiantes";
+            this.navBarEstudiantes.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarEstudiantes_LinkClicked);
+            // 
+            // navBarItem4
+            // 
+            this.navBarItem4.Caption = "Niveles Academicos";
+            this.navBarItem4.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.Niveles_x32;
+            this.navBarItem4.Name = "navBarItem4";
+            // 
+            // navBarItem5
+            // 
+            this.navBarItem5.Caption = "Instructores";
+            this.navBarItem5.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.maestro_x32;
+            this.navBarItem5.Name = "navBarItem5";
+            // 
+            // navBarSeparatorItem2
+            // 
+            this.navBarSeparatorItem2.CanDrag = false;
+            this.navBarSeparatorItem2.Enabled = false;
+            this.navBarSeparatorItem2.Hint = null;
+            this.navBarSeparatorItem2.Name = "navBarSeparatorItem2";
+            // 
+            // navBarItem3
+            // 
+            this.navBarItem3.Caption = "Matricula";
+            this.navBarItem3.Name = "navBarItem3";
+            // 
+            // navBarSeparatorItem3
+            // 
+            this.navBarSeparatorItem3.CanDrag = false;
+            this.navBarSeparatorItem3.Enabled = false;
+            this.navBarSeparatorItem3.Hint = null;
+            this.navBarSeparatorItem3.Name = "navBarSeparatorItem3";
+            // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(1034, 619);
+            this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 559);
+            this.ClientSize = new System.Drawing.Size(1036, 707);
             this.Controls.Add(this.xtraTabControl1);
             this.Name = "frmMainMenu";
             this.Text = "frmMainMenu";
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
-            this.xtraTabPage1.ResumeLayout(false);
+            this.TabAdministracion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.ResumeLayout(false);
 
@@ -101,9 +189,18 @@ namespace ERP_INTECOLI
         #endregion
 
         private XtraTabControl xtraTabControl1;
-        private XtraTabPage xtraTabPage1;
+        private XtraTabPage TabAdministracion;
         private XtraTabPage xtraTabPage2;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
+        private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem1;
+        private DevExpress.XtraNavBar.NavBarItem navBarEstudiantes;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem4;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem5;
+        private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem2;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem3;
+        private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem3;
     }
 }
