@@ -10,7 +10,7 @@ namespace ERP_INTECOLI.Clases
 {
     public class UserLogin
     {
-        public GrupoUser GrupoUsuario;
+        //public GrupoUser GrupoUsuario;
         private bool recuperado;
         private int id;
         private int idGrupo;

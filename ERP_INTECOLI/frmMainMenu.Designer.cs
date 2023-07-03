@@ -53,12 +53,11 @@ namespace ERP_INTECOLI
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 63);
+            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.TabAdministracion;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1036, 644);
+            this.xtraTabControl1.Size = new System.Drawing.Size(212, 829);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabAdministracion,
@@ -68,7 +67,7 @@ namespace ERP_INTECOLI
             // 
             this.TabAdministracion.Controls.Add(this.navBarControl1);
             this.TabAdministracion.Name = "TabAdministracion";
-            this.TabAdministracion.Size = new System.Drawing.Size(1034, 619);
+            this.TabAdministracion.Size = new System.Drawing.Size(210, 804);
             this.TabAdministracion.Text = "Administracion";
             // 
             // navBarControl1
@@ -89,7 +88,7 @@ namespace ERP_INTECOLI
             this.navBarControl1.Location = new System.Drawing.Point(3, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 183;
-            this.navBarControl1.Size = new System.Drawing.Size(183, 535);
+            this.navBarControl1.Size = new System.Drawing.Size(183, 475);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -167,17 +166,19 @@ namespace ERP_INTECOLI
             // xtraTabPage2
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1034, 619);
+            this.xtraTabPage2.Size = new System.Drawing.Size(185, 741);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 707);
+            this.ClientSize = new System.Drawing.Size(1356, 829);
             this.Controls.Add(this.xtraTabControl1);
+            this.IsMdiContainer = true;
             this.Name = "frmMainMenu";
-            this.Text = "frmMainMenu";
+            this.Text = "ERP - Success English Academy System";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.TabAdministracion.ResumeLayout(false);

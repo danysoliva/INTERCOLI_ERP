@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Administracion.Estudiantes;
+using Infragistics.Win.UltraWinGrid;
 
 namespace ERP_INTECOLI.Administracion.Estudiantes
 {
@@ -23,6 +24,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             InitializeComponent();
             UsuarioLogeado = pUserLogin;
             load_data();
+            txtParametro.Focus();
         }
 
         private void load_data()
@@ -31,7 +33,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             {
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("", conn);
+                SqlCommand cmd = new SqlCommand("sp_load_estudiantes", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ver_todos", tsVerTodos.IsOn);
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
@@ -50,9 +52,35 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             load_data();
         }
 
-        private void cmbBuscar_Click(object sender, EventArgs e)
+        private void txtParametro_ValueChanged(object sender, EventArgs e)
         {
+            UltraGridBand band = this.grDetalle.DisplayLayout.Bands[0];
+            band.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
+            band.Columns["concatenacion"].AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
+            band.Override.RowFilterMode = RowFilterMode.AllRowsInBand;
+            band.ColumnFilters["concatenacion"].FilterConditions.Clear();
+            this.grDetalle.DisplayLayout.Bands[0].ColumnFilters.ClearAllFilters();
 
+            if (this.grDetalle.Rows.Count > 0)
+            {
+                if (txtParametro.Value != DBNull.Value && txtParametro.Value != null)
+                {
+                    this.grDetalle.DisplayLayout.Bands[0].ColumnFilters["concatenacion"].FilterConditions.Add(FilterComparisionOperator.Like, "*" + txtParametro.Value + "*");
+                }
+            }
+            if (string.IsNullOrEmpty(this.txtParametro.Text))
+            {
+                load_data();
+            }
+        }
+
+        private void cmdNuevo_Click(object sender, EventArgs e)
+        {
+            frmEstudiantes frm = new frmEstudiantes(UsuarioLogeado, frmEstudiantes.TipoEdicion.Nuevo);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                load_data();
+            }
         }
     }
 }

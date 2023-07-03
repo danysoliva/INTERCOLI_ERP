@@ -100,6 +100,7 @@
     </Compile>
     <Compile Include="Clases\CajaDialogo.cs" />
     <Compile Include="Clases\DataOperations.cs" />
+    <Compile Include="Clases\Estudiante.cs" />
     <Compile Include="Clases\Globals.cs" />
     <Compile Include="Clases\UserLogin.cs" />
     <Compile Include="Form1.cs">

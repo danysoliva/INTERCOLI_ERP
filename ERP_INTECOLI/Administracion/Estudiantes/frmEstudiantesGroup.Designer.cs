@@ -31,13 +31,13 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         {
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("estudiantes", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("id_estudiante");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("id_estudiante", -1, null, 0, Infragistics.Win.UltraWinGrid.SortIndicator.Ascending, false);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("numero_identidad");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("nombres");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("apellidos");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("direccion");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("fecha_nacimiento");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("fecha_ingreso", -1, null, 0, Infragistics.Win.UltraWinGrid.SortIndicator.Ascending, false);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("fecha_ingreso");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("habilitado");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("sexo");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("correo");
@@ -61,7 +61,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
             this.cmdNuevo = new System.Windows.Forms.Button();
-            this.cmbBuscar = new System.Windows.Forms.Button();
             this.txtParametro = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.ultraLabel1 = new Infragistics.Win.Misc.UltraLabel();
             this.tsVerTodos = new DevExpress.XtraEditors.ToggleSwitch();
@@ -80,30 +79,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdNuevo.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdNuevo.Location = new System.Drawing.Point(572, 22);
+            this.cmdNuevo.Location = new System.Drawing.Point(472, 22);
             this.cmdNuevo.Name = "cmdNuevo";
             this.cmdNuevo.Size = new System.Drawing.Size(169, 43);
             this.cmdNuevo.TabIndex = 9;
             this.cmdNuevo.Text = "Agregar Estudiante";
             this.cmdNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdNuevo.UseVisualStyleBackColor = false;
-            // 
-            // cmbBuscar
-            // 
-            this.cmbBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cmbBuscar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cmbBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbBuscar.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.cmbBuscar.Image = global::ERP_INTECOLI.Properties.Resources.anadir;
-            this.cmbBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmbBuscar.Location = new System.Drawing.Point(467, 22);
-            this.cmbBuscar.Name = "cmbBuscar";
-            this.cmbBuscar.Size = new System.Drawing.Size(99, 43);
-            this.cmbBuscar.TabIndex = 8;
-            this.cmbBuscar.Text = "Buscar";
-            this.cmbBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmbBuscar.UseVisualStyleBackColor = false;
-            this.cmbBuscar.Click += new System.EventHandler(this.cmbBuscar_Click);
+            this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
             // 
             // txtParametro
             // 
@@ -112,6 +95,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.Size = new System.Drawing.Size(270, 26);
             this.txtParametro.TabIndex = 7;
+            this.txtParametro.ValueChanged += new System.EventHandler(this.txtParametro_ValueChanged);
             // 
             // ultraLabel1
             // 
@@ -130,7 +114,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.tsVerTodos.Name = "tsVerTodos";
             this.tsVerTodos.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.tsVerTodos.Properties.Appearance.Options.UseFont = true;
-            this.tsVerTodos.Properties.OffText = "Ver Todos";
+            this.tsVerTodos.Properties.OffText = "Deshabilitados";
             this.tsVerTodos.Properties.OnText = "Habilitados";
             this.tsVerTodos.Size = new System.Drawing.Size(168, 24);
             this.tsVerTodos.TabIndex = 10;
@@ -138,6 +122,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             // grDetalle
             // 
+            this.grDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grDetalle.DataMember = "estudiantes";
             this.grDetalle.DataSource = this.dsEstudiantes1;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
@@ -146,7 +133,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.grDetalle.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;
             ultraGridColumn1.Header.Caption = "Id";
             ultraGridColumn1.Header.VisiblePosition = 0;
-            ultraGridColumn1.Width = 60;
+            ultraGridColumn1.Width = 57;
             ultraGridColumn2.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn2.Header.VisiblePosition = 1;
             ultraGridColumn2.Width = 116;
@@ -164,13 +151,13 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             ultraGridColumn6.Width = 110;
             ultraGridColumn7.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn7.Header.VisiblePosition = 6;
-            ultraGridColumn7.Width = 118;
+            ultraGridColumn7.Width = 119;
             ultraGridColumn8.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn8.Header.VisiblePosition = 7;
-            ultraGridColumn8.Width = 69;
+            ultraGridColumn8.Width = 70;
             ultraGridColumn9.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn9.Header.VisiblePosition = 8;
-            ultraGridColumn9.Width = 59;
+            ultraGridColumn9.Width = 60;
             ultraGridColumn10.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn10.Header.VisiblePosition = 9;
             ultraGridColumn10.Width = 77;
@@ -237,6 +224,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             appearance10.BackColor = System.Drawing.SystemColors.Highlight;
             appearance10.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.grDetalle.DisplayLayout.Override.ActiveRowAppearance = appearance10;
+            this.grDetalle.DisplayLayout.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
             this.grDetalle.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
             this.grDetalle.DisplayLayout.Override.BorderStyleFilterRow = Infragistics.Win.UIElementBorderStyle.Dashed;
             this.grDetalle.DisplayLayout.Override.BorderStyleHeader = Infragistics.Win.UIElementBorderStyle.Dashed;
@@ -269,7 +257,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.grDetalle.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.grDetalle.DisplayLayout.UseFixedHeaders = true;
             this.grDetalle.DisplayLayout.ViewStyle = Infragistics.Win.UltraWinGrid.ViewStyle.SingleBand;
-            this.grDetalle.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.grDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grDetalle.Location = new System.Drawing.Point(0, 91);
             this.grDetalle.Name = "grDetalle";
@@ -289,11 +276,11 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.Controls.Add(this.grDetalle);
             this.Controls.Add(this.tsVerTodos);
             this.Controls.Add(this.cmdNuevo);
-            this.Controls.Add(this.cmbBuscar);
             this.Controls.Add(this.txtParametro);
             this.Controls.Add(this.ultraLabel1);
             this.Name = "frmEstudiantesGroup";
             this.Text = "Estudiantes";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.txtParametro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsVerTodos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).EndInit();
@@ -306,7 +293,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         #endregion
 
         private System.Windows.Forms.Button cmdNuevo;
-        private System.Windows.Forms.Button cmbBuscar;
         private Infragistics.Win.UltraWinEditors.UltraTextEditor txtParametro;
         private Infragistics.Win.Misc.UltraLabel ultraLabel1;
         private DevExpress.XtraEditors.ToggleSwitch tsVerTodos;
