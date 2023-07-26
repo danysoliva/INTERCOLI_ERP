@@ -32,16 +32,11 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstudiantes));
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("detalle_telefonos", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("id");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("id_estudiante");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("telefono");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("tipo_telefono_id");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("editar");
+            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("niveles_academicos", -1);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("id_nivel");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("descripcion");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("tipo_descripcion", -1, null, 0, Infragistics.Win.UltraWinGrid.SortIndicator.Descending, false);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("eliminar");
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
@@ -51,68 +46,28 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("detalle_telefonos", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("id");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("id_estudiante");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("telefono");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("tipo_telefono_id");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("editar");
-            Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("tipo_descripcion", -1, null, 0, Infragistics.Win.UltraWinGrid.SortIndicator.Descending, false);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("eliminar");
-            Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance23 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance28 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance35 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand3 = new Infragistics.Win.UltraWinGrid.UltraGridBand("niveles_academicos", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("id_nivel");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("descripcion");
-            Infragistics.Win.Appearance appearance36 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance37 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance38 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance39 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance40 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance41 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance42 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance43 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance44 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance45 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance46 = new Infragistics.Win.Appearance();
             this.label2 = new System.Windows.Forms.Label();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.tabFicha = new DevExpress.XtraTab.XtraTabPage();
+            this.tsEstado = new DevExpress.XtraEditors.ToggleSwitch();
             this.cmdNuevo = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.cmdGuardar = new System.Windows.Forms.Button();
-            this.cmdAgregarTelefono = new System.Windows.Forms.Button();
+            this.btnTelefono_Rtn = new System.Windows.Forms.Button();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
             this.tabTelefonos = new DevExpress.XtraTab.XtraTabPage();
-            this.k = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.grdTelefonos = new DevExpress.XtraGrid.GridControl();
+            this.grdvTelefonos = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabRTN = new DevExpress.XtraTab.XtraTabPage();
-            this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.grdRtn = new DevExpress.XtraGrid.GridControl();
+            this.grdvRTN = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.rdGraduado = new System.Windows.Forms.RadioButton();
             this.rdDesertor = new System.Windows.Forms.RadioButton();
             this.chkReingreso = new System.Windows.Forms.CheckBox();
             this.chkSeguimientoSaldo = new System.Windows.Forms.CheckBox();
             this.cbxNivelIngreso = new Infragistics.Win.UltraWinGrid.UltraCombo();
+            this.dsEstudiantesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsEstudiantes1 = new ERP_INTECOLI.Administracion.Estudiantes.dsEstudiantes();
             this.label9 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -124,8 +79,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.label14 = new System.Windows.Forms.Label();
             this.txtRecomendo = new System.Windows.Forms.TextBox();
             this.gridZonas = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.zonasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.dateEdit3 = new DevExpress.XtraEditors.DateEdit();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tsTipoPago = new DevExpress.XtraEditors.ToggleSwitch();
@@ -146,26 +101,34 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tabLogAcceso = new DevExpress.XtraTab.XtraTabPage();
-            this.dsEstudiantes = new ERP_INTECOLI.Administracion.Estudiantes.dsEstudiantes();
-            this.dsEstudiantesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.zonasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltelefono = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltipo_telefono_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coleditar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltipo_descripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coleliminar = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tabFicha.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tsEstado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
             this.xtraTabControl2.SuspendLayout();
             this.tabTelefonos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.k)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTelefonos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvTelefonos)).BeginInit();
             this.tabRTN.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdRtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvRTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxNivelIngreso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantes1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridZonas.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsTipoPago.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaIngreso.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaIngreso.Properties.CalendarTimeProperties)).BeginInit();
@@ -174,16 +137,13 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             ((System.ComponentModel.ISupportInitialize)(this.txtApellido.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdentidad.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(239, 9);
+            this.label2.Location = new System.Drawing.Point(261, -1);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(175, 24);
             this.label2.TabIndex = 3;
@@ -196,7 +156,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.xtraTabControl1.Location = new System.Drawing.Point(2, 41);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.tabFicha;
-            this.xtraTabControl1.Size = new System.Drawing.Size(707, 572);
+            this.xtraTabControl1.Size = new System.Drawing.Size(842, 572);
             this.xtraTabControl1.TabIndex = 4;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabFicha,
@@ -204,10 +164,11 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             // tabFicha
             // 
+            this.tabFicha.Controls.Add(this.tsEstado);
             this.tabFicha.Controls.Add(this.cmdNuevo);
             this.tabFicha.Controls.Add(this.cmdCancelar);
             this.tabFicha.Controls.Add(this.cmdGuardar);
-            this.tabFicha.Controls.Add(this.cmdAgregarTelefono);
+            this.tabFicha.Controls.Add(this.btnTelefono_Rtn);
             this.tabFicha.Controls.Add(this.xtraTabControl2);
             this.tabFicha.Controls.Add(this.rdGraduado);
             this.tabFicha.Controls.Add(this.rdDesertor);
@@ -221,7 +182,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.tabFicha.Controls.Add(this.cmdUserWeb);
             this.tabFicha.Controls.Add(this.groupControl1);
             this.tabFicha.Controls.Add(this.gridZonas);
-            this.tabFicha.Controls.Add(this.dateEdit3);
             this.tabFicha.Controls.Add(this.label12);
             this.tabFicha.Controls.Add(this.label11);
             this.tabFicha.Controls.Add(this.tsTipoPago);
@@ -242,8 +202,19 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.tabFicha.Controls.Add(this.label6);
             this.tabFicha.Controls.Add(this.label7);
             this.tabFicha.Name = "tabFicha";
-            this.tabFicha.Size = new System.Drawing.Size(705, 547);
+            this.tabFicha.Size = new System.Drawing.Size(840, 547);
             this.tabFicha.Text = "Ficha";
+            // 
+            // tsEstado
+            // 
+            this.tsEstado.Location = new System.Drawing.Point(225, 143);
+            this.tsEstado.Name = "tsEstado";
+            this.tsEstado.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsEstado.Properties.Appearance.Options.UseFont = true;
+            this.tsEstado.Properties.OffText = "Deshabilitado";
+            this.tsEstado.Properties.OnText = "Habilitado";
+            this.tsEstado.Size = new System.Drawing.Size(172, 24);
+            this.tsEstado.TabIndex = 56;
             // 
             // cmdNuevo
             // 
@@ -251,10 +222,11 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdNuevo.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.cmdNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdNuevo.Image = global::ERP_INTECOLI.Properties.Resources.anadir;
             this.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdNuevo.Location = new System.Drawing.Point(355, 500);
+            this.cmdNuevo.Location = new System.Drawing.Point(441, 500);
             this.cmdNuevo.Name = "cmdNuevo";
-            this.cmdNuevo.Size = new System.Drawing.Size(92, 40);
+            this.cmdNuevo.Size = new System.Drawing.Size(92, 44);
             this.cmdNuevo.TabIndex = 54;
             this.cmdNuevo.Text = "Nuevo";
             this.cmdNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -269,10 +241,11 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdCancelar.FlatAppearance.BorderSize = 2;
             this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
             this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdCancelar.Location = new System.Drawing.Point(571, 500);
+            this.cmdCancelar.Location = new System.Drawing.Point(682, 500);
             this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(92, 40);
+            this.cmdCancelar.Size = new System.Drawing.Size(110, 44);
             this.cmdCancelar.TabIndex = 55;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -285,34 +258,36 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdGuardar.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
             this.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdGuardar.Image = global::ERP_INTECOLI.Properties.Resources.save;
             this.cmdGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdGuardar.Location = new System.Drawing.Point(461, 500);
+            this.cmdGuardar.Location = new System.Drawing.Point(556, 500);
             this.cmdGuardar.Name = "cmdGuardar";
-            this.cmdGuardar.Size = new System.Drawing.Size(92, 40);
+            this.cmdGuardar.Size = new System.Drawing.Size(102, 44);
             this.cmdGuardar.TabIndex = 53;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cmdGuardar.UseVisualStyleBackColor = false;
             // 
-            // cmdAgregarTelefono
+            // btnTelefono_Rtn
             // 
-            this.cmdAgregarTelefono.BackColor = System.Drawing.Color.PaleGreen;
-            this.cmdAgregarTelefono.FlatAppearance.BorderColor = System.Drawing.Color.PaleGreen;
-            this.cmdAgregarTelefono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdAgregarTelefono.Image = ((System.Drawing.Image)(resources.GetObject("cmdAgregarTelefono.Image")));
-            this.cmdAgregarTelefono.Location = new System.Drawing.Point(645, 164);
-            this.cmdAgregarTelefono.Name = "cmdAgregarTelefono";
-            this.cmdAgregarTelefono.Size = new System.Drawing.Size(41, 36);
-            this.cmdAgregarTelefono.TabIndex = 52;
-            this.cmdAgregarTelefono.UseVisualStyleBackColor = false;
+            this.btnTelefono_Rtn.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnTelefono_Rtn.FlatAppearance.BorderColor = System.Drawing.Color.PaleGreen;
+            this.btnTelefono_Rtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTelefono_Rtn.Image = ((System.Drawing.Image)(resources.GetObject("btnTelefono_Rtn.Image")));
+            this.btnTelefono_Rtn.Location = new System.Drawing.Point(769, 164);
+            this.btnTelefono_Rtn.Name = "btnTelefono_Rtn";
+            this.btnTelefono_Rtn.Size = new System.Drawing.Size(41, 36);
+            this.btnTelefono_Rtn.TabIndex = 52;
+            this.btnTelefono_Rtn.UseVisualStyleBackColor = false;
+            this.btnTelefono_Rtn.Click += new System.EventHandler(this.btnTelefono_Rtn_Click);
             // 
             // xtraTabControl2
             // 
-            this.xtraTabControl2.Location = new System.Drawing.Point(355, 187);
+            this.xtraTabControl2.Location = new System.Drawing.Point(408, 187);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.tabTelefonos;
-            this.xtraTabControl2.Size = new System.Drawing.Size(341, 300);
+            this.xtraTabControl2.Size = new System.Drawing.Size(403, 300);
             this.xtraTabControl2.TabIndex = 51;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabTelefonos,
@@ -320,262 +295,75 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             // tabTelefonos
             // 
-            this.tabTelefonos.Controls.Add(this.k);
+            this.tabTelefonos.Appearance.Header.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabTelefonos.Appearance.Header.Options.UseFont = true;
+            this.tabTelefonos.Appearance.HeaderActive.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabTelefonos.Appearance.HeaderActive.Options.UseFont = true;
+            this.tabTelefonos.Controls.Add(this.grdTelefonos);
             this.tabTelefonos.Name = "tabTelefonos";
-            this.tabTelefonos.Size = new System.Drawing.Size(339, 275);
+            this.tabTelefonos.Size = new System.Drawing.Size(401, 272);
             this.tabTelefonos.Text = "Telefonos";
             // 
-            // k
+            // grdTelefonos
             // 
-            this.k.DataMember = "detalle_telefonos";
-            appearance1.BackColor = System.Drawing.SystemColors.Window;
-            appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.k.DisplayLayout.Appearance = appearance1;
-            this.k.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;
-            ultraGridColumn1.Header.VisiblePosition = 0;
-            ultraGridColumn1.Hidden = true;
-            ultraGridColumn1.Width = 47;
-            ultraGridColumn2.Header.VisiblePosition = 1;
-            ultraGridColumn2.Hidden = true;
-            ultraGridColumn2.Width = 95;
-            ultraGridColumn3.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn3.Header.VisiblePosition = 2;
-            ultraGridColumn3.Width = 64;
-            ultraGridColumn4.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn4.Header.Caption = "Tipo";
-            ultraGridColumn4.Header.VisiblePosition = 4;
-            ultraGridColumn4.Hidden = true;
-            ultraGridColumn4.Width = 84;
-            appearance2.Image = ((object)(resources.GetObject("appearance2.Image")));
-            appearance2.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance2.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn5.CellAppearance = appearance2;
-            appearance3.Image = ((object)(resources.GetObject("appearance3.Image")));
-            appearance3.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance3.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn5.CellButtonAppearance = appearance3;
-            ultraGridColumn5.Header.Caption = "Editar";
-            ultraGridColumn5.Header.VisiblePosition = 5;
-            ultraGridColumn5.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn5.Width = 49;
-            ultraGridColumn6.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn6.Header.VisiblePosition = 3;
-            ultraGridColumn6.Width = 176;
-            appearance4.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance4.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn7.CellAppearance = appearance4;
-            appearance5.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance5.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn7.CellButtonAppearance = appearance5;
-            ultraGridColumn7.Header.VisiblePosition = 6;
-            ultraGridColumn7.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn7.Width = 48;
-            ultraGridBand1.Columns.AddRange(new object[] {
-            ultraGridColumn1,
-            ultraGridColumn2,
-            ultraGridColumn3,
-            ultraGridColumn4,
-            ultraGridColumn5,
-            ultraGridColumn6,
-            ultraGridColumn7});
-            ultraGridBand1.Header.FixOnRight = Infragistics.Win.DefaultableBoolean.True;
-            this.k.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
-            this.k.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Dotted;
-            this.k.DisplayLayout.BorderStyleCaption = Infragistics.Win.UIElementBorderStyle.Solid;
-            this.k.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-            appearance6.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance6.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance6.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance6.BorderColor = System.Drawing.SystemColors.Window;
-            this.k.DisplayLayout.GroupByBox.Appearance = appearance6;
-            appearance7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.k.DisplayLayout.GroupByBox.BandLabelAppearance = appearance7;
-            this.k.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Raised;
-            appearance8.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance8.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance8.BackGradientStyle = Infragistics.Win.GradientStyle.HorizontalBump;
-            appearance8.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.k.DisplayLayout.GroupByBox.PromptAppearance = appearance8;
-            this.k.DisplayLayout.LoadStyle = Infragistics.Win.UltraWinGrid.LoadStyle.LoadOnDemand;
-            this.k.DisplayLayout.MaxColScrollRegions = 1;
-            this.k.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance9.BackColor = System.Drawing.SystemColors.Window;
-            appearance9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.k.DisplayLayout.Override.ActiveCellAppearance = appearance9;
-            appearance10.BackColor = System.Drawing.SystemColors.Highlight;
-            appearance10.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.k.DisplayLayout.Override.ActiveRowAppearance = appearance10;
-            this.k.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
-            this.k.DisplayLayout.Override.BorderStyleFilterRow = Infragistics.Win.UIElementBorderStyle.Dashed;
-            this.k.DisplayLayout.Override.BorderStyleHeader = Infragistics.Win.UIElementBorderStyle.Dashed;
-            this.k.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-            appearance11.BackColor = System.Drawing.SystemColors.Window;
-            this.k.DisplayLayout.Override.CardAreaAppearance = appearance11;
-            appearance12.BorderColor = System.Drawing.Color.Silver;
-            appearance12.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.k.DisplayLayout.Override.CellAppearance = appearance12;
-            this.k.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
-            this.k.DisplayLayout.Override.CellPadding = 0;
-            appearance13.BackHatchStyle = Infragistics.Win.BackHatchStyle.LargeGrid;
-            this.k.DisplayLayout.Override.FixedHeaderAppearance = appearance13;
-            appearance14.BackColor = System.Drawing.SystemColors.Control;
-            appearance14.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance14.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance14.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance14.BorderColor = System.Drawing.SystemColors.Window;
-            this.k.DisplayLayout.Override.GroupByRowAppearance = appearance14;
-            appearance15.TextHAlignAsString = "Left";
-            this.k.DisplayLayout.Override.HeaderAppearance = appearance15;
-            this.k.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
-            this.k.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.Standard;
-            appearance16.BackColor = System.Drawing.SystemColors.Window;
-            appearance16.BorderColor = System.Drawing.Color.Silver;
-            this.k.DisplayLayout.Override.RowAppearance = appearance16;
-            this.k.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance17.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.k.DisplayLayout.Override.TemplateAddRowAppearance = appearance17;
-            this.k.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
-            this.k.DisplayLayout.UseFixedHeaders = true;
-            this.k.DisplayLayout.ViewStyle = Infragistics.Win.UltraWinGrid.ViewStyle.SingleBand;
-            this.k.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.k.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.k.Location = new System.Drawing.Point(0, 0);
-            this.k.Name = "k";
-            this.k.Size = new System.Drawing.Size(339, 275);
-            this.k.TabIndex = 1;
+            this.grdTelefonos.DataMember = "detalle_telefonos";
+            this.grdTelefonos.DataSource = this.dsEstudiantes1;
+            this.grdTelefonos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdTelefonos.Location = new System.Drawing.Point(0, 0);
+            this.grdTelefonos.MainView = this.grdvTelefonos;
+            this.grdTelefonos.Name = "grdTelefonos";
+            this.grdTelefonos.Size = new System.Drawing.Size(401, 272);
+            this.grdTelefonos.TabIndex = 0;
+            this.grdTelefonos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdvTelefonos});
+            // 
+            // grdvTelefonos
+            // 
+            this.grdvTelefonos.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid,
+            this.colid_estudiante,
+            this.coltelefono,
+            this.coltipo_telefono_id,
+            this.coleditar,
+            this.coltipo_descripcion,
+            this.coleliminar});
+            this.grdvTelefonos.GridControl = this.grdTelefonos;
+            this.grdvTelefonos.Name = "grdvTelefonos";
             // 
             // tabRTN
             // 
-            this.tabRTN.Controls.Add(this.ultraGrid1);
+            this.tabRTN.Appearance.Header.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabRTN.Appearance.Header.Options.UseFont = true;
+            this.tabRTN.Appearance.HeaderActive.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabRTN.Appearance.HeaderActive.Options.UseFont = true;
+            this.tabRTN.Controls.Add(this.grdRtn);
             this.tabRTN.Name = "tabRTN";
-            this.tabRTN.Size = new System.Drawing.Size(339, 275);
+            this.tabRTN.Size = new System.Drawing.Size(401, 272);
             this.tabRTN.Text = "RTN";
             // 
-            // ultraGrid1
+            // grdRtn
             // 
-            this.ultraGrid1.DataMember = "detalle_telefonos";
-            appearance18.BackColor = System.Drawing.SystemColors.Window;
-            appearance18.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ultraGrid1.DisplayLayout.Appearance = appearance18;
-            this.ultraGrid1.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;
-            ultraGridColumn10.Header.VisiblePosition = 0;
-            ultraGridColumn10.Hidden = true;
-            ultraGridColumn10.Width = 47;
-            ultraGridColumn11.Header.VisiblePosition = 1;
-            ultraGridColumn11.Hidden = true;
-            ultraGridColumn11.Width = 95;
-            ultraGridColumn12.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn12.Header.VisiblePosition = 2;
-            ultraGridColumn12.Width = 64;
-            ultraGridColumn13.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn13.Header.Caption = "Tipo";
-            ultraGridColumn13.Header.VisiblePosition = 4;
-            ultraGridColumn13.Hidden = true;
-            ultraGridColumn13.Width = 84;
-            appearance19.Image = ((object)(resources.GetObject("appearance19.Image")));
-            appearance19.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance19.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn14.CellAppearance = appearance19;
-            appearance20.Image = ((object)(resources.GetObject("appearance20.Image")));
-            appearance20.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance20.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn14.CellButtonAppearance = appearance20;
-            ultraGridColumn14.Header.Caption = "Editar";
-            ultraGridColumn14.Header.VisiblePosition = 5;
-            ultraGridColumn14.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn14.Width = 35;
-            ultraGridColumn15.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn15.Header.VisiblePosition = 3;
-            ultraGridColumn15.Width = 204;
-            appearance21.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance21.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn16.CellAppearance = appearance21;
-            appearance22.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance22.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn16.CellButtonAppearance = appearance22;
-            ultraGridColumn16.Header.VisiblePosition = 6;
-            ultraGridColumn16.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn16.Width = 34;
-            ultraGridBand2.Columns.AddRange(new object[] {
-            ultraGridColumn10,
-            ultraGridColumn11,
-            ultraGridColumn12,
-            ultraGridColumn13,
-            ultraGridColumn14,
-            ultraGridColumn15,
-            ultraGridColumn16});
-            ultraGridBand2.Header.FixOnRight = Infragistics.Win.DefaultableBoolean.True;
-            this.ultraGrid1.DisplayLayout.BandsSerializer.Add(ultraGridBand2);
-            this.ultraGrid1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Dotted;
-            this.ultraGrid1.DisplayLayout.BorderStyleCaption = Infragistics.Win.UIElementBorderStyle.Solid;
-            this.ultraGrid1.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-            appearance23.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance23.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance23.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance23.BorderColor = System.Drawing.SystemColors.Window;
-            this.ultraGrid1.DisplayLayout.GroupByBox.Appearance = appearance23;
-            appearance24.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.ultraGrid1.DisplayLayout.GroupByBox.BandLabelAppearance = appearance24;
-            this.ultraGrid1.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Raised;
-            appearance25.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance25.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance25.BackGradientStyle = Infragistics.Win.GradientStyle.HorizontalBump;
-            appearance25.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.ultraGrid1.DisplayLayout.GroupByBox.PromptAppearance = appearance25;
-            this.ultraGrid1.DisplayLayout.LoadStyle = Infragistics.Win.UltraWinGrid.LoadStyle.LoadOnDemand;
-            this.ultraGrid1.DisplayLayout.MaxColScrollRegions = 1;
-            this.ultraGrid1.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance26.BackColor = System.Drawing.SystemColors.Window;
-            appearance26.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ultraGrid1.DisplayLayout.Override.ActiveCellAppearance = appearance26;
-            appearance27.BackColor = System.Drawing.SystemColors.Highlight;
-            appearance27.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.ultraGrid1.DisplayLayout.Override.ActiveRowAppearance = appearance27;
-            this.ultraGrid1.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
-            this.ultraGrid1.DisplayLayout.Override.BorderStyleFilterRow = Infragistics.Win.UIElementBorderStyle.Dashed;
-            this.ultraGrid1.DisplayLayout.Override.BorderStyleHeader = Infragistics.Win.UIElementBorderStyle.Dashed;
-            this.ultraGrid1.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-            appearance28.BackColor = System.Drawing.SystemColors.Window;
-            this.ultraGrid1.DisplayLayout.Override.CardAreaAppearance = appearance28;
-            appearance29.BorderColor = System.Drawing.Color.Silver;
-            appearance29.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.ultraGrid1.DisplayLayout.Override.CellAppearance = appearance29;
-            this.ultraGrid1.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
-            this.ultraGrid1.DisplayLayout.Override.CellPadding = 0;
-            appearance30.BackHatchStyle = Infragistics.Win.BackHatchStyle.LargeGrid;
-            this.ultraGrid1.DisplayLayout.Override.FixedHeaderAppearance = appearance30;
-            appearance31.BackColor = System.Drawing.SystemColors.Control;
-            appearance31.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance31.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance31.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance31.BorderColor = System.Drawing.SystemColors.Window;
-            this.ultraGrid1.DisplayLayout.Override.GroupByRowAppearance = appearance31;
-            appearance32.TextHAlignAsString = "Left";
-            this.ultraGrid1.DisplayLayout.Override.HeaderAppearance = appearance32;
-            this.ultraGrid1.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
-            this.ultraGrid1.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.Standard;
-            appearance33.BackColor = System.Drawing.SystemColors.Window;
-            appearance33.BorderColor = System.Drawing.Color.Silver;
-            this.ultraGrid1.DisplayLayout.Override.RowAppearance = appearance33;
-            this.ultraGrid1.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance34.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ultraGrid1.DisplayLayout.Override.TemplateAddRowAppearance = appearance34;
-            this.ultraGrid1.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
-            this.ultraGrid1.DisplayLayout.UseFixedHeaders = true;
-            this.ultraGrid1.DisplayLayout.ViewStyle = Infragistics.Win.UltraWinGrid.ViewStyle.SingleBand;
-            this.ultraGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ultraGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ultraGrid1.Location = new System.Drawing.Point(0, 0);
-            this.ultraGrid1.Name = "ultraGrid1";
-            this.ultraGrid1.Size = new System.Drawing.Size(339, 275);
-            this.ultraGrid1.TabIndex = 1;
+            this.grdRtn.DataSource = this.dsEstudiantes1;
+            this.grdRtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdRtn.Location = new System.Drawing.Point(0, 0);
+            this.grdRtn.MainView = this.grdvRTN;
+            this.grdRtn.Name = "grdRtn";
+            this.grdRtn.Size = new System.Drawing.Size(401, 272);
+            this.grdRtn.TabIndex = 1;
+            this.grdRtn.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdvRTN});
+            // 
+            // grdvRTN
+            // 
+            this.grdvRTN.GridControl = this.grdRtn;
+            this.grdvRTN.Name = "grdvRTN";
             // 
             // rdGraduado
             // 
             this.rdGraduado.AutoSize = true;
             this.rdGraduado.Enabled = false;
             this.rdGraduado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.rdGraduado.Location = new System.Drawing.Point(439, 147);
+            this.rdGraduado.Location = new System.Drawing.Point(492, 147);
             this.rdGraduado.Name = "rdGraduado";
             this.rdGraduado.Size = new System.Drawing.Size(87, 20);
             this.rdGraduado.TabIndex = 50;
@@ -588,7 +376,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.rdDesertor.AutoSize = true;
             this.rdDesertor.Enabled = false;
             this.rdDesertor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.rdDesertor.Location = new System.Drawing.Point(355, 147);
+            this.rdDesertor.Location = new System.Drawing.Point(408, 147);
             this.rdDesertor.Name = "rdDesertor";
             this.rdDesertor.Size = new System.Drawing.Size(78, 20);
             this.rdDesertor.TabIndex = 49;
@@ -600,7 +388,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.chkReingreso.AutoSize = true;
             this.chkReingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkReingreso.Location = new System.Drawing.Point(355, 116);
+            this.chkReingreso.Location = new System.Drawing.Point(408, 116);
             this.chkReingreso.Name = "chkReingreso";
             this.chkReingreso.Size = new System.Drawing.Size(178, 20);
             this.chkReingreso.TabIndex = 48;
@@ -611,7 +399,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.chkSeguimientoSaldo.AutoSize = true;
             this.chkSeguimientoSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkSeguimientoSaldo.Location = new System.Drawing.Point(355, 80);
+            this.chkSeguimientoSaldo.Location = new System.Drawing.Point(408, 80);
             this.chkSeguimientoSaldo.Name = "chkSeguimientoSaldo";
             this.chkSeguimientoSaldo.Size = new System.Drawing.Size(141, 20);
             this.chkSeguimientoSaldo.TabIndex = 47;
@@ -622,81 +410,91 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.cbxNivelIngreso.DataMember = "niveles_academicos";
             this.cbxNivelIngreso.DataSource = this.dsEstudiantesBindingSource;
-            appearance35.BackColor = System.Drawing.SystemColors.Window;
-            appearance35.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.cbxNivelIngreso.DisplayLayout.Appearance = appearance35;
-            ultraGridColumn17.Header.Caption = "Nivel";
-            ultraGridColumn17.Header.VisiblePosition = 0;
-            ultraGridColumn18.Header.Caption = "Descripcion";
-            ultraGridColumn18.Header.VisiblePosition = 1;
-            ultraGridBand3.Columns.AddRange(new object[] {
-            ultraGridColumn17,
-            ultraGridColumn18});
-            this.cbxNivelIngreso.DisplayLayout.BandsSerializer.Add(ultraGridBand3);
+            appearance1.BackColor = System.Drawing.SystemColors.Window;
+            appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cbxNivelIngreso.DisplayLayout.Appearance = appearance1;
+            ultraGridColumn1.Header.Caption = "Nivel";
+            ultraGridColumn1.Header.VisiblePosition = 0;
+            ultraGridColumn2.Header.Caption = "Descripcion";
+            ultraGridColumn2.Header.VisiblePosition = 1;
+            ultraGridBand1.Columns.AddRange(new object[] {
+            ultraGridColumn1,
+            ultraGridColumn2});
+            this.cbxNivelIngreso.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.cbxNivelIngreso.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.cbxNivelIngreso.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-            appearance36.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance36.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance36.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance36.BorderColor = System.Drawing.SystemColors.Window;
-            this.cbxNivelIngreso.DisplayLayout.GroupByBox.Appearance = appearance36;
-            appearance37.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.cbxNivelIngreso.DisplayLayout.GroupByBox.BandLabelAppearance = appearance37;
+            appearance2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            appearance2.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance2.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance2.BorderColor = System.Drawing.SystemColors.Window;
+            this.cbxNivelIngreso.DisplayLayout.GroupByBox.Appearance = appearance2;
+            appearance3.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.cbxNivelIngreso.DisplayLayout.GroupByBox.BandLabelAppearance = appearance3;
             this.cbxNivelIngreso.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            appearance38.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance38.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance38.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance38.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.cbxNivelIngreso.DisplayLayout.GroupByBox.PromptAppearance = appearance38;
+            appearance4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            appearance4.BackColor2 = System.Drawing.SystemColors.Control;
+            appearance4.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance4.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.cbxNivelIngreso.DisplayLayout.GroupByBox.PromptAppearance = appearance4;
             this.cbxNivelIngreso.DisplayLayout.MaxColScrollRegions = 1;
             this.cbxNivelIngreso.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance39.BackColor = System.Drawing.SystemColors.Window;
-            appearance39.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbxNivelIngreso.DisplayLayout.Override.ActiveCellAppearance = appearance39;
-            appearance40.BackColor = System.Drawing.SystemColors.Highlight;
-            appearance40.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.cbxNivelIngreso.DisplayLayout.Override.ActiveRowAppearance = appearance40;
+            appearance5.BackColor = System.Drawing.SystemColors.Window;
+            appearance5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbxNivelIngreso.DisplayLayout.Override.ActiveCellAppearance = appearance5;
+            appearance6.BackColor = System.Drawing.SystemColors.Highlight;
+            appearance6.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.cbxNivelIngreso.DisplayLayout.Override.ActiveRowAppearance = appearance6;
             this.cbxNivelIngreso.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
             this.cbxNivelIngreso.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-            appearance41.BackColor = System.Drawing.SystemColors.Window;
-            this.cbxNivelIngreso.DisplayLayout.Override.CardAreaAppearance = appearance41;
-            appearance42.BorderColor = System.Drawing.Color.Silver;
-            appearance42.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.cbxNivelIngreso.DisplayLayout.Override.CellAppearance = appearance42;
+            appearance7.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxNivelIngreso.DisplayLayout.Override.CardAreaAppearance = appearance7;
+            appearance8.BorderColor = System.Drawing.Color.Silver;
+            appearance8.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
+            this.cbxNivelIngreso.DisplayLayout.Override.CellAppearance = appearance8;
             this.cbxNivelIngreso.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
             this.cbxNivelIngreso.DisplayLayout.Override.CellPadding = 0;
-            appearance43.BackColor = System.Drawing.SystemColors.Control;
-            appearance43.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance43.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance43.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance43.BorderColor = System.Drawing.SystemColors.Window;
-            this.cbxNivelIngreso.DisplayLayout.Override.GroupByRowAppearance = appearance43;
-            appearance44.TextHAlignAsString = "Left";
-            this.cbxNivelIngreso.DisplayLayout.Override.HeaderAppearance = appearance44;
+            appearance9.BackColor = System.Drawing.SystemColors.Control;
+            appearance9.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance9.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
+            appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance9.BorderColor = System.Drawing.SystemColors.Window;
+            this.cbxNivelIngreso.DisplayLayout.Override.GroupByRowAppearance = appearance9;
+            appearance10.TextHAlignAsString = "Left";
+            this.cbxNivelIngreso.DisplayLayout.Override.HeaderAppearance = appearance10;
             this.cbxNivelIngreso.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
             this.cbxNivelIngreso.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
-            appearance45.BackColor = System.Drawing.SystemColors.Window;
-            appearance45.BorderColor = System.Drawing.Color.Silver;
-            this.cbxNivelIngreso.DisplayLayout.Override.RowAppearance = appearance45;
+            appearance11.BackColor = System.Drawing.SystemColors.Window;
+            appearance11.BorderColor = System.Drawing.Color.Silver;
+            this.cbxNivelIngreso.DisplayLayout.Override.RowAppearance = appearance11;
             this.cbxNivelIngreso.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance46.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.cbxNivelIngreso.DisplayLayout.Override.TemplateAddRowAppearance = appearance46;
+            appearance12.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.cbxNivelIngreso.DisplayLayout.Override.TemplateAddRowAppearance = appearance12;
             this.cbxNivelIngreso.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.cbxNivelIngreso.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.cbxNivelIngreso.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.cbxNivelIngreso.DisplayMember = "descripcion";
             this.cbxNivelIngreso.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.cbxNivelIngreso.Location = new System.Drawing.Point(467, 10);
+            this.cbxNivelIngreso.Location = new System.Drawing.Point(520, 10);
             this.cbxNivelIngreso.Name = "cbxNivelIngreso";
             this.cbxNivelIngreso.Size = new System.Drawing.Size(193, 27);
             this.cbxNivelIngreso.TabIndex = 43;
             this.cbxNivelIngreso.ValueMember = "id_nivel";
             // 
+            // dsEstudiantesBindingSource
+            // 
+            this.dsEstudiantesBindingSource.DataSource = this.dsEstudiantes1;
+            this.dsEstudiantesBindingSource.Position = 0;
+            // 
+            // dsEstudiantes1
+            // 
+            this.dsEstudiantes1.DataSetName = "dsEstudiantes";
+            this.dsEstudiantes1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label9.Location = new System.Drawing.Point(354, 50);
+            this.label9.Location = new System.Drawing.Point(405, 46);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 17);
             this.label9.TabIndex = 45;
@@ -705,7 +503,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtEmail.Location = new System.Drawing.Point(408, 42);
+            this.txtEmail.Location = new System.Drawing.Point(461, 42);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(252, 25);
             this.txtEmail.TabIndex = 44;
@@ -714,7 +512,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label10.Location = new System.Drawing.Point(354, 20);
+            this.label10.Location = new System.Drawing.Point(406, 16);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(107, 17);
             this.label10.TabIndex = 46;
@@ -762,14 +560,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.groupControl1.Controls.Add(this.txtRecomendo);
             this.groupControl1.Location = new System.Drawing.Point(3, 388);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(317, 99);
+            this.groupControl1.Size = new System.Drawing.Size(381, 99);
             this.groupControl1.TabIndex = 40;
             this.groupControl1.Text = "Datos de quien le recomendo";
             // 
             // radioGroup1
             // 
             this.radioGroup1.EditValue = 1;
-            this.radioGroup1.Location = new System.Drawing.Point(78, 26);
+            this.radioGroup1.Location = new System.Drawing.Point(158, 32);
             this.radioGroup1.Name = "radioGroup1";
             this.radioGroup1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.radioGroup1.Properties.Appearance.Options.UseFont = true;
@@ -778,6 +576,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "No")});
             this.radioGroup1.Size = new System.Drawing.Size(92, 24);
             this.radioGroup1.TabIndex = 43;
+            this.radioGroup1.SelectedIndexChanged += new System.EventHandler(this.radioGroup1_SelectedIndexChanged);
             // 
             // cmdBuscarEstudiante
             // 
@@ -785,7 +584,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdBuscarEstudiante.Appearance.Options.UseBackColor = true;
             this.cmdBuscarEstudiante.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdBuscarEstudiante.ImageOptions.Image")));
             this.cmdBuscarEstudiante.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.cmdBuscarEstudiante.Location = new System.Drawing.Point(273, 23);
+            this.cmdBuscarEstudiante.Location = new System.Drawing.Point(319, 46);
             this.cmdBuscarEstudiante.Name = "cmdBuscarEstudiante";
             this.cmdBuscarEstudiante.Size = new System.Drawing.Size(40, 38);
             this.cmdBuscarEstudiante.TabIndex = 44;
@@ -794,7 +593,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label14.Location = new System.Drawing.Point(4, 30);
+            this.label14.Location = new System.Drawing.Point(84, 36);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 17);
             this.label14.TabIndex = 42;
@@ -823,6 +622,11 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.gridZonas.Size = new System.Drawing.Size(228, 24);
             this.gridZonas.TabIndex = 39;
             // 
+            // zonasBindingSource
+            // 
+            this.zonasBindingSource.DataMember = "zonas";
+            this.zonasBindingSource.DataSource = this.dsEstudiantesBindingSource;
+            // 
             // gridLookUpEdit1View
             // 
             this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
@@ -830,25 +634,11 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
-            // dateEdit3
-            // 
-            this.dateEdit3.EditValue = null;
-            this.dateEdit3.Location = new System.Drawing.Point(251, 358);
-            this.dateEdit3.Name = "dateEdit3";
-            this.dateEdit3.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.dateEdit3.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit3.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit3.Size = new System.Drawing.Size(69, 24);
-            this.dateEdit3.TabIndex = 38;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label12.Location = new System.Drawing.Point(9, 332);
+            this.label12.Location = new System.Drawing.Point(10, 328);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 17);
             this.label12.TabIndex = 37;
@@ -893,7 +683,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.dtFechaProximoPago.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechaProximoPago.Location = new System.Drawing.Point(145, 357);
             this.dtFechaProximoPago.Name = "dtFechaProximoPago";
-            this.dtFechaProximoPago.Size = new System.Drawing.Size(100, 25);
+            this.dtFechaProximoPago.Size = new System.Drawing.Size(118, 25);
             this.dtFechaProximoPago.TabIndex = 33;
             this.dtFechaProximoPago.Visible = false;
             // 
@@ -901,7 +691,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label8.Location = new System.Drawing.Point(237, 116);
+            this.label8.Location = new System.Drawing.Point(225, 116);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(39, 17);
             this.label8.TabIndex = 26;
@@ -915,7 +705,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cbxSexo.Items.AddRange(new object[] {
             "F",
             "M"});
-            this.cbxSexo.Location = new System.Drawing.Point(283, 113);
+            this.cbxSexo.Location = new System.Drawing.Point(270, 108);
             this.cbxSexo.Name = "cbxSexo";
             this.cbxSexo.Size = new System.Drawing.Size(37, 25);
             this.cbxSexo.TabIndex = 25;
@@ -954,7 +744,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.txtDireccion.Location = new System.Drawing.Point(92, 183);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(228, 104);
+            this.txtDireccion.Size = new System.Drawing.Size(292, 104);
             this.txtDireccion.TabIndex = 22;
             // 
             // txtApellido
@@ -963,7 +753,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtApellido.Properties.Appearance.Options.UseFont = true;
-            this.txtApellido.Size = new System.Drawing.Size(228, 24);
+            this.txtApellido.Size = new System.Drawing.Size(292, 24);
             this.txtApellido.TabIndex = 20;
             // 
             // txtNombre
@@ -972,7 +762,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtNombre.Properties.Appearance.Options.UseFont = true;
-            this.txtNombre.Size = new System.Drawing.Size(228, 24);
+            this.txtNombre.Size = new System.Drawing.Size(292, 24);
             this.txtNombre.TabIndex = 19;
             // 
             // txtIdentidad
@@ -981,14 +771,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.txtIdentidad.Name = "txtIdentidad";
             this.txtIdentidad.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtIdentidad.Properties.Appearance.Options.UseFont = true;
-            this.txtIdentidad.Size = new System.Drawing.Size(228, 24);
+            this.txtIdentidad.Size = new System.Drawing.Size(292, 24);
             this.txtIdentidad.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 20);
+            this.label1.Location = new System.Drawing.Point(10, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 17);
             this.label1.TabIndex = 12;
@@ -998,7 +788,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label3.Location = new System.Drawing.Point(9, 50);
+            this.label3.Location = new System.Drawing.Point(9, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 13;
@@ -1008,7 +798,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label4.Location = new System.Drawing.Point(9, 80);
+            this.label4.Location = new System.Drawing.Point(10, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 17);
             this.label4.TabIndex = 14;
@@ -1028,7 +818,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label6.Location = new System.Drawing.Point(9, 116);
+            this.label6.Location = new System.Drawing.Point(9, 111);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 17);
             this.label6.TabIndex = 16;
@@ -1038,7 +828,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label7.Location = new System.Drawing.Point(9, 150);
+            this.label7.Location = new System.Drawing.Point(9, 147);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 17);
             this.label7.TabIndex = 17;
@@ -1047,29 +837,63 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // tabLogAcceso
             // 
             this.tabLogAcceso.Name = "tabLogAcceso";
-            this.tabLogAcceso.Size = new System.Drawing.Size(705, 547);
+            this.tabLogAcceso.Size = new System.Drawing.Size(840, 547);
             this.tabLogAcceso.Text = "Log Ingresos";
             // 
-            // dsEstudiantes
+            // colid
             // 
-            this.dsEstudiantes.DataSetName = "dsEstudiantes";
-            this.dsEstudiantes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.colid.FieldName = "id";
+            this.colid.Name = "colid";
+            this.colid.Visible = true;
+            this.colid.VisibleIndex = 0;
             // 
-            // dsEstudiantesBindingSource
+            // colid_estudiante
             // 
-            this.dsEstudiantesBindingSource.DataSource = this.dsEstudiantes;
-            this.dsEstudiantesBindingSource.Position = 0;
+            this.colid_estudiante.FieldName = "id_estudiante";
+            this.colid_estudiante.Name = "colid_estudiante";
+            this.colid_estudiante.Visible = true;
+            this.colid_estudiante.VisibleIndex = 1;
             // 
-            // zonasBindingSource
+            // coltelefono
             // 
-            this.zonasBindingSource.DataMember = "zonas";
-            this.zonasBindingSource.DataSource = this.dsEstudiantesBindingSource;
+            this.coltelefono.FieldName = "telefono";
+            this.coltelefono.Name = "coltelefono";
+            this.coltelefono.Visible = true;
+            this.coltelefono.VisibleIndex = 2;
+            // 
+            // coltipo_telefono_id
+            // 
+            this.coltipo_telefono_id.FieldName = "tipo_telefono_id";
+            this.coltipo_telefono_id.Name = "coltipo_telefono_id";
+            this.coltipo_telefono_id.Visible = true;
+            this.coltipo_telefono_id.VisibleIndex = 3;
+            // 
+            // coleditar
+            // 
+            this.coleditar.FieldName = "editar";
+            this.coleditar.Name = "coleditar";
+            this.coleditar.Visible = true;
+            this.coleditar.VisibleIndex = 4;
+            // 
+            // coltipo_descripcion
+            // 
+            this.coltipo_descripcion.FieldName = "tipo_descripcion";
+            this.coltipo_descripcion.Name = "coltipo_descripcion";
+            this.coltipo_descripcion.Visible = true;
+            this.coltipo_descripcion.VisibleIndex = 5;
+            // 
+            // coleliminar
+            // 
+            this.coleliminar.FieldName = "eliminar";
+            this.coleliminar.Name = "coleliminar";
+            this.coleliminar.Visible = true;
+            this.coleliminar.VisibleIndex = 6;
             // 
             // frmEstudiantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 616);
+            this.ClientSize = new System.Drawing.Size(846, 616);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.label2);
             this.IconOptions.ShowIcon = false;
@@ -1078,21 +902,25 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.xtraTabControl1.ResumeLayout(false);
             this.tabFicha.ResumeLayout(false);
             this.tabFicha.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tsEstado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
             this.xtraTabControl2.ResumeLayout(false);
             this.tabTelefonos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.k)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTelefonos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvTelefonos)).EndInit();
             this.tabRTN.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdRtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvRTN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxNivelIngreso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantes1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridZonas.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsTipoPago.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaIngreso.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaIngreso.Properties)).EndInit();
@@ -1101,9 +929,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             ((System.ComponentModel.ISupportInitialize)(this.txtApellido.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdentidad.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1121,7 +946,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private System.Windows.Forms.TextBox txtRecomendo;
         private DevExpress.XtraEditors.GridLookUpEdit gridZonas;
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
-        private DevExpress.XtraEditors.DateEdit dateEdit3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private DevExpress.XtraEditors.ToggleSwitch tsTipoPago;
@@ -1145,12 +969,10 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private System.Windows.Forms.Button cmdNuevo;
         private System.Windows.Forms.Button cmdCancelar;
         private System.Windows.Forms.Button cmdGuardar;
-        private System.Windows.Forms.Button cmdAgregarTelefono;
+        private System.Windows.Forms.Button btnTelefono_Rtn;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl2;
         private DevExpress.XtraTab.XtraTabPage tabTelefonos;
-        private Infragistics.Win.UltraWinGrid.UltraGrid k;
         private DevExpress.XtraTab.XtraTabPage tabRTN;
-        private Infragistics.Win.UltraWinGrid.UltraGrid ultraGrid1;
         private System.Windows.Forms.RadioButton rdGraduado;
         private System.Windows.Forms.RadioButton rdDesertor;
         private System.Windows.Forms.CheckBox chkReingreso;
@@ -1162,7 +984,19 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private System.Windows.Forms.Button cmdMatricular;
         private System.Windows.Forms.Button cmdUserWeb;
         private System.Windows.Forms.BindingSource dsEstudiantesBindingSource;
-        private dsEstudiantes dsEstudiantes;
+        private dsEstudiantes dsEstudiantes1;
         private System.Windows.Forms.BindingSource zonasBindingSource;
+        private DevExpress.XtraEditors.ToggleSwitch tsEstado;
+        private DevExpress.XtraGrid.GridControl grdTelefonos;
+        private DevExpress.XtraGrid.Views.Grid.GridView grdvTelefonos;
+        private DevExpress.XtraGrid.GridControl grdRtn;
+        private DevExpress.XtraGrid.Views.Grid.GridView grdvRTN;
+        private DevExpress.XtraGrid.Columns.GridColumn colid;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_estudiante;
+        private DevExpress.XtraGrid.Columns.GridColumn coltelefono;
+        private DevExpress.XtraGrid.Columns.GridColumn coltipo_telefono_id;
+        private DevExpress.XtraGrid.Columns.GridColumn coleditar;
+        private DevExpress.XtraGrid.Columns.GridColumn coltipo_descripcion;
+        private DevExpress.XtraGrid.Columns.GridColumn coleliminar;
     }
 }

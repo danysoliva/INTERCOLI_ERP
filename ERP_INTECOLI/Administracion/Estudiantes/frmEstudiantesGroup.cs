@@ -82,5 +82,31 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 load_data();
             }
         }
+
+        private void grDetalle_ClickCellButton(object sender, Infragistics.Win.UltraWinGrid.CellEventArgs e)
+        {
+            switch (e.Cell.Column.Key)
+            {
+                case "editar":
+                    frmEstudiantes frm = new frmEstudiantes(this.UsuarioLogeado, frmEstudiantes.TipoEdicion.Editar, Convert.ToInt32(e.Cell.Row.Cells["id_estudiante"].Value));
+                    frm.ShowDialog(this);
+                    load_data();
+                    break;
+
+                case "antiguiedad":
+                    frmHistoarialAntiguedad frx = new frmHistoarialAntiguedad(Convert.ToInt32(e.Cell.Row.Cells["id_estudiante"].Value));
+                    frx.ShowDialog();
+
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

@@ -98,6 +98,12 @@
     <Compile Include="Administracion\Estudiantes\frmEstudiantesGroup.Designer.cs">
       <DependentUpon>frmEstudiantesGroup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Estudiantes\frmHistoarialAntiguedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmHistoarialAntiguedad.Designer.cs">
+      <DependentUpon>frmHistoarialAntiguedad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\CajaDialogo.cs" />
     <Compile Include="Clases\DataOperations.cs" />
     <Compile Include="Clases\Estudiante.cs" />
@@ -123,6 +129,9 @@
     <EmbeddedResource Include="Administracion\Estudiantes\frmEstudiantesGroup.resx">
       <DependentUpon>frmEstudiantesGroup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Estudiantes\frmHistoarialAntiguedad.resx">
+      <DependentUpon>frmHistoarialAntiguedad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +147,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Administracion\Estudiantes\dsEstudiantes.xsc">
       <DependentUpon>dsEstudiantes.xsd</DependentUpon>
@@ -168,17 +178,76 @@
     <Folder Include="RRHH\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\2264828.png" />
+    <Content Include="Resources\Accept-icon128px.png" />
+    <Content Include="Resources\accept2_24.png" />
+    <Content Include="Resources\accept2_32.png" />
+    <Content Include="Resources\accept2_48.png" />
+    <Content Include="Resources\Accept_24x24.png" />
+    <Content Include="Resources\Accept_32x32.png" />
+    <Content Include="Resources\Accept_48x48.png" />
+    <Content Include="Resources\access.png" />
+    <Content Include="Resources\add%281%29.png" />
+    <Content Include="Resources\add_16x16.png" />
+    <Content Include="Resources\add_24x24.png" />
+    <Content Include="Resources\add_32x32.png" />
+    <Content Include="Resources\admin.png" />
+    <Content Include="Resources\ajustes_kardex.png" />
+    <Content Include="Resources\ajustes_kardex2.png" />
+    <Content Include="Resources\Alerta64px.png" />
+    <Content Include="Resources\alimentacion_manual.png" />
     <Content Include="Resources\anadir.png" />
+    <Content Include="Resources\ani_wait.gif" />
+    <Content Include="Resources\approve_16.png" />
+    <Content Include="Resources\approve_24.png" />
+    <Content Include="Resources\approve_32.png" />
     <Content Include="Resources\cerrar.png" />
     <Content Include="Resources\control-de-accesso.png" />
+    <Content Include="Resources\edit.png" />
+    <None Include="Resources\edit1.png" />
+    <Content Include="Resources\edit24px.png" />
+    <Content Include="Resources\edit_24x24.png" />
+    <Content Include="Resources\edit_32x32.png" />
     <Content Include="Resources\email_envelope_inbox_sending_mail_outbox_message_send_icon_231915.ico" />
     <Content Include="Resources\empresa.png" />
     <Content Include="Resources\Estudiantex32.png" />
+    <Content Include="Resources\Excel-2-icon32px.png" />
+    <Content Include="Resources\Excel-2-icon32px1.png" />
+    <Content Include="Resources\excel32px.png" />
+    <Content Include="Resources\excel_24x24.png" />
+    <Content Include="Resources\excel_32x32.png" />
+    <Content Include="Resources\excel_48x48.png" />
+    <Content Include="Resources\exchange.png" />
+    <Content Include="Resources\exit_24x24.png" />
+    <Content Include="Resources\exit_32x32.png" />
+    <Content Include="Resources\export_32x32.png" />
     <Content Include="Resources\maestro x32.png" />
     <Content Include="Resources\ms-excel-icon.png" />
+    <Content Include="Resources\new-message-icon %281%2932.png" />
+    <Content Include="Resources\new_24x24.png" />
+    <Content Include="Resources\new_32x32.png" />
+    <Content Include="Resources\new_48x48.png" />
+    <Content Include="Resources\next_x16.png" />
     <Content Include="Resources\Niveles x32.png" />
+    <Content Include="Resources\reaload_24x24.png" />
+    <Content Include="Resources\reaload_32x32.png" />
+    <Content Include="Resources\refresh-button32px.png" />
+    <Content Include="Resources\refresh_16x16.png" />
+    <Content Include="Resources\refresh_24x24.png" />
+    <Content Include="Resources\refresh_32x32.png" />
+    <Content Include="Resources\salir_24.png" />
+    <Content Include="Resources\Salir_32.png" />
     <Content Include="Resources\save.png" />
+    <Content Include="Resources\saveChanges_24x24.png" />
+    <Content Include="Resources\saveChanges_32x32.png" />
+    <Content Include="Resources\save_24x24.png" />
+    <Content Include="Resources\save_32x32.png" />
+    <Content Include="Resources\search_16x16.png" />
+    <Content Include="Resources\search_24x24.png" />
+    <Content Include="Resources\search_32x32.png" />
     <Content Include="Resources\Upload-Folder-icon.png" />
+    <Content Include="Resources\_click_24X24.png" />
+    <Content Include="Resources\_click_32X32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

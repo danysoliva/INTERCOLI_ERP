@@ -93,6 +93,16 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap edit {
+            get {
+                object obj = ResourceManager.GetObject("edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap email_envelope_inbox_sending_mail_outbox_message_send_icon_231915 {
             get {
                 object obj = ResourceManager.GetObject("email_envelope_inbox_sending_mail_outbox_message_send_icon_231915", resourceCulture);
