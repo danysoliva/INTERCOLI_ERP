@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using ERP_INTECOLI.Clases;
 using System.Collections;
+using ERP_INTECOLI.Administracion.Estudiantes;
 
 namespace ERP_INTECOLI.Administracion.Estudiantes
 {
@@ -19,7 +20,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private int Idestudiante = 0;
         Estudiante vEstudiante;
         ArrayList ListaTelefonos;
-        private int IdEstudianteRecomendo;
+        private int IdEstudianteRecomendo = 0;
         
         public enum TipoEdicion
         { 
@@ -33,6 +34,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         public frmEstudiantes(UserLogin pUserLogin, TipoEdicion pTipo)
         {
             InitializeComponent();
+            pTipoEdit = pTipo;
             UsuarioLogeado = pUserLogin;
             
             CargarNiveles();
@@ -114,8 +116,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             else
                 tsEstado.IsOn = false;
 
-            cargar_telefonos(Idestudiante);
-            cargar_rtn(Idestudiante)
+            
 
             switch (pTipoEdit)
             {
@@ -127,6 +128,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 case TipoEdicion.Editar:
                     chkReingreso.Visible = true;
                     rdGraduado.Visible = rdDesertor.Visible = true;
+                    cargar_telefonos(Idestudiante);
+                    cargar_rtn(Idestudiante);
                     break;
 
                 default:
@@ -144,10 +147,10 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
                 SqlCommand cmd = new SqlCommand("", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("", );
-                dsEstudiantes1.detalle_telefonos.Clear();
+                cmd.Parameters.AddWithValue("@id_estudiante", idestudiante);
+                dsEstudiantes1.detalle_rtn.Clear();
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
-                adat.Fill(dsRecepcionMPx.pasillos);
+                adat.Fill(dsEstudiantes1.detalle_rtn);
                 con.Close();
             }
             catch (Exception ec)
@@ -158,7 +161,23 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
         private void cargar_telefonos(int idestudiante)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DataOperations dp = new DataOperations();
+                SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("sp_estudiante_load_detalle_telefono", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_estudiante", idestudiante);
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                dsEstudiantes1.detalle_telefonos.Clear();
+                adat.Fill(dsEstudiantes1.detalle_telefonos);
+                con.Close();
+            }
+            catch (Exception ec)
+            {
+                CajaDialogo.Error(ec.Message);
+            }
         }
 
         private void CargarZonas()
@@ -204,14 +223,199 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Convert.ToInt32(radioGroup1.EditValue) == 0)
+            {
                 cmdBuscarEstudiante.Visible = false;
+                IdEstudianteRecomendo = 0;
+                txtRecomendo.Text = "";
+            }      
             else
                 cmdBuscarEstudiante.Visible = true;
         }
 
         private void btnTelefono_Rtn_Click(object sender, EventArgs e)
         {
+            if (xtraTabControl2.SelectedTabPage == tabTelefonos)
+            {
+                if (pTipoEdit == TipoEdicion.Nuevo)
+                {
+                    frmagregar_telefono frm = new frmagregar_telefono(frmagregar_telefono.TipoEdicion.Nuevo, Idestudiante);
+                    if (frm.ShowDialog() == DialogResult.OK)
+                    {
+                        DataRow row = dsEstudiantes1.detalle_telefonos.NewRow();
+                        row[2] = frm.num_telefono;
+                        row[3] = frm.id_tipo_telefono;
+                        row[4] = frm.tipo_Telefono;
+                        dsEstudiantes1.detalle_telefonos.Rows.Add(row);
+                    }
 
+                }
+            }
+            else
+            {
+                if (pTipoEdit == TipoEdicion.Nuevo)
+                {
+
+                }
+            }
+        }
+
+        private void cmdGuardar_Click(object sender, EventArgs e)
+        {
+            DataOperations dp = new DataOperations();
+
+            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellido.Text)
+               || string.IsNullOrEmpty(cbxSexo.Text) || string.IsNullOrEmpty(txtDireccion.Text)
+               || string.IsNullOrEmpty(txtEmail.Text))
+            {
+                CajaDialogo.Error("Aun hay datos del estudiante que no sean ingresado!");
+                return;
+            }
+
+
+            DialogResult r = CajaDialogo.Pregunta("Desea Guardar los datos del nuevo estudiante?");
+
+            if (r == DialogResult.OK)
+                return;
+
+            switch (pTipoEdit)
+            {
+                case TipoEdicion.Nuevo:
+                   
+                    Estudiante est = new Estudiante();
+
+                    if (!est.ValidarIdDisponible(txtIdentidad.Text.Trim()))
+                    {
+                        CajaDialogo.Error("Este Numero de Identidad ya Existe!");
+                        return;
+                    }
+
+                    SqlTransaction transaction = null;
+
+                    SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                    bool Guardar = false;
+
+                    try
+                    {
+                        conn.Open();
+                        transaction = conn.BeginTransaction("Transaction Order");
+
+                        SqlCommand cmd = conn.CreateCommand();
+                        cmd.CommandText = "sp_estudiantes_insert_new_estudiante";
+                        cmd.Connection = conn;
+                        cmd.Transaction = transaction;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@nombres",txtNombre.Text);
+                        cmd.Parameters.AddWithValue("@apellidos", txtApellido.Text);
+                        cmd.Parameters.AddWithValue("@direccion",txtDireccion.Text);
+                        cmd.Parameters.AddWithValue("@fecha_nacimiento",dtFechaNac.EditValue);
+
+                        if (Convert.ToInt32(cbxNivelIngreso.Value) > 0)
+                            cmd.Parameters.AddWithValue("@nivel_id_ingreso", cbxNivelIngreso.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@nivel_id_ingreso", DBNull.Value);
+
+                        cmd.Parameters.AddWithValue("@sexo", cbxSexo.Text);
+                        cmd.Parameters.AddWithValue("@correo",txtEmail.Text.Trim());
+                        cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogeado.UserId);
+                        cmd.Parameters.AddWithValue("@proxima_fecha_pago", dtFechaProximoPago.Value);
+                        if (chkSeguimientoSaldo.Checked)
+                            cmd.Parameters.AddWithValue("@seguimiento_saldo", 1);
+                        else
+                            cmd.Parameters.AddWithValue("@seguimiento_saldo", 0);
+
+                        //cmd.Parameters.AddWithValue("@fecha_anulado", null);
+                        if (tsTipoPago.IsOn) //Posterior
+                            cmd.Parameters.AddWithValue("@tipo_pago",2);
+                        else //Anterior 
+                            cmd.Parameters.AddWithValue("@tipo_pago",1);
+                        if (Convert.ToInt32(gridZonas.EditValue) > 0)
+                            cmd.Parameters.AddWithValue("@id_zona", Convert.ToInt32(gridZonas.EditValue));
+                        else
+                            cmd.Parameters.AddWithValue("@id_zona", DBNull.Value);
+
+                        if (IdEstudianteRecomendo > 0)
+                        {
+                            cmd.Parameters.AddWithValue("@id_estudiante_recomendo", IdEstudianteRecomendo);
+                            cmd.Parameters.AddWithValue("@nombre_recomendo", txtRecomendo.Text);
+                        }
+                        else
+                        {
+                            cmd.Parameters.AddWithValue("@id_estudiante_recomendo", DBNull.Value);
+                            cmd.Parameters.AddWithValue("@nombre_recomendo", DBNull.Value);
+                        }
+
+                        cmd.Parameters.AddWithValue("@id_sucursal", 1);
+                        cmd.Parameters.AddWithValue("@numero_identidad", txtIdentidad.Text.Trim());
+
+
+
+                        int id_header_estudiante = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        //foreach (dsEstudiantes.detalle_telefonosRow row in dsEstudiantes1.detalle_telefonos.Rows)
+                        //{
+                        //    cmd.Parameters.Clear();
+                        //    cmd.CommandText = "";
+                        //    cmd.Connection = conn;
+                        //    cmd.Transaction = transaction;
+                        //    cmd.CommandType = CommandType.StoredProcedure;
+                        //    cmd.Parameters.AddWithValue("",);
+                        //    cmd.ExecuteNonQuery();
+                        //}
+
+                        //foreach (dsEstudiantes.detalle_rtnRow row in dsEstudiantes1.detalle_rtn.Rows)
+                        //{
+                        //    cmd.Parameters.Clear();
+                        //    cmd.CommandText = "";
+                        //    cmd.Connection = conn;
+                        //    cmd.Transaction = transaction;
+                        //    cmd.CommandType = CommandType.StoredProcedure;
+                        //    cmd.Parameters.AddWithValue("",);
+                        //    cmd.ExecuteNonQuery();
+                        //}
+
+                        transaction.Commit();
+                        Guardar = true;
+
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+
+                    }
+                    catch (Exception ec)
+                    {
+                        transaction.Rollback();
+                        CajaDialogo.Error(ec.Message);
+                        Guardar = false;
+                    }
+
+                    break;
+                case TipoEdicion.Editar:
+                    break;
+
+                default:
+                    break;
+            }
+
+
+        }
+
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void cmdBuscarEstudiante_Click(object sender, EventArgs e)
+        {
+            frmBuscarEstudiantes frm = new frmBuscarEstudiantes();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                if (frm.ItemSeleccionado.id_estudiantes > 0)
+                {
+                    radioGroup1.EditValue = 1;
+                    IdEstudianteRecomendo = frm.ItemSeleccionado.id_estudiantes;
+                    txtRecomendo.Text = frm.ItemSeleccionado.Nombres + " " + frm.ItemSeleccionado.Apellidos;
+                }
+            }
         }
     }
 }

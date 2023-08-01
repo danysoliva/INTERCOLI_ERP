@@ -94,5 +94,26 @@ namespace ERP_INTECOLI.Clases
             return Recuperado;
         }
 
+        public bool ValidarIdDisponible(string p)
+        {
+            bool r = false;
+            try
+            {
+                //string sql = @"SELECT case when count(*)>0 then false else true end 
+                //                FROM admon.estudiante ee
+                //                where replace(trim(ee.numero_identidad), '-', '') =  replace(trim(:par), '-', '')";
+                string sql = "sp_estudiantes_validar_existencia_identidad";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@identidad", p);
+                r = Convert.ToBoolean(cmd.ExecuteScalar());
+            }
+            catch (Exception ec)
+            {
+                CajaDialogo.Error(ec.Message);
+            }
+            return r;
+        }
+
     }
 }
