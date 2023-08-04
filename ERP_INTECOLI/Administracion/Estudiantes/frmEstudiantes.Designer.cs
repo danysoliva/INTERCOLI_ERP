@@ -31,6 +31,26 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstudiantes));
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("niveles_academicos", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("id_nivel");
@@ -64,12 +84,23 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.coltelefono = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltipo_telefono_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltipo_descripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdEditarCol = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.reposEditarTelefono = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.reposEliminar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.tabRTN = new DevExpress.XtraTab.XtraTabPage();
             this.grdRtn = new DevExpress.XtraGrid.GridControl();
             this.grdvRTN = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colrtn_empresa = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colnombre_empresa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_estudiante1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid_empresa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colenable = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colrtn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colempresa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Editar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repostEditRTN = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.Eliminar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repostDeleteRTN = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.rdGraduado = new System.Windows.Forms.RadioButton();
             this.rdDesertor = new System.Windows.Forms.RadioButton();
             this.chkReingreso = new System.Windows.Forms.CheckBox();
@@ -89,6 +120,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.gridZonas = new DevExpress.XtraEditors.GridLookUpEdit();
             this.zonasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colid2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tsTipoPago = new DevExpress.XtraEditors.ToggleSwitch();
@@ -119,9 +152,13 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             ((System.ComponentModel.ISupportInitialize)(this.grdTelefonos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantes1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvTelefonos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposEditarTelefono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposEliminar)).BeginInit();
             this.tabRTN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdRtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvRTN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repostEditRTN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repostDeleteRTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxNivelIngreso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -144,10 +181,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(522, -2);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(321, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(359, 44);
+            this.label2.Size = new System.Drawing.Size(175, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Perfil del Estudiante";
             // 
@@ -155,11 +191,10 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.xtraTabControl1.Location = new System.Drawing.Point(4, 79);
-            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.xtraTabControl1.Location = new System.Drawing.Point(2, 37);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.tabFicha;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1684, 1100);
+            this.xtraTabControl1.Size = new System.Drawing.Size(842, 575);
             this.xtraTabControl1.TabIndex = 4;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabFicha,
@@ -204,21 +239,20 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.tabFicha.Controls.Add(this.label5);
             this.tabFicha.Controls.Add(this.label6);
             this.tabFicha.Controls.Add(this.label7);
-            this.tabFicha.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabFicha.Name = "tabFicha";
-            this.tabFicha.Size = new System.Drawing.Size(1680, 1051);
+            this.tabFicha.Size = new System.Drawing.Size(840, 550);
             this.tabFicha.Text = "Ficha";
             // 
             // tsEstado
             // 
-            this.tsEstado.Location = new System.Drawing.Point(450, 275);
-            this.tsEstado.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tsEstado.EditValue = true;
+            this.tsEstado.Location = new System.Drawing.Point(225, 143);
             this.tsEstado.Name = "tsEstado";
             this.tsEstado.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsEstado.Properties.Appearance.Options.UseFont = true;
             this.tsEstado.Properties.OffText = "Deshabilitado";
             this.tsEstado.Properties.OnText = "Habilitado";
-            this.tsEstado.Size = new System.Drawing.Size(344, 49);
+            this.tsEstado.Size = new System.Drawing.Size(172, 24);
             this.tsEstado.TabIndex = 56;
             // 
             // cmdNuevo
@@ -229,10 +263,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdNuevo.Image = global::ERP_INTECOLI.Properties.Resources.anadir;
             this.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdNuevo.Location = new System.Drawing.Point(882, 962);
-            this.cmdNuevo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmdNuevo.Location = new System.Drawing.Point(441, 500);
             this.cmdNuevo.Name = "cmdNuevo";
-            this.cmdNuevo.Size = new System.Drawing.Size(184, 85);
+            this.cmdNuevo.Size = new System.Drawing.Size(92, 44);
             this.cmdNuevo.TabIndex = 54;
             this.cmdNuevo.Text = "Nuevo";
             this.cmdNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -249,10 +282,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
             this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdCancelar.Location = new System.Drawing.Point(1364, 962);
-            this.cmdCancelar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmdCancelar.Location = new System.Drawing.Point(682, 500);
             this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(220, 85);
+            this.cmdCancelar.Size = new System.Drawing.Size(110, 44);
             this.cmdCancelar.TabIndex = 55;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -268,10 +300,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdGuardar.Image = global::ERP_INTECOLI.Properties.Resources.save;
             this.cmdGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdGuardar.Location = new System.Drawing.Point(1112, 962);
-            this.cmdGuardar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmdGuardar.Location = new System.Drawing.Point(556, 500);
             this.cmdGuardar.Name = "cmdGuardar";
-            this.cmdGuardar.Size = new System.Drawing.Size(204, 85);
+            this.cmdGuardar.Size = new System.Drawing.Size(102, 44);
             this.cmdGuardar.TabIndex = 53;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -285,21 +316,19 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.btnTelefono_Rtn.FlatAppearance.BorderColor = System.Drawing.Color.PaleGreen;
             this.btnTelefono_Rtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTelefono_Rtn.Image = ((System.Drawing.Image)(resources.GetObject("btnTelefono_Rtn.Image")));
-            this.btnTelefono_Rtn.Location = new System.Drawing.Point(1538, 315);
-            this.btnTelefono_Rtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnTelefono_Rtn.Location = new System.Drawing.Point(769, 164);
             this.btnTelefono_Rtn.Name = "btnTelefono_Rtn";
-            this.btnTelefono_Rtn.Size = new System.Drawing.Size(82, 69);
+            this.btnTelefono_Rtn.Size = new System.Drawing.Size(41, 36);
             this.btnTelefono_Rtn.TabIndex = 52;
             this.btnTelefono_Rtn.UseVisualStyleBackColor = false;
             this.btnTelefono_Rtn.Click += new System.EventHandler(this.btnTelefono_Rtn_Click);
             // 
             // xtraTabControl2
             // 
-            this.xtraTabControl2.Location = new System.Drawing.Point(816, 360);
-            this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.xtraTabControl2.Location = new System.Drawing.Point(408, 206);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.tabTelefonos;
-            this.xtraTabControl2.Size = new System.Drawing.Size(806, 577);
+            this.xtraTabControl2.Size = new System.Drawing.Size(403, 281);
             this.xtraTabControl2.TabIndex = 51;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabTelefonos,
@@ -312,9 +341,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.tabTelefonos.Appearance.HeaderActive.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabTelefonos.Appearance.HeaderActive.Options.UseFont = true;
             this.tabTelefonos.Controls.Add(this.grdTelefonos);
-            this.tabTelefonos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabTelefonos.Name = "tabTelefonos";
-            this.tabTelefonos.Size = new System.Drawing.Size(802, 522);
+            this.tabTelefonos.Size = new System.Drawing.Size(401, 253);
             this.tabTelefonos.Text = "Telefonos";
             // 
             // grdTelefonos
@@ -322,12 +350,13 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.grdTelefonos.DataMember = "detalle_telefonos";
             this.grdTelefonos.DataSource = this.dsEstudiantes1;
             this.grdTelefonos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdTelefonos.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.grdTelefonos.Location = new System.Drawing.Point(0, 0);
             this.grdTelefonos.MainView = this.grdvTelefonos;
-            this.grdTelefonos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.grdTelefonos.Name = "grdTelefonos";
-            this.grdTelefonos.Size = new System.Drawing.Size(802, 522);
+            this.grdTelefonos.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.reposEditarTelefono,
+            this.reposEliminar});
+            this.grdTelefonos.Size = new System.Drawing.Size(401, 253);
             this.grdTelefonos.TabIndex = 0;
             this.grdTelefonos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvTelefonos});
@@ -344,56 +373,92 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.colid_estudiante,
             this.coltelefono,
             this.coltipo_telefono_id,
-            this.coltipo_descripcion});
-            this.grdvTelefonos.DetailHeight = 673;
+            this.coltipo_descripcion,
+            this.grdEditarCol,
+            this.gridColumn2});
             this.grdvTelefonos.GridControl = this.grdTelefonos;
             this.grdvTelefonos.LevelIndent = 0;
             this.grdvTelefonos.Name = "grdvTelefonos";
+            this.grdvTelefonos.OptionsEditForm.PopupEditFormWidth = 400;
+            this.grdvTelefonos.OptionsView.ShowGroupPanel = false;
             this.grdvTelefonos.PreviewIndent = 0;
             // 
             // colid
             // 
             this.colid.FieldName = "id";
-            this.colid.MinWidth = 40;
             this.colid.Name = "colid";
             this.colid.OptionsColumn.ReadOnly = true;
-            this.colid.Width = 106;
+            this.colid.Width = 53;
             // 
             // colid_estudiante
             // 
             this.colid_estudiante.FieldName = "id_estudiante";
-            this.colid_estudiante.MinWidth = 40;
             this.colid_estudiante.Name = "colid_estudiante";
             this.colid_estudiante.OptionsColumn.ReadOnly = true;
-            this.colid_estudiante.Width = 136;
+            this.colid_estudiante.Width = 68;
             // 
             // coltelefono
             // 
             this.coltelefono.FieldName = "telefono";
-            this.coltelefono.MinWidth = 40;
             this.coltelefono.Name = "coltelefono";
             this.coltelefono.OptionsColumn.ReadOnly = true;
             this.coltelefono.Visible = true;
             this.coltelefono.VisibleIndex = 0;
-            this.coltelefono.Width = 100;
+            this.coltelefono.Width = 126;
             // 
             // coltipo_telefono_id
             // 
             this.coltipo_telefono_id.FieldName = "tipo_telefono_id";
-            this.coltipo_telefono_id.MinWidth = 40;
             this.coltipo_telefono_id.Name = "coltipo_telefono_id";
             this.coltipo_telefono_id.OptionsColumn.ReadOnly = true;
-            this.coltipo_telefono_id.Width = 134;
+            this.coltipo_telefono_id.Width = 67;
             // 
             // coltipo_descripcion
             // 
             this.coltipo_descripcion.FieldName = "tipo_descripcion";
-            this.coltipo_descripcion.MinWidth = 40;
             this.coltipo_descripcion.Name = "coltipo_descripcion";
             this.coltipo_descripcion.OptionsColumn.ReadOnly = true;
             this.coltipo_descripcion.Visible = true;
             this.coltipo_descripcion.VisibleIndex = 1;
-            this.coltipo_descripcion.Width = 88;
+            this.coltipo_descripcion.Width = 108;
+            // 
+            // grdEditarCol
+            // 
+            this.grdEditarCol.Caption = "Editar";
+            this.grdEditarCol.ColumnEdit = this.reposEditarTelefono;
+            this.grdEditarCol.FieldName = "editar";
+            this.grdEditarCol.Name = "grdEditarCol";
+            this.grdEditarCol.Visible = true;
+            this.grdEditarCol.VisibleIndex = 2;
+            this.grdEditarCol.Width = 66;
+            // 
+            // reposEditarTelefono
+            // 
+            this.reposEditarTelefono.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.reposEditarTelefono.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.reposEditarTelefono.Name = "reposEditarTelefono";
+            this.reposEditarTelefono.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.reposEditarTelefono.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposEditarTelefono_ButtonClick);
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Eliminar";
+            this.gridColumn2.ColumnEdit = this.reposEliminar;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 3;
+            // 
+            // reposEliminar
+            // 
+            this.reposEliminar.AutoHeight = false;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            this.reposEliminar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.reposEliminar.Name = "reposEliminar";
+            this.reposEliminar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.reposEliminar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposEliminar_ButtonClick);
             // 
             // tabRTN
             // 
@@ -402,9 +467,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.tabRTN.Appearance.HeaderActive.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabRTN.Appearance.HeaderActive.Options.UseFont = true;
             this.tabRTN.Controls.Add(this.grdRtn);
-            this.tabRTN.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabRTN.Name = "tabRTN";
-            this.tabRTN.Size = new System.Drawing.Size(802, 522);
+            this.tabRTN.Size = new System.Drawing.Size(401, 253);
             this.tabRTN.Text = "RTN";
             // 
             // grdRtn
@@ -412,12 +476,13 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.grdRtn.DataMember = "detalle_rtn";
             this.grdRtn.DataSource = this.dsEstudiantes1;
             this.grdRtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdRtn.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.grdRtn.Location = new System.Drawing.Point(0, 0);
             this.grdRtn.MainView = this.grdvRTN;
-            this.grdRtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.grdRtn.Name = "grdRtn";
-            this.grdRtn.Size = new System.Drawing.Size(802, 522);
+            this.grdRtn.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repostEditRTN,
+            this.repostDeleteRTN});
+            this.grdRtn.Size = new System.Drawing.Size(401, 253);
             this.grdRtn.TabIndex = 1;
             this.grdRtn.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvRTN});
@@ -425,51 +490,111 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // grdvRTN
             // 
             this.grdvRTN.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colrtn_empresa,
-            this.colnombre_empresa,
-            this.colid_empresa});
-            this.grdvRTN.DetailHeight = 673;
+            this.colid1,
+            this.colid_estudiante1,
+            this.colid_empresa,
+            this.colenable,
+            this.colrtn,
+            this.colempresa,
+            this.Editar,
+            this.Eliminar});
             this.grdvRTN.GridControl = this.grdRtn;
             this.grdvRTN.LevelIndent = 0;
             this.grdvRTN.Name = "grdvRTN";
+            this.grdvRTN.OptionsEditForm.PopupEditFormWidth = 400;
+            this.grdvRTN.OptionsView.ShowGroupPanel = false;
             this.grdvRTN.PreviewIndent = 0;
             // 
-            // colrtn_empresa
+            // colid1
             // 
-            this.colrtn_empresa.FieldName = "rtn_empresa";
-            this.colrtn_empresa.MinWidth = 40;
-            this.colrtn_empresa.Name = "colrtn_empresa";
-            this.colrtn_empresa.Visible = true;
-            this.colrtn_empresa.VisibleIndex = 0;
-            this.colrtn_empresa.Width = 150;
+            this.colid1.FieldName = "id";
+            this.colid1.Name = "colid1";
+            this.colid1.OptionsColumn.AllowEdit = false;
             // 
-            // colnombre_empresa
+            // colid_estudiante1
             // 
-            this.colnombre_empresa.FieldName = "nombre_empresa";
-            this.colnombre_empresa.MinWidth = 40;
-            this.colnombre_empresa.Name = "colnombre_empresa";
-            this.colnombre_empresa.Visible = true;
-            this.colnombre_empresa.VisibleIndex = 1;
-            this.colnombre_empresa.Width = 150;
+            this.colid_estudiante1.FieldName = "id_estudiante";
+            this.colid_estudiante1.Name = "colid_estudiante1";
+            this.colid_estudiante1.OptionsColumn.ReadOnly = true;
             // 
             // colid_empresa
             // 
             this.colid_empresa.FieldName = "id_empresa";
-            this.colid_empresa.MinWidth = 40;
             this.colid_empresa.Name = "colid_empresa";
-            this.colid_empresa.Visible = true;
-            this.colid_empresa.VisibleIndex = 2;
-            this.colid_empresa.Width = 150;
+            this.colid_empresa.OptionsColumn.ReadOnly = true;
+            // 
+            // colenable
+            // 
+            this.colenable.FieldName = "enable";
+            this.colenable.Name = "colenable";
+            this.colenable.OptionsColumn.AllowEdit = false;
+            this.colenable.OptionsColumn.ReadOnly = true;
+            // 
+            // colrtn
+            // 
+            this.colrtn.Caption = "RTN";
+            this.colrtn.FieldName = "rtn";
+            this.colrtn.Name = "colrtn";
+            this.colrtn.OptionsColumn.ReadOnly = true;
+            this.colrtn.Visible = true;
+            this.colrtn.VisibleIndex = 0;
+            // 
+            // colempresa
+            // 
+            this.colempresa.Caption = "Empresa";
+            this.colempresa.FieldName = "empresa";
+            this.colempresa.Name = "colempresa";
+            this.colempresa.OptionsColumn.ReadOnly = true;
+            this.colempresa.Visible = true;
+            this.colempresa.VisibleIndex = 1;
+            // 
+            // Editar
+            // 
+            this.Editar.Caption = "Editar";
+            this.Editar.ColumnEdit = this.repostEditRTN;
+            this.Editar.FieldName = "editar";
+            this.Editar.Name = "Editar";
+            this.Editar.Visible = true;
+            this.Editar.VisibleIndex = 2;
+            this.Editar.Width = 37;
+            // 
+            // repostEditRTN
+            // 
+            this.repostEditRTN.AutoHeight = false;
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            this.repostEditRTN.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repostEditRTN.Name = "repostEditRTN";
+            this.repostEditRTN.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repostEditRTN.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repostEditRTN_ButtonClick);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.Caption = "Eliminar";
+            this.Eliminar.ColumnEdit = this.repostDeleteRTN;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Visible = true;
+            this.Eliminar.VisibleIndex = 3;
+            this.Eliminar.Width = 37;
+            // 
+            // repostDeleteRTN
+            // 
+            this.repostDeleteRTN.AutoHeight = false;
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
+            this.repostDeleteRTN.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repostDeleteRTN.Name = "repostDeleteRTN";
+            this.repostDeleteRTN.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repostDeleteRTN.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repostDeleteRTN_ButtonClick);
             // 
             // rdGraduado
             // 
             this.rdGraduado.AutoSize = true;
             this.rdGraduado.Enabled = false;
             this.rdGraduado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.rdGraduado.Location = new System.Drawing.Point(984, 283);
-            this.rdGraduado.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rdGraduado.Location = new System.Drawing.Point(492, 147);
             this.rdGraduado.Name = "rdGraduado";
-            this.rdGraduado.Size = new System.Drawing.Size(157, 34);
+            this.rdGraduado.Size = new System.Drawing.Size(87, 20);
             this.rdGraduado.TabIndex = 50;
             this.rdGraduado.TabStop = true;
             this.rdGraduado.Text = "Graduado";
@@ -480,10 +605,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.rdDesertor.AutoSize = true;
             this.rdDesertor.Enabled = false;
             this.rdDesertor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.rdDesertor.Location = new System.Drawing.Point(816, 283);
-            this.rdDesertor.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.rdDesertor.Location = new System.Drawing.Point(408, 147);
             this.rdDesertor.Name = "rdDesertor";
-            this.rdDesertor.Size = new System.Drawing.Size(143, 34);
+            this.rdDesertor.Size = new System.Drawing.Size(78, 20);
             this.rdDesertor.TabIndex = 49;
             this.rdDesertor.TabStop = true;
             this.rdDesertor.Text = "Desertor";
@@ -493,10 +617,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.chkReingreso.AutoSize = true;
             this.chkReingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkReingreso.Location = new System.Drawing.Point(816, 223);
-            this.chkReingreso.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chkReingreso.Location = new System.Drawing.Point(408, 116);
             this.chkReingreso.Name = "chkReingreso";
-            this.chkReingreso.Size = new System.Drawing.Size(331, 34);
+            this.chkReingreso.Size = new System.Drawing.Size(178, 20);
             this.chkReingreso.TabIndex = 48;
             this.chkReingreso.Text = "Es de Reingreso o Retiro";
             this.chkReingreso.UseVisualStyleBackColor = true;
@@ -505,10 +628,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.chkSeguimientoSaldo.AutoSize = true;
             this.chkSeguimientoSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkSeguimientoSaldo.Location = new System.Drawing.Point(816, 154);
-            this.chkSeguimientoSaldo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.chkSeguimientoSaldo.Location = new System.Drawing.Point(408, 80);
             this.chkSeguimientoSaldo.Name = "chkSeguimientoSaldo";
-            this.chkSeguimientoSaldo.Size = new System.Drawing.Size(259, 34);
+            this.chkSeguimientoSaldo.Size = new System.Drawing.Size(141, 20);
             this.chkSeguimientoSaldo.TabIndex = 47;
             this.chkSeguimientoSaldo.Text = "Seguimiento Saldo";
             this.chkSeguimientoSaldo.UseVisualStyleBackColor = true;
@@ -581,10 +703,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cbxNivelIngreso.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.cbxNivelIngreso.DisplayMember = "descripcion";
             this.cbxNivelIngreso.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.cbxNivelIngreso.Location = new System.Drawing.Point(1040, 19);
-            this.cbxNivelIngreso.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbxNivelIngreso.Location = new System.Drawing.Point(520, 10);
             this.cbxNivelIngreso.Name = "cbxNivelIngreso";
-            this.cbxNivelIngreso.Size = new System.Drawing.Size(386, 46);
+            this.cbxNivelIngreso.Size = new System.Drawing.Size(231, 27);
             this.cbxNivelIngreso.TabIndex = 43;
             this.cbxNivelIngreso.ValueMember = "id_nivel";
             // 
@@ -597,30 +718,27 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label9.Location = new System.Drawing.Point(810, 88);
-            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Location = new System.Drawing.Point(405, 46);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 36);
+            this.label9.Size = new System.Drawing.Size(48, 17);
             this.label9.TabIndex = 45;
             this.label9.Text = "E-Mail:";
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtEmail.Location = new System.Drawing.Point(922, 81);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEmail.Location = new System.Drawing.Point(520, 42);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(500, 42);
+            this.txtEmail.Size = new System.Drawing.Size(233, 25);
             this.txtEmail.TabIndex = 44;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label10.Location = new System.Drawing.Point(812, 31);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Location = new System.Drawing.Point(406, 16);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(207, 36);
+            this.label10.Size = new System.Drawing.Size(107, 17);
             this.label10.TabIndex = 46;
             this.label10.Text = "Nivel de Ingreso:";
             // 
@@ -632,10 +750,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdMatricular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdMatricular.ForeColor = System.Drawing.Color.White;
             this.cmdMatricular.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdMatricular.Location = new System.Drawing.Point(390, 960);
-            this.cmdMatricular.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmdMatricular.Location = new System.Drawing.Point(195, 499);
             this.cmdMatricular.Name = "cmdMatricular";
-            this.cmdMatricular.Size = new System.Drawing.Size(250, 77);
+            this.cmdMatricular.Size = new System.Drawing.Size(125, 40);
             this.cmdMatricular.TabIndex = 42;
             this.cmdMatricular.Text = "Matricular";
             this.cmdMatricular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -650,10 +767,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdUserWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdUserWeb.ForeColor = System.Drawing.Color.White;
             this.cmdUserWeb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdUserWeb.Location = new System.Drawing.Point(42, 960);
-            this.cmdUserWeb.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmdUserWeb.Location = new System.Drawing.Point(21, 499);
             this.cmdUserWeb.Name = "cmdUserWeb";
-            this.cmdUserWeb.Size = new System.Drawing.Size(308, 77);
+            this.cmdUserWeb.Size = new System.Drawing.Size(154, 40);
             this.cmdUserWeb.TabIndex = 41;
             this.cmdUserWeb.Text = "Acceso Web";
             this.cmdUserWeb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -666,25 +782,23 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.groupControl1.Controls.Add(this.cmdBuscarEstudiante);
             this.groupControl1.Controls.Add(this.label14);
             this.groupControl1.Controls.Add(this.txtRecomendo);
-            this.groupControl1.Location = new System.Drawing.Point(6, 746);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupControl1.Location = new System.Drawing.Point(3, 388);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(762, 190);
+            this.groupControl1.Size = new System.Drawing.Size(381, 99);
             this.groupControl1.TabIndex = 40;
             this.groupControl1.Text = "Datos de quien le recomendo";
             // 
             // radioGroup1
             // 
             this.radioGroup1.EditValue = 1;
-            this.radioGroup1.Location = new System.Drawing.Point(316, 62);
-            this.radioGroup1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radioGroup1.Location = new System.Drawing.Point(158, 32);
             this.radioGroup1.Name = "radioGroup1";
             this.radioGroup1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.radioGroup1.Properties.Appearance.Options.UseFont = true;
             this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Si"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "No")});
-            this.radioGroup1.Size = new System.Drawing.Size(184, 46);
+            this.radioGroup1.Size = new System.Drawing.Size(92, 24);
             this.radioGroup1.TabIndex = 43;
             this.radioGroup1.SelectedIndexChanged += new System.EventHandler(this.radioGroup1_SelectedIndexChanged);
             // 
@@ -694,10 +808,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdBuscarEstudiante.Appearance.Options.UseBackColor = true;
             this.cmdBuscarEstudiante.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdBuscarEstudiante.ImageOptions.Image")));
             this.cmdBuscarEstudiante.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.cmdBuscarEstudiante.Location = new System.Drawing.Point(638, 88);
-            this.cmdBuscarEstudiante.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmdBuscarEstudiante.Location = new System.Drawing.Point(319, 46);
             this.cmdBuscarEstudiante.Name = "cmdBuscarEstudiante";
-            this.cmdBuscarEstudiante.Size = new System.Drawing.Size(80, 73);
+            this.cmdBuscarEstudiante.Size = new System.Drawing.Size(40, 38);
             this.cmdBuscarEstudiante.TabIndex = 44;
             this.cmdBuscarEstudiante.Click += new System.EventHandler(this.cmdBuscarEstudiante_Click);
             // 
@@ -705,10 +818,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label14.Location = new System.Drawing.Point(168, 69);
-            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label14.Location = new System.Drawing.Point(84, 36);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(135, 36);
+            this.label14.Size = new System.Drawing.Size(68, 17);
             this.label14.TabIndex = 42;
             this.label14.Text = "Estudiante";
             // 
@@ -716,16 +828,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.txtRecomendo.Enabled = false;
             this.txtRecomendo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRecomendo.Location = new System.Drawing.Point(10, 119);
-            this.txtRecomendo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtRecomendo.Location = new System.Drawing.Point(5, 62);
             this.txtRecomendo.Name = "txtRecomendo";
-            this.txtRecomendo.Size = new System.Drawing.Size(612, 37);
+            this.txtRecomendo.Size = new System.Drawing.Size(308, 22);
             this.txtRecomendo.TabIndex = 41;
             // 
             // gridZonas
             // 
-            this.gridZonas.Location = new System.Drawing.Point(182, 625);
-            this.gridZonas.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gridZonas.Location = new System.Drawing.Point(91, 325);
             this.gridZonas.Name = "gridZonas";
             this.gridZonas.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.gridZonas.Properties.Appearance.Options.UseFont = true;
@@ -735,7 +845,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.gridZonas.Properties.DisplayMember = "descripcion";
             this.gridZonas.Properties.PopupView = this.gridLookUpEdit1View;
             this.gridZonas.Properties.ValueMember = "id";
-            this.gridZonas.Size = new System.Drawing.Size(456, 50);
+            this.gridZonas.Size = new System.Drawing.Size(228, 24);
             this.gridZonas.TabIndex = 39;
             // 
             // zonasBindingSource
@@ -745,22 +855,39 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             // gridLookUpEdit1View
             // 
-            this.gridLookUpEdit1View.DetailHeight = 673;
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid2,
+            this.coldescripcion});
             this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridLookUpEdit1View.LevelIndent = 0;
             this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsEditForm.PopupEditFormWidth = 400;
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             this.gridLookUpEdit1View.PreviewIndent = 0;
+            // 
+            // colid2
+            // 
+            this.colid2.FieldName = "id";
+            this.colid2.Name = "colid2";
+            this.colid2.OptionsColumn.AllowEdit = false;
+            // 
+            // coldescripcion
+            // 
+            this.coldescripcion.Caption = "Zona";
+            this.coldescripcion.FieldName = "descripcion";
+            this.coldescripcion.Name = "coldescripcion";
+            this.coldescripcion.OptionsColumn.AllowEdit = false;
+            this.coldescripcion.Visible = true;
+            this.coldescripcion.VisibleIndex = 0;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label12.Location = new System.Drawing.Point(20, 631);
-            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Location = new System.Drawing.Point(10, 328);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 36);
+            this.label12.Size = new System.Drawing.Size(40, 17);
             this.label12.TabIndex = 37;
             this.label12.Text = "Zona:";
             // 
@@ -768,34 +895,31 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label11.Location = new System.Drawing.Point(18, 571);
-            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Location = new System.Drawing.Point(9, 297);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(135, 36);
+            this.label11.Size = new System.Drawing.Size(71, 17);
             this.label11.TabIndex = 36;
             this.label11.Text = "Tipo Pago:";
             // 
             // tsTipoPago
             // 
             this.tsTipoPago.EditValue = true;
-            this.tsTipoPago.Location = new System.Drawing.Point(184, 567);
-            this.tsTipoPago.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tsTipoPago.Location = new System.Drawing.Point(92, 295);
             this.tsTipoPago.Name = "tsTipoPago";
             this.tsTipoPago.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsTipoPago.Properties.Appearance.Options.UseFont = true;
             this.tsTipoPago.Properties.OffText = "Anterior";
             this.tsTipoPago.Properties.OnText = "Posterior";
-            this.tsTipoPago.Size = new System.Drawing.Size(408, 49);
+            this.tsTipoPago.Size = new System.Drawing.Size(204, 24);
             this.tsTipoPago.TabIndex = 35;
             // 
             // lblFechaProximoPago
             // 
             this.lblFechaProximoPago.AutoSize = true;
             this.lblFechaProximoPago.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.lblFechaProximoPago.Location = new System.Drawing.Point(18, 698);
-            this.lblFechaProximoPago.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblFechaProximoPago.Location = new System.Drawing.Point(9, 363);
             this.lblFechaProximoPago.Name = "lblFechaProximoPago";
-            this.lblFechaProximoPago.Size = new System.Drawing.Size(253, 36);
+            this.lblFechaProximoPago.Size = new System.Drawing.Size(130, 17);
             this.lblFechaProximoPago.TabIndex = 34;
             this.lblFechaProximoPago.Text = "Fecha Proximo Pago:";
             this.lblFechaProximoPago.Visible = false;
@@ -804,10 +928,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.dtFechaProximoPago.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.dtFechaProximoPago.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaProximoPago.Location = new System.Drawing.Point(290, 687);
-            this.dtFechaProximoPago.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dtFechaProximoPago.Location = new System.Drawing.Point(145, 357);
             this.dtFechaProximoPago.Name = "dtFechaProximoPago";
-            this.dtFechaProximoPago.Size = new System.Drawing.Size(232, 42);
+            this.dtFechaProximoPago.Size = new System.Drawing.Size(118, 25);
             this.dtFechaProximoPago.TabIndex = 33;
             this.dtFechaProximoPago.Visible = false;
             // 
@@ -815,10 +938,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label8.Location = new System.Drawing.Point(450, 223);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Location = new System.Drawing.Point(225, 116);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 36);
+            this.label8.Size = new System.Drawing.Size(39, 17);
             this.label8.TabIndex = 26;
             this.label8.Text = "Sexo:";
             // 
@@ -830,17 +952,15 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cbxSexo.Items.AddRange(new object[] {
             "F",
             "M"});
-            this.cbxSexo.Location = new System.Drawing.Point(540, 208);
-            this.cbxSexo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbxSexo.Location = new System.Drawing.Point(270, 108);
             this.cbxSexo.Name = "cbxSexo";
-            this.cbxSexo.Size = new System.Drawing.Size(70, 44);
+            this.cbxSexo.Size = new System.Drawing.Size(37, 25);
             this.cbxSexo.TabIndex = 25;
             // 
             // dtFechaIngreso
             // 
             this.dtFechaIngreso.EditValue = null;
-            this.dtFechaIngreso.Location = new System.Drawing.Point(258, 275);
-            this.dtFechaIngreso.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dtFechaIngreso.Location = new System.Drawing.Point(129, 143);
             this.dtFechaIngreso.Name = "dtFechaIngreso";
             this.dtFechaIngreso.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.dtFechaIngreso.Properties.Appearance.Options.UseFont = true;
@@ -848,14 +968,13 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtFechaIngreso.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtFechaIngreso.Size = new System.Drawing.Size(180, 50);
+            this.dtFechaIngreso.Size = new System.Drawing.Size(90, 24);
             this.dtFechaIngreso.TabIndex = 24;
             // 
             // dtFechaNac
             // 
             this.dtFechaNac.EditValue = null;
-            this.dtFechaNac.Location = new System.Drawing.Point(258, 210);
-            this.dtFechaNac.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dtFechaNac.Location = new System.Drawing.Point(129, 109);
             this.dtFechaNac.Name = "dtFechaNac";
             this.dtFechaNac.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.dtFechaNac.Properties.Appearance.Options.UseFont = true;
@@ -863,57 +982,52 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtFechaNac.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtFechaNac.Size = new System.Drawing.Size(180, 50);
+            this.dtFechaNac.Size = new System.Drawing.Size(90, 24);
             this.dtFechaNac.TabIndex = 23;
             // 
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtDireccion.Location = new System.Drawing.Point(184, 352);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDireccion.Location = new System.Drawing.Point(92, 183);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(580, 196);
+            this.txtDireccion.Size = new System.Drawing.Size(292, 104);
             this.txtDireccion.TabIndex = 22;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(184, 140);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtApellido.Location = new System.Drawing.Point(92, 73);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtApellido.Properties.Appearance.Options.UseFont = true;
-            this.txtApellido.Size = new System.Drawing.Size(584, 50);
+            this.txtApellido.Size = new System.Drawing.Size(292, 24);
             this.txtApellido.TabIndex = 20;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(184, 83);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtNombre.Location = new System.Drawing.Point(92, 43);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtNombre.Properties.Appearance.Options.UseFont = true;
-            this.txtNombre.Size = new System.Drawing.Size(584, 50);
+            this.txtNombre.Size = new System.Drawing.Size(292, 24);
             this.txtNombre.TabIndex = 19;
             // 
             // txtIdentidad
             // 
-            this.txtIdentidad.Location = new System.Drawing.Point(184, 25);
-            this.txtIdentidad.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtIdentidad.Location = new System.Drawing.Point(92, 13);
             this.txtIdentidad.Name = "txtIdentidad";
             this.txtIdentidad.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtIdentidad.Properties.Appearance.Options.UseFont = true;
-            this.txtIdentidad.Size = new System.Drawing.Size(584, 50);
+            this.txtIdentidad.Size = new System.Drawing.Size(292, 24);
             this.txtIdentidad.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(10, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 36);
+            this.label1.Size = new System.Drawing.Size(78, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "# Identidad:";
             // 
@@ -921,10 +1035,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label3.Location = new System.Drawing.Point(18, 87);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(9, 45);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 36);
+            this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 13;
             this.label3.Text = "Nombres:";
             // 
@@ -932,10 +1045,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label4.Location = new System.Drawing.Point(20, 146);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(10, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 36);
+            this.label4.Size = new System.Drawing.Size(65, 17);
             this.label4.TabIndex = 14;
             this.label4.Text = "Apellidos:";
             // 
@@ -943,10 +1055,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label5.Location = new System.Drawing.Point(18, 352);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(9, 183);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 36);
+            this.label5.Size = new System.Drawing.Size(65, 17);
             this.label5.TabIndex = 15;
             this.label5.Text = "Dirección:";
             // 
@@ -954,10 +1065,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label6.Location = new System.Drawing.Point(18, 213);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Location = new System.Drawing.Point(9, 111);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(226, 36);
+            this.label6.Size = new System.Drawing.Size(114, 17);
             this.label6.TabIndex = 16;
             this.label6.Text = "Fecha Nacimiento:";
             // 
@@ -965,29 +1075,25 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label7.Location = new System.Drawing.Point(18, 283);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Location = new System.Drawing.Point(9, 147);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(181, 36);
+            this.label7.Size = new System.Drawing.Size(92, 17);
             this.label7.TabIndex = 17;
             this.label7.Text = "Fecha Ingreso:";
             // 
             // tabLogAcceso
             // 
-            this.tabLogAcceso.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabLogAcceso.Name = "tabLogAcceso";
-            this.tabLogAcceso.Size = new System.Drawing.Size(1680, 1051);
+            this.tabLogAcceso.Size = new System.Drawing.Size(840, 550);
             this.tabLogAcceso.Text = "Log Ingresos";
             // 
             // frmEstudiantes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1692, 1185);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(846, 616);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.label2);
             this.IconOptions.ShowIcon = false;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmEstudiantes";
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
@@ -1000,9 +1106,13 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             ((System.ComponentModel.ISupportInitialize)(this.grdTelefonos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantes1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvTelefonos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposEditarTelefono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposEliminar)).EndInit();
             this.tabRTN.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdRtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvRTN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repostEditRTN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repostDeleteRTN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxNivelIngreso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -1087,8 +1197,21 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private DevExpress.XtraGrid.Columns.GridColumn coltelefono;
         private DevExpress.XtraGrid.Columns.GridColumn coltipo_telefono_id;
         private DevExpress.XtraGrid.Columns.GridColumn coltipo_descripcion;
-        private DevExpress.XtraGrid.Columns.GridColumn colrtn_empresa;
-        private DevExpress.XtraGrid.Columns.GridColumn colnombre_empresa;
+        private DevExpress.XtraGrid.Columns.GridColumn grdEditarCol;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit reposEditarTelefono;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit reposEliminar;
+        private DevExpress.XtraGrid.Columns.GridColumn colid1;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_estudiante1;
         private DevExpress.XtraGrid.Columns.GridColumn colid_empresa;
+        private DevExpress.XtraGrid.Columns.GridColumn colenable;
+        private DevExpress.XtraGrid.Columns.GridColumn colrtn;
+        private DevExpress.XtraGrid.Columns.GridColumn colempresa;
+        private DevExpress.XtraGrid.Columns.GridColumn Editar;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repostEditRTN;
+        private DevExpress.XtraGrid.Columns.GridColumn Eliminar;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repostDeleteRTN;
+        private DevExpress.XtraGrid.Columns.GridColumn colid2;
+        private DevExpress.XtraGrid.Columns.GridColumn coldescripcion;
     }
 }

@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using ERP_INTECOLI.Clases;
 using System.Collections;
 using ERP_INTECOLI.Administracion.Estudiantes;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace ERP_INTECOLI.Administracion.Estudiantes
 {
@@ -47,11 +48,16 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 case TipoEdicion.Nuevo:
                     chkReingreso.Visible = false;
                     rdGraduado.Visible = rdDesertor.Visible = false;
+                    grdvTelefonos.OptionsMenu.EnableColumnMenu = false;
+                    grdvTelefonos.Columns["editar"].Visible = false;
+                    grdvRTN.Columns["editar"].Visible = false;
+
                     break;
 
                 case TipoEdicion.Editar:
                     chkReingreso.Visible = true;
                     rdGraduado.Visible = rdDesertor.Visible = true;
+                    grdvTelefonos.OptionsMenu.EnableColumnMenu = false;
                     break;
 
                 default:
@@ -190,8 +196,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 SqlCommand cmd = new SqlCommand("sp_get_zonas", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
-                dsEstudiantes1.niveles_academicos.Clear();
-                adat.Fill(dsEstudiantes1.niveles_academicos);
+                dsEstudiantes1.zonas.Clear();
+                adat.Fill(dsEstudiantes1.zonas);
                 con.Close();
             }
             catch (Exception ec)
@@ -207,7 +213,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 DataOperations dp = new DataOperations();
                 SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("sp_load_niveles_", con);
+                SqlCommand cmd = new SqlCommand("sp_estudiantes_load_niveles_academicos", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 dsEstudiantes1.niveles_academicos.Clear();
@@ -249,10 +255,24 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                     }
 
                 }
+                
+                
             }
-            else
+            if (xtraTabControl2.SelectedTabPage == tabRTN)
             {
                 if (pTipoEdit == TipoEdicion.Nuevo)
+                {
+                    frmagregar_rtn frm = new frmagregar_rtn(frmagregar_rtn.TipoEdicion.Nuevo);
+                    if (frm.ShowDialog() == DialogResult.OK)
+                    {
+                        DataRow row = dsEstudiantes1.detalle_rtn.NewRow();
+                        row[2] = frm.id_empresa;
+                        row[4] = frm.rtn;
+                        row[5] = frm.empresa;
+                        dsEstudiantes1.detalle_rtn.Rows.Add(row);
+                    }
+                }
+                else
                 {
 
                 }
@@ -283,7 +303,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                    
                     Estudiante est = new Estudiante();
 
-                    if (!est.ValidarIdDisponible(txtIdentidad.Text.Trim()))
+                    if (est.ValidarIdDisponible(txtIdentidad.Text.Trim()))
                     {
                         CajaDialogo.Error("Este Numero de Identidad ya Existe!");
                         return;
@@ -316,7 +336,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
                         cmd.Parameters.AddWithValue("@sexo", cbxSexo.Text);
                         cmd.Parameters.AddWithValue("@correo",txtEmail.Text.Trim());
-                        cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogeado.UserId);
+                       
+                        cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogeado.Id);
                         cmd.Parameters.AddWithValue("@proxima_fecha_pago", dtFechaProximoPago.Value);
                         if (chkSeguimientoSaldo.Checked)
                             cmd.Parameters.AddWithValue("@seguimiento_saldo", 1);
@@ -351,33 +372,36 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
                         int id_header_estudiante = Convert.ToInt32(cmd.ExecuteScalar());
 
-                        //foreach (dsEstudiantes.detalle_telefonosRow row in dsEstudiantes1.detalle_telefonos.Rows)
-                        //{
-                        //    cmd.Parameters.Clear();
-                        //    cmd.CommandText = "";
-                        //    cmd.Connection = conn;
-                        //    cmd.Transaction = transaction;
-                        //    cmd.CommandType = CommandType.StoredProcedure;
-                        //    cmd.Parameters.AddWithValue("",);
-                        //    cmd.ExecuteNonQuery();
-                        //}
+                        foreach (dsEstudiantes.detalle_telefonosRow row in dsEstudiantes1.detalle_telefonos.Rows)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.CommandText = "[sp_estudiantes_insert_detalle_telefono]";
+                            cmd.Connection = conn;
+                            cmd.Transaction = transaction;
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@id_estudiante", id_header_estudiante);
+                            cmd.Parameters.AddWithValue("@telefono", row.telefono);
+                            cmd.Parameters.AddWithValue("@tipo_telefono_id", row.tipo_telefono_id);
+                            cmd.ExecuteNonQuery();
+                        }
 
-                        //foreach (dsEstudiantes.detalle_rtnRow row in dsEstudiantes1.detalle_rtn.Rows)
-                        //{
-                        //    cmd.Parameters.Clear();
-                        //    cmd.CommandText = "";
-                        //    cmd.Connection = conn;
-                        //    cmd.Transaction = transaction;
-                        //    cmd.CommandType = CommandType.StoredProcedure;
-                        //    cmd.Parameters.AddWithValue("",);
-                        //    cmd.ExecuteNonQuery();
-                        //}
+                        foreach (dsEstudiantes.detalle_rtnRow row in dsEstudiantes1.detalle_rtn.Rows)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.CommandText = "sp_estudiantes_insert_detalle_rtn";
+                            cmd.Connection = conn;
+                            cmd.Transaction = transaction;
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@id_estudiante", id_header_estudiante);
+                            cmd.Parameters.AddWithValue("@id_empresa", row.id_empresa);
+                            cmd.Parameters.AddWithValue("@rtn", row.rtn);
+                            cmd.ExecuteNonQuery();
+                        }
 
                         transaction.Commit();
                         Guardar = true;
 
-                        this.DialogResult = DialogResult.OK;
-                        this.Close();
+                        
 
                     }
                     catch (Exception ec)
@@ -385,6 +409,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                         transaction.Rollback();
                         CajaDialogo.Error(ec.Message);
                         Guardar = false;
+                    }
+
+
+                    if (Guardar)
+                    {
+                        CajaDialogo.Information("Informacion Guardada con Exito!");
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
                     }
 
                     break;
@@ -415,6 +447,135 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                     IdEstudianteRecomendo = frm.ItemSeleccionado.id_estudiantes;
                     txtRecomendo.Text = frm.ItemSeleccionado.Nombres + " " + frm.ItemSeleccionado.Apellidos;
                 }
+            }
+        }
+
+        private void reposEditarTelefono_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridview = (GridView)grdTelefonos.FocusedView;
+            var row = (dsEstudiantes.detalle_telefonosRow)gridview.GetFocusedDataRow();
+
+            frmagregar_telefono frm = new frmagregar_telefono(frmagregar_telefono.TipoEdicion.Editar, Idestudiante, row.id, row.tipo_telefono_id, row.telefono);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    SqlConnection conn = new SqlConnection();
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("sp_estudiante_update_detalle_telefono",conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_detalle_telefono", frm.id_detalle_telefono);
+                    cmd.Parameters.AddWithValue("@idestudiante", Idestudiante);
+                    cmd.Parameters.AddWithValue("@id_tipo_telefono", frm.id_tipo_telefono);
+                    cmd.Parameters.AddWithValue("@telefono", frm.num_telefono);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    CajaDialogo.Error(ex.Message);
+                }
+
+                cargar_rtn(Idestudiante);
+            }
+        }
+
+        private void reposEliminar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridview = (GridView)grdTelefonos.FocusedView;
+            var row = (dsEstudiantes.detalle_telefonosRow)gridview.GetFocusedDataRow();
+
+            switch (pTipoEdit)
+            {
+                case TipoEdicion.Nuevo:
+
+                    //Eliminar en Memoria
+                    try
+                    {
+                        grdvTelefonos.DeleteRow(grdvTelefonos.FocusedRowHandle);
+                    }
+                    catch (Exception ec)
+                    {
+                        CajaDialogo.Error(ec.Message);
+                    }
+
+                    break;
+                case TipoEdicion.Editar:
+                    //Eliminar en SQL 
+
+
+
+                    break;
+                default:
+
+                    CajaDialogo.Error("No se logro definir un proceso de Nuevo/Edicion \n Contactar a su Administrador");
+
+                    break;
+            }
+
+
+
+        }
+
+        private void repostEditRTN_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridview = (GridView)grdRtn.FocusedView;
+            var row = (dsEstudiantes.detalle_rtnRow)gridview.GetFocusedDataRow();
+
+            frmagregar_rtn frm = new frmagregar_rtn(frmagregar_rtn.TipoEdicion.Editar, Idestudiante, row.id, row.rtn, row.id_empresa);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    SqlConnection conn = new SqlConnection();
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("sp_estudiante_update_detalle_rtn", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_detalle", frm.id_detalle_rtn);
+                    cmd.Parameters.AddWithValue("@id_estudiante", Idestudiante);
+                    cmd.Parameters.AddWithValue("@id_empresa", frm.id_empresa);
+                    cmd.Parameters.AddWithValue("@rtn", frm.rtn);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    CajaDialogo.Error(ex.Message);
+                }
+
+                cargar_rtn(Idestudiante);
+            }
+        }
+
+        private void repostDeleteRTN_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridview = (GridView)grdRtn.FocusedView;
+            var row = (dsEstudiantes.detalle_rtnRow)gridview.GetFocusedDataRow();
+
+            switch (pTipoEdit)
+            {
+                case TipoEdicion.Nuevo:
+
+                    //Eliminar en Memoria
+                    try
+                    {
+                        grdvRTN.DeleteRow(grdvRTN.FocusedRowHandle);
+                    }
+                    catch (Exception ec)
+                    {
+                        CajaDialogo.Error(ec.Message);
+                    }
+
+                    break;
+                case TipoEdicion.Editar:
+                    //Eliminar en SQL 
+
+
+
+                    break;
+                default:
+
+                    CajaDialogo.Error("No se logro definir un proceso de Nuevo/Edicion \n Contactar a su Administrador");
+
+                    break;
             }
         }
     }

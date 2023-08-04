@@ -104,9 +104,12 @@ namespace ERP_INTECOLI.Clases
                 //                where replace(trim(ee.numero_identidad), '-', '') =  replace(trim(:par), '-', '')";
                 string sql = "sp_estudiantes_validar_existencia_identidad";
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@identidad", p);
                 r = Convert.ToBoolean(cmd.ExecuteScalar());
+                conn.Close();
             }
             catch (Exception ec)
             {
@@ -114,6 +117,8 @@ namespace ERP_INTECOLI.Clases
             }
             return r;
         }
+
+       
 
     }
 }

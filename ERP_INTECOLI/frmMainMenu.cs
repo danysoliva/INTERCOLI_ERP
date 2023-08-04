@@ -16,10 +16,13 @@ namespace ERP_INTECOLI
 {
     public partial class frmMainMenu : DevExpress.XtraEditors.XtraForm
     {
+        
         UserLogin UsuarioLogeado;
+
         public frmMainMenu()
         {
             InitializeComponent();
+            UsuarioLogeado.UserId = 0;
         }
 
         private void navBarEstudiantes_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)

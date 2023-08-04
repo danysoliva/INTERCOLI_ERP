@@ -48,9 +48,11 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
         
         private RecuentoGeneroDataTable tableRecuentoGenero;
         
-        private detalle_rtnDataTable tabledetalle_rtn;
+        private detalle_empresaDataTable tabledetalle_empresa;
         
         private serach_estudiantesDataTable tableserach_estudiantes;
+        
+        private detalle_rtnDataTable tabledetalle_rtn;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -116,11 +118,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
                 if ((ds.Tables["RecuentoGenero"] != null)) {
                     base.Tables.Add(new RecuentoGeneroDataTable(ds.Tables["RecuentoGenero"]));
                 }
-                if ((ds.Tables["detalle_rtn"] != null)) {
-                    base.Tables.Add(new detalle_rtnDataTable(ds.Tables["detalle_rtn"]));
+                if ((ds.Tables["detalle_empresa"] != null)) {
+                    base.Tables.Add(new detalle_empresaDataTable(ds.Tables["detalle_empresa"]));
                 }
                 if ((ds.Tables["serach_estudiantes"] != null)) {
                     base.Tables.Add(new serach_estudiantesDataTable(ds.Tables["serach_estudiantes"]));
+                }
+                if ((ds.Tables["detalle_rtn"] != null)) {
+                    base.Tables.Add(new detalle_rtnDataTable(ds.Tables["detalle_rtn"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -264,9 +269,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public detalle_rtnDataTable detalle_rtn {
+        public detalle_empresaDataTable detalle_empresa {
             get {
-                return this.tabledetalle_rtn;
+                return this.tabledetalle_empresa;
             }
         }
         
@@ -277,6 +282,16 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
         public serach_estudiantesDataTable serach_estudiantes {
             get {
                 return this.tableserach_estudiantes;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public detalle_rtnDataTable detalle_rtn {
+            get {
+                return this.tabledetalle_rtn;
             }
         }
         
@@ -383,11 +398,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
                 if ((ds.Tables["RecuentoGenero"] != null)) {
                     base.Tables.Add(new RecuentoGeneroDataTable(ds.Tables["RecuentoGenero"]));
                 }
-                if ((ds.Tables["detalle_rtn"] != null)) {
-                    base.Tables.Add(new detalle_rtnDataTable(ds.Tables["detalle_rtn"]));
+                if ((ds.Tables["detalle_empresa"] != null)) {
+                    base.Tables.Add(new detalle_empresaDataTable(ds.Tables["detalle_empresa"]));
                 }
                 if ((ds.Tables["serach_estudiantes"] != null)) {
                     base.Tables.Add(new serach_estudiantesDataTable(ds.Tables["serach_estudiantes"]));
+                }
+                if ((ds.Tables["detalle_rtn"] != null)) {
+                    base.Tables.Add(new detalle_rtnDataTable(ds.Tables["detalle_rtn"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -494,16 +512,22 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
                     this.tableRecuentoGenero.InitVars();
                 }
             }
-            this.tabledetalle_rtn = ((detalle_rtnDataTable)(base.Tables["detalle_rtn"]));
+            this.tabledetalle_empresa = ((detalle_empresaDataTable)(base.Tables["detalle_empresa"]));
             if ((initTable == true)) {
-                if ((this.tabledetalle_rtn != null)) {
-                    this.tabledetalle_rtn.InitVars();
+                if ((this.tabledetalle_empresa != null)) {
+                    this.tabledetalle_empresa.InitVars();
                 }
             }
             this.tableserach_estudiantes = ((serach_estudiantesDataTable)(base.Tables["serach_estudiantes"]));
             if ((initTable == true)) {
                 if ((this.tableserach_estudiantes != null)) {
                     this.tableserach_estudiantes.InitVars();
+                }
+            }
+            this.tabledetalle_rtn = ((detalle_rtnDataTable)(base.Tables["detalle_rtn"]));
+            if ((initTable == true)) {
+                if ((this.tabledetalle_rtn != null)) {
+                    this.tabledetalle_rtn.InitVars();
                 }
             }
         }
@@ -540,10 +564,12 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             base.Tables.Add(this.tabletipo_telefono);
             this.tableRecuentoGenero = new RecuentoGeneroDataTable();
             base.Tables.Add(this.tableRecuentoGenero);
-            this.tabledetalle_rtn = new detalle_rtnDataTable();
-            base.Tables.Add(this.tabledetalle_rtn);
+            this.tabledetalle_empresa = new detalle_empresaDataTable();
+            base.Tables.Add(this.tabledetalle_empresa);
             this.tableserach_estudiantes = new serach_estudiantesDataTable();
             base.Tables.Add(this.tableserach_estudiantes);
+            this.tabledetalle_rtn = new detalle_rtnDataTable();
+            base.Tables.Add(this.tabledetalle_rtn);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -620,13 +646,19 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializedetalle_rtn() {
+        private bool ShouldSerializedetalle_empresa() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeserach_estudiantes() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializedetalle_rtn() {
             return false;
         }
         
@@ -722,10 +754,13 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
         public delegate void RecuentoGeneroRowChangeEventHandler(object sender, RecuentoGeneroRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void detalle_rtnRowChangeEventHandler(object sender, detalle_rtnRowChangeEvent e);
+        public delegate void detalle_empresaRowChangeEventHandler(object sender, detalle_empresaRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void serach_estudiantesRowChangeEventHandler(object sender, serach_estudiantesRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void detalle_rtnRowChangeEventHandler(object sender, detalle_rtnRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -4202,18 +4237,18 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class detalle_rtnDataTable : global::System.Data.TypedTableBase<detalle_rtnRow> {
+        public partial class detalle_empresaDataTable : global::System.Data.TypedTableBase<detalle_empresaRow> {
             
             private global::System.Data.DataColumn columnrtn_empresa;
             
-            private global::System.Data.DataColumn columnnombre_empresa;
+            private global::System.Data.DataColumn columnempresa;
             
             private global::System.Data.DataColumn columnid_empresa;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public detalle_rtnDataTable() {
-                this.TableName = "detalle_rtn";
+            public detalle_empresaDataTable() {
+                this.TableName = "detalle_empresa";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -4221,7 +4256,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal detalle_rtnDataTable(global::System.Data.DataTable table) {
+            internal detalle_empresaDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -4238,7 +4273,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected detalle_rtnDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected detalle_empresaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -4253,9 +4288,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn nombre_empresaColumn {
+            public global::System.Data.DataColumn empresaColumn {
                 get {
-                    return this.columnnombre_empresa;
+                    return this.columnempresa;
                 }
             }
             
@@ -4278,47 +4313,47 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public detalle_rtnRow this[int index] {
+            public detalle_empresaRow this[int index] {
                 get {
-                    return ((detalle_rtnRow)(this.Rows[index]));
+                    return ((detalle_empresaRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event detalle_rtnRowChangeEventHandler detalle_rtnRowChanging;
+            public event detalle_empresaRowChangeEventHandler detalle_empresaRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event detalle_rtnRowChangeEventHandler detalle_rtnRowChanged;
+            public event detalle_empresaRowChangeEventHandler detalle_empresaRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event detalle_rtnRowChangeEventHandler detalle_rtnRowDeleting;
+            public event detalle_empresaRowChangeEventHandler detalle_empresaRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event detalle_rtnRowChangeEventHandler detalle_rtnRowDeleted;
+            public event detalle_empresaRowChangeEventHandler detalle_empresaRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Adddetalle_rtnRow(detalle_rtnRow row) {
+            public void Adddetalle_empresaRow(detalle_empresaRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public detalle_rtnRow Adddetalle_rtnRow(string rtn_empresa, string nombre_empresa, string id_empresa) {
-                detalle_rtnRow rowdetalle_rtnRow = ((detalle_rtnRow)(this.NewRow()));
+            public detalle_empresaRow Adddetalle_empresaRow(string rtn_empresa, string empresa, int id_empresa) {
+                detalle_empresaRow rowdetalle_empresaRow = ((detalle_empresaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         rtn_empresa,
-                        nombre_empresa,
+                        empresa,
                         id_empresa};
-                rowdetalle_rtnRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowdetalle_rtnRow);
-                return rowdetalle_rtnRow;
+                rowdetalle_empresaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdetalle_empresaRow);
+                return rowdetalle_empresaRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                detalle_rtnDataTable cln = ((detalle_rtnDataTable)(base.Clone()));
+                detalle_empresaDataTable cln = ((detalle_empresaDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -4326,14 +4361,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new detalle_rtnDataTable();
+                return new detalle_empresaDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnrtn_empresa = base.Columns["rtn_empresa"];
-                this.columnnombre_empresa = base.Columns["nombre_empresa"];
+                this.columnempresa = base.Columns["empresa"];
                 this.columnid_empresa = base.Columns["id_empresa"];
             }
             
@@ -4342,36 +4377,36 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             private void InitClass() {
                 this.columnrtn_empresa = new global::System.Data.DataColumn("rtn_empresa", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnrtn_empresa);
-                this.columnnombre_empresa = new global::System.Data.DataColumn("nombre_empresa", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre_empresa);
-                this.columnid_empresa = new global::System.Data.DataColumn("id_empresa", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnempresa = new global::System.Data.DataColumn("empresa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnempresa);
+                this.columnid_empresa = new global::System.Data.DataColumn("id_empresa", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_empresa);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public detalle_rtnRow Newdetalle_rtnRow() {
-                return ((detalle_rtnRow)(this.NewRow()));
+            public detalle_empresaRow Newdetalle_empresaRow() {
+                return ((detalle_empresaRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new detalle_rtnRow(builder);
+                return new detalle_empresaRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(detalle_rtnRow);
+                return typeof(detalle_empresaRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.detalle_rtnRowChanged != null)) {
-                    this.detalle_rtnRowChanged(this, new detalle_rtnRowChangeEvent(((detalle_rtnRow)(e.Row)), e.Action));
+                if ((this.detalle_empresaRowChanged != null)) {
+                    this.detalle_empresaRowChanged(this, new detalle_empresaRowChangeEvent(((detalle_empresaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4379,8 +4414,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.detalle_rtnRowChanging != null)) {
-                    this.detalle_rtnRowChanging(this, new detalle_rtnRowChangeEvent(((detalle_rtnRow)(e.Row)), e.Action));
+                if ((this.detalle_empresaRowChanging != null)) {
+                    this.detalle_empresaRowChanging(this, new detalle_empresaRowChangeEvent(((detalle_empresaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4388,8 +4423,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.detalle_rtnRowDeleted != null)) {
-                    this.detalle_rtnRowDeleted(this, new detalle_rtnRowChangeEvent(((detalle_rtnRow)(e.Row)), e.Action));
+                if ((this.detalle_empresaRowDeleted != null)) {
+                    this.detalle_empresaRowDeleted(this, new detalle_empresaRowChangeEvent(((detalle_empresaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4397,14 +4432,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.detalle_rtnRowDeleting != null)) {
-                    this.detalle_rtnRowDeleting(this, new detalle_rtnRowChangeEvent(((detalle_rtnRow)(e.Row)), e.Action));
+                if ((this.detalle_empresaRowDeleting != null)) {
+                    this.detalle_empresaRowDeleting(this, new detalle_empresaRowChangeEvent(((detalle_empresaRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removedetalle_rtnRow(detalle_rtnRow row) {
+            public void Removedetalle_empresaRow(detalle_empresaRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -4431,7 +4466,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "detalle_rtnDataTable";
+                attribute2.FixedValue = "detalle_empresaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4749,6 +4784,323 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "serach_estudiantesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class detalle_rtnDataTable : global::System.Data.TypedTableBase<detalle_rtnRow> {
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columnid_estudiante;
+            
+            private global::System.Data.DataColumn columnid_empresa;
+            
+            private global::System.Data.DataColumn columnenable;
+            
+            private global::System.Data.DataColumn columnrtn;
+            
+            private global::System.Data.DataColumn columnempresa;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public detalle_rtnDataTable() {
+                this.TableName = "detalle_rtn";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal detalle_rtnDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected detalle_rtnDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn id_estudianteColumn {
+                get {
+                    return this.columnid_estudiante;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn id_empresaColumn {
+                get {
+                    return this.columnid_empresa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn enableColumn {
+                get {
+                    return this.columnenable;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn rtnColumn {
+                get {
+                    return this.columnrtn;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn empresaColumn {
+                get {
+                    return this.columnempresa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public detalle_rtnRow this[int index] {
+                get {
+                    return ((detalle_rtnRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event detalle_rtnRowChangeEventHandler detalle_rtnRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event detalle_rtnRowChangeEventHandler detalle_rtnRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event detalle_rtnRowChangeEventHandler detalle_rtnRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event detalle_rtnRowChangeEventHandler detalle_rtnRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Adddetalle_rtnRow(detalle_rtnRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public detalle_rtnRow Adddetalle_rtnRow(int id, int id_estudiante, int id_empresa, bool enable, string rtn, string empresa) {
+                detalle_rtnRow rowdetalle_rtnRow = ((detalle_rtnRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        id,
+                        id_estudiante,
+                        id_empresa,
+                        enable,
+                        rtn,
+                        empresa};
+                rowdetalle_rtnRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdetalle_rtnRow);
+                return rowdetalle_rtnRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                detalle_rtnDataTable cln = ((detalle_rtnDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new detalle_rtnDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnid = base.Columns["id"];
+                this.columnid_estudiante = base.Columns["id_estudiante"];
+                this.columnid_empresa = base.Columns["id_empresa"];
+                this.columnenable = base.Columns["enable"];
+                this.columnrtn = base.Columns["rtn"];
+                this.columnempresa = base.Columns["empresa"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnid_estudiante = new global::System.Data.DataColumn("id_estudiante", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_estudiante);
+                this.columnid_empresa = new global::System.Data.DataColumn("id_empresa", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_empresa);
+                this.columnenable = new global::System.Data.DataColumn("enable", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnenable);
+                this.columnrtn = new global::System.Data.DataColumn("rtn", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrtn);
+                this.columnempresa = new global::System.Data.DataColumn("empresa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnempresa);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public detalle_rtnRow Newdetalle_rtnRow() {
+                return ((detalle_rtnRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new detalle_rtnRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(detalle_rtnRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.detalle_rtnRowChanged != null)) {
+                    this.detalle_rtnRowChanged(this, new detalle_rtnRowChangeEvent(((detalle_rtnRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.detalle_rtnRowChanging != null)) {
+                    this.detalle_rtnRowChanging(this, new detalle_rtnRowChangeEvent(((detalle_rtnRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.detalle_rtnRowDeleted != null)) {
+                    this.detalle_rtnRowDeleted(this, new detalle_rtnRowChangeEvent(((detalle_rtnRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.detalle_rtnRowDeleting != null)) {
+                    this.detalle_rtnRowDeleting(this, new detalle_rtnRowChangeEvent(((detalle_rtnRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Removedetalle_rtnRow(detalle_rtnRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsEstudiantes ds = new dsEstudiantes();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "detalle_rtnDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -6289,15 +6641,15 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class detalle_rtnRow : global::System.Data.DataRow {
+        public partial class detalle_empresaRow : global::System.Data.DataRow {
             
-            private detalle_rtnDataTable tabledetalle_rtn;
+            private detalle_empresaDataTable tabledetalle_empresa;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal detalle_rtnRow(global::System.Data.DataRowBuilder rb) : 
+            internal detalle_empresaRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabledetalle_rtn = ((detalle_rtnDataTable)(this.Table));
+                this.tabledetalle_empresa = ((detalle_empresaDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6305,83 +6657,83 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             public string rtn_empresa {
                 get {
                     try {
-                        return ((string)(this[this.tabledetalle_rtn.rtn_empresaColumn]));
+                        return ((string)(this[this.tabledetalle_empresa.rtn_empresaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'rtn_empresa\' in table \'detalle_rtn\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'rtn_empresa\' in table \'detalle_empresa\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledetalle_rtn.rtn_empresaColumn] = value;
+                    this[this.tabledetalle_empresa.rtn_empresaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string nombre_empresa {
+            public string empresa {
                 get {
                     try {
-                        return ((string)(this[this.tabledetalle_rtn.nombre_empresaColumn]));
+                        return ((string)(this[this.tabledetalle_empresa.empresaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'nombre_empresa\' in table \'detalle_rtn\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'empresa\' in table \'detalle_empresa\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledetalle_rtn.nombre_empresaColumn] = value;
+                    this[this.tabledetalle_empresa.empresaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string id_empresa {
+            public int id_empresa {
                 get {
                     try {
-                        return ((string)(this[this.tabledetalle_rtn.id_empresaColumn]));
+                        return ((int)(this[this.tabledetalle_empresa.id_empresaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'id_empresa\' in table \'detalle_rtn\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_empresa\' in table \'detalle_empresa\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledetalle_rtn.id_empresaColumn] = value;
+                    this[this.tabledetalle_empresa.id_empresaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isrtn_empresaNull() {
-                return this.IsNull(this.tabledetalle_rtn.rtn_empresaColumn);
+                return this.IsNull(this.tabledetalle_empresa.rtn_empresaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setrtn_empresaNull() {
-                this[this.tabledetalle_rtn.rtn_empresaColumn] = global::System.Convert.DBNull;
+                this[this.tabledetalle_empresa.rtn_empresaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isnombre_empresaNull() {
-                return this.IsNull(this.tabledetalle_rtn.nombre_empresaColumn);
+            public bool IsempresaNull() {
+                return this.IsNull(this.tabledetalle_empresa.empresaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setnombre_empresaNull() {
-                this[this.tabledetalle_rtn.nombre_empresaColumn] = global::System.Convert.DBNull;
+            public void SetempresaNull() {
+                this[this.tabledetalle_empresa.empresaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isid_empresaNull() {
-                return this.IsNull(this.tabledetalle_rtn.id_empresaColumn);
+                return this.IsNull(this.tabledetalle_empresa.id_empresaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setid_empresaNull() {
-                this[this.tabledetalle_rtn.id_empresaColumn] = global::System.Convert.DBNull;
+                this[this.tabledetalle_empresa.id_empresaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6565,6 +6917,189 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setconcat_Null() {
                 this[this.tableserach_estudiantes.concat_Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class detalle_rtnRow : global::System.Data.DataRow {
+            
+            private detalle_rtnDataTable tabledetalle_rtn;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal detalle_rtnRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabledetalle_rtn = ((detalle_rtnDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int id {
+                get {
+                    try {
+                        return ((int)(this[this.tabledetalle_rtn.idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'detalle_rtn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledetalle_rtn.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int id_estudiante {
+                get {
+                    try {
+                        return ((int)(this[this.tabledetalle_rtn.id_estudianteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_estudiante\' in table \'detalle_rtn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledetalle_rtn.id_estudianteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int id_empresa {
+                get {
+                    try {
+                        return ((int)(this[this.tabledetalle_rtn.id_empresaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_empresa\' in table \'detalle_rtn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledetalle_rtn.id_empresaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool enable {
+                get {
+                    try {
+                        return ((bool)(this[this.tabledetalle_rtn.enableColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'enable\' in table \'detalle_rtn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledetalle_rtn.enableColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string rtn {
+                get {
+                    try {
+                        return ((string)(this[this.tabledetalle_rtn.rtnColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rtn\' in table \'detalle_rtn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledetalle_rtn.rtnColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string empresa {
+                get {
+                    try {
+                        return ((string)(this[this.tabledetalle_rtn.empresaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'empresa\' in table \'detalle_rtn\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledetalle_rtn.empresaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsidNull() {
+                return this.IsNull(this.tabledetalle_rtn.idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetidNull() {
+                this[this.tabledetalle_rtn.idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isid_estudianteNull() {
+                return this.IsNull(this.tabledetalle_rtn.id_estudianteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setid_estudianteNull() {
+                this[this.tabledetalle_rtn.id_estudianteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isid_empresaNull() {
+                return this.IsNull(this.tabledetalle_rtn.id_empresaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setid_empresaNull() {
+                this[this.tabledetalle_rtn.id_empresaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsenableNull() {
+                return this.IsNull(this.tabledetalle_rtn.enableColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetenableNull() {
+                this[this.tabledetalle_rtn.enableColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsrtnNull() {
+                return this.IsNull(this.tabledetalle_rtn.rtnColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetrtnNull() {
+                this[this.tabledetalle_rtn.rtnColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsempresaNull() {
+                return this.IsNull(this.tabledetalle_rtn.empresaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetempresaNull() {
+                this[this.tabledetalle_rtn.empresaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6980,22 +7515,22 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class detalle_rtnRowChangeEvent : global::System.EventArgs {
+        public class detalle_empresaRowChangeEvent : global::System.EventArgs {
             
-            private detalle_rtnRow eventRow;
+            private detalle_empresaRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public detalle_rtnRowChangeEvent(detalle_rtnRow row, global::System.Data.DataRowAction action) {
+            public detalle_empresaRowChangeEvent(detalle_empresaRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public detalle_rtnRow Row {
+            public detalle_empresaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7030,6 +7565,40 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public serach_estudiantesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class detalle_rtnRowChangeEvent : global::System.EventArgs {
+            
+            private detalle_rtnRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public detalle_rtnRowChangeEvent(detalle_rtnRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public detalle_rtnRow Row {
                 get {
                     return this.eventRow;
                 }

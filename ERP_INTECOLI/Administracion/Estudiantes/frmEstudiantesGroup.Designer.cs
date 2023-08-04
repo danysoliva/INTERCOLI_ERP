@@ -81,10 +81,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdNuevo.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.cmdNuevo.Image = global::ERP_INTECOLI.Properties.Resources.anadir;
             this.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdNuevo.Location = new System.Drawing.Point(944, 42);
-            this.cmdNuevo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmdNuevo.Location = new System.Drawing.Point(472, 22);
             this.cmdNuevo.Name = "cmdNuevo";
-            this.cmdNuevo.Size = new System.Drawing.Size(360, 83);
+            this.cmdNuevo.Size = new System.Drawing.Size(180, 43);
             this.cmdNuevo.TabIndex = 9;
             this.cmdNuevo.Text = "Agregar Estudiante";
             this.cmdNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -94,34 +93,31 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // txtParametro
             // 
             this.txtParametro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParametro.Location = new System.Drawing.Point(382, 65);
-            this.txtParametro.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtParametro.Location = new System.Drawing.Point(191, 34);
             this.txtParametro.Name = "txtParametro";
-            this.txtParametro.Size = new System.Drawing.Size(540, 45);
+            this.txtParametro.Size = new System.Drawing.Size(270, 26);
             this.txtParametro.TabIndex = 7;
             this.txtParametro.ValueChanged += new System.EventHandler(this.txtParametro_ValueChanged);
             // 
             // ultraLabel1
             // 
             this.ultraLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ultraLabel1.Location = new System.Drawing.Point(100, 73);
-            this.ultraLabel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ultraLabel1.Location = new System.Drawing.Point(50, 38);
             this.ultraLabel1.Name = "ultraLabel1";
-            this.ultraLabel1.Size = new System.Drawing.Size(316, 35);
+            this.ultraLabel1.Size = new System.Drawing.Size(158, 18);
             this.ultraLabel1.TabIndex = 6;
             this.ultraLabel1.Text = "Buscar por Nombre:";
             // 
             // tsVerTodos
             // 
             this.tsVerTodos.EditValue = true;
-            this.tsVerTodos.Location = new System.Drawing.Point(1752, 67);
-            this.tsVerTodos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tsVerTodos.Location = new System.Drawing.Point(717, 31);
             this.tsVerTodos.Name = "tsVerTodos";
             this.tsVerTodos.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.tsVerTodos.Properties.Appearance.Options.UseFont = true;
             this.tsVerTodos.Properties.OffText = "Deshabilitados";
             this.tsVerTodos.Properties.OnText = "Habilitados";
-            this.tsVerTodos.Size = new System.Drawing.Size(336, 49);
+            this.tsVerTodos.Size = new System.Drawing.Size(168, 24);
             this.tsVerTodos.TabIndex = 10;
             this.tsVerTodos.Toggled += new System.EventHandler(this.tsVerTodos_Toggled);
             // 
@@ -138,34 +134,34 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.grDetalle.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;
             ultraGridColumn1.Header.Caption = "Id";
             ultraGridColumn1.Header.VisiblePosition = 0;
-            ultraGridColumn1.Width = 116;
+            ultraGridColumn1.Width = 28;
             ultraGridColumn2.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn2.Header.VisiblePosition = 1;
-            ultraGridColumn2.Width = 232;
+            ultraGridColumn2.Width = 83;
             ultraGridColumn3.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn3.Header.VisiblePosition = 2;
-            ultraGridColumn3.Width = 444;
+            ultraGridColumn3.Width = 160;
             ultraGridColumn4.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn4.Header.VisiblePosition = 3;
-            ultraGridColumn4.Width = 346;
+            ultraGridColumn4.Width = 127;
             ultraGridColumn5.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn5.Header.VisiblePosition = 4;
-            ultraGridColumn5.Width = 176;
+            ultraGridColumn5.Width = 60;
             ultraGridColumn6.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn6.Header.VisiblePosition = 5;
-            ultraGridColumn6.Width = 220;
+            ultraGridColumn6.Width = 82;
             ultraGridColumn7.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn7.Header.VisiblePosition = 6;
-            ultraGridColumn7.Width = 238;
+            ultraGridColumn7.Width = 91;
             ultraGridColumn8.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn8.Header.VisiblePosition = 7;
-            ultraGridColumn8.Width = 140;
+            ultraGridColumn8.Width = 48;
             ultraGridColumn9.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn9.Header.VisiblePosition = 8;
-            ultraGridColumn9.Width = 120;
+            ultraGridColumn9.Width = 37;
             ultraGridColumn10.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn10.Header.VisiblePosition = 9;
-            ultraGridColumn10.Width = 154;
+            ultraGridColumn10.Width = 50;
             appearance2.Image = global::ERP_INTECOLI.Properties.Resources.edit;
             appearance2.ImageHAlign = Infragistics.Win.HAlign.Center;
             appearance2.ImageVAlign = Infragistics.Win.VAlign.Middle;
@@ -175,7 +171,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             ultraGridColumn11.CellButtonAppearance = appearance3;
             ultraGridColumn11.Header.VisiblePosition = 10;
             ultraGridColumn11.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn11.Width = 168;
+            ultraGridColumn11.Width = 53;
             ultraGridColumn12.Header.VisiblePosition = 11;
             ultraGridColumn12.Hidden = true;
             ultraGridColumn12.Width = 102;
@@ -188,7 +184,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             ultraGridColumn13.Header.Caption = "Antigüedad";
             ultraGridColumn13.Header.VisiblePosition = 12;
             ultraGridColumn13.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn13.Width = 190;
+            ultraGridColumn13.Width = 62;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -264,10 +260,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.grDetalle.DisplayLayout.UseFixedHeaders = true;
             this.grDetalle.DisplayLayout.ViewStyle = Infragistics.Win.UltraWinGrid.ViewStyle.SingleBand;
             this.grDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grDetalle.Location = new System.Drawing.Point(0, 175);
-            this.grDetalle.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grDetalle.Location = new System.Drawing.Point(0, 91);
             this.grDetalle.Name = "grDetalle";
-            this.grDetalle.Size = new System.Drawing.Size(2546, 1313);
+            this.grDetalle.Size = new System.Drawing.Size(883, 461);
             this.grDetalle.TabIndex = 11;
             this.grDetalle.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.grDetalle_ClickCellButton);
             // 
@@ -284,19 +279,18 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.btnClose.Appearance.Options.UseBackColor = true;
             this.btnClose.Appearance.Options.UseForeColor = true;
             this.btnClose.ImageOptions.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
-            this.btnClose.Location = new System.Drawing.Point(2332, 29);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnClose.Location = new System.Drawing.Point(1082, 15);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(156, 96);
+            this.btnClose.Size = new System.Drawing.Size(78, 50);
             this.btnClose.TabIndex = 12;
             this.btnClose.Text = "Cerrar";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmEstudiantesGroup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2546, 1488);
+            this.ClientSize = new System.Drawing.Size(885, 555);
             this.ControlBox = false;
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.grDetalle);
@@ -305,7 +299,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.Controls.Add(this.txtParametro);
             this.Controls.Add(this.ultraLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmEstudiantesGroup";
             this.Text = "Estudiantes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

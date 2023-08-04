@@ -11,15 +11,19 @@ using System.Windows.Forms;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Administracion.Estudiantes;
 using System.Data.SqlClient;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace ERP_INTECOLI.Administracion.Estudiantes
 {
-    public partial class frmagregar_telefono : DevExpress.XtraEditors.XtraForm
+    public partial class frmagregar_rtn : DevExpress.XtraEditors.XtraForm
     {
         DataOperations dp = new DataOperations();
-        public int id_tipo_telefono;
-        public string num_telefono, tipo_Telefono;
-        public int id_detalle_telefono = 0;
+        public string rtn;
+        public int id_empresa;
+        public string empresa;
+        public int id_detalle_rtn;
+        int Id_estudiante = 0;
+
         public enum TipoEdicion
         {
             Nuevo = 1,
@@ -28,73 +32,69 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
         private TipoEdicion pTipoEdit;
 
-        public frmagregar_telefono(TipoEdicion ptipoEdicion ,int pid_estudiante)
+        public frmagregar_rtn(TipoEdicion ptipoEdicion, int pId_estudiante, int pid, string prtn, int pid_empresa)
         {
             InitializeComponent();
 
-            cargar_tipo_telefono();
+            cargar_empresa();
 
             pTipoEdit = ptipoEdicion;
 
-            switch (pTipoEdit)
+            switch (ptipoEdicion)
             {
                 case TipoEdicion.Nuevo:
 
-                    
                     break;
                 case TipoEdicion.Editar:
+                    id_empresa = pid_empresa;
+                    rtn = prtn;
+                    Id_estudiante = pId_estudiante;
+                    id_detalle_rtn = pid;
 
-
+                    grdEmpresa.EditValue = id_empresa;
 
                     break;
                 default:
                     break;
             }
 
-
         }
 
-        public frmagregar_telefono(TipoEdicion ptipoEdicion, int pid_estudiante, int pid_detalle, int pid_tipo_telefono, string telefono)
+        public frmagregar_rtn(TipoEdicion ptipoEdicion)
         {
             InitializeComponent();
 
-            cargar_tipo_telefono();
-
-
+            cargar_empresa();
 
             pTipoEdit = ptipoEdicion;
 
-            switch (pTipoEdit)
+            switch (ptipoEdicion)
             {
                 case TipoEdicion.Nuevo:
 
-
                     break;
                 case TipoEdicion.Editar:
-                    txtTelefono.Text = telefono.Trim();
-                    grdTipoTelefono.EditValue = pid_tipo_telefono;
-                    id_detalle_telefono = pid_detalle;
 
                     break;
                 default:
                     break;
             }
 
-
         }
 
-        private void cargar_tipo_telefono()
+        private void cargar_empresa()
         {
+
             try
             {
-                string sql = "sp_estudiantes_tipo_telefono";
+                string sql = "sp_estudiantes_get_empresas";
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                dsEstudiantes1.tipo_telefono.Clear();
+                dsEstudiantes1.detalle_empresa.Clear();
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
-                adat.Fill(dsEstudiantes1.tipo_telefono);
+                adat.Fill(dsEstudiantes1.detalle_empresa);
                 conn.Close();
 
             }
@@ -104,36 +104,45 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             }
         }
 
-        private void cmdCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTelefono.Text))
+            if (string.IsNullOrEmpty(txtRTN.Text))
             {
-                CajaDialogo.Error("No puede dejar Vacio el Campo de Telefono");
+                CajaDialogo.Error("No puede dejar vacio este campo!");
+                txtRTN.Focus();
                 return;
             }
 
-            if (txtTelefono.Text.Length < 7)
+            if (string.IsNullOrEmpty(txtRTN.Text))
             {
-                CajaDialogo.Error("Agrege un numero de Telefono Valido");
+                CajaDialogo.Error("Debe Seleccionar una Empresa");
                 return;
             }
 
-            if (string.IsNullOrEmpty(grdTipoTelefono.Text))
-            {
-                CajaDialogo.Error("Seleccione el Tipo de Telefono!");
-                return;
-            }
-
-            num_telefono = txtTelefono.Text.Trim();
-            id_tipo_telefono = Convert.ToInt32(grdTipoTelefono.EditValue);
-            tipo_Telefono = grdTipoTelefono.Text;
+            rtn = txtRTN.Text.Trim();
+            id_empresa = Convert.ToInt32(grdEmpresa.EditValue);
+            empresa = grdEmpresa.Text;
 
             this.DialogResult = DialogResult.OK;
+            this.Close();
+
+        }
+
+        private void grdEmpresa_EditValueChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(grdEmpresa.Text))
+            {
+                return;
+            }
+
+            var gridview = grdEmpresa.Properties.View;
+
+            rtn = Convert.ToString(gridview.GetRowCellValue(gridview.FocusedRowHandle, "rtn_empresa"));
+            txtRTN.Text = rtn;
+        }
+
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

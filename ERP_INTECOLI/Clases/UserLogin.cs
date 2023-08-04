@@ -84,7 +84,7 @@ namespace ERP_INTECOLI.Clases
                 DataOperations dp = new DataOperations();
                 SqlConnection connection = new SqlConnection(dp.ConnectionStringERP);
                 connection.Close();
-                SqlCommand cmd = new SqlCommand("", connection);
+                SqlCommand cmd = new SqlCommand("[sp_get_user_class]", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
