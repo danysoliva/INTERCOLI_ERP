@@ -115,7 +115,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 tsEstado.IsOn = false;
 
             cargar_telefonos(Idestudiante);
-            cargar_rtn(Idestudiante)
+            cargar_rtn(Idestudiante);
 
             switch (pTipoEdit)
             {
@@ -144,10 +144,10 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
                 SqlCommand cmd = new SqlCommand("", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("", );
+                cmd.Parameters.AddWithValue("", 1);
                 dsEstudiantes1.detalle_telefonos.Clear();
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
-                adat.Fill(dsRecepcionMPx.pasillos);
+                //adat.Fill(dsRecepcionMPx.pasillos);
                 con.Close();
             }
             catch (Exception ec)

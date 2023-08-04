@@ -33,15 +33,39 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.CodeParser.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Infragistics4.Shared.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.Misc.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,11 +75,40 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion\Estudiantes\dsEstudiantes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEstudiantes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmEstudiantes.Designer.cs">
+      <DependentUpon>frmEstudiantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmEstudiantesGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmEstudiantesGroup.Designer.cs">
+      <DependentUpon>frmEstudiantesGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmHistoarialAntiguedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmHistoarialAntiguedad.Designer.cs">
+      <DependentUpon>frmHistoarialAntiguedad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\CajaDialogo.cs" />
     <Compile Include="Clases\DataOperations.cs" />
+    <Compile Include="Clases\Estudiante.cs" />
     <Compile Include="Clases\Globals.cs" />
+    <Compile Include="Clases\UserLogin.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +123,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administracion\Estudiantes\frmEstudiantes.resx">
+      <DependentUpon>frmEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Estudiantes\frmEstudiantesGroup.resx">
+      <DependentUpon>frmEstudiantesGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Estudiantes\frmHistoarialAntiguedad.resx">
+      <DependentUpon>frmHistoarialAntiguedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,7 +147,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Administracion\Estudiantes\dsEstudiantes.xsc">
+      <DependentUpon>dsEstudiantes.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Estudiantes\dsEstudiantes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEstudiantes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administracion\Estudiantes\dsEstudiantes.xss">
+      <DependentUpon>dsEstudiantes.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +176,78 @@
   <ItemGroup>
     <Folder Include="Finanzas\" />
     <Folder Include="RRHH\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\2264828.png" />
+    <Content Include="Resources\Accept-icon128px.png" />
+    <Content Include="Resources\accept2_24.png" />
+    <Content Include="Resources\accept2_32.png" />
+    <Content Include="Resources\accept2_48.png" />
+    <Content Include="Resources\Accept_24x24.png" />
+    <Content Include="Resources\Accept_32x32.png" />
+    <Content Include="Resources\Accept_48x48.png" />
+    <Content Include="Resources\access.png" />
+    <Content Include="Resources\add%281%29.png" />
+    <Content Include="Resources\add_16x16.png" />
+    <Content Include="Resources\add_24x24.png" />
+    <Content Include="Resources\add_32x32.png" />
+    <Content Include="Resources\admin.png" />
+    <Content Include="Resources\ajustes_kardex.png" />
+    <Content Include="Resources\ajustes_kardex2.png" />
+    <Content Include="Resources\Alerta64px.png" />
+    <Content Include="Resources\alimentacion_manual.png" />
+    <Content Include="Resources\anadir.png" />
+    <Content Include="Resources\ani_wait.gif" />
+    <Content Include="Resources\approve_16.png" />
+    <Content Include="Resources\approve_24.png" />
+    <Content Include="Resources\approve_32.png" />
+    <Content Include="Resources\cerrar.png" />
+    <Content Include="Resources\control-de-accesso.png" />
+    <Content Include="Resources\edit.png" />
+    <None Include="Resources\edit1.png" />
+    <Content Include="Resources\edit24px.png" />
+    <Content Include="Resources\edit_24x24.png" />
+    <Content Include="Resources\edit_32x32.png" />
+    <Content Include="Resources\email_envelope_inbox_sending_mail_outbox_message_send_icon_231915.ico" />
+    <Content Include="Resources\empresa.png" />
+    <Content Include="Resources\Estudiantex32.png" />
+    <Content Include="Resources\Excel-2-icon32px.png" />
+    <Content Include="Resources\Excel-2-icon32px1.png" />
+    <Content Include="Resources\excel32px.png" />
+    <Content Include="Resources\excel_24x24.png" />
+    <Content Include="Resources\excel_32x32.png" />
+    <Content Include="Resources\excel_48x48.png" />
+    <Content Include="Resources\exchange.png" />
+    <Content Include="Resources\exit_24x24.png" />
+    <Content Include="Resources\exit_32x32.png" />
+    <Content Include="Resources\export_32x32.png" />
+    <Content Include="Resources\maestro x32.png" />
+    <Content Include="Resources\ms-excel-icon.png" />
+    <Content Include="Resources\new-message-icon %281%2932.png" />
+    <Content Include="Resources\new_24x24.png" />
+    <Content Include="Resources\new_32x32.png" />
+    <Content Include="Resources\new_48x48.png" />
+    <Content Include="Resources\next_x16.png" />
+    <Content Include="Resources\Niveles x32.png" />
+    <Content Include="Resources\reaload_24x24.png" />
+    <Content Include="Resources\reaload_32x32.png" />
+    <Content Include="Resources\refresh-button32px.png" />
+    <Content Include="Resources\refresh_16x16.png" />
+    <Content Include="Resources\refresh_24x24.png" />
+    <Content Include="Resources\refresh_32x32.png" />
+    <Content Include="Resources\salir_24.png" />
+    <Content Include="Resources\Salir_32.png" />
+    <Content Include="Resources\save.png" />
+    <Content Include="Resources\saveChanges_24x24.png" />
+    <Content Include="Resources\saveChanges_32x32.png" />
+    <Content Include="Resources\save_24x24.png" />
+    <Content Include="Resources\save_32x32.png" />
+    <Content Include="Resources\search_16x16.png" />
+    <Content Include="Resources\search_24x24.png" />
+    <Content Include="Resources\search_32x32.png" />
+    <Content Include="Resources\Upload-Folder-icon.png" />
+    <Content Include="Resources\_click_24X24.png" />
+    <Content Include="Resources\_click_32X32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
