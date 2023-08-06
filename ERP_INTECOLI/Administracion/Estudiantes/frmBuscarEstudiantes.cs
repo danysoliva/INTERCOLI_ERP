@@ -26,7 +26,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
             load_estudiantes(); 
             txtParametroBusqueda.Focus();
-
+            ItemSeleccionado = new ItemBusqueda();
         }
 
         private void load_estudiantes()
@@ -86,7 +86,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
         private void txtParametroBusqueda_EditValueChanged(object sender, EventArgs e)
         {
-            dv.RowFilter = @"[concat_] like '%'" + txtParametroBusqueda.Text + "%'";
+            dv.RowFilter = @"[concat_] like '%" + txtParametroBusqueda.Text + "%'";
             gridControlDetalleEstudiantes.DataSource = dv;
 
         }

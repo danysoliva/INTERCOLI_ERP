@@ -19,10 +19,11 @@ namespace ERP_INTECOLI
         
         UserLogin UsuarioLogeado;
 
-        public frmMainMenu()
+        public frmMainMenu(UserLogin pUserLogin)
         {
             InitializeComponent();
-            UsuarioLogeado.UserId = 0;
+            UsuarioLogeado = pUserLogin;
+            
         }
 
         private void navBarEstudiantes_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)

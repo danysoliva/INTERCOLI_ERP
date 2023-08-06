@@ -77,8 +77,10 @@ namespace ERP_INTECOLI.Clases
                     TipoPagoEstudiante = (TipoPago)dr.GetInt32(13);
                     IdZona = dr.GetInt32(14);
                     id_tipo_retiro = dr.GetInt32(15);
-                    if (!dr.IsDBNull(dr.GetOrdinal("id_estudiante_recomendo")))
-                        IdEstudianteRecomendo = dr.GetInt32(16);
+                    //if (!dr.IsDBNull(dr.GetOrdinal("id_tipo_retiro")))
+                    //    id_tipo_retiro = dr.GetInt32(15);
+                    //if (!dr.IsDBNull(dr.GetOrdinal("id_estudiante_recomendo")))
+                    IdEstudianteRecomendo = (int)dr.GetInt64(16);
                     if (!dr.IsDBNull(dr.GetOrdinal("nombre_recomendo")))
                         NameEstudianteRecomendo = dr.GetString(17);
                     Recuperado = true;

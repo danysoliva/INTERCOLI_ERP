@@ -12,156 +12,147 @@ namespace ERP_INTECOLI.Clases
     {
         //public GrupoUser GrupoUsuario;
         private bool recuperado;
+        DataOperations dp = new DataOperations();
+
+        private bool habilitado;
+        private TimeSpan tiempo_inactividad;
         private int id;
-        private int idGrupo;
-        private string nombreUser;
-        private string ADuser;
-        private string pass;
         private int idnivel;
         private string tipo;
+        private bool super_user;
+        private string password;
+        private string nombre;
+        private string userdb;
+        private string passdb;
 
-        public bool Recuperado { get => recuperado; set => recuperado = value; }
-        public int Id { get => id; set => id = value; }
-        public int IdGrupo { get => idGrupo; set => idGrupo = value; }
-        public string NombreUser { get => nombreUser; set => nombreUser = value; }
-        public string ADuser1 { get => ADuser; set => ADuser = value; }
-        public string Pass { get => pass; set => pass = value; }
         public int Idnivel { get => idnivel; set => idnivel = value; }
         public string Tipo { get => tipo; set => tipo = value; }
 
-        #region Members
-        int vUserid;
-        string vNombre;
-        string vAlias;
-        bool vRecuperado;
-        DataOperations dp;
-        bool vSuperUser;
-        string vPassword;
-        #endregion
 
-        #region Properties
-        //public bool Recuperado
-        //{
-        //    get { return vRecuperado; }
-        //    set { vRecuperado = value; }
-        //}
-        public int UserId
-        {
-            get { return id; }
-            set { id = value; }
-        }
-        public string Nombre
-        {
-            get { return vNombre; }
-            set { vNombre = value; }
-        }
-        public string AD_User
-        {
-            get { return vAlias; }
-            set { vAlias = value; }
-        }
-        /// <summary>
-        /// Set or Get bool if the user login is Super User
-        /// </summary>
-        public bool IsSuperUser
-        {
-            get { return vSuperUser; }
-            set { vSuperUser = value; }
-        }
+        public string Password { get => password; set => password = value; }
+        public bool Super_user { get => super_user; set => super_user = value; }
+        public TimeSpan Tiempo_inactividad { get => tiempo_inactividad; set => tiempo_inactividad = value; }
 
-        public string Password { get => vPassword; set => vPassword = value; }
-        #endregion
+        private bool utiliza_bloqueo;
+
+        public int Id { get => id; set => id = value; }
+        public string ADuser { get => aduser; set => aduser = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+        public bool Utiliza_bloqueo { get => utiliza_bloqueo; set => utiliza_bloqueo = value; }
+        public string UserDb { get => userdb; set => userdb = value; }
+        public string PassDb { get => passdb; set => passdb = value; }
+        public bool Habilitado { get => habilitado; set => habilitado = value; }
+
+        private string aduser;
 
         public UserLogin()
         {
             //GrupoUsuario = new GrupoUser();
         }
 
-        public bool RecuperarRegistrosFromUser(string pUser)
+        public bool RecuperarRegistroUsuario(string pAlias)
         {
+            bool x = false;
             try
             {
-                DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringERP);
-                connection.Close();
-                SqlCommand cmd = new SqlCommand("[sp_get_user_class]", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
+                string query  = "[sp_get_users_admin_class]";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@alias", pAlias);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
                     Id = dr.GetInt32(0);
-                    NombreUser = dr.GetString(1);
-                    IdGrupo = dr.GetInt32(2);
-                    ADuser = dr.GetString(3);
-                    recuperado = true;
+                    ADuser = dr.GetString(1);
+                    Password = dr.GetString(2);
+                    Habilitado = dr.GetBoolean(3);
+                    Nombre = dr.GetString(4);
+                    Super_user = dr.GetBoolean(5);
+                    Tiempo_inactividad = dr.GetTimeSpan(6);
+                    Utiliza_bloqueo = dr.GetBoolean(7);
+                    UserDb = dr.GetString(8);
+                    PassDb = dr.GetString(9);
+                    x = true;
                 }
-                dr.Close();
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                recuperado = false;
-                CajaDialogo.Error(ex.Message);
-            }
-            return Recuperado;
-
-        }
-
-        public bool RecuperarRegistro(int pId)
-        {
-            try
-            {
-                DataOperations dp = new DataOperations();
-                SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
-                con.Open();
-                SqlCommand cmd = new SqlCommand("", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
-                    Id = dr.GetInt32(0);
-                    nombreUser = dr.GetString(1);
-                    idGrupo = dr.GetInt32(2);
-                    Tipo = dr.GetString(3);
-                    recuperado = true;
-                }
-                dr.Close();
-                con.Close();
             }
             catch (Exception ec)
             {
-                recuperado = false;
-                CajaDialogo.Error(ec.Message);
+                CajaDialogo.Error("No se pudo recuperar el objeto de usuario" + ec.Message);
             }
-            return Recuperado;
+            return x;
         }
 
-        internal bool ValidarNivelPermisos(int pIdVentana)
+        public string EncryptPassword(string pass)
         {
-            bool r = false;
             try
             {
-                DataOperations dp = new DataOperations();
-                SqlConnection Conn = new SqlConnection(dp.ConnectionStringERP);
-                Conn.Open();
-                //string sql = @"SELECT count(*)
-                //                FROM [dbo].conf_usuario_ventanas vv 
-                //                where vv.id_ventana = " + pIdVentana.ToString() +
-                //                      "and vv.id_usuario = " + UserId.ToString();
-                SqlCommand cmd = new SqlCommand("", Conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id_ventana", pIdVentana.ToString());
-                cmd.Parameters.AddWithValue("@id_usuario",UserId.ToString());
-                int v = Convert.ToInt32(cmd.ExecuteScalar());
-                if (v > 0)
-                    r = true;
+                byte[] enbyte = GetBytes(pass);
+                string cadena_base64 = Convert.ToBase64String(enbyte);
+                return cadena_base64;
             }
-            catch (Exception ec)
+            catch
             {
-                CajaDialogo.Error(ec.Message);
+                return " ";
             }
-            return r;
         }
+
+        public string DecryptPassword(string pass)
+        {
+            try
+            {
+                byte[] b = Convert.FromBase64String(pass);
+                string cadena = GetString(b);
+                return cadena;
+            }
+            catch
+            {
+                return " ";
+            }
+        }
+
+        private static byte[] GetBytes(string str)
+        {
+            byte[] bytes = new byte[str.Length * sizeof(char)];
+            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
+            return bytes;
+        }
+
+        private static string GetString(byte[] bytes)
+        {
+            char[] chars = new char[bytes.Length / sizeof(char)];
+            System.Buffer.BlockCopy(bytes, 0, chars, 0, bytes.Length);
+            return new string(chars);
+        }
+
+       
+
+        //internal bool ValidarNivelPermisos(int pIdVentana)
+        //{
+        //    bool r = false;
+        //    try
+        //    {
+        //        DataOperations dp = new DataOperations();
+        //        SqlConnection Conn = new SqlConnection(dp.ConnectionStringERP);
+        //        Conn.Open();
+        //        //string sql = @"SELECT count(*)
+        //        //                FROM [dbo].conf_usuario_ventanas vv 
+        //        //                where vv.id_ventana = " + pIdVentana.ToString() +
+        //        //                      "and vv.id_usuario = " + UserId.ToString();
+        //        SqlCommand cmd = new SqlCommand("", Conn);
+        //        cmd.CommandType = CommandType.StoredProcedure;
+        //        cmd.Parameters.AddWithValue("@id_ventana", pIdVentana.ToString());
+        //        cmd.Parameters.AddWithValue("@id_usuario",UserId.ToString());
+        //        int v = Convert.ToInt32(cmd.ExecuteScalar());
+        //        if (v > 0)
+        //            r = true;
+        //    }
+        //    catch (Exception ec)
+        //    {
+        //        CajaDialogo.Error(ec.Message);
+        //    }
+        //    return r;
+        //}
 
     }
 }

@@ -48,6 +48,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 case TipoEdicion.Editar:
                     id_empresa = pid_empresa;
                     rtn = prtn;
+                    txtRTN.Text = rtn;
                     Id_estudiante = pId_estudiante;
                     id_detalle_rtn = pid;
 
@@ -119,9 +120,10 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 return;
             }
 
-            rtn = txtRTN.Text.Trim();
+            
             id_empresa = Convert.ToInt32(grdEmpresa.EditValue);
             empresa = grdEmpresa.Text;
+            rtn = txtRTN.Text.Trim();
 
             this.DialogResult = DialogResult.OK;
             this.Close();
