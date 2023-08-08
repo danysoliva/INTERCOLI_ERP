@@ -29,37 +29,21 @@ namespace ERP_INTECOLI.Administracion.Instructores
         /// </summary>
         private void InitializeComponent()
         {
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("detalle_telefonos", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("id");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("telefono", -1, null, 0, Infragistics.Win.UltraWinGrid.SortIndicator.Ascending, false);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("tipo_telefono_id");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("editar");
-            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarInstructores));
-            Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("tipo_descripcion");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("eliminar");
-            Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("id_instructor");
-            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.cmdUserWeb = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCedula = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.grDetalle = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.dsInstructores1 = new ERP_INTECOLI.Administracion.Instructores.dsInstructores();
             this.label5 = new System.Windows.Forms.Label();
             this.dtIngreso = new System.Windows.Forms.DateTimePicker();
             this.cbkHabilitado = new System.Windows.Forms.CheckBox();
@@ -75,10 +59,27 @@ namespace ERP_INTECOLI.Administracion.Instructores
             this.cmdNuevo = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.cmdGuardar = new System.Windows.Forms.Button();
-            this.dsInstructores1 = new ERP_INTECOLI.Administracion.Instructores.dsInstructores();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).BeginInit();
+            this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
+            this.tabTelefonos = new DevExpress.XtraTab.XtraTabPage();
+            this.grdTelefonos = new DevExpress.XtraGrid.GridControl();
+            this.grdvTelefonos = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltelefono = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltipo_telefono_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltipo_descripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grdEditarCol = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.reposEditarTelefono = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.reposEliminar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dsInstructores1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
+            this.xtraTabControl2.SuspendLayout();
+            this.tabTelefonos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTelefonos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvTelefonos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposEditarTelefono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposEliminar)).BeginInit();
             this.SuspendLayout();
             // 
             // cmdUserWeb
@@ -97,6 +98,7 @@ namespace ERP_INTECOLI.Administracion.Instructores
             this.cmdUserWeb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdUserWeb.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cmdUserWeb.UseVisualStyleBackColor = false;
+            this.cmdUserWeb.Visible = false;
             // 
             // label7
             // 
@@ -115,139 +117,10 @@ namespace ERP_INTECOLI.Administracion.Instructores
             this.txtCedula.Size = new System.Drawing.Size(188, 21);
             this.txtCedula.TabIndex = 32;
             // 
-            // groupBox1
+            // dsInstructores1
             // 
-            this.groupBox1.Controls.Add(this.grDetalle);
-            this.groupBox1.Location = new System.Drawing.Point(332, 46);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(363, 136);
-            this.groupBox1.TabIndex = 48;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Telefonos";
-            // 
-            // grDetalle
-            // 
-            this.grDetalle.DataMember = "detalle_telefonos";
-            this.grDetalle.DataSource = this.dsInstructores1;
-            appearance1.BackColor = System.Drawing.SystemColors.Window;
-            appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.grDetalle.DisplayLayout.Appearance = appearance1;
-            this.grDetalle.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;
-            ultraGridColumn8.Header.VisiblePosition = 3;
-            ultraGridColumn8.Hidden = true;
-            ultraGridColumn8.Width = 47;
-            ultraGridColumn9.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn9.Header.FixOnRight = Infragistics.Win.DefaultableBoolean.False;
-            ultraGridColumn9.Header.VisiblePosition = 1;
-            ultraGridColumn9.Width = 88;
-            ultraGridColumn10.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn10.Header.Caption = "Tipo";
-            ultraGridColumn10.Header.VisiblePosition = 4;
-            ultraGridColumn10.Hidden = true;
-            ultraGridColumn10.Width = 84;
-            appearance2.Image = ((object)(resources.GetObject("appearance2.Image")));
-            appearance2.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance2.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn11.CellAppearance = appearance2;
-            appearance3.Image = ((object)(resources.GetObject("appearance3.Image")));
-            appearance3.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance3.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn11.CellButtonAppearance = appearance3;
-            ultraGridColumn11.Header.Caption = "Editar";
-            ultraGridColumn11.Header.VisiblePosition = 5;
-            ultraGridColumn11.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn11.Width = 41;
-            ultraGridColumn12.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn12.Header.VisiblePosition = 2;
-            ultraGridColumn12.Width = 79;
-            appearance4.Image = ((object)(resources.GetObject("appearance4.Image")));
-            appearance4.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance4.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn13.CellAppearance = appearance4;
-            appearance5.Image = ((object)(resources.GetObject("appearance5.Image")));
-            appearance5.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance5.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn13.CellButtonAppearance = appearance5;
-            ultraGridColumn13.Header.VisiblePosition = 6;
-            ultraGridColumn13.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn13.Width = 47;
-            ultraGridColumn14.Header.Fixed = true;
-            ultraGridColumn14.Header.VisiblePosition = 0;
-            ultraGridColumn14.Width = 100;
-            ultraGridBand1.Columns.AddRange(new object[] {
-            ultraGridColumn8,
-            ultraGridColumn9,
-            ultraGridColumn10,
-            ultraGridColumn11,
-            ultraGridColumn12,
-            ultraGridColumn13,
-            ultraGridColumn14});
-            ultraGridBand1.Header.FixOnRight = Infragistics.Win.DefaultableBoolean.True;
-            this.grDetalle.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
-            this.grDetalle.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Dotted;
-            this.grDetalle.DisplayLayout.BorderStyleCaption = Infragistics.Win.UIElementBorderStyle.Solid;
-            this.grDetalle.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-            appearance6.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance6.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance6.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance6.BorderColor = System.Drawing.SystemColors.Window;
-            this.grDetalle.DisplayLayout.GroupByBox.Appearance = appearance6;
-            appearance7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.grDetalle.DisplayLayout.GroupByBox.BandLabelAppearance = appearance7;
-            this.grDetalle.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Raised;
-            appearance8.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance8.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance8.BackGradientStyle = Infragistics.Win.GradientStyle.HorizontalBump;
-            appearance8.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.grDetalle.DisplayLayout.GroupByBox.PromptAppearance = appearance8;
-            this.grDetalle.DisplayLayout.LoadStyle = Infragistics.Win.UltraWinGrid.LoadStyle.LoadOnDemand;
-            this.grDetalle.DisplayLayout.MaxColScrollRegions = 1;
-            this.grDetalle.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance9.BackColor = System.Drawing.SystemColors.Window;
-            appearance9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.grDetalle.DisplayLayout.Override.ActiveCellAppearance = appearance9;
-            appearance10.BackColor = System.Drawing.SystemColors.Highlight;
-            appearance10.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.grDetalle.DisplayLayout.Override.ActiveRowAppearance = appearance10;
-            this.grDetalle.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
-            this.grDetalle.DisplayLayout.Override.BorderStyleFilterRow = Infragistics.Win.UIElementBorderStyle.Dashed;
-            this.grDetalle.DisplayLayout.Override.BorderStyleHeader = Infragistics.Win.UIElementBorderStyle.Dashed;
-            this.grDetalle.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-            appearance11.BackColor = System.Drawing.SystemColors.Window;
-            this.grDetalle.DisplayLayout.Override.CardAreaAppearance = appearance11;
-            appearance12.BorderColor = System.Drawing.Color.Silver;
-            appearance12.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.grDetalle.DisplayLayout.Override.CellAppearance = appearance12;
-            this.grDetalle.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
-            this.grDetalle.DisplayLayout.Override.CellPadding = 0;
-            appearance13.BackHatchStyle = Infragistics.Win.BackHatchStyle.LargeGrid;
-            this.grDetalle.DisplayLayout.Override.FixedHeaderAppearance = appearance13;
-            appearance14.BackColor = System.Drawing.SystemColors.Control;
-            appearance14.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance14.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance14.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance14.BorderColor = System.Drawing.SystemColors.Window;
-            this.grDetalle.DisplayLayout.Override.GroupByRowAppearance = appearance14;
-            appearance15.TextHAlignAsString = "Left";
-            this.grDetalle.DisplayLayout.Override.HeaderAppearance = appearance15;
-            this.grDetalle.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
-            this.grDetalle.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.Standard;
-            appearance16.BackColor = System.Drawing.SystemColors.Window;
-            appearance16.BorderColor = System.Drawing.Color.Silver;
-            this.grDetalle.DisplayLayout.Override.RowAppearance = appearance16;
-            this.grDetalle.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance17.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grDetalle.DisplayLayout.Override.TemplateAddRowAppearance = appearance17;
-            this.grDetalle.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
-            this.grDetalle.DisplayLayout.UseFixedHeaders = true;
-            this.grDetalle.DisplayLayout.ViewStyle = Infragistics.Win.UltraWinGrid.ViewStyle.SingleBand;
-            this.grDetalle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grDetalle.Location = new System.Drawing.Point(3, 17);
-            this.grDetalle.Name = "grDetalle";
-            this.grDetalle.Size = new System.Drawing.Size(357, 116);
-            this.grDetalle.TabIndex = 0;
-            this.grDetalle.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.grDetalle_ClickCellButton);
+            this.dsInstructores1.DataSetName = "dsInstructores";
+            this.dsInstructores1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label5
             // 
@@ -359,7 +232,7 @@ namespace ERP_INTECOLI.Administracion.Instructores
             this.cmdAgregarTelefono.Image = global::ERP_INTECOLI.Properties.Resources.anadir;
             this.cmdAgregarTelefono.Location = new System.Drawing.Point(636, 5);
             this.cmdAgregarTelefono.Name = "cmdAgregarTelefono";
-            this.cmdAgregarTelefono.Size = new System.Drawing.Size(56, 39);
+            this.cmdAgregarTelefono.Size = new System.Drawing.Size(56, 47);
             this.cmdAgregarTelefono.TabIndex = 47;
             this.cmdAgregarTelefono.UseVisualStyleBackColor = false;
             this.cmdAgregarTelefono.Click += new System.EventHandler(this.cmdAgregarTelefono_Click);
@@ -381,6 +254,7 @@ namespace ERP_INTECOLI.Administracion.Instructores
             this.cmdNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cmdNuevo.UseVisualStyleBackColor = false;
             this.cmdNuevo.Visible = false;
+            this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
             // 
             // cmdCancelar
             // 
@@ -399,6 +273,7 @@ namespace ERP_INTECOLI.Administracion.Instructores
             this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cmdCancelar.UseVisualStyleBackColor = false;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
             // cmdGuardar
             // 
@@ -418,21 +293,147 @@ namespace ERP_INTECOLI.Administracion.Instructores
             this.cmdGuardar.UseVisualStyleBackColor = false;
             this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
-            // dsInstructores1
+            // xtraTabControl2
             // 
-            this.dsInstructores1.DataSetName = "dsInstructores";
-            this.dsInstructores1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.xtraTabControl2.Location = new System.Drawing.Point(332, 47);
+            this.xtraTabControl2.Name = "xtraTabControl2";
+            this.xtraTabControl2.SelectedTabPage = this.tabTelefonos;
+            this.xtraTabControl2.Size = new System.Drawing.Size(379, 159);
+            this.xtraTabControl2.TabIndex = 52;
+            this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.tabTelefonos});
+            // 
+            // tabTelefonos
+            // 
+            this.tabTelefonos.Appearance.Header.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabTelefonos.Appearance.Header.Options.UseFont = true;
+            this.tabTelefonos.Appearance.HeaderActive.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabTelefonos.Appearance.HeaderActive.Options.UseFont = true;
+            this.tabTelefonos.Controls.Add(this.grdTelefonos);
+            this.tabTelefonos.Name = "tabTelefonos";
+            this.tabTelefonos.Size = new System.Drawing.Size(377, 131);
+            this.tabTelefonos.Text = "Telefonos";
+            // 
+            // grdTelefonos
+            // 
+            this.grdTelefonos.DataMember = "detalle_telefonos";
+            this.grdTelefonos.DataSource = this.dsInstructores1;
+            this.grdTelefonos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdTelefonos.Location = new System.Drawing.Point(0, 0);
+            this.grdTelefonos.MainView = this.grdvTelefonos;
+            this.grdTelefonos.Name = "grdTelefonos";
+            this.grdTelefonos.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.reposEditarTelefono,
+            this.reposEliminar});
+            this.grdTelefonos.Size = new System.Drawing.Size(377, 131);
+            this.grdTelefonos.TabIndex = 0;
+            this.grdTelefonos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdvTelefonos});
+            // 
+            // grdvTelefonos
+            // 
+            this.grdvTelefonos.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid,
+            this.colid_estudiante,
+            this.coltelefono,
+            this.coltipo_telefono_id,
+            this.coltipo_descripcion,
+            this.grdEditarCol,
+            this.gridColumn2});
+            this.grdvTelefonos.GridControl = this.grdTelefonos;
+            this.grdvTelefonos.LevelIndent = 0;
+            this.grdvTelefonos.Name = "grdvTelefonos";
+            this.grdvTelefonos.OptionsEditForm.PopupEditFormWidth = 400;
+            this.grdvTelefonos.OptionsView.ShowGroupPanel = false;
+            this.grdvTelefonos.PreviewIndent = 0;
+            // 
+            // colid
+            // 
+            this.colid.FieldName = "id";
+            this.colid.Name = "colid";
+            this.colid.OptionsColumn.ReadOnly = true;
+            this.colid.Width = 53;
+            // 
+            // colid_estudiante
+            // 
+            this.colid_estudiante.FieldName = "id_instructor";
+            this.colid_estudiante.Name = "colid_estudiante";
+            this.colid_estudiante.OptionsColumn.ReadOnly = true;
+            this.colid_estudiante.Width = 68;
+            // 
+            // coltelefono
+            // 
+            this.coltelefono.FieldName = "telefono";
+            this.coltelefono.Name = "coltelefono";
+            this.coltelefono.OptionsColumn.ReadOnly = true;
+            this.coltelefono.Visible = true;
+            this.coltelefono.VisibleIndex = 0;
+            this.coltelefono.Width = 126;
+            // 
+            // coltipo_telefono_id
+            // 
+            this.coltipo_telefono_id.FieldName = "tipo_telefono_id";
+            this.coltipo_telefono_id.Name = "coltipo_telefono_id";
+            this.coltipo_telefono_id.OptionsColumn.ReadOnly = true;
+            this.coltipo_telefono_id.Width = 67;
+            // 
+            // coltipo_descripcion
+            // 
+            this.coltipo_descripcion.FieldName = "tipo_descripcion";
+            this.coltipo_descripcion.Name = "coltipo_descripcion";
+            this.coltipo_descripcion.OptionsColumn.ReadOnly = true;
+            this.coltipo_descripcion.Visible = true;
+            this.coltipo_descripcion.VisibleIndex = 1;
+            this.coltipo_descripcion.Width = 108;
+            // 
+            // grdEditarCol
+            // 
+            this.grdEditarCol.Caption = "Editar";
+            this.grdEditarCol.ColumnEdit = this.reposEditarTelefono;
+            this.grdEditarCol.FieldName = "editar";
+            this.grdEditarCol.Name = "grdEditarCol";
+            this.grdEditarCol.Visible = true;
+            this.grdEditarCol.VisibleIndex = 2;
+            this.grdEditarCol.Width = 66;
+            // 
+            // reposEditarTelefono
+            // 
+            this.reposEditarTelefono.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.reposEditarTelefono.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.reposEditarTelefono.Name = "reposEditarTelefono";
+            this.reposEditarTelefono.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.reposEditarTelefono.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposEditarTelefono_ButtonClick);
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Eliminar";
+            this.gridColumn2.ColumnEdit = this.reposEliminar;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 3;
+            // 
+            // reposEliminar
+            // 
+            this.reposEliminar.AutoHeight = false;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            this.reposEliminar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.reposEliminar.Name = "reposEliminar";
+            this.reposEliminar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.reposEliminar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposEliminar_ButtonClick);
             // 
             // frmAgregarInstructores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 301);
+            this.Controls.Add(this.xtraTabControl2);
             this.Controls.Add(this.cmdUserWeb);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.cmdAgregarTelefono);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cmdNuevo);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdGuardar);
@@ -450,9 +451,14 @@ namespace ERP_INTECOLI.Administracion.Instructores
             this.MaximizeBox = false;
             this.Name = "frmAgregarInstructores";
             this.Text = "Agregar Instructores";
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsInstructores1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
+            this.xtraTabControl2.ResumeLayout(false);
+            this.tabTelefonos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdTelefonos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvTelefonos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposEditarTelefono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposEliminar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,8 +470,6 @@ namespace ERP_INTECOLI.Administracion.Instructores
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Button cmdAgregarTelefono;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private Infragistics.Win.UltraWinGrid.UltraGrid grDetalle;
         private System.Windows.Forms.Button cmdNuevo;
         private System.Windows.Forms.Button cmdCancelar;
         private System.Windows.Forms.Button cmdGuardar;
@@ -481,5 +485,18 @@ namespace ERP_INTECOLI.Administracion.Instructores
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombres;
         private dsInstructores dsInstructores1;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl2;
+        private DevExpress.XtraTab.XtraTabPage tabTelefonos;
+        private DevExpress.XtraGrid.GridControl grdTelefonos;
+        private DevExpress.XtraGrid.Views.Grid.GridView grdvTelefonos;
+        private DevExpress.XtraGrid.Columns.GridColumn colid;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_estudiante;
+        private DevExpress.XtraGrid.Columns.GridColumn coltelefono;
+        private DevExpress.XtraGrid.Columns.GridColumn coltipo_telefono_id;
+        private DevExpress.XtraGrid.Columns.GridColumn coltipo_descripcion;
+        private DevExpress.XtraGrid.Columns.GridColumn grdEditarCol;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit reposEditarTelefono;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit reposEliminar;
     }
 }

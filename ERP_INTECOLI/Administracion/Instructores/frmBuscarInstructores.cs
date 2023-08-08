@@ -20,7 +20,7 @@ namespace ERP_INTECOLI.Administracion.Instructores
         UserLogin UsuarioLogeado;
         DataOperations dp = new DataOperations();
         DataView dv;
-        private string Id_instructor = 0;
+        private int Id_instructor = 0;
 
         public frmBuscarInstructores(UserLogin pUserLogin)
         {
@@ -80,7 +80,31 @@ namespace ERP_INTECOLI.Administracion.Instructores
             if (frmAbrirInst.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 //Llamar funcion CargarDatos
-                CargarDatos();
+                cargar_instructores();
+            }
+        }
+
+        private void reposEditar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridview = (GridView)grdInstructores.FocusedView;
+            var row = (dsInstructores.instructoresRow)gridview.GetFocusedDataRow();
+
+            frmAgregarInstructores frm = new frmAgregarInstructores(UsuarioLogeado, row.id_instructor, frmAgregarInstructores.TipoTransaccion.Update);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                cargar_instructores();
+            }
+        }
+
+        private void repost_edit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridview = (GridView)grdInstructores.FocusedView;
+            var row = (dsInstructores.Instructores_DatosRow)gridview.GetFocusedDataRow();
+
+            frmAgregarInstructores frm = new frmAgregarInstructores(UsuarioLogeado, row.id_instructor, frmAgregarInstructores.TipoTransaccion.Update);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                cargar_instructores();
             }
         }
     }

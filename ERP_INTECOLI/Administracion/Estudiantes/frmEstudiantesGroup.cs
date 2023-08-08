@@ -108,5 +108,10 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

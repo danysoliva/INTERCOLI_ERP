@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Administracion;
 using System.Data.SqlClient;
+using ERP_INTECOLI.Administracion.Estudiantes;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace ERP_INTECOLI.Administracion.Instructores
 {
@@ -34,18 +36,28 @@ namespace ERP_INTECOLI.Administracion.Instructores
             UsuarioLoegueado = pUserLogin;
             id_instructor = pid_instructor;
             TipoEdicion = pTipoTrans;
+            
 
             switch (TipoEdicion)
             {
                 case TipoTransaccion.Insert:
                     cbkHabilitado.Checked = true;
                     dtIngreso.Value = dp.Now();
-
+                    grdvTelefonos.OptionsMenu.EnableColumnMenu = false;
+                    grdvTelefonos.Columns["editar"].Visible = false;
                     break;
                 case TipoTransaccion.Update:
                     cargar_telefonos(pid_instructor);
-                    //Instructores inst = new Instructores();
-                    
+                    Clases.Instructores inst = new Clases.Instructores();
+                    inst.RecuperarRegistros(id_instructor);
+                    txtCedula.Text = inst.Num_cedula;
+                    txtNombres.Text = inst.Nombres;
+                    txtApellidos.Text = inst.Apellidos;
+                    cbxSexo.SelectedItem = inst.Sexo;
+                    txtDireccion.Text = inst.Direccion;
+                    dtIngreso.Value = inst.Fecha_ingreso;
+                    cbkHabilitado.Checked = inst.Habilitado;
+
                     break;
                 default:
                     break;
@@ -149,8 +161,7 @@ namespace ERP_INTECOLI.Administracion.Instructores
 
                             //Eliminar en Memoria
 
-                            this.DialogResult = DialogResult.OK;
-                            this.Close();
+                            
 
                             break;
                         case TipoTransaccion.Update:
@@ -195,7 +206,7 @@ namespace ERP_INTECOLI.Administracion.Instructores
                 return;
             }
 
-            if (string.IsNullOrEmpty(cbxSexo.ValueMember))
+            if (string.IsNullOrEmpty(cbxSexo.SelectedItem.ToString()))
             {
                 CajaDialogo.Error("El campo Sexo no debe quedar Vacio!");
                 return;
@@ -217,14 +228,14 @@ namespace ERP_INTECOLI.Administracion.Instructores
                         transaction = conn.BeginTransaction("Transaction Order");
 
                         SqlCommand cmd = conn.CreateCommand();
-                        cmd.CommandText = "";
+                        cmd.CommandText = "[sp_instructores_insert_new]";
                         cmd.Connection = conn;
                         cmd.Transaction = transaction;
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@numero_cedula", txtCedula.Text);
                         cmd.Parameters.AddWithValue("@nombres", txtNombres.Text);
                         cmd.Parameters.AddWithValue("@apellidos",txtApellidos.Text);
-                        cmd.Parameters.AddWithValue("@sexo",cbxSexo.ValueMember);
+                        cmd.Parameters.AddWithValue("@sexo",cbxSexo.SelectedItem);
                         cmd.Parameters.AddWithValue("@direccion", txtDireccion.Text);
                         cmd.Parameters.AddWithValue("@fecha_ingreso", dtIngreso.Value);
                         cmd.Parameters.AddWithValue("@id_usuario",UsuarioLoegueado.Id);
@@ -267,18 +278,18 @@ namespace ERP_INTECOLI.Administracion.Instructores
                     break;
                 case TipoTransaccion.Update:
                     //
-
+                   
                     try
                     {
-                        SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
-                        conn.Open();
-                        SqlCommand cmd = new SqlCommand("sp_instructores_update", conn);
+                        SqlConnection conn2 = new SqlConnection(dp.ConnectionStringERP);
+                        conn2.Open();
+                        SqlCommand cmd = new SqlCommand("sp_instructores_update", conn2);
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@id_instructor", id_instructor);
                         cmd.Parameters.AddWithValue("@numero_cedula",txtCedula.Text);
                         cmd.Parameters.AddWithValue("@nombres",txtNombres.Text);
                         cmd.Parameters.AddWithValue("@apellidos",txtApellidos.Text);
-                        cmd.Parameters.AddWithValue("@sexo",cbxSexo.ValueMember);
+                        cmd.Parameters.AddWithValue("@sexo",cbxSexo.SelectedItem);
                         cmd.Parameters.AddWithValue("@direccion", txtDireccion.Text);
                         if (cbkHabilitado.Checked == true)
                             cmd.Parameters.AddWithValue("@habilitado", 1);
@@ -286,13 +297,21 @@ namespace ERP_INTECOLI.Administracion.Instructores
                             cmd.Parameters.AddWithValue("@habilitado", 0);
                         cmd.Parameters.AddWithValue("@fecha_ingreso",dtIngreso.Text);
                         cmd.Parameters.AddWithValue("@id_usuario", UsuarioLoegueado.Id);
-                        cmd.Parameters.AddWithValue("",);
                         cmd.ExecuteNonQuery();
-                        conn.Close();
+                        conn2.Close();
+                        Guardar = true;
                     }
                     catch (Exception EX)
                     {
                         CajaDialogo.Error(EX.Message);
+                        Guardar = false;
+                    }
+
+                    if (Guardar)
+                    {
+                        CajaDialogo.Information("Transaccion Exitosa!");
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
                     }
 
                     break;
@@ -302,6 +321,104 @@ namespace ERP_INTECOLI.Administracion.Instructores
                     break;
             }
 
+        }
+
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            Close();
+        }
+
+        private void cmdNuevo_Click(object sender, EventArgs e)
+        {
+            txtNombres.Text = "";
+            txtCedula.Text = "";
+            txtApellidos.Text = "";
+            txtDireccion.Text = "";
+        }
+
+        private void reposEditarTelefono_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridview = (GridView)grdTelefonos.FocusedView;
+            var row = (dsInstructores.detalle_telefonosRow)gridview.GetFocusedDataRow();
+
+            frmAgregarTelefono frm = new frmAgregarTelefono(frmAgregarTelefono.TipoEdicion.Editar, id_instructor, row.id, row.telefono, row.tipo_telefono_id);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("[sp_instructor_update_detalle_telefono]", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_detalle_telefono", frm.id_detalle_telefono);
+                    cmd.Parameters.AddWithValue("@id_instructor", id_instructor);
+                    cmd.Parameters.AddWithValue("@id_tipo_telefono", frm.id_tipo_telefono);
+                    cmd.Parameters.AddWithValue("@telefono", frm.num_telefono);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    CajaDialogo.Error(ex.Message);
+                }
+
+                cargar_telefonos(id_instructor);
+            }
+        }
+
+        private void reposEliminar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridview = (GridView)grdTelefonos.FocusedView;
+            var row = (dsInstructores.detalle_telefonosRow)gridview.GetFocusedDataRow();
+
+            switch (TipoEdicion)
+            {
+                case TipoTransaccion.Insert:
+
+                    //Eliminar en Memoria
+                    try
+                    {
+                        grdvTelefonos.DeleteRow(grdvTelefonos.FocusedRowHandle);
+                    }
+                    catch (Exception ec)
+                    {
+                        CajaDialogo.Error(ec.Message);
+                    }
+
+                    break;
+                case TipoTransaccion.Update:
+                    //Eliminar en SQL 
+
+                    DialogResult r = CajaDialogo.Pregunta("Desea Elimianr este Registro?");
+                    if (r != System.Windows.Forms.DialogResult.Yes)
+                        return;
+
+                    try
+                    {
+                        string query = @"[sp_instructor_delete_telefono]";
+                        SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@id_detalle", row.id);
+                        cmd.Parameters.AddWithValue("@id_instructor", row.id_instructor);
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        CajaDialogo.Error(ex.Message);
+                    }
+
+                    cargar_telefonos(id_instructor);
+
+                    break;
+                default:
+
+                    CajaDialogo.Error("No se logro definir un proceso de Nuevo/Edicion \n Contactar a su Administrador");
+
+                    break;
+            }
         }
     }
 }

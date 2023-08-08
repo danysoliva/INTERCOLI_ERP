@@ -67,6 +67,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.grDetalle = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.dsEstudiantes1 = new ERP_INTECOLI.Administracion.Estudiantes.dsEstudiantes();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtParametro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsVerTodos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).BeginInit();
@@ -111,7 +112,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // tsVerTodos
             // 
             this.tsVerTodos.EditValue = true;
-            this.tsVerTodos.Location = new System.Drawing.Point(717, 31);
+            this.tsVerTodos.Location = new System.Drawing.Point(711, 31);
             this.tsVerTodos.Name = "tsVerTodos";
             this.tsVerTodos.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.tsVerTodos.Properties.Appearance.Options.UseFont = true;
@@ -134,34 +135,34 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.grDetalle.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;
             ultraGridColumn1.Header.Caption = "Id";
             ultraGridColumn1.Header.VisiblePosition = 0;
-            ultraGridColumn1.Width = 28;
+            ultraGridColumn1.Width = 46;
             ultraGridColumn2.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn2.Header.VisiblePosition = 1;
-            ultraGridColumn2.Width = 83;
+            ultraGridColumn2.Width = 103;
             ultraGridColumn3.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn3.Header.VisiblePosition = 2;
-            ultraGridColumn3.Width = 160;
+            ultraGridColumn3.Width = 201;
             ultraGridColumn4.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn4.Header.VisiblePosition = 3;
-            ultraGridColumn4.Width = 127;
+            ultraGridColumn4.Width = 163;
             ultraGridColumn5.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn5.Header.VisiblePosition = 4;
-            ultraGridColumn5.Width = 60;
+            ultraGridColumn5.Width = 79;
             ultraGridColumn6.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn6.Header.VisiblePosition = 5;
-            ultraGridColumn6.Width = 82;
+            ultraGridColumn6.Width = 108;
             ultraGridColumn7.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn7.Header.VisiblePosition = 6;
-            ultraGridColumn7.Width = 91;
+            ultraGridColumn7.Width = 121;
             ultraGridColumn8.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn8.Header.VisiblePosition = 7;
-            ultraGridColumn8.Width = 48;
+            ultraGridColumn8.Width = 68;
             ultraGridColumn9.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn9.Header.VisiblePosition = 8;
-            ultraGridColumn9.Width = 37;
+            ultraGridColumn9.Width = 58;
             ultraGridColumn10.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn10.Header.VisiblePosition = 9;
-            ultraGridColumn10.Width = 50;
+            ultraGridColumn10.Width = 70;
             appearance2.Image = global::ERP_INTECOLI.Properties.Resources.edit;
             appearance2.ImageHAlign = Infragistics.Win.HAlign.Center;
             appearance2.ImageVAlign = Infragistics.Win.VAlign.Middle;
@@ -171,7 +172,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             ultraGridColumn11.CellButtonAppearance = appearance3;
             ultraGridColumn11.Header.VisiblePosition = 10;
             ultraGridColumn11.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn11.Width = 53;
+            ultraGridColumn11.Width = 72;
             ultraGridColumn12.Header.VisiblePosition = 11;
             ultraGridColumn12.Hidden = true;
             ultraGridColumn12.Width = 102;
@@ -184,7 +185,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             ultraGridColumn13.Header.Caption = "Antigüedad";
             ultraGridColumn13.Header.VisiblePosition = 12;
             ultraGridColumn13.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn13.Width = 62;
+            ultraGridColumn13.Width = 81;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -262,7 +263,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.grDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grDetalle.Location = new System.Drawing.Point(0, 91);
             this.grDetalle.Name = "grDetalle";
-            this.grDetalle.Size = new System.Drawing.Size(883, 461);
+            this.grDetalle.Size = new System.Drawing.Size(1172, 461);
             this.grDetalle.TabIndex = 11;
             this.grDetalle.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.grDetalle_ClickCellButton);
             // 
@@ -279,19 +280,40 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.btnClose.Appearance.Options.UseBackColor = true;
             this.btnClose.Appearance.Options.UseForeColor = true;
             this.btnClose.ImageOptions.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
-            this.btnClose.Location = new System.Drawing.Point(1082, 15);
+            this.btnClose.Location = new System.Drawing.Point(1371, 15);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(78, 50);
             this.btnClose.TabIndex = 12;
             this.btnClose.Text = "Cerrar";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdCancelar.BackColor = System.Drawing.Color.LightSalmon;
+            this.cmdCancelar.FlatAppearance.BorderColor = System.Drawing.Color.LightSalmon;
+            this.cmdCancelar.FlatAppearance.BorderSize = 2;
+            this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
+            this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdCancelar.Location = new System.Drawing.Point(1020, 22);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(110, 43);
+            this.cmdCancelar.TabIndex = 44;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmdCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cmdCancelar.UseVisualStyleBackColor = false;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
+            // 
             // frmEstudiantesGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 555);
+            this.ClientSize = new System.Drawing.Size(1174, 555);
             this.ControlBox = false;
+            this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.grDetalle);
             this.Controls.Add(this.tsVerTodos);
@@ -320,5 +342,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private Infragistics.Win.UltraWinGrid.UltraGrid grDetalle;
         private dsEstudiantes dsEstudiantes1;
         private DevExpress.XtraEditors.SimpleButton btnClose;
+        private System.Windows.Forms.Button cmdCancelar;
     }
 }

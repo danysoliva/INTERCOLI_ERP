@@ -33,7 +33,7 @@ namespace ERP_INTECOLI.Administracion.Instructores
         {
             InitializeComponent();
             TipoEdit = pTipoEdicion;
-
+            cargar_tipo_telefono();
             switch (TipoEdit)
             {
                 case TipoEdicion.Nuevo:
@@ -48,6 +48,27 @@ namespace ERP_INTECOLI.Administracion.Instructores
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void cargar_tipo_telefono()
+        {
+            try
+            {
+                string sql = "sp_estudiantes_tipo_telefono";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                dsEstudiantes1.tipo_telefono.Clear();
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                adat.Fill(dsEstudiantes1.tipo_telefono);
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
             }
         }
 

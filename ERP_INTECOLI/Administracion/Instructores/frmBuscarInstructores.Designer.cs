@@ -29,12 +29,12 @@ namespace ERP_INTECOLI.Administracion.Instructores
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarInstructores));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.cmdNuevo = new System.Windows.Forms.Button();
             this.ultraLabel1 = new Infragistics.Win.Misc.UltraLabel();
             this.grdInstructores = new DevExpress.XtraGrid.GridControl();
@@ -51,7 +51,7 @@ namespace ERP_INTECOLI.Administracion.Instructores
             this.colid_usuario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colconcatenacion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coleditar = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.reposEditar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repost_edit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.txtParametro = new DevExpress.XtraEditors.TextEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -59,7 +59,7 @@ namespace ERP_INTECOLI.Administracion.Instructores
             ((System.ComponentModel.ISupportInitialize)(this.grdInstructores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsInstructores1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reposEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repost_edit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParametro.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -103,7 +103,7 @@ namespace ERP_INTECOLI.Administracion.Instructores
             this.grdInstructores.MainView = this.gridView1;
             this.grdInstructores.Name = "grdInstructores";
             this.grdInstructores.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.reposEditar});
+            this.repost_edit});
             this.grdInstructores.Size = new System.Drawing.Size(942, 435);
             this.grdInstructores.TabIndex = 14;
             this.grdInstructores.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -216,19 +216,21 @@ namespace ERP_INTECOLI.Administracion.Instructores
             // coleditar
             // 
             this.coleditar.Caption = "Editar";
-            this.coleditar.ColumnEdit = this.reposEditar;
+            this.coleditar.ColumnEdit = this.repost_edit;
+            this.coleditar.FieldName = "editar";
             this.coleditar.Name = "coleditar";
             this.coleditar.Visible = true;
             this.coleditar.VisibleIndex = 7;
             // 
-            // reposEditar
+            // repost_edit
             // 
-            this.reposEditar.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
-            this.reposEditar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.reposEditar.Name = "reposEditar";
-            this.reposEditar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repost_edit.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.repost_edit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.repost_edit.Name = "repost_edit";
+            this.repost_edit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repost_edit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repost_edit_ButtonClick);
             // 
             // cmdCancelar
             // 
@@ -301,7 +303,7 @@ namespace ERP_INTECOLI.Administracion.Instructores
             ((System.ComponentModel.ISupportInitialize)(this.grdInstructores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsInstructores1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reposEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repost_edit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParametro.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -328,10 +330,10 @@ namespace ERP_INTECOLI.Administracion.Instructores
         private DevExpress.XtraGrid.Columns.GridColumn colid_usuario;
         private DevExpress.XtraGrid.Columns.GridColumn colconcatenacion;
         private DevExpress.XtraGrid.Columns.GridColumn coleditar;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit reposEditar;
         private System.Windows.Forms.Button cmdCancelar;
         private DevExpress.XtraEditors.TextEdit txtParametro;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.ToggleSwitch tsHabilitados;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repost_edit;
     }
 }
