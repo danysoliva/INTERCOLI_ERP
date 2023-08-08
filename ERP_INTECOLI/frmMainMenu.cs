@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Administracion.Estudiantes;
+using ERP_INTECOLI.Administracion.Instructores;
+
 using System.Data.SqlClient;
 
 namespace ERP_INTECOLI
@@ -37,6 +39,22 @@ namespace ERP_INTECOLI
                     frm1.Show();
                 }
                 catch 
+                {
+                }
+            }
+        }
+
+        private void navBarInstructor_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmBuscarInstructores frx = new frmBuscarInstructores(UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
                 {
                 }
             }

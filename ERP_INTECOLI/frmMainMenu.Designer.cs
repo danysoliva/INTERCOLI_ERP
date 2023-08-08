@@ -40,7 +40,7 @@ namespace ERP_INTECOLI
             this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
             this.navBarEstudiantes = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarInstructor = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem2 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem3 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
@@ -81,7 +81,7 @@ namespace ERP_INTECOLI
             this.navBarSeparatorItem1,
             this.navBarEstudiantes,
             this.navBarItem4,
-            this.navBarItem5,
+            this.navBarInstructor,
             this.navBarSeparatorItem2,
             this.navBarItem3,
             this.navBarSeparatorItem3});
@@ -102,7 +102,7 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem1),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarEstudiantes),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem5),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarInstructor),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem2),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem3)});
@@ -138,11 +138,12 @@ namespace ERP_INTECOLI
             this.navBarItem4.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.Niveles_x32;
             this.navBarItem4.Name = "navBarItem4";
             // 
-            // navBarItem5
+            // navBarInstructor
             // 
-            this.navBarItem5.Caption = "Instructores";
-            this.navBarItem5.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.maestro_x32;
-            this.navBarItem5.Name = "navBarItem5";
+            this.navBarInstructor.Caption = "Instructores";
+            this.navBarInstructor.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.maestro_x32;
+            this.navBarInstructor.Name = "navBarInstructor";
+            this.navBarInstructor.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarInstructor_LinkClicked);
             // 
             // navBarSeparatorItem2
             // 
@@ -166,7 +167,7 @@ namespace ERP_INTECOLI
             // xtraTabPage2
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(185, 741);
+            this.xtraTabPage2.Size = new System.Drawing.Size(210, 804);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // frmMainMenu
@@ -199,7 +200,7 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem1;
         private DevExpress.XtraNavBar.NavBarItem navBarEstudiantes;
         private DevExpress.XtraNavBar.NavBarItem navBarItem4;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem5;
+        private DevExpress.XtraNavBar.NavBarItem navBarInstructor;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem3;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem3;
