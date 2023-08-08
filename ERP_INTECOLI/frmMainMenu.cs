@@ -13,6 +13,7 @@ using ERP_INTECOLI.Administracion.Estudiantes;
 using ERP_INTECOLI.Administracion.Instructores;
 
 using System.Data.SqlClient;
+using JAGUAR_APP;
 
 namespace ERP_INTECOLI
 {
@@ -20,12 +21,46 @@ namespace ERP_INTECOLI
     {
         
         UserLogin UsuarioLogeado;
-
+        frmMain frm;
         public frmMainMenu(UserLogin pUserLogin)
         {
             InitializeComponent();
             UsuarioLogeado = pUserLogin;
+            xtraTabControlMenu.Visible = false;
+            lblServerName.Text = "Server Name: " + Globals.ERP_ServerName + "  DB: " + Globals.ERP_ActiveDB;
+            frm = new frmMain();
+
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Normal;
+            frm.Show();
+        }
+
+        public void ejecutar(int id)
+        {
+            if (id > 0)
+            {
+                UsuarioLogeado.Id = id;
+                if (UsuarioLogeado.RecuperarRegistro(id))
+                    xtraTabControlMenu.Visible = true;
+            }
+            else
+            {
+                xtraTabControlMenu.Visible = false;
+            }
+        }
+
+        public frmMainMenu()
+        {
+            InitializeComponent();
+            UsuarioLogeado = new UserLogin();
+            xtraTabControlMenu.Visible = false;
+            lblServerName.Text = "Server Name: " + Globals.ERP_ServerAddress + "  DB: " + Globals.ERP_ActiveDB;
+            frm = new frmMain();
+            frm.LogeadoComplete += new frmMain.LogeadoEvent(ejecutar);
             
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Normal;
+            frm.Show();
         }
 
         private void navBarEstudiantes_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -56,8 +91,23 @@ namespace ERP_INTECOLI
                 }
                 catch (Exception ec)
                 {
+                    Console.WriteLine(ec.Message);
                 }
             }
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm1 in this.MdiChildren)
+            {
+                frm1.Dispose();
+            }
+
+            frm = new frmMain();
+            frm.LogeadoComplete += new frmMain.LogeadoEvent(ejecutar);
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Normal;
+            frm.Show();
         }
     }
 }

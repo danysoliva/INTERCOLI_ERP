@@ -20,7 +20,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
     {
         DataOperations dp = new DataOperations();
         private int Idestudiante = 0;
-        Estudiante vEstudiante;
+        //Estudiante vEstudiante;
         ArrayList ListaTelefonos;
         private int IdEstudianteRecomendo = 0;
         

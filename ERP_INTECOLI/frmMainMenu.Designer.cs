@@ -31,7 +31,8 @@ namespace ERP_INTECOLI
         /// </summary>
         private void InitializeComponent()
         {
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainMenu));
+            this.xtraTabControlMenu = new DevExpress.XtraTab.XtraTabControl();
             this.TabAdministracion = new DevExpress.XtraTab.XtraTabPage();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -44,35 +45,47 @@ namespace ERP_INTECOLI
             this.navBarSeparatorItem2 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem3 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblServerName = new System.Windows.Forms.ToolStripStatusLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).BeginInit();
+            this.xtraTabControlMenu.SuspendLayout();
             this.TabAdministracion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // xtraTabControl1
+            // xtraTabControlMenu
             // 
-            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.TabAdministracion;
-            this.xtraTabControl1.Size = new System.Drawing.Size(212, 829);
-            this.xtraTabControl1.TabIndex = 0;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.TabAdministracion,
-            this.xtraTabPage2});
+            this.xtraTabControlMenu.Appearance.BackColor = System.Drawing.Color.White;
+            this.xtraTabControlMenu.Appearance.Options.UseBackColor = true;
+            this.xtraTabControlMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.xtraTabControlMenu.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControlMenu.Name = "xtraTabControlMenu";
+            this.xtraTabControlMenu.SelectedTabPage = this.TabAdministracion;
+            this.xtraTabControlMenu.Size = new System.Drawing.Size(209, 759);
+            this.xtraTabControlMenu.TabIndex = 0;
+            this.xtraTabControlMenu.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.TabAdministracion});
+            this.xtraTabControlMenu.Visible = false;
             // 
             // TabAdministracion
             // 
+            this.TabAdministracion.Appearance.PageClient.BackColor = System.Drawing.Color.White;
+            this.TabAdministracion.Appearance.PageClient.Options.UseBackColor = true;
             this.TabAdministracion.Controls.Add(this.navBarControl1);
             this.TabAdministracion.Name = "TabAdministracion";
-            this.TabAdministracion.Size = new System.Drawing.Size(210, 804);
-            this.TabAdministracion.Text = "Administracion";
+            this.TabAdministracion.Size = new System.Drawing.Size(207, 734);
+            this.TabAdministracion.Text = "Menu Principal";
             // 
             // navBarControl1
             // 
             this.navBarControl1.ActiveGroup = this.navBarGroup1;
+            this.navBarControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.navBarControl1.BackColor = System.Drawing.Color.White;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup1});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
@@ -87,8 +100,8 @@ namespace ERP_INTECOLI
             this.navBarSeparatorItem3});
             this.navBarControl1.Location = new System.Drawing.Point(3, 3);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 183;
-            this.navBarControl1.Size = new System.Drawing.Size(183, 475);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 204;
+            this.navBarControl1.Size = new System.Drawing.Size(204, 728);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -164,35 +177,66 @@ namespace ERP_INTECOLI
             this.navBarSeparatorItem3.Hint = null;
             this.navBarSeparatorItem3.Name = "navBarSeparatorItem3";
             // 
-            // xtraTabPage2
+            // statusStrip1
             // 
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(210, 804);
-            this.xtraTabPage2.Text = "xtraTabPage2";
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1,
+            this.lblServerName});
+            this.statusStrip1.Location = new System.Drawing.Point(209, 737);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(705, 22);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loginToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 20);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // loginToolStripMenuItem
+            // 
+            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.loginToolStripMenuItem.Text = "Login";
+            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
+            // 
+            // lblServerName
+            // 
+            this.lblServerName.Name = "lblServerName";
+            this.lblServerName.Size = new System.Drawing.Size(0, 17);
             // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1356, 829);
-            this.Controls.Add(this.xtraTabControl1);
+            this.ClientSize = new System.Drawing.Size(914, 759);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.xtraTabControlMenu);
             this.IsMdiContainer = true;
             this.Name = "frmMainMenu";
             this.Text = "ERP - Success English Academy System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).EndInit();
+            this.xtraTabControlMenu.ResumeLayout(false);
             this.TabAdministracion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private XtraTabControl xtraTabControl1;
+        private XtraTabControl xtraTabControlMenu;
         private XtraTabPage TabAdministracion;
-        private XtraTabPage xtraTabPage2;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraNavBar.NavBarItem navBarItem1;
@@ -204,5 +248,9 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem2;
         private DevExpress.XtraNavBar.NavBarItem navBarItem3;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem3;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblServerName;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
     }
 }
