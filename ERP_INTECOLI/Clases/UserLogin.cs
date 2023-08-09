@@ -167,6 +167,7 @@ namespace ERP_INTECOLI.Clases
                     Nombre = dr.GetString(1);
                     if (!dr.IsDBNull(dr.GetOrdinal("id_grupo")))
                         IdGrupo = dr.GetInt32(2);
+                    Super_user = dr.GetBoolean(3);
                     _recuperado = true;
                 }
                 dr.Close();
@@ -178,6 +179,26 @@ namespace ERP_INTECOLI.Clases
                 CajaDialogo.Error(ec.Message);
             }
             return Recuperado;
+        }
+
+        public bool IsSudo(int userId)
+        {
+            bool x = false;
+            try
+            {
+                string sql = "sp_user_is_sudo";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@user_id", userId);
+                x = Convert.ToBoolean(cmd.ExecuteScalar());
+            }
+            catch (Exception ec)
+            {
+                x = false;
+                CajaDialogo.Error("¡No se pudo consultar si el nivel del usuario es Sudo!");
+            }
+            return x;
         }
 
     }

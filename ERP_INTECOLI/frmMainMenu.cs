@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Administracion.Estudiantes;
 using ERP_INTECOLI.Administracion.Instructores;
+using ERP_INTECOLI.Administracion.Niveles_Academicos;
+using ERP_INTECOLI.Administracion.Matricula;
+using ERP_INTECOLI.Usuarios;
 
 using System.Data.SqlClient;
 using JAGUAR_APP;
@@ -22,6 +25,7 @@ namespace ERP_INTECOLI
         
         UserLogin UsuarioLogeado;
         frmMain frm;
+        
         public frmMainMenu(UserLogin pUserLogin)
         {
             InitializeComponent();
@@ -33,6 +37,7 @@ namespace ERP_INTECOLI
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Normal;
             frm.Show();
+            UsuarioLogeado = frm.user1;
         }
 
         public void ejecutar(int id)
@@ -108,6 +113,54 @@ namespace ERP_INTECOLI
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Normal;
             frm.Show();
+        }
+
+        private void navBarItem4_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+            //FALTA PERMISO DE ACCESO 
+            frmNiveles_Academicos mtx = new frmNiveles_Academicos(this.UsuarioLogeado);
+            if (mtx != null)
+            {
+                mtx.MdiParent = this;
+                try
+                {
+                    mtx.Show();
+                }
+                catch { }
+                
+            }
+        }
+
+        private void navMatricula_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //FALTA PERMISO DE ACCESO 
+            frmMatriculaReal mtx = new frmMatriculaReal(this.UsuarioLogeado);
+            if (mtx != null)
+            {
+                
+                mtx.MdiParent = this;
+                try
+                {
+                    mtx.Show();
+                }
+                catch { }
+                
+            }
+        }
+
+        private void navPermisosUsuarios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            if (UsuarioLogeado.Super_user)
+            {
+                frmMantVentanas frm = new frmMantVentanas();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            else
+            {
+                CajaDialogo.Error("No tiene Autorizacion\nSolo los Super Usuarios pueden Acceder a esta Ventana.");
+            }
         }
     }
 }

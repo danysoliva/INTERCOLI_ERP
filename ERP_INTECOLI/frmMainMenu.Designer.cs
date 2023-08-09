@@ -43,8 +43,11 @@ namespace ERP_INTECOLI
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarInstructor = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem2 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navMatricula = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem3 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navPermisosUsuarios = new DevExpress.XtraNavBar.NavBarItem();
+            this.navUsuarios = new DevExpress.XtraNavBar.NavBarItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,7 +90,8 @@ namespace ERP_INTECOLI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.navBarControl1.BackColor = System.Drawing.Color.White;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup1});
+            this.navBarGroup1,
+            this.navBarGroup2});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navBarItem1,
             this.navBarItem2,
@@ -96,8 +100,10 @@ namespace ERP_INTECOLI
             this.navBarItem4,
             this.navBarInstructor,
             this.navBarSeparatorItem2,
-            this.navBarItem3,
-            this.navBarSeparatorItem3});
+            this.navMatricula,
+            this.navBarSeparatorItem3,
+            this.navPermisosUsuarios,
+            this.navUsuarios});
             this.navBarControl1.Location = new System.Drawing.Point(3, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 204;
@@ -117,7 +123,7 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarInstructor),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navMatricula),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem3)});
             this.navBarGroup1.Name = "navBarGroup1";
             // 
@@ -150,6 +156,7 @@ namespace ERP_INTECOLI
             this.navBarItem4.Caption = "Niveles Academicos";
             this.navBarItem4.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.Niveles_x32;
             this.navBarItem4.Name = "navBarItem4";
+            this.navBarItem4.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem4_LinkClicked);
             // 
             // navBarInstructor
             // 
@@ -165,10 +172,12 @@ namespace ERP_INTECOLI
             this.navBarSeparatorItem2.Hint = null;
             this.navBarSeparatorItem2.Name = "navBarSeparatorItem2";
             // 
-            // navBarItem3
+            // navMatricula
             // 
-            this.navBarItem3.Caption = "Matricula";
-            this.navBarItem3.Name = "navBarItem3";
+            this.navMatricula.Caption = "Matricula";
+            this.navMatricula.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.matriculax32;
+            this.navMatricula.Name = "navMatricula";
+            this.navMatricula.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navMatricula_LinkClicked);
             // 
             // navBarSeparatorItem3
             // 
@@ -176,6 +185,28 @@ namespace ERP_INTECOLI
             this.navBarSeparatorItem3.Enabled = false;
             this.navBarSeparatorItem3.Hint = null;
             this.navBarSeparatorItem3.Name = "navBarSeparatorItem3";
+            // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "Usuarios";
+            this.navBarGroup2.Expanded = true;
+            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navPermisosUsuarios),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navUsuarios)});
+            this.navBarGroup2.Name = "navBarGroup2";
+            // 
+            // navPermisosUsuarios
+            // 
+            this.navPermisosUsuarios.Caption = "Gestion de Permisos";
+            this.navPermisosUsuarios.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.control_de_accessox32;
+            this.navPermisosUsuarios.Name = "navPermisosUsuarios";
+            this.navPermisosUsuarios.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navPermisosUsuarios_LinkClicked);
+            // 
+            // navUsuarios
+            // 
+            this.navUsuarios.Caption = "Usuarios y Permisos";
+            this.navUsuarios.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.userx32;
+            this.navUsuarios.Name = "navUsuarios";
             // 
             // statusStrip1
             // 
@@ -246,11 +277,14 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navBarItem4;
         private DevExpress.XtraNavBar.NavBarItem navBarInstructor;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem2;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem3;
+        private DevExpress.XtraNavBar.NavBarItem navMatricula;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem3;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblServerName;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private DevExpress.XtraNavBar.NavBarItem navPermisosUsuarios;
+        private DevExpress.XtraNavBar.NavBarItem navUsuarios;
     }
 }

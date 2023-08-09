@@ -20,7 +20,7 @@ namespace JAGUAR_APP
 {
     public partial class frmMain : Form
     {
-        private UserLogin user1;
+        public UserLogin user1;
         public delegate void LogeadoEvent(int id_usuario);
         public event LogeadoEvent LogeadoComplete;
 
@@ -244,7 +244,7 @@ namespace JAGUAR_APP
             lblVersion.Text = AssemblyVersion;
             string HostName = Dns.GetHostName();
             if (HostName == "7L12TV3" || HostName == "F3DYSQ2" /*Danys Oliva*/ || 
-                HostName == "9SSCBV2" || HostName == "9PG91W2" /*Ruben Garcia */ || 
+                HostName == "9SSCBV2" || HostName == "6G1SST3" /*Ruben Garcia */ || 
                 HostName == "F9Q11Q2" /*PC Soporte La 50*/|| 
                 HostName == "DESKTOP-U63MQ6A" || //Maquina virtual 
                 HostName == "EUCEDA-PC" /*Euceda*/)
