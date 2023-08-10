@@ -31,83 +31,69 @@ namespace ERP_INTECOLI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainMenu));
-            this.xtraTabControlMenu = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.TabAdministracion = new DevExpress.XtraTab.XtraTabPage();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navLogOff = new DevExpress.XtraNavBar.NavBarItem();
-            this.navGestion_Permisos = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
             this.navBarEstudiantes = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarInstructor = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem2 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navMatricula = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem3 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblServerName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.navUsuariosPermisos = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navConsultaMatricula = new DevExpress.XtraNavBar.NavBarItem();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).BeginInit();
-            this.xtraTabControlMenu.SuspendLayout();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
+            this.xtraTabControl1.SuspendLayout();
             this.TabAdministracion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // xtraTabControlMenu
+            // xtraTabControl1
             // 
-            this.xtraTabControlMenu.Appearance.BackColor = System.Drawing.Color.White;
-            this.xtraTabControlMenu.Appearance.Options.UseBackColor = true;
-            this.xtraTabControlMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.xtraTabControlMenu.Location = new System.Drawing.Point(0, 0);
-            this.xtraTabControlMenu.Name = "xtraTabControlMenu";
-            this.xtraTabControlMenu.SelectedTabPage = this.TabAdministracion;
-            this.xtraTabControlMenu.Size = new System.Drawing.Size(209, 759);
-            this.xtraTabControlMenu.TabIndex = 0;
-            this.xtraTabControlMenu.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.TabAdministracion});
-            this.xtraTabControlMenu.Visible = false;
+            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.SelectedTabPage = this.TabAdministracion;
+            this.xtraTabControl1.Size = new System.Drawing.Size(454, 1257);
+            this.xtraTabControl1.TabIndex = 0;
+            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.TabAdministracion,
+            this.xtraTabPage2});
             // 
             // TabAdministracion
             // 
-            this.TabAdministracion.Appearance.PageClient.BackColor = System.Drawing.Color.White;
-            this.TabAdministracion.Appearance.PageClient.Options.UseBackColor = true;
             this.TabAdministracion.Controls.Add(this.navBarControl1);
+            this.TabAdministracion.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TabAdministracion.Name = "TabAdministracion";
-            this.TabAdministracion.Size = new System.Drawing.Size(207, 734);
-            this.TabAdministracion.Text = "Menu Principal";
+            this.TabAdministracion.Size = new System.Drawing.Size(450, 1208);
+            this.TabAdministracion.Text = "Administracion";
             // 
             // navBarControl1
             // 
             this.navBarControl1.ActiveGroup = this.navBarGroup1;
-            this.navBarControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.navBarControl1.BackColor = System.Drawing.Color.White;
+            this.navBarControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup1});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.navLogOff,
-            this.navGestion_Permisos,
+            this.navBarItem1,
+            this.navBarItem2,
             this.navBarSeparatorItem1,
             this.navBarEstudiantes,
             this.navBarItem4,
-            this.navBarInstructor,
+            this.navBarItem5,
             this.navBarSeparatorItem2,
-            this.navMatricula,
-            this.navBarSeparatorItem3,
-            this.navUsuariosPermisos,
-            this.navBarItem1,
-            this.navConsultaMatricula});
-            this.navBarControl1.Location = new System.Drawing.Point(3, 3);
+            this.navBarItem3,
+            this.navBarSeparatorItem3});
+            this.navBarControl1.Location = new System.Drawing.Point(4, 4);
+            this.navBarControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 204;
-            this.navBarControl1.Size = new System.Drawing.Size(204, 728);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 410;
+            this.navBarControl1.Size = new System.Drawing.Size(410, 1198);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -116,33 +102,26 @@ namespace ERP_INTECOLI
             this.navBarGroup1.Caption = "Acciones";
             this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navLogOff),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navGestion_Permisos),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navUsuariosPermisos),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem1),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarEstudiantes),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarInstructor),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem5),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navMatricula),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem3),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navConsultaMatricula)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSeparatorItem3)});
             this.navBarGroup1.Name = "navBarGroup1";
             // 
-            // navLogOff
+            // navBarItem1
             // 
-            this.navLogOff.Caption = "Desconectar";
-            this.navLogOff.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navLogOff.ImageOptions.SmallImage")));
-            this.navLogOff.Name = "navLogOff";
-            this.navLogOff.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navLogOff_LinkClicked);
+            this.navBarItem1.Caption = "navBarItem1";
+            this.navBarItem1.Name = "navBarItem1";
             // 
-            // navGestion_Permisos
+            // navBarItem2
             // 
-            this.navGestion_Permisos.Caption = "Gestion de Permisos";
-            this.navGestion_Permisos.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.control_de_accessox32;
-            this.navGestion_Permisos.Name = "navGestion_Permisos";
-            this.navGestion_Permisos.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGestion_Permisos_LinkClicked);
+            this.navBarItem2.Caption = "navBarItem2";
+            this.navBarItem2.Name = "navBarItem2";
             // 
             // navBarSeparatorItem1
             // 
@@ -163,14 +142,12 @@ namespace ERP_INTECOLI
             this.navBarItem4.Caption = "Niveles Academicos";
             this.navBarItem4.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.Niveles_x32;
             this.navBarItem4.Name = "navBarItem4";
-            this.navBarItem4.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem4_LinkClicked);
             // 
-            // navBarInstructor
+            // navBarItem5
             // 
-            this.navBarInstructor.Caption = "Instructores";
-            this.navBarInstructor.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.maestro_x32;
-            this.navBarInstructor.Name = "navBarInstructor";
-            this.navBarInstructor.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarInstructor_LinkClicked);
+            this.navBarItem5.Caption = "Instructores";
+            this.navBarItem5.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.maestro_x32;
+            this.navBarItem5.Name = "navBarItem5";
             // 
             // navBarSeparatorItem2
             // 
@@ -179,12 +156,10 @@ namespace ERP_INTECOLI
             this.navBarSeparatorItem2.Hint = null;
             this.navBarSeparatorItem2.Name = "navBarSeparatorItem2";
             // 
-            // navMatricula
+            // navBarItem3
             // 
-            this.navMatricula.Caption = "Matricula";
-            this.navMatricula.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.matriculax32;
-            this.navMatricula.Name = "navMatricula";
-            this.navMatricula.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navMatricula_LinkClicked);
+            this.navBarItem3.Caption = "Matricula";
+            this.navBarItem3.Name = "navBarItem3";
             // 
             // navBarSeparatorItem3
             // 
@@ -193,102 +168,47 @@ namespace ERP_INTECOLI
             this.navBarSeparatorItem3.Hint = null;
             this.navBarSeparatorItem3.Name = "navBarSeparatorItem3";
             // 
-            // statusStrip1
+            // xtraTabPage2
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1,
-            this.lblServerName});
-            this.statusStrip1.Location = new System.Drawing.Point(209, 737);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(705, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loginToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 20);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
-            // 
-            // loginToolStripMenuItem
-            // 
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
-            this.loginToolStripMenuItem.Text = "Login";
-            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
-            // 
-            // lblServerName
-            // 
-            this.lblServerName.Name = "lblServerName";
-            this.lblServerName.Size = new System.Drawing.Size(0, 17);
-            // 
-            // navUsuariosPermisos
-            // 
-            this.navUsuariosPermisos.Caption = "Usuarios y Permisos";
-            this.navUsuariosPermisos.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.userx32;
-            this.navUsuariosPermisos.Name = "navUsuariosPermisos";
-            this.navUsuariosPermisos.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navUsuariosPermisos_LinkClicked);
-            // 
-            // navBarItem1
-            // 
-            this.navBarItem1.Caption = "navBarItem1";
-            this.navBarItem1.Name = "navBarItem1";
-            // 
-            // navConsultaMatricula
-            // 
-            this.navConsultaMatricula.Caption = "Consultar Matricula";
-            this.navConsultaMatricula.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem2.ImageOptions.SvgImage")));
-            this.navConsultaMatricula.Name = "navConsultaMatricula";
-            this.navConsultaMatricula.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navConsultaMatricula_LinkClicked);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(27132, 1139);
+            this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // frmMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 759);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.xtraTabControlMenu);
+            this.ClientSize = new System.Drawing.Size(2105, 1257);
+            this.Controls.Add(this.xtraTabControl1);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmMainMenu";
             this.Text = "ERP - Success English Academy System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).EndInit();
-            this.xtraTabControlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
+            this.xtraTabControl1.ResumeLayout(false);
             this.TabAdministracion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private XtraTabControl xtraTabControlMenu;
+        private XtraTabControl xtraTabControl1;
         private XtraTabPage TabAdministracion;
+        private XtraTabPage xtraTabPage2;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
-        private DevExpress.XtraNavBar.NavBarItem navLogOff;
-        private DevExpress.XtraNavBar.NavBarItem navGestion_Permisos;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem1;
         private DevExpress.XtraNavBar.NavBarItem navBarEstudiantes;
         private DevExpress.XtraNavBar.NavBarItem navBarItem4;
-        private DevExpress.XtraNavBar.NavBarItem navBarInstructor;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem5;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem2;
-        private DevExpress.XtraNavBar.NavBarItem navMatricula;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem3;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem3;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel lblServerName;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
-        private DevExpress.XtraNavBar.NavBarItem navUsuariosPermisos;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
-        private DevExpress.XtraNavBar.NavBarItem navConsultaMatricula;
     }
 }
