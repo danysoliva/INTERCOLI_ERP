@@ -12,7 +12,6 @@ using System.Data.SqlClient;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Administracion.Estudiantes;
 using Infragistics.Win.UltraWinGrid;
-using DevExpress.XtraGrid.Views.Grid;
 
 namespace ERP_INTECOLI.Administracion.Estudiantes
 {
@@ -20,8 +19,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
     {
         UserLogin UsuarioLogeado;
         DataOperations dp = new DataOperations();
-
-        DataView dv;
         public frmEstudiantesGroup(UserLogin pUserLogin)
         {
             InitializeComponent();
@@ -42,8 +39,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 dsEstudiantes1.estudiantes.Clear();
                 adat.Fill(dsEstudiantes1.estudiantes);
-
-                dv = new DataView(dsEstudiantes1.estudiantes);
                 conn.Close();
             }
             catch (Exception ex)
@@ -59,24 +54,24 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
         private void txtParametro_ValueChanged(object sender, EventArgs e)
         {
-            //UltraGridBand band = this.grDetalle.DisplayLayout.Bands[0];
-            //band.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
-            //band.Columns["concatenacion"].AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
-            //band.Override.RowFilterMode = RowFilterMode.AllRowsInBand;
-            //band.ColumnFilters["concatenacion"].FilterConditions.Clear();
-            //this.grDetalle.DisplayLayout.Bands[0].ColumnFilters.ClearAllFilters();
+            UltraGridBand band = this.grDetalle.DisplayLayout.Bands[0];
+            band.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
+            band.Columns["concatenacion"].AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
+            band.Override.RowFilterMode = RowFilterMode.AllRowsInBand;
+            band.ColumnFilters["concatenacion"].FilterConditions.Clear();
+            this.grDetalle.DisplayLayout.Bands[0].ColumnFilters.ClearAllFilters();
 
-            //if (this.grDetalle.Rows.Count > 0)
-            //{
-            //    if (txtParametro.Value != DBNull.Value && txtParametro.Value != null)
-            //    {
-            //        this.grDetalle.DisplayLayout.Bands[0].ColumnFilters["concatenacion"].FilterConditions.Add(FilterComparisionOperator.Like, "*" + txtParametro.Value + "*");
-            //    }
-            //}
-            //if (string.IsNullOrEmpty(this.txtParametro.Text))
-            //{
-            //    load_data();
-            //}
+            if (this.grDetalle.Rows.Count > 0)
+            {
+                if (txtParametro.Value != DBNull.Value && txtParametro.Value != null)
+                {
+                    this.grDetalle.DisplayLayout.Bands[0].ColumnFilters["concatenacion"].FilterConditions.Add(FilterComparisionOperator.Like, "*" + txtParametro.Value + "*");
+                }
+            }
+            if (string.IsNullOrEmpty(this.txtParametro.Text))
+            {
+                load_data();
+            }
         }
 
         private void cmdNuevo_Click(object sender, EventArgs e)
@@ -88,6 +83,25 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             }
         }
 
+        private void grDetalle_ClickCellButton(object sender, Infragistics.Win.UltraWinGrid.CellEventArgs e)
+        {
+            switch (e.Cell.Column.Key)
+            {
+                case "editar":
+                    frmEstudiantes frm = new frmEstudiantes(this.UsuarioLogeado, frmEstudiantes.TipoEdicion.Editar, Convert.ToInt32(e.Cell.Row.Cells["id_estudiante"].Value));
+                    frm.ShowDialog(this);
+                    load_data();
+                    break;
+
+                case "antiguiedad":
+                    frmHistoarialAntiguedad frx = new frmHistoarialAntiguedad(Convert.ToInt32(e.Cell.Row.Cells["id_estudiante"].Value));
+                    frx.ShowDialog();
+
+                    break;
+                default:
+                    break;
+            }
+        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -98,38 +112,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void txtParametroBusqueda_EditValueChanged(object sender, EventArgs e)
-        {
-            dv.RowFilter = @"concatenacion like '%" + txtParametroBusqueda.Text + "%'";
-            gridEstudiantes.DataSource = dv;
-        }
-
-        private void reposEditar_ButtonClick_1(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            var gridview = (GridView)gridEstudiantes.FocusedView;
-            var row = (dsEstudiantes.estudiantesRow)gridview.GetFocusedDataRow();
-
-            frmEstudiantes frm = new frmEstudiantes(this.UsuarioLogeado, frmEstudiantes.TipoEdicion.Editar, row.id_estudiante);
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                load_data();
-            }
-        }
-
-        private void reposAntiguedad_ButtonClick_1(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            var gridview = (GridView)gridEstudiantes.FocusedView;
-            var row = (dsEstudiantes.estudiantesRow)gridview.GetFocusedDataRow();
-
-            frmHistoarialAntiguedad frx = new frmHistoarialAntiguedad(row.id_estudiante);
-            frx.ShowDialog();
-        }
-
-        private void txtParametroBusqueda_KeyDown(object sender, KeyEventArgs e)
-        {
-           
         }
     }
 }
