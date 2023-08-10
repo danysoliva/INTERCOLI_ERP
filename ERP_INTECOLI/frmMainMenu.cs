@@ -151,21 +151,6 @@ namespace ERP_INTECOLI
 
         private void navPermisosUsuarios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            
-        }
-
-        private void navLogOff_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-     
-            DialogResult r = CajaDialogo.Pregunta("Esta seguro que desea salir?");
-            if (r != System.Windows.Forms.DialogResult.Yes)
-                return;
-
-            Application.Exit();
-        }
-
-        private void navGestion_Permisos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
             if (UsuarioLogeado.Super_user)
             {
                 frmMantVentanas frm = new frmMantVentanas();
@@ -175,28 +160,6 @@ namespace ERP_INTECOLI
             else
             {
                 CajaDialogo.Error("No tiene Autorizacion\nSolo los Super Usuarios pueden Acceder a esta Ventana.");
-            }
-        }
-
-        private void navUsuariosPermisos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-
-        }
-
-        private void navConsultaMatricula_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            ////FALTA PERMISO DE ACCESO 
-            frmConsultaMatricula mtx = new frmConsultaMatricula(this.UsuarioLogeado);
-            if (mtx != null)
-            {
-                
-                mtx.MdiParent = this;
-                try
-                {
-                    mtx.Show();
-                }
-                catch { }
-                
             }
         }
     }

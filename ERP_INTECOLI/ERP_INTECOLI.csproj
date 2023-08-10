@@ -177,17 +177,6 @@
     <Compile Include="Administracion\Instructores\frmBuscarInstructores.Designer.cs">
       <DependentUpon>frmBuscarInstructores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Matricula\dsMatricula.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsMatricula.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Administracion\Matricula\frmConsultaMatricula.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administracion\Matricula\frmConsultaMatricula.Designer.cs">
-      <DependentUpon>frmConsultaMatricula.cs</DependentUpon>
-    </Compile>
     <Compile Include="Administracion\Matricula\frmMatriculaReal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,9 +279,6 @@
     <EmbeddedResource Include="Administracion\Instructores\frmBuscarInstructores.resx">
       <DependentUpon>frmBuscarInstructores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administracion\Matricula\frmConsultaMatricula.resx">
-      <DependentUpon>frmConsultaMatricula.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Matricula\frmMatriculaReal.resx">
       <DependentUpon>frmMatriculaReal.cs</DependentUpon>
     </EmbeddedResource>
@@ -363,17 +349,6 @@
     </None>
     <None Include="Administracion\Instructores\dsInstructores.xss">
       <DependentUpon>dsInstructores.xsd</DependentUpon>
-    </None>
-    <None Include="Administracion\Matricula\dsMatricula.xsc">
-      <DependentUpon>dsMatricula.xsd</DependentUpon>
-    </None>
-    <None Include="Administracion\Matricula\dsMatricula.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsMatricula.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Administracion\Matricula\dsMatricula.xss">
-      <DependentUpon>dsMatricula.xsd</DependentUpon>
     </None>
     <None Include="dsRecordatorios.xsc">
       <DependentUpon>dsRecordatorios.xsd</DependentUpon>
