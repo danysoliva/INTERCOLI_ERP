@@ -55,9 +55,10 @@ namespace ERP_INTECOLI
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.TabAdministracion;
-            this.xtraTabControl1.Size = new System.Drawing.Size(13568, 618);
+            this.xtraTabControl1.Size = new System.Drawing.Size(454, 1257);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabAdministracion,
@@ -66,13 +67,16 @@ namespace ERP_INTECOLI
             // TabAdministracion
             // 
             this.TabAdministracion.Controls.Add(this.navBarControl1);
+            this.TabAdministracion.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TabAdministracion.Name = "TabAdministracion";
-            this.TabAdministracion.Size = new System.Drawing.Size(13566, 593);
+            this.TabAdministracion.Size = new System.Drawing.Size(450, 1208);
             this.TabAdministracion.Text = "Administracion";
             // 
             // navBarControl1
             // 
             this.navBarControl1.ActiveGroup = this.navBarGroup1;
+            this.navBarControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup1});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
@@ -85,10 +89,11 @@ namespace ERP_INTECOLI
             this.navBarSeparatorItem2,
             this.navBarItem3,
             this.navBarSeparatorItem3});
-            this.navBarControl1.Location = new System.Drawing.Point(2, 2);
+            this.navBarControl1.Location = new System.Drawing.Point(4, 4);
+            this.navBarControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 205;
-            this.navBarControl1.Size = new System.Drawing.Size(205, 439);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 410;
+            this.navBarControl1.Size = new System.Drawing.Size(410, 1198);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -165,17 +170,19 @@ namespace ERP_INTECOLI
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(13566, 642);
+            this.xtraTabPage2.Size = new System.Drawing.Size(27132, 1139);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // frmMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1328, 618);
+            this.ClientSize = new System.Drawing.Size(2105, 1257);
             this.Controls.Add(this.xtraTabControl1);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmMainMenu";
             this.Text = "ERP - Success English Academy System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
