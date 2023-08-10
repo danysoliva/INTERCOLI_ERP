@@ -57,7 +57,7 @@ namespace ERP_INTECOLI
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.TabAdministracion;
-            this.xtraTabControl1.Size = new System.Drawing.Size(212, 829);
+            this.xtraTabControl1.Size = new System.Drawing.Size(13568, 618);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabAdministracion,
@@ -67,7 +67,7 @@ namespace ERP_INTECOLI
             // 
             this.TabAdministracion.Controls.Add(this.navBarControl1);
             this.TabAdministracion.Name = "TabAdministracion";
-            this.TabAdministracion.Size = new System.Drawing.Size(210, 804);
+            this.TabAdministracion.Size = new System.Drawing.Size(13566, 593);
             this.TabAdministracion.Text = "Administracion";
             // 
             // navBarControl1
@@ -85,10 +85,10 @@ namespace ERP_INTECOLI
             this.navBarSeparatorItem2,
             this.navBarItem3,
             this.navBarSeparatorItem3});
-            this.navBarControl1.Location = new System.Drawing.Point(3, 3);
+            this.navBarControl1.Location = new System.Drawing.Point(2, 2);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 183;
-            this.navBarControl1.Size = new System.Drawing.Size(183, 475);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 205;
+            this.navBarControl1.Size = new System.Drawing.Size(205, 439);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -166,14 +166,14 @@ namespace ERP_INTECOLI
             // xtraTabPage2
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(185, 741);
+            this.xtraTabPage2.Size = new System.Drawing.Size(13566, 642);
             this.xtraTabPage2.Text = "xtraTabPage2";
             // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1356, 829);
+            this.ClientSize = new System.Drawing.Size(1328, 618);
             this.Controls.Add(this.xtraTabControl1);
             this.IsMdiContainer = true;
             this.Name = "frmMainMenu";
