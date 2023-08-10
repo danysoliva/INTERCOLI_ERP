@@ -54,24 +54,24 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
         private void txtParametro_ValueChanged(object sender, EventArgs e)
         {
-            UltraGridBand band = this.grDetalle.DisplayLayout.Bands[0];
-            band.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
-            band.Columns["concatenacion"].AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
-            band.Override.RowFilterMode = RowFilterMode.AllRowsInBand;
-            band.ColumnFilters["concatenacion"].FilterConditions.Clear();
-            this.grDetalle.DisplayLayout.Bands[0].ColumnFilters.ClearAllFilters();
+            //UltraGridBand band = this.grDetalle.DisplayLayout.Bands[0];
+            //band.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
+            //band.Columns["concatenacion"].AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
+            //band.Override.RowFilterMode = RowFilterMode.AllRowsInBand;
+            //band.ColumnFilters["concatenacion"].FilterConditions.Clear();
+            //this.grDetalle.DisplayLayout.Bands[0].ColumnFilters.ClearAllFilters();
 
-            if (this.grDetalle.Rows.Count > 0)
-            {
-                if (txtParametro.Value != DBNull.Value && txtParametro.Value != null)
-                {
-                    this.grDetalle.DisplayLayout.Bands[0].ColumnFilters["concatenacion"].FilterConditions.Add(FilterComparisionOperator.Like, "*" + txtParametro.Value + "*");
-                }
-            }
-            if (string.IsNullOrEmpty(this.txtParametro.Text))
-            {
-                load_data();
-            }
+            //if (this.grDetalle.Rows.Count > 0)
+            //{
+            //    if (txtParametro.Value != DBNull.Value && txtParametro.Value != null)
+            //    {
+            //        this.grDetalle.DisplayLayout.Bands[0].ColumnFilters["concatenacion"].FilterConditions.Add(FilterComparisionOperator.Like, "*" + txtParametro.Value + "*");
+            //    }
+            //}
+            //if (string.IsNullOrEmpty(this.txtParametro.Text))
+            //{
+            //    load_data();
+            //}
         }
 
         private void cmdNuevo_Click(object sender, EventArgs e)
