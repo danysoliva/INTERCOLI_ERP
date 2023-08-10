@@ -29,48 +29,50 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         /// </summary>
         private void InitializeComponent()
         {
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("estudiantes", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("id_estudiante", -1, null, 0, Infragistics.Win.UltraWinGrid.SortIndicator.Ascending, false);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("numero_identidad");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("nombres");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("apellidos");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("direccion");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("fecha_nacimiento");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("fecha_ingreso");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("habilitado");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("sexo");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("correo");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("editar");
-            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("concatenacion");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("antiguiedad", 0);
-            Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions7 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstudiantesGroup));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject25 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject26 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject28 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions8 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject29 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject30 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject31 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject32 = new DevExpress.Utils.SerializableAppearanceObject();
             this.cmdNuevo = new System.Windows.Forms.Button();
             this.txtParametro = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.ultraLabel1 = new Infragistics.Win.Misc.UltraLabel();
             this.tsVerTodos = new DevExpress.XtraEditors.ToggleSwitch();
-            this.grDetalle = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.dsEstudiantes1 = new ERP_INTECOLI.Administracion.Estudiantes.dsEstudiantes();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdCancelar = new System.Windows.Forms.Button();
+            this.gridEstudiantes = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnumero_identidad = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnombres = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colapellidos = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldireccion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colfecha_nacimiento = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colfecha_ingreso = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colhabilitado = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colsexo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colcorreo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colconcatenacion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtParametroBusqueda = new DevExpress.XtraEditors.TextEdit();
+            this.reposEditar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.reposAntiguedad = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParametro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsVerTodos.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantes1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridEstudiantes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtParametroBusqueda.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposAntiguedad)).BeginInit();
             this.SuspendLayout();
             // 
             // cmdNuevo
@@ -111,7 +113,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // tsVerTodos
             // 
             this.tsVerTodos.EditValue = true;
-            this.tsVerTodos.Location = new System.Drawing.Point(717, 31);
+            this.tsVerTodos.Location = new System.Drawing.Point(711, 31);
             this.tsVerTodos.Name = "tsVerTodos";
             this.tsVerTodos.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.tsVerTodos.Properties.Appearance.Options.UseFont = true;
@@ -120,151 +122,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.tsVerTodos.Size = new System.Drawing.Size(168, 24);
             this.tsVerTodos.TabIndex = 10;
             this.tsVerTodos.Toggled += new System.EventHandler(this.tsVerTodos_Toggled);
-            // 
-            // grDetalle
-            // 
-            this.grDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grDetalle.DataMember = "estudiantes";
-            this.grDetalle.DataSource = this.dsEstudiantes1;
-            appearance1.BackColor = System.Drawing.SystemColors.Window;
-            appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.grDetalle.DisplayLayout.Appearance = appearance1;
-            this.grDetalle.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;
-            ultraGridColumn1.Header.Caption = "Id";
-            ultraGridColumn1.Header.VisiblePosition = 0;
-            ultraGridColumn1.Width = 28;
-            ultraGridColumn2.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn2.Header.VisiblePosition = 1;
-            ultraGridColumn2.Width = 83;
-            ultraGridColumn3.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn3.Header.VisiblePosition = 2;
-            ultraGridColumn3.Width = 160;
-            ultraGridColumn4.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn4.Header.VisiblePosition = 3;
-            ultraGridColumn4.Width = 127;
-            ultraGridColumn5.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn5.Header.VisiblePosition = 4;
-            ultraGridColumn5.Width = 60;
-            ultraGridColumn6.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn6.Header.VisiblePosition = 5;
-            ultraGridColumn6.Width = 82;
-            ultraGridColumn7.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn7.Header.VisiblePosition = 6;
-            ultraGridColumn7.Width = 91;
-            ultraGridColumn8.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn8.Header.VisiblePosition = 7;
-            ultraGridColumn8.Width = 48;
-            ultraGridColumn9.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn9.Header.VisiblePosition = 8;
-            ultraGridColumn9.Width = 37;
-            ultraGridColumn10.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
-            ultraGridColumn10.Header.VisiblePosition = 9;
-            ultraGridColumn10.Width = 50;
-            appearance2.Image = global::ERP_INTECOLI.Properties.Resources.edit;
-            appearance2.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance2.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn11.CellAppearance = appearance2;
-            appearance3.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance3.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn11.CellButtonAppearance = appearance3;
-            ultraGridColumn11.Header.VisiblePosition = 10;
-            ultraGridColumn11.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn11.Width = 53;
-            ultraGridColumn12.Header.VisiblePosition = 11;
-            ultraGridColumn12.Hidden = true;
-            ultraGridColumn12.Width = 102;
-            appearance4.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance4.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn13.CellAppearance = appearance4;
-            appearance5.ImageHAlign = Infragistics.Win.HAlign.Center;
-            appearance5.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            ultraGridColumn13.CellButtonAppearance = appearance5;
-            ultraGridColumn13.Header.Caption = "Antigüedad";
-            ultraGridColumn13.Header.VisiblePosition = 12;
-            ultraGridColumn13.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn13.Width = 62;
-            ultraGridBand1.Columns.AddRange(new object[] {
-            ultraGridColumn1,
-            ultraGridColumn2,
-            ultraGridColumn3,
-            ultraGridColumn4,
-            ultraGridColumn5,
-            ultraGridColumn6,
-            ultraGridColumn7,
-            ultraGridColumn8,
-            ultraGridColumn9,
-            ultraGridColumn10,
-            ultraGridColumn11,
-            ultraGridColumn12,
-            ultraGridColumn13});
-            ultraGridBand1.Header.FixOnRight = Infragistics.Win.DefaultableBoolean.True;
-            this.grDetalle.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
-            this.grDetalle.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Dotted;
-            this.grDetalle.DisplayLayout.BorderStyleCaption = Infragistics.Win.UIElementBorderStyle.Solid;
-            this.grDetalle.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-            appearance6.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance6.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance6.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance6.BorderColor = System.Drawing.SystemColors.Window;
-            this.grDetalle.DisplayLayout.GroupByBox.Appearance = appearance6;
-            appearance7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.grDetalle.DisplayLayout.GroupByBox.BandLabelAppearance = appearance7;
-            this.grDetalle.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Raised;
-            appearance8.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance8.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance8.BackGradientStyle = Infragistics.Win.GradientStyle.HorizontalBump;
-            appearance8.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.grDetalle.DisplayLayout.GroupByBox.PromptAppearance = appearance8;
-            this.grDetalle.DisplayLayout.LoadStyle = Infragistics.Win.UltraWinGrid.LoadStyle.LoadOnDemand;
-            this.grDetalle.DisplayLayout.MaxColScrollRegions = 1;
-            this.grDetalle.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance9.BackColor = System.Drawing.SystemColors.Window;
-            appearance9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.grDetalle.DisplayLayout.Override.ActiveCellAppearance = appearance9;
-            appearance10.BackColor = System.Drawing.SystemColors.Highlight;
-            appearance10.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.grDetalle.DisplayLayout.Override.ActiveRowAppearance = appearance10;
-            this.grDetalle.DisplayLayout.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
-            this.grDetalle.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
-            this.grDetalle.DisplayLayout.Override.BorderStyleFilterRow = Infragistics.Win.UIElementBorderStyle.Dashed;
-            this.grDetalle.DisplayLayout.Override.BorderStyleHeader = Infragistics.Win.UIElementBorderStyle.Dashed;
-            this.grDetalle.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-            appearance11.BackColor = System.Drawing.SystemColors.Window;
-            this.grDetalle.DisplayLayout.Override.CardAreaAppearance = appearance11;
-            appearance12.BorderColor = System.Drawing.Color.Silver;
-            appearance12.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.grDetalle.DisplayLayout.Override.CellAppearance = appearance12;
-            this.grDetalle.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
-            this.grDetalle.DisplayLayout.Override.CellPadding = 0;
-            appearance13.BackHatchStyle = Infragistics.Win.BackHatchStyle.LargeGrid;
-            this.grDetalle.DisplayLayout.Override.FixedHeaderAppearance = appearance13;
-            appearance14.BackColor = System.Drawing.SystemColors.Control;
-            appearance14.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance14.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance14.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance14.BorderColor = System.Drawing.SystemColors.Window;
-            this.grDetalle.DisplayLayout.Override.GroupByRowAppearance = appearance14;
-            appearance15.TextHAlignAsString = "Left";
-            this.grDetalle.DisplayLayout.Override.HeaderAppearance = appearance15;
-            this.grDetalle.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
-            this.grDetalle.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.Standard;
-            appearance16.BackColor = System.Drawing.SystemColors.Window;
-            appearance16.BorderColor = System.Drawing.Color.Silver;
-            this.grDetalle.DisplayLayout.Override.RowAppearance = appearance16;
-            this.grDetalle.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance17.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.grDetalle.DisplayLayout.Override.TemplateAddRowAppearance = appearance17;
-            this.grDetalle.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
-            this.grDetalle.DisplayLayout.UseFixedHeaders = true;
-            this.grDetalle.DisplayLayout.ViewStyle = Infragistics.Win.UltraWinGrid.ViewStyle.SingleBand;
-            this.grDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grDetalle.Location = new System.Drawing.Point(0, 91);
-            this.grDetalle.Name = "grDetalle";
-            this.grDetalle.Size = new System.Drawing.Size(883, 461);
-            this.grDetalle.TabIndex = 11;
-            this.grDetalle.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.grDetalle_ClickCellButton);
             // 
             // dsEstudiantes1
             // 
@@ -279,21 +136,225 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.btnClose.Appearance.Options.UseBackColor = true;
             this.btnClose.Appearance.Options.UseForeColor = true;
             this.btnClose.ImageOptions.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
-            this.btnClose.Location = new System.Drawing.Point(1082, 15);
+            this.btnClose.Location = new System.Drawing.Point(1331, 15);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(78, 50);
             this.btnClose.TabIndex = 12;
             this.btnClose.Text = "Cerrar";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdCancelar.BackColor = System.Drawing.Color.LightSalmon;
+            this.cmdCancelar.FlatAppearance.BorderColor = System.Drawing.Color.LightSalmon;
+            this.cmdCancelar.FlatAppearance.BorderSize = 2;
+            this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
+            this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdCancelar.Location = new System.Drawing.Point(980, 22);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(110, 43);
+            this.cmdCancelar.TabIndex = 44;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmdCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cmdCancelar.UseVisualStyleBackColor = false;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
+            // 
+            // gridEstudiantes
+            // 
+            this.gridEstudiantes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridEstudiantes.DataMember = "estudiantes";
+            this.gridEstudiantes.DataSource = this.dsEstudiantes1;
+            this.gridEstudiantes.Location = new System.Drawing.Point(4, 81);
+            this.gridEstudiantes.MainView = this.gridView1;
+            this.gridEstudiantes.Name = "gridEstudiantes";
+            this.gridEstudiantes.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.reposEditar,
+            this.reposAntiguedad});
+            this.gridEstudiantes.Size = new System.Drawing.Size(1127, 471);
+            this.gridEstudiantes.TabIndex = 45;
+            this.gridEstudiantes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid_estudiante,
+            this.colnumero_identidad,
+            this.colnombres,
+            this.colapellidos,
+            this.coldireccion,
+            this.colfecha_nacimiento,
+            this.colfecha_ingreso,
+            this.colhabilitado,
+            this.colsexo,
+            this.colcorreo,
+            this.colconcatenacion,
+            this.gridColumn1,
+            this.gridColumn2});
+            this.gridView1.GridControl = this.gridEstudiantes;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // colid_estudiante
+            // 
+            this.colid_estudiante.Caption = "ID";
+            this.colid_estudiante.FieldName = "id_estudiante";
+            this.colid_estudiante.Name = "colid_estudiante";
+            this.colid_estudiante.OptionsColumn.ReadOnly = true;
+            this.colid_estudiante.Visible = true;
+            this.colid_estudiante.VisibleIndex = 0;
+            // 
+            // colnumero_identidad
+            // 
+            this.colnumero_identidad.Caption = "Identidad";
+            this.colnumero_identidad.FieldName = "numero_identidad";
+            this.colnumero_identidad.Name = "colnumero_identidad";
+            this.colnumero_identidad.OptionsColumn.ReadOnly = true;
+            this.colnumero_identidad.Visible = true;
+            this.colnumero_identidad.VisibleIndex = 1;
+            // 
+            // colnombres
+            // 
+            this.colnombres.Caption = "Nombres";
+            this.colnombres.FieldName = "nombres";
+            this.colnombres.Name = "colnombres";
+            this.colnombres.OptionsColumn.ReadOnly = true;
+            this.colnombres.Visible = true;
+            this.colnombres.VisibleIndex = 2;
+            // 
+            // colapellidos
+            // 
+            this.colapellidos.Caption = "Apellidos";
+            this.colapellidos.FieldName = "apellidos";
+            this.colapellidos.Name = "colapellidos";
+            this.colapellidos.OptionsColumn.ReadOnly = true;
+            this.colapellidos.Visible = true;
+            this.colapellidos.VisibleIndex = 3;
+            // 
+            // coldireccion
+            // 
+            this.coldireccion.Caption = "Direccion";
+            this.coldireccion.FieldName = "direccion";
+            this.coldireccion.Name = "coldireccion";
+            this.coldireccion.OptionsColumn.ReadOnly = true;
+            this.coldireccion.Visible = true;
+            this.coldireccion.VisibleIndex = 4;
+            // 
+            // colfecha_nacimiento
+            // 
+            this.colfecha_nacimiento.Caption = "Fecha Nac";
+            this.colfecha_nacimiento.FieldName = "fecha_nacimiento";
+            this.colfecha_nacimiento.Name = "colfecha_nacimiento";
+            this.colfecha_nacimiento.OptionsColumn.ReadOnly = true;
+            this.colfecha_nacimiento.Visible = true;
+            this.colfecha_nacimiento.VisibleIndex = 5;
+            // 
+            // colfecha_ingreso
+            // 
+            this.colfecha_ingreso.Caption = "Fecha Ingreso";
+            this.colfecha_ingreso.FieldName = "fecha_ingreso";
+            this.colfecha_ingreso.Name = "colfecha_ingreso";
+            this.colfecha_ingreso.OptionsColumn.ReadOnly = true;
+            this.colfecha_ingreso.Visible = true;
+            this.colfecha_ingreso.VisibleIndex = 6;
+            // 
+            // colhabilitado
+            // 
+            this.colhabilitado.Caption = "Habilitado";
+            this.colhabilitado.FieldName = "habilitado";
+            this.colhabilitado.Name = "colhabilitado";
+            this.colhabilitado.OptionsColumn.ReadOnly = true;
+            this.colhabilitado.Visible = true;
+            this.colhabilitado.VisibleIndex = 7;
+            // 
+            // colsexo
+            // 
+            this.colsexo.Caption = "Sexo";
+            this.colsexo.FieldName = "sexo";
+            this.colsexo.Name = "colsexo";
+            this.colsexo.OptionsColumn.ReadOnly = true;
+            this.colsexo.Visible = true;
+            this.colsexo.VisibleIndex = 8;
+            // 
+            // colcorreo
+            // 
+            this.colcorreo.Caption = "Correo";
+            this.colcorreo.FieldName = "correo";
+            this.colcorreo.Name = "colcorreo";
+            this.colcorreo.OptionsColumn.ReadOnly = true;
+            this.colcorreo.Visible = true;
+            this.colcorreo.VisibleIndex = 9;
+            // 
+            // colconcatenacion
+            // 
+            this.colconcatenacion.FieldName = "concatenacion";
+            this.colconcatenacion.Name = "colconcatenacion";
+            this.colconcatenacion.OptionsColumn.ReadOnly = true;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Editar";
+            this.gridColumn1.ColumnEdit = this.reposEditar;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 10;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Antiguedad";
+            this.gridColumn2.ColumnEdit = this.reposAntiguedad;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 11;
+            // 
+            // txtParametroBusqueda
+            // 
+            this.txtParametroBusqueda.Location = new System.Drawing.Point(191, 32);
+            this.txtParametroBusqueda.Name = "txtParametroBusqueda";
+            this.txtParametroBusqueda.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParametroBusqueda.Properties.Appearance.Options.UseFont = true;
+            this.txtParametroBusqueda.Size = new System.Drawing.Size(275, 24);
+            this.txtParametroBusqueda.TabIndex = 46;
+            this.txtParametroBusqueda.EditValueChanged += new System.EventHandler(this.txtParametroBusqueda_EditValueChanged);
+            this.txtParametroBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtParametroBusqueda_KeyDown);
+            // 
+            // reposEditar
+            // 
+            this.reposEditar.AutoHeight = false;
+            editorButtonImageOptions7.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions7.SvgImage")));
+            this.reposEditar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.reposEditar.Name = "reposEditar";
+            this.reposEditar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.reposEditar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposEditar_ButtonClick_1);
+            // 
+            // reposAntiguedad
+            // 
+            this.reposAntiguedad.AutoHeight = false;
+            editorButtonImageOptions8.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions8.SvgImage")));
+            this.reposAntiguedad.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.reposAntiguedad.Name = "reposAntiguedad";
+            this.reposAntiguedad.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.reposAntiguedad.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposAntiguedad_ButtonClick_1);
+            // 
             // frmEstudiantesGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 555);
+            this.ClientSize = new System.Drawing.Size(1134, 555);
             this.ControlBox = false;
+            this.Controls.Add(this.txtParametroBusqueda);
+            this.Controls.Add(this.gridEstudiantes);
+            this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.grDetalle);
             this.Controls.Add(this.tsVerTodos);
             this.Controls.Add(this.cmdNuevo);
             this.Controls.Add(this.txtParametro);
@@ -304,8 +365,12 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.txtParametro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsVerTodos.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantes1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridEstudiantes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtParametroBusqueda.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposAntiguedad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,8 +382,26 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private Infragistics.Win.UltraWinEditors.UltraTextEditor txtParametro;
         private Infragistics.Win.Misc.UltraLabel ultraLabel1;
         private DevExpress.XtraEditors.ToggleSwitch tsVerTodos;
-        private Infragistics.Win.UltraWinGrid.UltraGrid grDetalle;
         private dsEstudiantes dsEstudiantes1;
         private DevExpress.XtraEditors.SimpleButton btnClose;
+        private System.Windows.Forms.Button cmdCancelar;
+        private DevExpress.XtraGrid.GridControl gridEstudiantes;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_estudiante;
+        private DevExpress.XtraGrid.Columns.GridColumn colnumero_identidad;
+        private DevExpress.XtraGrid.Columns.GridColumn colnombres;
+        private DevExpress.XtraGrid.Columns.GridColumn colapellidos;
+        private DevExpress.XtraGrid.Columns.GridColumn coldireccion;
+        private DevExpress.XtraGrid.Columns.GridColumn colfecha_nacimiento;
+        private DevExpress.XtraGrid.Columns.GridColumn colfecha_ingreso;
+        private DevExpress.XtraGrid.Columns.GridColumn colhabilitado;
+        private DevExpress.XtraGrid.Columns.GridColumn colsexo;
+        private DevExpress.XtraGrid.Columns.GridColumn colcorreo;
+        private DevExpress.XtraGrid.Columns.GridColumn colconcatenacion;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraEditors.TextEdit txtParametroBusqueda;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit reposEditar;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit reposAntiguedad;
     }
 }

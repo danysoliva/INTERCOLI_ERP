@@ -5,13 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using JAGUAR_APP;
 
 namespace ERP_INTECOLI.Clases
 {
     public class UserLogin
     {
-        //public GrupoUser GrupoUsuario;
-        private bool recuperado;
+        public GrupoUser GrupoUsuario;
+        public SqlConnection conn;
+
         DataOperations dp = new DataOperations();
 
         private bool habilitado;
@@ -24,6 +26,8 @@ namespace ERP_INTECOLI.Clases
         private string nombre;
         private string userdb;
         private string passdb;
+        private int _id_grupo;
+        private bool _recuperado;
 
         public int Idnivel { get => idnivel; set => idnivel = value; }
         public string Tipo { get => tipo; set => tipo = value; }
@@ -42,6 +46,8 @@ namespace ERP_INTECOLI.Clases
         public string UserDb { get => userdb; set => userdb = value; }
         public string PassDb { get => passdb; set => passdb = value; }
         public bool Habilitado { get => habilitado; set => habilitado = value; }
+        public bool Recuperado { get => _recuperado; set => _recuperado = value; }
+        public int IdGrupo { get => _id_grupo; set => _id_grupo = value; }
 
         private string aduser;
 
@@ -50,15 +56,30 @@ namespace ERP_INTECOLI.Clases
             //GrupoUsuario = new GrupoUser();
         }
 
+        public string EncrypPassword(string pass)
+        {
+            try
+            {
+                byte[] enbyte = GetBytes(pass);
+                string cadena_base64 = Convert.ToBase64String(enbyte);
+                return cadena_base64;
+            }
+            catch (Exception)
+            {
+                return " ";
+            }
+        }
+
         public bool RecuperarRegistroUsuario(string pAlias)
         {
             bool x = false;
             try
             {
-                string query  = "[sp_get_users_admin_class]";
+                string query  = "[dbo].[sp_get_users_admin_class]";
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@alias", pAlias);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
@@ -69,16 +90,19 @@ namespace ERP_INTECOLI.Clases
                     Habilitado = dr.GetBoolean(3);
                     Nombre = dr.GetString(4);
                     Super_user = dr.GetBoolean(5);
-                    Tiempo_inactividad = dr.GetTimeSpan(6);
+                    //Tiempo_inactividad = dr.GetTimeSpan(6);
+                    DateTime myDateTime = DateTime.Now;
+                    string sqlFormattedDate = myDateTime.ToString(dr.GetString(6));
                     Utiliza_bloqueo = dr.GetBoolean(7);
                     UserDb = dr.GetString(8);
                     PassDb = dr.GetString(9);
                     x = true;
                 }
+                dr.Close();
             }
             catch (Exception ec)
             {
-                CajaDialogo.Error("No se pudo recuperar el objeto de usuario" + ec.Message);
+                CajaDialogo.Error("No se pudo recuperar el objeto de usuario\nError: " + ec.Message);
             }
             return x;
         }
@@ -124,35 +148,58 @@ namespace ERP_INTECOLI.Clases
             System.Buffer.BlockCopy(bytes, 0, chars, 0, bytes.Length);
             return new string(chars);
         }
+        public bool RecuperarRegistro(int pId)
+        {
+            try
+            {
+                DataOperations dp = new DataOperations();
+                SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                con.Open();
+                string sql = @"dbo.sp_get_usuario_by_id_from_validate_login";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", pId);
 
-       
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    Id = dr.GetInt32(0);
+                    Nombre = dr.GetString(1);
+                    if (!dr.IsDBNull(dr.GetOrdinal("id_grupo")))
+                        IdGrupo = dr.GetInt32(2);
+                    Super_user = dr.GetBoolean(3);
+                    _recuperado = true;
+                }
+                dr.Close();
+                con.Close();
+            }
+            catch (Exception ec)
+            {
+                _recuperado = false;
+                CajaDialogo.Error(ec.Message);
+            }
+            return Recuperado;
+        }
 
-        //internal bool ValidarNivelPermisos(int pIdVentana)
-        //{
-        //    bool r = false;
-        //    try
-        //    {
-        //        DataOperations dp = new DataOperations();
-        //        SqlConnection Conn = new SqlConnection(dp.ConnectionStringERP);
-        //        Conn.Open();
-        //        //string sql = @"SELECT count(*)
-        //        //                FROM [dbo].conf_usuario_ventanas vv 
-        //        //                where vv.id_ventana = " + pIdVentana.ToString() +
-        //        //                      "and vv.id_usuario = " + UserId.ToString();
-        //        SqlCommand cmd = new SqlCommand("", Conn);
-        //        cmd.CommandType = CommandType.StoredProcedure;
-        //        cmd.Parameters.AddWithValue("@id_ventana", pIdVentana.ToString());
-        //        cmd.Parameters.AddWithValue("@id_usuario",UserId.ToString());
-        //        int v = Convert.ToInt32(cmd.ExecuteScalar());
-        //        if (v > 0)
-        //            r = true;
-        //    }
-        //    catch (Exception ec)
-        //    {
-        //        CajaDialogo.Error(ec.Message);
-        //    }
-        //    return r;
-        //}
+        public bool IsSudo(int userId)
+        {
+            bool x = false;
+            try
+            {
+                string sql = "sp_user_is_sudo";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@user_id", userId);
+                x = Convert.ToBoolean(cmd.ExecuteScalar());
+            }
+            catch (Exception ec)
+            {
+                x = false;
+                CajaDialogo.Error("¡No se pudo consultar si el nivel del usuario es Sudo!");
+            }
+            return x;
+        }
 
     }
 }

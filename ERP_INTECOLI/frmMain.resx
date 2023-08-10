@@ -117,50 +117,63 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Niveles x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Niveles x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="DevExpress.Data.v23.1" name="DevExpress.Data.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="cmdCerrar.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v23.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIyLjIsIFZlcnNpb249MjIuMi4z
+        LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAHURl
+        dkV4cHJlc3MuVXRpbHMuU3ZnLlN2Z0ltYWdlAQAAAAREYXRhBwICAAAACQMAAAAPAwAAAP4BAAAC77u/
+        PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgeD0iMHB4IiB5PSIwcHgi
+        IHZpZXdCb3g9IjAgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv
+        MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBlbmFibGUt
+        YmFja2dyb3VuZD0ibmV3IDAgMCAzMiAzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgaWQ9IkxheWVyXzEi
+        Pg0KICA8ZyBpZD0iRGVsZXRlQ2lyY2xlZCI+DQogICAgPHBhdGggZD0iTTE2LDRDOS40LDQsNCw5LjQs
+        NCwxNnM1LjQsMTIsMTIsMTJzMTItNS40LDEyLTEyUzIyLjYsNCwxNiw0eiBNMjMuMSwyMC4ybC0yLjgs
+        Mi44TDE2LDE4LjhsLTQuMiw0LjIgICBsLTIuOC0yLjhsNC4yLTQuMmwtNC4yLTQuMmwyLjgtMi44bDQu
+        Miw0LjJsNC4yLTQuMmwyLjgsMi44TDE4LjgsMTZMMjMuMSwyMC4yeiIgZmlsbD0iI0QxMUMxQyIgY2xh
+        c3M9IlJlZCIgLz4NCiAgPC9nPg0KPC9zdmc+Cw==
+</value>
   </data>
-  <data name="Upload-Folder-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Upload-Folder-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cmdLogin.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v23.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIyLjIsIFZlcnNpb249MjIuMi4z
+        LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAHURl
+        dkV4cHJlc3MuVXRpbHMuU3ZnLlN2Z0ltYWdlAQAAAAREYXRhBwICAAAACQMAAAAPAwAAAOMDAAAC77u/
+        PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgeD0iMHB4IiB5PSIwcHgi
+        IHZpZXdCb3g9IjAgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv
+        MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBlbmFibGUt
+        YmFja2dyb3VuZD0ibmV3IDAgMCAzMiAzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgaWQ9IkxheWVyXzEi
+        Pg0KICA8ZyBpZD0iVXNlciI+DQogICAgPHBhdGggZD0iTTE2LjIsMjZIMnYtMS41YzAtNy41LDUuNy01
+        LDgtOC41YzAuOCwxLjUsMi4xLDQsNCw0czMuMi0yLjUsNC00YzAuNywxLDEuNywxLjUsMi43LDEuOWww
+        LDAgICBjLTAuNSwwLjktMC43LDItMC43LDMuMWMwLDAuNCwwLDAuNywwLjEsMS4xTDE2LjIsMjZMMTYu
+        MiwyNnogTTkuMywxMC45YzAsMCwwLDAuMSwwLDAuMmMwLjYsMi4zLDIsNC45LDQuNyw0LjlzNC4yLTIu
+        Niw0LjctNC45ICAgVjExYzEsMC4xLDAuNi0xLjEsMC45LTEuNkMxOS44LDguOSwyMCw4LjUsMTkuOSw4
+        Yy0wLjEtMC40LTAuNC0wLjQtMC41LTAuM0MyMS4yLDIuOCwxOC4zLDMsMTguMywzUzE4LDAsMTIuOCww
+        QzgsMCw3LjQsNCw4LjUsNy42ICAgQzguNCw3LjYsOC4xLDcuNyw4LDcuOUM3LjksOC40LDguMiw4Ljgs
+        OC40LDkuM0M4LjYsOS44LDguMywxMSw5LjMsMTAuOXoiIGZpbGw9IiM3MjcyNzIiIGNsYXNzPSJCbGFj
+        ayIgLz4NCiAgICA8cGF0aCBkPSJNMjcsMTZjLTIuOCwwLTUsMi4yLTUsNWMwLDAuNiwwLjEsMS4yLDAu
+        MywxLjdMMTYsMjl2M2g0di0yaDJ2LTJoMmwyLjEtMi4xQzI2LjQsMjYsMjYuNywyNiwyNywyNiAgIGMy
+        LjgsMCw1LTIuMiw1LTVTMjkuOCwxNiwyNywxNnogTTI3LDIyYy0wLjYsMC0xLTAuNC0xLTFjMC0wLjYs
+        MC40LTEsMS0xczEsMC40LDEsMUMyOCwyMS42LDI3LjYsMjIsMjcsMjJ6IiBmaWxsPSIjRkZCMTE1IiBj
+        bGFzcz0iWWVsbG93IiAvPg0KICA8L2c+DQo8L3N2Zz4L
+</value>
   </data>
-  <data name="matriculax32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\matriculax32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="email_envelope_inbox_sending_mail_outbox_message_send_icon_231915" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\email_envelope_inbox_sending_mail_outbox_message_send_icon_231915.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ms-excel-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ms-excel-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Estudiantex32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Estudiantex32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="control-de-accesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\control-de-accesso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maestro x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maestro x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="anadir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anadir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="empresa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\empresa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="control-de-accessox32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\control-de-accessox32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="userx32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\userx32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cmdAbrirTeclado.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v23.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjIyLjIsIFZlcnNpb249MjIuMi4z
+        LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YQUBAAAAHURl
+        dkV4cHJlc3MuVXRpbHMuU3ZnLlN2Z0ltYWdlAQAAAAREYXRhBwICAAAACQMAAAAPAwAAAGoCAAAC77u/
+        PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgeD0iMHB4IiB5PSIwcHgi
+        IHZpZXdCb3g9IjAgMCAzMiAzMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv
+        MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBlbmFibGUt
+        YmFja2dyb3VuZD0ibmV3IDAgMCAzMiAzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgaWQ9IkxheWVyXzEi
+        Pg0KICA8ZyBpZD0iS2V5Ym9hcmQiPg0KICAgIDxwYXRoIGQ9Ik0yNiw2SDRDMi45LDYsMiw2LjksMiw4
+        djE0YzAsMS4xLDAuOSwyLDIsMmgyMmMxLjEsMCwyLTAuOSwyLTJWOEMyOCw2LjksMjcuMSw2LDI2LDZ6
+        IE0xNCwxMGgydjJoLTJWMTB6ICAgIE0xNCwxNGgydjJoLTJWMTR6IE0xMCwxMGgydjJoLTJWMTB6IE0x
+        MCwxNGgydjJoLTJWMTR6IE02LDEwaDJ2Mkg2VjEweiBNNiwxNGgydjJINlYxNHogTTIwLDIwSDEwdi0y
+        aDEwVjIweiBNMjAsMTZoLTJ2LTJoMlYxNnogICAgTTIwLDEyaC0ydi0yaDJWMTJ6IE0yNCwxNmgtMnYt
+        MmgyVjE2eiBNMjQsMTJoLTJ2LTJoMlYxMnoiIGZpbGw9IiM3MjcyNzIiIGNsYXNzPSJCbGFjayIgLz4N
+        CiAgPC9nPg0KPC9zdmc+Cw==
+</value>
   </data>
 </root>

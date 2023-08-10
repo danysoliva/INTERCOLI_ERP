@@ -33,28 +33,55 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.CodeParser.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v23.1.Win, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.Desktop.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.DataAccess.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v23.1.UI, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Map.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.TreeMap.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v23.1.UI, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v23.1.UI, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v23.1.Wizard, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v23.1.Presets, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v23.1.Win, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Shared.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
-    <Reference Include="Infragistics4.Win.Misc.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
-    <Reference Include="Infragistics4.Win.UltraWinEditors.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.UltraWinGrid.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
-    <Reference Include="Infragistics4.Win.v22.2, Version=22.2.20222.49, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="DevExpress.XtraReports.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v23.1.23.1.4.0.Fakes">
+      <HintPath>FakesAssemblies\DevExpress.XtraTreeMap.v23.1.23.1.4.0.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeMap.v23.1.UI, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Infragistics4.Shared.v22.2, Version=22.2.20222.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.Misc.v22.2, Version=22.2.20222.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v22.2, Version=22.2.20222.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v22.2, Version=22.2.20222.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v22.2, Version=22.2.20222.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -127,11 +154,66 @@
     <Compile Include="Administracion\Estudiantes\frmHistoarialAntiguedad.Designer.cs">
       <DependentUpon>frmHistoarialAntiguedad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Instructores\dsInstructores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInstructores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Instructores\frmAgregarInstructores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Instructores\frmAgregarInstructores.Designer.cs">
+      <DependentUpon>frmAgregarInstructores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Instructores\frmAgregarTelefono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Instructores\frmAgregarTelefono.Designer.cs">
+      <DependentUpon>frmAgregarTelefono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Instructores\frmBuscarInstructores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Instructores\frmBuscarInstructores.Designer.cs">
+      <DependentUpon>frmBuscarInstructores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Matricula\dsMatricula.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMatricula.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Matricula\frmConsultaMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Matricula\frmConsultaMatricula.Designer.cs">
+      <DependentUpon>frmConsultaMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Matricula\frmMatriculaReal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Matricula\frmMatriculaReal.Designer.cs">
+      <DependentUpon>frmMatriculaReal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Niveles_Academicos\frmNivelesOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Niveles_Academicos\frmNivelesOP.Designer.cs">
+      <DependentUpon>frmNivelesOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Niveles_Academicos\frmNiveles_Academicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Niveles_Academicos\frmNiveles_Academicos.Designer.cs">
+      <DependentUpon>frmNiveles_Academicos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\CajaDialogo.cs" />
     <Compile Include="Clases\DataOperations.cs" />
     <Compile Include="Clases\Estudiante.cs" />
     <Compile Include="Clases\Globals.cs" />
+    <Compile Include="Clases\GrupoUser.cs" />
+    <Compile Include="Clases\Instructores.cs" />
     <Compile Include="Clases\ItemBusqueda.cs" />
+    <Compile Include="Clases\Teclado.cs" />
     <Compile Include="Clases\UserLogin.cs" />
     <Compile Include="dsRecordatorios.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -150,6 +232,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +246,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuarios\dsUsuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsUsuarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\frmMantVentanas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmMantVentanas.Designer.cs">
+      <DependentUpon>frmMantVentanas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\frmManVentanasOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmManVentanasOP.Designer.cs">
+      <DependentUpon>frmManVentanasOP.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administracion\Estudiantes\frmagregar_rtn.resx">
       <DependentUpon>frmagregar_rtn.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,11 +281,35 @@
     <EmbeddedResource Include="Administracion\Estudiantes\frmHistoarialAntiguedad.resx">
       <DependentUpon>frmHistoarialAntiguedad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Instructores\frmAgregarInstructores.resx">
+      <DependentUpon>frmAgregarInstructores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Instructores\frmAgregarTelefono.resx">
+      <DependentUpon>frmAgregarTelefono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Instructores\frmBuscarInstructores.resx">
+      <DependentUpon>frmBuscarInstructores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Matricula\frmConsultaMatricula.resx">
+      <DependentUpon>frmConsultaMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Matricula\frmMatriculaReal.resx">
+      <DependentUpon>frmMatriculaReal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Niveles_Academicos\frmNivelesOP.resx">
+      <DependentUpon>frmNivelesOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Niveles_Academicos\frmNiveles_Academicos.resx">
+      <DependentUpon>frmNiveles_Academicos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
@@ -196,6 +325,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Usuarios\frmMantVentanas.resx">
+      <DependentUpon>frmMantVentanas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmManVentanasOP.resx">
+      <DependentUpon>frmManVentanasOP.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Administracion\Estudiantes\dsAntiguedad.xsc">
       <DependentUpon>dsAntiguedad.xsd</DependentUpon>
     </None>
@@ -218,6 +353,28 @@
     <None Include="Administracion\Estudiantes\dsEstudiantes.xss">
       <DependentUpon>dsEstudiantes.xsd</DependentUpon>
     </None>
+    <None Include="Administracion\Instructores\dsInstructores.xsc">
+      <DependentUpon>dsInstructores.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Instructores\dsInstructores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInstructores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administracion\Instructores\dsInstructores.xss">
+      <DependentUpon>dsInstructores.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Matricula\dsMatricula.xsc">
+      <DependentUpon>dsMatricula.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Matricula\dsMatricula.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMatricula.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administracion\Matricula\dsMatricula.xss">
+      <DependentUpon>dsMatricula.xsd</DependentUpon>
+    </None>
     <None Include="dsRecordatorios.xsc">
       <DependentUpon>dsRecordatorios.xsd</DependentUpon>
     </None>
@@ -229,6 +386,7 @@
     <None Include="dsRecordatorios.xss">
       <DependentUpon>dsRecordatorios.xsd</DependentUpon>
     </None>
+    <Fakes Include="Fakes\DevExpress.XtraTreeMap.v23.1.fakes" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -238,6 +396,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Usuarios\dsUsuarios.xsc">
+      <DependentUpon>dsUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="Usuarios\dsUsuarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUsuarios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Usuarios\dsUsuarios.xss">
+      <DependentUpon>dsUsuarios.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -272,6 +441,7 @@
     <Content Include="Resources\approve_32.png" />
     <Content Include="Resources\cerrar.png" />
     <Content Include="Resources\control-de-accesso.png" />
+    <None Include="Resources\control-de-accessox32.png" />
     <Content Include="Resources\edit.png" />
     <None Include="Resources\edit1.png" />
     <Content Include="Resources\edit24px.png" />
@@ -291,6 +461,7 @@
     <Content Include="Resources\exit_32x32.png" />
     <Content Include="Resources\export_32x32.png" />
     <Content Include="Resources\maestro x32.png" />
+    <None Include="Resources\matriculax32.png" />
     <Content Include="Resources\ms-excel-icon.png" />
     <Content Include="Resources\new-message-icon %281%2932.png" />
     <Content Include="Resources\new_24x24.png" />
@@ -315,6 +486,7 @@
     <Content Include="Resources\search_24x24.png" />
     <Content Include="Resources\search_32x32.png" />
     <Content Include="Resources\Upload-Folder-icon.png" />
+    <None Include="Resources\userx32.png" />
     <Content Include="Resources\_click_24X24.png" />
     <Content Include="Resources\_click_32X32.png" />
   </ItemGroup>

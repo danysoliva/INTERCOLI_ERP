@@ -20,7 +20,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
     {
         DataOperations dp = new DataOperations();
         private int Idestudiante = 0;
-        Estudiante vEstudiante;
+        //Estudiante vEstudiante;
         ArrayList ListaTelefonos;
         private int IdEstudianteRecomendo = 0;
         
@@ -334,7 +334,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
            
 
             if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(txtApellido.Text)
-               || string.IsNullOrEmpty(cbxSexo.Text) || string.IsNullOrEmpty(txtDireccion.Text)
+               || string.IsNullOrEmpty(cbxSexo.SelectedItem.ToString()) || string.IsNullOrEmpty(txtDireccion.Text)
                || string.IsNullOrEmpty(txtEmail.Text))
             {
                 CajaDialogo.Error("Aun hay datos del estudiante que no sean ingresado!");
@@ -384,7 +384,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                         else
                             cmd.Parameters.AddWithValue("@nivel_id_ingreso", DBNull.Value);
 
-                        cmd.Parameters.AddWithValue("@sexo", cbxSexo.ValueMember);
+                        cmd.Parameters.AddWithValue("@sexo", cbxSexo.SelectedItem);
                         cmd.Parameters.AddWithValue("@correo",txtEmail.Text.Trim());
                        
                         cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogeado.Id);
