@@ -149,7 +149,16 @@ namespace ERP_INTECOLI
             }
         }
 
-        private void navPermisosUsuarios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        private void navDesconectar_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            DialogResult r = CajaDialogo.Pregunta("Esta seguro que desea salir del Sistema?");
+            if (r != System.Windows.Forms.DialogResult.Yes)
+                return;
+
+            Application.Exit();
+        }
+
+        private void navCRUDPermisos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             if (UsuarioLogeado.Super_user)
             {
@@ -161,6 +170,23 @@ namespace ERP_INTECOLI
             {
                 CajaDialogo.Error("No tiene Autorizacion\nSolo los Super Usuarios pueden Acceder a esta Ventana.");
             }
+        }
+
+        private void navConsultaMatriculado_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //frmConsultaMatricula mtx = new frmConsultaMatricula(this.UsuarioLogueado);
+            //if (mtx != null)
+            //{
+            //    if (!mtx.PermisoDenegado)
+            //    {
+            //        mtx.MdiParent = this;
+            //        try
+            //        {
+            //            mtx.Show();
+            //        }
+            //        catch { }
+            //    }
+            //}
         }
     }
 }
