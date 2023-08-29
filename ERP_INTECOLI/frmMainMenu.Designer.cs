@@ -38,6 +38,7 @@ namespace ERP_INTECOLI
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navDesconectar = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarUsuarios = new DevExpress.XtraNavBar.NavBarItem();
+            this.navCRUDPermisos = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
             this.navBarEstudiantes = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
@@ -45,12 +46,12 @@ namespace ERP_INTECOLI
             this.navBarSeparatorItem2 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
             this.navMatricula = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem3 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
+            this.navConsultaMatriculado = new DevExpress.XtraNavBar.NavBarItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblServerName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.navCRUDPermisos = new DevExpress.XtraNavBar.NavBarItem();
-            this.navConsultaMatriculado = new DevExpress.XtraNavBar.NavBarItem();
+            this.TabTransacciones = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).BeginInit();
             this.xtraTabControlMenu.SuspendLayout();
             this.TabAdministracion.SuspendLayout();
@@ -69,7 +70,8 @@ namespace ERP_INTECOLI
             this.xtraTabControlMenu.Size = new System.Drawing.Size(209, 759);
             this.xtraTabControlMenu.TabIndex = 0;
             this.xtraTabControlMenu.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.TabAdministracion});
+            this.TabAdministracion,
+            this.TabTransacciones});
             this.xtraTabControlMenu.Visible = false;
             // 
             // TabAdministracion
@@ -140,6 +142,13 @@ namespace ERP_INTECOLI
             this.navBarUsuarios.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarUsuarios.ImageOptions.SvgImage")));
             this.navBarUsuarios.Name = "navBarUsuarios";
             // 
+            // navCRUDPermisos
+            // 
+            this.navCRUDPermisos.Caption = "Gestion de Permisos";
+            this.navCRUDPermisos.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.control_de_accessox32;
+            this.navCRUDPermisos.Name = "navCRUDPermisos";
+            this.navCRUDPermisos.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navCRUDPermisos_LinkClicked);
+            // 
             // navBarSeparatorItem1
             // 
             this.navBarSeparatorItem1.CanDrag = false;
@@ -189,6 +198,13 @@ namespace ERP_INTECOLI
             this.navBarSeparatorItem3.Hint = null;
             this.navBarSeparatorItem3.Name = "navBarSeparatorItem3";
             // 
+            // navConsultaMatriculado
+            // 
+            this.navConsultaMatriculado.Caption = "Consultar Matriculados";
+            this.navConsultaMatriculado.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navConsultaMatriculado.ImageOptions.SvgImage")));
+            this.navConsultaMatriculado.Name = "navConsultaMatriculado";
+            this.navConsultaMatriculado.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navConsultaMatriculado_LinkClicked);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -223,19 +239,11 @@ namespace ERP_INTECOLI
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(0, 17);
             // 
-            // navCRUDPermisos
+            // TabTransacciones
             // 
-            this.navCRUDPermisos.Caption = "Gestion de Permisos";
-            this.navCRUDPermisos.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.control_de_accessox32;
-            this.navCRUDPermisos.Name = "navCRUDPermisos";
-            this.navCRUDPermisos.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navCRUDPermisos_LinkClicked);
-            // 
-            // navConsultaMatriculado
-            // 
-            this.navConsultaMatriculado.Caption = "Consultar Matriculados";
-            this.navConsultaMatriculado.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem1.ImageOptions.SvgImage")));
-            this.navConsultaMatriculado.Name = "navConsultaMatriculado";
-            this.navConsultaMatriculado.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navConsultaMatriculado_LinkClicked);
+            this.TabTransacciones.Name = "TabTransacciones";
+            this.TabTransacciones.Size = new System.Drawing.Size(207, 734);
+            this.TabTransacciones.Text = "Transacciones";
             // 
             // frmMainMenu
             // 
@@ -280,5 +288,6 @@ namespace ERP_INTECOLI
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private DevExpress.XtraNavBar.NavBarItem navCRUDPermisos;
         private DevExpress.XtraNavBar.NavBarItem navConsultaMatriculado;
+        private XtraTabPage TabTransacciones;
     }
 }

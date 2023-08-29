@@ -18,13 +18,35 @@ namespace ERP_INTECOLI.Administracion.Matricula
     {
         DataOperations dp = new DataOperations();
         UserLogin UsuarioLogueado;
+        public int IdEstudiante;
+        Estudiante vEstudiante;
 
         public frmMatriculaReal(UserLogin pUserLogin)
         {
             InitializeComponent();
             UsuarioLogueado = pUserLogin;
+            verificarFechaFinCurso();
 
-            
+            Estudiante vEstudiante = new Estudiante();
+
+        }
+
+        private void verificarFechaFinCurso()
+        {
+            SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+            conn.Open();
+            try
+            {
+                string sql = "update admon.cursos set curso_finalizado=TRUE where fecha_fin<now()";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+            }
+
+            catch (Exception error)
+            {
+                CajaDialogo.Error("Ocurrio un error", error);
+            }
         }
     }
 }

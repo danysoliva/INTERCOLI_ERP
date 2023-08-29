@@ -174,19 +174,18 @@ namespace ERP_INTECOLI
 
         private void navConsultaMatriculado_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //frmConsultaMatricula mtx = new frmConsultaMatricula(this.UsuarioLogueado);
-            //if (mtx != null)
-            //{
-            //    if (!mtx.PermisoDenegado)
-            //    {
-            //        mtx.MdiParent = this;
-            //        try
-            //        {
-            //            mtx.Show();
-            //        }
-            //        catch { }
-            //    }
-            //}
+            frmConsultarMatriculados mtx = new frmConsultarMatriculados(this.UsuarioLogeado);
+            if (mtx != null)
+            {
+                
+                mtx.MdiParent = this;
+                try
+                {
+                    mtx.Show();
+                }
+                catch { }
+                
+            }
         }
     }
 }
