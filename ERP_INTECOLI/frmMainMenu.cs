@@ -14,7 +14,7 @@ using ERP_INTECOLI.Administracion.Instructores;
 using ERP_INTECOLI.Administracion.Niveles_Academicos;
 using ERP_INTECOLI.Administracion.Matricula;
 using ERP_INTECOLI.Usuarios;
-
+using ERP_INTECOLI.Transacciones;
 using System.Data.SqlClient;
 using JAGUAR_APP;
 
@@ -178,6 +178,21 @@ namespace ERP_INTECOLI
             if (mtx != null)
             {
                 
+                mtx.MdiParent = this;
+                try
+                {
+                    mtx.Show();
+                }
+                catch { }
+                
+            }
+        }
+
+        private void navPostearMensualidad_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmPostearMensualidad mtx = new frmPostearMensualidad(UsuarioLogeado);
+            if (mtx != null)
+            {
                 mtx.MdiParent = this;
                 try
                 {

@@ -47,11 +47,14 @@ namespace ERP_INTECOLI
             this.navMatricula = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem3 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
             this.navConsultaMatriculado = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navPostearMensualidad = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
+            this.TabConsultas = new DevExpress.XtraTab.XtraTabPage();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblServerName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.TabTransacciones = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).BeginInit();
             this.xtraTabControlMenu.SuspendLayout();
             this.TabAdministracion.SuspendLayout();
@@ -71,7 +74,7 @@ namespace ERP_INTECOLI
             this.xtraTabControlMenu.TabIndex = 0;
             this.xtraTabControlMenu.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabAdministracion,
-            this.TabTransacciones});
+            this.TabConsultas});
             this.xtraTabControlMenu.Visible = false;
             // 
             // TabAdministracion
@@ -91,7 +94,8 @@ namespace ERP_INTECOLI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.navBarControl1.BackColor = System.Drawing.Color.White;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup1});
+            this.navBarGroup1,
+            this.navBarGroup2});
             this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navDesconectar,
             this.navBarUsuarios,
@@ -103,7 +107,9 @@ namespace ERP_INTECOLI
             this.navMatricula,
             this.navBarSeparatorItem3,
             this.navCRUDPermisos,
-            this.navConsultaMatriculado});
+            this.navConsultaMatriculado,
+            this.navPostearMensualidad,
+            this.navBarItem2});
             this.navBarControl1.Location = new System.Drawing.Point(3, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 204;
@@ -205,6 +211,33 @@ namespace ERP_INTECOLI
             this.navConsultaMatriculado.Name = "navConsultaMatriculado";
             this.navConsultaMatriculado.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navConsultaMatriculado_LinkClicked);
             // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "Transacciones";
+            this.navBarGroup2.Expanded = true;
+            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navPostearMensualidad),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2)});
+            this.navBarGroup2.Name = "navBarGroup2";
+            // 
+            // navPostearMensualidad
+            // 
+            this.navPostearMensualidad.Caption = "Posteo de Pagos - Recibos";
+            this.navPostearMensualidad.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.cash_icon24px;
+            this.navPostearMensualidad.Name = "navPostearMensualidad";
+            this.navPostearMensualidad.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navPostearMensualidad_LinkClicked);
+            // 
+            // navBarItem2
+            // 
+            this.navBarItem2.Caption = "navBarItem2";
+            this.navBarItem2.Name = "navBarItem2";
+            // 
+            // TabConsultas
+            // 
+            this.TabConsultas.Name = "TabConsultas";
+            this.TabConsultas.Size = new System.Drawing.Size(207, 734);
+            this.TabConsultas.Text = "Transacciones";
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -238,12 +271,6 @@ namespace ERP_INTECOLI
             // 
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(0, 17);
-            // 
-            // TabTransacciones
-            // 
-            this.TabTransacciones.Name = "TabTransacciones";
-            this.TabTransacciones.Size = new System.Drawing.Size(207, 734);
-            this.TabTransacciones.Text = "Transacciones";
             // 
             // frmMainMenu
             // 
@@ -288,6 +315,9 @@ namespace ERP_INTECOLI
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private DevExpress.XtraNavBar.NavBarItem navCRUDPermisos;
         private DevExpress.XtraNavBar.NavBarItem navConsultaMatriculado;
-        private XtraTabPage TabTransacciones;
+        private XtraTabPage TabConsultas;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private DevExpress.XtraNavBar.NavBarItem navPostearMensualidad;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
     }
 }

@@ -63,12 +63,12 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdNiveles.DataMember = "niveles_cursos";
             this.grdNiveles.DataSource = this.dsInstructores1;
-            this.grdNiveles.Location = new System.Drawing.Point(3, 68);
+            this.grdNiveles.Location = new System.Drawing.Point(3, 94);
             this.grdNiveles.MainView = this.gridView1;
             this.grdNiveles.Name = "grdNiveles";
             this.grdNiveles.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repost_edit});
-            this.grdNiveles.Size = new System.Drawing.Size(942, 445);
+            this.grdNiveles.Size = new System.Drawing.Size(942, 429);
             this.grdNiveles.TabIndex = 15;
             this.grdNiveles.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -150,7 +150,7 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(332, 6);
+            this.labelControl1.Location = new System.Drawing.Point(329, 38);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(242, 24);
             this.labelControl1.TabIndex = 16;
@@ -166,7 +166,7 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
             this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdCancelar.Location = new System.Drawing.Point(826, 12);
+            this.cmdCancelar.Location = new System.Drawing.Point(826, 45);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(110, 43);
             this.cmdCancelar.TabIndex = 44;
@@ -184,7 +184,7 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             this.cmdNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdNuevo.Image = global::ERP_INTECOLI.Properties.Resources.anadir;
             this.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdNuevo.Location = new System.Drawing.Point(12, 12);
+            this.cmdNuevo.Location = new System.Drawing.Point(12, 45);
             this.cmdNuevo.Name = "cmdNuevo";
             this.cmdNuevo.Size = new System.Drawing.Size(141, 43);
             this.cmdNuevo.TabIndex = 45;
@@ -197,7 +197,7 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             // 
             this.tsHabilitados.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tsHabilitados.EditValue = true;
-            this.tsHabilitados.Location = new System.Drawing.Point(380, 35);
+            this.tsHabilitados.Location = new System.Drawing.Point(380, 68);
             this.tsHabilitados.Name = "tsHabilitados";
             this.tsHabilitados.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsHabilitados.Properties.Appearance.Options.UseFont = true;

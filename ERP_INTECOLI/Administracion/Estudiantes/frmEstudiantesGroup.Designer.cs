@@ -53,7 +53,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.reposEditar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.reposAntiguedad = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.txtParametroBusqueda = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParametro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsVerTodos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantes1)).BeginInit();
@@ -61,7 +60,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reposEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reposAntiguedad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtParametroBusqueda.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // cmdNuevo
@@ -311,20 +309,12 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.reposAntiguedad.Name = "reposAntiguedad";
             // 
-            // txtParametroBusqueda
-            // 
-            this.txtParametroBusqueda.Location = new System.Drawing.Point(197, 35);
-            this.txtParametroBusqueda.Name = "txtParametroBusqueda";
-            this.txtParametroBusqueda.Size = new System.Drawing.Size(100, 20);
-            this.txtParametroBusqueda.TabIndex = 0;
-            // 
             // frmEstudiantesGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1134, 555);
             this.ControlBox = false;
-            this.Controls.Add(this.txtParametroBusqueda);
             this.Controls.Add(this.gridEstudiantes);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.btnClose);
@@ -343,7 +333,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reposEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reposAntiguedad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtParametroBusqueda.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,7 +362,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private DevExpress.XtraGrid.Columns.GridColumn colconcatenacion;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraEditors.TextEdit txtParametroBusqueda;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit reposEditar;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit reposAntiguedad;
     }

@@ -9,6 +9,8 @@ namespace ERP_INTECOLI.Clases
 {
     public sealed class CajaDialogo
     {
+        public static object CajaDialogo { get; internal set; }
+
         public static DialogResult Error(string Mensaje)
         {
             return MessageBox.Show(Mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
