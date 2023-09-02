@@ -56,6 +56,8 @@ namespace ERP_INTECOLI.Transacciones
             this.cursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsMensualidades1 = new ERP_INTECOLI.Transacciones.dsMensualidades();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colcurso_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colcurso1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.spinDiasHabiles = new DevExpress.XtraEditors.SpinEdit();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -104,8 +106,6 @@ namespace ERP_INTECOLI.Transacciones
             this.label18 = new System.Windows.Forms.Label();
             this.dtFechaEmisionrecibo = new System.Windows.Forms.DateTimePicker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.colcurso_id = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colcurso1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
@@ -188,6 +188,7 @@ namespace ERP_INTECOLI.Transacciones
             this.txtestudiante.ReadOnly = true;
             this.txtestudiante.Size = new System.Drawing.Size(287, 26);
             this.txtestudiante.TabIndex = 20;
+            this.txtestudiante.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtestudiante_KeyDown);
             // 
             // cmdGuardarProximoPago
             // 
@@ -367,6 +368,24 @@ namespace ERP_INTECOLI.Transacciones
             this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colcurso_id
+            // 
+            this.colcurso_id.Caption = "ID";
+            this.colcurso_id.FieldName = "curso_id";
+            this.colcurso_id.Name = "colcurso_id";
+            this.colcurso_id.OptionsColumn.AllowEdit = false;
+            this.colcurso_id.Visible = true;
+            this.colcurso_id.VisibleIndex = 0;
+            // 
+            // colcurso1
+            // 
+            this.colcurso1.Caption = "Curso";
+            this.colcurso1.FieldName = "curso";
+            this.colcurso1.Name = "colcurso1";
+            this.colcurso1.OptionsColumn.AllowEdit = false;
+            this.colcurso1.Visible = true;
+            this.colcurso1.VisibleIndex = 1;
             // 
             // spinDiasHabiles
             // 
@@ -937,24 +956,6 @@ namespace ERP_INTECOLI.Transacciones
             // timer1
             // 
             this.timer1.Interval = 900;
-            // 
-            // colcurso_id
-            // 
-            this.colcurso_id.Caption = "ID";
-            this.colcurso_id.FieldName = "curso_id";
-            this.colcurso_id.Name = "colcurso_id";
-            this.colcurso_id.OptionsColumn.AllowEdit = false;
-            this.colcurso_id.Visible = true;
-            this.colcurso_id.VisibleIndex = 0;
-            // 
-            // colcurso1
-            // 
-            this.colcurso1.Caption = "Curso";
-            this.colcurso1.FieldName = "curso";
-            this.colcurso1.Name = "colcurso1";
-            this.colcurso1.OptionsColumn.AllowEdit = false;
-            this.colcurso1.Visible = true;
-            this.colcurso1.VisibleIndex = 1;
             // 
             // frmPostearMensualidad
             // 

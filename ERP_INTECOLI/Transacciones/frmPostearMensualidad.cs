@@ -804,5 +804,50 @@ namespace ERP_INTECOLI.Transacciones
             //    CajaDialogo.Error(ec.Message);
             //}
         }
+
+        private void txtestudiante_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                frmBuscarEstudiantes fx1 = new frmBuscarEstudiantes();
+                if (fx1.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (vEstudiante.RecuperarRegistro(fx1.ItemSeleccionado.id_estudiantes))
+                    {
+                        txtestudiante.Text = vEstudiante.Nombres + " " + vEstudiante.Apellidos;
+                        if (vEstudiante.FechaProximoPago.ToString() == "1/1/0001 12:00:00 AM")
+                        {
+                            dtFechaPagoProximo.Value = DateTime.Now;
+                        }
+                        else
+                        {
+                            dtFechaPagoProximo.Value = vEstudiante.FechaProximoPago;
+                        }
+
+                        if (vEstudiante != null)
+                        {
+                            if (vEstudiante.IdEstudiante > 0)
+                            {
+                                CargarCursos(vEstudiante.IdEstudiante);
+                                Saldos sal = new Saldos();
+                                CargarDetalleMensualidades(vEstudiante.IdEstudiante);
+                                decimal dsal = sal.ConsultarSaldo(vEstudiante.IdEstudiante);
+                                if (dsal == 0)
+                                    txtSaldo.Text = "0";
+                                else
+                                    if (dsal > 1000)
+                                    txtSaldo.Text = String.Format("{0:0,000.00}", dsal);
+                                else
+                                    txtSaldo.Text = String.Format("{0:00.00}", dsal);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    txtestudiante.Text = "";
+                }
+            }
+        }
     }
 }
