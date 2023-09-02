@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Administracion.Estudiantes;
 using Infragistics.Win.UltraWinGrid;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace ERP_INTECOLI.Administracion.Estudiantes
 {
@@ -112,6 +113,29 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void reposEditar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridview = (GridView)gridEstudiantes.FocusedView;
+            var row = (dsEstudiantes.estudiantesRow)gridview.GetFocusedDataRow();
+
+            frmEstudiantes frm = new frmEstudiantes(this.UsuarioLogeado, frmEstudiantes.TipoEdicion.Editar, row.id_estudiante);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                load_data();
+            }
+
+
+        }
+
+        private void reposAntiguedad_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridview = (GridView)gridEstudiantes.FocusedView;
+            var row = (dsEstudiantes.estudiantesRow)gridview.GetFocusedDataRow();
+
+            frmHistoarialAntiguedad frx = new frmHistoarialAntiguedad(row.id_estudiante);
+            frx.ShowDialog();
         }
     }
 }

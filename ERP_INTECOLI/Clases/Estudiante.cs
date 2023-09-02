@@ -120,7 +120,46 @@ namespace ERP_INTECOLI.Clases
             return r;
         }
 
-       
+        public bool TieneMatricula(long p_idEstudiante)
+        {
+            try
+            {
+                string sql2 = @"sp_mensualidad_validar_matricula";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd2 = new SqlCommand(sql2, conn);
+                cmd2.CommandType = CommandType.StoredProcedure;
+                cmd2.Parameters.AddWithValue("@estudiante", p_idEstudiante);
+                int x2 = Convert.ToInt32(cmd2.ExecuteScalar());
 
+                return (x2 > 0);
+            }
+            catch (Exception ec)
+            {
+                CajaDialogo.Error("No se pudo cargar los datos de matricula!", ec);
+                return false;
+            }
+        }
+
+
+        public string RecuperaTelefonosConcatenadosEstudiante()
+        {
+            string phones = "";
+            try
+            {
+                string sql = "select * from admon.ft_recupera_telefonos_estudiante_concatenados (:p_id_estudiante);";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_estudiante", this.IdEstudiante);
+                phones = cmd.ExecuteScalar().ToString();
+            }
+            catch (Exception ec)
+            {
+                CajaDialogo.Error(ec.Message);
+            }
+            return phones;
+        }
     }
 }

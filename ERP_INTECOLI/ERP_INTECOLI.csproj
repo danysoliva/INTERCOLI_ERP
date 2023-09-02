@@ -207,8 +207,11 @@
       <DependentUpon>frmNiveles_Academicos.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\CajaDialogo.cs" />
+    <Compile Include="Clases\ConversorNumALetras.cs" />
     <Compile Include="Clases\DataOperations.cs" />
+    <Compile Include="Clases\doc_fiscal.cs" />
     <Compile Include="Clases\Estudiante.cs" />
+    <Compile Include="Clases\Factura.cs" />
     <Compile Include="Clases\Globals.cs" />
     <Compile Include="Clases\GrupoUser.cs" />
     <Compile Include="Clases\Instructores.cs" />
@@ -220,6 +223,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsRecordatorios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\frmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\frmFactura.Designer.cs">
+      <DependentUpon>frmFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -313,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Niveles_Academicos\frmNiveles_Academicos.resx">
       <DependentUpon>frmNiveles_Academicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\frmFactura.resx">
+      <DependentUpon>frmFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

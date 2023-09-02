@@ -9,7 +9,7 @@ namespace ERP_INTECOLI.Clases
 {
     public sealed class CajaDialogo
     {
-        public static object CajaDialogo { get; internal set; }
+        //public static object CajaDialogo { get; internal set; }
 
         public static DialogResult Error(string Mensaje)
         {

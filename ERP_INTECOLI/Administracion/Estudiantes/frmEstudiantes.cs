@@ -344,7 +344,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
             DialogResult r = CajaDialogo.Pregunta("Desea Guardar los datos del nuevo estudiante?");
 
-            if (r == DialogResult.OK)
+            if (r != DialogResult.Yes)
                 return;
 
             switch (pTipoEdit)

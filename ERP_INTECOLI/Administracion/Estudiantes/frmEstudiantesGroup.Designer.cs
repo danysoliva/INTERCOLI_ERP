@@ -29,6 +29,17 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstudiantesGroup));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.cmdNuevo = new System.Windows.Forms.Button();
             this.txtParametro = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.ultraLabel1 = new Infragistics.Win.Misc.UltraLabel();
@@ -70,7 +81,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdNuevo.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.cmdNuevo.Image = global::ERP_INTECOLI.Properties.Resources.anadir;
             this.cmdNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdNuevo.Location = new System.Drawing.Point(472, 22);
+            this.cmdNuevo.Location = new System.Drawing.Point(12, 46);
             this.cmdNuevo.Name = "cmdNuevo";
             this.cmdNuevo.Size = new System.Drawing.Size(180, 43);
             this.cmdNuevo.TabIndex = 9;
@@ -86,6 +97,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.Size = new System.Drawing.Size(270, 26);
             this.txtParametro.TabIndex = 7;
+            this.txtParametro.Visible = false;
             this.txtParametro.ValueChanged += new System.EventHandler(this.txtParametro_ValueChanged);
             // 
             // ultraLabel1
@@ -96,11 +108,12 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.ultraLabel1.Size = new System.Drawing.Size(158, 18);
             this.ultraLabel1.TabIndex = 6;
             this.ultraLabel1.Text = "Buscar por Nombre:";
+            this.ultraLabel1.Visible = false;
             // 
             // tsVerTodos
             // 
             this.tsVerTodos.EditValue = true;
-            this.tsVerTodos.Location = new System.Drawing.Point(711, 31);
+            this.tsVerTodos.Location = new System.Drawing.Point(450, 55);
             this.tsVerTodos.Name = "tsVerTodos";
             this.tsVerTodos.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.tsVerTodos.Properties.Appearance.Options.UseFont = true;
@@ -140,7 +153,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
             this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdCancelar.Location = new System.Drawing.Point(980, 22);
+            this.cmdCancelar.Location = new System.Drawing.Point(994, 47);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(110, 43);
             this.cmdCancelar.TabIndex = 44;
@@ -157,13 +170,13 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridEstudiantes.DataMember = "estudiantes";
             this.gridEstudiantes.DataSource = this.dsEstudiantes1;
-            this.gridEstudiantes.Location = new System.Drawing.Point(4, 81);
+            this.gridEstudiantes.Location = new System.Drawing.Point(4, 96);
             this.gridEstudiantes.MainView = this.gridView1;
             this.gridEstudiantes.Name = "gridEstudiantes";
             this.gridEstudiantes.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.reposEditar,
             this.reposAntiguedad});
-            this.gridEstudiantes.Size = new System.Drawing.Size(1127, 471);
+            this.gridEstudiantes.Size = new System.Drawing.Size(1127, 476);
             this.gridEstudiantes.TabIndex = 45;
             this.gridEstudiantes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -295,7 +308,12 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             // reposEditar
             // 
+            editorButtonImageOptions1.Image = global::ERP_INTECOLI.Properties.Resources.edit;
+            this.reposEditar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.reposEditar.Name = "reposEditar";
+            this.reposEditar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.reposEditar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposEditar_ButtonClick);
             // 
             // gridColumn2
             // 
@@ -307,13 +325,18 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             // reposAntiguedad
             // 
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            this.reposAntiguedad.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.reposAntiguedad.Name = "reposAntiguedad";
+            this.reposAntiguedad.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.reposAntiguedad.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposAntiguedad_ButtonClick);
             // 
             // frmEstudiantesGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 555);
+            this.ClientSize = new System.Drawing.Size(1134, 575);
             this.ControlBox = false;
             this.Controls.Add(this.gridEstudiantes);
             this.Controls.Add(this.cmdCancelar);

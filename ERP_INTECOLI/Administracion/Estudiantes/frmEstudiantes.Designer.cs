@@ -52,9 +52,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("niveles_academicos", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("id_nivel");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("descripcion");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
@@ -642,14 +639,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             appearance1.BackColor = System.Drawing.SystemColors.Window;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.cbxNivelIngreso.DisplayLayout.Appearance = appearance1;
-            ultraGridColumn1.Header.Caption = "Nivel";
-            ultraGridColumn1.Header.VisiblePosition = 0;
-            ultraGridColumn2.Header.Caption = "Descripcion";
-            ultraGridColumn2.Header.VisiblePosition = 1;
-            ultraGridBand1.Columns.AddRange(new object[] {
-            ultraGridColumn1,
-            ultraGridColumn2});
-            this.cbxNivelIngreso.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.cbxNivelIngreso.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.cbxNivelIngreso.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
             appearance2.BackColor = System.Drawing.SystemColors.ActiveBorder;
