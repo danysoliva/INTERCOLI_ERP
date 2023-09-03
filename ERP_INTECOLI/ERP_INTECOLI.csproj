@@ -108,6 +108,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion\Cursos\dsCursos_.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCursos_.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Estudiantes\dsAntiguedad.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -177,10 +182,21 @@
     <Compile Include="Administracion\Instructores\frmBuscarInstructores.Designer.cs">
       <DependentUpon>frmBuscarInstructores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Matricula\ctl_Matricula.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\Matricula\ctl_Matricula.Designer.cs">
+      <DependentUpon>ctl_Matricula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Matricula\dsMatriculado.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMatriculado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Matricula\dsNuevoCursoMatricula.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNuevoCursoMatricula.xsd</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Matricula\frmConsultarMatriculados.cs">
       <SubType>Form</SubType>
@@ -188,11 +204,23 @@
     <Compile Include="Administracion\Matricula\frmConsultarMatriculados.Designer.cs">
       <DependentUpon>frmConsultarMatriculados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Matricula\frmMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Matricula\frmMatricula.Designer.cs">
+      <DependentUpon>frmMatricula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Matricula\frmMatriculaReal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administracion\Matricula\frmMatriculaReal.Designer.cs">
       <DependentUpon>frmMatriculaReal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Matricula\frmMostarDetallesCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Matricula\frmMostarDetallesCurso.Designer.cs">
+      <DependentUpon>frmMostarDetallesCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Niveles_Academicos\frmNivelesOP.cs">
       <SubType>Form</SubType>
@@ -311,11 +339,20 @@
     <EmbeddedResource Include="Administracion\Instructores\frmBuscarInstructores.resx">
       <DependentUpon>frmBuscarInstructores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Matricula\ctl_Matricula.resx">
+      <DependentUpon>ctl_Matricula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Matricula\frmConsultarMatriculados.resx">
       <DependentUpon>frmConsultarMatriculados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Matricula\frmMatricula.resx">
+      <DependentUpon>frmMatricula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Matricula\frmMatriculaReal.resx">
       <DependentUpon>frmMatriculaReal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Matricula\frmMostarDetallesCurso.resx">
+      <DependentUpon>frmMostarDetallesCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Niveles_Academicos\frmNivelesOP.resx">
       <DependentUpon>frmNivelesOP.cs</DependentUpon>
@@ -358,6 +395,17 @@
     <EmbeddedResource Include="Usuarios\frmManVentanasOP.resx">
       <DependentUpon>frmManVentanasOP.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Administracion\Cursos\dsCursos_.xsc">
+      <DependentUpon>dsCursos_.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Cursos\dsCursos_.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCursos_.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administracion\Cursos\dsCursos_.xss">
+      <DependentUpon>dsCursos_.xsd</DependentUpon>
+    </None>
     <None Include="Administracion\Estudiantes\dsAntiguedad.xsc">
       <DependentUpon>dsAntiguedad.xsd</DependentUpon>
     </None>
@@ -401,6 +449,17 @@
     </None>
     <None Include="Administracion\Matricula\dsMatriculado.xss">
       <DependentUpon>dsMatriculado.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Matricula\dsNuevoCursoMatricula.xsc">
+      <DependentUpon>dsNuevoCursoMatricula.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Matricula\dsNuevoCursoMatricula.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNuevoCursoMatricula.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administracion\Matricula\dsNuevoCursoMatricula.xss">
+      <DependentUpon>dsNuevoCursoMatricula.xsd</DependentUpon>
     </None>
     <None Include="dsRecordatorios.xsc">
       <DependentUpon>dsRecordatorios.xsd</DependentUpon>
