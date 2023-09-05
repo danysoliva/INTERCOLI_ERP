@@ -188,6 +188,12 @@
     <Compile Include="Administracion\Matricula\ctl_Matricula.Designer.cs">
       <DependentUpon>ctl_Matricula.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Matricula\ctl_mover_estudiante1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Matricula\ctl_mover_estudiante1.Designer.cs">
+      <DependentUpon>ctl_mover_estudiante1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Matricula\dsMatriculado.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -347,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Matricula\ctl_Matricula.resx">
       <DependentUpon>ctl_Matricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Matricula\ctl_mover_estudiante1.resx">
+      <DependentUpon>ctl_mover_estudiante1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Matricula\frmConsultarMatriculados.resx">
       <DependentUpon>frmConsultarMatriculados.cs</DependentUpon>

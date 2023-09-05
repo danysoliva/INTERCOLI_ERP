@@ -20,7 +20,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
     {
         DataOperations dp = new DataOperations();
         UserLogin UsuarioLogueado;
-        public int IdEstudiante;
+        public long IdEstudiante;
         Estudiante vEstudiante;
 
         public frmMatriculaReal(UserLogin pUserLogin)
@@ -83,6 +83,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
             {
                 txtEstudiante.Text = vEstudiante.Nombres + " " + vEstudiante.Apellidos;
                 CargarDatos(vEstudiante.IdEstudiante);
+                IdEstudiante = vEstudiante.IdEstudiante;
             }
         }
 
@@ -94,7 +95,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
                 conn.Open();
                 dsMatriculado1.matricula_detalle_real.Clear();
                 //string sql = "select * from admon.v3_ft_carga_datos_detalle_matricula (:p_estudiante_id, :p_nulas, :p_finalizados);";
-                string sql = @"";
+                string sql = @"sp_get_datos_detalle_matricula";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@estudiante_id", idEstudiante);
                 cmd.Parameters.AddWithValue("@nulas", chNulas.Checked);
@@ -152,7 +153,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
 
             if (vEstudiante != null)
             {
-                if (vEstudiante.Recuperado)
+                if (vEstudiante.IdEstudiante > 0)
                 {
                     //frmMatricula frm = new frmMatricula(psConnection, this.UsuarioLogueado,vEstudiante.IdEstudiante);
                     //if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -208,6 +209,21 @@ namespace ERP_INTECOLI.Administracion.Matricula
             if (vEstudiante != null)
             {
                 frmMatricula frm = new frmMatricula(UsuarioLogueado, vEstudiante.IdEstudiante, row.nulo, row.id_curso, row.id_detalle_matricula, row.valor);
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    CargarDatos(vEstudiante.IdEstudiante);
+                }
+            }
+        }
+
+        private void reposMove_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridview = (GridView)gridControl1.FocusedView;
+            var row = (dsMatriculado.matricula_detalle_realRow)gridview.GetFocusedDataRow();
+
+            if (vEstudiante != null)
+            {
+                ctl_mover_estudiante1 frm = new ctl_mover_estudiante1(UsuarioLogueado, row.id_estudiante, row.descripcion, row.seccion, row.valor, row.id_curso);
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     CargarDatos(vEstudiante.IdEstudiante);

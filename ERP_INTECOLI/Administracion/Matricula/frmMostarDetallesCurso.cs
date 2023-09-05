@@ -21,7 +21,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
         DataOperations dp = new DataOperations();
         CheckBox[] cbDias = new CheckBox[7];
 
-        public frmMostarDetallesCurso(Users pUserLog, int IdCurso)
+        public frmMostarDetallesCurso(UserLogin pUserLog, int IdCurso)
         {
             InitializeComponent();
 
@@ -63,7 +63,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
             }
         }
 
-        private void SetDiasClases(dsCursos_.DiasCursosDataTable diasCursos)
+        private void SetDiasClases(DataTable dtDias)
         {
             for (int i = 1; i <= cbDias.Length; i++)
             {

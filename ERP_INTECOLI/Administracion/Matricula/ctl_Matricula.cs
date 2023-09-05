@@ -24,16 +24,15 @@ namespace ERP_INTECOLI.Administracion.Matricula
         public int IdCurso;
         public int IdSeccion;
         public int IdNivel;
-        public event EventHandler OnCancelar;
-        public event EventHandler OnGuardarClick;
+ 
         public ctl_Matricula(UserLogin pUserLOgin, long pIdEstudiante)
         {
             InitializeComponent();
-            
+            UsuarioLogueado = pUserLOgin;
             est.RecuperarRegistro(pIdEstudiante);
-
+            editar = false;
             CargarDatos();
-            CargarSecciones();
+            //CargarSecciones();
         }
 
         //public Estudiante vEstudiante;
@@ -83,7 +82,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 dsNuevoCursoMatricula1.secciones.Clear(); //dsMatricula1.niveles.Clear();
                 adat.Fill(dsNuevoCursoMatricula1.secciones);
-                foreach (DataRow row in dsNuevoCursoMatricula1.niveles)
+                foreach (DataRow row in dsNuevoCursoMatricula1.secciones)
                 {
                     if (Convert.ToInt32(row["id_nivel"]) == Convert.ToInt32(grNivel.EditValue))
                     {
@@ -158,6 +157,10 @@ namespace ERP_INTECOLI.Administracion.Matricula
         private void grNivel_EditValueChanged(object sender, EventArgs e)
         {
             CargarSecciones();
+        }
+
+        private void cmdGuardar_Click(object sender, EventArgs e)
+        {
 
         }
     }
