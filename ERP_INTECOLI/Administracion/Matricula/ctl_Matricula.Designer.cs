@@ -30,16 +30,28 @@ namespace ERP_INTECOLI.Administracion.Matricula
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctl_Matricula));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctl_Matricula));
             this.label2 = new System.Windows.Forms.Label();
             this.lblNuevoNombre = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.nivelesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsMatriculado = new ERP_INTECOLI.Administracion.Matricula.dsMatriculado();
+            this.listBoxSeccion = new DevExpress.XtraEditors.ListBoxControl();
+            this.dsNuevoCursoMatricula1 = new ERP_INTECOLI.Administracion.Matricula.dsNuevoCursoMatricula();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmdCancelar = new System.Windows.Forms.Button();
+            this.cmdGuardar = new System.Windows.Forms.Button();
+            this.txtValor = new DevExpress.XtraEditors.TextEdit();
+            this.cmdEditSecciones = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdGuardarNuevoNombre = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdEditNivel = new DevExpress.XtraEditors.SimpleButton();
             this.txtNuevoNombre = new DevExpress.XtraEditors.TextEdit();
             this.grNivel = new DevExpress.XtraEditors.GridLookUpEdit();
             this.grNivelView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -47,27 +59,15 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colvalor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtEstudiante = new DevExpress.XtraEditors.TextEdit();
-            this.cmdEditNivel = new DevExpress.XtraEditors.SimpleButton();
-            this.cmdGuardarNuevoNombre = new DevExpress.XtraEditors.SimpleButton();
-            this.cmdEditSecciones = new DevExpress.XtraEditors.SimpleButton();
-            this.listBoxSeccion = new DevExpress.XtraEditors.ListBoxControl();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtValor = new DevExpress.XtraEditors.TextEdit();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmdCancelar = new System.Windows.Forms.Button();
-            this.cmdGuardar = new System.Windows.Forms.Button();
-            this.dsNuevoCursoMatricula1 = new ERP_INTECOLI.Administracion.Matricula.dsNuevoCursoMatricula();
-            this.dsMatriculado = new ERP_INTECOLI.Administracion.Matricula.dsMatriculado();
-            this.nivelesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.nivelesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMatriculado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listBoxSeccion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsNuevoCursoMatricula1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNuevoNombre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grNivel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grNivelView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstudiante.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxSeccion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValor.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsNuevoCursoMatricula1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsMatriculado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nivelesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -111,111 +111,15 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.label1.TabIndex = 47;
             this.label1.Text = "Estudiante";
             // 
-            // txtNuevoNombre
+            // nivelesBindingSource
             // 
-            this.txtNuevoNombre.Enabled = false;
-            this.txtNuevoNombre.Location = new System.Drawing.Point(172, 164);
-            this.txtNuevoNombre.Name = "txtNuevoNombre";
-            this.txtNuevoNombre.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNuevoNombre.Properties.Appearance.Options.UseFont = true;
-            this.txtNuevoNombre.Size = new System.Drawing.Size(199, 28);
-            this.txtNuevoNombre.TabIndex = 49;
+            this.nivelesBindingSource.DataMember = "niveles";
+            this.nivelesBindingSource.DataSource = this.dsMatriculado;
             // 
-            // grNivel
+            // dsMatriculado
             // 
-            this.grNivel.EditValue = "";
-            this.grNivel.Location = new System.Drawing.Point(172, 122);
-            this.grNivel.Name = "grNivel";
-            this.grNivel.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grNivel.Properties.Appearance.Options.UseFont = true;
-            this.grNivel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, false, false, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.grNivel.Properties.DataSource = this.nivelesBindingSource;
-            this.grNivel.Properties.DisplayMember = "descripcion";
-            this.grNivel.Properties.NullText = "";
-            this.grNivel.Properties.PopupView = this.grNivelView;
-            this.grNivel.Properties.ValueMember = "id_nivel";
-            this.grNivel.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView;
-            this.grNivel.Size = new System.Drawing.Size(199, 28);
-            this.grNivel.TabIndex = 46;
-            // 
-            // grNivelView
-            // 
-            this.grNivelView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grNivelView.Appearance.HeaderPanel.Options.UseFont = true;
-            this.grNivelView.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grNivelView.Appearance.Row.Options.UseFont = true;
-            this.grNivelView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colid_nivel,
-            this.coldescripcion,
-            this.colvalor});
-            this.grNivelView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.grNivelView.Name = "grNivelView";
-            this.grNivelView.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.grNivelView.OptionsView.ShowGroupPanel = false;
-            // 
-            // colid_nivel
-            // 
-            this.colid_nivel.FieldName = "id_nivel";
-            this.colid_nivel.Name = "colid_nivel";
-            // 
-            // coldescripcion
-            // 
-            this.coldescripcion.AppearanceCell.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.coldescripcion.AppearanceCell.Options.UseFont = true;
-            this.coldescripcion.Caption = "Nivel";
-            this.coldescripcion.FieldName = "descripcion";
-            this.coldescripcion.Name = "coldescripcion";
-            this.coldescripcion.Visible = true;
-            this.coldescripcion.VisibleIndex = 0;
-            // 
-            // colvalor
-            // 
-            this.colvalor.FieldName = "valor";
-            this.colvalor.Name = "colvalor";
-            // 
-            // txtEstudiante
-            // 
-            this.txtEstudiante.Location = new System.Drawing.Point(172, 81);
-            this.txtEstudiante.Name = "txtEstudiante";
-            this.txtEstudiante.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstudiante.Properties.Appearance.Options.UseFont = true;
-            this.txtEstudiante.Size = new System.Drawing.Size(199, 28);
-            this.txtEstudiante.TabIndex = 45;
-            // 
-            // cmdEditNivel
-            // 
-            this.cmdEditNivel.Appearance.BackColor = System.Drawing.Color.PaleGreen;
-            this.cmdEditNivel.Appearance.Options.UseBackColor = true;
-            this.cmdEditNivel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdEditNivel.ImageOptions.Image")));
-            this.cmdEditNivel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.cmdEditNivel.Location = new System.Drawing.Point(377, 121);
-            this.cmdEditNivel.Name = "cmdEditNivel";
-            this.cmdEditNivel.Size = new System.Drawing.Size(40, 30);
-            this.cmdEditNivel.TabIndex = 51;
-            // 
-            // cmdGuardarNuevoNombre
-            // 
-            this.cmdGuardarNuevoNombre.Appearance.BackColor = System.Drawing.Color.PaleGreen;
-            this.cmdGuardarNuevoNombre.Appearance.Options.UseBackColor = true;
-            this.cmdGuardarNuevoNombre.Enabled = false;
-            this.cmdGuardarNuevoNombre.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardarNuevoNombre.ImageOptions.Image")));
-            this.cmdGuardarNuevoNombre.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.cmdGuardarNuevoNombre.Location = new System.Drawing.Point(377, 163);
-            this.cmdGuardarNuevoNombre.Name = "cmdGuardarNuevoNombre";
-            this.cmdGuardarNuevoNombre.Size = new System.Drawing.Size(40, 30);
-            this.cmdGuardarNuevoNombre.TabIndex = 52;
-            // 
-            // cmdEditSecciones
-            // 
-            this.cmdEditSecciones.Appearance.BackColor = System.Drawing.Color.PaleGreen;
-            this.cmdEditSecciones.Appearance.Options.UseBackColor = true;
-            this.cmdEditSecciones.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdEditSecciones.ImageOptions.Image")));
-            this.cmdEditSecciones.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.cmdEditSecciones.Location = new System.Drawing.Point(377, 212);
-            this.cmdEditSecciones.Name = "cmdEditSecciones";
-            this.cmdEditSecciones.Size = new System.Drawing.Size(40, 30);
-            this.cmdEditSecciones.TabIndex = 55;
+            this.dsMatriculado.DataSetName = "dsMatriculado";
+            this.dsMatriculado.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // listBoxSeccion
             // 
@@ -229,6 +133,12 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.listBoxSeccion.Size = new System.Drawing.Size(199, 114);
             this.listBoxSeccion.TabIndex = 54;
             this.listBoxSeccion.ValueMember = "id_seccion";
+            this.listBoxSeccion.SelectedValueChanged += new System.EventHandler(this.listBoxSeccion_SelectedValueChanged);
+            // 
+            // dsNuevoCursoMatricula1
+            // 
+            this.dsNuevoCursoMatricula1.DataSetName = "dsNuevoCursoMatricula";
+            this.dsNuevoCursoMatricula1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label4
             // 
@@ -239,17 +149,6 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.label4.Size = new System.Drawing.Size(63, 21);
             this.label4.TabIndex = 53;
             this.label4.Text = "Seccion";
-            // 
-            // txtValor
-            // 
-            this.txtValor.Location = new System.Drawing.Point(172, 343);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValor.Properties.Appearance.Options.UseFont = true;
-            this.txtValor.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtValor.Properties.MaskSettings.Set("mask", "#,##0.00");
-            this.txtValor.Size = new System.Drawing.Size(199, 28);
-            this.txtValor.TabIndex = 56;
             // 
             // label5
             // 
@@ -297,25 +196,132 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.cmdGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cmdGuardar.UseVisualStyleBackColor = false;
             // 
-            // dsNuevoCursoMatricula1
+            // txtValor
             // 
-            this.dsNuevoCursoMatricula1.DataSetName = "dsNuevoCursoMatricula";
-            this.dsNuevoCursoMatricula1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.txtValor.Location = new System.Drawing.Point(172, 343);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValor.Properties.Appearance.Options.UseFont = true;
+            this.txtValor.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtValor.Properties.MaskSettings.Set("mask", "#,##0.00");
+            this.txtValor.Size = new System.Drawing.Size(199, 28);
+            this.txtValor.TabIndex = 56;
             // 
-            // dsMatriculado
+            // cmdEditSecciones
             // 
-            this.dsMatriculado.DataSetName = "dsMatriculado";
-            this.dsMatriculado.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cmdEditSecciones.Appearance.BackColor = System.Drawing.Color.PaleGreen;
+            this.cmdEditSecciones.Appearance.Options.UseBackColor = true;
+            this.cmdEditSecciones.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdEditSecciones.ImageOptions.Image")));
+            this.cmdEditSecciones.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.cmdEditSecciones.Location = new System.Drawing.Point(377, 212);
+            this.cmdEditSecciones.Name = "cmdEditSecciones";
+            this.cmdEditSecciones.Size = new System.Drawing.Size(40, 30);
+            this.cmdEditSecciones.TabIndex = 55;
+            this.cmdEditSecciones.Click += new System.EventHandler(this.cmdEditSecciones_Click);
             // 
-            // nivelesBindingSource
+            // cmdGuardarNuevoNombre
             // 
-            this.nivelesBindingSource.DataMember = "niveles";
-            this.nivelesBindingSource.DataSource = this.dsMatriculado;
+            this.cmdGuardarNuevoNombre.Appearance.BackColor = System.Drawing.Color.PaleGreen;
+            this.cmdGuardarNuevoNombre.Appearance.Options.UseBackColor = true;
+            this.cmdGuardarNuevoNombre.Enabled = false;
+            this.cmdGuardarNuevoNombre.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardarNuevoNombre.ImageOptions.Image")));
+            this.cmdGuardarNuevoNombre.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.cmdGuardarNuevoNombre.Location = new System.Drawing.Point(377, 163);
+            this.cmdGuardarNuevoNombre.Name = "cmdGuardarNuevoNombre";
+            this.cmdGuardarNuevoNombre.Size = new System.Drawing.Size(40, 30);
+            this.cmdGuardarNuevoNombre.TabIndex = 52;
+            this.cmdGuardarNuevoNombre.Click += new System.EventHandler(this.cmdGuardarNuevoNombre_Click);
+            // 
+            // cmdEditNivel
+            // 
+            this.cmdEditNivel.Appearance.BackColor = System.Drawing.Color.PaleGreen;
+            this.cmdEditNivel.Appearance.Options.UseBackColor = true;
+            this.cmdEditNivel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdEditNivel.ImageOptions.Image")));
+            this.cmdEditNivel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.cmdEditNivel.Location = new System.Drawing.Point(377, 121);
+            this.cmdEditNivel.Name = "cmdEditNivel";
+            this.cmdEditNivel.Size = new System.Drawing.Size(40, 30);
+            this.cmdEditNivel.TabIndex = 51;
+            this.cmdEditNivel.Click += new System.EventHandler(this.cmdEditNivel_Click);
+            // 
+            // txtNuevoNombre
+            // 
+            this.txtNuevoNombre.Enabled = false;
+            this.txtNuevoNombre.Location = new System.Drawing.Point(172, 164);
+            this.txtNuevoNombre.Name = "txtNuevoNombre";
+            this.txtNuevoNombre.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNuevoNombre.Properties.Appearance.Options.UseFont = true;
+            this.txtNuevoNombre.Size = new System.Drawing.Size(199, 28);
+            this.txtNuevoNombre.TabIndex = 49;
+            // 
+            // grNivel
+            // 
+            this.grNivel.EditValue = "";
+            this.grNivel.Location = new System.Drawing.Point(172, 122);
+            this.grNivel.Name = "grNivel";
+            this.grNivel.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grNivel.Properties.Appearance.Options.UseFont = true;
+            this.grNivel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, false, false, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.grNivel.Properties.DataSource = this.nivelesBindingSource;
+            this.grNivel.Properties.DisplayMember = "descripcion";
+            this.grNivel.Properties.NullText = "";
+            this.grNivel.Properties.PopupView = this.grNivelView;
+            this.grNivel.Properties.ValueMember = "id_nivel";
+            this.grNivel.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView;
+            this.grNivel.Size = new System.Drawing.Size(199, 28);
+            this.grNivel.TabIndex = 46;
+            this.grNivel.EditValueChanged += new System.EventHandler(this.grNivel_EditValueChanged);
+            // 
+            // grNivelView
+            // 
+            this.grNivelView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grNivelView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.grNivelView.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grNivelView.Appearance.Row.Options.UseFont = true;
+            this.grNivelView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid_nivel,
+            this.coldescripcion,
+            this.colvalor});
+            this.grNivelView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.grNivelView.Name = "grNivelView";
+            this.grNivelView.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.grNivelView.OptionsView.ShowGroupPanel = false;
+            // 
+            // colid_nivel
+            // 
+            this.colid_nivel.FieldName = "id_nivel";
+            this.colid_nivel.Name = "colid_nivel";
+            // 
+            // coldescripcion
+            // 
+            this.coldescripcion.AppearanceCell.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coldescripcion.AppearanceCell.Options.UseFont = true;
+            this.coldescripcion.Caption = "Nivel";
+            this.coldescripcion.FieldName = "descripcion";
+            this.coldescripcion.Name = "coldescripcion";
+            this.coldescripcion.Visible = true;
+            this.coldescripcion.VisibleIndex = 0;
+            // 
+            // colvalor
+            // 
+            this.colvalor.FieldName = "valor";
+            this.colvalor.Name = "colvalor";
+            // 
+            // txtEstudiante
+            // 
+            this.txtEstudiante.Location = new System.Drawing.Point(172, 81);
+            this.txtEstudiante.Name = "txtEstudiante";
+            this.txtEstudiante.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstudiante.Properties.Appearance.Options.UseFont = true;
+            this.txtEstudiante.Size = new System.Drawing.Size(199, 28);
+            this.txtEstudiante.TabIndex = 45;
             // 
             // ctl_Matricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(462, 461);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdGuardar);
             this.Controls.Add(this.txtValor);
@@ -333,16 +339,15 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Name = "ctl_Matricula";
-            this.Size = new System.Drawing.Size(464, 437);
+            ((System.ComponentModel.ISupportInitialize)(this.nivelesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMatriculado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listBoxSeccion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsNuevoCursoMatricula1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNuevoNombre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grNivel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grNivelView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstudiante.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxSeccion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValor.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsNuevoCursoMatricula1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsMatriculado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nivelesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

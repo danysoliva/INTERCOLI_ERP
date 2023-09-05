@@ -43,7 +43,7 @@ namespace ERP_INTECOLI.Clases
             Posterior = 2
         }
 
-        public bool RecuperarRegistro(int pidEstudiante)
+        public bool RecuperarRegistro(long pidEstudiante)
         {
             bool Recuperado = false;
 

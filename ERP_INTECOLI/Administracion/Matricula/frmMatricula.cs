@@ -26,7 +26,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
         int idDetMatricula;
         int Curso;
         int MatriculaEncabezadoId;
-        int idEstudiante;
+        long idEstudiante;
         TipoMatricula tipoMatricula;
         AccionDB_Matricula AccionActualDB;
 
@@ -42,7 +42,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
             Detalle = 2
         }
 
-        public frmMatricula(UserLogin pUserLogin, int pidEstudiante, bool pnulo, int pid_curso, int pid_detalle_matricula, decimal pvalor)
+        public frmMatricula(UserLogin pUserLogin, long pidEstudiante, bool pnulo, int pid_curso, int pid_detalle_matricula, decimal pvalor)
         {
             InitializeComponent();
             UsuarioLogeado = pUserLogin;
@@ -106,7 +106,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
             }
             else
             {
-                frmMostarDetallesCurso frm = new frmMostarDetallesCurso(UsuarioLogueado, Convert.ToInt32(gridLookUpEdit1.EditValue));
+                frmMostarDetallesCurso frm = new frmMostarDetallesCurso(UsuarioLogeado, Convert.ToInt32(gridLookUpEdit1.EditValue));
                 frm.ShowDialog();
             }
         }

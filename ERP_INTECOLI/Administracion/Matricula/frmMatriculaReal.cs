@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Administracion.Estudiantes;
 using DevExpress.XtraGrid.Views.Grid;
+using ERP_INTECOLI.Administracion.Matricula;
 
 namespace ERP_INTECOLI.Administracion.Matricula
 {
@@ -143,6 +144,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
 
         private void cmdNuevo_Click(object sender, EventArgs e)
         {
+            if(IdEstudiante > 0)
             {
                 vEstudiante = new Estudiante();
                 vEstudiante.RecuperarRegistro(IdEstudiante);
@@ -158,11 +160,17 @@ namespace ERP_INTECOLI.Administracion.Matricula
                     //    CargarDatos(vEstudiante.IdEstudiante);
                     //}
 
-                    ctl_Matricula1.UsuarioLogueado = this.UsuarioLogueado;
-                    ctl_Matricula1.vEstudiante = vEstudiante;
-                    ctl_Matricula1.editar = false;
-                    ctl_Matricula1.CargarDatos();
-                    ctl_Matricula1.ShowPopup();
+                    ctl_Matricula frm = new ctl_Matricula(UsuarioLogueado, vEstudiante.IdEstudiante);
+                    if (frm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        CargarDatos(vEstudiante.IdEstudiante);
+                    }
+
+                    //ctl_Matricula1.UsuarioLogueado = this.UsuarioLogueado;
+                    //ctl_Matricula1.vEstudiante = vEstudiante;
+                    //ctl_Matricula1.editar = false;
+                    //ctl_Matricula1.CargarDatos();
+                    //ctl_Matricula1.ShowPopup();
 
                 }
                 else

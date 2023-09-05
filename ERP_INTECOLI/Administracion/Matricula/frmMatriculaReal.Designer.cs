@@ -77,8 +77,6 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.chNulas = new System.Windows.Forms.CheckBox();
             this.chMostrarFinalizados = new System.Windows.Forms.CheckBox();
-            this.flyoutPanel1 = new DevExpress.Utils.FlyoutPanel();
-            this.flyoutPanelControl1 = new DevExpress.Utils.FlyoutPanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMatriculado1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -86,9 +84,6 @@ namespace ERP_INTECOLI.Administracion.Matricula
             ((System.ComponentModel.ISupportInitialize)(this.reposMove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstudiante.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMensualidad.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).BeginInit();
-            this.flyoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -501,35 +496,11 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.chMostrarFinalizados.UseVisualStyleBackColor = true;
             this.chMostrarFinalizados.CheckedChanged += new System.EventHandler(this.chMostrarFinalizados_CheckedChanged);
             // 
-            // flyoutPanel1
-            // 
-            this.flyoutPanel1.Appearance.BackColor = System.Drawing.Color.White;
-            this.flyoutPanel1.Appearance.Options.UseBackColor = true;
-            this.flyoutPanel1.Controls.Add(this.flyoutPanelControl1);
-            this.flyoutPanel1.Location = new System.Drawing.Point(458, 316);
-            this.flyoutPanel1.Name = "flyoutPanel1";
-            this.flyoutPanel1.Options.AnchorType = DevExpress.Utils.Win.PopupToolWindowAnchor.Center;
-            this.flyoutPanel1.OptionsBeakPanel.BackColor = System.Drawing.Color.White;
-            this.flyoutPanel1.OwnerControl = this;
-            this.flyoutPanel1.Size = new System.Drawing.Size(150, 150);
-            this.flyoutPanel1.TabIndex = 54;
-            // 
-            // flyoutPanelControl1
-            // 
-            this.flyoutPanelControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flyoutPanelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flyoutPanelControl1.FlyoutPanel = this.flyoutPanel1;
-            this.flyoutPanelControl1.Location = new System.Drawing.Point(0, 0);
-            this.flyoutPanelControl1.Name = "flyoutPanelControl1";
-            this.flyoutPanelControl1.Size = new System.Drawing.Size(150, 150);
-            this.flyoutPanelControl1.TabIndex = 0;
-            // 
             // frmMatriculaReal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1234, 713);
-            this.Controls.Add(this.flyoutPanel1);
             this.Controls.Add(this.chMostrarFinalizados);
             this.Controls.Add(this.chNulas);
             this.Controls.Add(this.labelControl2);
@@ -550,9 +521,6 @@ namespace ERP_INTECOLI.Administracion.Matricula
             ((System.ComponentModel.ISupportInitialize)(this.reposMove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstudiante.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMensualidad.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanel1)).EndInit();
-            this.flyoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,7 +565,5 @@ namespace ERP_INTECOLI.Administracion.Matricula
         private System.Windows.Forms.CheckBox chMostrarFinalizados;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit reposEditar;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit reposMove;
-        private DevExpress.Utils.FlyoutPanel flyoutPanel1;
-        private DevExpress.Utils.FlyoutPanelControl flyoutPanelControl1;
     }
 }

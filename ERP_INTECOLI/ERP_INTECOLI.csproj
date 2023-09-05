@@ -204,6 +204,12 @@
     <Compile Include="Administracion\Matricula\frmConsultarMatriculados.Designer.cs">
       <DependentUpon>frmConsultarMatriculados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Matricula\frmEditSecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Matricula\frmEditSecciones.Designer.cs">
+      <DependentUpon>frmEditSecciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Matricula\frmMatricula.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Matricula\frmConsultarMatriculados.resx">
       <DependentUpon>frmConsultarMatriculados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Matricula\frmEditSecciones.resx">
+      <DependentUpon>frmEditSecciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Matricula\frmMatricula.resx">
       <DependentUpon>frmMatricula.cs</DependentUpon>
