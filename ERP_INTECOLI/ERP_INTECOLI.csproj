@@ -108,6 +108,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion\Caja\dsCaja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCaja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmCaja.Designer.cs">
+      <DependentUpon>frmCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Cursos\dsCursos_.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -183,7 +194,7 @@
       <DependentUpon>frmBuscarInstructores.cs</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Matricula\ctl_Matricula.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administracion\Matricula\ctl_Matricula.Designer.cs">
       <DependentUpon>ctl_Matricula.cs</DependentUpon>
@@ -256,6 +267,20 @@
     </Compile>
     <Compile Include="Administracion\Niveles_Academicos\frmNiveles_Academicos.Designer.cs">
       <DependentUpon>frmNiveles_Academicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Planilla\dsPlanilla.cs">
+      <DependentUpon>dsPlanilla.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Planilla\dsPlanilla.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPlanilla.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Planilla\frmGeneracionPlanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Planilla\frmGeneracionPlanilla.Designer.cs">
+      <DependentUpon>frmGeneracionPlanilla.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\CajaDialogo.cs" />
     <Compile Include="Clases\ConversorNumALetras.cs" />
@@ -335,6 +360,9 @@
     <Compile Include="Usuarios\frmManVentanasOP.Designer.cs">
       <DependentUpon>frmManVentanasOP.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administracion\Caja\frmCaja.resx">
+      <DependentUpon>frmCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Estudiantes\frmagregar_rtn.resx">
       <DependentUpon>frmagregar_rtn.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,6 +420,9 @@
     <EmbeddedResource Include="Administracion\Niveles_Academicos\frmNiveles_Academicos.resx">
       <DependentUpon>frmNiveles_Academicos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Planilla\frmGeneracionPlanilla.resx">
+      <DependentUpon>frmGeneracionPlanilla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\frmFactura.resx">
       <DependentUpon>frmFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,6 +458,17 @@
     <EmbeddedResource Include="Usuarios\frmManVentanasOP.resx">
       <DependentUpon>frmManVentanasOP.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Administracion\Caja\dsCaja.xsc">
+      <DependentUpon>dsCaja.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Caja\dsCaja.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCaja.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administracion\Caja\dsCaja.xss">
+      <DependentUpon>dsCaja.xsd</DependentUpon>
+    </None>
     <None Include="Administracion\Cursos\dsCursos_.xsc">
       <DependentUpon>dsCursos_.xsd</DependentUpon>
     </None>
@@ -503,6 +545,17 @@
     </None>
     <None Include="Administracion\Movimientos\dsMovimientosSaldos.xss">
       <DependentUpon>dsMovimientosSaldos.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Planilla\dsPlanilla.xsc">
+      <DependentUpon>dsPlanilla.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Planilla\dsPlanilla.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPlanilla.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administracion\Planilla\dsPlanilla.xss">
+      <DependentUpon>dsPlanilla.xsd</DependentUpon>
     </None>
     <None Include="dsRecordatorios.xsc">
       <DependentUpon>dsRecordatorios.xsd</DependentUpon>

@@ -16,6 +16,8 @@ using ERP_INTECOLI.Administracion.Matricula;
 using ERP_INTECOLI.Usuarios;
 using ERP_INTECOLI.Transacciones;
 using ERP_INTECOLI.Administracion.Movimientos;
+using ERP_INTECOLI.Administracion.Planilla;
+using ERP_INTECOLI.Administracion.Caja;
 using System.Data.SqlClient;
 using JAGUAR_APP;
 
@@ -216,6 +218,43 @@ namespace ERP_INTECOLI
                 }
                 catch (Exception ec)
                 { }
+            }
+        }
+
+        private void navGeneracionPlanilla_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmGeneracionPlanilla mtx = new frmGeneracionPlanilla(this.UsuarioLogeado);
+            if (mtx != null)
+            {
+                
+                mtx.MdiParent = this;
+                try
+                {
+                    mtx.Show();
+                }
+                catch { }
+                
+            }
+        }
+
+        private void navNotificacionesManuales_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+        }
+
+        private void navCaja_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmCaja mtx = new frmCaja(this.UsuarioLogeado);
+            if (mtx != null)
+            {
+                
+                mtx.MdiParent = this;
+                try
+                {
+                    mtx.Show();
+                }
+                catch { }
+                
             }
         }
     }
