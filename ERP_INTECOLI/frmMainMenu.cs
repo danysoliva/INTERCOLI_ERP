@@ -15,6 +15,7 @@ using ERP_INTECOLI.Administracion.Niveles_Academicos;
 using ERP_INTECOLI.Administracion.Matricula;
 using ERP_INTECOLI.Usuarios;
 using ERP_INTECOLI.Transacciones;
+using ERP_INTECOLI.Administracion.Movimientos;
 using System.Data.SqlClient;
 using JAGUAR_APP;
 
@@ -200,6 +201,21 @@ namespace ERP_INTECOLI
                 }
                 catch { }
                 
+            }
+        }
+
+        private void navMovimientoSaldos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmMovimientosSaldos frx = new frmMovimientosSaldos(this.UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
+                { }
             }
         }
     }

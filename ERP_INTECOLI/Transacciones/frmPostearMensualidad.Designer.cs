@@ -31,11 +31,11 @@ namespace ERP_INTECOLI.Transacciones
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPostearMensualidad));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions15 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject57 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject58 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject59 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject60 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.lblRotulo = new System.Windows.Forms.Label();
             this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
@@ -348,6 +348,7 @@ namespace ERP_INTECOLI.Transacciones
             this.cmdCursos.Properties.ValueMember = "curso_id";
             this.cmdCursos.Size = new System.Drawing.Size(208, 26);
             this.cmdCursos.TabIndex = 54;
+            this.cmdCursos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmdCursos_KeyDown);
             // 
             // cursosBindingSource
             // 
@@ -402,6 +403,7 @@ namespace ERP_INTECOLI.Transacciones
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.spinDiasHabiles.Size = new System.Drawing.Size(208, 22);
             this.spinDiasHabiles.TabIndex = 53;
+            this.spinDiasHabiles.ValueChanged += new System.EventHandler(this.spinDiasHabiles_ValueChanged);
             // 
             // label20
             // 
@@ -447,6 +449,8 @@ namespace ERP_INTECOLI.Transacciones
             "Diciembre"});
             this.cbxMes.Size = new System.Drawing.Size(208, 26);
             this.cbxMes.TabIndex = 32;
+            this.cbxMes.TextChanged += new System.EventHandler(this.cbxMes_TextChanged);
+            this.cbxMes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbxMes_KeyDown);
             // 
             // cmdNuevo
             // 
@@ -531,6 +535,7 @@ namespace ERP_INTECOLI.Transacciones
             this.dtFechaPago.Name = "dtFechaPago";
             this.dtFechaPago.Size = new System.Drawing.Size(208, 27);
             this.dtFechaPago.TabIndex = 33;
+            this.dtFechaPago.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtFechaPago_KeyDown);
             // 
             // txtTotal
             // 
@@ -562,6 +567,8 @@ namespace ERP_INTECOLI.Transacciones
             this.txtImpuesto.TabIndex = 40;
             this.txtImpuesto.Text = "0.00";
             this.txtImpuesto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtImpuesto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtImpuesto_KeyDown);
+            this.txtImpuesto.Validating += new System.ComponentModel.CancelEventHandler(this.txtImpuesto_Validating);
             // 
             // label7
             // 
@@ -582,6 +589,8 @@ namespace ERP_INTECOLI.Transacciones
             this.txtDescuento.TabIndex = 37;
             this.txtDescuento.Text = "0.00";
             this.txtDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDescuento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDescuento_KeyDown);
+            this.txtDescuento.Validating += new System.ComponentModel.CancelEventHandler(this.txtDescuento_Validating);
             // 
             // label6
             // 
@@ -602,6 +611,8 @@ namespace ERP_INTECOLI.Transacciones
             this.txtRecargos.TabIndex = 39;
             this.txtRecargos.Text = "0.00";
             this.txtRecargos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRecargos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRecargos_KeyDown);
+            this.txtRecargos.Validating += new System.ComponentModel.CancelEventHandler(this.txtRecargos_Validating);
             // 
             // label5
             // 
@@ -622,6 +633,8 @@ namespace ERP_INTECOLI.Transacciones
             this.txtSubtotal.TabIndex = 36;
             this.txtSubtotal.Text = "0.00";
             this.txtSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSubtotal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSubtotal_KeyDown);
+            this.txtSubtotal.Validating += new System.ComponentModel.CancelEventHandler(this.txtSubtotal_Validating);
             // 
             // label4
             // 
@@ -672,6 +685,7 @@ namespace ERP_INTECOLI.Transacciones
             // 
             // txtValorRecibo
             // 
+            this.txtValorRecibo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtValorRecibo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtValorRecibo.Location = new System.Drawing.Point(821, 377);
             this.txtValorRecibo.Name = "txtValorRecibo";
@@ -694,6 +708,7 @@ namespace ERP_INTECOLI.Transacciones
             // 
             // cmdNuevoRecibo
             // 
+            this.cmdNuevoRecibo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cmdNuevoRecibo.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.cmdNuevoRecibo.FlatAppearance.BorderColor = System.Drawing.Color.MediumSpringGreen;
             this.cmdNuevoRecibo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -712,6 +727,7 @@ namespace ERP_INTECOLI.Transacciones
             // 
             // cmdCerrarRecibo
             // 
+            this.cmdCerrarRecibo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cmdCerrarRecibo.BackColor = System.Drawing.Color.LightSalmon;
             this.cmdCerrarRecibo.FlatAppearance.BorderColor = System.Drawing.Color.LightSalmon;
             this.cmdCerrarRecibo.FlatAppearance.BorderSize = 2;
@@ -731,6 +747,7 @@ namespace ERP_INTECOLI.Transacciones
             // 
             // cmdGuardarRecibo
             // 
+            this.cmdGuardarRecibo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cmdGuardarRecibo.BackColor = System.Drawing.Color.LightBlue;
             this.cmdGuardarRecibo.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
             this.cmdGuardarRecibo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -895,9 +912,9 @@ namespace ERP_INTECOLI.Transacciones
             // button_delete
             // 
             this.button_delete.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions15.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions15.Image")));
             this.button_delete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions15, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject57, serializableAppearanceObject58, serializableAppearanceObject59, serializableAppearanceObject60, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.button_delete.Name = "button_delete";
             this.button_delete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.button_delete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.button_delete_ButtonClick);

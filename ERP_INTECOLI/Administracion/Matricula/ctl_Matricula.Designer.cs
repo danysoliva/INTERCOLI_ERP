@@ -48,21 +48,23 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.txtNuevoNombre = new DevExpress.XtraEditors.TextEdit();
             this.txtEstudiante = new DevExpress.XtraEditors.TextEdit();
             this.grNivel = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.dsMatriculado1 = new ERP_INTECOLI.Administracion.Matricula.dsMatriculado();
             this.nivelesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid_nivel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colvalor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dsMatriculado1 = new ERP_INTECOLI.Administracion.Matricula.dsMatriculado();
+            this.seccionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.listBoxSeccion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsNuevoCursoMatricula1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtValor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNuevoNombre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstudiante.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grNivel.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nivelesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMatriculado1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nivelesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seccionesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -110,8 +112,8 @@ namespace ERP_INTECOLI.Administracion.Matricula
             // 
             this.listBoxSeccion.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxSeccion.Appearance.Options.UseFont = true;
-            this.listBoxSeccion.DataSource = this.dsNuevoCursoMatricula1;
-            this.listBoxSeccion.DisplayMember = "secciones.secciones";
+            this.listBoxSeccion.DataSource = this.seccionesBindingSource;
+            this.listBoxSeccion.DisplayMember = "secciones";
             this.listBoxSeccion.ItemPadding = new System.Windows.Forms.Padding(2);
             this.listBoxSeccion.Location = new System.Drawing.Point(172, 212);
             this.listBoxSeccion.Name = "listBoxSeccion";
@@ -266,6 +268,11 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.grNivel.TabIndex = 60;
             this.grNivel.EditValueChanged += new System.EventHandler(this.grNivel_EditValueChanged);
             // 
+            // nivelesBindingSource
+            // 
+            this.nivelesBindingSource.DataMember = "niveles";
+            this.nivelesBindingSource.DataSource = this.dsNuevoCursoMatricula1;
+            // 
             // gridLookUpEdit1View
             // 
             this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -276,16 +283,6 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // dsMatriculado1
-            // 
-            this.dsMatriculado1.DataSetName = "dsMatriculado";
-            this.dsMatriculado1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nivelesBindingSource
-            // 
-            this.nivelesBindingSource.DataMember = "niveles";
-            this.nivelesBindingSource.DataSource = this.dsNuevoCursoMatricula1;
             // 
             // colid_nivel
             // 
@@ -307,6 +304,16 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.colvalor.Name = "colvalor";
             this.colvalor.Visible = true;
             this.colvalor.VisibleIndex = 1;
+            // 
+            // dsMatriculado1
+            // 
+            this.dsMatriculado1.DataSetName = "dsMatriculado";
+            this.dsMatriculado1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // seccionesBindingSource
+            // 
+            this.seccionesBindingSource.DataMember = "secciones";
+            this.seccionesBindingSource.DataSource = this.dsNuevoCursoMatricula1;
             // 
             // ctl_Matricula
             // 
@@ -336,9 +343,10 @@ namespace ERP_INTECOLI.Administracion.Matricula
             ((System.ComponentModel.ISupportInitialize)(this.txtNuevoNombre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstudiante.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grNivel.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nivelesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMatriculado1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nivelesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seccionesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,5 +377,6 @@ namespace ERP_INTECOLI.Administracion.Matricula
         private DevExpress.XtraGrid.Columns.GridColumn colid_nivel;
         private DevExpress.XtraGrid.Columns.GridColumn coldescripcion;
         private DevExpress.XtraGrid.Columns.GridColumn colvalor;
+        private System.Windows.Forms.BindingSource seccionesBindingSource;
     }
 }

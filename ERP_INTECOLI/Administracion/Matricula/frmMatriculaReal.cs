@@ -97,8 +97,9 @@ namespace ERP_INTECOLI.Administracion.Matricula
                 //string sql = "select * from admon.v3_ft_carga_datos_detalle_matricula (:p_estudiante_id, :p_nulas, :p_finalizados);";
                 string sql = @"sp_get_datos_detalle_matricula";
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@estudiante_id", idEstudiante);
-                cmd.Parameters.AddWithValue("@nulas", chNulas.Checked);
+                cmd.Parameters.AddWithValue("@vernulas", chNulas.Checked);
                 cmd.Parameters.AddWithValue("@finalizados", chMostrarFinalizados.Checked);
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 adat.Fill(dsMatriculado1.matricula_detalle_real);

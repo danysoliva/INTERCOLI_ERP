@@ -37,8 +37,8 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.btnCargar = new DevExpress.XtraEditors.SimpleButton();
             this.chOcultarNulas = new System.Windows.Forms.CheckBox();
             this.grdMatriculado = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.dsMatriculado1 = new ERP_INTECOLI.Administracion.Matricula.dsMatriculado();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid_matricula = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnula = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -49,9 +49,10 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.colprofe = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnivel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tsSoloHabilitadas = new DevExpress.XtraEditors.ToggleSwitch();
+            this.cmdCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdMatriculado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMatriculado1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsSoloHabilitadas.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,9 +99,9 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.btnCargar.Appearance.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCargar.Appearance.Options.UseBackColor = true;
             this.btnCargar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCargar.ImageOptions.SvgImage")));
-            this.btnCargar.Location = new System.Drawing.Point(206, 9);
+            this.btnCargar.Location = new System.Drawing.Point(206, 18);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(106, 52);
+            this.btnCargar.Size = new System.Drawing.Size(106, 43);
             this.btnCargar.TabIndex = 10;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
@@ -111,7 +112,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.chOcultarNulas.Checked = true;
             this.chOcultarNulas.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chOcultarNulas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.chOcultarNulas.Location = new System.Drawing.Point(474, 9);
+            this.chOcultarNulas.Location = new System.Drawing.Point(381, 11);
             this.chOcultarNulas.Name = "chOcultarNulas";
             this.chOcultarNulas.Size = new System.Drawing.Size(117, 22);
             this.chOcultarNulas.TabIndex = 11;
@@ -133,6 +134,11 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.grdMatriculado.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // dsMatriculado1
+            // 
+            this.dsMatriculado1.DataSetName = "dsMatriculado";
+            this.dsMatriculado1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -149,11 +155,6 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // dsMatriculado1
-            // 
-            this.dsMatriculado1.DataSetName = "dsMatriculado";
-            this.dsMatriculado1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // colid_matricula
             // 
@@ -230,7 +231,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
             // tsSoloHabilitadas
             // 
             this.tsSoloHabilitadas.EditValue = true;
-            this.tsSoloHabilitadas.Location = new System.Drawing.Point(474, 35);
+            this.tsSoloHabilitadas.Location = new System.Drawing.Point(381, 37);
             this.tsSoloHabilitadas.Name = "tsSoloHabilitadas";
             this.tsSoloHabilitadas.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.tsSoloHabilitadas.Properties.Appearance.Options.UseFont = true;
@@ -239,11 +240,32 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.tsSoloHabilitadas.Size = new System.Drawing.Size(177, 22);
             this.tsSoloHabilitadas.TabIndex = 13;
             // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdCancelar.BackColor = System.Drawing.Color.LightSalmon;
+            this.cmdCancelar.FlatAppearance.BorderColor = System.Drawing.Color.LightSalmon;
+            this.cmdCancelar.FlatAppearance.BorderSize = 2;
+            this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
+            this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdCancelar.Location = new System.Drawing.Point(639, 18);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(110, 43);
+            this.cmdCancelar.TabIndex = 46;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmdCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cmdCancelar.UseVisualStyleBackColor = false;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
+            // 
             // frmConsultarMatriculados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 472);
+            this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.tsSoloHabilitadas);
             this.Controls.Add(this.grdMatriculado);
             this.Controls.Add(this.chOcultarNulas);
@@ -256,8 +278,8 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.Name = "frmConsultarMatriculados";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.grdMatriculado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMatriculado1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsSoloHabilitadas.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,5 +307,6 @@ namespace ERP_INTECOLI.Administracion.Matricula
         private DevExpress.XtraGrid.Columns.GridColumn colprofe;
         private DevExpress.XtraGrid.Columns.GridColumn colnivel;
         private DevExpress.XtraEditors.ToggleSwitch tsSoloHabilitadas;
+        private System.Windows.Forms.Button cmdCancelar;
     }
 }

@@ -62,5 +62,10 @@ namespace ERP_INTECOLI.Administracion.Matricula
         {
             CargarMatriculados();
         }
+
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

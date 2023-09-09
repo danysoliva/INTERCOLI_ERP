@@ -234,6 +234,17 @@
     <Compile Include="Administracion\Matricula\frmMostarDetallesCurso.Designer.cs">
       <DependentUpon>frmMostarDetallesCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Movimientos\dsMovimientosSaldos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMovimientosSaldos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Movimientos\frmMovimientosSaldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Movimientos\frmMovimientosSaldos.Designer.cs">
+      <DependentUpon>frmMovimientosSaldos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Niveles_Academicos\frmNivelesOP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -372,6 +383,9 @@
     <EmbeddedResource Include="Administracion\Matricula\frmMostarDetallesCurso.resx">
       <DependentUpon>frmMostarDetallesCurso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Movimientos\frmMovimientosSaldos.resx">
+      <DependentUpon>frmMovimientosSaldos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Niveles_Academicos\frmNivelesOP.resx">
       <DependentUpon>frmNivelesOP.cs</DependentUpon>
     </EmbeddedResource>
@@ -478,6 +492,17 @@
     </None>
     <None Include="Administracion\Matricula\dsNuevoCursoMatricula.xss">
       <DependentUpon>dsNuevoCursoMatricula.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Movimientos\dsMovimientosSaldos.xsc">
+      <DependentUpon>dsMovimientosSaldos.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Movimientos\dsMovimientosSaldos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMovimientosSaldos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administracion\Movimientos\dsMovimientosSaldos.xss">
+      <DependentUpon>dsMovimientosSaldos.xsd</DependentUpon>
     </None>
     <None Include="dsRecordatorios.xsc">
       <DependentUpon>dsRecordatorios.xsd</DependentUpon>

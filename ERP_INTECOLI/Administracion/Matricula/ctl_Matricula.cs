@@ -82,7 +82,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 dsNuevoCursoMatricula1.secciones.Clear(); //dsMatricula1.niveles.Clear();
                 adat.Fill(dsNuevoCursoMatricula1.secciones);
-                foreach (DataRow row in dsNuevoCursoMatricula1.secciones)
+                foreach (DataRow row in dsNuevoCursoMatricula1.niveles)
                 {
                     if (Convert.ToInt32(row["id_nivel"]) == Convert.ToInt32(grNivel.EditValue))
                     {
@@ -131,6 +131,10 @@ namespace ERP_INTECOLI.Administracion.Matricula
 
                 CargarDatos();
                 grNivel.EditValue = IdNivel;
+
+                txtNuevoNombre.Text = "";
+                txtNuevoNombre.Enabled = false;
+                cmdGuardarNuevoNombre.Enabled = false;
             }
             catch (Exception ec)
             {
@@ -161,7 +165,71 @@ namespace ERP_INTECOLI.Administracion.Matricula
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtValor.Text))
+            {
+                CajaDialogo.Error("Debe llenar el Campo de Valor!");
+                return;
+            }
 
+            if (Convert.ToInt32(txtValor.EditValue) <= 0)
+            {
+                CajaDialogo.Error("Debe agregar un Valor mayor que (0)!");
+                return;
+            }
+
+
+            IdCurso = ObtenerCursoId();
+
+            //string SQL = @" select * from admon.ft_insert_matricula_real (
+            //              :pid_estudiante,
+            //              :pvalor,
+            //              :pcurso_id)";
+            string sql = @"[sp_matricula_insert_matricula_real]";
+            try
+            {
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@estudiante_id",  est.IdEstudiante);
+                //cmd.Parameters.Add("pvalor", PgSqlType.Numeric).Value = Valor;
+                cmd.Parameters.AddWithValue("@valor",  Convert.ToDecimal(txtValor.EditValue));
+                cmd.Parameters.AddWithValue("@curso_id", IdCurso);
+                cmd.ExecuteScalar();
+                conn.Close();
+                //OnGuardarClick.Invoke(sender, e);
+
+                CajaDialogo.Information("Curso Agregado!");
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception ec)
+            {
+                CajaDialogo.Error(ec.Message);
+            }
+
+        }
+
+        public int ObtenerCursoId()
+        {
+            int varx = 0;
+            try
+            {
+                //string sql = "select * from admon.ft_proc_recupera_curso_id(:p_id_nivel, :p_id_seccion);";
+                string sql = @"[sp_get_proc_recuperar_curso_id]";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_nivel",  IdNivel);
+                cmd.Parameters.AddWithValue("@id_seccion",  IdSeccion);
+                varx = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            catch (Exception ec)
+            {
+                CajaDialogo.Error(ec.Message);
+            }
+            return varx;
         }
     }
 }

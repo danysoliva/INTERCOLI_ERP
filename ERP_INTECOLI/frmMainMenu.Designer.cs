@@ -49,7 +49,7 @@ namespace ERP_INTECOLI
             this.navConsultaMatriculado = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navPostearMensualidad = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navMovimientoSaldos = new DevExpress.XtraNavBar.NavBarItem();
             this.TabConsultas = new DevExpress.XtraTab.XtraTabPage();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -109,7 +109,7 @@ namespace ERP_INTECOLI
             this.navCRUDPermisos,
             this.navConsultaMatriculado,
             this.navPostearMensualidad,
-            this.navBarItem2});
+            this.navMovimientoSaldos});
             this.navBarControl1.Location = new System.Drawing.Point(3, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 204;
@@ -217,7 +217,7 @@ namespace ERP_INTECOLI
             this.navBarGroup2.Expanded = true;
             this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navPostearMensualidad),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navMovimientoSaldos)});
             this.navBarGroup2.Name = "navBarGroup2";
             // 
             // navPostearMensualidad
@@ -227,10 +227,13 @@ namespace ERP_INTECOLI
             this.navPostearMensualidad.Name = "navPostearMensualidad";
             this.navPostearMensualidad.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navPostearMensualidad_LinkClicked);
             // 
-            // navBarItem2
+            // navMovimientoSaldos
             // 
-            this.navBarItem2.Caption = "navBarItem2";
-            this.navBarItem2.Name = "navBarItem2";
+            this.navMovimientoSaldos.Caption = "Movimientos Cobros Estudiantes";
+            this.navMovimientoSaldos.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navMovimientoSaldos.ImageOptions.LargeImage")));
+            this.navMovimientoSaldos.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navMovimientoSaldos.ImageOptions.SmallImage")));
+            this.navMovimientoSaldos.Name = "navMovimientoSaldos";
+            this.navMovimientoSaldos.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navMovimientoSaldos_LinkClicked);
             // 
             // TabConsultas
             // 
@@ -318,6 +321,6 @@ namespace ERP_INTECOLI
         private XtraTabPage TabConsultas;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraNavBar.NavBarItem navPostearMensualidad;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem2;
+        private DevExpress.XtraNavBar.NavBarItem navMovimientoSaldos;
     }
 }

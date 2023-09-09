@@ -849,5 +849,142 @@ namespace ERP_INTECOLI.Transacciones
                 }
             }
         }
+
+        private void cbxMes_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                dtFechaPago.Focus();
+        }
+
+        private void cbxMes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtFechaPago_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                spinDiasHabiles.Focus();
+            }
+        }
+
+        private void spinDiasHabiles_ValueChanged(object sender, EventArgs e)
+        {
+            if (spinDiasHabiles.Value > V_Dias)//incremento
+            {
+                DateTime data = Convert.ToDateTime(dtFechaPago.Value);
+                dtFechaLimite.Value = data.AddDays(Convert.ToInt32(spinDiasHabiles.Value));
+                V_Dias = Convert.ToInt32(spinDiasHabiles.Value);
+            }
+            else
+            {
+                //resto
+                DateTime data = Convert.ToDateTime(dtFechaPago.Value);
+                dtFechaLimite.Value = data.AddDays(Convert.ToInt32(spinDiasHabiles.Value));
+                V_Dias = Convert.ToInt32(spinDiasHabiles.Value);
+            }
+        }
+
+        private void cmdCursos_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txtSubtotal.Focus();
+        }
+
+        private void txtSubtotal_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDescuento.Focus();
+                txtDescuento.SelectAll();
+            }
+        }
+
+        private void txtSubtotal_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                decimal a = Convert.ToDecimal(this.txtSubtotal.Text);
+                CalcularTotal();
+            }
+            catch
+            {
+                CajaDialogo.Error("El valor ingresado es incorrecto, verifiquelo!\nRecuerde ingresar el valor sin puntos ni comas");
+                txtSubtotal.Focus();
+                txtSubtotal.SelectAll();
+            }
+        }
+
+        private void txtDescuento_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtRecargos.Focus();
+                txtRecargos.SelectAll();
+            }
+        }
+
+        private void txtDescuento_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                decimal a = Convert.ToDecimal(this.txtDescuento.Text);
+                CalcularTotal();
+            }
+            catch
+            {
+                CajaDialogo.Error("El valor ingresado es incorrecto, verifiquelo!\nRecuerde ingresar el valor sin puntos ni comas");
+                txtDescuento.Focus();
+                txtDescuento.SelectAll();
+            }
+        }
+
+        private void txtRecargos_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtImpuesto.Focus();
+                txtImpuesto.SelectAll();
+            }
+        }
+
+        private void txtRecargos_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                decimal a = Convert.ToDecimal(this.txtRecargos.Text);
+                CalcularTotal();
+            }
+            catch
+            {
+                CajaDialogo.Error("El valor ingresado es incorrecto, verifiquelo!\nRecuerde ingresar el valor sin puntos ni comas");
+                txtRecargos.Focus();
+                txtRecargos.SelectAll();
+            }
+        }
+
+        private void txtImpuesto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmdGuardar.Focus();
+            }
+        }
+
+        private void txtImpuesto_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                decimal a = Convert.ToDecimal(txtImpuesto.Text);
+                CalcularTotal();
+            }
+            catch
+            {
+                CajaDialogo.Error("El valor ingresado es incorrecto, verifiquelo!\nRecuerde ingresar el valor sin puntos ni comas");
+                txtImpuesto.Focus();
+                txtImpuesto.SelectAll();
+            }
+        }
     }
 }
