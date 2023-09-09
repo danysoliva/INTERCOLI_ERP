@@ -29,66 +29,67 @@ namespace ERP_INTECOLI.Administracion.Caja
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions56 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions7 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject25 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject26 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject28 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions8 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject29 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject30 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject31 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject32 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions9 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject33 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject34 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject35 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject36 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions10 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject37 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject38 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject39 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject40 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions11 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject41 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject42 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject43 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject44 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCaja));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject221 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject222 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject223 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject224 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions57 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject225 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject226 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject227 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject228 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions58 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject229 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject230 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject231 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject232 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions59 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject233 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject234 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject235 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject236 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions60 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject237 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject238 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject239 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject240 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions61 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject241 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject242 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject243 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject244 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions62 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject245 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject246 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject247 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject248 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions63 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject249 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject250 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject251 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject252 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions64 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject253 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject254 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject255 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject256 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions65 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject257 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject258 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject259 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject260 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions66 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject261 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject262 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject263 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject264 = new DevExpress.Utils.SerializableAppearanceObject();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.TabPageFactura = new DevExpress.XtraTab.XtraTabPage();
             this.dtFechaEmision = new DevExpress.XtraEditors.DateEdit();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.dsCaja1 = new ERP_INTECOLI.Administracion.Caja.dsCaja();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnumero1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -98,8 +99,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.colanular = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colfecha1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cmdPrint = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -111,7 +110,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.colpagar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.TabPageBoletaMatricula = new DevExpress.XtraTab.XtraTabPage();
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
             this.button3 = new System.Windows.Forms.Button();
@@ -130,7 +128,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.colreprint = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnReprint = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnReprintBoleta = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl4 = new DevExpress.XtraGrid.GridControl();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -142,7 +139,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.label6 = new System.Windows.Forms.Label();
             this.TabPageLibros = new DevExpress.XtraTab.XtraTabPage();
             this.dateEditLibros = new DevExpress.XtraEditors.DateEdit();
             this.gridControl5 = new DevExpress.XtraGrid.GridControl();
@@ -170,7 +166,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.TabPageReservas = new DevExpress.XtraTab.XtraTabPage();
             this.dateEditReservas = new DevExpress.XtraEditors.DateEdit();
             this.gridControl7 = new DevExpress.XtraGrid.GridControl();
@@ -186,7 +181,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.colPrint_r = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmdReimprimir_ = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.button2 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl8 = new DevExpress.XtraGrid.GridControl();
             this.gridView8 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -198,14 +192,14 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit8 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.dsCaja1 = new ERP_INTECOLI.Administracion.Caja.dsCaja();
+            this.cmdPrintFact = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.TabPageFactura.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaEmision.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaEmision.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCaja1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -243,7 +237,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             ((System.ComponentModel.ISupportInitialize)(this.gridControl8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCaja1)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -254,7 +247,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.xtraTabControl1.Location = new System.Drawing.Point(2, 12);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.TabPageFactura;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1235, 757);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1287, 785);
             this.xtraTabControl1.TabIndex = 14;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabPageFactura,
@@ -266,16 +259,14 @@ namespace ERP_INTECOLI.Administracion.Caja
             // 
             this.TabPageFactura.Appearance.Header.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabPageFactura.Appearance.Header.Options.UseFont = true;
+            this.TabPageFactura.Controls.Add(this.cmdPrintFact);
             this.TabPageFactura.Controls.Add(this.dtFechaEmision);
             this.TabPageFactura.Controls.Add(this.gridControl2);
-            this.TabPageFactura.Controls.Add(this.cmdPrint);
-            this.TabPageFactura.Controls.Add(this.label2);
             this.TabPageFactura.Controls.Add(this.simpleButton1);
             this.TabPageFactura.Controls.Add(this.gridControl1);
             this.TabPageFactura.Controls.Add(this.label3);
-            this.TabPageFactura.Controls.Add(this.label1);
             this.TabPageFactura.Name = "TabPageFactura";
-            this.TabPageFactura.Size = new System.Drawing.Size(1233, 724);
+            this.TabPageFactura.Size = new System.Drawing.Size(1285, 752);
             this.TabPageFactura.Text = "Facturas";
             // 
             // dtFechaEmision
@@ -300,15 +291,20 @@ namespace ERP_INTECOLI.Administracion.Caja
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl2.DataMember = "liberadas";
             this.gridControl2.DataSource = this.dsCaja1;
-            this.gridControl2.Location = new System.Drawing.Point(7, 353);
+            this.gridControl2.Location = new System.Drawing.Point(6, 385);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit2});
-            this.gridControl2.Size = new System.Drawing.Size(1218, 364);
+            this.gridControl2.Size = new System.Drawing.Size(1272, 360);
             this.gridControl2.TabIndex = 14;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            // 
+            // dsCaja1
+            // 
+            this.dsCaja1.DataSetName = "dsCaja";
+            this.dsCaja1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView2
             // 
@@ -327,6 +323,8 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.OptionsView.ShowViewCaption = true;
+            this.gridView2.ViewCaption = "Facturas Liberadas";
             // 
             // colid1
             // 
@@ -384,9 +382,9 @@ namespace ERP_INTECOLI.Administracion.Caja
             // repositoryItemButtonEdit2
             // 
             this.repositoryItemButtonEdit2.AutoHeight = false;
-            editorButtonImageOptions56.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions56.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions56, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject221, serializableAppearanceObject222, serializableAppearanceObject223, serializableAppearanceObject224, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             this.repositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -401,31 +399,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.colfecha1.VisibleIndex = 0;
             this.colfecha1.Width = 90;
             // 
-            // cmdPrint
-            // 
-            this.cmdPrint.BackColor = System.Drawing.Color.White;
-            this.cmdPrint.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.cmdPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdPrint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdPrint.Location = new System.Drawing.Point(276, 3);
-            this.cmdPrint.Name = "cmdPrint";
-            this.cmdPrint.Size = new System.Drawing.Size(123, 46);
-            this.cmdPrint.TabIndex = 19;
-            this.cmdPrint.Text = "Re Print";
-            this.cmdPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmdPrint.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(9, 325);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 25);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Facturas Liberadas";
-            // 
             // simpleButton1
             // 
             this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -436,11 +409,13 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.simpleButton1.Appearance.Options.UseBorderColor = true;
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.simpleButton1.Location = new System.Drawing.Point(1081, 3);
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(1133, 3);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(145, 46);
+            this.simpleButton1.Size = new System.Drawing.Size(145, 45);
             this.simpleButton1.TabIndex = 18;
             this.simpleButton1.Text = "Refresh";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // gridControl1
             // 
@@ -453,7 +428,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1220, 268);
+            this.gridControl1.Size = new System.Drawing.Size(1272, 325);
             this.gridControl1.TabIndex = 15;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -474,6 +449,8 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.OptionsView.ShowViewCaption = true;
+            this.gridView1.ViewCaption = "Facturas Pendientes";
             // 
             // colid
             // 
@@ -533,9 +510,9 @@ namespace ERP_INTECOLI.Administracion.Caja
             // repositoryItemButtonEdit1
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions57.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions57.Image")));
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions57, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject225, serializableAppearanceObject226, serializableAppearanceObject227, serializableAppearanceObject228, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -550,16 +527,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.label3.Text = "Fecha ";
             this.label3.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(3, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 25);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Facturas Pendientes";
-            // 
             // TabPageBoletaMatricula
             // 
             this.TabPageBoletaMatricula.Appearance.Header.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -570,13 +537,11 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.TabPageBoletaMatricula.Controls.Add(this.label5);
             this.TabPageBoletaMatricula.Controls.Add(this.gridControl3);
             this.TabPageBoletaMatricula.Controls.Add(this.btnReprintBoleta);
-            this.TabPageBoletaMatricula.Controls.Add(this.label4);
             this.TabPageBoletaMatricula.Controls.Add(this.simpleButton2);
             this.TabPageBoletaMatricula.Controls.Add(this.gridControl4);
             this.TabPageBoletaMatricula.Controls.Add(this.dateEdit1);
-            this.TabPageBoletaMatricula.Controls.Add(this.label6);
             this.TabPageBoletaMatricula.Name = "TabPageBoletaMatricula";
-            this.TabPageBoletaMatricula.Size = new System.Drawing.Size(1233, 724);
+            this.TabPageBoletaMatricula.Size = new System.Drawing.Size(1285, 752);
             this.TabPageBoletaMatricula.Text = "Boletas Matricula";
             // 
             // dateEdit2
@@ -620,11 +585,13 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.simpleButton5.Appearance.Options.UseBorderColor = true;
             this.simpleButton5.Appearance.Options.UseFont = true;
             this.simpleButton5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.simpleButton5.Location = new System.Drawing.Point(1081, 3);
+            this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
+            this.simpleButton5.Location = new System.Drawing.Point(1133, 3);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(145, 46);
             this.simpleButton5.TabIndex = 30;
             this.simpleButton5.Text = "Refresh";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
             // label5
             // 
@@ -639,17 +606,18 @@ namespace ERP_INTECOLI.Administracion.Caja
             // 
             // gridControl3
             // 
-            this.gridControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl3.DataMember = "bliberadas";
             this.gridControl3.DataSource = this.dsCaja1;
-            this.gridControl3.Location = new System.Drawing.Point(13, 378);
+            this.gridControl3.Location = new System.Drawing.Point(3, 422);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
             this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit3,
             this.btnReprint});
-            this.gridControl3.Size = new System.Drawing.Size(1208, 343);
+            this.gridControl3.Size = new System.Drawing.Size(1279, 323);
             this.gridControl3.TabIndex = 22;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -670,6 +638,8 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridView3.GridControl = this.gridControl3;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gridView3.OptionsView.ShowViewCaption = true;
+            this.gridView3.ViewCaption = "Boletas Liberadas";
             // 
             // gridColumn1
             // 
@@ -727,9 +697,9 @@ namespace ERP_INTECOLI.Administracion.Caja
             // repositoryItemButtonEdit3
             // 
             this.repositoryItemButtonEdit3.AutoHeight = false;
-            editorButtonImageOptions58.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions58.Image")));
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             this.repositoryItemButtonEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions58, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject229, serializableAppearanceObject230, serializableAppearanceObject231, serializableAppearanceObject232, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit3.Name = "repositoryItemButtonEdit3";
             this.repositoryItemButtonEdit3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -756,9 +726,9 @@ namespace ERP_INTECOLI.Administracion.Caja
             // btnReprint
             // 
             this.btnReprint.AutoHeight = false;
-            editorButtonImageOptions59.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions59.Image")));
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
             this.btnReprint.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions59, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject233, serializableAppearanceObject234, serializableAppearanceObject235, serializableAppearanceObject236, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnReprint.Name = "btnReprint";
             this.btnReprint.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -774,20 +744,10 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.btnReprintBoleta.UseVisualStyleBackColor = true;
             this.btnReprintBoleta.Visible = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 351);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 24);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Boletas Liberadas";
-            // 
             // simpleButton2
             // 
             this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton2.Location = new System.Drawing.Point(716, 3);
+            this.simpleButton2.Location = new System.Drawing.Point(768, 3);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 26;
@@ -800,12 +760,12 @@ namespace ERP_INTECOLI.Administracion.Caja
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl4.DataMember = "bpendientes";
             this.gridControl4.DataSource = this.dsCaja1;
-            this.gridControl4.Location = new System.Drawing.Point(12, 55);
+            this.gridControl4.Location = new System.Drawing.Point(3, 55);
             this.gridControl4.MainView = this.gridView4;
             this.gridControl4.Name = "gridControl4";
             this.gridControl4.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit4});
-            this.gridControl4.Size = new System.Drawing.Size(1209, 293);
+            this.gridControl4.Size = new System.Drawing.Size(1279, 361);
             this.gridControl4.TabIndex = 23;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -824,6 +784,8 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridView4.GridControl = this.gridControl4;
             this.gridView4.Name = "gridView4";
             this.gridView4.OptionsView.ShowGroupPanel = false;
+            this.gridView4.OptionsView.ShowViewCaption = true;
+            this.gridView4.ViewCaption = "Boletas Pendientes";
             // 
             // gridColumn8
             // 
@@ -883,9 +845,9 @@ namespace ERP_INTECOLI.Administracion.Caja
             // repositoryItemButtonEdit4
             // 
             this.repositoryItemButtonEdit4.AutoHeight = false;
-            editorButtonImageOptions60.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions60.Image")));
+            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
             this.repositoryItemButtonEdit4.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions60, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject237, serializableAppearanceObject238, serializableAppearanceObject239, serializableAppearanceObject240, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit4.Name = "repositoryItemButtonEdit4";
             this.repositoryItemButtonEdit4.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -904,16 +866,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.dateEdit1.TabIndex = 24;
             this.dateEdit1.Visible = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(171, 24);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Boletas Pendientes";
-            // 
             // TabPageLibros
             // 
             this.TabPageLibros.Appearance.Header.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -925,9 +877,8 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.TabPageLibros.Controls.Add(this.simpleButton3);
             this.TabPageLibros.Controls.Add(this.gridControl6);
             this.TabPageLibros.Controls.Add(this.label8);
-            this.TabPageLibros.Controls.Add(this.label9);
             this.TabPageLibros.Name = "TabPageLibros";
-            this.TabPageLibros.Size = new System.Drawing.Size(1233, 724);
+            this.TabPageLibros.Size = new System.Drawing.Size(1285, 752);
             this.TabPageLibros.Text = "Boleta Libros";
             // 
             // dateEditLibros
@@ -947,17 +898,18 @@ namespace ERP_INTECOLI.Administracion.Caja
             // 
             // gridControl5
             // 
-            this.gridControl5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl5.DataMember = "Librosliberadas";
             this.gridControl5.DataSource = this.dsCaja1;
-            this.gridControl5.Location = new System.Drawing.Point(6, 381);
+            this.gridControl5.Location = new System.Drawing.Point(3, 413);
             this.gridControl5.MainView = this.gridView5;
             this.gridControl5.Name = "gridControl5";
             this.gridControl5.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit5,
             this.cmdReimprimir});
-            this.gridControl5.Size = new System.Drawing.Size(1218, 336);
+            this.gridControl5.Size = new System.Drawing.Size(1279, 332);
             this.gridControl5.TabIndex = 22;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -980,6 +932,8 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridView5.GridControl = this.gridControl5;
             this.gridView5.Name = "gridView5";
             this.gridView5.OptionsView.ShowGroupPanel = false;
+            this.gridView5.OptionsView.ShowViewCaption = true;
+            this.gridView5.ViewCaption = "Boletas Liberadas";
             // 
             // gridColumn14
             // 
@@ -1041,9 +995,9 @@ namespace ERP_INTECOLI.Administracion.Caja
             // repositoryItemButtonEdit5
             // 
             this.repositoryItemButtonEdit5.AutoHeight = false;
-            editorButtonImageOptions61.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions61.Image")));
+            editorButtonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions6.Image")));
             this.repositoryItemButtonEdit5.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions61, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject241, serializableAppearanceObject242, serializableAppearanceObject243, serializableAppearanceObject244, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit5.Name = "repositoryItemButtonEdit5";
             this.repositoryItemButtonEdit5.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -1071,9 +1025,9 @@ namespace ERP_INTECOLI.Administracion.Caja
             // cmdReimprimir
             // 
             this.cmdReimprimir.AutoHeight = false;
-            editorButtonImageOptions62.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions62.SvgImage")));
+            editorButtonImageOptions7.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions7.SvgImage")));
             this.cmdReimprimir.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions62, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject245, serializableAppearanceObject246, serializableAppearanceObject247, serializableAppearanceObject248, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.cmdReimprimir.Name = "cmdReimprimir";
             this.cmdReimprimir.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -1099,9 +1053,8 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(3, 353);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(166, 25);
+            this.label7.Size = new System.Drawing.Size(0, 25);
             this.label7.TabIndex = 21;
-            this.label7.Text = "Boletas Liberadas";
             // 
             // simpleButton3
             // 
@@ -1113,11 +1066,13 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.simpleButton3.Appearance.Options.UseBorderColor = true;
             this.simpleButton3.Appearance.Options.UseFont = true;
             this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.simpleButton3.Location = new System.Drawing.Point(1081, 3);
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(1133, 3);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(145, 46);
             this.simpleButton3.TabIndex = 26;
             this.simpleButton3.Text = "Refresh";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // gridControl6
             // 
@@ -1125,12 +1080,12 @@ namespace ERP_INTECOLI.Administracion.Caja
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl6.DataMember = "LibrosPendientes";
             this.gridControl6.DataSource = this.dsCaja1;
-            this.gridControl6.Location = new System.Drawing.Point(6, 54);
+            this.gridControl6.Location = new System.Drawing.Point(3, 54);
             this.gridControl6.MainView = this.gridView6;
             this.gridControl6.Name = "gridControl6";
             this.gridControl6.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit6});
-            this.gridControl6.Size = new System.Drawing.Size(1220, 296);
+            this.gridControl6.Size = new System.Drawing.Size(1279, 353);
             this.gridControl6.TabIndex = 23;
             this.gridControl6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6});
@@ -1151,6 +1106,8 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridView6.GridControl = this.gridControl6;
             this.gridView6.Name = "gridView6";
             this.gridView6.OptionsView.ShowGroupPanel = false;
+            this.gridView6.OptionsView.ShowViewCaption = true;
+            this.gridView6.ViewCaption = "Boletas de Libro Pendientes";
             // 
             // gridColumn21
             // 
@@ -1214,9 +1171,9 @@ namespace ERP_INTECOLI.Administracion.Caja
             // repositoryItemButtonEdit6
             // 
             this.repositoryItemButtonEdit6.AutoHeight = false;
-            editorButtonImageOptions63.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions63.Image")));
+            editorButtonImageOptions8.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions8.Image")));
             this.repositoryItemButtonEdit6.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions63, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject249, serializableAppearanceObject250, serializableAppearanceObject251, serializableAppearanceObject252, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit6.Name = "repositoryItemButtonEdit6";
             this.repositoryItemButtonEdit6.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -1231,16 +1188,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.label8.Text = "Fecha ";
             this.label8.Visible = false;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(3, 21);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(257, 25);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Boletas de Libro Pendientes";
-            // 
             // TabPageReservas
             // 
             this.TabPageReservas.Appearance.Header.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -1248,13 +1195,11 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.TabPageReservas.Controls.Add(this.dateEditReservas);
             this.TabPageReservas.Controls.Add(this.gridControl7);
             this.TabPageReservas.Controls.Add(this.button2);
-            this.TabPageReservas.Controls.Add(this.label10);
             this.TabPageReservas.Controls.Add(this.simpleButton4);
             this.TabPageReservas.Controls.Add(this.gridControl8);
             this.TabPageReservas.Controls.Add(this.label11);
-            this.TabPageReservas.Controls.Add(this.label12);
             this.TabPageReservas.Name = "TabPageReservas";
-            this.TabPageReservas.Size = new System.Drawing.Size(1233, 724);
+            this.TabPageReservas.Size = new System.Drawing.Size(1285, 752);
             this.TabPageReservas.Text = "Reserva de Cupo";
             // 
             // dateEditReservas
@@ -1278,13 +1223,13 @@ namespace ERP_INTECOLI.Administracion.Caja
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl7.DataMember = "ReservasLiberadas";
             this.gridControl7.DataSource = this.dsCaja1;
-            this.gridControl7.Location = new System.Drawing.Point(3, 411);
+            this.gridControl7.Location = new System.Drawing.Point(3, 386);
             this.gridControl7.MainView = this.gridView7;
             this.gridControl7.Name = "gridControl7";
             this.gridControl7.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit7,
             this.cmdReimprimir_});
-            this.gridControl7.Size = new System.Drawing.Size(1218, 306);
+            this.gridControl7.Size = new System.Drawing.Size(1279, 363);
             this.gridControl7.TabIndex = 22;
             this.gridControl7.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView7});
@@ -1307,6 +1252,8 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridView7.GridControl = this.gridControl7;
             this.gridView7.Name = "gridView7";
             this.gridView7.OptionsView.ShowGroupPanel = false;
+            this.gridView7.OptionsView.ShowViewCaption = true;
+            this.gridView7.ViewCaption = "Reservas de Cupo Liberadas";
             // 
             // gridColumn27
             // 
@@ -1368,9 +1315,9 @@ namespace ERP_INTECOLI.Administracion.Caja
             // repositoryItemButtonEdit7
             // 
             this.repositoryItemButtonEdit7.AutoHeight = false;
-            editorButtonImageOptions64.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions64.Image")));
+            editorButtonImageOptions9.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions9.Image")));
             this.repositoryItemButtonEdit7.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions64, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject253, serializableAppearanceObject254, serializableAppearanceObject255, serializableAppearanceObject256, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit7.Name = "repositoryItemButtonEdit7";
             this.repositoryItemButtonEdit7.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -1398,9 +1345,9 @@ namespace ERP_INTECOLI.Administracion.Caja
             // cmdReimprimir_
             // 
             this.cmdReimprimir_.AutoHeight = false;
-            editorButtonImageOptions65.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions65.SvgImage")));
+            editorButtonImageOptions10.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions10.SvgImage")));
             this.cmdReimprimir_.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions65, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject257, serializableAppearanceObject258, serializableAppearanceObject259, serializableAppearanceObject260, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.cmdReimprimir_.Name = "cmdReimprimir_";
             this.cmdReimprimir_.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -1420,16 +1367,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Visible = false;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(1, 383);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(259, 25);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Reservas de Cupo Liberadas";
-            // 
             // simpleButton4
             // 
             this.simpleButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1440,24 +1377,27 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.simpleButton4.Appearance.Options.UseBorderColor = true;
             this.simpleButton4.Appearance.Options.UseFont = true;
             this.simpleButton4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.simpleButton4.Location = new System.Drawing.Point(1081, 3);
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(1133, 3);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(145, 46);
             this.simpleButton4.TabIndex = 26;
             this.simpleButton4.Text = "Refresh";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // gridControl8
             // 
-            this.gridControl8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl8.DataMember = "ReservasPendientes";
             this.gridControl8.DataSource = this.dsCaja1;
-            this.gridControl8.Location = new System.Drawing.Point(6, 54);
+            this.gridControl8.Location = new System.Drawing.Point(3, 54);
             this.gridControl8.MainView = this.gridView8;
             this.gridControl8.Name = "gridControl8";
             this.gridControl8.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit8});
-            this.gridControl8.Size = new System.Drawing.Size(1220, 326);
+            this.gridControl8.Size = new System.Drawing.Size(1279, 326);
             this.gridControl8.TabIndex = 23;
             this.gridControl8.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView8});
@@ -1478,6 +1418,8 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridView8.GridControl = this.gridControl8;
             this.gridView8.Name = "gridView8";
             this.gridView8.OptionsView.ShowGroupPanel = false;
+            this.gridView8.OptionsView.ShowViewCaption = true;
+            this.gridView8.ViewCaption = "Reservas de Cupo Pendientes";
             // 
             // gridColumn34
             // 
@@ -1541,9 +1483,9 @@ namespace ERP_INTECOLI.Administracion.Caja
             // repositoryItemButtonEdit8
             // 
             this.repositoryItemButtonEdit8.AutoHeight = false;
-            editorButtonImageOptions66.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions66.Image")));
+            editorButtonImageOptions11.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions11.Image")));
             this.repositoryItemButtonEdit8.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions66, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject261, serializableAppearanceObject262, serializableAppearanceObject263, serializableAppearanceObject264, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject41, serializableAppearanceObject42, serializableAppearanceObject43, serializableAppearanceObject44, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit8.Name = "repositoryItemButtonEdit8";
             this.repositoryItemButtonEdit8.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -1558,26 +1500,29 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.label11.Text = "Fecha ";
             this.label11.Visible = false;
             // 
-            // label12
+            // cmdPrintFact
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(3, 21);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(271, 25);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Reservas de Cupo Pendientes";
-            // 
-            // dsCaja1
-            // 
-            this.dsCaja1.DataSetName = "dsCaja";
-            this.dsCaja1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cmdPrintFact.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdPrintFact.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.cmdPrintFact.Appearance.BorderColor = System.Drawing.Color.LightGray;
+            this.cmdPrintFact.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.cmdPrintFact.Appearance.Options.UseBackColor = true;
+            this.cmdPrintFact.Appearance.Options.UseBorderColor = true;
+            this.cmdPrintFact.Appearance.Options.UseFont = true;
+            this.cmdPrintFact.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.cmdPrintFact.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            this.cmdPrintFact.Location = new System.Drawing.Point(6, 3);
+            this.cmdPrintFact.Name = "cmdPrintFact";
+            this.cmdPrintFact.Size = new System.Drawing.Size(145, 45);
+            this.cmdPrintFact.TabIndex = 20;
+            this.cmdPrintFact.Text = "Re Print";
+            this.cmdPrintFact.Click += new System.EventHandler(this.cmdPrintFact_Click);
             // 
             // frmCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1241, 773);
+            this.ClientSize = new System.Drawing.Size(1293, 801);
             this.Controls.Add(this.xtraTabControl1);
             this.IconOptions.ShowIcon = false;
             this.Name = "frmCaja";
@@ -1589,6 +1534,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaEmision.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaEmision.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCaja1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -1629,7 +1575,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             ((System.ComponentModel.ISupportInitialize)(this.gridControl8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCaja1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1649,8 +1594,6 @@ namespace ERP_INTECOLI.Administracion.Caja
         private DevExpress.XtraGrid.Columns.GridColumn colanular;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit2;
         private DevExpress.XtraGrid.Columns.GridColumn colfecha1;
-        private System.Windows.Forms.Button cmdPrint;
-        private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -1662,7 +1605,6 @@ namespace ERP_INTECOLI.Administracion.Caja
         private DevExpress.XtraGrid.Columns.GridColumn colpagar;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
         private DevExpress.XtraTab.XtraTabPage TabPageBoletaMatricula;
         private DevExpress.XtraEditors.DateEdit dateEdit2;
         private System.Windows.Forms.Button button3;
@@ -1681,7 +1623,6 @@ namespace ERP_INTECOLI.Administracion.Caja
         private DevExpress.XtraGrid.Columns.GridColumn colreprint;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnReprint;
         private System.Windows.Forms.Button btnReprintBoleta;
-        private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraGrid.GridControl gridControl4;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
@@ -1693,7 +1634,6 @@ namespace ERP_INTECOLI.Administracion.Caja
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit4;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private System.Windows.Forms.Label label6;
         private DevExpress.XtraTab.XtraTabPage TabPageLibros;
         private DevExpress.XtraEditors.DateEdit dateEditLibros;
         private DevExpress.XtraGrid.GridControl gridControl5;
@@ -1721,7 +1661,6 @@ namespace ERP_INTECOLI.Administracion.Caja
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private DevExpress.XtraTab.XtraTabPage TabPageReservas;
         private DevExpress.XtraEditors.DateEdit dateEditReservas;
         private DevExpress.XtraGrid.GridControl gridControl7;
@@ -1737,7 +1676,6 @@ namespace ERP_INTECOLI.Administracion.Caja
         private DevExpress.XtraGrid.Columns.GridColumn colPrint_r;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit cmdReimprimir_;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label10;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraGrid.GridControl gridControl8;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView8;
@@ -1749,7 +1687,7 @@ namespace ERP_INTECOLI.Administracion.Caja
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn39;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit8;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private dsCaja dsCaja1;
+        private DevExpress.XtraEditors.SimpleButton cmdPrintFact;
     }
 }

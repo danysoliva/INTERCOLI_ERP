@@ -119,6 +119,12 @@
     <Compile Include="Administracion\Caja\frmCaja.Designer.cs">
       <DependentUpon>frmCaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Caja\frmRePrintFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmRePrintFactura.Designer.cs">
+      <DependentUpon>frmRePrintFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Cursos\dsCursos_.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -169,6 +175,17 @@
     </Compile>
     <Compile Include="Administracion\Estudiantes\frmHistoarialAntiguedad.Designer.cs">
       <DependentUpon>frmHistoarialAntiguedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Facturacion\dsFactura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Facturacion\frmList_Invoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Facturacion\frmList_Invoices.Designer.cs">
+      <DependentUpon>frmList_Invoices.cs</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Instructores\dsInstructores.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -292,6 +309,7 @@
     <Compile Include="Clases\GrupoUser.cs" />
     <Compile Include="Clases\Instructores.cs" />
     <Compile Include="Clases\ItemBusqueda.cs" />
+    <Compile Include="Clases\PrintersConfig.cs" />
     <Compile Include="Clases\Saldos.cs" />
     <Compile Include="Clases\Teclado.cs" />
     <Compile Include="Clases\UserLogin.cs" />
@@ -363,6 +381,9 @@
     <EmbeddedResource Include="Administracion\Caja\frmCaja.resx">
       <DependentUpon>frmCaja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Caja\frmRePrintFactura.resx">
+      <DependentUpon>frmRePrintFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Estudiantes\frmagregar_rtn.resx">
       <DependentUpon>frmagregar_rtn.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Estudiantes\frmHistoarialAntiguedad.resx">
       <DependentUpon>frmHistoarialAntiguedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Facturacion\frmList_Invoices.resx">
+      <DependentUpon>frmList_Invoices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Instructores\frmAgregarInstructores.resx">
       <DependentUpon>frmAgregarInstructores.cs</DependentUpon>
@@ -501,6 +525,17 @@
     </None>
     <None Include="Administracion\Estudiantes\dsEstudiantes.xss">
       <DependentUpon>dsEstudiantes.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Facturacion\dsFactura.xsc">
+      <DependentUpon>dsFactura.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Facturacion\dsFactura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFactura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administracion\Facturacion\dsFactura.xss">
+      <DependentUpon>dsFactura.xsd</DependentUpon>
     </None>
     <None Include="Administracion\Instructores\dsInstructores.xsc">
       <DependentUpon>dsInstructores.xsd</DependentUpon>
