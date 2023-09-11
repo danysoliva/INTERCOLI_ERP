@@ -40,10 +40,12 @@ namespace ERP_INTECOLI.Clases
             DateTime date;
             try
             {
-                string sql = "select CURRENT_TIMESTAMP";
+                //string sql = "select CURRENT_TIMESTAMP";
+                string sql = "[dbo].[sp_get_hour_server_cloud_adjust]";
                 SqlConnection conn = new SqlConnection(ConnectionStringERP);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
                 date = Convert.ToDateTime(cmd.ExecuteScalar());
             }
             catch (Exception ec)
