@@ -51,13 +51,13 @@ namespace ERP_INTECOLI
             this.navPostearMensualidad = new DevExpress.XtraNavBar.NavBarItem();
             this.navMovimientoSaldos = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
+            this.navNotificacionesManuales = new DevExpress.XtraNavBar.NavBarItem();
+            this.navCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.TabConsultas = new DevExpress.XtraTab.XtraTabPage();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblServerName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.navNotificacionesManuales = new DevExpress.XtraNavBar.NavBarItem();
-            this.navCaja = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).BeginInit();
             this.xtraTabControlMenu.SuspendLayout();
             this.TabAdministracion.SuspendLayout();
@@ -250,6 +250,19 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla.Name = "navGeneracionPlanilla";
             this.navGeneracionPlanilla.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanilla_LinkClicked);
             // 
+            // navNotificacionesManuales
+            // 
+            this.navNotificacionesManuales.Caption = "Notificaciones Manuales";
+            this.navNotificacionesManuales.Name = "navNotificacionesManuales";
+            this.navNotificacionesManuales.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navNotificacionesManuales_LinkClicked);
+            // 
+            // navCaja
+            // 
+            this.navCaja.Caption = "Caja";
+            this.navCaja.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.caja_registradorax32;
+            this.navCaja.Name = "navCaja";
+            this.navCaja.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navCaja_LinkClicked);
+            // 
             // TabConsultas
             // 
             this.TabConsultas.Name = "TabConsultas";
@@ -289,18 +302,6 @@ namespace ERP_INTECOLI
             // 
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(0, 17);
-            // 
-            // navNotificacionesManuales
-            // 
-            this.navNotificacionesManuales.Caption = "Notificaciones Manuales";
-            this.navNotificacionesManuales.Name = "navNotificacionesManuales";
-            this.navNotificacionesManuales.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navNotificacionesManuales_LinkClicked);
-            // 
-            // navCaja
-            // 
-            this.navCaja.Caption = "Caja";
-            this.navCaja.Name = "navCaja";
-            this.navCaja.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navCaja_LinkClicked);
             // 
             // frmMainMenu
             // 

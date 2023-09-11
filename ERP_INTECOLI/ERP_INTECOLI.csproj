@@ -44,9 +44,11 @@
     <Reference Include="DevExpress.Drawing.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Map.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.1.Export, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.TreeMap.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -67,6 +69,7 @@
     <Reference Include="DevExpress.XtraPivotGrid.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v23.1.Extensions, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeMap.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -119,11 +122,41 @@
     <Compile Include="Administracion\Caja\frmCaja.Designer.cs">
       <DependentUpon>frmCaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Caja\frmPagoEfectivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmPagoEfectivo.Designer.cs">
+      <DependentUpon>frmPagoEfectivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmPagoTarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmPagoTarjeta.Designer.cs">
+      <DependentUpon>frmPagoTarjeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmPagoTransferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmPagoTransferencia.Designer.cs">
+      <DependentUpon>frmPagoTransferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmReprintBoleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmReprintBoleta.Designer.cs">
+      <DependentUpon>frmReprintBoleta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Caja\frmRePrintFactura.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administracion\Caja\frmRePrintFactura.Designer.cs">
       <DependentUpon>frmRePrintFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmTipoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmTipoPago.Designer.cs">
+      <DependentUpon>frmTipoPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Cursos\dsCursos_.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -186,6 +219,36 @@
     </Compile>
     <Compile Include="Administracion\Facturacion\frmList_Invoices.Designer.cs">
       <DependentUpon>frmList_Invoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Facturacion\rptBoleta.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Administracion\Facturacion\rptBoleta.Designer.cs">
+      <DependentUpon>rptBoleta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Facturacion\rptBoletaLibro.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Administracion\Facturacion\rptBoletaLibro.Designer.cs">
+      <DependentUpon>rptBoletaLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Facturacion\rptBoletaReserva.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Administracion\Facturacion\rptBoletaReserva.Designer.cs">
+      <DependentUpon>rptBoletaReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Facturacion\rptFactura.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Administracion\Facturacion\rptFactura.Designer.cs">
+      <DependentUpon>rptFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Facturacion\rptFacturaLetterSize.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Administracion\Facturacion\rptFacturaLetterSize.Designer.cs">
+      <DependentUpon>rptFacturaLetterSize.cs</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Instructores\dsInstructores.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -381,8 +444,23 @@
     <EmbeddedResource Include="Administracion\Caja\frmCaja.resx">
       <DependentUpon>frmCaja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Caja\frmPagoEfectivo.resx">
+      <DependentUpon>frmPagoEfectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Caja\frmPagoTarjeta.resx">
+      <DependentUpon>frmPagoTarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Caja\frmPagoTransferencia.resx">
+      <DependentUpon>frmPagoTransferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Caja\frmReprintBoleta.resx">
+      <DependentUpon>frmReprintBoleta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Caja\frmRePrintFactura.resx">
       <DependentUpon>frmRePrintFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Caja\frmTipoPago.resx">
+      <DependentUpon>frmTipoPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Estudiantes\frmagregar_rtn.resx">
       <DependentUpon>frmagregar_rtn.cs</DependentUpon>
@@ -404,6 +482,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Facturacion\frmList_Invoices.resx">
       <DependentUpon>frmList_Invoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Facturacion\rptBoleta.resx">
+      <DependentUpon>rptBoleta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Facturacion\rptBoletaLibro.resx">
+      <DependentUpon>rptBoletaLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Facturacion\rptBoletaReserva.resx">
+      <DependentUpon>rptBoletaReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Facturacion\rptFactura.resx">
+      <DependentUpon>rptFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Facturacion\rptFacturaLetterSize.resx">
+      <DependentUpon>rptFacturaLetterSize.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Instructores\frmAgregarInstructores.resx">
       <DependentUpon>frmAgregarInstructores.cs</DependentUpon>
@@ -668,9 +761,12 @@
     <Content Include="Resources\approve_24.png" />
     <Content Include="Resources\approve_32.png" />
     <None Include="Resources\cash-icon24px.png" />
+    <None Include="Resources\caja-registradorax32.png" />
+    <None Include="Resources\boletax32.png" />
     <Content Include="Resources\cerrar.png" />
     <Content Include="Resources\control-de-accesso.png" />
     <None Include="Resources\control-de-accessox32.png" />
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Cash.512.png" />
     <Content Include="Resources\edit.png" />
     <None Include="Resources\edit1.png" />
     <Content Include="Resources\edit24px.png" />
@@ -689,6 +785,8 @@
     <Content Include="Resources\exit_24x24.png" />
     <Content Include="Resources\exit_32x32.png" />
     <Content Include="Resources\export_32x32.png" />
+    <None Include="Resources\facturax32.png" />
+    <None Include="Resources\libro-de-contabilidadx32.png" />
     <Content Include="Resources\maestro x32.png" />
     <None Include="Resources\matriculax32.png" />
     <Content Include="Resources\ms-excel-icon.png" />
@@ -704,6 +802,7 @@
     <Content Include="Resources\refresh_16x16.png" />
     <Content Include="Resources\refresh_24x24.png" />
     <Content Include="Resources\refresh_32x32.png" />
+    <None Include="Resources\reservax32.png" />
     <Content Include="Resources\salir_24.png" />
     <Content Include="Resources\Salir_32.png" />
     <Content Include="Resources\save.png" />
@@ -714,6 +813,8 @@
     <Content Include="Resources\search_16x16.png" />
     <Content Include="Resources\search_24x24.png" />
     <Content Include="Resources\search_32x32.png" />
+    <None Include="Resources\tarjeta-de-creditox16.png" />
+    <None Include="Resources\transferencia-movilx16.png" />
     <Content Include="Resources\Upload-Folder-icon.png" />
     <None Include="Resources\userx32.png" />
     <Content Include="Resources\_click_24X24.png" />

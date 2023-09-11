@@ -36,12 +36,12 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.label5 = new System.Windows.Forms.Label();
             this.RadioVistaPrevia = new System.Windows.Forms.RadioButton();
             this.radioImpresionDirecta = new System.Windows.Forms.RadioButton();
-            this.cmdCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmdPrintFact = new DevExpress.XtraEditors.SimpleButton();
             this.radioGroup2 = new DevExpress.XtraEditors.RadioGroup();
             this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
+            this.cmdCancelar = new System.Windows.Forms.Button();
             this.txtNumero = new DevExpress.XtraEditors.TextEdit();
-            this.cmdPrintFact = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ListboxPrinters)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
@@ -111,20 +111,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.radioImpresionDirecta.Text = "Impresion Directa";
             this.radioImpresionDirecta.UseVisualStyleBackColor = true;
             // 
-            // cmdCancelar
-            // 
-            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
-            this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdCancelar.Location = new System.Drawing.Point(196, 322);
-            this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(109, 50);
-            this.cmdCancelar.TabIndex = 25;
-            this.cmdCancelar.Text = "Cancelar";
-            this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmdCancelar.UseVisualStyleBackColor = true;
-            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -134,6 +120,24 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.label1.Size = new System.Drawing.Size(112, 15);
             this.label1.TabIndex = 22;
             this.label1.Text = "Numero Factura:";
+            // 
+            // cmdPrintFact
+            // 
+            this.cmdPrintFact.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdPrintFact.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.cmdPrintFact.Appearance.BorderColor = System.Drawing.Color.LightGray;
+            this.cmdPrintFact.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.cmdPrintFact.Appearance.Options.UseBackColor = true;
+            this.cmdPrintFact.Appearance.Options.UseBorderColor = true;
+            this.cmdPrintFact.Appearance.Options.UseFont = true;
+            this.cmdPrintFact.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.cmdPrintFact.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdPrintFact.ImageOptions.Image")));
+            this.cmdPrintFact.Location = new System.Drawing.Point(53, 322);
+            this.cmdPrintFact.Name = "cmdPrintFact";
+            this.cmdPrintFact.Size = new System.Drawing.Size(111, 50);
+            this.cmdPrintFact.TabIndex = 34;
+            this.cmdPrintFact.Text = "Imprimir";
+            this.cmdPrintFact.Click += new System.EventHandler(this.cmdPrintFact_Click);
             // 
             // radioGroup2
             // 
@@ -159,6 +163,20 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.radioGroup1.Size = new System.Drawing.Size(334, 25);
             this.radioGroup1.TabIndex = 26;
             // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
+            this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdCancelar.Location = new System.Drawing.Point(196, 322);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(109, 50);
+            this.cmdCancelar.TabIndex = 25;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmdCancelar.UseVisualStyleBackColor = true;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
+            // 
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(18, 35);
@@ -170,24 +188,6 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.txtNumero.Properties.MaskSettings.Set("mask", "###-###-##-########");
             this.txtNumero.Size = new System.Drawing.Size(287, 22);
             this.txtNumero.TabIndex = 23;
-            // 
-            // cmdPrintFact
-            // 
-            this.cmdPrintFact.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdPrintFact.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.cmdPrintFact.Appearance.BorderColor = System.Drawing.Color.LightGray;
-            this.cmdPrintFact.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.cmdPrintFact.Appearance.Options.UseBackColor = true;
-            this.cmdPrintFact.Appearance.Options.UseBorderColor = true;
-            this.cmdPrintFact.Appearance.Options.UseFont = true;
-            this.cmdPrintFact.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.cmdPrintFact.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdPrintFact.ImageOptions.Image")));
-            this.cmdPrintFact.Location = new System.Drawing.Point(53, 322);
-            this.cmdPrintFact.Name = "cmdPrintFact";
-            this.cmdPrintFact.Size = new System.Drawing.Size(111, 50);
-            this.cmdPrintFact.TabIndex = 34;
-            this.cmdPrintFact.Text = "Imprimir";
-            this.cmdPrintFact.Click += new System.EventHandler(this.cmdPrintFact_Click);
             // 
             // frmRePrintFactura
             // 

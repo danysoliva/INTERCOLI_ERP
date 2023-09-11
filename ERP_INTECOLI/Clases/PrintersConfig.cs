@@ -25,7 +25,7 @@ namespace ERP_INTECOLI.Clases
             {
                 string sql = @"SELECT id, printer_key
                                FROM config_printers
-                               where enable 
+                               where enable = 1
 		                             and is_default = 1
                                      and id_tipo = 1";
                 DataOperations dp = new DataOperations();

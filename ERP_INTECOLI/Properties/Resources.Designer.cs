@@ -73,6 +73,26 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boletax32 {
+            get {
+                object obj = ResourceManager.GetObject("boletax32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap caja_registradorax32 {
+            get {
+                object obj = ResourceManager.GetObject("caja-registradorax32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cash_icon24px {
             get {
                 object obj = ResourceManager.GetObject("cash-icon24px", resourceCulture);
@@ -106,6 +126,16 @@ namespace ERP_INTECOLI.Properties {
         internal static System.Drawing.Bitmap control_de_accessox32 {
             get {
                 object obj = ResourceManager.GetObject("control-de-accessox32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Custom_Icon_Design_Pretty_Office_11_Cash_512 {
+            get {
+                object obj = ResourceManager.GetObject("Custom-Icon-Design-Pretty-Office-11-Cash.512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +183,26 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap facturax32 {
+            get {
+                object obj = ResourceManager.GetObject("facturax32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap libro_de_contabilidadx32 {
+            get {
+                object obj = ResourceManager.GetObject("libro-de-contabilidadx32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maestro_x32 {
             get {
                 object obj = ResourceManager.GetObject("maestro x32", resourceCulture);
@@ -193,9 +243,39 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap reservax32 {
+            get {
+                object obj = ResourceManager.GetObject("reservax32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save {
             get {
                 object obj = ResourceManager.GetObject("save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tarjeta_de_creditox16 {
+            get {
+                object obj = ResourceManager.GetObject("tarjeta-de-creditox16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transferencia_movilx16 {
+            get {
+                object obj = ResourceManager.GetObject("transferencia-movilx16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
