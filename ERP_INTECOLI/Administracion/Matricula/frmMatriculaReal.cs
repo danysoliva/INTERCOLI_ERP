@@ -188,7 +188,8 @@ namespace ERP_INTECOLI.Administracion.Matricula
 
         private void chNulas_CheckedChanged(object sender, EventArgs e)
         {
-            CargarDatos(vEstudiante.IdEstudiante);
+            if(vEstudiante!= null)
+                CargarDatos(vEstudiante.IdEstudiante);
         }
 
         private void chMostrarFinalizados_CheckedChanged(object sender, EventArgs e)
