@@ -249,7 +249,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.xtraTabControl1.Location = new System.Drawing.Point(2, 12);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.TabPageFactura;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1287, 785);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1498, 846);
             this.xtraTabControl1.TabIndex = 14;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TabPageFactura,
@@ -269,7 +269,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.TabPageFactura.Controls.Add(this.label3);
             this.TabPageFactura.ImageOptions.Image = global::ERP_INTECOLI.Properties.Resources.facturax32;
             this.TabPageFactura.Name = "TabPageFactura";
-            this.TabPageFactura.Size = new System.Drawing.Size(1285, 741);
+            this.TabPageFactura.Size = new System.Drawing.Size(1496, 802);
             this.TabPageFactura.Text = "Facturas";
             // 
             // cmdPrintFact
@@ -316,7 +316,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit2});
-            this.gridControl2.Size = new System.Drawing.Size(1272, 349);
+            this.gridControl2.Size = new System.Drawing.Size(1483, 410);
             this.gridControl2.TabIndex = 14;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -431,7 +431,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(1133, 3);
+            this.simpleButton1.Location = new System.Drawing.Point(1344, 3);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(145, 45);
             this.simpleButton1.TabIndex = 18;
@@ -449,7 +449,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1272, 325);
+            this.gridControl1.Size = new System.Drawing.Size(1483, 325);
             this.gridControl1.TabIndex = 15;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -564,7 +564,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.TabPageBoletaMatricula.Controls.Add(this.dateEdit1);
             this.TabPageBoletaMatricula.ImageOptions.Image = global::ERP_INTECOLI.Properties.Resources.boletax32;
             this.TabPageBoletaMatricula.Name = "TabPageBoletaMatricula";
-            this.TabPageBoletaMatricula.Size = new System.Drawing.Size(1285, 741);
+            this.TabPageBoletaMatricula.Size = new System.Drawing.Size(1496, 802);
             this.TabPageBoletaMatricula.Text = "Boletas Matricula";
             // 
             // dateEdit2
@@ -609,7 +609,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.simpleButton5.Appearance.Options.UseFont = true;
             this.simpleButton5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.simpleButton5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-            this.simpleButton5.Location = new System.Drawing.Point(1133, 3);
+            this.simpleButton5.Location = new System.Drawing.Point(1344, 3);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(145, 46);
             this.simpleButton5.TabIndex = 30;
@@ -640,7 +640,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridControl3.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit3,
             this.btnReprint});
-            this.gridControl3.Size = new System.Drawing.Size(1279, 323);
+            this.gridControl3.Size = new System.Drawing.Size(1490, 384);
             this.gridControl3.TabIndex = 22;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -772,7 +772,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             // simpleButton2
             // 
             this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton2.Location = new System.Drawing.Point(768, 3);
+            this.simpleButton2.Location = new System.Drawing.Point(979, 3);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 26;
@@ -790,7 +790,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridControl4.Name = "gridControl4";
             this.gridControl4.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit4});
-            this.gridControl4.Size = new System.Drawing.Size(1279, 361);
+            this.gridControl4.Size = new System.Drawing.Size(1490, 361);
             this.gridControl4.TabIndex = 23;
             this.gridControl4.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -905,7 +905,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.TabPageLibros.Controls.Add(this.label8);
             this.TabPageLibros.ImageOptions.Image = global::ERP_INTECOLI.Properties.Resources.libro_de_contabilidadx32;
             this.TabPageLibros.Name = "TabPageLibros";
-            this.TabPageLibros.Size = new System.Drawing.Size(1285, 741);
+            this.TabPageLibros.Size = new System.Drawing.Size(1496, 802);
             this.TabPageLibros.Text = "Boleta Libros";
             // 
             // dateEditLibros
@@ -936,7 +936,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridControl5.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit5,
             this.cmdReimprimir});
-            this.gridControl5.Size = new System.Drawing.Size(1279, 332);
+            this.gridControl5.Size = new System.Drawing.Size(1490, 393);
             this.gridControl5.TabIndex = 22;
             this.gridControl5.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView5});
@@ -1096,7 +1096,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.simpleButton3.Appearance.Options.UseFont = true;
             this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(1133, 3);
+            this.simpleButton3.Location = new System.Drawing.Point(1344, 3);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(145, 46);
             this.simpleButton3.TabIndex = 26;
@@ -1114,7 +1114,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridControl6.Name = "gridControl6";
             this.gridControl6.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit6});
-            this.gridControl6.Size = new System.Drawing.Size(1279, 353);
+            this.gridControl6.Size = new System.Drawing.Size(1490, 353);
             this.gridControl6.TabIndex = 23;
             this.gridControl6.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView6});
@@ -1230,7 +1230,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.TabPageReservas.Controls.Add(this.label11);
             this.TabPageReservas.ImageOptions.Image = global::ERP_INTECOLI.Properties.Resources.reservax32;
             this.TabPageReservas.Name = "TabPageReservas";
-            this.TabPageReservas.Size = new System.Drawing.Size(1285, 741);
+            this.TabPageReservas.Size = new System.Drawing.Size(1496, 802);
             this.TabPageReservas.Text = "Reserva de Cupo";
             // 
             // dateEditReservas
@@ -1260,7 +1260,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridControl7.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit7,
             this.cmdReimprimir_});
-            this.gridControl7.Size = new System.Drawing.Size(1279, 363);
+            this.gridControl7.Size = new System.Drawing.Size(1490, 363);
             this.gridControl7.TabIndex = 22;
             this.gridControl7.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView7});
@@ -1411,7 +1411,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.simpleButton4.Appearance.Options.UseFont = true;
             this.simpleButton4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(1133, 3);
+            this.simpleButton4.Location = new System.Drawing.Point(1344, 3);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(145, 46);
             this.simpleButton4.TabIndex = 26;
@@ -1430,7 +1430,7 @@ namespace ERP_INTECOLI.Administracion.Caja
             this.gridControl8.Name = "gridControl8";
             this.gridControl8.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit8});
-            this.gridControl8.Size = new System.Drawing.Size(1279, 326);
+            this.gridControl8.Size = new System.Drawing.Size(1490, 326);
             this.gridControl8.TabIndex = 23;
             this.gridControl8.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView8});
@@ -1542,11 +1542,10 @@ namespace ERP_INTECOLI.Administracion.Caja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1293, 801);
+            this.ClientSize = new System.Drawing.Size(1504, 862);
             this.Controls.Add(this.xtraTabControl1);
             this.IconOptions.ShowIcon = false;
             this.Name = "frmCaja";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.TabPageFactura.ResumeLayout(false);

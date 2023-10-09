@@ -209,10 +209,8 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             // 
             // frmNiveles_Academicos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(948, 525);
-            this.ControlBox = false;
             this.Controls.Add(this.tsHabilitados);
             this.Controls.Add(this.cmdNuevo);
             this.Controls.Add(this.cmdCancelar);

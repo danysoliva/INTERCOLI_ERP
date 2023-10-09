@@ -196,7 +196,7 @@ namespace ERP_INTECOLI
             frmPostearMensualidad mtx = new frmPostearMensualidad(UsuarioLogeado);
             if (mtx != null)
             {
-                mtx.MdiParent = this;
+                //mtx.MdiParent = this;
                 try
                 {
                     mtx.Show();

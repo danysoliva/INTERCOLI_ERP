@@ -672,20 +672,24 @@ namespace ERP_INTECOLI.Administracion.Caja
                     DialogResult r = CajaDialogo.Pregunta("Realmente desea anular esta Boleta?");
                     if (r == DialogResult.Yes)
                     {
-                        //try
-                        //{
-                        //    string sql = @"select * from admon.ft_anular_boleta_v2(:p_id,:p_tipo);";
-                        //    PgSqlCommand cmd = new PgSqlCommand(sql, psConnection);
-                        //    cmd.Parameters.Add("p_id", PgSqlType.Int).Value = row.id;
-                        //    cmd.Parameters.Add("p_tipo", PgSqlType.Int).Value = 3;//boletas de libro
-                        //    cmd.ExecuteScalar();
-                        //    CajaDialogo.Information("Transacción Exitosa!");
-                        //    CargarDatosLibros();
-                        //}
-                        //catch (Exception ec)
-                        //{
-                        //    CajaDialogo.Error(ec.Message);
-                        //}
+                        try
+                        {
+                            //string sql = @"select * from admon.ft_anular_boleta_v2(:p_id,:p_tipo);";
+                            string sql = @"[sp_caja_anular_v2]";
+                            SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                            conn.Open();
+                            SqlCommand cmd = new SqlCommand(sql, conn);
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@id", row.id);
+                            cmd.Parameters.AddWithValue("@tipo_boleta", 3);//boletas de libro
+                            cmd.ExecuteScalar();
+                            CajaDialogo.Information("Transacción Exitosa!");
+                            CargarDatosLibros();
+                        }
+                        catch (Exception ec)
+                        {
+                            CajaDialogo.Error(ec.Message);
+                        }
                     }
                     break;
                 case 4://Reserva
@@ -697,12 +701,16 @@ namespace ERP_INTECOLI.Administracion.Caja
                         try
                         {
                             //string sql = @"select * from admon.ft_anular_boleta_v2(:p_id,:p_tipo);";
-                            //PgSqlCommand cmd = new PgSqlCommand(sql, psConnection);
-                            //cmd.Parameters.Add("p_id", PgSqlType.Int).Value = row1.id;
-                            //cmd.Parameters.Add("p_tipo", PgSqlType.Int).Value = 4;
-                            //cmd.ExecuteScalar();
-                            //CajaDialogo.Information("Transacción Exitosa!");
-                            //CargarDatosReservas();
+                            string sql = @"sp_caja_anular_v2";
+                            SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                            conn.Open();
+                            SqlCommand cmd = new SqlCommand(sql, conn);
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@id", row1.id);
+                            cmd.Parameters.AddWithValue("@tipo_boleta", 4);
+                            cmd.ExecuteScalar();
+                            CajaDialogo.Information("Transacción Exitosa!");
+                            CargarDatosReservas();
                         }
                         catch (Exception ec)
                         {

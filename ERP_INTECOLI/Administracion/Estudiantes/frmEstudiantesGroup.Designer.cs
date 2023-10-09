@@ -337,7 +337,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1134, 575);
-            this.ControlBox = false;
             this.Controls.Add(this.gridEstudiantes);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.btnClose);
@@ -345,10 +344,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.Controls.Add(this.cmdNuevo);
             this.Controls.Add(this.txtParametro);
             this.Controls.Add(this.ultraLabel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmEstudiantesGroup";
             this.Text = "Estudiantes";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.txtParametro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsVerTodos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantes1)).EndInit();

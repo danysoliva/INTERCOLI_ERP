@@ -418,6 +418,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMensualidades.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Transacciones\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transacciones\frmPostearMensualidad.cs">
       <SubType>Form</SubType>
     </Compile>
