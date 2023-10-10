@@ -52,12 +52,12 @@ namespace ERP_INTECOLI
             this.navMovimientoSaldos = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
             this.navCaja = new DevExpress.XtraNavBar.NavBarItem();
+            this.navFastMatricula = new DevExpress.XtraNavBar.NavBarItem();
             this.TabConsultas = new DevExpress.XtraTab.XtraTabPage();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblServerName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.navFastMatricula = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).BeginInit();
             this.xtraTabControlMenu.SuspendLayout();
             this.TabAdministracion.SuspendLayout();
@@ -257,6 +257,13 @@ namespace ERP_INTECOLI
             this.navCaja.Name = "navCaja";
             this.navCaja.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navCaja_LinkClicked);
             // 
+            // navFastMatricula
+            // 
+            this.navFastMatricula.Caption = "Matricula Rapida";
+            this.navFastMatricula.Name = "navFastMatricula";
+            this.navFastMatricula.Visible = false;
+            this.navFastMatricula.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFastMatricula_LinkClicked);
+            // 
             // TabConsultas
             // 
             this.TabConsultas.Name = "TabConsultas";
@@ -296,12 +303,6 @@ namespace ERP_INTECOLI
             // 
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(0, 17);
-            // 
-            // navFastMatricula
-            // 
-            this.navFastMatricula.Caption = "navBarItem1";
-            this.navFastMatricula.Name = "navFastMatricula";
-            this.navFastMatricula.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFastMatricula_LinkClicked);
             // 
             // frmMainMenu
             // 
