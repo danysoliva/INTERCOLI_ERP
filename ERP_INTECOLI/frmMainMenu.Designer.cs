@@ -57,6 +57,7 @@ namespace ERP_INTECOLI
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblServerName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.navFastMatricula = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).BeginInit();
             this.xtraTabControlMenu.SuspendLayout();
             this.TabAdministracion.SuspendLayout();
@@ -113,7 +114,8 @@ namespace ERP_INTECOLI
             this.navPostearMensualidad,
             this.navMovimientoSaldos,
             this.navGeneracionPlanilla,
-            this.navCaja});
+            this.navCaja,
+            this.navFastMatricula});
             this.navBarControl1.Location = new System.Drawing.Point(3, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 204;
@@ -223,7 +225,8 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.navPostearMensualidad),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navMovimientoSaldos),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navGeneracionPlanilla),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navCaja)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navCaja),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navFastMatricula)});
             this.navBarGroup2.Name = "navBarGroup2";
             // 
             // navPostearMensualidad
@@ -294,6 +297,12 @@ namespace ERP_INTECOLI
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(0, 17);
             // 
+            // navFastMatricula
+            // 
+            this.navFastMatricula.Caption = "navBarItem1";
+            this.navFastMatricula.Name = "navFastMatricula";
+            this.navFastMatricula.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFastMatricula_LinkClicked);
+            // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,5 +352,6 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navMovimientoSaldos;
         private DevExpress.XtraNavBar.NavBarItem navGeneracionPlanilla;
         private DevExpress.XtraNavBar.NavBarItem navCaja;
+        private DevExpress.XtraNavBar.NavBarItem navFastMatricula;
     }
 }

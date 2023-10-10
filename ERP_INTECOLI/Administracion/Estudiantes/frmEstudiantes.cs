@@ -222,6 +222,10 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 dsEstudiantes1.niveles_academicos.Clear();
                 adat.Fill(dsEstudiantes1.niveles_academicos);
                 con.Close();
+
+                cbxNivelIngreso.DisplayLayout.Bands[0].Columns["id_nivel"].Hidden = true;
+                cbxNivelIngreso.DisplayLayout.Bands[0].Columns["valor"].Hidden = true;
+                //cbxNivelIngreso.DisplayLayout.
             }
             catch (Exception ec)
             {

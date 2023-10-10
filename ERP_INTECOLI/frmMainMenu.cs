@@ -257,5 +257,10 @@ namespace ERP_INTECOLI
                 
             }
         }
+
+        private void navFastMatricula_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+        }
     }
 }

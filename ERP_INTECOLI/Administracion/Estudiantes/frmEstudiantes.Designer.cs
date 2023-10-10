@@ -634,6 +634,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             // cbxNivelIngreso
             // 
+            this.cbxNivelIngreso.AutoSuggestFilterMode = Infragistics.Win.AutoSuggestFilterMode.Contains;
             this.cbxNivelIngreso.DataMember = "niveles_academicos";
             this.cbxNivelIngreso.DataSource = this.dsEstudiantesBindingSource;
             appearance1.BackColor = System.Drawing.SystemColors.Window;

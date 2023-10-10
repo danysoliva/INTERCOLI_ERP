@@ -87,7 +87,16 @@ namespace ERP_INTECOLI.Administracion.Matricula
                     if (Convert.ToInt32(row["id_nivel"]) == Convert.ToInt32(grNivel.EditValue))
                     {
                         txtValor.Text = row["valor"].ToString();
-                        Valor = Convert.ToDecimal(txtValor.Text);
+
+                        if (string.IsNullOrEmpty(txtValor.Text))
+                        {
+                            Valor = 0;
+                        }
+                        else
+                        {
+                            Valor = Convert.ToDecimal(txtValor.Text);
+                        }
+                        
                         break;
                     }
                 }

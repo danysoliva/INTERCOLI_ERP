@@ -424,6 +424,12 @@
     <Compile Include="Transacciones\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transacciones\frmFastMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\frmFastMatricula.Designer.cs">
+      <DependentUpon>frmFastMatricula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transacciones\frmPostearMensualidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -572,6 +578,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Transacciones\frmFastMatricula.resx">
+      <DependentUpon>frmFastMatricula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transacciones\frmPostearMensualidad.resx">
       <DependentUpon>frmPostearMensualidad.cs</DependentUpon>
     </EmbeddedResource>
