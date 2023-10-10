@@ -591,7 +591,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.rdGraduado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.rdGraduado.Location = new System.Drawing.Point(492, 147);
             this.rdGraduado.Name = "rdGraduado";
-            this.rdGraduado.Size = new System.Drawing.Size(87, 20);
+            this.rdGraduado.Size = new System.Drawing.Size(86, 20);
             this.rdGraduado.TabIndex = 50;
             this.rdGraduado.TabStop = true;
             this.rdGraduado.Text = "Graduado";
@@ -604,7 +604,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.rdDesertor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.rdDesertor.Location = new System.Drawing.Point(408, 147);
             this.rdDesertor.Name = "rdDesertor";
-            this.rdDesertor.Size = new System.Drawing.Size(78, 20);
+            this.rdDesertor.Size = new System.Drawing.Size(77, 20);
             this.rdDesertor.TabIndex = 49;
             this.rdDesertor.TabStop = true;
             this.rdDesertor.Text = "Desertor";
@@ -616,7 +616,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.chkReingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkReingreso.Location = new System.Drawing.Point(408, 116);
             this.chkReingreso.Name = "chkReingreso";
-            this.chkReingreso.Size = new System.Drawing.Size(178, 20);
+            this.chkReingreso.Size = new System.Drawing.Size(177, 20);
             this.chkReingreso.TabIndex = 48;
             this.chkReingreso.Text = "Es de Reingreso o Retiro";
             this.chkReingreso.UseVisualStyleBackColor = true;
@@ -627,7 +627,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.chkSeguimientoSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkSeguimientoSaldo.Location = new System.Drawing.Point(408, 80);
             this.chkSeguimientoSaldo.Name = "chkSeguimientoSaldo";
-            this.chkSeguimientoSaldo.Size = new System.Drawing.Size(141, 20);
+            this.chkSeguimientoSaldo.Size = new System.Drawing.Size(140, 20);
             this.chkSeguimientoSaldo.TabIndex = 47;
             this.chkSeguimientoSaldo.Text = "Seguimiento Saldo";
             this.chkSeguimientoSaldo.UseVisualStyleBackColor = true;
@@ -1074,6 +1074,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // tabLogAcceso
             // 
             this.tabLogAcceso.Name = "tabLogAcceso";
+            this.tabLogAcceso.PageVisible = false;
             this.tabLogAcceso.Size = new System.Drawing.Size(840, 550);
             this.tabLogAcceso.Text = "Log Ingresos";
             // 
