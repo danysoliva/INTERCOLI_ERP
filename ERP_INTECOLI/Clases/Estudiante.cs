@@ -43,7 +43,7 @@ namespace ERP_INTECOLI.Clases
             Posterior = 2
         }
 
-        public bool RecuperarRegistro(long pidEstudiante)
+        public bool RecuperarRegistro(Int64 pidEstudiante)
         {
             bool Recuperado = false;
 
@@ -120,7 +120,7 @@ namespace ERP_INTECOLI.Clases
             return r;
         }
 
-        public bool TieneMatricula(long p_idEstudiante)
+        public bool TieneMatricula(Int64 p_idEstudiante)
         {
             try
             {
@@ -163,114 +163,111 @@ namespace ERP_INTECOLI.Clases
         }
 
 
-        //public int InsertEstudiante(UserLogin pUserLog)
-        //{
-        //    //bool a = true;
-        //    //int id_student = 0;
-        //    ////PgSqlTransaction tran1 = psConnection.BeginTransaction();
-        //    //try
-        //    //{
-        //    //    string sql1 = @"SELECT id_siguiente
-        //    //                      FROM admon.tablas_id tb
-        //    //                     where tb.nombre_tabla = 'estudiante';";
-        //    //    PgSqlCommand cmd1 = new PgSqlCommand(sql1, psConnection);
-        //    //    int vIdEstudiante = Convert.ToInt32(cmd1.ExecuteScalar());
-        //    //    id_student = vIdEstudiante;
-        //    //    string sql = @"INSERT INTO admon.estudiante(
-        //    //                                                id_estudiante, 
-        //    //                                                numero_identidad,
-        //    //                                                nombres, 
-        //    //                                                apellidos,
-        //    //                                                direccion, 
-        //    //                                                fecha_nacimiento, 
-        //    //                                                fecha_ingreso, 
-        //    //                                                nivel_id_ingreso, 
-        //    //                                                sexo,
-        //    //                                                correo, 
-        //    //                                                id_usuario,
-        //    //                                                id_zona,
-        //    //                                                id_tarjeta,
-        //    //                                                id_estudiante_recomendo,
-        //    //                                                nombre_recomendo)
-        //    //                                        VALUES (
-        //    //                                                :id_estudiante, 
-        //    //                                                :numero_identidad,
-        //    //                                                :nombres, 
-        //    //                                                :apellidos,
-        //    //                                                :direccion, 
-        //    //                                                :fecha_nacimiento, 
-        //    //                                                :fecha_ingreso, 
-        //    //                                                :nivel_id_ingreso, 
-        //    //                                                :sexo,
-        //    //                                                :correo, 
-        //    //                                                :id_usuario,
-        //    //                                                :id_zona,
-        //    //                                                :id_tarjeta,
-        //    //                                                :id_estudiante_recomendo,
-        //    //                                                :nombre_recomendo);";
-        //    //    PgSqlCommand cmd2 = new PgSqlCommand(sql, psConnection);
-        //    //    cmd2.Parameters.Add("id_estudiante", PgSqlType.Int).Value = vIdEstudiante;
-        //    //    cmd2.Parameters.Add("numero_identidad", PgSqlType.VarChar).Value = identidad;
-        //    //    cmd2.Parameters.Add("nombres", PgSqlType.VarChar).Value = Nombres;
-        //    //    cmd2.Parameters.Add("apellidos", PgSqlType.VarChar).Value = Apellidos;
-        //    //    cmd2.Parameters.Add("direccion", PgSqlType.VarChar).Value = Direccion;
-        //    //    cmd2.Parameters.Add("fecha_nacimiento", PgSqlType.Date).Value = FechaNacimiento;
-        //    //    cmd2.Parameters.Add("fecha_ingreso", PgSqlType.Date).Value = FechaIngreso;
+        public Int64 InsertEstudiante(UserLogin pUserLog)
+        {
+            bool a = true;
+            Int64 id_student = 0;
+            //PgSqlTransaction tran1 = psConnection.BeginTransaction();
+            try
+            {
+                //string sql1 = @"SELECT id_siguiente
+                //                  FROM tablas_id tb
+                //                 where tb.nombre_tabla = 'estudiante';";
+                
+                //SqlCommand cmd1 = new SqlCommand(sql1, conn);
+                //int vIdEstudiante = Convert.ToInt32(cmd1.ExecuteScalar());
+                //id_student = vIdEstudiante;
 
-        //    //    if (IdNivelIngreso > 0)
-        //    //        cmd2.Parameters.Add("nivel_id_ingreso", PgSqlType.Int).Value = IdNivelIngreso;
-        //    //    else
-        //    //        cmd2.Parameters.Add("nivel_id_ingreso", PgSqlType.Int).Value = DBNull.Value;
+                //string sql = @"INSERT INTO admon.estudiante(
+                //                                            id_estudiante, 
+                //                                            numero_identidad,
+                //                                            nombres, 
+                //                                            apellidos,
+                //                                            direccion, 
+                //                                            fecha_nacimiento, 
+                //                                            fecha_ingreso, 
+                //                                            nivel_id_ingreso, 
+                //                                            sexo,
+                //                                            correo, 
+                //                                            id_usuario,
+                //                                            id_zona,
+                //                                            id_tarjeta,
+                //                                            id_estudiante_recomendo,
+                //                                            nombre_recomendo)
+                //                                    VALUES (
+                //                                            :id_estudiante, 
+                //                                            :numero_identidad,
+                //                                            :nombres, 
+                //                                            :apellidos,
+                //                                            :direccion, 
+                //                                            :fecha_nacimiento, 
+                //                                            :fecha_ingreso, 
+                //                                            :nivel_id_ingreso, 
+                //                                            :sexo,
+                //                                            :correo, 
+                //                                            :id_usuario,
+                //                                            :id_zona,
+                //                                            :id_tarjeta,
+                //                                            :id_estudiante_recomendo,
+                //                                            :nombre_recomendo);";
+                string sql = @"sp_estudiante_insert_desde_clase";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd2 = new SqlCommand(sql, conn);
+                cmd2.CommandType = CommandType.StoredProcedure;
+                cmd2.Parameters.AddWithValue("@numero_identidad",  identidad);
+                cmd2.Parameters.AddWithValue("@nombres", Nombres);
+                cmd2.Parameters.AddWithValue("@apellidos", Apellidos);
+                cmd2.Parameters.AddWithValue("@direccion", Direccion);
+                cmd2.Parameters.AddWithValue("@fecha_nacimiento", FechaNacimiento);
+                cmd2.Parameters.AddWithValue("@fecha_ingreso", FechaIngreso);
 
-        //    //    if (char.IsLetter(Sexo))
-        //    //        cmd2.Parameters.Add("sexo", PgSqlType.Char).Value = Sexo;
-        //    //    else
-        //    //        cmd2.Parameters.Add("sexo", PgSqlType.Char).Value = null;
+                if (IdNivelIngreso > 0)
+                    cmd2.Parameters.AddWithValue("@nivel_id_ingreso", IdNivelIngreso);
+                else
+                    cmd2.Parameters.AddWithValue("@nivel_id_ingreso",DBNull.Value);
 
-        //    //    cmd2.Parameters.Add("correo", PgSqlType.VarChar).Value = Correo;
+                if (!string.IsNullOrEmpty(Sexo))
+                    cmd2.Parameters.AddWithValue("@sexo", Sexo);
+                else
+                    cmd2.Parameters.AddWithValue("@sexo", null);
 
-        //    //    if (pUserLog.id_usuario > 0)
-        //    //        cmd2.Parameters.Add("id_usuario", PgSqlType.Int).Value = pUserLog.id_usuario;
-        //    //    else
-        //    //        cmd2.Parameters.Add("id_usuario", PgSqlType.Int).Value = DBNull.Value;
+                cmd2.Parameters.AddWithValue("@correo", Correo);
 
-        //    //    if (IdZona > 0)
-        //    //        cmd2.Parameters.Add("id_zona", PgSqlType.Int).Value = IdZona;
-        //    //    else
-        //    //        cmd2.Parameters.Add("id_zona", PgSqlType.Int).Value = DBNull.Value;
+                if (pUserLog.Id > 0)
+                    cmd2.Parameters.AddWithValue("@id_usuario", pUserLog.Id);
+                else
+                    cmd2.Parameters.AddWithValue("@id_usuario", DBNull.Value);
 
-        //    //    if (!string.IsNullOrEmpty(IdToken))
-        //    //        cmd2.Parameters.Add("id_tarjeta", PgSqlType.VarChar).Value = IdToken;
-        //    //    else
-        //    //        cmd2.Parameters.Add("id_tarjeta", PgSqlType.VarChar).Value = DBNull.Value;
+                if (IdZona > 0)
+                    cmd2.Parameters.AddWithValue("@id_zona", IdZona);
+                else
+                    cmd2.Parameters.AddWithValue("@id_zona", DBNull.Value);
 
-        //    //    if (IdEstudianteRecomendo == 0)
-        //    //        cmd2.Parameters.Add("id_estudiante_recomendo", PgSqlType.VarChar).Value = DBNull.Value;
-        //    //    else
-        //    //        cmd2.Parameters.Add("id_estudiante_recomendo", PgSqlType.VarChar).Value = IdEstudianteRecomendo;
+                if (!string.IsNullOrEmpty(IdToken))
+                    cmd2.Parameters.AddWithValue("@id_tarjeta", IdToken);
+                else
+                    cmd2.Parameters.AddWithValue("@id_tarjeta",DBNull.Value);
 
-        //    //    cmd2.Parameters.Add("nombre_recomendo", PgSqlType.VarChar).Value = NameEstudianteRecomendo;
+                if (IdEstudianteRecomendo == 0)
+                    cmd2.Parameters.AddWithValue("@id_estudiante_recomendo", DBNull.Value);
+                else
+                    cmd2.Parameters.AddWithValue("@id_estudiante_recomendo", IdEstudianteRecomendo);
 
-        //    //    cmd2.ExecuteScalar();
+                cmd2.Parameters.AddWithValue("@nombre_recomendo", NameEstudianteRecomendo);
 
-        //    //    string sql3 = @"UPDATE admon.tablas_id
-        //    //                       SET id_siguiente = :id
-        //    //                    WHERE nombre_tabla = 'estudiante';";
+                id_student = Convert.ToInt64(cmd2.ExecuteScalar());
 
-        //    //    PgSqlCommand cmd3 = new PgSqlCommand(sql3, psConnection);
-        //    //    cmd3.Parameters.Add("id", PgSqlType.Int).Value = vIdEstudiante + 1;
-        //    //    cmd3.ExecuteScalar();
-        //    //    //tran1.Commit();
-        //    //    CajaDialogo.CajaDialogo.Information("Guardado con exito!");
-        //    //    a = true;
-        //    //}
-        //    //catch (Exception ec)
-        //    //{
-        //    //    //tran1.Rollback();
-        //    //    a = false;
-        //    //    throw new Exception("No se pudo guardar el Estudiante!", ec);
-        //    //}
-        //    //return id_student;
-        //}
+                CajaDialogo.Information("Guardado con exito!");
+                a = true;
+            }
+            catch (Exception ec)
+            {
+                //tran1.Rollback();
+                a = false;
+                throw new Exception("No se pudo guardar el Estudiante!", ec);
+            }
+            return id_student;
+        }
     }
 }

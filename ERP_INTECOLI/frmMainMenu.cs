@@ -260,7 +260,18 @@ namespace ERP_INTECOLI
 
         private void navFastMatricula_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            frmFastMatricula mtx = new frmFastMatricula(this.UsuarioLogeado);
+            if (mtx != null)
+            {
 
+                mtx.MdiParent = this;
+                try
+                {
+                    mtx.Show();
+                }
+                catch { }
+
+            }
         }
     }
 }

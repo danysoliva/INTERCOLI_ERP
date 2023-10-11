@@ -105,7 +105,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 txtRecomendo.Text = est.NameEstudianteRecomendo;
             }
 
-            cbxNivelIngreso.Value = est.IdNivelIngreso;
+            cbxNivelIngreso2.EditValue = est.IdNivelIngreso;
             txtEmail.Text = est.Correo;
 
             chkReingreso.Checked = est.Reingreso_Retiro;
@@ -357,7 +357,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                    
                     Estudiante est = new Estudiante();
 
-                    if (est.ValidarIdDisponible(txtIdentidad.Text.Trim()))
+                    if (!est.ValidarIdDisponible(txtIdentidad.Text.Trim()))
                     {
                         CajaDialogo.Error("Este Numero de Identidad ya Existe!");
                         return;
@@ -383,8 +383,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                         cmd.Parameters.AddWithValue("@direccion",txtDireccion.Text);
                         cmd.Parameters.AddWithValue("@fecha_nacimiento",dtFechaNac.EditValue);
 
-                        if (Convert.ToInt32(cbxNivelIngreso.Value) > 0)
-                            cmd.Parameters.AddWithValue("@nivel_id_ingreso", cbxNivelIngreso.Value);
+                        if (Convert.ToInt32(cbxNivelIngreso2.EditValue) > 0)
+                            cmd.Parameters.AddWithValue("@nivel_id_ingreso", cbxNivelIngreso2.EditValue);
                         else
                             cmd.Parameters.AddWithValue("@nivel_id_ingreso", DBNull.Value);
 
@@ -532,8 +532,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                         else //Anterior 
                             cmd.Parameters.AddWithValue("@tipo_pago", 1);
 
-                        if (Convert.ToInt32(cbxNivelIngreso.Value) > 0)
-                            cmd.Parameters.AddWithValue("@nivel_id_ingreso", cbxNivelIngreso.Value);
+                        if (Convert.ToInt32(cbxNivelIngreso2.EditValue) > 0)
+                            cmd.Parameters.AddWithValue("@nivel_id_ingreso", cbxNivelIngreso2.EditValue);
                         else
                             cmd.Parameters.AddWithValue("@nivel_id_ingreso", DBNull.Value);
 

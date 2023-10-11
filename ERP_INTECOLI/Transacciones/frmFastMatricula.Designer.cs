@@ -67,14 +67,14 @@ namespace ERP_INTECOLI.Transacciones
             this.cmdCancelar.FlatAppearance.BorderSize = 2;
             this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
             this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdCancelar.Location = new System.Drawing.Point(231, 186);
+            this.cmdCancelar.Location = new System.Drawing.Point(203, 186);
             this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(92, 40);
+            this.cmdCancelar.Size = new System.Drawing.Size(120, 47);
             this.cmdCancelar.TabIndex = 19;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmdCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cmdCancelar.UseVisualStyleBackColor = false;
             this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
@@ -84,14 +84,14 @@ namespace ERP_INTECOLI.Transacciones
             this.cmdGuardar.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
             this.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdGuardar.Image = global::ERP_INTECOLI.Properties.Resources.save;
             this.cmdGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdGuardar.Location = new System.Drawing.Point(92, 186);
+            this.cmdGuardar.Location = new System.Drawing.Point(41, 186);
             this.cmdGuardar.Name = "cmdGuardar";
-            this.cmdGuardar.Size = new System.Drawing.Size(92, 40);
+            this.cmdGuardar.Size = new System.Drawing.Size(120, 47);
             this.cmdGuardar.TabIndex = 18;
             this.cmdGuardar.Text = "Guardar";
             this.cmdGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cmdGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cmdGuardar.UseVisualStyleBackColor = false;
             this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 

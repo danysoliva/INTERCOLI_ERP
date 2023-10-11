@@ -53,7 +53,6 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
             this.navCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navFastMatricula = new DevExpress.XtraNavBar.NavBarItem();
-            this.TabConsultas = new DevExpress.XtraTab.XtraTabPage();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,8 +75,7 @@ namespace ERP_INTECOLI
             this.xtraTabControlMenu.Size = new System.Drawing.Size(209, 759);
             this.xtraTabControlMenu.TabIndex = 0;
             this.xtraTabControlMenu.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.TabAdministracion,
-            this.TabConsultas});
+            this.TabAdministracion});
             this.xtraTabControlMenu.Visible = false;
             // 
             // TabAdministracion
@@ -260,15 +258,9 @@ namespace ERP_INTECOLI
             // navFastMatricula
             // 
             this.navFastMatricula.Caption = "Matricula Rapida";
+            this.navFastMatricula.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navFastMatricula.ImageOptions.SvgImage")));
             this.navFastMatricula.Name = "navFastMatricula";
-            this.navFastMatricula.Visible = false;
             this.navFastMatricula.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFastMatricula_LinkClicked);
-            // 
-            // TabConsultas
-            // 
-            this.TabConsultas.Name = "TabConsultas";
-            this.TabConsultas.Size = new System.Drawing.Size(207, 734);
-            this.TabConsultas.Text = "Transacciones";
             // 
             // statusStrip1
             // 
@@ -347,7 +339,6 @@ namespace ERP_INTECOLI
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private DevExpress.XtraNavBar.NavBarItem navCRUDPermisos;
         private DevExpress.XtraNavBar.NavBarItem navConsultaMatriculado;
-        private XtraTabPage TabConsultas;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
         private DevExpress.XtraNavBar.NavBarItem navPostearMensualidad;
         private DevExpress.XtraNavBar.NavBarItem navMovimientoSaldos;
