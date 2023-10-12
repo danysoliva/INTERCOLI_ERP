@@ -288,6 +288,7 @@ namespace ERP_INTECOLI
             // navBarReservaCupo
             // 
             this.navBarReservaCupo.Caption = "Reserva de Cupo";
+            this.navBarReservaCupo.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.reservadox32;
             this.navBarReservaCupo.Name = "navBarReservaCupo";
             this.navBarReservaCupo.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarReservaCupo_LinkClicked);
             // 
