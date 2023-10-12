@@ -53,6 +53,9 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
             this.navCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navFastMatricula = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarAsistenciaManual = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarEstadoCuenta = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarReservaCupo = new DevExpress.XtraNavBar.NavBarItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -113,7 +116,10 @@ namespace ERP_INTECOLI
             this.navMovimientoSaldos,
             this.navGeneracionPlanilla,
             this.navCaja,
-            this.navFastMatricula});
+            this.navFastMatricula,
+            this.navBarAsistenciaManual,
+            this.navBarEstadoCuenta,
+            this.navBarReservaCupo});
             this.navBarControl1.Location = new System.Drawing.Point(3, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 204;
@@ -224,7 +230,10 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.navMovimientoSaldos),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navGeneracionPlanilla),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navCaja),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navFastMatricula)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navFastMatricula),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarAsistenciaManual),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarEstadoCuenta),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarReservaCupo)});
             this.navBarGroup2.Name = "navBarGroup2";
             // 
             // navPostearMensualidad
@@ -261,6 +270,26 @@ namespace ERP_INTECOLI
             this.navFastMatricula.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navFastMatricula.ImageOptions.SvgImage")));
             this.navFastMatricula.Name = "navFastMatricula";
             this.navFastMatricula.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFastMatricula_LinkClicked);
+            // 
+            // navBarAsistenciaManual
+            // 
+            this.navBarAsistenciaManual.Caption = "Marca Asistencia Manual";
+            this.navBarAsistenciaManual.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.seguro_32x;
+            this.navBarAsistenciaManual.Name = "navBarAsistenciaManual";
+            this.navBarAsistenciaManual.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarAsistenciaManual_LinkClicked);
+            // 
+            // navBarEstadoCuenta
+            // 
+            this.navBarEstadoCuenta.Caption = "Estado de Cuenta";
+            this.navBarEstadoCuenta.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.presupuestox32;
+            this.navBarEstadoCuenta.Name = "navBarEstadoCuenta";
+            this.navBarEstadoCuenta.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarEstadoCuenta_LinkClicked);
+            // 
+            // navBarReservaCupo
+            // 
+            this.navBarReservaCupo.Caption = "Reserva de Cupo";
+            this.navBarReservaCupo.Name = "navBarReservaCupo";
+            this.navBarReservaCupo.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarReservaCupo_LinkClicked);
             // 
             // statusStrip1
             // 
@@ -345,5 +374,8 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navGeneracionPlanilla;
         private DevExpress.XtraNavBar.NavBarItem navCaja;
         private DevExpress.XtraNavBar.NavBarItem navFastMatricula;
+        private DevExpress.XtraNavBar.NavBarItem navBarAsistenciaManual;
+        private DevExpress.XtraNavBar.NavBarItem navBarEstadoCuenta;
+        private DevExpress.XtraNavBar.NavBarItem navBarReservaCupo;
     }
 }

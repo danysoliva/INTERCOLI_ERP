@@ -273,5 +273,27 @@ namespace ERP_INTECOLI
 
             }
         }
+
+        private void navBarAsistenciaManual_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmAsistenciaManual frm = new frmAsistenciaManual(this.UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void navBarEstadoCuenta_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //aqui van permisos
+            frmEstadoCuenta frm = new frmEstadoCuenta(this.UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void navBarReservaCupo_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmReservaCupoTransaction frm = new frmReservaCupoTransaction(this.UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

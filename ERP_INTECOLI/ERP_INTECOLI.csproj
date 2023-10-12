@@ -376,6 +376,12 @@
     <Compile Include="Clases\Saldos.cs" />
     <Compile Include="Clases\Teclado.cs" />
     <Compile Include="Clases\UserLogin.cs" />
+    <Compile Include="Componentes\DFButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\DFButton.Designer.cs">
+      <DependentUpon>DFButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="dsRecordatorios.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -424,6 +430,18 @@
     <Compile Include="Transacciones\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transacciones\frmAsistenciaManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\frmAsistenciaManual.Designer.cs">
+      <DependentUpon>frmAsistenciaManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones\frmEstadoCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\frmEstadoCuenta.Designer.cs">
+      <DependentUpon>frmEstadoCuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transacciones\frmFastMatricula.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -435,6 +453,12 @@
     </Compile>
     <Compile Include="Transacciones\frmPostearMensualidad.Designer.cs">
       <DependentUpon>frmPostearMensualidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones\frmReservaCupoTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\frmReservaCupoTransaction.Designer.cs">
+      <DependentUpon>frmReservaCupoTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios\dsUsuarios.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -578,11 +602,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Transacciones\frmAsistenciaManual.resx">
+      <DependentUpon>frmAsistenciaManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\frmEstadoCuenta.resx">
+      <DependentUpon>frmEstadoCuenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transacciones\frmFastMatricula.resx">
       <DependentUpon>frmFastMatricula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transacciones\frmPostearMensualidad.resx">
       <DependentUpon>frmPostearMensualidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\frmReservaCupoTransaction.resx">
+      <DependentUpon>frmReservaCupoTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmMantVentanas.resx">
       <DependentUpon>frmMantVentanas.cs</DependentUpon>
@@ -811,6 +844,7 @@
     <Content Include="Resources\new_48x48.png" />
     <Content Include="Resources\next_x16.png" />
     <Content Include="Resources\Niveles x32.png" />
+    <None Include="Resources\presupuestox32.png" />
     <Content Include="Resources\reaload_24x24.png" />
     <Content Include="Resources\reaload_32x32.png" />
     <Content Include="Resources\refresh-button32px.png" />
@@ -823,6 +857,7 @@
     <Content Include="Resources\save.png" />
     <Content Include="Resources\saveChanges_24x24.png" />
     <Content Include="Resources\saveChanges_32x32.png" />
+    <None Include="Resources\savex32.png" />
     <Content Include="Resources\save_24x24.png" />
     <Content Include="Resources\save_32x32.png" />
     <Content Include="Resources\search_16x16.png" />
@@ -830,6 +865,7 @@
     <Content Include="Resources\search_32x32.png" />
     <None Include="Resources\tarjeta-de-creditox16.png" />
     <None Include="Resources\transferencia-movilx16.png" />
+    <None Include="Resources\seguro_32x.png" />
     <Content Include="Resources\Upload-Folder-icon.png" />
     <None Include="Resources\userx32.png" />
     <Content Include="Resources\_click_24X24.png" />
