@@ -158,6 +158,40 @@
     <Compile Include="Administracion\Caja\frmTipoPago.Designer.cs">
       <DependentUpon>frmTipoPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\ConsultaMiembros\dsMiembrosClase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMiembrosClase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.Designer.cs">
+      <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaCumpleanieros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaCumpleanieros.Designer.cs">
+      <DependentUpon>frmConsultaCumpleanieros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\SaldosProyeccion\dsProyeccionSaldos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProyeccionSaldos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\SaldosProyeccion\frmConsultaTipoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\SaldosProyeccion\frmConsultaTipoPago.Designer.cs">
+      <DependentUpon>frmConsultaTipoPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\SaldosProyeccion\frmSaldosAjustados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\SaldosProyeccion\frmSaldosAjustados.Designer.cs">
+      <DependentUpon>frmSaldosAjustados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Cursos\dsCursos_.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -498,6 +532,12 @@
     <EmbeddedResource Include="Administracion\Caja\frmTipoPago.resx">
       <DependentUpon>frmTipoPago.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.resx">
+      <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\SaldosProyeccion\frmSaldosAjustados.resx">
+      <DependentUpon>frmSaldosAjustados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Estudiantes\frmagregar_rtn.resx">
       <DependentUpon>frmagregar_rtn.cs</DependentUpon>
     </EmbeddedResource>
@@ -733,6 +773,28 @@
     <None Include="Administracion\Planilla\dsPlanilla.xss">
       <DependentUpon>dsPlanilla.xsd</DependentUpon>
     </None>
+    <None Include="Consultas\ConsultaMiembros\dsMiembrosClase.xsc">
+      <DependentUpon>dsMiembrosClase.xsd</DependentUpon>
+    </None>
+    <None Include="Consultas\ConsultaMiembros\dsMiembrosClase.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMiembrosClase.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Consultas\ConsultaMiembros\dsMiembrosClase.xss">
+      <DependentUpon>dsMiembrosClase.xsd</DependentUpon>
+    </None>
+    <None Include="Consultas\SaldosProyeccion\dsProyeccionSaldos.xsc">
+      <DependentUpon>dsProyeccionSaldos.xsd</DependentUpon>
+    </None>
+    <None Include="Consultas\SaldosProyeccion\dsProyeccionSaldos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProyeccionSaldos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Consultas\SaldosProyeccion\dsProyeccionSaldos.xss">
+      <DependentUpon>dsProyeccionSaldos.xsd</DependentUpon>
+    </None>
     <None Include="dsRecordatorios.xsc">
       <DependentUpon>dsRecordatorios.xsd</DependentUpon>
     </None>
@@ -794,6 +856,7 @@
     <Content Include="Resources\Accept_32x32.png" />
     <Content Include="Resources\Accept_48x48.png" />
     <Content Include="Resources\access.png" />
+    <None Include="Resources\actualizar_32.png" />
     <Content Include="Resources\add%281%29.png" />
     <Content Include="Resources\add_16x16.png" />
     <Content Include="Resources\add_24x24.png" />
@@ -845,6 +908,7 @@
     <Content Include="Resources\next_x16.png" />
     <Content Include="Resources\Niveles x32.png" />
     <None Include="Resources\presupuestox32.png" />
+    <None Include="Resources\proyeccion_32.png" />
     <Content Include="Resources\reaload_24x24.png" />
     <Content Include="Resources\reaload_32x32.png" />
     <Content Include="Resources\refresh-button32px.png" />

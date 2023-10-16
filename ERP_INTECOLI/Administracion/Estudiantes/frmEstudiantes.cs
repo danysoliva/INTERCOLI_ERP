@@ -22,7 +22,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private int Idestudiante = 0;
         //Estudiante vEstudiante;
         ArrayList ListaTelefonos;
-        private int IdEstudianteRecomendo = 0;
+        private Int64 IdEstudianteRecomendo = 0;
         
         public enum TipoEdicion
         { 

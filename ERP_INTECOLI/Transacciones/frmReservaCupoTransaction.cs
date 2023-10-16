@@ -204,5 +204,100 @@ namespace ERP_INTECOLI.Transacciones
         {
             Loadreservas();
         }
+
+        private void LimpiarVentana()
+        {
+            vEstudiante = new Estudiante();
+            txtEstudiante.Text = "";
+            IdSeccion = 0;
+            IdNivel = 0;
+            spindValor.Value = 0;
+            txtComentario.Text = "";
+            dsNuevoCursoMatricula1.secciones.Clear();
+            CargarNiveles();
+            gridNivel.EditValue = DBNull.Value;
+            IdNivel = 0;
+            //ConfiguracionSuccess dp = new ConfiguracionSuccess(psConnection);
+            dtFecha.Value = dp.Now();
+        }
+
+        private void cmdAplicar_Click(object sender, EventArgs e)
+        {
+            //Guardar Datos
+            if (IdNivel == 0)
+            {
+                CajaDialogo.Error("Es necesario definir el nivel!");
+                gridNivel.Focus();
+                return;
+            }
+            if (IdSeccion == 0)
+            {
+                CajaDialogo.Error("Es necesario definir la Sección!");
+                listboxSecciones.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtComentario.Text))
+            {
+                //CajaDialogo.Error("Es necesario ingresar el nombre del Libro!");
+                //return;
+            }
+
+            if (string.IsNullOrEmpty(txtEstudiante.Text))
+            {
+                if (TSisEstudiante.IsOn)
+                    CajaDialogo.Error("Es necesario Seleccionar un Estudiante!");
+                else
+                    CajaDialogo.Error("Es necesario escribir el nombre del Estudiante!");
+
+                return;
+            }
+
+            if (Valor <= 0)
+            {
+                CajaDialogo.Error("El valor del libro debe ser mayor a cero (0)");
+                return;
+            }
+
+            try
+            {
+                //string SQL = @"select * from admon.ft_insert_boleta_reserva_cupo(:pid_est,
+                //                                                                  :pid_nivel,
+                //                                                                  :pid_seccion,
+                //                                                                  :pvalor,
+                //                                                                  :pfecha,
+                //                                                                  :pcomentario,
+                //                                                                  :pid_user,
+                //                                                                  :pnombre);";
+                string sql = @"sp_insert_boleta_reserva_cupo";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                if (TSisEstudiante.IsOn)
+                    cmd.Parameters.AddWithValue("@id_est", vEstudiante.IdEstudiante);
+                else
+                    cmd.Parameters.AddWithValue("@id_est", DBNull.Value);
+
+                cmd.Parameters.AddWithValue("@id_ivel", IdNivel);
+                cmd.Parameters.AddWithValue("@id_seccion", IdSeccion);
+                cmd.Parameters.AddWithValue("@valor", spindValor.Value);
+                cmd.Parameters.AddWithValue("@fecha", dtFecha.Value);
+                cmd.Parameters.AddWithValue("@comentario", txtComentario.Text);
+                cmd.Parameters.AddWithValue("@id_user", UsuarioLogueado.Id);
+                cmd.Parameters.AddWithValue("@nombre", txtEstudiante.Text);
+                string id = cmd.ExecuteScalar().ToString();
+
+                CajaDialogo.Information("Se creo con exito la Reserva de Cupo #" + id);
+                LimpiarVentana();
+                //this.DialogResult = DialogResult.Cancel;
+                //this.Close();
+            }
+            catch (Exception ec)
+            {
+                CajaDialogo.Error(ec.Message);
+            }
+
+        }
     }
 }

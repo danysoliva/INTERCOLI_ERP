@@ -40,7 +40,13 @@ namespace ERP_INTECOLI.Transacciones
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.gridNivel = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.nivelesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsNuevoCursoMatricula1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsNuevoCursoMatricula1 = new ERP_INTECOLI.Administracion.Matricula.dsNuevoCursoMatricula();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colid_nivel1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colvalor1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.spindValor = new DevExpress.XtraEditors.SpinEdit();
             this.listboxSecciones = new DevExpress.XtraEditors.ListBoxControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -53,9 +59,16 @@ namespace ERP_INTECOLI.Transacciones
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.TabConsultaReserva = new DevExpress.XtraTab.XtraTabPage();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.TSverNulas = new DevExpress.XtraEditors.ToggleSwitch();
+            this.btnExport = new DevExpress.XtraEditors.SimpleButton();
+            this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
+            this.dtHasta = new System.Windows.Forms.DateTimePicker();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.dtDesde = new System.Windows.Forms.DateTimePicker();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.dsNuevoCursoMatricula1 = new ERP_INTECOLI.Administracion.Matricula.dsNuevoCursoMatricula();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colidestudiante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnombre_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -76,35 +89,22 @@ namespace ERP_INTECOLI.Transacciones
             this.colid_tipo_pago = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltipo_pago_nombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colfecha_pagado = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.dtDesde = new System.Windows.Forms.DateTimePicker();
-            this.dtHasta = new System.Windows.Forms.DateTimePicker();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
-            this.btnExport = new DevExpress.XtraEditors.SimpleButton();
-            this.TSverNulas = new DevExpress.XtraEditors.ToggleSwitch();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.dsNuevoCursoMatricula1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nivelesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.colid_nivel1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colvalor1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.TabNuevaReserva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridNivel.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nivelesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsNuevoCursoMatricula1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsNuevoCursoMatricula1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spindValor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listboxSecciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstudiante.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TSisEstudiante.Properties)).BeginInit();
             this.TabConsultaReserva.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TSverNulas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsNuevoCursoMatricula1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TSverNulas.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsNuevoCursoMatricula1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nivelesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -158,7 +158,8 @@ namespace ERP_INTECOLI.Transacciones
             this.cmdAplicar.Name = "cmdAplicar";
             this.cmdAplicar.Size = new System.Drawing.Size(104, 47);
             this.cmdAplicar.TabIndex = 65;
-            this.cmdAplicar.Text = "Aplicar";
+            this.cmdAplicar.Text = "Reservar";
+            this.cmdAplicar.Click += new System.EventHandler(this.cmdAplicar_Click);
             // 
             // btnClose
             // 
@@ -229,6 +230,21 @@ namespace ERP_INTECOLI.Transacciones
             this.gridNivel.TabIndex = 59;
             this.gridNivel.EditValueChanged += new System.EventHandler(this.gridNivel_EditValueChanged);
             // 
+            // nivelesBindingSource
+            // 
+            this.nivelesBindingSource.DataMember = "niveles";
+            this.nivelesBindingSource.DataSource = this.dsNuevoCursoMatricula1BindingSource;
+            // 
+            // dsNuevoCursoMatricula1BindingSource
+            // 
+            this.dsNuevoCursoMatricula1BindingSource.DataSource = this.dsNuevoCursoMatricula1;
+            this.dsNuevoCursoMatricula1BindingSource.Position = 0;
+            // 
+            // dsNuevoCursoMatricula1
+            // 
+            this.dsNuevoCursoMatricula1.DataSetName = "dsNuevoCursoMatricula";
+            this.dsNuevoCursoMatricula1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gridLookUpEdit1View
             // 
             this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -240,6 +256,30 @@ namespace ERP_INTECOLI.Transacciones
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowAutoFilterRow = true;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colid_nivel1
+            // 
+            this.colid_nivel1.FieldName = "id_nivel";
+            this.colid_nivel1.Name = "colid_nivel1";
+            this.colid_nivel1.OptionsColumn.AllowEdit = false;
+            // 
+            // coldescripcion
+            // 
+            this.coldescripcion.Caption = "Nivel";
+            this.coldescripcion.FieldName = "descripcion";
+            this.coldescripcion.Name = "coldescripcion";
+            this.coldescripcion.OptionsColumn.AllowEdit = false;
+            this.coldescripcion.Visible = true;
+            this.coldescripcion.VisibleIndex = 0;
+            // 
+            // colvalor1
+            // 
+            this.colvalor1.Caption = "Valor";
+            this.colvalor1.FieldName = "valor";
+            this.colvalor1.Name = "colvalor1";
+            this.colvalor1.OptionsColumn.AllowEdit = false;
+            this.colvalor1.Visible = true;
+            this.colvalor1.VisibleIndex = 1;
             // 
             // spindValor
             // 
@@ -386,6 +426,93 @@ namespace ERP_INTECOLI.Transacciones
             this.TabConsultaReserva.Size = new System.Drawing.Size(1119, 577);
             this.TabConsultaReserva.Text = "Consultar Reservas";
             // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Appearance.Options.UseFont = true;
+            this.labelControl11.Location = new System.Drawing.Point(861, 32);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(71, 21);
+            this.labelControl11.TabIndex = 69;
+            this.labelControl11.Text = "Ver Nulas:";
+            // 
+            // TSverNulas
+            // 
+            this.TSverNulas.Location = new System.Drawing.Point(935, 29);
+            this.TSverNulas.Name = "TSverNulas";
+            this.TSverNulas.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TSverNulas.Properties.Appearance.Options.UseFont = true;
+            this.TSverNulas.Properties.OffText = "No";
+            this.TSverNulas.Properties.OnText = "Si";
+            this.TSverNulas.Size = new System.Drawing.Size(135, 26);
+            this.TSverNulas.TabIndex = 68;
+            // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExport.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Appearance.Options.UseFont = true;
+            this.btnExport.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.btnExport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnExport.ImageOptions.SvgImage")));
+            this.btnExport.Location = new System.Drawing.Point(698, 21);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(125, 43);
+            this.btnExport.TabIndex = 67;
+            this.btnExport.Text = "Exportar";
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Appearance.Options.UseFont = true;
+            this.btnRefresh.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.btnRefresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRefresh.ImageOptions.SvgImage")));
+            this.btnRefresh.Location = new System.Drawing.Point(552, 21);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(125, 43);
+            this.btnRefresh.TabIndex = 66;
+            this.btnRefresh.Text = "Cargar Datos";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // dtHasta
+            // 
+            this.dtHasta.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.dtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtHasta.Location = new System.Drawing.Point(365, 32);
+            this.dtHasta.Name = "dtHasta";
+            this.dtHasta.Size = new System.Drawing.Size(157, 27);
+            this.dtHasta.TabIndex = 65;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(273, 38);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(86, 21);
+            this.labelControl10.TabIndex = 64;
+            this.labelControl10.Text = "Fecha Hasta:";
+            // 
+            // dtDesde
+            // 
+            this.dtDesde.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.dtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDesde.Location = new System.Drawing.Point(103, 32);
+            this.dtDesde.Name = "dtDesde";
+            this.dtDesde.Size = new System.Drawing.Size(157, 27);
+            this.dtDesde.TabIndex = 63;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(7, 38);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(90, 21);
+            this.labelControl9.TabIndex = 62;
+            this.labelControl9.Text = "Fecha Desde:";
+            // 
             // gridControl1
             // 
             this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -426,11 +553,6 @@ namespace ERP_INTECOLI.Transacciones
             this.colfecha_pagado});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            // 
-            // dsNuevoCursoMatricula1
-            // 
-            this.dsNuevoCursoMatricula1.DataSetName = "dsNuevoCursoMatricula";
-            this.dsNuevoCursoMatricula1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // colid
             // 
@@ -572,127 +694,6 @@ namespace ERP_INTECOLI.Transacciones
             this.colfecha_pagado.Visible = true;
             this.colfecha_pagado.VisibleIndex = 19;
             // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(7, 38);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(90, 21);
-            this.labelControl9.TabIndex = 62;
-            this.labelControl9.Text = "Fecha Desde:";
-            // 
-            // dtDesde
-            // 
-            this.dtDesde.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.dtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDesde.Location = new System.Drawing.Point(103, 32);
-            this.dtDesde.Name = "dtDesde";
-            this.dtDesde.Size = new System.Drawing.Size(157, 27);
-            this.dtDesde.TabIndex = 63;
-            // 
-            // dtHasta
-            // 
-            this.dtHasta.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.dtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtHasta.Location = new System.Drawing.Point(365, 32);
-            this.dtHasta.Name = "dtHasta";
-            this.dtHasta.Size = new System.Drawing.Size(157, 27);
-            this.dtHasta.TabIndex = 65;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(273, 38);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(86, 21);
-            this.labelControl10.TabIndex = 64;
-            this.labelControl10.Text = "Fecha Hasta:";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefresh.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Appearance.Options.UseFont = true;
-            this.btnRefresh.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnRefresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.btnRefresh.Location = new System.Drawing.Point(552, 21);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(125, 43);
-            this.btnRefresh.TabIndex = 66;
-            this.btnRefresh.Text = "Cargar Datos";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnExport
-            // 
-            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExport.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.Appearance.Options.UseFont = true;
-            this.btnExport.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.btnExport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.btnExport.Location = new System.Drawing.Point(698, 21);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(125, 43);
-            this.btnExport.TabIndex = 67;
-            this.btnExport.Text = "Exportar";
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // TSverNulas
-            // 
-            this.TSverNulas.Location = new System.Drawing.Point(935, 29);
-            this.TSverNulas.Name = "TSverNulas";
-            this.TSverNulas.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TSverNulas.Properties.Appearance.Options.UseFont = true;
-            this.TSverNulas.Properties.OffText = "No";
-            this.TSverNulas.Properties.OnText = "Si";
-            this.TSverNulas.Size = new System.Drawing.Size(135, 26);
-            this.TSverNulas.TabIndex = 68;
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(861, 32);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(71, 21);
-            this.labelControl11.TabIndex = 69;
-            this.labelControl11.Text = "Ver Nulas:";
-            // 
-            // dsNuevoCursoMatricula1BindingSource
-            // 
-            this.dsNuevoCursoMatricula1BindingSource.DataSource = this.dsNuevoCursoMatricula1;
-            this.dsNuevoCursoMatricula1BindingSource.Position = 0;
-            // 
-            // nivelesBindingSource
-            // 
-            this.nivelesBindingSource.DataMember = "niveles";
-            this.nivelesBindingSource.DataSource = this.dsNuevoCursoMatricula1BindingSource;
-            // 
-            // colid_nivel1
-            // 
-            this.colid_nivel1.FieldName = "id_nivel";
-            this.colid_nivel1.Name = "colid_nivel1";
-            this.colid_nivel1.OptionsColumn.AllowEdit = false;
-            // 
-            // coldescripcion
-            // 
-            this.coldescripcion.Caption = "Nivel";
-            this.coldescripcion.FieldName = "descripcion";
-            this.coldescripcion.Name = "coldescripcion";
-            this.coldescripcion.OptionsColumn.AllowEdit = false;
-            this.coldescripcion.Visible = true;
-            this.coldescripcion.VisibleIndex = 0;
-            // 
-            // colvalor1
-            // 
-            this.colvalor1.Caption = "Valor";
-            this.colvalor1.FieldName = "valor";
-            this.colvalor1.Name = "colvalor1";
-            this.colvalor1.OptionsColumn.AllowEdit = false;
-            this.colvalor1.Visible = true;
-            this.colvalor1.VisibleIndex = 1;
-            // 
             // frmReservaCupoTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -708,6 +709,9 @@ namespace ERP_INTECOLI.Transacciones
             this.TabNuevaReserva.ResumeLayout(false);
             this.TabNuevaReserva.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridNivel.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nivelesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsNuevoCursoMatricula1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsNuevoCursoMatricula1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spindValor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listboxSecciones)).EndInit();
@@ -715,12 +719,9 @@ namespace ERP_INTECOLI.Transacciones
             ((System.ComponentModel.ISupportInitialize)(this.TSisEstudiante.Properties)).EndInit();
             this.TabConsultaReserva.ResumeLayout(false);
             this.TabConsultaReserva.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TSverNulas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsNuevoCursoMatricula1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TSverNulas.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsNuevoCursoMatricula1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nivelesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

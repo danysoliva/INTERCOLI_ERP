@@ -34,6 +34,7 @@ namespace ERP_INTECOLI.Transacciones
             this.rdTodos = new System.Windows.Forms.RadioButton();
             this.rdSoloHabilitados = new System.Windows.Forms.RadioButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.dsMovimientosSaldos1 = new ERP_INTECOLI.Administracion.Movimientos.dsMovimientosSaldos();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid_row = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid_student = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,6 +56,7 @@ namespace ERP_INTECOLI.Transacciones
             this.cmdF2 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMovimientosSaldos1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstudiante.Properties)).BeginInit();
             this.SuspendLayout();
@@ -99,6 +101,7 @@ namespace ERP_INTECOLI.Transacciones
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl1.DataMember = "estado_cuenta";
+            this.gridControl1.DataSource = this.dsMovimientosSaldos1;
             this.gridControl1.Location = new System.Drawing.Point(1, 78);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -106,6 +109,11 @@ namespace ERP_INTECOLI.Transacciones
             this.gridControl1.TabIndex = 18;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // dsMovimientosSaldos1
+            // 
+            this.dsMovimientosSaldos1.DataSetName = "dsMovimientosSaldos";
+            this.dsMovimientosSaldos1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -260,6 +268,8 @@ namespace ERP_INTECOLI.Transacciones
             this.button1.Text = "Agregar Ajuste";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cmbCargarDatos
             // 
@@ -267,6 +277,7 @@ namespace ERP_INTECOLI.Transacciones
             this.cmbCargarDatos.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.cmbCargarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCargarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCargarDatos.Image = global::ERP_INTECOLI.Properties.Resources.actualizar_32;
             this.cmbCargarDatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cmbCargarDatos.Location = new System.Drawing.Point(478, 26);
             this.cmbCargarDatos.Name = "cmbCargarDatos";
@@ -275,6 +286,7 @@ namespace ERP_INTECOLI.Transacciones
             this.cmbCargarDatos.Text = "Cargar";
             this.cmbCargarDatos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmbCargarDatos.UseVisualStyleBackColor = false;
+            this.cmbCargarDatos.Click += new System.EventHandler(this.cmbCargarDatos_Click);
             // 
             // label4
             // 
@@ -326,6 +338,7 @@ namespace ERP_INTECOLI.Transacciones
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMovimientosSaldos1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstudiante.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -358,5 +371,6 @@ namespace ERP_INTECOLI.Transacciones
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.TextEdit txtEstudiante;
         private DevExpress.XtraEditors.SimpleButton cmdF2;
+        private Administracion.Movimientos.dsMovimientosSaldos dsMovimientosSaldos1;
     }
 }

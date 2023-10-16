@@ -63,6 +63,16 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap actualizar_32 {
+            get {
+                object obj = ResourceManager.GetObject("actualizar_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap anadir {
             get {
                 object obj = ResourceManager.GetObject("anadir", resourceCulture);
@@ -246,6 +256,16 @@ namespace ERP_INTECOLI.Properties {
         internal static System.Drawing.Bitmap presupuestox32 {
             get {
                 object obj = ResourceManager.GetObject("presupuestox32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap proyeccion_32 {
+            get {
+                object obj = ResourceManager.GetObject("proyeccion_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -20,6 +20,8 @@ using ERP_INTECOLI.Administracion.Planilla;
 using ERP_INTECOLI.Administracion.Caja;
 using System.Data.SqlClient;
 using JAGUAR_APP;
+using ERP_INTECOLI.Administracion.Consultas;
+using ERP_INTECOLI.Consultas.ConsultaMiembros;
 
 namespace ERP_INTECOLI
 {
@@ -294,6 +296,45 @@ namespace ERP_INTECOLI
             frmReservaCupoTransaction frm = new frmReservaCupoTransaction(this.UsuarioLogeado);
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void NavBarProyeccionCobros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //aqui van permisos
+            frmSaldosAjustados frm = new frmSaldosAjustados(this.UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void navBarMiemborsClases_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmConsultarMiembroCurso frx = new frmConsultarMiembroCurso(this.UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
+                { }
+            }
+        }
+
+        private void navBarItem3_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //frmConsultaCumpleanieros frx = new frmConsultaCumpleanieros(this.UsuarioLogeado);
+            //if (frx != null)
+            //{
+            //    frx.MdiParent = this;
+            //    try
+            //    {
+            //        frx.Show();
+            //    }
+            //    catch (Exception ec)
+            //    {
+            //    }
+            //}
         }
     }
 }

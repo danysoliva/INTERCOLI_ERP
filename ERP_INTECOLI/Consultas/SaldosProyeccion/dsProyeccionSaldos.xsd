@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsProyeccionSaldos" targetNamespace="http://tempuri.org/dsProyeccionSaldos.xsd" xmlns:mstns="http://tempuri.org/dsProyeccionSaldos.xsd" xmlns="http://tempuri.org/dsProyeccionSaldos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsProyeccionSaldos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsProyeccionSaldos" msprop:Generator_UserDSName="dsProyeccionSaldos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="detalle_proximos_pagos" msprop:Generator_TableClassName="detalle_proximos_pagosDataTable" msprop:Generator_TableVarName="tabledetalle_proximos_pagos" msprop:Generator_TablePropName="detalle_proximos_pagos" msprop:Generator_RowDeletingName="detalle_proximos_pagosRowDeleting" msprop:Generator_RowChangingName="detalle_proximos_pagosRowChanging" msprop:Generator_RowEvHandlerName="detalle_proximos_pagosRowChangeEventHandler" msprop:Generator_RowDeletedName="detalle_proximos_pagosRowDeleted" msprop:Generator_UserTableName="detalle_proximos_pagos" msprop:Generator_RowChangedName="detalle_proximos_pagosRowChanged" msprop:Generator_RowEvArgName="detalle_proximos_pagosRowChangeEvent" msprop:Generator_RowClassName="detalle_proximos_pagosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_estudiante" msprop:Generator_ColumnVarNameInTable="columnid_estudiante" msprop:Generator_ColumnPropNameInRow="id_estudiante" msprop:Generator_ColumnPropNameInTable="id_estudianteColumn" msprop:Generator_UserColumnName="id_estudiante" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="valor" msprop:Generator_ColumnVarNameInTable="columnvalor" msprop:Generator_ColumnPropNameInRow="valor" msprop:Generator_ColumnPropNameInTable="valorColumn" msprop:Generator_UserColumnName="valor" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="detalle_proximos_pagos1" msprop:Generator_TableClassName="detalle_proximos_pagos1DataTable" msprop:Generator_TableVarName="tabledetalle_proximos_pagos1" msprop:Generator_TablePropName="detalle_proximos_pagos1" msprop:Generator_RowDeletingName="detalle_proximos_pagos1RowDeleting" msprop:Generator_RowChangingName="detalle_proximos_pagos1RowChanging" msprop:Generator_RowEvHandlerName="detalle_proximos_pagos1RowChangeEventHandler" msprop:Generator_RowDeletedName="detalle_proximos_pagos1RowDeleted" msprop:Generator_UserTableName="detalle_proximos_pagos1" msprop:Generator_RowChangedName="detalle_proximos_pagos1RowChanged" msprop:Generator_RowEvArgName="detalle_proximos_pagos1RowChangeEvent" msprop:Generator_RowClassName="detalle_proximos_pagos1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_estudiante" msprop:Generator_ColumnVarNameInTable="columnid_estudiante" msprop:Generator_ColumnPropNameInRow="id_estudiante" msprop:Generator_ColumnPropNameInTable="id_estudianteColumn" msprop:Generator_UserColumnName="id_estudiante" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="valor" msprop:Generator_ColumnVarNameInTable="columnvalor" msprop:Generator_ColumnPropNameInRow="valor" msprop:Generator_ColumnPropNameInTable="valorColumn" msprop:Generator_UserColumnName="valor" type="xs:decimal" minOccurs="0" />
+              <xs:element name="quitar_seguimiento" msprop:Generator_ColumnVarNameInTable="columnquitar_seguimiento" msprop:Generator_ColumnPropNameInRow="quitar_seguimiento" msprop:Generator_ColumnPropNameInTable="quitar_seguimientoColumn" msprop:Generator_UserColumnName="quitar_seguimiento" type="xs:string" minOccurs="0" />
+              <xs:element name="tipo_pago" msprop:Generator_ColumnVarNameInTable="columntipo_pago" msprop:Generator_ColumnPropNameInRow="tipo_pago" msprop:Generator_ColumnPropNameInTable="tipo_pagoColumn" msprop:Generator_UserColumnName="tipo_pago" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -41,27 +41,38 @@ namespace ERP_INTECOLI.Transacciones
             }
         }
 
-        private void CargarDatos(int estudianteSeleccionadoId)
+        private void CargarDatos(Int64 estudianteSeleccionadoId)
         {
             try
             {
-                //string sql = @"ft_get_estado_cuenta_estudiante";
-                //SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
-                //conn.Open();
-                //PgSqlCommand cmd = new PgSqlCommand(sql, psConnection);
-                //cmd.CommandType = CommandType.StoredProcedure;
-                //cmd.Parameters.AddWithValue("pid_estudiante", estudianteSeleccionadoId);
-                //cmd.Parameters.AddWithValue("pid_student", vEstudiante.IdStudent);
-                //cmd.Parameters.AddWithValue("pver_nulos", rdTodos.Checked);
-                //PgSqlDataAdapter adat = new PgSqlDataAdapter(cmd);
-                //dsMovimientosSaldos1.estado_cuenta.Clear();
-                //adat.Fill(dsMovimientosSaldos1.estado_cuenta);
+                string sql = @"ft_get_estado_cuenta_estudiante";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_estudiante", estudianteSeleccionadoId);
+                cmd.Parameters.AddWithValue("@id_student", vEstudiante.IdStudent);
+                cmd.Parameters.AddWithValue("@ver_nulos", rdTodos.Checked);
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                dsMovimientosSaldos1.estado_cuenta.Clear();
+                adat.Fill(dsMovimientosSaldos1.estado_cuenta);
 
             }
             catch (Exception ec)
             {
                 CajaDialogo.Error("No se pudo cargar el detalle de Movimientos del Estudiante!", ec);
             }
+        }
+
+        private void cmbCargarDatos_Click(object sender, EventArgs e)
+        {
+            if (vEstudiante != null)
+                CargarDatos(vEstudiante.IdEstudiante);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

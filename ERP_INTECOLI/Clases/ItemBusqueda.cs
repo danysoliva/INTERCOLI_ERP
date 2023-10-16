@@ -8,7 +8,7 @@ namespace ERP_INTECOLI.Clases
 {
     public class ItemBusqueda
     {
-        public int id_estudiantes;
+        public Int64 id_estudiantes;
         public string Identidad;
         public string Nombres;
         public string Apellidos;
