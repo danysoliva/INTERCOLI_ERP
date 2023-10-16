@@ -535,6 +535,9 @@
     <EmbeddedResource Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.resx">
       <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaCumpleanieros.resx">
+      <DependentUpon>frmConsultaCumpleanieros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\SaldosProyeccion\frmSaldosAjustados.resx">
       <DependentUpon>frmSaldosAjustados.cs</DependentUpon>
     </EmbeddedResource>

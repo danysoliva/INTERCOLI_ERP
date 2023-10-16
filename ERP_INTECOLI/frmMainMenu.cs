@@ -22,6 +22,7 @@ using System.Data.SqlClient;
 using JAGUAR_APP;
 using ERP_INTECOLI.Administracion.Consultas;
 using ERP_INTECOLI.Consultas.ConsultaMiembros;
+using ERP_INTECOLI.Consultas;
 
 namespace ERP_INTECOLI
 {
@@ -323,18 +324,18 @@ namespace ERP_INTECOLI
 
         private void navBarItem3_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //frmConsultaCumpleanieros frx = new frmConsultaCumpleanieros(this.UsuarioLogeado);
-            //if (frx != null)
-            //{
-            //    frx.MdiParent = this;
-            //    try
-            //    {
-            //        frx.Show();
-            //    }
-            //    catch (Exception ec)
-            //    {
-            //    }
-            //}
+            frmConsultaCumpleanieros frx = new frmConsultaCumpleanieros(this.UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
+                {
+                }
+            }
         }
     }
 }
