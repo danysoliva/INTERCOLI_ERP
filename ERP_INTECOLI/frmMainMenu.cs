@@ -337,5 +337,38 @@ namespace ERP_INTECOLI
                 }
             }
         }
+
+        private void navGeneros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmRecuentoGeneros frx = new frmRecuentoGeneros(this.UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
+                {
+                }
+            }
+        }
+
+        private void navSeguimientoSaldos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //aqui van permisos
+            frmSeguimientoSaldos mtx = new frmSeguimientoSaldos(this.UsuarioLogeado);
+            if (mtx != null)
+            {
+                
+                mtx.MdiParent = this;
+                try
+                {
+                    mtx.Show();
+                }
+                catch { }
+                
+            }
+        }
     }
 }

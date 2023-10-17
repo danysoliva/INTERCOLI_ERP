@@ -183,6 +183,16 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap equipo_x32 {
+            get {
+                object obj = ResourceManager.GetObject("equipo_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Estudiantex32 {
             get {
                 object obj = ResourceManager.GetObject("Estudiantex32", resourceCulture);
@@ -196,6 +206,16 @@ namespace ERP_INTECOLI.Properties {
         internal static System.Drawing.Bitmap facturax32 {
             get {
                 object obj = ResourceManager.GetObject("facturax32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jefe_x128 {
+            get {
+                object obj = ResourceManager.GetObject("jefe_x128", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +263,29 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mujeres_x128 {
+            get {
+                object obj = ResourceManager.GetObject("mujeres_x128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Niveles_x32 {
             get {
                 object obj = ResourceManager.GetObject("Niveles x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap presente_x32 {
+            get {
+                object obj = ResourceManager.GetObject("presente_x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +326,16 @@ namespace ERP_INTECOLI.Properties {
         internal static System.Drawing.Bitmap reservax32 {
             get {
                 object obj = ResourceManager.GetObject("reservax32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap saldar_x32 {
+            get {
+                object obj = ResourceManager.GetObject("saldar_x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

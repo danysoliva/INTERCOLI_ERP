@@ -36,26 +36,26 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
             this.cbxDia = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxCurso = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.cursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsMiembrosClase1 = new ERP_INTECOLI.Consultas.ConsultaMiembros.dsMiembrosClase();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label4 = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.dsMiembrosClase1 = new ERP_INTECOLI.Consultas.ConsultaMiembros.dsMiembrosClase();
             this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colasistio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colvalor_curso = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colsaldo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colvalor_curso = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colcurso_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcurso = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxCurso.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMiembrosClase1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsMiembrosClase1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -66,7 +66,7 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Image = global::ERP_INTECOLI.Properties.Resources.actualizar_32;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(265, 42);
+            this.button1.Location = new System.Drawing.Point(278, 42);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 56);
             this.button1.TabIndex = 16;
@@ -78,9 +78,9 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(85, 76);
+            this.numericUpDown1.Location = new System.Drawing.Point(84, 76);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(163, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(164, 22);
             this.numericUpDown1.TabIndex = 23;
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
@@ -124,7 +124,7 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
             // 
             // cbxCurso
             // 
-            this.cbxCurso.Location = new System.Drawing.Point(85, 110);
+            this.cbxCurso.Location = new System.Drawing.Point(84, 113);
             this.cbxCurso.Name = "cbxCurso";
             this.cbxCurso.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cbxCurso.Properties.Appearance.Options.UseFont = true;
@@ -139,6 +139,16 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
             this.cbxCurso.Size = new System.Drawing.Size(163, 22);
             this.cbxCurso.TabIndex = 24;
             this.cbxCurso.EditValueChanged += new System.EventHandler(this.cbxCurso_EditValueChanged);
+            // 
+            // cursosBindingSource
+            // 
+            this.cursosBindingSource.DataMember = "cursos";
+            this.cursosBindingSource.DataSource = this.dsMiembrosClase1;
+            // 
+            // dsMiembrosClase1
+            // 
+            this.dsMiembrosClase1.DataSetName = "dsMiembrosClase";
+            this.dsMiembrosClase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridLookUpEdit1View
             // 
@@ -170,7 +180,7 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
             this.gridControl1.Location = new System.Drawing.Point(1, 141);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(499, 295);
+            this.gridControl1.Size = new System.Drawing.Size(638, 497);
             this.gridControl1.TabIndex = 26;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -189,11 +199,6 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // dsMiembrosClase1
-            // 
-            this.dsMiembrosClase1.DataSetName = "dsMiembrosClase";
-            this.dsMiembrosClase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // colnombre
             // 
             this.colnombre.FieldName = "nombre";
@@ -208,6 +213,18 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
             this.colasistio.FieldName = "asistio";
             this.colasistio.Name = "colasistio";
             this.colasistio.OptionsColumn.AllowEdit = false;
+            // 
+            // colvalor_curso
+            // 
+            this.colvalor_curso.Caption = "Valor Curso";
+            this.colvalor_curso.FieldName = "valor_curso";
+            this.colvalor_curso.Name = "colvalor_curso";
+            this.colvalor_curso.OptionsColumn.AllowEdit = false;
+            this.colvalor_curso.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "valor_curso", "SUM={0:0.##}")});
+            this.colvalor_curso.Visible = true;
+            this.colvalor_curso.VisibleIndex = 1;
+            this.colvalor_curso.Width = 145;
             // 
             // colid_estudiante
             // 
@@ -224,39 +241,25 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
             this.colsaldo.VisibleIndex = 2;
             this.colsaldo.Width = 200;
             // 
-            // colvalor_curso
-            // 
-            this.colvalor_curso.Caption = "Valor Curso";
-            this.colvalor_curso.FieldName = "valor_curso";
-            this.colvalor_curso.Name = "colvalor_curso";
-            this.colvalor_curso.OptionsColumn.AllowEdit = false;
-            this.colvalor_curso.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "valor_curso", "SUM={0:0.##}")});
-            this.colvalor_curso.Visible = true;
-            this.colvalor_curso.VisibleIndex = 1;
-            this.colvalor_curso.Width = 145;
-            // 
-            // cursosBindingSource
-            // 
-            this.cursosBindingSource.DataMember = "cursos";
-            this.cursosBindingSource.DataSource = this.dsMiembrosClase1;
-            // 
             // colcurso_id
             // 
             this.colcurso_id.FieldName = "curso_id";
             this.colcurso_id.Name = "colcurso_id";
+            this.colcurso_id.Visible = true;
+            this.colcurso_id.VisibleIndex = 0;
             // 
             // colcurso
             // 
-            this.colcurso.Caption = "Curso";
             this.colcurso.FieldName = "curso";
             this.colcurso.Name = "colcurso";
+            this.colcurso.Visible = true;
+            this.colcurso.VisibleIndex = 1;
             // 
             // frmConsultarMiembroCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 438);
+            this.ClientSize = new System.Drawing.Size(642, 640);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbxCurso);
@@ -269,11 +272,11 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
             this.Text = "Consultar Miembro Curso";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxCurso.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMiembrosClase1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsMiembrosClase1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

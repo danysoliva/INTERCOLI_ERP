@@ -37,21 +37,21 @@ namespace ERP_INTECOLI.Administracion.Consultas
             this.dtFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.dtFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.dsProyeccionSaldos1 = new ERP_INTECOLI.Consultas.SaldosProyeccion.dsProyeccionSaldos();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colfecha = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colvalor = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsProyeccionSaldos1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtValorProyeccion
             // 
             this.txtValorProyeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorProyeccion.Location = new System.Drawing.Point(350, 72);
+            this.txtValorProyeccion.Location = new System.Drawing.Point(465, 72);
             this.txtValorProyeccion.Name = "txtValorProyeccion";
             this.txtValorProyeccion.ReadOnly = true;
             this.txtValorProyeccion.Size = new System.Drawing.Size(123, 29);
@@ -134,10 +134,15 @@ namespace ERP_INTECOLI.Administracion.Consultas
             this.gridControl1.Location = new System.Drawing.Point(2, 107);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(481, 345);
+            this.gridControl1.Size = new System.Drawing.Size(596, 516);
             this.gridControl1.TabIndex = 15;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // dsProyeccionSaldos1
+            // 
+            this.dsProyeccionSaldos1.DataSetName = "dsProyeccionSaldos";
+            this.dsProyeccionSaldos1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -148,11 +153,6 @@ namespace ERP_INTECOLI.Administracion.Consultas
             this.colvalor});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            // 
-            // dsProyeccionSaldos1
-            // 
-            this.dsProyeccionSaldos1.DataSetName = "dsProyeccionSaldos";
-            this.dsProyeccionSaldos1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // colid_estudiante
             // 
@@ -191,7 +191,7 @@ namespace ERP_INTECOLI.Administracion.Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 453);
+            this.ClientSize = new System.Drawing.Size(600, 624);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.txtValorProyeccion);
             this.Controls.Add(this.label3);
@@ -203,8 +203,8 @@ namespace ERP_INTECOLI.Administracion.Consultas
             this.IconOptions.ShowIcon = false;
             this.Name = "frmSaldosAjustados";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsProyeccionSaldos1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

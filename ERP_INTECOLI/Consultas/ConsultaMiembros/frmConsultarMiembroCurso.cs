@@ -49,6 +49,7 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
                     cbxDia.Text = "Domingo";
                     break;
             }
+            cargarCursos();
         }
 
         private void cargarCursos()
@@ -87,7 +88,7 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
                         break;
                 }
                 cmd.Parameters.AddWithValue("@dia", dia);
-                cmd.Parameters.AddWithValue("@hora", Convert.ToDateTime(numericUpDown1.Value));
+                cmd.Parameters.AddWithValue("@hora", numericUpDown1.Value);
                 dsMiembrosClase1.cursos.Clear();
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 adat.Fill(dsMiembrosClase1.cursos);
@@ -112,7 +113,7 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
 
         private void cbxDia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cargarCursos();
+            //cargarCursos();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -181,6 +182,11 @@ namespace ERP_INTECOLI.Consultas.ConsultaMiembros
             {
                 CajaDialogo.Error("No se pudo cargar la información!", ec);
             }
+        }
+
+        private void numericUpDown1_EditValueChanged(object sender, EventArgs e)
+        {
+            cargarCursos();
         }
     }
 }

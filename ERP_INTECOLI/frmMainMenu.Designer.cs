@@ -60,6 +60,8 @@ namespace ERP_INTECOLI
             this.NavBarProyeccionCobros = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarMiemborsClases = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navGeneros = new DevExpress.XtraNavBar.NavBarItem();
+            this.navSeguimientoSaldos = new DevExpress.XtraNavBar.NavBarItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -127,7 +129,9 @@ namespace ERP_INTECOLI
             this.navBarReservaCupo,
             this.NavBarProyeccionCobros,
             this.navBarMiemborsClases,
-            this.navBarItem3});
+            this.navBarItem3,
+            this.navGeneros,
+            this.navSeguimientoSaldos});
             this.navBarControl1.Location = new System.Drawing.Point(3, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 205;
@@ -306,7 +310,9 @@ namespace ERP_INTECOLI
             this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.NavBarProyeccionCobros),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarMiemborsClases),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navGeneros),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navSeguimientoSaldos)});
             this.navBarGroup3.Name = "navBarGroup3";
             // 
             // NavBarProyeccionCobros
@@ -319,16 +325,31 @@ namespace ERP_INTECOLI
             // navBarMiemborsClases
             // 
             this.navBarMiemborsClases.Caption = "Miembros de Clase";
+            this.navBarMiemborsClases.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.equipo_x32;
             this.navBarMiemborsClases.Name = "navBarMiemborsClases";
-            this.navBarMiemborsClases.Visible = false;
             this.navBarMiemborsClases.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarMiemborsClases_LinkClicked);
             // 
             // navBarItem3
             // 
             this.navBarItem3.Caption = "Cumpleañeros";
+            this.navBarItem3.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.presente_x32;
             this.navBarItem3.Name = "navBarItem3";
             this.navBarItem3.Visible = false;
             this.navBarItem3.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem3_LinkClicked);
+            // 
+            // navGeneros
+            // 
+            this.navGeneros.Caption = "Distribucion de Generos";
+            this.navGeneros.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navGeneros.ImageOptions.SmallImage")));
+            this.navGeneros.Name = "navGeneros";
+            this.navGeneros.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneros_LinkClicked);
+            // 
+            // navSeguimientoSaldos
+            // 
+            this.navSeguimientoSaldos.Caption = "Seguimiento Saldos";
+            this.navSeguimientoSaldos.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.saldar_x32;
+            this.navSeguimientoSaldos.Name = "navSeguimientoSaldos";
+            this.navSeguimientoSaldos.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navSeguimientoSaldos_LinkClicked);
             // 
             // statusStrip1
             // 
@@ -420,5 +441,7 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem NavBarProyeccionCobros;
         private DevExpress.XtraNavBar.NavBarItem navBarMiemborsClases;
         private DevExpress.XtraNavBar.NavBarItem navBarItem3;
+        private DevExpress.XtraNavBar.NavBarItem navGeneros;
+        private DevExpress.XtraNavBar.NavBarItem navSeguimientoSaldos;
     }
 }

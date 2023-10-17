@@ -55,7 +55,7 @@ namespace ERP_INTECOLI.Consultas
                                       "EXTRACT(DAY FROM es.fecha_nacimiento) BETWEEN EXTRACT(DAY FROM timestamp '" + dtDesde.Value.ToShortDateString() + "'::timestamp) AND " +
                                       "EXTRACT(DAY FROM timestamp '" + dtHasta.Value.ToShortDateString() + "'::timestamp);";*/
                 //string sql = "select * from admon.ft_carga_cumpleaneros (:p_desde, :p_hasta);";
-                string sql = "ft_carga_cumpleaneros";
+                string sql = "sp_get_cumpleanieros_for_fecha";
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sql, conn);

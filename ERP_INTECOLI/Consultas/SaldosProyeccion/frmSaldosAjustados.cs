@@ -24,6 +24,10 @@ namespace ERP_INTECOLI.Administracion.Consultas
         {
             InitializeComponent();
             UsuarioLogueado = pUserLogin;
+            dtFechaHasta.Value = dp.Now();
+            dtFechaDesde.Value = dp.Now().AddDays(-30);
+
+            CargarDatos();
         }
 
         private void CargarDatos()
