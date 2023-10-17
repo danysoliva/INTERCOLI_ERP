@@ -370,5 +370,22 @@ namespace ERP_INTECOLI
                 
             }
         }
+
+        private void navEstudiantesDeshabilitados_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmConsultaAnulados frm = new frmConsultaAnulados();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void navTiposPagoEstudiane_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmConsultaTipoPago mtx = new frmConsultaTipoPago();
+            if (mtx != null)
+            {
+                mtx.MdiParent = this;
+                mtx.Show();
+            }
+        }
     }
 }

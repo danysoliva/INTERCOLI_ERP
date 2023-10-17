@@ -62,6 +62,10 @@ namespace ERP_INTECOLI
             this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneros = new DevExpress.XtraNavBar.NavBarItem();
             this.navSeguimientoSaldos = new DevExpress.XtraNavBar.NavBarItem();
+            this.navEstudiantesDeshabilitados = new DevExpress.XtraNavBar.NavBarItem();
+            this.navTiposPagoEstudiane = new DevExpress.XtraNavBar.NavBarItem();
+            this.navIngresosTool = new DevExpress.XtraNavBar.NavBarItem();
+            this.navSaldoAcumulado = new DevExpress.XtraNavBar.NavBarItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -131,7 +135,11 @@ namespace ERP_INTECOLI
             this.navBarMiemborsClases,
             this.navBarItem3,
             this.navGeneros,
-            this.navSeguimientoSaldos});
+            this.navSeguimientoSaldos,
+            this.navEstudiantesDeshabilitados,
+            this.navTiposPagoEstudiane,
+            this.navIngresosTool,
+            this.navSaldoAcumulado});
             this.navBarControl1.Location = new System.Drawing.Point(3, 3);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 205;
@@ -235,7 +243,6 @@ namespace ERP_INTECOLI
             // navBarGroup2
             // 
             this.navBarGroup2.Caption = "Transacciones";
-            this.navBarGroup2.Expanded = true;
             this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navPostearMensualidad),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navMovimientoSaldos),
@@ -312,12 +319,16 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarMiemborsClases),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navGeneros),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navSeguimientoSaldos)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navSeguimientoSaldos),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navEstudiantesDeshabilitados),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navTiposPagoEstudiane),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navIngresosTool),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navSaldoAcumulado)});
             this.navBarGroup3.Name = "navBarGroup3";
             // 
             // NavBarProyeccionCobros
             // 
-            this.NavBarProyeccionCobros.Caption = "Consulta Tipos Pago Estudiane";
+            this.NavBarProyeccionCobros.Caption = "Proyeccion Cobros";
             this.NavBarProyeccionCobros.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.proyeccion_32;
             this.NavBarProyeccionCobros.Name = "NavBarProyeccionCobros";
             this.NavBarProyeccionCobros.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBarProyeccionCobros_LinkClicked);
@@ -350,6 +361,30 @@ namespace ERP_INTECOLI
             this.navSeguimientoSaldos.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.saldar_x32;
             this.navSeguimientoSaldos.Name = "navSeguimientoSaldos";
             this.navSeguimientoSaldos.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navSeguimientoSaldos_LinkClicked);
+            // 
+            // navEstudiantesDeshabilitados
+            // 
+            this.navEstudiantesDeshabilitados.Caption = "Estudiantes Deshabilitados";
+            this.navEstudiantesDeshabilitados.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.bloquear_x32;
+            this.navEstudiantesDeshabilitados.Name = "navEstudiantesDeshabilitados";
+            this.navEstudiantesDeshabilitados.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navEstudiantesDeshabilitados_LinkClicked);
+            // 
+            // navTiposPagoEstudiane
+            // 
+            this.navTiposPagoEstudiane.Caption = "Tipos Pago Estudiane";
+            this.navTiposPagoEstudiane.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.metodo_de_pago_x32;
+            this.navTiposPagoEstudiane.Name = "navTiposPagoEstudiane";
+            this.navTiposPagoEstudiane.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navTiposPagoEstudiane_LinkClicked);
+            // 
+            // navIngresosTool
+            // 
+            this.navIngresosTool.Caption = "Nuevos Ingresos";
+            this.navIngresosTool.Name = "navIngresosTool";
+            // 
+            // navSaldoAcumulado
+            // 
+            this.navSaldoAcumulado.Caption = "Deudores Saldo Acumulado";
+            this.navSaldoAcumulado.Name = "navSaldoAcumulado";
             // 
             // statusStrip1
             // 
@@ -443,5 +478,9 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navBarItem3;
         private DevExpress.XtraNavBar.NavBarItem navGeneros;
         private DevExpress.XtraNavBar.NavBarItem navSeguimientoSaldos;
+        private DevExpress.XtraNavBar.NavBarItem navEstudiantesDeshabilitados;
+        private DevExpress.XtraNavBar.NavBarItem navTiposPagoEstudiane;
+        private DevExpress.XtraNavBar.NavBarItem navIngresosTool;
+        private DevExpress.XtraNavBar.NavBarItem navSaldoAcumulado;
     }
 }

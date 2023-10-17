@@ -175,6 +175,12 @@
     <Compile Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.Designer.cs">
       <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\frmConsultaAnulados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsultaAnulados.Designer.cs">
+      <DependentUpon>frmConsultaAnulados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\frmConsultaCumpleanieros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -550,11 +556,17 @@
     <EmbeddedResource Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.resx">
       <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsultaAnulados.resx">
+      <DependentUpon>frmConsultaAnulados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmConsultaCumpleanieros.resx">
       <DependentUpon>frmConsultaCumpleanieros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmSeguimientoSaldos.resx">
       <DependentUpon>frmSeguimientoSaldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\SaldosProyeccion\frmConsultaTipoPago.resx">
+      <DependentUpon>frmConsultaTipoPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\SaldosProyeccion\frmSaldosAjustados.resx">
       <DependentUpon>frmSaldosAjustados.cs</DependentUpon>
@@ -895,6 +907,7 @@
     <None Include="Resources\cash-icon24px.png" />
     <None Include="Resources\caja-registradorax32.png" />
     <None Include="Resources\boletax32.png" />
+    <None Include="Resources\bloquear_x32.png" />
     <Content Include="Resources\cerrar.png" />
     <Content Include="Resources\control-de-accesso.png" />
     <None Include="Resources\control-de-accessox32.png" />
@@ -923,6 +936,7 @@
     <None Include="Resources\jefe_x128.png" />
     <Content Include="Resources\maestro x32.png" />
     <None Include="Resources\matriculax32.png" />
+    <None Include="Resources\metodo-de-pago_x32.png" />
     <Content Include="Resources\ms-excel-icon.png" />
     <None Include="Resources\mujeres_x128.png" />
     <Content Include="Resources\new-message-icon %281%2932.png" />
