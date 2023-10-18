@@ -380,11 +380,13 @@ namespace ERP_INTECOLI
             // 
             this.navIngresosTool.Caption = "Nuevos Ingresos";
             this.navIngresosTool.Name = "navIngresosTool";
+            this.navIngresosTool.Visible = false;
             // 
             // navSaldoAcumulado
             // 
             this.navSaldoAcumulado.Caption = "Deudores Saldo Acumulado";
             this.navSaldoAcumulado.Name = "navSaldoAcumulado";
+            this.navSaldoAcumulado.Visible = false;
             // 
             // statusStrip1
             // 
