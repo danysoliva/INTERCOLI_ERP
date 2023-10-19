@@ -95,7 +95,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryEditar,
             this.repositoryEliminar});
-            this.gridControl1.Size = new System.Drawing.Size(1020, 436);
+            this.gridControl1.Size = new System.Drawing.Size(1020, 635);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -410,7 +410,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 499);
+            this.ClientSize = new System.Drawing.Size(1023, 698);
             this.Controls.Add(this.cmdCargar);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdNuevo);

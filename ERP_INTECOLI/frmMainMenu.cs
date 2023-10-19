@@ -579,6 +579,22 @@ namespace ERP_INTECOLI
                 }
             }
         }
+
+        private void navBarUsuarios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //Aqui va permiso
+            frmMantenimientoUsuarios msu = new frmMantenimientoUsuarios(this.UsuarioLogeado);
+            if (msu != null)
+            {
+                msu.MdiParent = this;
+                try
+                {
+                    msu.Show();
+                }
+                catch { }
+            }
+
+        }
     }
     
 }

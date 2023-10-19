@@ -83,8 +83,6 @@ namespace ERP_INTECOLI
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBfrmCursos = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarPermisos = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarUsuario = new DevExpress.XtraNavBar.NavBarItem();
             this.nbConfig_PuntoVenta = new DevExpress.XtraNavBar.NavBarItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -167,8 +165,6 @@ namespace ERP_INTECOLI
             this.navNuevoRecordatorio,
             this.navBfrmCursos,
             this.navBarItem2,
-            this.navBarPermisos,
-            this.navBarUsuario,
             this.navBarSeparatorItem4,
             this.navBarSeparatorItem5,
             this.nb_FacturaCore,
@@ -189,6 +185,7 @@ namespace ERP_INTECOLI
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "Acciones";
+            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navDesconectar),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarUsuarios),
@@ -215,6 +212,7 @@ namespace ERP_INTECOLI
             this.navBarUsuarios.Caption = "Usuarios y Permisos";
             this.navBarUsuarios.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarUsuarios.ImageOptions.SvgImage")));
             this.navBarUsuarios.Name = "navBarUsuarios";
+            this.navBarUsuarios.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarUsuarios_LinkClicked);
             // 
             // navCRUDPermisos
             // 
@@ -528,6 +526,7 @@ namespace ERP_INTECOLI
             this.navDistribucionResidencial.Appearance.Options.UseTextOptions = true;
             this.navDistribucionResidencial.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.navDistribucionResidencial.Caption = "Distribucion por Zona Residencial";
+            this.navDistribucionResidencial.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.ruptura_x32;
             this.navDistribucionResidencial.Name = "navDistribucionResidencial";
             this.navDistribucionResidencial.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navDistribucionResidencial_LinkClicked);
             // 
@@ -552,8 +551,6 @@ namespace ERP_INTECOLI
             this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBfrmCursos),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarPermisos),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarUsuario),
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbConfig_PuntoVenta)});
             this.navBarGroup5.Name = "navBarGroup5";
             // 
@@ -570,22 +567,10 @@ namespace ERP_INTECOLI
             this.navBarItem2.Name = "navBarItem2";
             this.navBarItem2.Visible = false;
             // 
-            // navBarPermisos
-            // 
-            this.navBarPermisos.Caption = "Permisos de Usuario";
-            this.navBarPermisos.Name = "navBarPermisos";
-            this.navBarPermisos.Visible = false;
-            // 
-            // navBarUsuario
-            // 
-            this.navBarUsuario.Caption = "Usuarios";
-            this.navBarUsuario.Name = "navBarUsuario";
-            this.navBarUsuario.Visible = false;
-            // 
             // nbConfig_PuntoVenta
             // 
             this.nbConfig_PuntoVenta.Caption = "Punto de Venta Config";
-            this.nbConfig_PuntoVenta.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.SmallImage")));
+            this.nbConfig_PuntoVenta.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbConfig_PuntoVenta.ImageOptions.SmallImage")));
             this.nbConfig_PuntoVenta.Name = "nbConfig_PuntoVenta";
             this.nbConfig_PuntoVenta.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbConfig_PuntoVenta_LinkClicked);
             // 
@@ -694,8 +679,6 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
         private DevExpress.XtraNavBar.NavBarItem navBfrmCursos;
         private DevExpress.XtraNavBar.NavBarItem navBarItem2;
-        private DevExpress.XtraNavBar.NavBarItem navBarPermisos;
-        private DevExpress.XtraNavBar.NavBarItem navBarUsuario;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem4;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem5;
         private DevExpress.XtraNavBar.NavBarItem nb_FacturaCore;

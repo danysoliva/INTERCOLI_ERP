@@ -108,6 +108,41 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accesos\AccesosUsuarios\AccesoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\AccesosUsuarios\AccesoUsuario.Designer.cs">
+      <DependentUpon>AccesoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesAdmin.Designer.cs">
+      <DependentUpon>xfrmAccesosTemporalesAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesCRUD.Designer.cs">
+      <DependentUpon>xfrmAccesosTemporalesCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\dsAccesos.cs">
+      <DependentUpon>dsAccesos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\dsAccesos.Designer.cs">
+      <DependentUpon>dsAccesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\dsAccesos1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAccesos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\NivelAccesoSistema\NivelAccesoSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\NivelAccesoSistema\NivelAccesoSistema.Designer.cs">
+      <DependentUpon>NivelAccesoSistema.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Caja\dsCaja.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -970,6 +1005,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsUsuarios.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\frmMantenimientoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmMantenimientoUsuarios.Designer.cs">
+      <DependentUpon>frmMantenimientoUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\frmMantVentanas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -982,6 +1023,24 @@
     <Compile Include="Usuarios\frmManVentanasOP.Designer.cs">
       <DependentUpon>frmManVentanasOP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accesos\AccesosUsuarios\AccesoUsuario.resx">
+      <DependentUpon>AccesoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesAdmin.resx">
+      <DependentUpon>xfrmAccesosTemporalesAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesCRUD.resx">
+      <DependentUpon>xfrmAccesosTemporalesCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\NivelAccesoSistema\NivelAccesoSistema.resx">
+      <DependentUpon>NivelAccesoSistema.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Caja\frmArqueoCaja.resx">
       <DependentUpon>frmArqueoCaja.cs</DependentUpon>
     </EmbeddedResource>
@@ -1329,12 +1388,31 @@
     <EmbeddedResource Include="Transacciones\frmReservaCupoTransaction.resx">
       <DependentUpon>frmReservaCupoTransaction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmMantenimientoUsuarios.resx">
+      <DependentUpon>frmMantenimientoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmMantVentanas.resx">
       <DependentUpon>frmMantVentanas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmManVentanasOP.resx">
       <DependentUpon>frmManVentanasOP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Accesos\AccesosUsuarios\AccesoUsuario.resx.bak" />
+    <None Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesAdmin.resx.bak" />
+    <None Include="Accesos\dsAccesos.xsc">
+      <DependentUpon>dsAccesos.xsd</DependentUpon>
+    </None>
+    <None Include="Accesos\dsAccesos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAccesos1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Accesos\dsAccesos.xss">
+      <DependentUpon>dsAccesos.xsd</DependentUpon>
+    </None>
     <None Include="Administracion\Caja\dsCaja.xsc">
       <DependentUpon>dsCaja.xsd</DependentUpon>
     </None>
@@ -1700,6 +1778,7 @@
     <None Include="Resources\reservax32.png" />
     <None Include="Resources\reservadox32.png" />
     <None Include="Resources\saldar_x32.png" />
+    <None Include="Resources\ruptura_x32.png" />
     <Content Include="Resources\salir_24.png" />
     <Content Include="Resources\Salir_32.png" />
     <Content Include="Resources\save.png" />
