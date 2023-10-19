@@ -73,9 +73,6 @@
     <Reference Include="DevExpress.XtraRichEdit.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeMap.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeMap.v23.1.23.1.4.0.Fakes">
-      <HintPath>FakesAssemblies\DevExpress.XtraTreeMap.v23.1.23.1.4.0.Fakes.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.XtraTreeMap.v23.1.UI, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Infragistics4.Shared.v22.2, Version=22.2.20222.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Win.Misc.v22.2, Version=22.2.20222.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
@@ -115,12 +112,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCaja.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Administracion\Caja\frmArqueoCaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administracion\Caja\frmArqueoCaja.Designer.cs">
-      <DependentUpon>frmArqueoCaja.cs</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Caja\frmCaja.cs">
       <SubType>Form</SubType>
@@ -164,36 +155,33 @@
     <Compile Include="Administracion\Caja\frmTipoPago.Designer.cs">
       <DependentUpon>frmTipoPago.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Cursos\frmCursos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administracion\Cursos\frmCursos.Designer.cs">
-      <DependentUpon>frmCursos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administracion\Cursos\frmNuevo_Editar_Curso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administracion\Cursos\frmNuevo_Editar_Curso.Designer.cs">
-      <DependentUpon>frmNuevo_Editar_Curso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.Designer.cs">
-      <DependentUpon>frmEstadisticasPorResidencia.cs</DependentUpon>
-    </Compile>
     <Compile Include="Administracion\Estudiantes\frmRecuentoGeneros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administracion\Estudiantes\frmRecuentoGeneros.Designer.cs">
       <DependentUpon>frmRecuentoGeneros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\frmRecordatorio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administracion\frmRecordatorio.Designer.cs">
-      <DependentUpon>frmRecordatorio.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Clases\Cliente.cs" />
+    <Compile Include="Clases\ClientesPuntoVentaLP.cs" />
+    <Compile Include="Clases\Conf_TablesID.cs" />
+    <Compile Include="Clases\Factura.cs" />
+    <Compile Include="Clases\FacturacionCierreDiaPuntoVenta.cs" />
+    <Compile Include="Clases\FacturacionEquipo.cs" />
+    <Compile Include="Clases\FacturaDetalle.cs" />
+    <Compile Include="Clases\FacturaEstado.cs" />
+    <Compile Include="Clases\FacturasPagoMultiple.cs" />
+    <Compile Include="Clases\Factura_SolicitudAutorizacion.cs" />
+    <Compile Include="Clases\Impuesto.cs" />
+    <Compile Include="Clases\ItemBusquedaFactura.cs" />
+    <Compile Include="Clases\ListaPrecioPuntoVenta.cs" />
+    <Compile Include="Clases\ListaPrecios.cs" />
+    <Compile Include="Clases\ListToDataTable.cs" />
+    <Compile Include="Clases\Notas_CreditoDebito.cs" />
+    <Compile Include="Clases\NumberToLetters.cs" />
+    <Compile Include="Clases\ProductoTerminado.cs" />
+    <Compile Include="Clases\PuntoVenta.cs" />
+    <Compile Include="Clases\PuntoVentaEquipo.cs" />
+    <Compile Include="Clases\ReciboH.cs" />
     <Compile Include="Consultas\ConsultaMiembros\dsMiembrosClase.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -245,17 +233,6 @@
     </Compile>
     <Compile Include="Consultas\frmSeguimientoSaldos.Designer.cs">
       <DependentUpon>frmSeguimientoSaldos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\RangosPago\dsRangosPagos.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsRangosPagos.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\RangosPago\frmRangosPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Consultas\RangosPago\frmRangosPago.Designer.cs">
-      <DependentUpon>frmRangosPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas\SaldosProyeccion\dsProyeccionSaldos.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -483,7 +460,7 @@
     <Compile Include="Clases\DataOperations.cs" />
     <Compile Include="Clases\doc_fiscal.cs" />
     <Compile Include="Clases\Estudiante.cs" />
-    <Compile Include="Clases\Factura.cs" />
+    <Compile Include="Clases\FacturaBK.cs" />
     <Compile Include="Clases\Globals.cs" />
     <Compile Include="Clases\GrupoUser.cs" />
     <Compile Include="Clases\Instructores.cs" />
@@ -503,11 +480,375 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsRecordatorios.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion\Configuraciones\dsListaPrecios.cs">
+      <DependentUpon>dsListaPrecios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\dsListaPrecios.Designer.cs">
+      <DependentUpon>dsListaPrecios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\Models\ListaPrecioProductosAplicaPDV.cs" />
+    <Compile Include="Facturacion\Configuraciones\xfrmCopiarListaPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmCopiarListaPrecio.Designer.cs">
+      <DependentUpon>xfrmCopiarListaPrecio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmEditPriceFromListaPrecio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmEditPriceFromListaPrecio.Designer.cs">
+      <DependentUpon>xfrmEditPriceFromListaPrecio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmListaPrecios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmListaPrecios.Designer.cs">
+      <DependentUpon>xfrmListaPrecios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmListaPreciosClientesAplicaCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmListaPreciosClientesAplicaCRUD.Designer.cs">
+      <DependentUpon>xfrmListaPreciosClientesAplicaCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmListaPreciosCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmListaPreciosCRUD.Designer.cs">
+      <DependentUpon>xfrmListaPreciosCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmListaPrecioView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmListaPrecioView.Designer.cs">
+      <DependentUpon>xfrmListaPrecioView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmPDVAsignadasView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmPDVAsignadasView.Designer.cs">
+      <DependentUpon>xfrmPDVAsignadasView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmSelectCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmSelectCliente.Designer.cs">
+      <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmSelectPDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmSelectPDV.Designer.cs">
+      <DependentUpon>xfrmSelectPDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmSelectProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmSelectProductos.Designer.cs">
+      <DependentUpon>xfrmSelectProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrnListaPrecioAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrnListaPrecioAdmin.Designer.cs">
+      <DependentUpon>xfrnListaPrecioAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\dsConfigLoteConsumo.cs">
+      <DependentUpon>dsConfigLoteConsumo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\dsConfigLoteConsumo.Designer.cs">
+      <DependentUpon>dsConfigLoteConsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\dsContabilidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsContabilidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\dsFacturasGestion.cs">
+      <DependentUpon>dsFacturasGestion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\dsFacturasGestion.Designer.cs">
+      <DependentUpon>dsFacturasGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\dsSearchWindow.Designer.cs" />
+    <Compile Include="Facturacion\CoreFacturas\dsVentas1.Designer.cs" />
+    <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\dsBusquedas1.Designer.cs" />
+    <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmFacturaBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmFacturaBackup.Designer.cs">
+      <DependentUpon>frmFacturaBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmFacturaWithPDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmFacturaWithPDV.Designer.cs">
+      <DependentUpon>frmFacturaWithPDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmSearchWithPDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmSearchWithPDV.Designer.cs">
+      <DependentUpon>frmSearchWithPDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmAjusteKardexFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmAjusteKardexFactura.designer.cs">
+      <DependentUpon>frmAjusteKardexFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmConfirmationFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmConfirmationFactura.Designer.cs">
+      <DependentUpon>frmConfirmationFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmFactura.Designer.cs">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomeFacturasEmitidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomeFacturasEmitidas.Designer.cs">
+      <DependentUpon>frmHomeFacturasEmitidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomeNotasCreditoDebito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomeNotasCreditoDebito.Designer.cs">
+      <DependentUpon>frmHomeNotasCreditoDebito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomePagoMultiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomePagoMultiple.Designer.cs">
+      <DependentUpon>frmHomePagoMultiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomePagoMultipleSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomePagoMultipleSimple.Designer.cs">
+      <DependentUpon>frmHomePagoMultipleSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomeSolicitudesAutorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomeSolicitudesAutorizacion.Designer.cs">
+      <DependentUpon>frmHomeSolicitudesAutorizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmKardexFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmKardexFacturacion.designer.cs">
+      <DependentUpon>frmKardexFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmNavigationPageAutorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmNavigationPageAutorizacion.Designer.cs">
+      <DependentUpon>frmNavigationPageAutorizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmNotaCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmNotaCRUD.Designer.cs">
+      <DependentUpon>frmNotaCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmPagoFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmPagoFactura.Designer.cs">
+      <DependentUpon>frmPagoFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmPagoFacturaMultiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmPagoFacturaMultiple.Designer.cs">
+      <DependentUpon>frmPagoFacturaMultiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmPTFromKardexFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmPTFromKardexFacturacion.designer.cs">
+      <DependentUpon>frmPTFromKardexFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmSearchDefault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmSearchDefault.Designer.cs">
+      <DependentUpon>frmSearchDefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\HomeEstadoCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\HomeEstadoCuenta.designer.cs">
+      <DependentUpon>HomeEstadoCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\xfrmDialogAutorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\xfrmDialogAutorizacion.Designer.cs">
+      <DependentUpon>xfrmDialogAutorizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\xfrmDialogAutorizacionConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\xfrmDialogAutorizacionConfirmation.Designer.cs">
+      <DependentUpon>xfrmDialogAutorizacionConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\xfrmDialogGestionSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\xfrmDialogGestionSolicitud.Designer.cs">
+      <DependentUpon>xfrmDialogGestionSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\xfrmSelectCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\xfrmSelectCliente.Designer.cs">
+      <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion\frmFactura.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Facturacion\frmFactura.Designer.cs">
       <DependentUpon>frmFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\dsCRUDS_Facturacion.Designer.cs" />
+    <Compile Include="Facturacion\Mantenimientos\dsMantenimiento.cs">
+      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\dsMantenimiento.Designer.cs">
+      <DependentUpon>dsMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\dsMantenimientosFacturacion.Designer.cs" />
+    <Compile Include="Facturacion\Mantenimientos\Models\ClienteEmpresa.cs" />
+    <Compile Include="Facturacion\Mantenimientos\Models\ClienteFacturacion.cs" />
+    <Compile Include="Facturacion\Mantenimientos\Models\frmAddEquipoPuntoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\Models\frmAddEquipoPuntoVenta.Designer.cs">
+      <DependentUpon>frmAddEquipoPuntoVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\Models\NumeracionFiscal.cs" />
+    <Compile Include="Facturacion\Mantenimientos\Models\PDVBack.cs" />
+    <Compile Include="Facturacion\Mantenimientos\PDV_CRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\PDV_CRUD.Designer.cs">
+      <DependentUpon>PDV_CRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xformFacturacion_Clientes_CRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xformFacturacion_Clientes_CRUD.Designer.cs">
+      <DependentUpon>xformFacturacion_Clientes_CRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xfrmClienteEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xfrmClienteEmpresas.Designer.cs">
+      <DependentUpon>xfrmClienteEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xfrmFacturacion_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xfrmFacturacion_Clientes.Designer.cs">
+      <DependentUpon>xfrmFacturacion_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xfrm_PDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xfrm_PDV.Designer.cs">
+      <DependentUpon>xfrm_PDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Numeracion Fiscal\dsNumeracionFiscal1.Designer.cs" />
+    <Compile Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscal.designer.cs">
+      <DependentUpon>frmNumeracionFiscal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscalCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscalCRUD.designer.cs">
+      <DependentUpon>frmNumeracionFiscalCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\frmArqueoCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\frmArqueoCaja.Designer.cs">
+      <DependentUpon>frmArqueoCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\frmCierreDiaHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\frmCierreDiaHome.Designer.cs">
+      <DependentUpon>frmCierreDiaHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rptEstadoCuenta.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rptEstadoCuenta.designer.cs">
+      <DependentUpon>rptEstadoCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rptFactura.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rptFactura.Designer.cs">
+      <DependentUpon>rptFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rptFacturaLetterSize.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rptFacturaLetterSize.Designer.cs">
+      <DependentUpon>rptFacturaLetterSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rptFact_RecibosAbonosLetterSize.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rptFact_RecibosAbonosLetterSize.Designer.cs">
+      <DependentUpon>rptFact_RecibosAbonosLetterSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rptFact_ReciboVentaLetterSize.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rptFact_ReciboVentaLetterSize.Designer.cs">
+      <DependentUpon>rptFact_ReciboVentaLetterSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rptNotasCD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rptNotasCD.Designer.cs">
+      <DependentUpon>rptNotasCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rpt_cierre_dia_complete.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\rpt_cierre_dia_complete.Designer.cs">
+      <DependentUpon>rpt_cierre_dia_complete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\RPT_ND_NC_Local.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\RPT_ND_NC_Local.designer.cs">
+      <DependentUpon>RPT_ND_NC_Local.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\xfrmDialogFormatoFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Reportes\xfrmDialogFormatoFactura.Designer.cs">
+      <DependentUpon>xfrmDialogFormatoFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -593,9 +934,6 @@
     <Compile Include="Usuarios\frmManVentanasOP.Designer.cs">
       <DependentUpon>frmManVentanasOP.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Administracion\Caja\frmArqueoCaja.resx">
-      <DependentUpon>frmArqueoCaja.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Caja\frmCaja.resx">
       <DependentUpon>frmCaja.cs</DependentUpon>
     </EmbeddedResource>
@@ -617,20 +955,8 @@
     <EmbeddedResource Include="Administracion\Caja\frmTipoPago.resx">
       <DependentUpon>frmTipoPago.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administracion\Cursos\frmCursos.resx">
-      <DependentUpon>frmCursos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administracion\Cursos\frmNuevo_Editar_Curso.resx">
-      <DependentUpon>frmNuevo_Editar_Curso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.resx">
-      <DependentUpon>frmEstadisticasPorResidencia.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Estudiantes\frmRecuentoGeneros.resx">
       <DependentUpon>frmRecuentoGeneros.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administracion\frmRecordatorio.resx">
-      <DependentUpon>frmRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.resx">
       <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>
@@ -652,9 +978,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmSeguimientoSaldos.resx">
       <DependentUpon>frmSeguimientoSaldos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\RangosPago\frmRangosPago.resx">
-      <DependentUpon>frmRangosPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\SaldosProyeccion\frmConsultaTipoPago.resx">
       <DependentUpon>frmConsultaTipoPago.cs</DependentUpon>
@@ -740,8 +1063,167 @@
     <EmbeddedResource Include="Administracion\Planilla\frmGeneracionPlanilla.resx">
       <DependentUpon>frmGeneracionPlanilla.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Configuraciones\xfrmCopiarListaPrecio.resx">
+      <DependentUpon>xfrmCopiarListaPrecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Configuraciones\xfrmEditPriceFromListaPrecio.resx">
+      <DependentUpon>xfrmEditPriceFromListaPrecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Configuraciones\xfrmListaPreciosClientesAplicaCRUD.resx">
+      <DependentUpon>xfrmListaPreciosClientesAplicaCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Configuraciones\xfrmListaPreciosCRUD.resx">
+      <DependentUpon>xfrmListaPreciosCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Configuraciones\xfrmListaPrecioView.resx">
+      <DependentUpon>xfrmListaPrecioView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Configuraciones\xfrmPDVAsignadasView.resx">
+      <DependentUpon>xfrmPDVAsignadasView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Configuraciones\xfrmSelectCliente.resx">
+      <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Configuraciones\xfrmSelectPDV.resx">
+      <DependentUpon>xfrmSelectPDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Configuraciones\xfrmSelectProductos.resx">
+      <DependentUpon>xfrmSelectProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Configuraciones\xfrnListaPrecioAdmin.resx">
+      <DependentUpon>xfrnListaPrecioAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmFacturaBackup.resx">
+      <DependentUpon>frmFacturaBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmFacturaWithPDV.resx">
+      <DependentUpon>frmFacturaWithPDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmSearchWithPDV.resx">
+      <DependentUpon>frmSearchWithPDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmAjusteKardexFactura.resx">
+      <DependentUpon>frmAjusteKardexFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmConfirmationFactura.resx">
+      <DependentUpon>frmConfirmationFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmFactura.resx">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmHomeFacturasEmitidas.resx">
+      <DependentUpon>frmHomeFacturasEmitidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmHomeNotasCreditoDebito.resx">
+      <DependentUpon>frmHomeNotasCreditoDebito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmHomePagoMultiple.resx">
+      <DependentUpon>frmHomePagoMultiple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmHomePagoMultipleSimple.resx">
+      <DependentUpon>frmHomePagoMultipleSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmHomeSolicitudesAutorizacion.resx">
+      <DependentUpon>frmHomeSolicitudesAutorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmKardexFacturacion.resx">
+      <DependentUpon>frmKardexFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmNavigationPageAutorizacion.resx">
+      <DependentUpon>frmNavigationPageAutorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmNotaCRUD.resx">
+      <DependentUpon>frmNotaCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmPagoFactura.resx">
+      <DependentUpon>frmPagoFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmPagoFacturaMultiple.resx">
+      <DependentUpon>frmPagoFacturaMultiple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmPTFromKardexFacturacion.resx">
+      <DependentUpon>frmPTFromKardexFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmSearchDefault.resx">
+      <DependentUpon>frmSearchDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\HomeEstadoCuenta.resx">
+      <DependentUpon>HomeEstadoCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\xfrmDialogAutorizacion.resx">
+      <DependentUpon>xfrmDialogAutorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\xfrmDialogAutorizacionConfirmation.resx">
+      <DependentUpon>xfrmDialogAutorizacionConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\xfrmDialogGestionSolicitud.resx">
+      <DependentUpon>xfrmDialogGestionSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\xfrmSelectCliente.resx">
+      <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\frmFactura.resx">
       <DependentUpon>frmFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Mantenimientos\Models\frmAddEquipoPuntoVenta.resx">
+      <DependentUpon>frmAddEquipoPuntoVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Mantenimientos\PDV_CRUD.resx">
+      <DependentUpon>PDV_CRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Mantenimientos\xformFacturacion_Clientes_CRUD.resx">
+      <DependentUpon>xformFacturacion_Clientes_CRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Mantenimientos\xfrmClienteEmpresas.resx">
+      <DependentUpon>xfrmClienteEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Mantenimientos\xfrmFacturacion_Clientes.resx">
+      <DependentUpon>xfrmFacturacion_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Mantenimientos\xfrm_PDV.resx">
+      <DependentUpon>xfrm_PDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscal.resx">
+      <DependentUpon>frmNumeracionFiscal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscalCRUD.resx">
+      <DependentUpon>frmNumeracionFiscalCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Reportes\frmArqueoCaja.resx">
+      <DependentUpon>frmArqueoCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Reportes\frmCierreDiaHome.resx">
+      <DependentUpon>frmCierreDiaHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Reportes\rptEstadoCuenta.resx">
+      <DependentUpon>rptEstadoCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Reportes\rptFactura.resx">
+      <DependentUpon>rptFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Reportes\rptFacturaLetterSize.resx">
+      <DependentUpon>rptFacturaLetterSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Reportes\rptFact_RecibosAbonosLetterSize.resx">
+      <DependentUpon>rptFact_RecibosAbonosLetterSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Reportes\rptFact_ReciboVentaLetterSize.resx">
+      <DependentUpon>rptFact_ReciboVentaLetterSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Reportes\rptNotasCD.resx">
+      <DependentUpon>rptNotasCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Reportes\rpt_cierre_dia_complete.resx">
+      <DependentUpon>rpt_cierre_dia_complete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Reportes\RPT_ND_NC_Local.resx">
+      <DependentUpon>RPT_ND_NC_Local.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Reportes\xfrmDialogFormatoFactura.resx">
+      <DependentUpon>xfrmDialogFormatoFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -919,17 +1401,6 @@
     <None Include="Consultas\ConsultaMovimientosSaldos\dsEstSaldosCobrables.xss">
       <DependentUpon>dsEstSaldosCobrables.xsd</DependentUpon>
     </None>
-    <None Include="Consultas\RangosPago\dsRangosPagos.xsc">
-      <DependentUpon>dsRangosPagos.xsd</DependentUpon>
-    </None>
-    <None Include="Consultas\RangosPago\dsRangosPagos.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsRangosPagos.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Consultas\RangosPago\dsRangosPagos.xss">
-      <DependentUpon>dsRangosPagos.xsd</DependentUpon>
-    </None>
     <None Include="Consultas\SaldosProyeccion\dsProyeccionSaldos.xsc">
       <DependentUpon>dsProyeccionSaldos.xsd</DependentUpon>
     </None>
@@ -953,6 +1424,96 @@
       <DependentUpon>dsRecordatorios.xsd</DependentUpon>
     </None>
     <Fakes Include="Fakes\DevExpress.XtraTreeMap.v23.1.fakes" />
+    <None Include="Facturacion\Configuraciones\dsListaPrecios.xsc">
+      <DependentUpon>dsListaPrecios.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\Configuraciones\dsListaPrecios.xsd" />
+    <None Include="Facturacion\Configuraciones\dsListaPrecios.xss">
+      <DependentUpon>dsListaPrecios.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsConfigLoteConsumo.xsc">
+      <DependentUpon>dsConfigLoteConsumo.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsConfigLoteConsumo.xsd" />
+    <None Include="Facturacion\CoreFacturas\dsConfigLoteConsumo.xss">
+      <DependentUpon>dsConfigLoteConsumo.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsContabilidad.xsc">
+      <DependentUpon>dsContabilidad.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsContabilidad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsContabilidad.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsContabilidad.xss">
+      <DependentUpon>dsContabilidad.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsFacturasGestion.xsc">
+      <DependentUpon>dsFacturasGestion.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsFacturasGestion.xsd" />
+    <None Include="Facturacion\CoreFacturas\dsFacturasGestion.xss">
+      <DependentUpon>dsFacturasGestion.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsSearchWindow.xsc">
+      <DependentUpon>dsSearchWindow.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsSearchWindow.xsd" />
+    <None Include="Facturacion\CoreFacturas\dsSearchWindow.xss">
+      <DependentUpon>dsSearchWindow.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsVentas.xsc">
+      <DependentUpon>dsVentas.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsVentas.xsd" />
+    <None Include="Facturacion\CoreFacturas\dsVentas.xss">
+      <DependentUpon>dsVentas.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\dsBusquedas.xsc">
+      <DependentUpon>dsBusquedas.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\dsBusquedas.xsd" />
+    <None Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\dsBusquedas.xss">
+      <DependentUpon>dsBusquedas.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\frmSearch.resx.bak" />
+    <None Include="Facturacion\Mantenimientos\dsCRUDS_Facturacion.xsc">
+      <DependentUpon>dsCRUDS_Facturacion.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\Mantenimientos\dsCRUDS_Facturacion.xsd" />
+    <None Include="Facturacion\Mantenimientos\dsCRUDS_Facturacion.xss">
+      <DependentUpon>dsCRUDS_Facturacion.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\Mantenimientos\dsMantenimiento.xsc">
+      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\Mantenimientos\dsMantenimiento.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMantenimiento1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Facturacion\Mantenimientos\dsMantenimiento.xss">
+      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\Mantenimientos\dsMantenimientosFacturacion.xsc">
+      <DependentUpon>dsMantenimientosFacturacion.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\Mantenimientos\dsMantenimientosFacturacion.xsd" />
+    <None Include="Facturacion\Mantenimientos\dsMantenimientosFacturacion.xss">
+      <DependentUpon>dsMantenimientosFacturacion.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\Mantenimientos\xfrmFacturacion_Clientes.resx.bak" />
+    <None Include="Facturacion\Mantenimientos\xfrm_PDV.resx.bak" />
+    <None Include="Facturacion\Numeracion Fiscal\dsNumeracionFiscal.xsc">
+      <DependentUpon>dsNumeracionFiscal.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\Numeracion Fiscal\dsNumeracionFiscal.xsd" />
+    <None Include="Facturacion\Numeracion Fiscal\dsNumeracionFiscal.xss">
+      <DependentUpon>dsNumeracionFiscal.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscal.resx.bak" />
+    <None Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscalCRUD.resx.bak" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -989,6 +1550,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DevExpress\" />
     <Folder Include="Finanzas\" />
     <Folder Include="RRHH\" />
   </ItemGroup>
@@ -1022,14 +1584,11 @@
     <None Include="Resources\caja-registradorax32.png" />
     <None Include="Resources\boletax32.png" />
     <None Include="Resources\bloquear_x32.png" />
-    <None Include="Resources\caja-registradora_x32.png" />
     <Content Include="Resources\cerrar.png" />
     <Content Include="Resources\control-de-accesso.png" />
     <None Include="Resources\control-de-accessox32.png" />
     <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Cash.512.png" />
     <None Include="Resources\dinero_x32.png" />
-    <None Include="Resources\documentos_64.png" />
-    <None Include="Resources\credito_x32.png" />
     <Content Include="Resources\edit.png" />
     <None Include="Resources\edit1.png" />
     <Content Include="Resources\edit24px.png" />
@@ -1038,7 +1597,6 @@
     <Content Include="Resources\email_envelope_inbox_sending_mail_outbox_message_send_icon_231915.ico" />
     <Content Include="Resources\empresa.png" />
     <None Include="Resources\equipo_x32.png" />
-    <None Include="Resources\ensenando_x32.png" />
     <Content Include="Resources\Estudiantex32.png" />
     <Content Include="Resources\Excel-2-icon32px.png" />
     <Content Include="Resources\Excel-2-icon32px1.png" />
@@ -1069,7 +1627,6 @@
     <None Include="Resources\presente_x32.png" />
     <Content Include="Resources\reaload_24x24.png" />
     <Content Include="Resources\reaload_32x32.png" />
-    <None Include="Resources\recordatorio_x32.png" />
     <Content Include="Resources\refresh-button32px.png" />
     <Content Include="Resources\refresh_16x16.png" />
     <Content Include="Resources\refresh_24x24.png" />

@@ -3,8 +3,8 @@ using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
-using ERP_INTECOLI.Clases;
 using System.Data.SqlClient;
+using ERP_INTECOLI.Clases;
 
 namespace ERP_INTECOLI.Administracion.Facturacion
 {
@@ -23,7 +23,7 @@ namespace ERP_INTECOLI.Administracion.Facturacion
 
         public TipoCopia TipoCopiaActual = TipoCopia.Blanco;
 
-        public rptFactura(Factura Factura1, TipoCopia pTipoCopia)
+        public rptFactura(FacturaBK Factura1, TipoCopia pTipoCopia)
         {
             InitializeComponent();
 
