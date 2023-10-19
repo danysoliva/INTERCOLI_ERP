@@ -83,8 +83,6 @@ namespace ERP_INTECOLI
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBfrmCursos = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarPermisos = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarUsuario = new DevExpress.XtraNavBar.NavBarItem();
             this.nbConfig_PuntoVenta = new DevExpress.XtraNavBar.NavBarItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -167,8 +165,6 @@ namespace ERP_INTECOLI
             this.navNuevoRecordatorio,
             this.navBfrmCursos,
             this.navBarItem2,
-            this.navBarPermisos,
-            this.navBarUsuario,
             this.navBarSeparatorItem4,
             this.navBarSeparatorItem5,
             this.nb_FacturaCore,
@@ -555,8 +551,6 @@ namespace ERP_INTECOLI
             this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBfrmCursos),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarPermisos),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarUsuario),
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbConfig_PuntoVenta)});
             this.navBarGroup5.Name = "navBarGroup5";
             // 
@@ -572,18 +566,6 @@ namespace ERP_INTECOLI
             this.navBarItem2.Caption = "Documentos Fiscales";
             this.navBarItem2.Name = "navBarItem2";
             this.navBarItem2.Visible = false;
-            // 
-            // navBarPermisos
-            // 
-            this.navBarPermisos.Caption = "Permisos de Usuario";
-            this.navBarPermisos.Name = "navBarPermisos";
-            this.navBarPermisos.Visible = false;
-            // 
-            // navBarUsuario
-            // 
-            this.navBarUsuario.Caption = "Usuarios";
-            this.navBarUsuario.Name = "navBarUsuario";
-            this.navBarUsuario.Visible = false;
             // 
             // nbConfig_PuntoVenta
             // 
@@ -697,8 +679,6 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
         private DevExpress.XtraNavBar.NavBarItem navBfrmCursos;
         private DevExpress.XtraNavBar.NavBarItem navBarItem2;
-        private DevExpress.XtraNavBar.NavBarItem navBarPermisos;
-        private DevExpress.XtraNavBar.NavBarItem navBarUsuario;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem4;
         private DevExpress.XtraNavBar.NavBarSeparatorItem navBarSeparatorItem5;
         private DevExpress.XtraNavBar.NavBarItem nb_FacturaCore;
