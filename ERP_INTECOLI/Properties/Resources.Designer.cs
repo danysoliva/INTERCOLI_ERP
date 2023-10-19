@@ -73,6 +73,16 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregar_x32 {
+            get {
+                object obj = ResourceManager.GetObject("agregar_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap anadir {
             get {
                 object obj = ResourceManager.GetObject("anadir", resourceCulture);
@@ -156,6 +166,16 @@ namespace ERP_INTECOLI.Properties {
         internal static System.Drawing.Bitmap Custom_Icon_Design_Pretty_Office_11_Cash_512 {
             get {
                 object obj = ResourceManager.GetObject("Custom-Icon-Design-Pretty-Office-11-Cash.512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dinero_x32 {
+            get {
+                object obj = ResourceManager.GetObject("dinero_x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

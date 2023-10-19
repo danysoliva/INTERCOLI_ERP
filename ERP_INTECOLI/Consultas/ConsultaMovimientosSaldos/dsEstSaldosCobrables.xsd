@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsEstSaldosCobrables" targetNamespace="http://tempuri.org/dsEstSaldosCobrables.xsd" xmlns:mstns="http://tempuri.org/dsEstSaldosCobrables.xsd" xmlns="http://tempuri.org/dsEstSaldosCobrables.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsEstSaldosCobrables" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsEstSaldosCobrables" msprop:Generator_UserDSName="dsEstSaldosCobrables">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="deudores" msprop:Generator_TableClassName="deudoresDataTable" msprop:Generator_TableVarName="tabledeudores" msprop:Generator_TablePropName="deudores" msprop:Generator_RowDeletingName="deudoresRowDeleting" msprop:Generator_RowChangingName="deudoresRowChanging" msprop:Generator_RowEvHandlerName="deudoresRowChangeEventHandler" msprop:Generator_RowDeletedName="deudoresRowDeleted" msprop:Generator_UserTableName="deudores" msprop:Generator_RowChangedName="deudoresRowChanged" msprop:Generator_RowEvArgName="deudoresRowChangeEvent" msprop:Generator_RowClassName="deudoresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="num" msprop:Generator_ColumnVarNameInTable="columnnum" msprop:Generator_ColumnPropNameInRow="num" msprop:Generator_ColumnPropNameInTable="numColumn" msprop:Generator_UserColumnName="num" type="xs:int" minOccurs="0" />
+              <xs:element name="cant" msdata:Caption="fecha_ingreso" msprop:Generator_ColumnVarNameInTable="columncant" msprop:Generator_ColumnPropNameInRow="cant" msprop:Generator_ColumnPropNameInTable="cantColumn" msprop:Generator_UserColumnName="cant" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

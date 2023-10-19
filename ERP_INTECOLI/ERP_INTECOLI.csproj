@@ -175,6 +175,29 @@
     <Compile Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.Designer.cs">
       <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\ConsultaMiembros\frmNuevosIngresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMiembros\frmNuevosIngresos.Designer.cs">
+      <DependentUpon>frmNuevosIngresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientosSaldos\dsEstSaldosCobrables.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEstSaldosCobrables.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaEstSaldosCobrables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaEstSaldosCobrables.Designer.cs">
+      <DependentUpon>frmConsultaEstSaldosCobrables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaMovimientosSaldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaMovimientosSaldos.Designer.cs">
+      <DependentUpon>frmConsultaMovimientosSaldos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\frmConsultaAnulados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -556,6 +579,15 @@
     <EmbeddedResource Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.resx">
       <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaMiembros\frmNuevosIngresos.resx">
+      <DependentUpon>frmNuevosIngresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaMovimientosSaldos\frmConsultaEstSaldosCobrables.resx">
+      <DependentUpon>frmConsultaEstSaldosCobrables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaMovimientosSaldos\frmConsultaMovimientosSaldos.resx">
+      <DependentUpon>frmConsultaMovimientosSaldos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmConsultaAnulados.resx">
       <DependentUpon>frmConsultaAnulados.cs</DependentUpon>
     </EmbeddedResource>
@@ -817,6 +849,17 @@
     <None Include="Consultas\ConsultaMiembros\dsMiembrosClase.xss">
       <DependentUpon>dsMiembrosClase.xsd</DependentUpon>
     </None>
+    <None Include="Consultas\ConsultaMovimientosSaldos\dsEstSaldosCobrables.xsc">
+      <DependentUpon>dsEstSaldosCobrables.xsd</DependentUpon>
+    </None>
+    <None Include="Consultas\ConsultaMovimientosSaldos\dsEstSaldosCobrables.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEstSaldosCobrables.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Consultas\ConsultaMovimientosSaldos\dsEstSaldosCobrables.xss">
+      <DependentUpon>dsEstSaldosCobrables.xsd</DependentUpon>
+    </None>
     <None Include="Consultas\SaldosProyeccion\dsProyeccionSaldos.xsc">
       <DependentUpon>dsProyeccionSaldos.xsd</DependentUpon>
     </None>
@@ -895,6 +938,7 @@
     <Content Include="Resources\add_24x24.png" />
     <Content Include="Resources\add_32x32.png" />
     <Content Include="Resources\admin.png" />
+    <None Include="Resources\agregar_x32.png" />
     <Content Include="Resources\ajustes_kardex.png" />
     <Content Include="Resources\ajustes_kardex2.png" />
     <Content Include="Resources\Alerta64px.png" />
@@ -912,6 +956,7 @@
     <Content Include="Resources\control-de-accesso.png" />
     <None Include="Resources\control-de-accessox32.png" />
     <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Cash.512.png" />
+    <None Include="Resources\dinero_x32.png" />
     <Content Include="Resources\edit.png" />
     <None Include="Resources\edit1.png" />
     <Content Include="Resources\edit24px.png" />
