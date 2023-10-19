@@ -113,6 +113,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCaja.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Caja\frmArqueoCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmArqueoCaja.Designer.cs">
+      <DependentUpon>frmArqueoCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Caja\frmCaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,11 +161,35 @@
     <Compile Include="Administracion\Caja\frmTipoPago.Designer.cs">
       <DependentUpon>frmTipoPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Cursos\frmCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Cursos\frmCursos.Designer.cs">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Cursos\frmNuevo_Editar_Curso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Cursos\frmNuevo_Editar_Curso.Designer.cs">
+      <DependentUpon>frmNuevo_Editar_Curso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.Designer.cs">
+      <DependentUpon>frmEstadisticasPorResidencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Estudiantes\frmRecuentoGeneros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administracion\Estudiantes\frmRecuentoGeneros.Designer.cs">
       <DependentUpon>frmRecuentoGeneros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\frmRecordatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\frmRecordatorio.Designer.cs">
+      <DependentUpon>frmRecordatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\ClientesPuntoVentaLP.cs" />
@@ -233,6 +263,17 @@
     </Compile>
     <Compile Include="Consultas\frmSeguimientoSaldos.Designer.cs">
       <DependentUpon>frmSeguimientoSaldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\RangosPago\dsRangosPagos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRangosPagos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\RangosPago\frmRangosPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\RangosPago\frmRangosPago.Designer.cs">
+      <DependentUpon>frmRangosPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas\SaldosProyeccion\dsProyeccionSaldos.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -934,6 +975,9 @@
     <Compile Include="Usuarios\frmManVentanasOP.Designer.cs">
       <DependentUpon>frmManVentanasOP.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administracion\Caja\frmArqueoCaja.resx">
+      <DependentUpon>frmArqueoCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Caja\frmCaja.resx">
       <DependentUpon>frmCaja.cs</DependentUpon>
     </EmbeddedResource>
@@ -955,8 +999,20 @@
     <EmbeddedResource Include="Administracion\Caja\frmTipoPago.resx">
       <DependentUpon>frmTipoPago.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Cursos\frmCursos.resx">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Cursos\frmNuevo_Editar_Curso.resx">
+      <DependentUpon>frmNuevo_Editar_Curso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.resx">
+      <DependentUpon>frmEstadisticasPorResidencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Estudiantes\frmRecuentoGeneros.resx">
       <DependentUpon>frmRecuentoGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\frmRecordatorio.resx">
+      <DependentUpon>frmRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.resx">
       <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>
@@ -978,6 +1034,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmSeguimientoSaldos.resx">
       <DependentUpon>frmSeguimientoSaldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\RangosPago\frmRangosPago.resx">
+      <DependentUpon>frmRangosPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\SaldosProyeccion\frmConsultaTipoPago.resx">
       <DependentUpon>frmConsultaTipoPago.cs</DependentUpon>
@@ -1400,6 +1459,17 @@
     </None>
     <None Include="Consultas\ConsultaMovimientosSaldos\dsEstSaldosCobrables.xss">
       <DependentUpon>dsEstSaldosCobrables.xsd</DependentUpon>
+    </None>
+    <None Include="Consultas\RangosPago\dsRangosPagos.xsc">
+      <DependentUpon>dsRangosPagos.xsd</DependentUpon>
+    </None>
+    <None Include="Consultas\RangosPago\dsRangosPagos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRangosPagos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Consultas\RangosPago\dsRangosPagos.xss">
+      <DependentUpon>dsRangosPagos.xsd</DependentUpon>
     </None>
     <None Include="Consultas\SaldosProyeccion\dsProyeccionSaldos.xsc">
       <DependentUpon>dsProyeccionSaldos.xsd</DependentUpon>

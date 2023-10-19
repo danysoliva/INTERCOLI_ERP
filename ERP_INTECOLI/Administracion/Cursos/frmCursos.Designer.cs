@@ -221,7 +221,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             this.colcurso_finalizado.Caption = "Finalizado";
             this.colcurso_finalizado.FieldName = "curso_finalizado";
             this.colcurso_finalizado.Name = "colcurso_finalizado";
-            this.colcurso_finalizado.OptionsColumn.ReadOnly = true;
+            this.colcurso_finalizado.OptionsColumn.AllowEdit = false;
             this.colcurso_finalizado.Visible = true;
             this.colcurso_finalizado.VisibleIndex = 8;
             // 
