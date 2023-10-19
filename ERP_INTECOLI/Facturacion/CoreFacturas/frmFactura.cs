@@ -76,14 +76,14 @@ namespace Eatery.Ventas
                 {
                     if (PuntoDeVentaActual.FacturaComidaBuffet)//Mostramos todas las opciones
                     {
-                        lblOpcionesBuffetRadioButtonGroup.Visible =
-                        radioGroupVentaComidaBuffet.Visible = true;
+                        //lblOpcionesBuffetRadioButtonGroup.Visible =
+                        //radioGroupVentaComidaBuffet.Visible = true;
                         LoadDefaultOptionRadioButtos();
                     }
                     else
                     {
-                        lblOpcionesBuffetRadioButtonGroup.Visible = 
-                        radioGroupVentaComidaBuffet.Visible = false;
+                        //lblOpcionesBuffetRadioButtonGroup.Visible = 
+                        //radioGroupVentaComidaBuffet.Visible = false;
                         LoadDefaultOptionRadioButtos();
                     }
                 }
@@ -102,27 +102,27 @@ namespace Eatery.Ventas
             int HoraActualInt = DateTime.Now.Hour;
             if (HoraActualInt <= 10)
             {
-                radioGroupVentaComidaBuffet.SelectedIndexChanged -= new EventHandler(radioGroupVentaComidaBuffet_SelectedIndexChanged);
-                radioGroupVentaComidaBuffet.SelectedIndex = 0;//Desayuno
-                radioGroupVentaComidaBuffet.SelectedIndexChanged += new EventHandler(radioGroupVentaComidaBuffet_SelectedIndexChanged);
+                //radioGroupVentaComidaBuffet.SelectedIndexChanged -= new EventHandler(radioGroupVentaComidaBuffet_SelectedIndexChanged);
+                //radioGroupVentaComidaBuffet.SelectedIndex = 0;//Desayuno
+                //radioGroupVentaComidaBuffet.SelectedIndexChanged += new EventHandler(radioGroupVentaComidaBuffet_SelectedIndexChanged);
 
                 LoadOpcionesRapidas(1);
             }
 
             if (HoraActualInt > 10 && HoraActualInt <= 15)
             {
-                radioGroupVentaComidaBuffet.SelectedIndexChanged -= new EventHandler(radioGroupVentaComidaBuffet_SelectedIndexChanged);
-                radioGroupVentaComidaBuffet.SelectedIndex = 1;//Almuerzos
-                radioGroupVentaComidaBuffet.SelectedIndexChanged += new EventHandler(radioGroupVentaComidaBuffet_SelectedIndexChanged);
+                //radioGroupVentaComidaBuffet.SelectedIndexChanged -= new EventHandler(radioGroupVentaComidaBuffet_SelectedIndexChanged);
+                //radioGroupVentaComidaBuffet.SelectedIndex = 1;//Almuerzos
+                //radioGroupVentaComidaBuffet.SelectedIndexChanged += new EventHandler(radioGroupVentaComidaBuffet_SelectedIndexChanged);
                 LoadOpcionesRapidas(1);
             }
 
             if (HoraActualInt > 15)
             {
 
-                radioGroupVentaComidaBuffet.SelectedIndexChanged -= new EventHandler(radioGroupVentaComidaBuffet_SelectedIndexChanged);
-                radioGroupVentaComidaBuffet.SelectedIndex = 2;//cenas
-                radioGroupVentaComidaBuffet.SelectedIndexChanged += new EventHandler(radioGroupVentaComidaBuffet_SelectedIndexChanged);
+                //radioGroupVentaComidaBuffet.SelectedIndexChanged -= new EventHandler(radioGroupVentaComidaBuffet_SelectedIndexChanged);
+                //radioGroupVentaComidaBuffet.SelectedIndex = 2;//cenas
+                //radioGroupVentaComidaBuffet.SelectedIndexChanged += new EventHandler(radioGroupVentaComidaBuffet_SelectedIndexChanged);
                 LoadOpcionesRapidas(1);
             }
         }
@@ -1360,36 +1360,36 @@ namespace Eatery.Ventas
 
         private void LoadOpcionesRapidas(int pIdTipoVentanaFacturacion)
         {
-            try
-            {
-                DataOperations dp = new DataOperations();
-                SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
-                con.Open();
+            //try
+            //{
+            //    DataOperations dp = new DataOperations();
+            //    SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+            //    con.Open();
 
-                SqlCommand cmd = new SqlCommand("dbo.sp_get_lista_rapida_segun_tipo_ventana_facturacion", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id_tipo_facturacion", pIdTipoVentanaFacturacion);
-                cmd.Parameters.AddWithValue("@id_tipo_buffet", radioGroupVentaComidaBuffet.SelectedIndex);
+            //    SqlCommand cmd = new SqlCommand("dbo.sp_get_lista_rapida_segun_tipo_ventana_facturacion", con);
+            //    cmd.CommandType = CommandType.StoredProcedure;
+            //    cmd.Parameters.AddWithValue("@id_tipo_facturacion", pIdTipoVentanaFacturacion);
+            //    cmd.Parameters.AddWithValue("@id_tipo_buffet", radioGroupVentaComidaBuffet.SelectedIndex);
                 
-                dsVentas1.Buffet_TopProductos.Clear();
-                SqlDataAdapter adat = new SqlDataAdapter(cmd);
-                adat.Fill(dsVentas1.Buffet_TopProductos);
-                con.Close();
-                ultraTilePanel1.Tiles.Clear();
+            //    dsVentas1.Buffet_TopProductos.Clear();
+            //    SqlDataAdapter adat = new SqlDataAdapter(cmd);
+            //    adat.Fill(dsVentas1.Buffet_TopProductos);
+            //    con.Close();
+            //    ultraTilePanel1.Tiles.Clear();
 
-                int i = 1;
-                foreach (dsVentas.Buffet_TopProductosRow row in dsVentas1.Buffet_TopProductos)
-                {
-                    //AddTilePanel(row.descripcion, i);
-                    AddTilePanel(row.descripcion, row.id);
-                    i++;
-                }
+            //    int i = 1;
+            //    foreach (dsVentas.Buffet_TopProductosRow row in dsVentas1.Buffet_TopProductos)
+            //    {
+            //        //AddTilePanel(row.descripcion, i);
+            //        AddTilePanel(row.descripcion, row.id);
+            //        i++;
+            //    }
                 
-            }
-            catch (Exception ec)
-            {
-                CajaDialogo.Error(ec.Message);
-            }
+            //}
+            //catch (Exception ec)
+            //{
+            //    CajaDialogo.Error(ec.Message);
+            //}
         }
 
         private void AddTilePanel(string descripcion, int p_button)
@@ -1481,7 +1481,7 @@ namespace Eatery.Ventas
                 simpleButton6.Click += new EventHandler(simpleButton6_Click);
 
                 //Ocultamos Radio Buttons box
-                radioGroupVentaComidaBuffet.Visible = false;
+                //radioGroupVentaComidaBuffet.Visible = false;
             }
 
 
@@ -1535,10 +1535,10 @@ namespace Eatery.Ventas
             tile2.Settings.ShowStateChangeButton = Infragistics.Win.DefaultableBoolean.False;
             
             //tile2.UseAppStyling = true;
-            ultraTilePanel1.Tiles.Add(tile2);
+            //ultraTilePanel1.Tiles.Add(tile2);
             //ultraTilePanel1.Margin =pad1;
 
-            ultraTilePanel1.TileSettings.MaximumSize = new Size(362, 100);
+            //ultraTilePanel1.TileSettings.MaximumSize = new Size(362, 100);
         }
 
         private void radioGroupVentaComidaBuffet_SelectedIndexChanged(object sender, EventArgs e)
@@ -1605,38 +1605,38 @@ namespace Eatery.Ventas
 
         private void CargarOpcionesMasVendidas(int pidClase)
         {
-            try
-            {
-                DataOperations dp = new DataOperations();
-                SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
-                con.Open();
-                SqlCommand cmd;
-                if (this.PuntoDeVentaActual.FacturaComidaBuffet)
-                {
-                    cmd = new SqlCommand("dbo.sp_get_productos_mas_vendidos_para_buffet", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@tipo_buffet", radioGroupVentaComidaBuffet.SelectedIndex + 1);
-                    cmd.Parameters.AddWithValue("@id_clase", pidClase);
-                    cmd.Parameters.AddWithValue("@ver_lo_mas_vendido", (Int32)BusquedaSet);
-                }
-                else
-                {
-                    cmd = new SqlCommand("[dbo].[sp_get_productos_mas_vendidos_para_factura_normal]", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    //cmd.Parameters.AddWithValue("@tipo_buffet", radioGroupVentaComidaBuffet.SelectedIndex + 1);
-                    //cmd.Parameters.AddWithValue("@id_clase", pidClase);
-                    cmd.Parameters.AddWithValue("@ver_lo_mas_vendido", (Int32)BusquedaSet);
-                }
+            //try
+            //{
+            //    DataOperations dp = new DataOperations();
+            //    SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+            //    con.Open();
+            //    SqlCommand cmd;
+            //    if (this.PuntoDeVentaActual.FacturaComidaBuffet)
+            //    {
+            //        cmd = new SqlCommand("dbo.sp_get_productos_mas_vendidos_para_buffet", con);
+            //        cmd.CommandType = CommandType.StoredProcedure;
+            //        cmd.Parameters.AddWithValue("@tipo_buffet", radioGroupVentaComidaBuffet.SelectedIndex + 1);
+            //        cmd.Parameters.AddWithValue("@id_clase", pidClase);
+            //        cmd.Parameters.AddWithValue("@ver_lo_mas_vendido", (Int32)BusquedaSet);
+            //    }
+            //    else
+            //    {
+            //        cmd = new SqlCommand("[dbo].[sp_get_productos_mas_vendidos_para_factura_normal]", con);
+            //        cmd.CommandType = CommandType.StoredProcedure;
+            //        //cmd.Parameters.AddWithValue("@tipo_buffet", radioGroupVentaComidaBuffet.SelectedIndex + 1);
+            //        //cmd.Parameters.AddWithValue("@id_clase", pidClase);
+            //        cmd.Parameters.AddWithValue("@ver_lo_mas_vendido", (Int32)BusquedaSet);
+            //    }
 
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
-                dsVentas1.mas_vendidos.Clear();
-                sqlDataAdapter.Fill(dsVentas1.mas_vendidos);
-                con.Close();
-            }
-            catch (Exception ec)
-            {
-                CajaDialogo.Error(ec.Message);
-            }
+            //    SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+            //    dsVentas1.mas_vendidos.Clear();
+            //    sqlDataAdapter.Fill(dsVentas1.mas_vendidos);
+            //    con.Close();
+            //}
+            //catch (Exception ec)
+            //{
+            //    CajaDialogo.Error(ec.Message);
+            //}
         }
 
         private void CargarOpcionesMasVendidasLeftPriority(int pidClase)
@@ -1678,12 +1678,12 @@ namespace Eatery.Ventas
             switch (BusquedaSet)
             {
                 case Busqueda.LoMasVendido:
-                    cmdTodosLosProductos.Appearance.BackColor = Color.White;
-                    cmdLoMasVendido.Appearance.BackColor = Color.LightGreen;
+                    //cmdTodosLosProductos.Appearance.BackColor = Color.White;
+                    //cmdLoMasVendido.Appearance.BackColor = Color.LightGreen;
                     break;
                 case Busqueda.Todos:
-                    cmdTodosLosProductos.Appearance.BackColor = Color.LightGreen;
-                    cmdLoMasVendido.Appearance.BackColor = Color.White;
+                    //cmdTodosLosProductos.Appearance.BackColor = Color.LightGreen;
+                    //cmdLoMasVendido.Appearance.BackColor = Color.White;
                     break;
             }
         }
@@ -1698,72 +1698,72 @@ namespace Eatery.Ventas
 
         private void cmdAddToCart_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            //agregar al carrito para facturar 
-            var gridView = (GridView)gridControl2.FocusedView;
-            var row = (dsVentas.mas_vendidosRow)gridView.GetFocusedDataRow();
+            ////agregar al carrito para facturar 
+            //var gridView = (GridView)gridControl2.FocusedView;
+            //var row = (dsVentas.mas_vendidosRow)gridView.GetFocusedDataRow();
 
-            decimal valor_total = 0;
+            //decimal valor_total = 0;
 
-            bool AgregarNuevo = true;
-            foreach (dsVentas.detalle_factura_transactionRow rowF in dsVentas1.detalle_factura_transaction) 
-            {
-                if(rowF.id_pt == row.id_pt)
-                {
-                    //Sumar cantidad nada mas
-                    rowF.cantidad = rowF.cantidad + 1;
-                    rowF.isv1 = rowF.isv2 = rowF.isv3 = 0;
-                    rowF.isv1 = ((rowF.cantidad * rowF.precio) - rowF.descuento) * rowF.tasa_isv;
-                    rowF.total_linea = (rowF.cantidad * rowF.precio) - rowF.descuento + rowF.isv1 + rowF.isv2 + rowF.isv3;
-                    AgregarNuevo = false;
-                }
-                valor_total += (rowF.total_linea + rowF.isv1);
-                txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total,2));
-            }
+            //bool AgregarNuevo = true;
+            //foreach (dsVentas.detalle_factura_transactionRow rowF in dsVentas1.detalle_factura_transaction) 
+            //{
+            //    if(rowF.id_pt == row.id_pt)
+            //    {
+            //        //Sumar cantidad nada mas
+            //        rowF.cantidad = rowF.cantidad + 1;
+            //        rowF.isv1 = rowF.isv2 = rowF.isv3 = 0;
+            //        rowF.isv1 = ((rowF.cantidad * rowF.precio) - rowF.descuento) * rowF.tasa_isv;
+            //        rowF.total_linea = (rowF.cantidad * rowF.precio) - rowF.descuento + rowF.isv1 + rowF.isv2 + rowF.isv3;
+            //        AgregarNuevo = false;
+            //    }
+            //    valor_total += (rowF.total_linea + rowF.isv1);
+            //    txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(valor_total,2));
+            //}
 
-            if (AgregarNuevo)
-            {
-                dsVentas.detalle_factura_transactionRow row1 = dsVentas1.detalle_factura_transaction.Newdetalle_factura_transactionRow();
-                //dsCompras.oc_d_normalRow row1 = dsCompras1.oc_d_normal.Newoc_d_normalRow();
-                row1.id_pt = row.id_pt;
-                row1.cantidad = 1;
-                //row1.precio = 50;
-                row1.precio = PuntoDeVentaActual.RecuperarPrecioItem(row1.id_pt, this.PuntoDeVentaActual.ID, this.ClienteFactura.Id);
+            //if (AgregarNuevo)
+            //{
+            //    dsVentas.detalle_factura_transactionRow row1 = dsVentas1.detalle_factura_transaction.Newdetalle_factura_transactionRow();
+            //    //dsCompras.oc_d_normalRow row1 = dsCompras1.oc_d_normal.Newoc_d_normalRow();
+            //    row1.id_pt = row.id_pt;
+            //    row1.cantidad = 1;
+            //    //row1.precio = 50;
+            //    row1.precio = PuntoDeVentaActual.RecuperarPrecioItem(row1.id_pt, this.PuntoDeVentaActual.ID, this.ClienteFactura.Id);
 
-                if (row1.precio == 0)
-                {
-                    SetErrorBarra("Este producto no tiene definido un precio. Por favor valide Lista de Precios!");
-                }
+            //    if (row1.precio == 0)
+            //    {
+            //        SetErrorBarra("Este producto no tiene definido un precio. Por favor valide Lista de Precios!");
+            //    }
 
-                row1.descuento = 0;
-                row1.itemcode = row.item_code;
-                row1.itemname = row.descripcion;
-                ProductoTerminado pt1= new ProductoTerminado();
-                row1.inventario = pt1.Recuperar_Cant_Inv_Actual_PT_for_facturacion(row.id_pt, this.PuntoDeVentaActual.ID);
+            //    row1.descuento = 0;
+            //    row1.itemcode = row.item_code;
+            //    row1.itemname = row.descripcion;
+            //    ProductoTerminado pt1= new ProductoTerminado();
+            //    row1.inventario = pt1.Recuperar_Cant_Inv_Actual_PT_for_facturacion(row.id_pt, this.PuntoDeVentaActual.ID);
 
-                row1.isv1 = row1.isv2 = row1.isv3 = 0;
-                Impuesto impuesto = new Impuesto();
-                decimal tasaISV = 0;
+            //    row1.isv1 = row1.isv2 = row1.isv3 = 0;
+            //    Impuesto impuesto = new Impuesto();
+            //    decimal tasaISV = 0;
 
-                if (impuesto.RecuperarRegistro(row.id_isv_aplicable))
-                {
-                    tasaISV = impuesto.Valor / 100;
-                    row1.isv1 = ((row1.cantidad * row1.precio) - row1.descuento) * tasaISV;
-                    row1.tasa_isv = tasaISV;
-                    row1.id_isv_aplicable = impuesto.Id;
-                }
-                else
-                {
-                    row1.tasa_isv = 0;
-                    row1.id_isv_aplicable = 0;
-                }
+            //    if (impuesto.RecuperarRegistro(row.id_isv_aplicable))
+            //    {
+            //        tasaISV = impuesto.Valor / 100;
+            //        row1.isv1 = ((row1.cantidad * row1.precio) - row1.descuento) * tasaISV;
+            //        row1.tasa_isv = tasaISV;
+            //        row1.id_isv_aplicable = impuesto.Id;
+            //    }
+            //    else
+            //    {
+            //        row1.tasa_isv = 0;
+            //        row1.id_isv_aplicable = 0;
+            //    }
 
-                row1.total_linea = (row1.cantidad * row1.precio) - row1.descuento + row1.isv1 + row1.isv2 + row1.isv3;
+            //    row1.total_linea = (row1.cantidad * row1.precio) - row1.descuento + row1.isv1 + row1.isv2 + row1.isv3;
                 
-                //dsCompras.oc_d_normal.Addoc_d_normalRow(row1);
-                dsVentas1.detalle_factura_transaction.Adddetalle_factura_transactionRow(row1);
-                valor_total += (row1.total_linea + row1.isv1);
-                txtTotal.Text= string.Format("{0:#,###,##0.00}", Math.Round(valor_total,2));
-            }
+            //    //dsCompras.oc_d_normal.Addoc_d_normalRow(row1);
+            //    dsVentas1.detalle_factura_transaction.Adddetalle_factura_transactionRow(row1);
+            //    valor_total += (row1.total_linea + row1.isv1);
+            //    txtTotal.Text= string.Format("{0:#,###,##0.00}", Math.Round(valor_total,2));
+            //}
         }
 
         private void simpleButton1_Click_2(object sender, EventArgs e)

@@ -765,11 +765,11 @@
     <Compile Include="Facturacion\CoreFacturas\xfrmSelectCliente.Designer.cs">
       <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\frmFactura.cs">
+    <Compile Include="Facturacion\frmFacturaBK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Facturacion\frmFactura.Designer.cs">
-      <DependentUpon>frmFactura.cs</DependentUpon>
+    <Compile Include="Facturacion\frmFacturaBK.Designer.cs">
+      <DependentUpon>frmFacturaBK.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\Mantenimientos\dsCRUDS_Facturacion.Designer.cs" />
     <Compile Include="Facturacion\Mantenimientos\dsMantenimiento.cs">
@@ -1231,8 +1231,8 @@
     <EmbeddedResource Include="Facturacion\CoreFacturas\xfrmSelectCliente.resx">
       <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Facturacion\frmFactura.resx">
-      <DependentUpon>frmFactura.cs</DependentUpon>
+    <EmbeddedResource Include="Facturacion\frmFacturaBK.resx">
+      <DependentUpon>frmFacturaBK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\Mantenimientos\Models\frmAddEquipoPuntoVenta.resx">
       <DependentUpon>frmAddEquipoPuntoVenta.cs</DependentUpon>
