@@ -29,6 +29,8 @@ namespace ERP_INTECOLI.Clases
         private string passdb;
         private int _id_grupo;
         private bool _recuperado;
+        private string apellido;
+        private string primer_nombre;
 
         public int Idnivel { get => idnivel; set => idnivel = value; }
         public string Tipo { get => tipo; set => tipo = value; }
@@ -49,7 +51,8 @@ namespace ERP_INTECOLI.Clases
         public bool Habilitado { get => habilitado; set => habilitado = value; }
         public bool Recuperado { get => _recuperado; set => _recuperado = value; }
         public int IdGrupo { get => _id_grupo; set => _id_grupo = value; }
-      
+        public string Apellido { get => apellido; set => apellido = value; }
+        public string Primer_nombre { get => primer_nombre; set => primer_nombre = value; }
 
         private string aduser;
 
@@ -92,12 +95,14 @@ namespace ERP_INTECOLI.Clases
                     Habilitado = dr.GetBoolean(3);
                     Nombre = dr.GetString(4);
                     Super_user = dr.GetBoolean(5);
-                    //Tiempo_inactividad = dr.GetTimeSpan(6);
+                    Tiempo_inactividad = dr.GetTimeSpan(6);
                     DateTime myDateTime = DateTime.Now;
                     string sqlFormattedDate = myDateTime.ToString(dr.GetString(6));
                     Utiliza_bloqueo = dr.GetBoolean(7);
                     UserDb = dr.GetString(8);
                     PassDb = dr.GetString(9);
+                    Primer_nombre = dr.GetString(10);
+                    Apellido = dr.GetString(11);
                     x = true;
                 }
                 dr.Close();

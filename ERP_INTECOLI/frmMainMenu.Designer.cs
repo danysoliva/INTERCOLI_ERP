@@ -189,6 +189,7 @@ namespace ERP_INTECOLI
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "Acciones";
+            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navDesconectar),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarUsuarios),
@@ -215,6 +216,7 @@ namespace ERP_INTECOLI
             this.navBarUsuarios.Caption = "Usuarios y Permisos";
             this.navBarUsuarios.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarUsuarios.ImageOptions.SvgImage")));
             this.navBarUsuarios.Name = "navBarUsuarios";
+            this.navBarUsuarios.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarUsuarios_LinkClicked);
             // 
             // navCRUDPermisos
             // 
@@ -426,7 +428,6 @@ namespace ERP_INTECOLI
             // navBarGroup3
             // 
             this.navBarGroup3.Caption = "Consultas";
-            this.navBarGroup3.Expanded = true;
             this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.NavBarProyeccionCobros),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarMiemborsClases),
@@ -587,7 +588,7 @@ namespace ERP_INTECOLI
             // nbConfig_PuntoVenta
             // 
             this.nbConfig_PuntoVenta.Caption = "Punto de Venta Config";
-            this.nbConfig_PuntoVenta.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.SmallImage")));
+            this.nbConfig_PuntoVenta.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbConfig_PuntoVenta.ImageOptions.SmallImage")));
             this.nbConfig_PuntoVenta.Name = "nbConfig_PuntoVenta";
             this.nbConfig_PuntoVenta.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbConfig_PuntoVenta_LinkClicked);
             // 
