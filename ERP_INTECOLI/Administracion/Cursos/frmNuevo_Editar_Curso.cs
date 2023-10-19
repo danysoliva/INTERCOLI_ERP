@@ -405,9 +405,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
 
             try
             {
-                string SQL = "";
-
-                SQL = @"sp_curso_guardar_dias";
+                string SQL = @"sp_curso_guardar_dias";
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(SQL,conn);
