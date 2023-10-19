@@ -156,7 +156,7 @@ namespace ERP_INTECOLI.Clases
                 DataOperations dp = new DataOperations();
                 SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
                 con.Open();
-                string sql = "[ACS].[sp_get_nivel_acceso_for_user]";
+                string sql = "[sp_get_nivel_acceso_for_user]";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id_sistema", idSistema);
