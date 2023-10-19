@@ -132,7 +132,7 @@ namespace ERP_INTECOLI.Clases
                 SqlConnection Conn = new SqlConnection(dp.ConnectionStringERP);
                 Conn.Open();
                 string sql = @"SELECT count(*)
-                                FROM [ACS].conf_usuario_ventanas vv 
+                                FROM conf_usuario_ventanas vv 
                                 where vv.id_ventana = "
                 + pIdVentana.ToString() +
                                       "and vv.id_usuario = " + Id.ToString();

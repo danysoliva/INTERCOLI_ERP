@@ -85,11 +85,11 @@ namespace ERP_INTECOLI
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarPermisos = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarUsuario = new DevExpress.XtraNavBar.NavBarItem();
+            this.nbConfig_PuntoVenta = new DevExpress.XtraNavBar.NavBarItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblServerName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).BeginInit();
             this.xtraTabControlMenu.SuspendLayout();
             this.TabAdministracion.SuspendLayout();
@@ -178,7 +178,7 @@ namespace ERP_INTECOLI
             this.nbPagoMultiple,
             this.nbNotasCredito,
             this.nbCierreCaja,
-            this.navBarItem1});
+            this.nbConfig_PuntoVenta});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 216;
@@ -423,42 +423,6 @@ namespace ERP_INTECOLI
             this.nbCierreCaja.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbCierreCaja.ImageOptions.SmallImage")));
             this.nbCierreCaja.Name = "nbCierreCaja";
             // 
-            // nb_facturasEmitidas
-            // 
-            this.nb_facturasEmitidas.Caption = "Facturas Emitidas";
-            this.nb_facturasEmitidas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("nb_facturasEmitidas.ImageOptions.SvgImage")));
-            this.nb_facturasEmitidas.Name = "nb_facturasEmitidas";
-            // 
-            // nbEstadoCuenta
-            // 
-            this.nbEstadoCuenta.Caption = "Estado de Cuenta";
-            this.nbEstadoCuenta.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("nbEstadoCuenta.ImageOptions.SvgImage")));
-            this.nbEstadoCuenta.Name = "nbEstadoCuenta";
-            // 
-            // nbCrearAutorizacionesSolicitudes
-            // 
-            this.nbCrearAutorizacionesSolicitudes.Caption = "Solicitudes de Autorizaciones";
-            this.nbCrearAutorizacionesSolicitudes.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbCrearAutorizacionesSolicitudes.ImageOptions.SmallImage")));
-            this.nbCrearAutorizacionesSolicitudes.Name = "nbCrearAutorizacionesSolicitudes";
-            // 
-            // nbPagoMultiple
-            // 
-            this.nbPagoMultiple.Caption = "Pago Múltiple";
-            this.nbPagoMultiple.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbPagoMultiple.ImageOptions.SmallImage")));
-            this.nbPagoMultiple.Name = "nbPagoMultiple";
-            // 
-            // nbNotasCredito
-            // 
-            this.nbNotasCredito.Caption = "Notas Crédito/Débito";
-            this.nbNotasCredito.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbNotasCredito.ImageOptions.SmallImage")));
-            this.nbNotasCredito.Name = "nbNotasCredito";
-            // 
-            // nbCierreCaja
-            // 
-            this.nbCierreCaja.Caption = "Cierre de Caja";
-            this.nbCierreCaja.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbCierreCaja.ImageOptions.SmallImage")));
-            this.nbCierreCaja.Name = "nbCierreCaja";
-            // 
             // navBarGroup3
             // 
             this.navBarGroup3.Caption = "Consultas";
@@ -590,7 +554,7 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarPermisos),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarUsuario),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbConfig_PuntoVenta)});
             this.navBarGroup5.Name = "navBarGroup5";
             // 
             // navBfrmCursos
@@ -617,6 +581,13 @@ namespace ERP_INTECOLI
             this.navBarUsuario.Caption = "Usuarios";
             this.navBarUsuario.Name = "navBarUsuario";
             this.navBarUsuario.Visible = false;
+            // 
+            // nbConfig_PuntoVenta
+            // 
+            this.nbConfig_PuntoVenta.Caption = "Punto de Venta Config";
+            this.nbConfig_PuntoVenta.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.SmallImage")));
+            this.nbConfig_PuntoVenta.Name = "nbConfig_PuntoVenta";
+            this.nbConfig_PuntoVenta.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbConfig_PuntoVenta_LinkClicked);
             // 
             // statusStrip1
             // 
@@ -652,11 +623,6 @@ namespace ERP_INTECOLI
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(0, 17);
             // 
-            // navBarItem1
-            // 
-            this.navBarItem1.Caption = "navBarItem1";
-            this.navBarItem1.Name = "navBarItem1";
-            // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -668,6 +634,7 @@ namespace ERP_INTECOLI
             this.Name = "frmMainMenu";
             this.Text = "ERP - Success English Academy System";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).EndInit();
             this.xtraTabControlMenu.ResumeLayout(false);
             this.TabAdministracion.ResumeLayout(false);
@@ -738,6 +705,6 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem nbPagoMultiple;
         private DevExpress.XtraNavBar.NavBarItem nbNotasCredito;
         private DevExpress.XtraNavBar.NavBarItem nbCierreCaja;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
+        private DevExpress.XtraNavBar.NavBarItem nbConfig_PuntoVenta;
     }
 }
