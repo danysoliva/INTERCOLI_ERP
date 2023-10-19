@@ -150,6 +150,7 @@ namespace ERP_INTECOLI
             // navBarGroup1
             // 
             this.navBarGroup1.Caption = "Acciones";
+            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navDesconectar),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarUsuarios),
@@ -243,6 +244,7 @@ namespace ERP_INTECOLI
             // navBarGroup2
             // 
             this.navBarGroup2.Caption = "Transacciones";
+            this.navBarGroup2.Expanded = true;
             this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navPostearMensualidad),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navMovimientoSaldos),
@@ -256,6 +258,8 @@ namespace ERP_INTECOLI
             // 
             // navPostearMensualidad
             // 
+            this.navPostearMensualidad.Appearance.Options.UseTextOptions = true;
+            this.navPostearMensualidad.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.navPostearMensualidad.Caption = "Posteo de Pagos - Recibos";
             this.navPostearMensualidad.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.cash_icon24px;
             this.navPostearMensualidad.Name = "navPostearMensualidad";
@@ -263,6 +267,8 @@ namespace ERP_INTECOLI
             // 
             // navMovimientoSaldos
             // 
+            this.navMovimientoSaldos.Appearance.Options.UseTextOptions = true;
+            this.navMovimientoSaldos.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.navMovimientoSaldos.Caption = "Movimientos Cobros Estudiantes";
             this.navMovimientoSaldos.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navMovimientoSaldos.ImageOptions.SvgImage")));
             this.navMovimientoSaldos.Name = "navMovimientoSaldos";
@@ -364,6 +370,8 @@ namespace ERP_INTECOLI
             // 
             // navEstudiantesDeshabilitados
             // 
+            this.navEstudiantesDeshabilitados.Appearance.Options.UseTextOptions = true;
+            this.navEstudiantesDeshabilitados.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.navEstudiantesDeshabilitados.Caption = "Estudiantes Deshabilitados";
             this.navEstudiantesDeshabilitados.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.bloquear_x32;
             this.navEstudiantesDeshabilitados.Name = "navEstudiantesDeshabilitados";
@@ -379,14 +387,18 @@ namespace ERP_INTECOLI
             // navIngresosTool
             // 
             this.navIngresosTool.Caption = "Nuevos Ingresos";
+            this.navIngresosTool.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.agregar_x32;
             this.navIngresosTool.Name = "navIngresosTool";
-            this.navIngresosTool.Visible = false;
+            this.navIngresosTool.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navIngresosTool_LinkClicked);
             // 
             // navSaldoAcumulado
             // 
+            this.navSaldoAcumulado.Appearance.Options.UseTextOptions = true;
+            this.navSaldoAcumulado.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.navSaldoAcumulado.Caption = "Deudores Saldo Acumulado";
+            this.navSaldoAcumulado.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.dinero_x32;
             this.navSaldoAcumulado.Name = "navSaldoAcumulado";
-            this.navSaldoAcumulado.Visible = false;
+            this.navSaldoAcumulado.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navSaldoAcumulado_LinkClicked);
             // 
             // statusStrip1
             // 

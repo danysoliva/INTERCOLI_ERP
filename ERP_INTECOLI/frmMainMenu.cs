@@ -23,6 +23,7 @@ using JAGUAR_APP;
 using ERP_INTECOLI.Administracion.Consultas;
 using ERP_INTECOLI.Consultas.ConsultaMiembros;
 using ERP_INTECOLI.Consultas;
+using ERP_INTECOLI.Consultas.ConsultaMovimientosSaldos;
 
 namespace ERP_INTECOLI
 {
@@ -381,6 +382,26 @@ namespace ERP_INTECOLI
         private void navTiposPagoEstudiane_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             frmConsultaTipoPago mtx = new frmConsultaTipoPago();
+            if (mtx != null)
+            {
+                mtx.MdiParent = this;
+                mtx.Show();
+            }
+        }
+
+        private void navIngresosTool_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmNuevosIngresos mtx = new frmNuevosIngresos();
+            if (mtx != null)
+            {
+                mtx.MdiParent = this;
+                mtx.Show();
+            }
+        }
+
+        private void navSaldoAcumulado_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmConsultaEstSaldosCobrables mtx = new frmConsultaEstSaldosCobrables();
             if (mtx != null)
             {
                 mtx.MdiParent = this;
