@@ -32,6 +32,7 @@ using static DevExpress.XtraPrinting.Native.ExportOptionsPropertiesNames;
 using System.Net;
 using ERP_INTECOLI.Facturacion;
 using Eatery.Ventas;
+using JAGUAR_APP.Facturacion.Mantenimientos;
 
 namespace ERP_INTECOLI
 {
@@ -53,6 +54,7 @@ namespace ERP_INTECOLI
             frm.WindowState = FormWindowState.Normal;
             frm.Show();
             UsuarioLogeado = frm.user1;
+            this.Text = "ERP - Success English Academy System.  Equipo Actual: " + Dns.GetHostName();
         }
 
         public void ejecutar(int id)
@@ -77,10 +79,12 @@ namespace ERP_INTECOLI
             lblServerName.Text = "Server Name: " + Globals.ERP_ServerAddress + "  DB: " + Globals.ERP_ActiveDB;
             frm = new frmMain();
             frm.LogeadoComplete += new frmMain.LogeadoEvent(ejecutar);
+
             
             frm.MdiParent = this;
             frm.WindowState = FormWindowState.Normal;
             frm.Show();
+            this.Text = "ERP - Success English Academy System.  Equipo Actual: " + Dns.GetHostName();
         }
 
         private void navBarEstudiantes_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -528,6 +532,50 @@ namespace ERP_INTECOLI
                 else
                 {
                     CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #11 (Facturacion punto de venta)");
+                }
+            }
+        }
+
+        private void frmMainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nbConfig_PuntoVenta_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 11);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    xfrm_PDV frm = new xfrm_PDV(UsuarioLogeado);
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(16))
+                {
+                    xfrm_PDV frm = new xfrm_PDV(UsuarioLogeado);
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #16 (Configuraciones de Facturacion)");
                 }
             }
         }

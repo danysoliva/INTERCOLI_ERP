@@ -132,7 +132,7 @@ namespace ERP_INTECOLI.Clases
                 SqlConnection Conn = new SqlConnection(dp.ConnectionStringERP);
                 Conn.Open();
                 string sql = @"SELECT count(*)
-                                FROM [ACS].conf_usuario_ventanas vv 
+                                FROM conf_usuario_ventanas vv 
                                 where vv.id_ventana = "
                 + pIdVentana.ToString() +
                                       "and vv.id_usuario = " + Id.ToString();
@@ -156,7 +156,7 @@ namespace ERP_INTECOLI.Clases
                 DataOperations dp = new DataOperations();
                 SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
                 con.Open();
-                string sql = "[ACS].[sp_get_nivel_acceso_for_user]";
+                string sql = "[sp_get_nivel_acceso_for_user]";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id_sistema", idSistema);
