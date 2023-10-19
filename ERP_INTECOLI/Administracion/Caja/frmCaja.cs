@@ -264,7 +264,7 @@ namespace ERP_INTECOLI.Administracion.Caja
                             int id = row.id;
                             UpdateFacturaPagada(id, 1);//update factura efectivo
                             CargarDatos();
-                            Factura fact1 = new Factura();
+                            FacturaBK fact1 = new FacturaBK();
                             if (fact1.RecuperarRegistro(id))
                             {
                                 switch (frm1.IdFormato)
@@ -301,7 +301,7 @@ namespace ERP_INTECOLI.Administracion.Caja
                             int id_ = row.id;
                             UpdateFacturaPagada(id_, 2);//update factura efectivo
                             CargarDatos();
-                            Factura fact1 = new Factura();
+                            FacturaBK fact1 = new FacturaBK();
                             if (fact1.RecuperarRegistro(id_))
                             {
                                 //rptFactura fac = new rptFactura(fact1, psConnection, rptFactura.TipoCopia.Azul);
@@ -348,24 +348,9 @@ namespace ERP_INTECOLI.Administracion.Caja
 
 
                             CargarDatos();
-                            Factura fact1 = new Factura();
+                            FacturaBK fact1 = new FacturaBK();
                             if (fact1.RecuperarRegistro(id_))
                             {
-                                //rptFactura fac = new rptFactura(fact1, psConnection, rptFactura.TipoCopia.Azul);
-                                //fac.PrintingSystem.Document.AutoFitToPagesWidth = 1;
-                                //ReportPrintTool printReport = new ReportPrintTool(fac);
-                                ////printReport.ShowPreview();
-                                ////printReport.Print("EPSON TM-U220 Receipt");
-                                ////printReport.PrinterSettings.PrinterName = "EPSON TM-U220 Receipt";
-                                //printReport.PrinterSettings.PrinterName = "EPSON TM-U220 Receipt";
-                                //try
-                                //{
-                                //    printReport.Print();
-                                //}
-                                //catch
-                                //{
-                                //    printReport.ShowPreview();
-                                //}
                                 switch (frm3.IdFormato)
                                 {
                                     case 1:

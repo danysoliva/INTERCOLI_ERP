@@ -72,7 +72,7 @@ namespace ERP_INTECOLI.Administracion.Caja
         {
             if (!string.IsNullOrEmpty(txtNumero.Text))
             {
-                Factura fact1 = new Factura();
+                FacturaBK fact1 = new FacturaBK();
                 if (fact1.RecuperarRegistro(txtNumero.Text))
                 {
                     rptFactura fac = new rptFactura(fact1, rptFactura.TipoCopia.Azul);

@@ -103,6 +103,34 @@ namespace ERP_INTECOLI.Clases
             catch { }
             return valor;
         }
+
+        public DateTime NowSetDateTime()
+        {
+            DateTime val = DateTime.Now;
+            try
+            {
+                SqlConnection con = new SqlConnection(ConnectionStringERP);
+                con.Open();
+                string sql = @"dbo.sp_get_hour_server_cloud_adjust";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                //cmd.CommandType = CommandType.StoredProcedure;
+                val = Convert.ToDateTime(cmd.ExecuteScalar());
+                con.Close();
+            }
+            catch (Exception ec)
+            {
+                CajaDialogo.Error(ec.Message);
+            }
+            return val;
+        }
         #endregion
+
+
+        public enum TipoTransaccionesCRUD
+        {
+            Nuevo = 1,
+            Editar = 2,
+            Eliminar = 3
+        }
     }
 }

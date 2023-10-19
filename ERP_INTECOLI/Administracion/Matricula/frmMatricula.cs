@@ -20,7 +20,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
         DataOperations dp = new DataOperations();
         SqlConnection conn;
         Estudiante vEstudiante;
-        int Matricula_detalleID;
+        //int Matricula_detalleID;
         int MatriculaID;
         bool editar;
         int idDetMatricula;

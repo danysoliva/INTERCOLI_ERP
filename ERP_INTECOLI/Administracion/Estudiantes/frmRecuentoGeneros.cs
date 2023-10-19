@@ -54,7 +54,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             }
             catch (Exception error)
             {
-                
+                CajaDialogo.Error(error.Message);
             }
 
         }

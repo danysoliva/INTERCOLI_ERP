@@ -8,7 +8,7 @@ namespace ERP_INTECOLI.Administracion.Facturacion
 {
     public partial class rptBoletaReserva : DevExpress.XtraReports.UI.XtraReport
     {
-        int idFact;
+        //int idFact;
         public enum TipoCopia
         {
             Blanco = 0,//White

@@ -505,7 +505,7 @@ namespace ERP_INTECOLI.Transacciones
             frm1.txtSubTotal.Text = string.Format("{0:L ###,##0.00}", VarAbono);
             frm1.txtTotal.Text = string.Format("{0:L ###,##0.00}", ((VarAbono + VarRecargo) - VarDescuento));
             frm1.gridControl1.DataSource = dsMensualidades1.mensualidades;
-            Factura Fact1 = new Factura();
+            FacturaBK Fact1 = new FacturaBK();
 
             if (frm1.ShowDialog() == DialogResult.OK)
             {

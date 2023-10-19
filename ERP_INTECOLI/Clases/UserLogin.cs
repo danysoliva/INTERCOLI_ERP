@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using JAGUAR_APP;
+using static DevExpress.XtraEditors.Mask.MaskSettings;
 
 namespace ERP_INTECOLI.Clases
 {
@@ -48,6 +49,7 @@ namespace ERP_INTECOLI.Clases
         public bool Habilitado { get => habilitado; set => habilitado = value; }
         public bool Recuperado { get => _recuperado; set => _recuperado = value; }
         public int IdGrupo { get => _id_grupo; set => _id_grupo = value; }
+      
 
         private string aduser;
 
@@ -119,6 +121,55 @@ namespace ERP_INTECOLI.Clases
             {
                 return " ";
             }
+        }
+
+        internal bool ValidarNivelPermisos(int pIdVentana)
+        {
+            bool r = false;
+            try
+            {
+                DataOperations dp = new DataOperations();
+                SqlConnection Conn = new SqlConnection(dp.ConnectionStringERP);
+                Conn.Open();
+                string sql = @"SELECT count(*)
+                                FROM [ACS].conf_usuario_ventanas vv 
+                                where vv.id_ventana = "
+                + pIdVentana.ToString() +
+                                      "and vv.id_usuario = " + Id.ToString();
+                SqlCommand cmd = new SqlCommand(sql, Conn);
+                int v = Convert.ToInt32(cmd.ExecuteScalar());
+                if (v > 0)
+                    r = true;
+            }
+            catch (Exception ec)
+            {
+                CajaDialogo.Error(ec.Message);
+            }
+            return r;
+        }
+
+        public int idNivelAcceso(int Iduser, int idSistema)
+        {
+            int id = 0;
+            try
+            {
+                DataOperations dp = new DataOperations();
+                SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                con.Open();
+                string sql = "[ACS].[sp_get_nivel_acceso_for_user]";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_sistema", idSistema);
+                cmd.Parameters.AddWithValue("@id_user", Iduser);
+                id = Convert.ToInt32(cmd.ExecuteScalar());
+                con.Close();
+            }
+            catch (Exception ec)
+            {
+                //recuperado = false;
+                CajaDialogo.Error(ec.Message);
+            }
+            return id;
         }
 
         public string DecryptPassword(string pass)

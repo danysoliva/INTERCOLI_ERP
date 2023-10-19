@@ -22,7 +22,7 @@ namespace ERP_INTECOLI.Administracion.Facturacion
 
         public TipoCopia TipoCopiaActual = TipoCopia.Blanco;
 
-        public rptFacturaLetterSize(Factura Factura1, TipoCopia pTipoCopia)
+        public rptFacturaLetterSize(FacturaBK Factura1, TipoCopia pTipoCopia)
         {
             InitializeComponent();
             TipoCopiaActual = pTipoCopia;

@@ -18,7 +18,7 @@ namespace ERP_INTECOLI.Administracion.Facturacion
     public partial class frmList_Invoices : DevExpress.XtraEditors.XtraForm
     {
         DataOperations dp = new DataOperations();
-        UserLogin UsuarioLogueado;
+        //UserLogin UsuarioLogueado;
 
         public int IdFactura;
         public string NumFactura;
