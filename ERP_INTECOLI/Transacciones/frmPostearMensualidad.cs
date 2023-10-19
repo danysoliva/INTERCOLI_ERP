@@ -495,7 +495,7 @@ namespace ERP_INTECOLI.Transacciones
                 }
             }
 
-            frmFactura frm1 = new frmFactura();
+            frmFacturaBK frm1 = new frmFacturaBK();
             frm1.txtCliente.Text = vEstudiante.Nombres + " " + vEstudiante.Apellidos;
             frm1.txtTelefono.Text = vEstudiante.RecuperaTelefonosConcatenadosEstudiante();
             frm1.txtDireccion.Text = vEstudiante.Direccion;

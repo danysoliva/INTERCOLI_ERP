@@ -14,9 +14,9 @@ using DevExpress.XtraGrid.Views.Grid;
 
 namespace ERP_INTECOLI.Facturacion
 {
-    public partial class frmFactura : DevExpress.XtraEditors.XtraForm
+    public partial class frmFacturaBK : DevExpress.XtraEditors.XtraForm
     {
-        public frmFactura()
+        public frmFacturaBK()
         {
             InitializeComponent();
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace ERP_INTECOLI.Facturacion
 {
-    partial class frmFactura
+    partial class frmFacturaBK
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ERP_INTECOLI.Facturacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFactura));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFacturaBK));
             DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.txtRecargo = new System.Windows.Forms.TextBox();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
