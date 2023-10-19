@@ -1700,6 +1700,7 @@
     <None Include="Resources\reservax32.png" />
     <None Include="Resources\reservadox32.png" />
     <None Include="Resources\saldar_x32.png" />
+    <None Include="Resources\ruptura_x32.png" />
     <Content Include="Resources\salir_24.png" />
     <Content Include="Resources\Salir_32.png" />
     <Content Include="Resources\save.png" />
