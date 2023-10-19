@@ -69,7 +69,7 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos.Models
                 con.Open();
 
                 SqlCommand cmd = new SqlCommand(@"SELECT [id],concat(coalesce([codigo],'S/N'),'  ',[nombre_local])as descripcion
-                                                  FROM [JAGUAR_DB].[dbo].[Facturacion_PuntoVenta]
+                                                  FROM [Facturacion_PuntoVenta]
                                                   where [enable] = 1", con);
                 //cmd.CommandType = CommandType.StoredProcedure;
                 //cmd.Parameters.AddWithValue("@idbodega", idBodega);
