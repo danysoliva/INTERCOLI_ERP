@@ -58,23 +58,23 @@ namespace ERP_INTECOLI.Administracion.Cursos
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbxNiveles = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.nivelesacademicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsCursos_1 = new ERP_INTECOLI.Administracion.Cursos.dsCursos_();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid_nivel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbxInstructores = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.instructoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colid_instructor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tseHora = new DevExpress.XtraEditors.TimeEdit();
             this.tseHoraFin = new DevExpress.XtraEditors.TimeEdit();
-            this.nivelesacademicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsCursos_1 = new ERP_INTECOLI.Administracion.Cursos.dsCursos_();
-            this.instructoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ceSeccion = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.colid_instructor = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cb4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb5)).BeginInit();
@@ -84,14 +84,14 @@ namespace ERP_INTECOLI.Administracion.Cursos
             ((System.ComponentModel.ISupportInitialize)(this.cb2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxNiveles.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nivelesacademicosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCursos_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxInstructores.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.instructoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tseHora.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tseHoraFin.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nivelesacademicosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCursos_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.instructoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceSeccion.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,7 +105,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             this.groupBox1.Controls.Add(this.cb2);
             this.groupBox1.Controls.Add(this.cb1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(380, 24);
+            this.groupBox1.Location = new System.Drawing.Point(400, 24);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(241, 143);
             this.groupBox1.TabIndex = 8;
@@ -218,7 +218,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             this.chCursoFinalizado.AutoSize = true;
             this.chCursoFinalizado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chCursoFinalizado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chCursoFinalizado.Location = new System.Drawing.Point(418, 173);
+            this.chCursoFinalizado.Location = new System.Drawing.Point(438, 173);
             this.chCursoFinalizado.Name = "chCursoFinalizado";
             this.chCursoFinalizado.Size = new System.Drawing.Size(141, 25);
             this.chCursoFinalizado.TabIndex = 34;
@@ -267,7 +267,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             // 
             this.dtFin.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dtFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFin.Location = new System.Drawing.Point(499, 239);
+            this.dtFin.Location = new System.Drawing.Point(519, 239);
             this.dtFin.Name = "dtFin";
             this.dtFin.Size = new System.Drawing.Size(122, 29);
             this.dtFin.TabIndex = 38;
@@ -277,7 +277,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             // 
             this.dtInicio.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dtInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtInicio.Location = new System.Drawing.Point(499, 204);
+            this.dtInicio.Location = new System.Drawing.Point(519, 204);
             this.dtInicio.Name = "dtInicio";
             this.dtInicio.Size = new System.Drawing.Size(122, 29);
             this.dtInicio.TabIndex = 39;
@@ -287,7 +287,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             // 
             this.lblFechaProximoPago.AutoSize = true;
             this.lblFechaProximoPago.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblFechaProximoPago.Location = new System.Drawing.Point(399, 210);
+            this.lblFechaProximoPago.Location = new System.Drawing.Point(419, 210);
             this.lblFechaProximoPago.Name = "lblFechaProximoPago";
             this.lblFechaProximoPago.Size = new System.Drawing.Size(94, 21);
             this.lblFechaProximoPago.TabIndex = 40;
@@ -298,7 +298,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label1.Location = new System.Drawing.Point(399, 245);
+            this.label1.Location = new System.Drawing.Point(419, 245);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 21);
             this.label1.TabIndex = 41;
@@ -309,7 +309,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.Location = new System.Drawing.Point(41, 34);
+            this.label2.Location = new System.Drawing.Point(14, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 21);
             this.label2.TabIndex = 42;
@@ -317,7 +317,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             // 
             // cbxNiveles
             // 
-            this.cbxNiveles.Location = new System.Drawing.Point(198, 33);
+            this.cbxNiveles.Location = new System.Drawing.Point(171, 33);
             this.cbxNiveles.Name = "cbxNiveles";
             this.cbxNiveles.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxNiveles.Properties.Appearance.Options.UseFont = true;
@@ -329,8 +329,18 @@ namespace ERP_INTECOLI.Administracion.Cursos
             this.cbxNiveles.Properties.PopupView = this.gridLookUpEdit1View;
             this.cbxNiveles.Properties.SearchMode = DevExpress.XtraEditors.Repository.GridLookUpSearchMode.AutoSearch;
             this.cbxNiveles.Properties.ValueMember = "id_nivel";
-            this.cbxNiveles.Size = new System.Drawing.Size(158, 24);
+            this.cbxNiveles.Size = new System.Drawing.Size(211, 24);
             this.cbxNiveles.TabIndex = 43;
+            // 
+            // nivelesacademicosBindingSource
+            // 
+            this.nivelesacademicosBindingSource.DataMember = "Niveles_academicos";
+            this.nivelesacademicosBindingSource.DataSource = this.dsCursos_1;
+            // 
+            // dsCursos_1
+            // 
+            this.dsCursos_1.DataSetName = "dsCursos_";
+            this.dsCursos_1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridLookUpEdit1View
             // 
@@ -359,7 +369,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label3.Location = new System.Drawing.Point(126, 161);
+            this.label3.Location = new System.Drawing.Point(99, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 21);
             this.label3.TabIndex = 45;
@@ -369,7 +379,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label4.Location = new System.Drawing.Point(112, 208);
+            this.label4.Location = new System.Drawing.Point(85, 208);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 21);
             this.label4.TabIndex = 46;
@@ -377,7 +387,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             // 
             // cbxInstructores
             // 
-            this.cbxInstructores.Location = new System.Drawing.Point(198, 205);
+            this.cbxInstructores.Location = new System.Drawing.Point(171, 205);
             this.cbxInstructores.Name = "cbxInstructores";
             this.cbxInstructores.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxInstructores.Properties.Appearance.Options.UseFont = true;
@@ -389,8 +399,13 @@ namespace ERP_INTECOLI.Administracion.Cursos
             this.cbxInstructores.Properties.PopupView = this.gridView2;
             this.cbxInstructores.Properties.SearchMode = DevExpress.XtraEditors.Repository.GridLookUpSearchMode.AutoSearch;
             this.cbxInstructores.Properties.ValueMember = "id_instructor";
-            this.cbxInstructores.Size = new System.Drawing.Size(158, 24);
+            this.cbxInstructores.Size = new System.Drawing.Size(211, 24);
             this.cbxInstructores.TabIndex = 47;
+            // 
+            // instructoresBindingSource
+            // 
+            this.instructoresBindingSource.DataMember = "Instructores";
+            this.instructoresBindingSource.DataSource = this.dsCursos_1;
             // 
             // gridView2
             // 
@@ -402,11 +417,24 @@ namespace ERP_INTECOLI.Administracion.Cursos
             this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
+            // colid_instructor
+            // 
+            this.colid_instructor.FieldName = "id_instructor";
+            this.colid_instructor.Name = "colid_instructor";
+            // 
+            // colnombre
+            // 
+            this.colnombre.Caption = "Instructores";
+            this.colnombre.FieldName = "nombre";
+            this.colnombre.Name = "colnombre";
+            this.colnombre.Visible = true;
+            this.colnombre.VisibleIndex = 0;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label5.Location = new System.Drawing.Point(104, 76);
+            this.label5.Location = new System.Drawing.Point(77, 76);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 21);
             this.label5.TabIndex = 48;
@@ -416,7 +444,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label6.Location = new System.Drawing.Point(120, 117);
+            this.label6.Location = new System.Drawing.Point(93, 117);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 21);
             this.label6.TabIndex = 49;
@@ -425,47 +453,32 @@ namespace ERP_INTECOLI.Administracion.Cursos
             // tseHora
             // 
             this.tseHora.EditValue = new System.DateTime(2023, 10, 18, 0, 0, 0, 0);
-            this.tseHora.Location = new System.Drawing.Point(198, 75);
+            this.tseHora.Location = new System.Drawing.Point(171, 75);
             this.tseHora.Name = "tseHora";
             this.tseHora.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.tseHora.Properties.Appearance.Options.UseFont = true;
             this.tseHora.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.tseHora.Properties.MaskSettings.Set("mask", "t");
-            this.tseHora.Size = new System.Drawing.Size(158, 24);
+            this.tseHora.Size = new System.Drawing.Size(134, 24);
             this.tseHora.TabIndex = 50;
             // 
             // tseHoraFin
             // 
             this.tseHoraFin.EditValue = new System.DateTime(2023, 10, 18, 0, 0, 0, 0);
-            this.tseHoraFin.Location = new System.Drawing.Point(198, 117);
+            this.tseHoraFin.Location = new System.Drawing.Point(171, 117);
             this.tseHoraFin.Name = "tseHoraFin";
             this.tseHoraFin.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.tseHoraFin.Properties.Appearance.Options.UseFont = true;
             this.tseHoraFin.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.tseHoraFin.Properties.MaskSettings.Set("mask", "t");
-            this.tseHoraFin.Size = new System.Drawing.Size(158, 24);
+            this.tseHoraFin.Size = new System.Drawing.Size(134, 24);
             this.tseHoraFin.TabIndex = 51;
-            // 
-            // nivelesacademicosBindingSource
-            // 
-            this.nivelesacademicosBindingSource.DataMember = "Niveles_academicos";
-            this.nivelesacademicosBindingSource.DataSource = this.dsCursos_1;
-            // 
-            // dsCursos_1
-            // 
-            this.dsCursos_1.DataSetName = "dsCursos_";
-            this.dsCursos_1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // instructoresBindingSource
-            // 
-            this.instructoresBindingSource.DataMember = "Instructores";
-            this.instructoresBindingSource.DataSource = this.dsCursos_1;
             // 
             // ceSeccion
             // 
-            this.ceSeccion.Location = new System.Drawing.Point(198, 161);
+            this.ceSeccion.Location = new System.Drawing.Point(171, 161);
             this.ceSeccion.Name = "ceSeccion";
             this.ceSeccion.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.ceSeccion.Properties.Appearance.Options.UseFont = true;
@@ -482,21 +495,8 @@ namespace ERP_INTECOLI.Administracion.Cursos
             "08",
             "09",
             "10"});
-            this.ceSeccion.Size = new System.Drawing.Size(158, 24);
+            this.ceSeccion.Size = new System.Drawing.Size(211, 24);
             this.ceSeccion.TabIndex = 7;
-            // 
-            // colid_instructor
-            // 
-            this.colid_instructor.FieldName = "id_instructor";
-            this.colid_instructor.Name = "colid_instructor";
-            // 
-            // colnombre
-            // 
-            this.colnombre.Caption = "Instructores";
-            this.colnombre.FieldName = "nombre";
-            this.colnombre.Name = "colnombre";
-            this.colnombre.Visible = true;
-            this.colnombre.VisibleIndex = 0;
             // 
             // frmNuevo_Editar_Curso
             // 
@@ -534,14 +534,14 @@ namespace ERP_INTECOLI.Administracion.Cursos
             ((System.ComponentModel.ISupportInitialize)(this.cb2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxNiveles.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nivelesacademicosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCursos_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxInstructores.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.instructoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tseHora.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tseHoraFin.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nivelesacademicosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCursos_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.instructoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceSeccion.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

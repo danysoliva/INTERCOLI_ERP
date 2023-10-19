@@ -264,6 +264,17 @@
     <Compile Include="Consultas\frmSeguimientoSaldos.Designer.cs">
       <DependentUpon>frmSeguimientoSaldos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\RangosPago\dsRangosPagos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRangosPagos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\RangosPago\frmRangosPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\RangosPago\frmRangosPago.Designer.cs">
+      <DependentUpon>frmRangosPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\RangosPago\dsRangosPagos.Designer.cs" />
     <Compile Include="Consultas\RangosPago\frmRangosPago.cs">
       <SubType>Form</SubType>
@@ -1455,13 +1466,6 @@
     </None>
     <None Include="Consultas\ConsultaMovimientosSaldos\dsEstSaldosCobrables.xss">
       <DependentUpon>dsEstSaldosCobrables.xsd</DependentUpon>
-    </None>
-    <None Include="Consultas\RangosPago\dsRangosPagos.xsc">
-      <DependentUpon>dsRangosPagos.xsd</DependentUpon>
-    </None>
-    <None Include="Consultas\RangosPago\dsRangosPagos.xsd" />
-    <None Include="Consultas\RangosPago\dsRangosPagos.xss">
-      <DependentUpon>dsRangosPagos.xsd</DependentUpon>
     </None>
     <None Include="Consultas\SaldosProyeccion\dsProyeccionSaldos.xsc">
       <DependentUpon>dsProyeccionSaldos.xsd</DependentUpon>

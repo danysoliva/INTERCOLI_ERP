@@ -423,6 +423,42 @@ namespace ERP_INTECOLI
             this.nbCierreCaja.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbCierreCaja.ImageOptions.SmallImage")));
             this.nbCierreCaja.Name = "nbCierreCaja";
             // 
+            // nb_facturasEmitidas
+            // 
+            this.nb_facturasEmitidas.Caption = "Facturas Emitidas";
+            this.nb_facturasEmitidas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("nb_facturasEmitidas.ImageOptions.SvgImage")));
+            this.nb_facturasEmitidas.Name = "nb_facturasEmitidas";
+            // 
+            // nbEstadoCuenta
+            // 
+            this.nbEstadoCuenta.Caption = "Estado de Cuenta";
+            this.nbEstadoCuenta.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("nbEstadoCuenta.ImageOptions.SvgImage")));
+            this.nbEstadoCuenta.Name = "nbEstadoCuenta";
+            // 
+            // nbCrearAutorizacionesSolicitudes
+            // 
+            this.nbCrearAutorizacionesSolicitudes.Caption = "Solicitudes de Autorizaciones";
+            this.nbCrearAutorizacionesSolicitudes.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbCrearAutorizacionesSolicitudes.ImageOptions.SmallImage")));
+            this.nbCrearAutorizacionesSolicitudes.Name = "nbCrearAutorizacionesSolicitudes";
+            // 
+            // nbPagoMultiple
+            // 
+            this.nbPagoMultiple.Caption = "Pago Múltiple";
+            this.nbPagoMultiple.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbPagoMultiple.ImageOptions.SmallImage")));
+            this.nbPagoMultiple.Name = "nbPagoMultiple";
+            // 
+            // nbNotasCredito
+            // 
+            this.nbNotasCredito.Caption = "Notas Crédito/Débito";
+            this.nbNotasCredito.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbNotasCredito.ImageOptions.SmallImage")));
+            this.nbNotasCredito.Name = "nbNotasCredito";
+            // 
+            // nbCierreCaja
+            // 
+            this.nbCierreCaja.Caption = "Cierre de Caja";
+            this.nbCierreCaja.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbCierreCaja.ImageOptions.SmallImage")));
+            this.nbCierreCaja.Name = "nbCierreCaja";
+            // 
             // navBarGroup3
             // 
             this.navBarGroup3.Caption = "Consultas";

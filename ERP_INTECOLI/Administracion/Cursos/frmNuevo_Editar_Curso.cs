@@ -47,7 +47,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
             }
 
             //si hora inicio es mayor que hora fin muestra error
-            if (Convert.ToDateTime(tseHora.EditValue) >= Convert.ToDateTime(tseHoraFin.EditValue))
+            if (tseHora.Time.Hour >= tseHoraFin.Time.Hour)
             {
                 CajaDialogo.Error("Hora de inicio no puede ser mayor o igual que la hora fin");
                 return;
@@ -68,7 +68,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
                                 FROM cursos cc
                                 where not cc.curso_finalizado = 1
                                       and cc.id_nivel = " + cbxNiveles.EditValue.ToString() +
-                                              "and btrim(cc.seccion) = '" + v_hora + "-" + ceSeccion.Text + "';";
+                                              "and cc.seccion = '" + v_hora + "-" + ceSeccion.Text + "';";
                         SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                         conn.Open();
                         SqlCommand cmd = new SqlCommand(sql, conn);
@@ -102,12 +102,13 @@ namespace ERP_INTECOLI.Administracion.Cursos
                         //                  :p_seccion
                         //                    )";
                         
-                        string v_hora = tseHora.EditValue.ToString();
+                        string v_hora = tseHora.Time.Hour.ToString();
                         if (v_hora.Length == 1)
                             v_hora = "0" + v_hora;
                         SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                         conn.Open();
                         SqlCommand cmd = new SqlCommand("sp_insert_curso", conn);
+                        cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@id_nivel", cbxNiveles.EditValue);
                         cmd.Parameters.AddWithValue("@id_instructor", cbxInstructores.EditValue);
                         cmd.Parameters.AddWithValue("@seccion", v_hora + "-" + ceSeccion.Text);
@@ -155,17 +156,24 @@ namespace ERP_INTECOLI.Administracion.Cursos
                         conn.Open();
                         SqlCommand cmd = new SqlCommand("sp_update_cursos",conn);
                         cmd.CommandType = CommandType.StoredProcedure;
-                        string v_hora = tseHora.EditValue.ToString();
+                        string v_hora = tseHora.Time.Hour.ToString();
                         if (v_hora.Length == 1)
                             v_hora = "0" + v_hora;
+
+                        
+                        TimeSpan resulInicio = TimeSpan.FromHours(tseHora.Time.Hour);
+                        string InicioHora = resulInicio.ToString("hh':'mm");
+
+                        TimeSpan resulFinal = TimeSpan.FromHours(tseHoraFin.Time.Hour);
+                        string FinalHora = resulFinal.ToString("hh':'mm");
 
                         cmd.Parameters.AddWithValue("@id_nivel",cbxNiveles.EditValue);
                         cmd.Parameters.AddWithValue("@id_instructor", Convert.ToInt32(cbxInstructores.EditValue));
                         cmd.Parameters.AddWithValue("@fecha_inicio", dtInicio.Value);
                         cmd.Parameters.AddWithValue("@fecha_fin", dtFin.Value);
                         cmd.Parameters.AddWithValue("@curso_finalizado", chCursoFinalizado.Checked);
-                        cmd.Parameters.AddWithValue("@hora_inicio", tseHora.Time);
-                        cmd.Parameters.AddWithValue("@hora_fin", tseHoraFin.Time);
+                        cmd.Parameters.AddWithValue("@hora_inicio", InicioHora); //tseHora.Time.Hour);
+                        cmd.Parameters.AddWithValue("@hora_fin", FinalHora); //tseHoraFin.Time.Hour);
                         cmd.Parameters.AddWithValue("@seccion", v_hora + "-" + ceSeccion.Text);
                         cmd.Parameters.AddWithValue("@id", idCurso);
                         cmd.ExecuteNonQuery();
@@ -397,9 +405,7 @@ namespace ERP_INTECOLI.Administracion.Cursos
 
             try
             {
-                string SQL = "";
-
-                SQL = @"sp_curso_guardar_dias";
+                string SQL = @"sp_curso_guardar_dias";
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(SQL,conn);
