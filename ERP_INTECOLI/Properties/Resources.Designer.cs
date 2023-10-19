@@ -113,6 +113,16 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap caja_registradora_x32 {
+            get {
+                object obj = ResourceManager.GetObject("caja-registradora_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap caja_registradorax32 {
             get {
                 object obj = ResourceManager.GetObject("caja-registradorax32", resourceCulture);
@@ -163,6 +173,16 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap credito_x32 {
+            get {
+                object obj = ResourceManager.GetObject("credito_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Custom_Icon_Design_Pretty_Office_11_Cash_512 {
             get {
                 object obj = ResourceManager.GetObject("Custom-Icon-Design-Pretty-Office-11-Cash.512", resourceCulture);
@@ -176,6 +196,16 @@ namespace ERP_INTECOLI.Properties {
         internal static System.Drawing.Bitmap dinero_x32 {
             get {
                 object obj = ResourceManager.GetObject("dinero_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap documentos_64 {
+            get {
+                object obj = ResourceManager.GetObject("documentos_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +236,16 @@ namespace ERP_INTECOLI.Properties {
         internal static System.Drawing.Bitmap empresa {
             get {
                 object obj = ResourceManager.GetObject("empresa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ensenando_x32 {
+            get {
+                object obj = ResourceManager.GetObject("ensenando_x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -346,6 +386,16 @@ namespace ERP_INTECOLI.Properties {
         internal static System.Drawing.Bitmap proyeccion_32 {
             get {
                 object obj = ResourceManager.GetObject("proyeccion_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap recordatorio_x32 {
+            get {
+                object obj = ResourceManager.GetObject("recordatorio_x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

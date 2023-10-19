@@ -24,6 +24,10 @@ using ERP_INTECOLI.Administracion.Consultas;
 using ERP_INTECOLI.Consultas.ConsultaMiembros;
 using ERP_INTECOLI.Consultas;
 using ERP_INTECOLI.Consultas.ConsultaMovimientosSaldos;
+using ERP_INTECOLI.Consultas.RangosPago;
+using ERP_INTECOLI.Administracion.Estadisticas;
+using ERP_INTECOLI.Administracion;
+using ERP_INTECOLI.Administracion.Cursos;
 
 namespace ERP_INTECOLI
 {
@@ -408,5 +412,60 @@ namespace ERP_INTECOLI
                 mtx.Show();
             }
         }
+
+        private void navRangosPago_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //aqui va permiso
+            frmRangosPago mtx = new frmRangosPago();
+            if (mtx != null)
+            {
+                
+                mtx.MdiParent = this;
+                try
+                {
+                    mtx.Show();
+                }
+                catch { }
+                
+            }
+        }
+
+        private void navArqueoCaja_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmArqueoCaja frm = new frmArqueoCaja(UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void navDistribucionResidencial_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmEstadisticasPorResidencia frm = new frmEstadisticasPorResidencia();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void navNuevoRecordatorio_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmRecordatorio frx = new frmRecordatorio(this.UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
+                {
+                }
+            }
+        }
+
+        private void navBfrmCursos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmCursos frm = new frmCursos(this.UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
+    
 }

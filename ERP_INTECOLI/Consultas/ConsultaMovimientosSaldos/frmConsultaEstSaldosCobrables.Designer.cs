@@ -30,16 +30,16 @@ namespace ERP_INTECOLI.Consultas.ConsultaMovimientosSaldos
         private void InitializeComponent()
         {
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.dsEstSaldosCobrables1 = new ERP_INTECOLI.Consultas.ConsultaMovimientosSaldos.dsEstSaldosCobrables();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colnum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcant = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbCargarDatos = new System.Windows.Forms.Button();
-            this.dsEstSaldosCobrables1 = new ERP_INTECOLI.Consultas.ConsultaMovimientosSaldos.dsEstSaldosCobrables();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEstSaldosCobrables1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -52,10 +52,15 @@ namespace ERP_INTECOLI.Consultas.ConsultaMovimientosSaldos
             this.gridControl1.Location = new System.Drawing.Point(2, 74);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(542, 391);
+            this.gridControl1.Size = new System.Drawing.Size(542, 629);
             this.gridControl1.TabIndex = 28;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // dsEstSaldosCobrables1
+            // 
+            this.dsEstSaldosCobrables1.DataSetName = "dsEstSaldosCobrables";
+            this.dsEstSaldosCobrables1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -73,6 +78,7 @@ namespace ERP_INTECOLI.Consultas.ConsultaMovimientosSaldos
             this.colnum.Caption = "#";
             this.colnum.FieldName = "num";
             this.colnum.Name = "colnum";
+            this.colnum.OptionsColumn.AllowEdit = false;
             this.colnum.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "num", "{0}")});
             this.colnum.Visible = true;
@@ -84,6 +90,7 @@ namespace ERP_INTECOLI.Consultas.ConsultaMovimientosSaldos
             this.colnombre.Caption = "Nombre";
             this.colnombre.FieldName = "nombre";
             this.colnombre.Name = "colnombre";
+            this.colnombre.OptionsColumn.AllowEdit = false;
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 1;
             this.colnombre.Width = 403;
@@ -93,6 +100,7 @@ namespace ERP_INTECOLI.Consultas.ConsultaMovimientosSaldos
             this.colcant.Caption = "Cantidad";
             this.colcant.FieldName = "cant";
             this.colcant.Name = "colcant";
+            this.colcant.OptionsColumn.AllowEdit = false;
             this.colcant.Visible = true;
             this.colcant.VisibleIndex = 2;
             this.colcant.Width = 65;
@@ -124,24 +132,19 @@ namespace ERP_INTECOLI.Consultas.ConsultaMovimientosSaldos
             this.cmbCargarDatos.UseVisualStyleBackColor = false;
             this.cmbCargarDatos.Click += new System.EventHandler(this.cmbCargarDatos_Click);
             // 
-            // dsEstSaldosCobrables1
-            // 
-            this.dsEstSaldosCobrables1.DataSetName = "dsEstSaldosCobrables";
-            this.dsEstSaldosCobrables1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // frmConsultaEstSaldosCobrables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 469);
+            this.ClientSize = new System.Drawing.Size(547, 707);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbCargarDatos);
             this.Name = "frmConsultaEstSaldosCobrables";
             this.Text = "Deudores Saldo Acumulado";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEstSaldosCobrables1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
