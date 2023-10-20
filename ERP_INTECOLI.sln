@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33529.622
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP_INTECOLI", "ERP_INTECOLI\ERP_INTECOLI.csproj", "{845AC5B7-F133-48D3-AF0E-DBB584D84A16}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Install_ERP", "Install_ERP\Install_ERP.vdproj", "{16011A7C-13EE-481E-9988-A654A4A98C96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{845AC5B7-F133-48D3-AF0E-DBB584D84A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{845AC5B7-F133-48D3-AF0E-DBB584D84A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{845AC5B7-F133-48D3-AF0E-DBB584D84A16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16011A7C-13EE-481E-9988-A654A4A98C96}.Debug|Any CPU.ActiveCfg = Debug
+		{16011A7C-13EE-481E-9988-A654A4A98C96}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
