@@ -49,7 +49,7 @@ namespace ERP_INTECOLI.Clases
                     Nombres = dr.GetString(2);
                     Apellidos = dr.GetString(3);
                     sexo = dr.GetString(4);
-                    Direccion = dr.GetString(5);
+                    Direccion = dr.IsDBNull(5) ? "" : dr.GetString(5);
                     Habilitado = dr.GetBoolean(6);
                     Fecha_ingreso = dr.GetDateTime(7);
 
