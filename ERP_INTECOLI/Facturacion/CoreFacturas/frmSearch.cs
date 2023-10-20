@@ -35,7 +35,10 @@ namespace LOSA.Calidad.LoteConfConsumo
             BodegasALOSY = 5,
             MaterialEmpaque = 6,
             Reproceso = 7,
-            Clientes = 8
+            Clientes = 8,
+            PuntosDeVenta =9,
+            MixClientesPuntosVenta =10,
+            Estudiantes = 11
         }
 
         TipoBusqueda TipoBusquedaActual;
@@ -67,6 +70,9 @@ namespace LOSA.Calidad.LoteConfConsumo
                     //LoadData();
                     break;
                 case TipoBusqueda.Clientes:
+                    LoadData();
+                    break;
+                case TipoBusqueda.Estudiantes:
                     LoadData();
                     break;
                 default:

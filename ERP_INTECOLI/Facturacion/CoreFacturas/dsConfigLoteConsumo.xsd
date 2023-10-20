@@ -20,8 +20,8 @@
               <xs:element name="Seleccionado" msprop:Generator_ColumnPropNameInTable="SeleccionadoColumn" msprop:Generator_ColumnPropNameInRow="Seleccionado" msprop:Generator_UserColumnName="Seleccionado" msprop:Generator_ColumnVarNameInTable="columnSeleccionado" type="xs:boolean" minOccurs="0" />
               <xs:element name="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:int" minOccurs="0" />
               <xs:element name="concat_" msprop:Generator_ColumnPropNameInTable="concat_Column" msprop:Generator_ColumnPropNameInRow="concat_" msprop:Generator_UserColumnName="concat_" msprop:Generator_ColumnVarNameInTable="columnconcat_" type="xs:string" minOccurs="0" />
-              <xs:element name="inv" msdata:Caption="Inventario" msprop:Generator_UserColumnName="inv" msprop:Generator_ColumnPropNameInTable="invColumn" msprop:Generator_ColumnPropNameInRow="inv" msprop:Generator_ColumnVarNameInTable="columninv" type="xs:decimal" minOccurs="0" />
-              <xs:element name="tipo" msprop:Generator_ColumnPropNameInRow="tipo" msprop:Generator_ColumnPropNameInTable="tipoColumn" msprop:Generator_ColumnVarNameInTable="columntipo" msprop:Generator_UserColumnName="tipo" type="xs:int" minOccurs="0" />
+              <xs:element name="inv" msdata:Caption="Inventario" msprop:Generator_ColumnPropNameInTable="invColumn" msprop:Generator_ColumnPropNameInRow="inv" msprop:Generator_UserColumnName="inv" msprop:Generator_ColumnVarNameInTable="columninv" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tipo" msprop:Generator_ColumnPropNameInTable="tipoColumn" msprop:Generator_ColumnPropNameInRow="tipo" msprop:Generator_UserColumnName="tipo" msprop:Generator_ColumnVarNameInTable="columntipo" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

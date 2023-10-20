@@ -36,7 +36,7 @@ namespace LOSA.Calidad.LoteConfConsumo
             this.cmdAplicar = new DevExpress.XtraEditors.SimpleButton();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.gridControlDetalleMP = new DevExpress.XtraGrid.GridControl();
-            this.dsConfigLoteConsumo1 = new dsConfigLoteConsumo();
+            this.dsConfigLoteConsumo1 = new JAGUAR_APP.Facturacion.CoreFacturas.dsConfigLoteConsumo();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colItemCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,6 +47,7 @@ namespace LOSA.Calidad.LoteConfConsumo
             this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.cmdSiguiente = new DevExpress.XtraEditors.SimpleButton();
             this.navigationPage2 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.cmdAplicarSinRTN = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.cmdBackPage = new DevExpress.XtraEditors.SimpleButton();
             this.cmdAplicarRTN = new DevExpress.XtraEditors.SimpleButton();
@@ -63,7 +64,6 @@ namespace LOSA.Calidad.LoteConfConsumo
             this.colRTN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFechaCreacion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSeleccionado1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cmdAplicarSinRTN = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtParametroBusqueda.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDetalleMP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfigLoteConsumo1)).BeginInit();
@@ -190,9 +190,9 @@ namespace LOSA.Calidad.LoteConfConsumo
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(3, 46);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(261, 17);
+            this.labelControl1.Size = new System.Drawing.Size(284, 17);
             this.labelControl1.TabIndex = 11;
-            this.labelControl1.Text = "Seleccione o escriba el nombre de un cliente";
+            this.labelControl1.Text = "Seleccione o escriba el nombre de un estudiante";
             // 
             // navigationFrameSearch
             // 
@@ -248,6 +248,20 @@ namespace LOSA.Calidad.LoteConfConsumo
             this.navigationPage2.Controls.Add(this.gridControl1);
             this.navigationPage2.Name = "navigationPage2";
             this.navigationPage2.Size = new System.Drawing.Size(646, 412);
+            // 
+            // cmdAplicarSinRTN
+            // 
+            this.cmdAplicarSinRTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdAplicarSinRTN.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdAplicarSinRTN.Appearance.Options.UseFont = true;
+            this.cmdAplicarSinRTN.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.cmdAplicarSinRTN.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdAplicarSinRTN.ImageOptions.SvgImage")));
+            this.cmdAplicarSinRTN.Location = new System.Drawing.Point(281, 12);
+            this.cmdAplicarSinRTN.Name = "cmdAplicarSinRTN";
+            this.cmdAplicarSinRTN.Size = new System.Drawing.Size(147, 47);
+            this.cmdAplicarSinRTN.TabIndex = 15;
+            this.cmdAplicarSinRTN.Text = "Aplicar Sin RTN";
+            this.cmdAplicarSinRTN.Click += new System.EventHandler(this.cmdAplicarSinRTN_Click);
             // 
             // labelControl2
             // 
@@ -401,20 +415,6 @@ namespace LOSA.Calidad.LoteConfConsumo
             this.colSeleccionado1.Name = "colSeleccionado1";
             this.colSeleccionado1.Visible = true;
             this.colSeleccionado1.VisibleIndex = 3;
-            // 
-            // cmdAplicarSinRTN
-            // 
-            this.cmdAplicarSinRTN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdAplicarSinRTN.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAplicarSinRTN.Appearance.Options.UseFont = true;
-            this.cmdAplicarSinRTN.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.cmdAplicarSinRTN.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.cmdAplicarSinRTN.Location = new System.Drawing.Point(281, 12);
-            this.cmdAplicarSinRTN.Name = "cmdAplicarSinRTN";
-            this.cmdAplicarSinRTN.Size = new System.Drawing.Size(147, 47);
-            this.cmdAplicarSinRTN.TabIndex = 15;
-            this.cmdAplicarSinRTN.Text = "Aplicar Sin RTN";
-            this.cmdAplicarSinRTN.Click += new System.EventHandler(this.cmdAplicarSinRTN_Click);
             // 
             // frmSearch
             // 
