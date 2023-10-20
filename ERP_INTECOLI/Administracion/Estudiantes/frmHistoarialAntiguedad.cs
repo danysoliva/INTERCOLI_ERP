@@ -36,7 +36,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         {
             try
             {
-                string sql = "";
+                string sql = "sp_get_detalle_antiguedad";
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sql, conn);

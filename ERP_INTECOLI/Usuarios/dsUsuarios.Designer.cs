@@ -314,11 +314,15 @@ namespace ERP_INTECOLI.Usuarios {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class autorizacionesDataTable : global::System.Data.TypedTableBase<autorizacionesRow> {
             
-            private global::System.Data.DataColumn columnid;
+            private global::System.Data.DataColumn columnid_ventana;
             
-            private global::System.Data.DataColumn columndescripcion;
+            private global::System.Data.DataColumn columnnombre;
             
             private global::System.Data.DataColumn columnhabilitado;
+            
+            private global::System.Data.DataColumn columncodigo;
+            
+            private global::System.Data.DataColumn columndescripcion;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -355,17 +359,17 @@ namespace ERP_INTECOLI.Usuarios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
+            public global::System.Data.DataColumn id_ventanaColumn {
                 get {
-                    return this.columnid;
+                    return this.columnid_ventana;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn descripcionColumn {
+            public global::System.Data.DataColumn nombreColumn {
                 get {
-                    return this.columndescripcion;
+                    return this.columnnombre;
                 }
             }
             
@@ -374,6 +378,22 @@ namespace ERP_INTECOLI.Usuarios {
             public global::System.Data.DataColumn habilitadoColumn {
                 get {
                     return this.columnhabilitado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn codigoColumn {
+                get {
+                    return this.columncodigo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn descripcionColumn {
+                get {
+                    return this.columndescripcion;
                 }
             }
             
@@ -414,12 +434,14 @@ namespace ERP_INTECOLI.Usuarios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public autorizacionesRow AddautorizacionesRow(int id, string descripcion, bool habilitado) {
+            public autorizacionesRow AddautorizacionesRow(int id_ventana, string nombre, bool habilitado, string codigo, string descripcion) {
                 autorizacionesRow rowautorizacionesRow = ((autorizacionesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id,
-                        descripcion,
-                        habilitado};
+                        id_ventana,
+                        nombre,
+                        habilitado,
+                        codigo,
+                        descripcion};
                 rowautorizacionesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowautorizacionesRow);
                 return rowautorizacionesRow;
@@ -442,20 +464,26 @@ namespace ERP_INTECOLI.Usuarios {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
-                this.columndescripcion = base.Columns["descripcion"];
+                this.columnid_ventana = base.Columns["id_ventana"];
+                this.columnnombre = base.Columns["nombre"];
                 this.columnhabilitado = base.Columns["habilitado"];
+                this.columncodigo = base.Columns["codigo"];
+                this.columndescripcion = base.Columns["descripcion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndescripcion);
+                this.columnid_ventana = new global::System.Data.DataColumn("id_ventana", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_ventana);
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
                 this.columnhabilitado = new global::System.Data.DataColumn("habilitado", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnhabilitado);
+                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodigo);
+                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescripcion);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -980,33 +1008,33 @@ namespace ERP_INTECOLI.Usuarios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int id {
+            public int id_ventana {
                 get {
                     try {
-                        return ((int)(this[this.tableautorizaciones.idColumn]));
+                        return ((int)(this[this.tableautorizaciones.id_ventanaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id\' de la tabla \'autorizaciones\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_ventana\' de la tabla \'autorizaciones\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableautorizaciones.idColumn] = value;
+                    this[this.tableautorizaciones.id_ventanaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string descripcion {
+            public string nombre {
                 get {
                     try {
-                        return ((string)(this[this.tableautorizaciones.descripcionColumn]));
+                        return ((string)(this[this.tableautorizaciones.nombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'autorizaciones\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'autorizaciones\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableautorizaciones.descripcionColumn] = value;
+                    this[this.tableautorizaciones.nombreColumn] = value;
                 }
             }
             
@@ -1028,26 +1056,58 @@ namespace ERP_INTECOLI.Usuarios {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsidNull() {
-                return this.IsNull(this.tableautorizaciones.idColumn);
+            public string codigo {
+                get {
+                    try {
+                        return ((string)(this[this.tableautorizaciones.codigoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codigo\' de la tabla \'autorizaciones\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableautorizaciones.codigoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetidNull() {
-                this[this.tableautorizaciones.idColumn] = global::System.Convert.DBNull;
+            public string descripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tableautorizaciones.descripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'autorizaciones\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableautorizaciones.descripcionColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsdescripcionNull() {
-                return this.IsNull(this.tableautorizaciones.descripcionColumn);
+            public bool Isid_ventanaNull() {
+                return this.IsNull(this.tableautorizaciones.id_ventanaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetdescripcionNull() {
-                this[this.tableautorizaciones.descripcionColumn] = global::System.Convert.DBNull;
+            public void Setid_ventanaNull() {
+                this[this.tableautorizaciones.id_ventanaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsnombreNull() {
+                return this.IsNull(this.tableautorizaciones.nombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetnombreNull() {
+                this[this.tableautorizaciones.nombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1060,6 +1120,30 @@ namespace ERP_INTECOLI.Usuarios {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SethabilitadoNull() {
                 this[this.tableautorizaciones.habilitadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IscodigoNull() {
+                return this.IsNull(this.tableautorizaciones.codigoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetcodigoNull() {
+                this[this.tableautorizaciones.codigoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsdescripcionNull() {
+                return this.IsNull(this.tableautorizaciones.descripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetdescripcionNull() {
+                this[this.tableautorizaciones.descripcionColumn] = global::System.Convert.DBNull;
             }
         }
         

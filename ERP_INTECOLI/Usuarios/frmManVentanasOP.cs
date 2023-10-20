@@ -17,7 +17,7 @@ namespace ERP_INTECOLI.Usuarios
     public partial class frmManVentanasOP : DevExpress.XtraEditors.XtraForm
     {
         DataOperations dp = new DataOperations();
-        public frmManVentanasOP()
+        public frmManVentanasOP(int pidVentana)
         {
             InitializeComponent();
         }
@@ -43,6 +43,9 @@ namespace ERP_INTECOLI.Usuarios
                 SqlCommand cmd = new SqlCommand("sp_usuarios_insert_ventana", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@descripcion", txtDescripcion.Text.Trim());
+                //cmd.Parameters.AddWithValue("@codigo", txtDescripcion.Text.Trim());
+                //cmd.Parameters.AddWithValue("@descripcion", txtDescripcion.Text.Trim());
+
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }

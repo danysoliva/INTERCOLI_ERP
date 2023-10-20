@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Grid;
 using ERP_INTECOLI.Clases;
 using System;
 using System.Collections.Generic;
@@ -55,7 +56,19 @@ namespace ERP_INTECOLI.Usuarios
 
         private void cmdAdd_Click(object sender, EventArgs e)
         {
-            frmManVentanasOP frm = new frmManVentanasOP();
+            frmManVentanasOP frm = new frmManVentanasOP(0);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                cargar_dats();
+            }
+        }
+
+        private void ButtonEditar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridview = (GridView)gridControl1.FocusedView;
+            var row = (dsUsuarios.autorizacionesRow)gridview.GetFocusedDataRow();
+
+            frmManVentanasOP frm = new frmManVentanasOP(row.id_ventana);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 cargar_dats();
