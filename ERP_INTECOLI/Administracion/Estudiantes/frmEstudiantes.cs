@@ -455,6 +455,19 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                         transaction.Commit();
                         Guardar = true;
 
+                        try
+                        {
+                            SqlConnection conn1 = new SqlConnection(dp.ConnectionStringERP);
+                            conn.Open();
+                            SqlCommand cmd1 = new SqlCommand("sp_update_tablas_id_Estudiante", conn);
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.ExecuteNonQuery();
+                        }
+                        catch (Exception ec)
+                        {
+                            CajaDialogo.Error(ec.Message);
+                        }
+
                         
 
                     }
