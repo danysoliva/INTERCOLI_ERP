@@ -357,7 +357,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                    
                     Estudiante est = new Estudiante();
 
-                    if (!est.ValidarIdDisponible(txtIdentidad.Text.Trim()))
+                    if (est.ValidarIdDisponible(txtIdentidad.Text.Trim()))
                     {
                         CajaDialogo.Error("Este Numero de Identidad ya Existe!");
                         return;
@@ -458,10 +458,11 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                         try
                         {
                             SqlConnection conn1 = new SqlConnection(dp.ConnectionStringERP);
-                            conn.Open();
+                            conn1.Open();
                             SqlCommand cmd1 = new SqlCommand("sp_update_tablas_id_Estudiante", conn);
-                            cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.ExecuteNonQuery();
+                            cmd1.CommandType = CommandType.StoredProcedure;
+                            cmd1.ExecuteNonQuery();
+                            conn1.Close();
                         }
                         catch (Exception ec)
                         {
