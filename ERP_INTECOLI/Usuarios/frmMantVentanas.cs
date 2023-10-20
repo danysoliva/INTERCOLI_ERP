@@ -56,7 +56,7 @@ namespace ERP_INTECOLI.Usuarios
 
         private void cmdAdd_Click(object sender, EventArgs e)
         {
-            frmManVentanasOP frm = new frmManVentanasOP(0);
+            frmManVentanasOP frm = new frmManVentanasOP(frmManVentanasOP.TipoAccion.nuevo ,0);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 cargar_dats();
@@ -68,7 +68,7 @@ namespace ERP_INTECOLI.Usuarios
             var gridview = (GridView)gridControl1.FocusedView;
             var row = (dsUsuarios.autorizacionesRow)gridview.GetFocusedDataRow();
 
-            frmManVentanasOP frm = new frmManVentanasOP(row.id_ventana);
+            frmManVentanasOP frm = new frmManVentanasOP(frmManVentanasOP.TipoAccion.editar ,row.id_ventana);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 cargar_dats();

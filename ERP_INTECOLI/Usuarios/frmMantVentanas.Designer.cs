@@ -44,12 +44,12 @@ namespace ERP_INTECOLI.Usuarios
             this.colhabilitado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ButtonEditar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ButtonFunciones = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.cmdAdd = new DevExpress.XtraEditors.SimpleButton();
             this.cmdCargarDatos = new DevExpress.XtraEditors.SimpleButton();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -154,6 +154,24 @@ namespace ERP_INTECOLI.Usuarios
             this.ButtonEditar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.ButtonEditar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.ButtonEditar_ButtonClick);
             // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Codigo";
+            this.gridColumn2.FieldName = "codigo";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.ReadOnly = true;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 3;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Nombre Ventana";
+            this.gridColumn3.FieldName = "nombre";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.ReadOnly = true;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
+            // 
             // ButtonFunciones
             // 
             this.ButtonFunciones.AutoHeight = false;
@@ -197,22 +215,6 @@ namespace ERP_INTECOLI.Usuarios
             this.cmdCargarDatos.Size = new System.Drawing.Size(51, 41);
             this.cmdCargarDatos.TabIndex = 7;
             this.cmdCargarDatos.Click += new System.EventHandler(this.cmdCargarDatos_Click);
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Codigo";
-            this.gridColumn2.FieldName = "codigo";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 3;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Nombre Ventana";
-            this.gridColumn3.FieldName = "nombre";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 1;
             // 
             // frmMantVentanas
             // 
