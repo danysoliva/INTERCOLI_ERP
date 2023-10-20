@@ -49,7 +49,7 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos
 
             pdv = pPDV;
             usuarioLogueado = pUser;
-            LoadTipoFacturacion();
+            //LoadTipoFacturacion();
             LoadFormatosFactura();
 
             if(pPDV != null)
@@ -147,10 +147,21 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos
                             cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = txtDireccion.Text;
                             cmd.Parameters.Add("@FechaApertura", SqlDbType.Date).Value = deFechaApertura.Text;
                             cmd.Parameters.Add("@FechaCreacion", SqlDbType.DateTime).Value = DateTime.Now;
-                            cmd.Parameters.Add("@ciudad", SqlDbType.Int).Value = slueCiudad.EditValue;
-                            cmd.Parameters.Add("@departamento", SqlDbType.Int).Value = slueDepto.EditValue;
+                            
+                            if(string.IsNullOrEmpty(slueCiudad.Text))
+                                cmd.Parameters.Add("@ciudad", SqlDbType.Int).Value = DBNull.Value;
+                            else
+                                cmd.Parameters.Add("@ciudad", SqlDbType.Int).Value = slueCiudad.EditValue;
+
+                            if (string.IsNullOrEmpty(slueDepto.Text))
+                                cmd.Parameters.Add("@departamento", SqlDbType.Int).Value = DBNull.Value;
+                            else
+                                cmd.Parameters.Add("@departamento", SqlDbType.Int).Value = slueDepto.EditValue;
+
+
                             cmd.Parameters.Add("@usuario_id", SqlDbType.Int).Value = usuarioLogueado.Id;
-                            cmd.Parameters.AddWithValue("@id_tipo_facturacion", slueTipoFacturacion.EditValue);
+                            //cmd.Parameters.AddWithValue("@id_tipo_facturacion", slueTipoFacturacion.EditValue);
+                            cmd.Parameters.AddWithValue("@tipoFacturacionId", DBNull.Value);
                             cmd.Parameters.Add("@bloqueoPorFaltaStock", SqlDbType.Bit).Value = tsStock.EditValue;
                             cmd.Parameters.Add("@permiteAnulacionConAutorizacion", SqlDbType.Bit).Value = tsAnulacion.EditValue;
                             cmd.Parameters.Add("@conteoPrintFactura", SqlDbType.Bit).Value = tsPrint.EditValue;
@@ -193,7 +204,8 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos
                             cmd2.Parameters.Add("@ciudad", SqlDbType.Int).Value = slueCiudad.EditValue;
                             cmd2.Parameters.Add("@departamento", SqlDbType.Int).Value = slueDepto.EditValue;
                             cmd2.Parameters.Add("@id_usuario_creado", SqlDbType.Int).Value = usuarioLogueado.Id;
-                            cmd2.Parameters.AddWithValue("@id_tipo_facturacion", slueTipoFacturacion.EditValue);
+                            //cmd2.Parameters.AddWithValue("@id_tipo_facturacion", slueTipoFacturacion.EditValue);
+                            cmd2.Parameters.AddWithValue("@id_tipo_facturacion", DBNull.Value);
                             cmd2.Parameters.Add("@bloqueo_por_falta_stock", SqlDbType.Bit).Value = tsStock.EditValue;
                             cmd2.Parameters.Add("@permite_anulacion_con_autorizacion", SqlDbType.Bit).Value = tsAnulacion.EditValue;
                             cmd2.Parameters.Add("@conteo_print_factura", SqlDbType.Bit).Value = tsPrint.EditValue;
@@ -239,7 +251,7 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos
                 slueDepto.EditValue = pdv.DepartamentoID;
                 slueCiudad.EditValue = pdv.CiudadID;
                 txtDireccion.Text = pdv.Direccion;
-                slueTipoFacturacion.EditValue = pdv.TipoFacturacionID;
+                //slueTipoFacturacion.EditValue = pdv.TipoFacturacionID;
                 tsAnulacion.EditValue = pdv.PermiteAnulacionConAutorizacion;
                 tsEmision.EditValue = pdv.EmisionFacturaDosPasos;
                 tsPrint.EditValue = pdv.ConteoPrintFactura;

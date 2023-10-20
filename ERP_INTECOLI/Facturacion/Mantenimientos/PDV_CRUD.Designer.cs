@@ -31,11 +31,11 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PDV_CRUD));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.cmdNew = new DevExpress.XtraEditors.SimpleButton();
@@ -189,7 +189,6 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos
             this.cmdNew.Appearance.Options.UseBackColor = true;
             this.cmdNew.Appearance.Options.UseFont = true;
             this.cmdNew.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            //this.cmdNew.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.save_32x32;
             this.cmdNew.Location = new System.Drawing.Point(362, 478);
             this.cmdNew.Name = "cmdNew";
             this.cmdNew.Size = new System.Drawing.Size(119, 47);
@@ -402,15 +401,16 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(8, 407);
+            this.labelControl8.Location = new System.Drawing.Point(8, 439);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(177, 20);
             this.labelControl8.TabIndex = 39;
             this.labelControl8.Text = "Tipo Facturación__________";
+            this.labelControl8.Visible = false;
             // 
             // slueTipoFacturacion
             // 
-            this.slueTipoFacturacion.Location = new System.Drawing.Point(155, 399);
+            this.slueTipoFacturacion.Location = new System.Drawing.Point(155, 431);
             this.slueTipoFacturacion.Name = "slueTipoFacturacion";
             this.slueTipoFacturacion.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slueTipoFacturacion.Properties.Appearance.Options.UseFont = true;
@@ -423,6 +423,7 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos
             this.slueTipoFacturacion.Properties.ValueMember = "id";
             this.slueTipoFacturacion.Size = new System.Drawing.Size(316, 26);
             this.slueTipoFacturacion.TabIndex = 10;
+            this.slueTipoFacturacion.Visible = false;
             // 
             // tipoFacturacionBindingSource
             // 
@@ -784,9 +785,9 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos
             // gridCmd_Editar
             // 
             this.gridCmd_Editar.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.gridCmd_Editar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.gridCmd_Editar.Name = "gridCmd_Editar";
             this.gridCmd_Editar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.gridCmd_Editar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.gridCmd_Editar_ButtonClick);
@@ -825,7 +826,7 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos
             // 
             // gleFormatoImpresion
             // 
-            this.gleFormatoImpresion.Location = new System.Drawing.Point(155, 433);
+            this.gleFormatoImpresion.Location = new System.Drawing.Point(155, 399);
             this.gleFormatoImpresion.Name = "gleFormatoImpresion";
             this.gleFormatoImpresion.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gleFormatoImpresion.Properties.Appearance.Options.UseFont = true;
@@ -876,7 +877,7 @@ namespace JAGUAR_APP.Facturacion.Mantenimientos
             // 
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl19.Appearance.Options.UseFont = true;
-            this.labelControl19.Location = new System.Drawing.Point(8, 441);
+            this.labelControl19.Location = new System.Drawing.Point(8, 407);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(163, 20);
             this.labelControl19.TabIndex = 64;
