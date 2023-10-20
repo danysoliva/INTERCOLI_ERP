@@ -15,12 +15,13 @@ namespace ERP_INTECOLI.Usuarios
 {
     public partial class frmUser : DevExpress.XtraEditors.XtraForm
     {
+        public int IdUsuario;
         public enum TipoEdicion
         {
             Nuevo = 1,
             Editar = 2
         }
-
+        DataOperations dp = new DataOperations();
         private bool ValidoContrasenia;
         private TipoEdicion vTipoEdition;
         private UserLogin UserParametro;
@@ -58,6 +59,7 @@ namespace ERP_INTECOLI.Usuarios
                     chkSuperUsuario.Checked = UserParametro.Super_user;
                     txtPass.Text = UserParametro.DecryptPassword(UserParametro.Password);
                     txtConfirmar.Text = UserParametro.DecryptPassword(UserParametro.Password);
+                    IdUsuario = UserParametro.Id;
                     ValidoContrasenia = true;
                     break;
             }
@@ -71,7 +73,129 @@ namespace ERP_INTECOLI.Usuarios
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtAlias.Text) || string.IsNullOrEmpty(txtApellido.Text) || string.IsNullOrEmpty(txtNombre.Text))
+            {
+                MessageBox.Show("Los campos: Alias, Nombre y Apellidos no pueden quedar en blanco", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            if (txtConfirmar.Text != txtPass.Text)
+            {
+                ValidoContrasenia = false;
+            }
+            else
+            {
+                ValidoContrasenia = true;
+            }
+
+            if (ValidoContrasenia)
+            {
+                switch (vTipoEdition)
+                {
+                    case TipoEdicion.Nuevo:
+                        //UserParametro = new Users(psConnection);
+                        UserParametro.ADuser = txtAlias.Text.Trim();
+                        UserParametro.Nombre = txtNombre.Text.Trim();
+                        UserParametro.Apellido = txtApellido.Text.Trim();
+                        UserParametro.UserDb = cbxNivel.Text.Trim().ToLower();
+                        UserParametro.Utiliza_bloqueo = chkUtilizaBloqueo.Checked;
+                        TimeSpan tm = new TimeSpan(0, Convert.ToInt32(Nminutes.Value), 0);
+                        UserParametro.Tiempo_inactividad = tm;
+                        UserParametro.Habilitado = chkUsuarioHabilitado.Checked;
+                        UserParametro.Super_user = chkSuperUsuario.Checked;
+                        UserParametro.Password = txtPass.Text;
+
+                        string sql1 = @"sp_insert_nuevo_usuario";
+                        try
+                        {
+                            SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                            conn.Open();
+                            SqlCommand cmd = new SqlCommand(sql1, conn);
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@alias", txtAlias.Text.Trim());
+                            cmd.Parameters.AddWithValue("@password", EncryptPassword(txtPass.Text));
+                            cmd.Parameters.AddWithValue("@habilitado", chkUsuarioHabilitado.Checked);
+                            cmd.Parameters.AddWithValue("@nombre", txtNombre.Text.Trim());
+                            cmd.Parameters.AddWithValue("@apellidos", txtApellido.Text.Trim());
+                            cmd.Parameters.AddWithValue("@super_user", chkSuperUsuario.Checked);
+                            cmd.Parameters.AddWithValue("@tiempo_inactividad", Nminutes.Value);
+                            cmd.Parameters.AddWithValue("@utiliza_bloqueo", chkUtilizaBloqueo.Checked);
+                            cmd.Parameters.AddWithValue("@user_db", cbxNivel.Text.Trim().ToLower());
+                            cmd.ExecuteNonQuery();
+
+                            CajaDialogo.Information("Guardado con Exito!");
+                            this.DialogResult = DialogResult.OK;
+                            this.Close();
+                        }
+                        catch (Exception ec)
+                        {
+                            CajaDialogo.Error("¡No se pudo guardar el usuario!\n" + ec.Message);
+                        }
+
+
+                        break;
+                    case TipoEdicion.Editar:
+                        try
+                        {
+                            string sql = @"sp_update_usuario";
+                            SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                            conn.Open();
+                            SqlCommand cmd = new SqlCommand(sql, conn);
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@alias", txtAlias.Text.Trim());
+                            cmd.Parameters.AddWithValue("@password", EncryptPassword(this.txtPass.Text.Trim()));
+                            string a = EncryptPassword(this.txtPass.Text.Trim());
+                            cmd.Parameters.AddWithValue("@habilitado", chkUsuarioHabilitado.Checked);
+                            cmd.Parameters.AddWithValue("@nombre", txtNombre.Text.Trim());
+                            cmd.Parameters.AddWithValue("@apellidos", txtApellido.Text.Trim());
+                            cmd.Parameters.AddWithValue("@super_user", chkSuperUsuario.Checked);
+                            cmd.Parameters.AddWithValue("@tiempo_inactividad", Nminutes.Value);
+                            cmd.Parameters.AddWithValue("@utiliza_bloqueo", chkUtilizaBloqueo.Checked);
+                            cmd.Parameters.AddWithValue("@user_db", cbxNivel.Text.Trim());
+                            cmd.Parameters.AddWithValue("@user_id", IdUsuario);
+                            cmd.ExecuteNonQuery();
+
+                            CajaDialogo.Information("Guardado con Exito!");
+                            this.DialogResult = DialogResult.OK;
+                            this.Close();
+                        }
+                        catch (Exception ec)
+                        {
+                            CajaDialogo.Error(ec.Message);
+                        }
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Las contraseñas no coinciden!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public string EncryptPassword(string pass)
+        {
+            try
+            {
+                byte[] enbyte = GetBytes(pass);
+                string cadena_base64 = Convert.ToBase64String(enbyte);
+                return cadena_base64;
+            }
+            catch
+            {
+                return " ";
+            }
+        }
+
+        private static byte[] GetBytes(string str)
+        {
+            byte[] bytes = new byte[str.Length * sizeof(char)];
+            System.Buffer.BlockCopy(str.ToCharArray(), 0, bytes, 0, bytes.Length);
+            return bytes;
+        }
+
+        private string EncryptPassword(object password)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -29,19 +29,16 @@ namespace ERP_INTECOLI.Usuarios
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMantenimientoUsuarios));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.grdUsuario = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.ButtonEditar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.ButtonFunciones = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.cmdNuevo = new System.Windows.Forms.Button();
             this.dsUsuarios1 = new ERP_INTECOLI.Usuarios.dsUsuarios();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid_usuario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colalias = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colpassword = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,11 +50,14 @@ namespace ERP_INTECOLI.Usuarios
             this.colutiliza_bloqueo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coluser_db = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ButtonEditar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.ButtonFunciones = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.cmdNuevo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonFunciones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -65,7 +65,7 @@ namespace ERP_INTECOLI.Usuarios
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(264, 12);
+            this.labelControl1.Location = new System.Drawing.Point(348, 12);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(237, 25);
             this.labelControl1.TabIndex = 7;
@@ -84,10 +84,15 @@ namespace ERP_INTECOLI.Usuarios
             this.grdUsuario.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.ButtonEditar,
             this.ButtonFunciones});
-            this.grdUsuario.Size = new System.Drawing.Size(863, 548);
+            this.grdUsuario.Size = new System.Drawing.Size(1031, 548);
             this.grdUsuario.TabIndex = 8;
             this.grdUsuario.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // dsUsuarios1
+            // 
+            this.dsUsuarios1.DataSetName = "dsUsuarios";
+            this.dsUsuarios1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -111,12 +116,112 @@ namespace ERP_INTECOLI.Usuarios
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             // 
+            // colid_usuario
+            // 
+            this.colid_usuario.Caption = "ID";
+            this.colid_usuario.FieldName = "id_usuario";
+            this.colid_usuario.Name = "colid_usuario";
+            this.colid_usuario.OptionsColumn.AllowEdit = false;
+            this.colid_usuario.Visible = true;
+            this.colid_usuario.VisibleIndex = 0;
+            this.colid_usuario.Width = 62;
+            // 
+            // colalias
+            // 
+            this.colalias.FieldName = "alias";
+            this.colalias.Name = "colalias";
+            this.colalias.OptionsColumn.AllowEdit = false;
+            this.colalias.Visible = true;
+            this.colalias.VisibleIndex = 1;
+            this.colalias.Width = 93;
+            // 
+            // colpassword
+            // 
+            this.colpassword.FieldName = "password";
+            this.colpassword.Name = "colpassword";
+            this.colpassword.OptionsColumn.AllowEdit = false;
+            this.colpassword.Visible = true;
+            this.colpassword.VisibleIndex = 2;
+            this.colpassword.Width = 102;
+            // 
+            // colhabilitado
+            // 
+            this.colhabilitado.FieldName = "habilitado";
+            this.colhabilitado.Name = "colhabilitado";
+            this.colhabilitado.OptionsColumn.AllowEdit = false;
+            this.colhabilitado.Visible = true;
+            this.colhabilitado.VisibleIndex = 3;
+            this.colhabilitado.Width = 108;
+            // 
+            // colnombre
+            // 
+            this.colnombre.FieldName = "nombre";
+            this.colnombre.Name = "colnombre";
+            this.colnombre.OptionsColumn.AllowEdit = false;
+            this.colnombre.Visible = true;
+            this.colnombre.VisibleIndex = 4;
+            this.colnombre.Width = 87;
+            // 
+            // colapellidos
+            // 
+            this.colapellidos.FieldName = "apellidos";
+            this.colapellidos.Name = "colapellidos";
+            this.colapellidos.OptionsColumn.AllowEdit = false;
+            this.colapellidos.Visible = true;
+            this.colapellidos.VisibleIndex = 5;
+            this.colapellidos.Width = 100;
+            // 
+            // colsuper_user
+            // 
+            this.colsuper_user.FieldName = "super_user";
+            this.colsuper_user.Name = "colsuper_user";
+            this.colsuper_user.OptionsColumn.AllowEdit = false;
+            this.colsuper_user.Visible = true;
+            this.colsuper_user.VisibleIndex = 6;
+            this.colsuper_user.Width = 104;
+            // 
+            // coltiempo_inactividad
+            // 
+            this.coltiempo_inactividad.FieldName = "tiempo_inactividad";
+            this.coltiempo_inactividad.Name = "coltiempo_inactividad";
+            this.coltiempo_inactividad.OptionsColumn.AllowEdit = false;
+            this.coltiempo_inactividad.Visible = true;
+            this.coltiempo_inactividad.VisibleIndex = 7;
+            this.coltiempo_inactividad.Width = 109;
+            // 
+            // colutiliza_bloqueo
+            // 
+            this.colutiliza_bloqueo.FieldName = "utiliza_bloqueo";
+            this.colutiliza_bloqueo.Name = "colutiliza_bloqueo";
+            this.colutiliza_bloqueo.OptionsColumn.AllowEdit = false;
+            this.colutiliza_bloqueo.Visible = true;
+            this.colutiliza_bloqueo.VisibleIndex = 8;
+            this.colutiliza_bloqueo.Width = 69;
+            // 
+            // coluser_db
+            // 
+            this.coluser_db.FieldName = "user_db";
+            this.coluser_db.Name = "coluser_db";
+            this.coluser_db.OptionsColumn.AllowEdit = false;
+            this.coluser_db.Visible = true;
+            this.coluser_db.VisibleIndex = 9;
+            this.coluser_db.Width = 85;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Editar";
+            this.gridColumn1.ColumnEdit = this.ButtonEditar;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 10;
+            this.gridColumn1.Width = 87;
+            // 
             // ButtonEditar
             // 
             this.ButtonEditar.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.ButtonEditar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.ButtonEditar.Name = "ButtonEditar";
             this.ButtonEditar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.ButtonEditar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.ButtonEditar_ButtonClick);
@@ -147,114 +252,21 @@ namespace ERP_INTECOLI.Usuarios
             this.cmdNuevo.UseVisualStyleBackColor = false;
             this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
             // 
-            // dsUsuarios1
-            // 
-            this.dsUsuarios1.DataSetName = "dsUsuarios";
-            this.dsUsuarios1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // colid_usuario
-            // 
-            this.colid_usuario.FieldName = "id_usuario";
-            this.colid_usuario.Name = "colid_usuario";
-            this.colid_usuario.OptionsColumn.AllowEdit = false;
-            this.colid_usuario.Visible = true;
-            this.colid_usuario.VisibleIndex = 0;
-            // 
-            // colalias
-            // 
-            this.colalias.FieldName = "alias";
-            this.colalias.Name = "colalias";
-            this.colalias.OptionsColumn.AllowEdit = false;
-            this.colalias.Visible = true;
-            this.colalias.VisibleIndex = 1;
-            // 
-            // colpassword
-            // 
-            this.colpassword.FieldName = "password";
-            this.colpassword.Name = "colpassword";
-            this.colpassword.OptionsColumn.AllowEdit = false;
-            this.colpassword.Visible = true;
-            this.colpassword.VisibleIndex = 2;
-            // 
-            // colhabilitado
-            // 
-            this.colhabilitado.FieldName = "habilitado";
-            this.colhabilitado.Name = "colhabilitado";
-            this.colhabilitado.OptionsColumn.AllowEdit = false;
-            this.colhabilitado.Visible = true;
-            this.colhabilitado.VisibleIndex = 3;
-            // 
-            // colnombre
-            // 
-            this.colnombre.FieldName = "nombre";
-            this.colnombre.Name = "colnombre";
-            this.colnombre.OptionsColumn.AllowEdit = false;
-            this.colnombre.Visible = true;
-            this.colnombre.VisibleIndex = 4;
-            // 
-            // colapellidos
-            // 
-            this.colapellidos.FieldName = "apellidos";
-            this.colapellidos.Name = "colapellidos";
-            this.colapellidos.OptionsColumn.AllowEdit = false;
-            this.colapellidos.Visible = true;
-            this.colapellidos.VisibleIndex = 5;
-            // 
-            // colsuper_user
-            // 
-            this.colsuper_user.FieldName = "super_user";
-            this.colsuper_user.Name = "colsuper_user";
-            this.colsuper_user.OptionsColumn.AllowEdit = false;
-            this.colsuper_user.Visible = true;
-            this.colsuper_user.VisibleIndex = 6;
-            // 
-            // coltiempo_inactividad
-            // 
-            this.coltiempo_inactividad.FieldName = "tiempo_inactividad";
-            this.coltiempo_inactividad.Name = "coltiempo_inactividad";
-            this.coltiempo_inactividad.OptionsColumn.AllowEdit = false;
-            this.coltiempo_inactividad.Visible = true;
-            this.coltiempo_inactividad.VisibleIndex = 7;
-            // 
-            // colutiliza_bloqueo
-            // 
-            this.colutiliza_bloqueo.FieldName = "utiliza_bloqueo";
-            this.colutiliza_bloqueo.Name = "colutiliza_bloqueo";
-            this.colutiliza_bloqueo.OptionsColumn.AllowEdit = false;
-            this.colutiliza_bloqueo.Visible = true;
-            this.colutiliza_bloqueo.VisibleIndex = 8;
-            // 
-            // coluser_db
-            // 
-            this.coluser_db.FieldName = "user_db";
-            this.coluser_db.Name = "coluser_db";
-            this.coluser_db.OptionsColumn.AllowEdit = false;
-            this.coluser_db.Visible = true;
-            this.coluser_db.VisibleIndex = 9;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Editar";
-            this.gridColumn1.ColumnEdit = this.ButtonEditar;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 10;
-            // 
             // frmMantenimientoUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 619);
+            this.ClientSize = new System.Drawing.Size(1039, 619);
             this.Controls.Add(this.cmdNuevo);
             this.Controls.Add(this.grdUsuario);
             this.Controls.Add(this.labelControl1);
             this.Name = "frmMantenimientoUsuarios";
             this.Text = "Mantenimiento de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.grdUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonFunciones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using JAGUAR_APP;
 using static DevExpress.XtraEditors.Mask.MaskSettings;
+using System.Windows.Forms;
 
 namespace ERP_INTECOLI.Clases
 {
@@ -95,9 +96,10 @@ namespace ERP_INTECOLI.Clases
                     Habilitado = dr.GetBoolean(3);
                     Nombre = dr.GetString(4);
                     Super_user = dr.GetBoolean(5);
-                    Tiempo_inactividad = dr.GetTimeSpan(6);
-                    DateTime myDateTime = DateTime.Now;
-                    string sqlFormattedDate = myDateTime.ToString(dr.GetString(6));
+                    TimeSpan tm = new TimeSpan(0, dr.GetInt32(6),0);
+                    Tiempo_inactividad = tm;
+                    //DateTime myDateTime = DateTime.Now;
+                    //string sqlFormattedDate = myDateTime.dr.GetInt32(6);
                     Utiliza_bloqueo = dr.GetBoolean(7);
                     UserDb = dr.GetString(8);
                     PassDb = dr.GetString(9);
