@@ -32,20 +32,21 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.txtParametro = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.ultraLabel1 = new Infragistics.Win.Misc.UltraLabel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.dsAntiguedad1 = new ERP_INTECOLI.Administracion.Estudiantes.dsAntiguedad();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colfecha_inicio = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colfecha_fin = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coledad = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dsAntiguedad1 = new ERP_INTECOLI.Administracion.Estudiantes.dsAntiguedad();
             ((System.ComponentModel.ISupportInitialize)(this.txtParametro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAntiguedad1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtParametro
             // 
+            this.txtParametro.Enabled = false;
             this.txtParametro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParametro.Location = new System.Drawing.Point(81, 28);
             this.txtParametro.Name = "txtParametro";
@@ -76,6 +77,11 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // dsAntiguedad1
+            // 
+            this.dsAntiguedad1.DataSetName = "dsAntiguedad";
+            this.dsAntiguedad1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -91,12 +97,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.colid.FieldName = "id";
             this.colid.Name = "colid";
+            this.colid.OptionsColumn.AllowEdit = false;
             // 
             // colfecha_inicio
             // 
             this.colfecha_inicio.Caption = "Desde";
             this.colfecha_inicio.FieldName = "fecha_inicio";
             this.colfecha_inicio.Name = "colfecha_inicio";
+            this.colfecha_inicio.OptionsColumn.AllowEdit = false;
             this.colfecha_inicio.Visible = true;
             this.colfecha_inicio.VisibleIndex = 0;
             this.colfecha_inicio.Width = 89;
@@ -106,6 +114,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.colfecha_fin.Caption = "Hasta";
             this.colfecha_fin.FieldName = "fecha_fin";
             this.colfecha_fin.Name = "colfecha_fin";
+            this.colfecha_fin.OptionsColumn.AllowEdit = false;
             this.colfecha_fin.Visible = true;
             this.colfecha_fin.VisibleIndex = 1;
             this.colfecha_fin.Width = 102;
@@ -115,14 +124,10 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.coledad.Caption = "Periodo";
             this.coledad.FieldName = "edad";
             this.coledad.Name = "coledad";
+            this.coledad.OptionsColumn.AllowEdit = false;
             this.coledad.Visible = true;
             this.coledad.VisibleIndex = 2;
             this.coledad.Width = 324;
-            // 
-            // dsAntiguedad1
-            // 
-            this.dsAntiguedad1.DataSetName = "dsAntiguedad";
-            this.dsAntiguedad1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // frmHistoarialAntiguedad
             // 
@@ -137,8 +142,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.Text = "Historial Antiguedad";
             ((System.ComponentModel.ISupportInitialize)(this.txtParametro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAntiguedad1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

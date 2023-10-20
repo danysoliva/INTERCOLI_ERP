@@ -39,6 +39,7 @@ namespace ERP_INTECOLI
             this.navDesconectar = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarUsuarios = new DevExpress.XtraNavBar.NavBarItem();
             this.navCRUDPermisos = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarAcessosUsuario = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarSeparatorItem1 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
             this.navBarEstudiantes = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
@@ -88,7 +89,6 @@ namespace ERP_INTECOLI
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblServerName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.navBarAcessosUsuario = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).BeginInit();
             this.xtraTabControlMenu.SuspendLayout();
             this.TabAdministracion.SuspendLayout();
@@ -223,6 +223,12 @@ namespace ERP_INTECOLI
             this.navCRUDPermisos.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.control_de_accessox32;
             this.navCRUDPermisos.Name = "navCRUDPermisos";
             this.navCRUDPermisos.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navCRUDPermisos_LinkClicked);
+            // 
+            // navBarAcessosUsuario
+            // 
+            this.navBarAcessosUsuario.Caption = "Acceso de Usuarios";
+            this.navBarAcessosUsuario.Name = "navBarAcessosUsuario";
+            this.navBarAcessosUsuario.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarAcessosUsuario_LinkClicked);
             // 
             // navBarSeparatorItem1
             // 
@@ -550,6 +556,7 @@ namespace ERP_INTECOLI
             // navBarGroup5
             // 
             this.navBarGroup5.Caption = "Matenimientos";
+            this.navBarGroup5.Expanded = true;
             this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBfrmCursos),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
@@ -609,12 +616,6 @@ namespace ERP_INTECOLI
             // 
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(0, 17);
-            // 
-            // navBarAcessosUsuario
-            // 
-            this.navBarAcessosUsuario.Caption = "Acceso de Usuarios";
-            this.navBarAcessosUsuario.Name = "navBarAcessosUsuario";
-            this.navBarAcessosUsuario.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarAcessosUsuario_LinkClicked);
             // 
             // frmMainMenu
             // 

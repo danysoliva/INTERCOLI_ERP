@@ -44,6 +44,8 @@ namespace ERP_INTECOLI.Usuarios
             this.colhabilitado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ButtonEditar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ButtonFunciones = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.cmdAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -99,15 +101,18 @@ namespace ERP_INTECOLI.Usuarios
             this.colid,
             this.coldescripcion,
             this.colhabilitado,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colid
             // 
             this.colid.Caption = "# de Acceso";
-            this.colid.FieldName = "id";
+            this.colid.FieldName = "id_ventana";
             this.colid.Name = "colid";
             this.colid.OptionsColumn.ReadOnly = true;
             this.colid.Visible = true;
@@ -120,7 +125,7 @@ namespace ERP_INTECOLI.Usuarios
             this.coldescripcion.Name = "coldescripcion";
             this.coldescripcion.OptionsColumn.ReadOnly = true;
             this.coldescripcion.Visible = true;
-            this.coldescripcion.VisibleIndex = 1;
+            this.coldescripcion.VisibleIndex = 2;
             // 
             // colhabilitado
             // 
@@ -129,13 +134,15 @@ namespace ERP_INTECOLI.Usuarios
             this.colhabilitado.Name = "colhabilitado";
             this.colhabilitado.OptionsColumn.ReadOnly = true;
             this.colhabilitado.Visible = true;
-            this.colhabilitado.VisibleIndex = 2;
+            this.colhabilitado.VisibleIndex = 4;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Editar";
             this.gridColumn1.ColumnEdit = this.ButtonEditar;
             this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 5;
             // 
             // ButtonEditar
             // 
@@ -145,6 +152,25 @@ namespace ERP_INTECOLI.Usuarios
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.ButtonEditar.Name = "ButtonEditar";
             this.ButtonEditar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.ButtonEditar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.ButtonEditar_ButtonClick);
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Codigo";
+            this.gridColumn2.FieldName = "codigo";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.ReadOnly = true;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 3;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Nombre Ventana";
+            this.gridColumn3.FieldName = "nombre";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.ReadOnly = true;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
             // 
             // ButtonFunciones
             // 
@@ -229,5 +255,7 @@ namespace ERP_INTECOLI.Usuarios
         private DevExpress.XtraGrid.Columns.GridColumn coldescripcion;
         private DevExpress.XtraGrid.Columns.GridColumn colhabilitado;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
     }
 }
