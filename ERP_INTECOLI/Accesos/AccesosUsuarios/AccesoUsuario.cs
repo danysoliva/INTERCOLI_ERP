@@ -20,16 +20,16 @@ namespace ERP_INTECOLI.Accesos.AccesosUsuarios
         private XtraMessageBoxArgs args;
 
         //private const string connectionString = @"Server=DESKTOP-4Q0PPMK\SQLEXPRESS;Database=ACS;User Id=sa;Password=Sap5erver;";
-        private const string query = @"SELECT [id]
-                                              ,[nombre]
-                                              ,[usuario]
-                                      FROM [ACS].[conf_usuarios]
-                                      WHERE activo = 1
-                                      Order by [nombre];";
+        private const string query = @"SELECT [id_usuario]
+		                                        ,concat(nombre, ' ' + apellidos )as [nombre]
+		                                        ,alias
+                                        FROM usuarios
+                                        WHERE habilitado = 1
+                                        Order by [nombre];";
 
-        private const string query2 = @"Select T0.id, 
+        private const string query2 = @"Select T0.id_usuario, 
                                               T0.nombre, 
-                                              T0.usuario,
+                                              T0.alias,
                                               T1.id [id_sistema], 
                                               T1.nombre [nombre_sistema],
                                               T1.Codigo,
@@ -38,17 +38,19 @@ namespace ERP_INTECOLI.Accesos.AccesosUsuarios
                                               T2.nivel,
                                               isnull(T4.enable,0) [enable],
                                               isnull(T4.id,0) [id_conf]
-                                                    from [ACS].conf_usuarios T0
-                                                    cross join [ACS].conf_sistemas_master_data T1
-                                                    cross join [ACS].conf_niveles_acceso T2
-                                                    inner join [ACS].conf_sistemas_niveles_acceso T3 on T3.id_nivel = T2.id and T3.id_sistema = T1.id
-                                                    left join [ACS].conf_usuarios_niveles_acceso T4 on T4.id_nivel = T3.id and T4.id_user = T0.id
-                                                    Where T0.id = @id";
+                                                    from usuarios T0
+                                                    cross join conf_sistemas_master_data T1
+                                                    cross join conf_niveles_acceso T2
+                                                    inner join conf_sistemas_niveles_acceso T3 
+														on T3.id_nivel = T2.id and T3.id_sistema = T1.id
+                                                    left join conf_usuarios_niveles_acceso T4 
+														on T4.id_nivel = T3.id and T4.id_user = T0.id_usuario
+                                                   Where T0.id_usuario = @id";
 
-        private const string query3 = @"INSERT INTO [ACS].conf_usuarios_niveles_acceso([id_user],[id_nivel],[enable],[date_start])
+        private const string query3 = @"INSERT INTO conf_usuarios_niveles_acceso([id_user],[id_nivel],[enable],[date_start])
                                         VALUES(@id_user, @id_nivel, @enable, @date_start)";
 
-        private const string query4 = @"DELETE FROM [ACS].conf_usuarios_niveles_acceso
+        private const string query4 = @"DELETE FROM conf_usuarios_niveles_acceso
                                         WHERE id = @id";
 
         private List<UserData> UserDatas { get; set; }

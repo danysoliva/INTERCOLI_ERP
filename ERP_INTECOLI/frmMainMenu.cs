@@ -33,6 +33,7 @@ using System.Net;
 using ERP_INTECOLI.Facturacion;
 using Eatery.Ventas;
 using JAGUAR_APP.Facturacion.Mantenimientos;
+using ERP_INTECOLI.Accesos.AccesosUsuarios;
 
 namespace ERP_INTECOLI
 {
@@ -594,6 +595,21 @@ namespace ERP_INTECOLI
                 catch { }
             }
 
+        }
+
+        private void navBarAcessosUsuario_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //Aqui va un permiso
+            AccesoUsuario frm = new AccesoUsuario(UsuarioLogeado);
+            if (frm != null)
+            {
+                frm.MdiParent = this;
+                try
+                {
+                    frm.Show();
+                }
+                catch { }
+            }
         }
     }
     
