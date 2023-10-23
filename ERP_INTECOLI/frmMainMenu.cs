@@ -283,142 +283,61 @@ namespace ERP_INTECOLI
 
         private void NavBarProyeccionCobros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //aqui van permisos
-            frmSaldosAjustados frm = new frmSaldosAjustados(this.UsuarioLogeado);
-            frm.MdiParent = this;
-            frm.Show();
+           
         }
 
         private void navBarMiemborsClases_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmConsultarMiembroCurso frx = new frmConsultarMiembroCurso(this.UsuarioLogeado);
-            if (frx != null)
-            {
-                frx.MdiParent = this;
-                try
-                {
-                    frx.Show();
-                }
-                catch (Exception ec)
-                { }
-            }
+           
         }
 
         private void navBarItem3_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmConsultaCumpleanieros frx = new frmConsultaCumpleanieros(this.UsuarioLogeado);
-            if (frx != null)
-            {
-                frx.MdiParent = this;
-                try
-                {
-                    frx.Show();
-                }
-                catch (Exception ec)
-                {
-                }
-            }
+            
         }
 
         private void navGeneros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmRecuentoGeneros frx = new frmRecuentoGeneros(this.UsuarioLogeado);
-            if (frx != null)
-            {
-                frx.MdiParent = this;
-                try
-                {
-                    frx.Show();
-                }
-                catch (Exception ec)
-                {
-                }
-            }
         }
 
         private void navSeguimientoSaldos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //aqui van permisos
-            frmSeguimientoSaldos mtx = new frmSeguimientoSaldos(this.UsuarioLogeado);
-            if (mtx != null)
-            {
-                
-                mtx.MdiParent = this;
-                try
-                {
-                    mtx.Show();
-                }
-                catch { }
-                
-            }
+            
         }
 
         private void navEstudiantesDeshabilitados_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmConsultaAnulados frm = new frmConsultaAnulados();
-            frm.MdiParent = this;
-            frm.Show();
+            
         }
 
         private void navTiposPagoEstudiane_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmConsultaTipoPago mtx = new frmConsultaTipoPago();
-            if (mtx != null)
-            {
-                mtx.MdiParent = this;
-                mtx.Show();
-            }
+            
         }
 
         private void navIngresosTool_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmNuevosIngresos mtx = new frmNuevosIngresos();
-            if (mtx != null)
-            {
-                mtx.MdiParent = this;
-                mtx.Show();
-            }
+           
         }
 
         private void navSaldoAcumulado_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmConsultaEstSaldosCobrables mtx = new frmConsultaEstSaldosCobrables();
-            if (mtx != null)
-            {
-                mtx.MdiParent = this;
-                mtx.Show();
-            }
+           
         }
 
         private void navRangosPago_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //aqui va permiso
-            frmRangosPago mtx = new frmRangosPago();
-            if (mtx != null)
-            {
-                
-                mtx.MdiParent = this;
-                try
-                {
-                    mtx.Show();
-                }
-                catch { }
-                
-            }
+           
         }
 
         private void navArqueoCaja_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmArqueoCaja frm = new frmArqueoCaja(UsuarioLogeado);
-            frm.MdiParent = this;
-            frm.Show();
+            
         }
 
         private void navDistribucionResidencial_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmEstadisticasPorResidencia frm = new frmEstadisticasPorResidencia();
-            frm.MdiParent = this;
-            frm.Show();
+           
         }
 
         private void navNuevoRecordatorio_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -654,32 +573,143 @@ namespace ERP_INTECOLI
 
         private void navProyeccionCobros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-
+            //aqui van permisos
+            frmSaldosAjustados frm = new frmSaldosAjustados(this.UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void navMiembrosClase_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-
+            frmConsultarMiembroCurso frx = new frmConsultarMiembroCurso(this.UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
+                { }
+            }
         }
 
         private void navCumpleanios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-
+            frmConsultaCumpleanieros frx = new frmConsultaCumpleanieros(this.UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
+                {
+                }
+            }
         }
 
         private void navDistGeneros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
 
+            frmRecuentoGeneros frx = new frmRecuentoGeneros(this.UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
+                {
+                }
+            }
         }
 
         private void navSeguiSaldos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            //aqui van permisos
+            frmSeguimientoSaldos mtx = new frmSeguimientoSaldos(this.UsuarioLogeado);
+            if (mtx != null)
+            {
 
+                mtx.MdiParent = this;
+                try
+                {
+                    mtx.Show();
+                }
+                catch { }
+
+            }
         }
 
         private void navEstudiantesDeshabi_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            frmConsultaAnulados frm = new frmConsultaAnulados();
+            frm.MdiParent = this;
+            frm.Show();
+        }
 
+        private void navTipoPagos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmConsultaTipoPago mtx = new frmConsultaTipoPago();
+            if (mtx != null)
+            {
+                mtx.MdiParent = this;
+                mtx.Show();
+            }
+        }
+
+        private void navNuevosIngresos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmNuevosIngresos mtx = new frmNuevosIngresos();
+            if (mtx != null)
+            {
+                mtx.MdiParent = this;
+                mtx.Show();
+            }
+        }
+
+        private void navDeudores_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmConsultaEstSaldosCobrables mtx = new frmConsultaEstSaldosCobrables();
+            if (mtx != null)
+            {
+                mtx.MdiParent = this;
+                mtx.Show();
+            }
+        }
+
+        private void navRangosPagos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //aqui va permiso
+            frmRangosPago mtx = new frmRangosPago();
+            if (mtx != null)
+            {
+
+                mtx.MdiParent = this;
+                try
+                {
+                    mtx.Show();
+                }
+                catch { }
+
+            }
+        }
+
+        private void navArqueoCajas_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmArqueoCaja frm = new frmArqueoCaja(UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void navDistribucioZonaResidencial_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmEstadisticasPorResidencia frm = new frmEstadisticasPorResidencia();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
     
