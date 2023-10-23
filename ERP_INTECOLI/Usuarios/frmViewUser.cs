@@ -77,11 +77,11 @@ namespace ERP_INTECOLI.Usuarios
                 DataOperations dp = new DataOperations();
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
-                string sql = @"DELETE FROM [dbo].[conf_usuario_ventana_funciones]
-                                WHERE id_usuario = " + IdUsuarioSeleccionado.ToString() +
-                                    " and id_ventana = " + row.id_ventana.ToString();
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
+                //string sql = @"DELETE FROM [dbo].[conf_usuario_ventana_funciones]
+                //                WHERE id_usuario = " + IdUsuarioSeleccionado.ToString() +
+                //                    " and id_ventana = " + row.id_ventana.ToString();
+                //SqlCommand cmd = new SqlCommand(sql, conn);
+                //cmd.ExecuteNonQuery();
 
                 string sql2 = @"DELETE FROM [dbo].[conf_usuario_ventanas]
                                   WHERE [id_ventana] = " + row.id_ventana.ToString() +

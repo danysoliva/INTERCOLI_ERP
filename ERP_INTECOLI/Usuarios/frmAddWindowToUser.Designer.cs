@@ -32,9 +32,8 @@ namespace ERP_INTECOLI.Usuarios
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddWindowToUser));
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.dsUsuarios1 = new ERP_INTECOLI.Usuarios.dsUsuarios();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.cmdCancelar = new DevExpress.XtraEditors.SimpleButton();
-            this.cmdGuardar = new DevExpress.XtraEditors.SimpleButton();
             this.colid_ventana = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcodigo = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -48,11 +47,12 @@ namespace ERP_INTECOLI.Usuarios
             this.Eliminar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.seleccionar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.funciones_button_n = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.dsUsuarios1 = new ERP_INTECOLI.Usuarios.dsUsuarios();
+            this.cmdCancelar = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdGuardar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.funciones_button_n)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl4
@@ -82,6 +82,11 @@ namespace ERP_INTECOLI.Usuarios
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // dsUsuarios1
+            // 
+            this.dsUsuarios1.DataSetName = "dsUsuarios";
+            this.dsUsuarios1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gridView1
             // 
             this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -105,35 +110,6 @@ namespace ERP_INTECOLI.Usuarios
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // cmdCancelar
-            // 
-            this.cmdCancelar.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.cmdCancelar.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCancelar.Appearance.Options.UseBackColor = true;
-            this.cmdCancelar.Appearance.Options.UseFont = true;
-            this.cmdCancelar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.cmdCancelar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdCancelar.ImageOptions.Image")));
-            this.cmdCancelar.Location = new System.Drawing.Point(397, 384);
-            this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(156, 39);
-            this.cmdCancelar.TabIndex = 19;
-            this.cmdCancelar.Text = "Cancelar";
-            // 
-            // cmdGuardar
-            // 
-            this.cmdGuardar.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.cmdGuardar.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdGuardar.Appearance.Options.UseBackColor = true;
-            this.cmdGuardar.Appearance.Options.UseFont = true;
-            this.cmdGuardar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.cmdGuardar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.ImageOptions.Image")));
-            this.cmdGuardar.Location = new System.Drawing.Point(235, 384);
-            this.cmdGuardar.Name = "cmdGuardar";
-            this.cmdGuardar.Size = new System.Drawing.Size(156, 39);
-            this.cmdGuardar.TabIndex = 18;
-            this.cmdGuardar.Text = "Guardar";
-            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
             // colid_ventana
             // 
@@ -242,10 +218,35 @@ namespace ERP_INTECOLI.Usuarios
             this.funciones_button_n.Name = "funciones_button_n";
             this.funciones_button_n.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // dsUsuarios1
+            // cmdCancelar
             // 
-            this.dsUsuarios1.DataSetName = "dsUsuarios";
-            this.dsUsuarios1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cmdCancelar.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdCancelar.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Appearance.Options.UseBackColor = true;
+            this.cmdCancelar.Appearance.Options.UseFont = true;
+            this.cmdCancelar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.cmdCancelar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdCancelar.ImageOptions.Image")));
+            this.cmdCancelar.Location = new System.Drawing.Point(397, 384);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(156, 39);
+            this.cmdCancelar.TabIndex = 19;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
+            // 
+            // cmdGuardar
+            // 
+            this.cmdGuardar.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmdGuardar.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdGuardar.Appearance.Options.UseBackColor = true;
+            this.cmdGuardar.Appearance.Options.UseFont = true;
+            this.cmdGuardar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.cmdGuardar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.ImageOptions.Image")));
+            this.cmdGuardar.Location = new System.Drawing.Point(235, 384);
+            this.cmdGuardar.Name = "cmdGuardar";
+            this.cmdGuardar.Size = new System.Drawing.Size(156, 39);
+            this.cmdGuardar.TabIndex = 18;
+            this.cmdGuardar.Text = "Guardar";
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
             // frmAddWindowToUser
             // 
@@ -261,9 +262,9 @@ namespace ERP_INTECOLI.Usuarios
             this.Text = "Conceder Acceso a Ventana";
             this.Load += new System.EventHandler(this.frmAddWindowToUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.funciones_button_n)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

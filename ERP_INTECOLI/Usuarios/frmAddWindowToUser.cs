@@ -102,5 +102,11 @@ namespace ERP_INTECOLI.Usuarios
                 this.Close();
             }
         }
+
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Close();
+        }
     }
 }

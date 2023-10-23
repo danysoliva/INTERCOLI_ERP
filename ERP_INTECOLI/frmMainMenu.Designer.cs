@@ -69,7 +69,6 @@ namespace ERP_INTECOLI
             this.navAdminUsuarios = new DevExpress.XtraNavBar.NavBarItem();
             this.navPermisosUsuarios = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navControlAccesos = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup7 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navCrudCursos = new DevExpress.XtraNavBar.NavBarItem();
             this.nbConfig_PuntoVenta2 = new DevExpress.XtraNavBar.NavBarItem();
@@ -418,8 +417,7 @@ namespace ERP_INTECOLI
             this.nbConfig_PuntoVenta2,
             this.navDocFiscales,
             this.navNivelesAcademicos,
-            this.navInstructores,
-            this.navControlAccesos});
+            this.navInstructores});
             this.navBarControl2.Location = new System.Drawing.Point(4, 4);
             this.navBarControl2.Name = "navBarControl2";
             this.navBarControl2.OptionsNavPane.ExpandedWidth = 238;
@@ -434,13 +432,12 @@ namespace ERP_INTECOLI
             this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navAdminUsuarios),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navPermisosUsuarios),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem6),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navControlAccesos)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem6)});
             this.navBarGroup6.Name = "navBarGroup6";
             // 
             // navAdminUsuarios
             // 
-            this.navAdminUsuarios.Caption = "Usuarios";
+            this.navAdminUsuarios.Caption = "Usuarios y Permisos";
             this.navAdminUsuarios.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.userx32;
             this.navAdminUsuarios.Name = "navAdminUsuarios";
             this.navAdminUsuarios.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navAdminUsuarios_LinkClicked);
@@ -458,12 +455,6 @@ namespace ERP_INTECOLI
             this.navBarItem6.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.control_de_accesox32;
             this.navBarItem6.Name = "navBarItem6";
             this.navBarItem6.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem6_LinkClicked);
-            // 
-            // navControlAccesos
-            // 
-            this.navControlAccesos.Caption = "Control de Accesos";
-            this.navControlAccesos.Name = "navControlAccesos";
-            this.navControlAccesos.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navControlAccesos_LinkClicked);
             // 
             // navBarGroup7
             // 
@@ -772,6 +763,5 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navRangosPagos;
         private DevExpress.XtraNavBar.NavBarItem navArqueoCajas;
         private DevExpress.XtraNavBar.NavBarItem navDistribucioZonaResidencial;
-        private DevExpress.XtraNavBar.NavBarItem navControlAccesos;
     }
 }

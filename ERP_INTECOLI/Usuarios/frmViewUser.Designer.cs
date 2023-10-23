@@ -89,6 +89,7 @@ namespace ERP_INTECOLI.Usuarios
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl1.DataMember = "view_user";
+            this.gridControl1.DataSource = this.dsUsuarios1;
             this.gridControl1.Location = new System.Drawing.Point(2, 117);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";

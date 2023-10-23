@@ -34,6 +34,7 @@ using ERP_INTECOLI.Facturacion;
 using Eatery.Ventas;
 using JAGUAR_APP.Facturacion.Mantenimientos;
 using ERP_INTECOLI.Accesos.AccesosUsuarios;
+using JAGUAR_APP.Facturacion.Numeracion_Fiscal;
 
 namespace ERP_INTECOLI
 {
@@ -626,6 +627,45 @@ namespace ERP_INTECOLI
 
         private void navDocFiscales_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            
+
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmNumeracionFiscal frm = new frmNumeracionFiscal(UsuarioLogeado);
+                    frm.MdiParent = this;
+                    frm.Show();
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(13))
+                {
+                    frmNumeracionFiscal frm = new frmNumeracionFiscal(UsuarioLogeado);
+                    frm.MdiParent = this;
+                    frm.Show();
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #VT-13 (Mantenimiento Docs Fiscales)");
+                }
+            }
 
         }
 
@@ -832,10 +872,7 @@ namespace ERP_INTECOLI
 
         private void navControlAccesos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //AQUI VA UN PERMISO
-            frmUsuariosAccesos frm = new frmUsuariosAccesos(UsuarioLogeado);
-            frm.MdiParent = this;
-            frm.Show();
+           
         }
     }
     
