@@ -829,6 +829,14 @@ namespace ERP_INTECOLI
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void navControlAccesos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //AQUI VA UN PERMISO
+            frmUsuariosAccesos frm = new frmUsuariosAccesos(UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
     
 }

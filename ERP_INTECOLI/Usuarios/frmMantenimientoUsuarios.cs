@@ -65,5 +65,15 @@ namespace ERP_INTECOLI.Usuarios
                 CargarUsuarios();
             }
         }
+
+        private void ButtoPermisos_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+            var gridView = (GridView)grdUsuario.FocusedView;
+            var row = (dsUsuarios.UsuariosRow)gridView.GetFocusedDataRow();
+
+            frmViewUser frm = new frmViewUser(row.id_usuario, row.nombre, row.habilitado, row.alias);
+            frm.Show();
+        }
     }
 }

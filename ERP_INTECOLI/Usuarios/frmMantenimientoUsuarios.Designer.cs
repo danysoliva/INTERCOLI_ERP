@@ -35,13 +35,17 @@ namespace ERP_INTECOLI.Usuarios
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.grdUsuario = new DevExpress.XtraGrid.GridControl();
             this.dsUsuarios1 = new ERP_INTECOLI.Usuarios.dsUsuarios();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid_usuario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colalias = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colpassword = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colhabilitado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colapellidos = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -51,13 +55,14 @@ namespace ERP_INTECOLI.Usuarios
             this.coluser_db = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ButtonEditar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.ButtonFunciones = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.ButtoPermisos = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.cmdNuevo = new System.Windows.Forms.Button();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonEditar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ButtonFunciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtoPermisos)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -83,7 +88,7 @@ namespace ERP_INTECOLI.Usuarios
             this.grdUsuario.Name = "grdUsuario";
             this.grdUsuario.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.ButtonEditar,
-            this.ButtonFunciones});
+            this.ButtoPermisos});
             this.grdUsuario.Size = new System.Drawing.Size(1031, 548);
             this.grdUsuario.TabIndex = 8;
             this.grdUsuario.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -103,7 +108,6 @@ namespace ERP_INTECOLI.Usuarios
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colid_usuario,
             this.colalias,
-            this.colpassword,
             this.colhabilitado,
             this.colnombre,
             this.colapellidos,
@@ -111,10 +115,12 @@ namespace ERP_INTECOLI.Usuarios
             this.coltiempo_inactividad,
             this.colutiliza_bloqueo,
             this.coluser_db,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.gridColumn2});
             this.gridView1.GridControl = this.grdUsuario;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colid_usuario
             // 
@@ -135,22 +141,13 @@ namespace ERP_INTECOLI.Usuarios
             this.colalias.VisibleIndex = 1;
             this.colalias.Width = 93;
             // 
-            // colpassword
-            // 
-            this.colpassword.FieldName = "password";
-            this.colpassword.Name = "colpassword";
-            this.colpassword.OptionsColumn.AllowEdit = false;
-            this.colpassword.Visible = true;
-            this.colpassword.VisibleIndex = 2;
-            this.colpassword.Width = 102;
-            // 
             // colhabilitado
             // 
             this.colhabilitado.FieldName = "habilitado";
             this.colhabilitado.Name = "colhabilitado";
             this.colhabilitado.OptionsColumn.AllowEdit = false;
             this.colhabilitado.Visible = true;
-            this.colhabilitado.VisibleIndex = 3;
+            this.colhabilitado.VisibleIndex = 2;
             this.colhabilitado.Width = 108;
             // 
             // colnombre
@@ -159,7 +156,7 @@ namespace ERP_INTECOLI.Usuarios
             this.colnombre.Name = "colnombre";
             this.colnombre.OptionsColumn.AllowEdit = false;
             this.colnombre.Visible = true;
-            this.colnombre.VisibleIndex = 4;
+            this.colnombre.VisibleIndex = 3;
             this.colnombre.Width = 87;
             // 
             // colapellidos
@@ -168,7 +165,7 @@ namespace ERP_INTECOLI.Usuarios
             this.colapellidos.Name = "colapellidos";
             this.colapellidos.OptionsColumn.AllowEdit = false;
             this.colapellidos.Visible = true;
-            this.colapellidos.VisibleIndex = 5;
+            this.colapellidos.VisibleIndex = 4;
             this.colapellidos.Width = 100;
             // 
             // colsuper_user
@@ -177,16 +174,18 @@ namespace ERP_INTECOLI.Usuarios
             this.colsuper_user.Name = "colsuper_user";
             this.colsuper_user.OptionsColumn.AllowEdit = false;
             this.colsuper_user.Visible = true;
-            this.colsuper_user.VisibleIndex = 6;
+            this.colsuper_user.VisibleIndex = 5;
             this.colsuper_user.Width = 104;
             // 
             // coltiempo_inactividad
             // 
+            this.coltiempo_inactividad.DisplayFormat.FormatString = "t";
+            this.coltiempo_inactividad.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.coltiempo_inactividad.FieldName = "tiempo_inactividad";
             this.coltiempo_inactividad.Name = "coltiempo_inactividad";
             this.coltiempo_inactividad.OptionsColumn.AllowEdit = false;
             this.coltiempo_inactividad.Visible = true;
-            this.coltiempo_inactividad.VisibleIndex = 7;
+            this.coltiempo_inactividad.VisibleIndex = 6;
             this.coltiempo_inactividad.Width = 109;
             // 
             // colutiliza_bloqueo
@@ -194,8 +193,6 @@ namespace ERP_INTECOLI.Usuarios
             this.colutiliza_bloqueo.FieldName = "utiliza_bloqueo";
             this.colutiliza_bloqueo.Name = "colutiliza_bloqueo";
             this.colutiliza_bloqueo.OptionsColumn.AllowEdit = false;
-            this.colutiliza_bloqueo.Visible = true;
-            this.colutiliza_bloqueo.VisibleIndex = 8;
             this.colutiliza_bloqueo.Width = 69;
             // 
             // coluser_db
@@ -204,8 +201,8 @@ namespace ERP_INTECOLI.Usuarios
             this.coluser_db.Name = "coluser_db";
             this.coluser_db.OptionsColumn.AllowEdit = false;
             this.coluser_db.Visible = true;
-            this.coluser_db.VisibleIndex = 9;
-            this.coluser_db.Width = 85;
+            this.coluser_db.VisibleIndex = 7;
+            this.coluser_db.Width = 90;
             // 
             // gridColumn1
             // 
@@ -213,8 +210,8 @@ namespace ERP_INTECOLI.Usuarios
             this.gridColumn1.ColumnEdit = this.ButtonEditar;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 10;
-            this.gridColumn1.Width = 87;
+            this.gridColumn1.VisibleIndex = 8;
+            this.gridColumn1.Width = 82;
             // 
             // ButtonEditar
             // 
@@ -226,13 +223,15 @@ namespace ERP_INTECOLI.Usuarios
             this.ButtonEditar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.ButtonEditar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.ButtonEditar_ButtonClick);
             // 
-            // ButtonFunciones
+            // ButtoPermisos
             // 
-            this.ButtonFunciones.AutoHeight = false;
-            this.ButtonFunciones.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
-            this.ButtonFunciones.Name = "ButtonFunciones";
-            this.ButtonFunciones.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.ButtoPermisos.AutoHeight = false;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            this.ButtoPermisos.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.ButtoPermisos.Name = "ButtoPermisos";
+            this.ButtoPermisos.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.ButtoPermisos.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.ButtoPermisos_ButtonClick);
             // 
             // cmdNuevo
             // 
@@ -252,6 +251,14 @@ namespace ERP_INTECOLI.Usuarios
             this.cmdNuevo.UseVisualStyleBackColor = false;
             this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
             // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Ver Accesos";
+            this.gridColumn2.ColumnEdit = this.ButtoPermisos;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 9;
+            // 
             // frmMantenimientoUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,7 +273,7 @@ namespace ERP_INTECOLI.Usuarios
             ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonEditar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ButtonFunciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtoPermisos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,12 +285,11 @@ namespace ERP_INTECOLI.Usuarios
         private DevExpress.XtraGrid.GridControl grdUsuario;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ButtonEditar;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ButtonFunciones;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ButtoPermisos;
         private System.Windows.Forms.Button cmdNuevo;
         private dsUsuarios dsUsuarios1;
         private DevExpress.XtraGrid.Columns.GridColumn colid_usuario;
         private DevExpress.XtraGrid.Columns.GridColumn colalias;
-        private DevExpress.XtraGrid.Columns.GridColumn colpassword;
         private DevExpress.XtraGrid.Columns.GridColumn colhabilitado;
         private DevExpress.XtraGrid.Columns.GridColumn colnombre;
         private DevExpress.XtraGrid.Columns.GridColumn colapellidos;
@@ -292,5 +298,6 @@ namespace ERP_INTECOLI.Usuarios
         private DevExpress.XtraGrid.Columns.GridColumn colutiliza_bloqueo;
         private DevExpress.XtraGrid.Columns.GridColumn coluser_db;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
     }
 }

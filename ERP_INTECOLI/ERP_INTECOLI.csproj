@@ -1000,10 +1000,19 @@
     <Compile Include="Transacciones\frmReservaCupoTransaction.Designer.cs">
       <DependentUpon>frmReservaCupoTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\dsUsuarios.cs">
+      <DependentUpon>dsUsuarios.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\dsUsuarios.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsUsuarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\frmAddWindowToUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmAddWindowToUser.Designer.cs">
+      <DependentUpon>frmAddWindowToUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios\frmMantenimientoUsuarios.cs">
       <SubType>Form</SubType>
@@ -1028,6 +1037,12 @@
     </Compile>
     <Compile Include="Usuarios\frmUser.Designer.cs">
       <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\frmViewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmViewUser.Designer.cs">
+      <DependentUpon>frmViewUser.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Accesos\AccesosUsuarios\AccesoUsuario.resx">
       <DependentUpon>AccesoUsuario.cs</DependentUpon>
@@ -1388,6 +1403,9 @@
     <EmbeddedResource Include="Transacciones\frmReservaCupoTransaction.resx">
       <DependentUpon>frmReservaCupoTransaction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmAddWindowToUser.resx">
+      <DependentUpon>frmAddWindowToUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmMantenimientoUsuarios.resx">
       <DependentUpon>frmMantenimientoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -1399,6 +1417,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmViewUser.resx">
+      <DependentUpon>frmViewUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Accesos\AccesosUsuarios\AccesoUsuario.resx.bak" />
     <None Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesAdmin.resx.bak" />
