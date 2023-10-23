@@ -90,25 +90,46 @@ namespace ERP_INTECOLI
 
         private void navBarEstudiantes_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmEstudiantesGroup frm1 = new frmEstudiantesGroup(this.UsuarioLogeado);
-            if (frm1 != null)
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
             {
-                frm1.MdiParent = this;
-                try
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmEstudiantesGroup frm1 = new frmEstudiantesGroup(this.UsuarioLogeado);
+                    frm1.MdiParent = this;
+                    frm1.Show();
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(9))
                 {
+                    frmEstudiantesGroup frm1 = new frmEstudiantesGroup(this.UsuarioLogeado);
+                    frm1.MdiParent = this;
                     frm1.Show();
                 }
-                catch 
+                else
                 {
+                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #9 (Gestion de Estudiantes)");
                 }
             }
         }
 
-        private void navBarInstructor_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            
-        }
-
+        
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form frm1 in this.MdiChildren)
@@ -123,26 +144,43 @@ namespace ERP_INTECOLI
             frm.Show();
         }
 
-        private void navBarItem4_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
 
-            
-        }
 
         private void navMatricula_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //FALTA PERMISO DE ACCESO 
-            frmMatriculaReal mtx = new frmMatriculaReal(this.UsuarioLogeado);
-            if (mtx != null)
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
             {
-                
-                mtx.MdiParent = this;
-                try
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmMatriculaReal mtx = new frmMatriculaReal(this.UsuarioLogeado);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(6)) //Matricula de Alumno
                 {
+                    frmMatriculaReal mtx = new frmMatriculaReal(this.UsuarioLogeado);
+                    mtx.MdiParent = this;
                     mtx.Show();
                 }
-                catch { }
-                
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #6 (Matricula de Alumno)");
+                }
             }
         }
 
@@ -155,25 +193,50 @@ namespace ERP_INTECOLI
             Application.Exit();
         }
 
-        private void navCRUDPermisos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            
-        }
+
 
         private void navConsultaMatriculado_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmConsultarMatriculados mtx = new frmConsultarMatriculados(this.UsuarioLogeado);
-            if (mtx != null)
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
             {
-                
-                mtx.MdiParent = this;
-                try
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmConsultarMatriculados mtx = new frmConsultarMatriculados(this.UsuarioLogeado);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(7))
                 {
+                    frmConsultarMatriculados mtx = new frmConsultarMatriculados(this.UsuarioLogeado);
+                    mtx.MdiParent = this;
                     mtx.Show();
                 }
-                catch { }
-                
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #7 (Consulta y Edicion de Matricula)");
+                }
             }
+
+
+
         }
 
         private void navPostearMensualidad_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -222,10 +285,7 @@ namespace ERP_INTECOLI
             }
         }
 
-        private void navNotificacionesManuales_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-
-        }
+   
 
         private void navCaja_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
@@ -281,65 +341,6 @@ namespace ERP_INTECOLI
             frm.Show();
         }
 
-        private void NavBarProyeccionCobros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-           
-        }
-
-        private void navBarMiemborsClases_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-           
-        }
-
-        private void navBarItem3_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            
-        }
-
-        private void navGeneros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-        }
-
-        private void navSeguimientoSaldos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            
-        }
-
-        private void navEstudiantesDeshabilitados_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            
-        }
-
-        private void navTiposPagoEstudiane_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            
-        }
-
-        private void navIngresosTool_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-           
-        }
-
-        private void navSaldoAcumulado_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-           
-        }
-
-        private void navRangosPago_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-           
-        }
-
-        private void navArqueoCaja_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            
-        }
-
-        private void navDistribucionResidencial_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-           
-        }
-
         private void navNuevoRecordatorio_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             frmRecordatorio frx = new frmRecordatorio(this.UsuarioLogeado);
@@ -356,10 +357,6 @@ namespace ERP_INTECOLI
             }
         }
 
-        private void navBfrmCursos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
-        {
-            
-        }
 
         private void nb_FacturaCore_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
@@ -381,11 +378,9 @@ namespace ERP_INTECOLI
                 return;
             }
 
-
-
             bool accesoprevio = false;
-            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 11);//9 = AMS
-            switch (idNivel)                                                      //11 = Jaguar
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
             {
                 case 1://Basic View
                     break;
@@ -445,46 +440,142 @@ namespace ERP_INTECOLI
 
         private void navAdminUsuarios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //Aqui va permiso
-            frmMantenimientoUsuarios msu = new frmMantenimientoUsuarios(this.UsuarioLogeado);
-            if (msu != null)
+           
+
+
+
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
             {
-                msu.MdiParent = this;
-                try
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmMantenimientoUsuarios msu = new frmMantenimientoUsuarios(this.UsuarioLogeado);
+                    msu.MdiParent = this;
+                    msu.Show();
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(1))
                 {
+                    frmMantenimientoUsuarios msu = new frmMantenimientoUsuarios(this.UsuarioLogeado);
+                    msu.MdiParent = this;
                     msu.Show();
                 }
-                catch { }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #1 (Gestion de Usuarios)");
+                }
             }
+
         }
 
         private void navPermisosUsuarios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            if (UsuarioLogeado.Super_user)
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
             {
-                frmMantVentanas frm = new frmMantVentanas();
-                frm.MdiParent = this;
-                frm.Show();
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmMantVentanas frm = new frmMantVentanas();
+                    frm.MdiParent = this;
+                    frm.Show();
+
+                    break;
+                default:
+                    break;
             }
-            else
+
+            if (!accesoprevio)
             {
-                CajaDialogo.Error("No tiene Autorizacion\nSolo los Super Usuarios pueden Acceder a esta Ventana.");
+                if (UsuarioLogeado.ValidarNivelPermisos(2))
+                {
+                    frmMantVentanas frm = new frmMantVentanas();
+                    frm.MdiParent = this;
+                    frm.Show();
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #VT-02 (Administracion de Niveles de acceso)");
+                }
             }
+
+
+            //if (UsuarioLogeado.Super_user)
+            //{
+                
+            //}
+            //else
+            //{
+            //    CajaDialogo.Error("No tiene Autorizacion\nSolo los Super Usuarios pueden Acceder a esta Ventana.");
+            //}
         }
 
         private void navBarItem6_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //Aqui va un permiso
-            AccesoUsuario frm = new AccesoUsuario(UsuarioLogeado);
-            if (frm != null)
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
             {
-                frm.MdiParent = this;
-                try
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    AccesoUsuario frm = new AccesoUsuario(UsuarioLogeado);
+                    frm.MdiParent = this;
+                    frm.Show();
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(19))
                 {
+                    AccesoUsuario frm = new AccesoUsuario(UsuarioLogeado);
+                    frm.MdiParent = this;
                     frm.Show();
                 }
-                catch { }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #VT-19 (Niveles de Acceso Usuarios)");
+                }
             }
+
+
         }
 
         private void navCrudCursos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -683,19 +774,46 @@ namespace ERP_INTECOLI
 
         private void navRangosPagos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //aqui va permiso
-            frmRangosPago mtx = new frmRangosPago();
-            if (mtx != null)
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
             {
-
-                mtx.MdiParent = this;
-                try
-                {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmRangosPago mtx = new frmRangosPago();
+                    mtx.MdiParent = this;
                     mtx.Show();
-                }
-                catch { }
 
+
+                    break;
+                default:
+                    break;
             }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(17))
+                {
+                    frmRangosPago mtx = new frmRangosPago();
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #VT-17 (Rangos de pagos)");
+                }
+            }
+
         }
 
         private void navArqueoCajas_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)

@@ -38,6 +38,7 @@ namespace ERP_INTECOLI.Accesos.AccesosUsuarios
             this.Nivel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Codigo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cmdEditarUsuario = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.comboUsuarios = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -55,7 +56,6 @@ namespace ERP_INTECOLI.Accesos.AccesosUsuarios
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cmdEditarUsuario = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDetalleSistemas)).BeginInit();
@@ -175,6 +175,19 @@ namespace ERP_INTECOLI.Accesos.AccesosUsuarios
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(444, 117);
             this.panel2.TabIndex = 2;
+            // 
+            // cmdEditarUsuario
+            // 
+            this.cmdEditarUsuario.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdEditarUsuario.Appearance.Options.UseFont = true;
+            this.cmdEditarUsuario.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.cmdEditarUsuario.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdEditarUsuario.ImageOptions.Image")));
+            this.cmdEditarUsuario.Location = new System.Drawing.Point(316, 5);
+            this.cmdEditarUsuario.Name = "cmdEditarUsuario";
+            this.cmdEditarUsuario.Size = new System.Drawing.Size(123, 32);
+            this.cmdEditarUsuario.TabIndex = 8;
+            this.cmdEditarUsuario.Text = "Editar Usuario";
+            this.cmdEditarUsuario.Click += new System.EventHandler(this.cmdEditarUsuario_Click);
             // 
             // labelControl1
             // 
@@ -358,19 +371,6 @@ namespace ERP_INTECOLI.Accesos.AccesosUsuarios
             this.gridColumn4.Caption = "IdNivel";
             this.gridColumn4.FieldName = "IdNivel";
             this.gridColumn4.Name = "gridColumn4";
-            // 
-            // cmdEditarUsuario
-            // 
-            this.cmdEditarUsuario.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdEditarUsuario.Appearance.Options.UseFont = true;
-            this.cmdEditarUsuario.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.cmdEditarUsuario.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.cmdEditarUsuario.Location = new System.Drawing.Point(316, 5);
-            this.cmdEditarUsuario.Name = "cmdEditarUsuario";
-            this.cmdEditarUsuario.Size = new System.Drawing.Size(123, 32);
-            this.cmdEditarUsuario.TabIndex = 8;
-            this.cmdEditarUsuario.Text = "Editar Usuario";
-            this.cmdEditarUsuario.Click += new System.EventHandler(this.cmdEditarUsuario_Click);
             // 
             // AccesoUsuario
             // 
