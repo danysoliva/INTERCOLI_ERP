@@ -1,5 +1,5 @@
 ﻿
-namespace JAGUAR_APP.Accesos.GestionGrupos
+namespace ERP_INTECOLI.Accesos.GestionGrupos
 {
     partial class EditarGrupo
     {

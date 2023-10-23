@@ -137,6 +137,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsAccesos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Accesos\GestionGrupos\CrearGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\GestionGrupos\CrearGrupo.Designer.cs">
+      <DependentUpon>CrearGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\GestionGrupos\EditarGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\GestionGrupos\EditarGrupo.Designer.cs">
+      <DependentUpon>EditarGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\GestionGrupos\PrincipalGestionGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\GestionGrupos\PrincipalGestionGrupos.Designer.cs">
+      <DependentUpon>PrincipalGestionGrupos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accesos\NivelAccesoSistema\NivelAccesoSistema.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1052,6 +1070,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesCRUD.resx">
       <DependentUpon>xfrmAccesosTemporalesCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\GestionGrupos\CrearGrupo.resx">
+      <DependentUpon>CrearGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\GestionGrupos\EditarGrupo.resx">
+      <DependentUpon>EditarGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\GestionGrupos\PrincipalGestionGrupos.resx">
+      <DependentUpon>PrincipalGestionGrupos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Accesos\NivelAccesoSistema\NivelAccesoSistema.resx">
       <DependentUpon>NivelAccesoSistema.cs</DependentUpon>

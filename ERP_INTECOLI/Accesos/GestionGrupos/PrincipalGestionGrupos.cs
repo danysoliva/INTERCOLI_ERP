@@ -1,4 +1,4 @@
-﻿using ACS.Classes;
+﻿using ERP_INTECOLI.Clases;
 using DevExpress.XtraEditors;
 using System;
 using System.Data;
@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace JAGUAR_APP.Accesos.GestionGrupos
+namespace ERP_INTECOLI.Accesos.GestionGrupos
 {
     public partial class PrincipalGestionGrupos : DevExpress.XtraEditors.XtraForm
     {
@@ -21,14 +21,14 @@ namespace JAGUAR_APP.Accesos.GestionGrupos
         public PrincipalGestionGrupos()
         {
             InitializeComponent();
-            sqlConnection = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+            sqlConnection = new SqlConnection(dp.ConnectionStringERP);
             dataTable = new DataTable();
             this.RefrescarDatos();
         }
         #region Metodos
         private void RefrescarDatos()
         {
-            var query = "Select * from ACS.conf_group";
+            var query = "Select * from conf_group";
             sqlCommand = new SqlCommand(query, sqlConnection);
             if (sqlConnection.State != ConnectionState.Open)
             {

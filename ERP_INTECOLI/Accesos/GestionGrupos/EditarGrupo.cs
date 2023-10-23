@@ -1,11 +1,11 @@
-﻿using ACS.Classes;
+﻿using ERP_INTECOLI.Clases;
 using DevExpress.XtraEditors;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace JAGUAR_APP.Accesos.GestionGrupos
+namespace ERP_INTECOLI.Accesos.GestionGrupos
 {
     public partial class EditarGrupo : DevExpress.XtraEditors.XtraForm
     {
@@ -23,7 +23,7 @@ namespace JAGUAR_APP.Accesos.GestionGrupos
         {
             InitializeComponent();
             this.id = id;
-            sqlConnection = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+            sqlConnection = new SqlConnection(dp.ConnectionStringERP);
             loadData();
         }
         #region Metodos
