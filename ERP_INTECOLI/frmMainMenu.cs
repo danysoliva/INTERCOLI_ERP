@@ -35,6 +35,7 @@ using Eatery.Ventas;
 using JAGUAR_APP.Facturacion.Mantenimientos;
 using ERP_INTECOLI.Accesos.AccesosUsuarios;
 using JAGUAR_APP.Facturacion.Numeracion_Fiscal;
+using ERP_INTECOLI.Accesos.GrupoLosa;
 
 namespace ERP_INTECOLI
 {
@@ -870,9 +871,12 @@ namespace ERP_INTECOLI
             frm.Show();
         }
 
-        private void navControlAccesos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+       
+        private void navGruposUsuarios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-           
+            PrincipalGrupoLosa frm = new PrincipalGrupoLosa();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
     

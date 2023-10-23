@@ -30,6 +30,7 @@ namespace ERP_INTECOLI.Usuarios
             InitializeComponent();
             vTipoEdition = pTipo;
             UserParametro = pUser;
+            cargar_grupos();
             switch (vTipoEdition)
             {
                 case TipoEdicion.Nuevo:
@@ -60,8 +61,35 @@ namespace ERP_INTECOLI.Usuarios
                     txtPass.Text = UserParametro.DecryptPassword(UserParametro.Password);
                     txtConfirmar.Text = UserParametro.DecryptPassword(UserParametro.Password);
                     IdUsuario = UserParametro.Id;
+                    if (UserParametro.IdGrupo == 0)
+                        grdGrupo.EditValue = null;
+                    else
+                        grdGrupo.EditValue = UserParametro.IdGrupo;
                     ValidoContrasenia = true;
                     break;
+            }
+        }
+
+        private void cargar_grupos()
+        {
+            try
+            {
+                string query = @"SELECT [id]
+                                  ,[grupo]
+                              FROM [dbo].[conf_grupos]
+                              where enable = 1";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                dsUsuarios1.grupos.Clear();
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                adat.Fill(dsUsuarios1.grupos);
+                conn.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
 
@@ -76,6 +104,12 @@ namespace ERP_INTECOLI.Usuarios
             if (string.IsNullOrEmpty(txtAlias.Text) || string.IsNullOrEmpty(txtApellido.Text) || string.IsNullOrEmpty(txtNombre.Text))
             {
                 MessageBox.Show("Los campos: Alias, Nombre y Apellidos no pueden quedar en blanco", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(grdGrupo.Text))
+            {
+                CajaDialogo.Error("Debe agregar el usuario a un Grupo!");
                 return;
             }
 
@@ -121,6 +155,7 @@ namespace ERP_INTECOLI.Usuarios
                             cmd.Parameters.AddWithValue("@tiempo_inactividad", Nminutes.Value);
                             cmd.Parameters.AddWithValue("@utiliza_bloqueo", chkUtilizaBloqueo.Checked);
                             cmd.Parameters.AddWithValue("@user_db", cbxNivel.Text.Trim().ToLower());
+                            cmd.Parameters.AddWithValue("@id_grupo", grdGrupo.EditValue);
                             cmd.ExecuteNonQuery();
 
                             CajaDialogo.Information("Guardado con Exito!");
@@ -153,6 +188,7 @@ namespace ERP_INTECOLI.Usuarios
                             cmd.Parameters.AddWithValue("@utiliza_bloqueo", chkUtilizaBloqueo.Checked);
                             cmd.Parameters.AddWithValue("@user_db", cbxNivel.Text.Trim());
                             cmd.Parameters.AddWithValue("@user_id", IdUsuario);
+                            cmd.Parameters.AddWithValue("@id_grupo", grdGrupo.EditValue);
                             cmd.ExecuteNonQuery();
 
                             CajaDialogo.Information("Guardado con Exito!");

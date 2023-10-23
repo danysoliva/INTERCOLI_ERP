@@ -29,6 +29,7 @@ namespace ERP_INTECOLI.Usuarios
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtConfirmar = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
@@ -48,7 +49,18 @@ namespace ERP_INTECOLI.Usuarios
             this.label2 = new System.Windows.Forms.Label();
             this.txtAlias = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.grdGrupo = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dsUsuarios1 = new ERP_INTECOLI.Usuarios.dsUsuarios();
+            this.gruposBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colgrupo = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Nminutes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdGrupo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gruposBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtConfirmar
@@ -91,7 +103,7 @@ namespace ERP_INTECOLI.Usuarios
             // 
             // Nminutes
             // 
-            this.Nminutes.Location = new System.Drawing.Point(215, 208);
+            this.Nminutes.Location = new System.Drawing.Point(215, 267);
             this.Nminutes.Maximum = new decimal(new int[] {
             59,
             0,
@@ -120,7 +132,7 @@ namespace ERP_INTECOLI.Usuarios
             this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
             this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdCancelar.Location = new System.Drawing.Point(176, 291);
+            this.cmdCancelar.Location = new System.Drawing.Point(176, 350);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(115, 47);
             this.cmdCancelar.TabIndex = 35;
@@ -138,7 +150,7 @@ namespace ERP_INTECOLI.Usuarios
             this.cmdGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdGuardar.Image = global::ERP_INTECOLI.Properties.Resources.save;
             this.cmdGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdGuardar.Location = new System.Drawing.Point(43, 291);
+            this.cmdGuardar.Location = new System.Drawing.Point(43, 350);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(115, 47);
             this.cmdGuardar.TabIndex = 34;
@@ -152,7 +164,7 @@ namespace ERP_INTECOLI.Usuarios
             // 
             this.chkSuperUsuario.AutoSize = true;
             this.chkSuperUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkSuperUsuario.Location = new System.Drawing.Point(32, 258);
+            this.chkSuperUsuario.Location = new System.Drawing.Point(32, 317);
             this.chkSuperUsuario.Name = "chkSuperUsuario";
             this.chkSuperUsuario.Size = new System.Drawing.Size(113, 20);
             this.chkSuperUsuario.TabIndex = 32;
@@ -165,7 +177,7 @@ namespace ERP_INTECOLI.Usuarios
             this.chkUsuarioHabilitado.Checked = true;
             this.chkUsuarioHabilitado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkUsuarioHabilitado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUsuarioHabilitado.Location = new System.Drawing.Point(32, 232);
+            this.chkUsuarioHabilitado.Location = new System.Drawing.Point(32, 291);
             this.chkUsuarioHabilitado.Name = "chkUsuarioHabilitado";
             this.chkUsuarioHabilitado.Size = new System.Drawing.Size(139, 20);
             this.chkUsuarioHabilitado.TabIndex = 31;
@@ -178,7 +190,7 @@ namespace ERP_INTECOLI.Usuarios
             this.chkUtilizaBloqueo.Checked = true;
             this.chkUtilizaBloqueo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkUtilizaBloqueo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUtilizaBloqueo.Location = new System.Drawing.Point(32, 182);
+            this.chkUtilizaBloqueo.Location = new System.Drawing.Point(32, 241);
             this.chkUtilizaBloqueo.Name = "chkUtilizaBloqueo";
             this.chkUtilizaBloqueo.Size = new System.Drawing.Size(208, 20);
             this.chkUtilizaBloqueo.TabIndex = 29;
@@ -189,7 +201,7 @@ namespace ERP_INTECOLI.Usuarios
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(29, 160);
+            this.label5.Location = new System.Drawing.Point(28, 189);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 16);
             this.label5.TabIndex = 33;
@@ -203,7 +215,7 @@ namespace ERP_INTECOLI.Usuarios
             "basic",
             "standar",
             "superior"});
-            this.cbxNivel.Location = new System.Drawing.Point(158, 155);
+            this.cbxNivel.Location = new System.Drawing.Point(158, 188);
             this.cbxNivel.Name = "cbxNivel";
             this.cbxNivel.Size = new System.Drawing.Size(133, 21);
             this.cbxNivel.TabIndex = 27;
@@ -212,7 +224,7 @@ namespace ERP_INTECOLI.Usuarios
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 208);
+            this.label4.Location = new System.Drawing.Point(29, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 16);
             this.label4.TabIndex = 28;
@@ -272,11 +284,74 @@ namespace ERP_INTECOLI.Usuarios
             this.label1.TabIndex = 19;
             this.label1.Text = "Alias";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(28, 162);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(45, 16);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Grupo";
+            // 
+            // grdGrupo
+            // 
+            this.grdGrupo.Location = new System.Drawing.Point(90, 159);
+            this.grdGrupo.Name = "grdGrupo";
+            this.grdGrupo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.grdGrupo.Properties.Appearance.Options.UseFont = true;
+            this.grdGrupo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.grdGrupo.Properties.DataSource = this.gruposBindingSource;
+            this.grdGrupo.Properties.DisplayMember = "grupo";
+            this.grdGrupo.Properties.NullText = "";
+            this.grdGrupo.Properties.PopupView = this.gridLookUpEdit1View;
+            this.grdGrupo.Properties.ValueMember = "id";
+            this.grdGrupo.Size = new System.Drawing.Size(201, 22);
+            this.grdGrupo.TabIndex = 39;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid,
+            this.colgrupo});
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // dsUsuarios1
+            // 
+            this.dsUsuarios1.DataSetName = "dsUsuarios";
+            this.dsUsuarios1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gruposBindingSource
+            // 
+            this.gruposBindingSource.DataMember = "grupos";
+            this.gruposBindingSource.DataSource = this.dsUsuarios1;
+            // 
+            // colid
+            // 
+            this.colid.FieldName = "id";
+            this.colid.Name = "colid";
+            this.colid.OptionsColumn.AllowEdit = false;
+            // 
+            // colgrupo
+            // 
+            this.colgrupo.Caption = "Grupo";
+            this.colgrupo.FieldName = "grupo";
+            this.colgrupo.Name = "colgrupo";
+            this.colgrupo.OptionsColumn.AllowEdit = false;
+            this.colgrupo.Visible = true;
+            this.colgrupo.VisibleIndex = 0;
+            // 
             // frmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 343);
+            this.ClientSize = new System.Drawing.Size(331, 443);
+            this.Controls.Add(this.grdGrupo);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.txtConfirmar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtPass);
@@ -301,6 +376,10 @@ namespace ERP_INTECOLI.Usuarios
             this.Name = "frmUser";
             this.Text = "Usuario";
             ((System.ComponentModel.ISupportInitialize)(this.Nminutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdGrupo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gruposBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,5 +406,12 @@ namespace ERP_INTECOLI.Usuarios
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtAlias;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.GridLookUpEdit grdGrupo;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private System.Windows.Forms.BindingSource gruposBindingSource;
+        private dsUsuarios dsUsuarios1;
+        private DevExpress.XtraGrid.Columns.GridColumn colid;
+        private DevExpress.XtraGrid.Columns.GridColumn colgrupo;
     }
 }

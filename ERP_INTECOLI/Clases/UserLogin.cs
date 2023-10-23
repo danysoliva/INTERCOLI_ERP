@@ -105,6 +105,7 @@ namespace ERP_INTECOLI.Clases
                     PassDb = dr.GetString(9);
                     Primer_nombre = dr.GetString(10);
                     Apellido = dr.GetString(11);
+                    IdGrupo = dr.GetInt32(12);
                     x = true;
                 }
                 dr.Close();

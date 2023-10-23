@@ -303,6 +303,16 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gestion_de_equipos_x32 {
+            get {
+                object obj = ResourceManager.GetObject("gestion-de-equipos_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jefe_x128 {
             get {
                 object obj = ResourceManager.GetObject("jefe_x128", resourceCulture);

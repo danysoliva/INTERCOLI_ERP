@@ -1,5 +1,5 @@
 ﻿
-namespace JAGUAR_APP.Accesos.GrupoLosa
+namespace ERP_INTECOLI.Accesos.GrupoLosa
 {
     partial class EditarGrupoLosa
     {

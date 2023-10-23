@@ -155,6 +155,24 @@
     <Compile Include="Accesos\GestionGrupos\PrincipalGestionGrupos.Designer.cs">
       <DependentUpon>PrincipalGestionGrupos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accesos\GrupoLosa\CrearGrupoLosa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\GrupoLosa\CrearGrupoLosa.Designer.cs">
+      <DependentUpon>CrearGrupoLosa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\GrupoLosa\EditarGrupoLosa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\GrupoLosa\EditarGrupoLosa.Designer.cs">
+      <DependentUpon>EditarGrupoLosa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\GrupoLosa\PrincipalGrupoLosa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\GrupoLosa\PrincipalGrupoLosa.Designer.cs">
+      <DependentUpon>PrincipalGrupoLosa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Accesos\NivelAccesoSistema\NivelAccesoSistema.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1080,6 +1098,15 @@
     <EmbeddedResource Include="Accesos\GestionGrupos\PrincipalGestionGrupos.resx">
       <DependentUpon>PrincipalGestionGrupos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\GrupoLosa\CrearGrupoLosa.resx">
+      <DependentUpon>CrearGrupoLosa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\GrupoLosa\EditarGrupoLosa.resx">
+      <DependentUpon>EditarGrupoLosa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\GrupoLosa\PrincipalGrupoLosa.resx">
+      <DependentUpon>PrincipalGrupoLosa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accesos\NivelAccesoSistema\NivelAccesoSistema.resx">
       <DependentUpon>NivelAccesoSistema.cs</DependentUpon>
     </EmbeddedResource>
@@ -1805,6 +1832,7 @@
     <None Include="Resources\facturax32.png" />
     <None Include="Resources\libro-de-contabilidadx32.png" />
     <None Include="Resources\jefe_x128.png" />
+    <None Include="Resources\gestion-de-equipos_x32.png" />
     <Content Include="Resources\maestro x32.png" />
     <None Include="Resources\matriculax32.png" />
     <None Include="Resources\metodo-de-pago_x32.png" />

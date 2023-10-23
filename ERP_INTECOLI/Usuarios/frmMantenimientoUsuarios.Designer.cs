@@ -55,9 +55,9 @@ namespace ERP_INTECOLI.Usuarios
             this.coluser_db = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ButtonEditar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ButtoPermisos = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.cmdNuevo = new System.Windows.Forms.Button();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsUsuarios1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -223,6 +223,14 @@ namespace ERP_INTECOLI.Usuarios
             this.ButtonEditar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.ButtonEditar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.ButtonEditar_ButtonClick);
             // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Ver Accesos";
+            this.gridColumn2.ColumnEdit = this.ButtoPermisos;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 9;
+            // 
             // ButtoPermisos
             // 
             this.ButtoPermisos.AutoHeight = false;
@@ -245,19 +253,11 @@ namespace ERP_INTECOLI.Usuarios
             this.cmdNuevo.Name = "cmdNuevo";
             this.cmdNuevo.Size = new System.Drawing.Size(109, 44);
             this.cmdNuevo.TabIndex = 14;
-            this.cmdNuevo.Text = "Guardar";
+            this.cmdNuevo.Text = "Crear";
             this.cmdNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cmdNuevo.UseVisualStyleBackColor = false;
             this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Ver Accesos";
-            this.gridColumn2.ColumnEdit = this.ButtoPermisos;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 9;
             // 
             // frmMantenimientoUsuarios
             // 

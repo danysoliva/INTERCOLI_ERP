@@ -1,11 +1,11 @@
-﻿using ACS.Classes;
+﻿using ERP_INTECOLI.Clases;
 using DevExpress.XtraEditors;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace JAGUAR_APP.Accesos.GrupoLosa
+namespace ERP_INTECOLI.Accesos.GrupoLosa
 {
 
     public partial class CrearGrupoLosa : DevExpress.XtraEditors.XtraForm
@@ -14,15 +14,14 @@ namespace JAGUAR_APP.Accesos.GrupoLosa
         private SqlConnection sqlConnection;
         private SqlCommand sqlCommand;
         private XtraMessageBoxArgs args;
-        private const string query = "declare @id integer = (select max(id)+1 from conf_grupos_losa);" +
-            "INSERT INTO conf_grupos_losa(id,grupo,enable) VALUES(@id,@grupo,@habilitado);";
+        private const string query = @"INSERT INTO conf_grupos(grupo,enable) VALUES(@grupo,@habilitado);";
         //private const string connectionString = @"Server=DESKTOP-4Q0PPMK\SQLEXPRESS;Database=ACS;User Id=sa;Password=Sap5erver;";
         DataOperations dp = new DataOperations();
         #endregion
         public CrearGrupoLosa()
         {
             InitializeComponent();
-            sqlConnection = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+            sqlConnection = new SqlConnection(dp.ConnectionStringERP);
         }
         #region Eventos
         private void botonCancelar_Click(object sender, EventArgs e)

@@ -1,4 +1,4 @@
-﻿using ACS.Classes;
+﻿using ERP_INTECOLI.Clases;
 using DevExpress.XtraEditors;
 using System;
 using System.Data;
@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace JAGUAR_APP.Accesos.GrupoLosa
+namespace ERP_INTECOLI.Accesos.GrupoLosa
 {
     public partial class PrincipalGrupoLosa : DevExpress.XtraEditors.XtraForm
     {
@@ -21,7 +21,7 @@ namespace JAGUAR_APP.Accesos.GrupoLosa
         public PrincipalGrupoLosa()
         {
             InitializeComponent();
-            sqlConnection = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+            sqlConnection = new SqlConnection(dp.ConnectionStringERP);
             dataTable = new DataTable();
             this.RefrescarDatos();
         }
@@ -30,7 +30,7 @@ namespace JAGUAR_APP.Accesos.GrupoLosa
         {
             try
             {
-                var query = "Select * from ACS.conf_grupos_losa";
+                var query = "Select * from conf_grupos";
                 sqlCommand = new SqlCommand(query, sqlConnection);
                 if (sqlConnection.State != ConnectionState.Open)
                 {

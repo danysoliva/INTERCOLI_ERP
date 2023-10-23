@@ -1,11 +1,11 @@
-﻿using ACS.Classes;
+﻿using ERP_INTECOLI.Clases;
 using DevExpress.XtraEditors;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace JAGUAR_APP.Accesos.GrupoLosa
+namespace ERP_INTECOLI.Accesos.GrupoLosa
 {
     public partial class EditarGrupoLosa : DevExpress.XtraEditors.XtraForm
     {
@@ -14,8 +14,8 @@ namespace JAGUAR_APP.Accesos.GrupoLosa
         private SqlConnection sqlConnection;
         private SqlCommand sqlCommand;
         private int id;
-        private const string query =  "UPDATE conf_grupos_losa SET grupo=@grupo ,enable=@habilitado WHERE ID =@id;";
-        private const string query2 = "SELECT * FROM conf_grupos_losa WHERE id = @id;";
+        private const string query =  "UPDATE conf_grupos SET grupo=@grupo ,enable=@habilitado WHERE ID =@id;";
+        private const string query2 = "SELECT * FROM conf_grupos WHERE id = @id;";
         //private const string connectionString = @"Server=DESKTOP-4Q0PPMK\SQLEXPRESS;Database=ACS;User Id=sa;Password=Sap5erver;";
         DataOperations dp = new DataOperations();
         #endregion
@@ -23,7 +23,7 @@ namespace JAGUAR_APP.Accesos.GrupoLosa
         {
             InitializeComponent();
             this.id = id;
-            sqlConnection = new SqlConnection(dp.ConnectionStringJAGUAR_DB);
+            sqlConnection = new SqlConnection(dp.ConnectionStringERP);
             loadData();
         }
         #region Metodos
