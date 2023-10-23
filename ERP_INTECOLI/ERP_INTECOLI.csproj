@@ -1729,6 +1729,7 @@
     <None Include="Resources\boletax32.png" />
     <None Include="Resources\bloquear_x32.png" />
     <Content Include="Resources\cerrar.png" />
+    <None Include="Resources\control-de-accesox32.png" />
     <Content Include="Resources\control-de-accesso.png" />
     <None Include="Resources\control-de-accessox32.png" />
     <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Cash.512.png" />
@@ -1739,6 +1740,7 @@
     <Content Include="Resources\edit_24x24.png" />
     <Content Include="Resources\edit_32x32.png" />
     <Content Include="Resources\email_envelope_inbox_sending_mail_outbox_message_send_icon_231915.ico" />
+    <None Include="Resources\empleados_x32.png" />
     <Content Include="Resources\empresa.png" />
     <None Include="Resources\equipo_x32.png" />
     <Content Include="Resources\Estudiantex32.png" />
@@ -1769,6 +1771,7 @@
     <None Include="Resources\presupuestox32.png" />
     <None Include="Resources\proyeccion_32.png" />
     <None Include="Resources\presente_x32.png" />
+    <None Include="Resources\ordenador-portatilx32.png" />
     <Content Include="Resources\reaload_24x24.png" />
     <Content Include="Resources\reaload_32x32.png" />
     <Content Include="Resources\refresh-button32px.png" />

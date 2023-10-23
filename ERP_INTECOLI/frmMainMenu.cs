@@ -106,19 +106,7 @@ namespace ERP_INTECOLI
 
         private void navBarInstructor_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmBuscarInstructores frx = new frmBuscarInstructores(UsuarioLogeado);
-            if (frx != null)
-            {
-                frx.MdiParent = this;
-                try
-                {
-                    frx.Show();
-                }
-                catch (Exception ec)
-                {
-                    Console.WriteLine(ec.Message);
-                }
-            }
+            
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
@@ -138,18 +126,7 @@ namespace ERP_INTECOLI
         private void navBarItem4_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
 
-            //FALTA PERMISO DE ACCESO 
-            frmNiveles_Academicos mtx = new frmNiveles_Academicos(this.UsuarioLogeado);
-            if (mtx != null)
-            {
-                mtx.MdiParent = this;
-                try
-                {
-                    mtx.Show();
-                }
-                catch { }
-                
-            }
+            
         }
 
         private void navMatricula_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -180,16 +157,7 @@ namespace ERP_INTECOLI
 
         private void navCRUDPermisos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            if (UsuarioLogeado.Super_user)
-            {
-                frmMantVentanas frm = new frmMantVentanas();
-                frm.MdiParent = this;
-                frm.Show();
-            }
-            else
-            {
-                CajaDialogo.Error("No tiene Autorizacion\nSolo los Super Usuarios pueden Acceder a esta Ventana.");
-            }
+            
         }
 
         private void navConsultaMatriculado_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -471,9 +439,7 @@ namespace ERP_INTECOLI
 
         private void navBfrmCursos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmCursos frm = new frmCursos(this.UsuarioLogeado);
-            frm.MdiParent = this;
-            frm.Show();
+            
         }
 
         private void nb_FacturaCore_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -544,6 +510,73 @@ namespace ERP_INTECOLI
 
         private void nbConfig_PuntoVenta_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            
+        }
+
+        private void navBarUsuarios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            
+
+        }
+
+        private void navBarAcessosUsuario_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            
+        }
+
+        private void navAdminUsuarios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //Aqui va permiso
+            frmMantenimientoUsuarios msu = new frmMantenimientoUsuarios(this.UsuarioLogeado);
+            if (msu != null)
+            {
+                msu.MdiParent = this;
+                try
+                {
+                    msu.Show();
+                }
+                catch { }
+            }
+        }
+
+        private void navPermisosUsuarios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            if (UsuarioLogeado.Super_user)
+            {
+                frmMantVentanas frm = new frmMantVentanas();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            else
+            {
+                CajaDialogo.Error("No tiene Autorizacion\nSolo los Super Usuarios pueden Acceder a esta Ventana.");
+            }
+        }
+
+        private void navBarItem6_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //Aqui va un permiso
+            AccesoUsuario frm = new AccesoUsuario(UsuarioLogeado);
+            if (frm != null)
+            {
+                frm.MdiParent = this;
+                try
+                {
+                    frm.Show();
+                }
+                catch { }
+            }
+        }
+
+        private void navCrudCursos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmCursos frm = new frmCursos(this.UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void nbConfig_PuntoVenta2_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
             bool accesoprevio = false;
             int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 11);//9 = AMS
             switch (idNivel)                                                      //11 = Jaguar
@@ -581,35 +614,72 @@ namespace ERP_INTECOLI
             }
         }
 
-        private void navBarUsuarios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        private void navDocFiscales_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //Aqui va permiso
-            frmMantenimientoUsuarios msu = new frmMantenimientoUsuarios(this.UsuarioLogeado);
-            if (msu != null)
-            {
-                msu.MdiParent = this;
-                try
-                {
-                    msu.Show();
-                }
-                catch { }
-            }
 
         }
 
-        private void navBarAcessosUsuario_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        private void navNivelesAcademicos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            //Aqui va un permiso
-            AccesoUsuario frm = new AccesoUsuario(UsuarioLogeado);
-            if (frm != null)
+            //FALTA PERMISO DE ACCESO 
+            frmNiveles_Academicos mtx = new frmNiveles_Academicos(this.UsuarioLogeado);
+            if (mtx != null)
             {
-                frm.MdiParent = this;
+                mtx.MdiParent = this;
                 try
                 {
-                    frm.Show();
+                    mtx.Show();
                 }
                 catch { }
+
             }
+        }
+
+        private void navInstructores_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmBuscarInstructores frx = new frmBuscarInstructores(UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
+                {
+                    Console.WriteLine(ec.Message);
+                }
+            }
+        }
+
+        private void navProyeccionCobros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+        }
+
+        private void navMiembrosClase_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+        }
+
+        private void navCumpleanios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+        }
+
+        private void navDistGeneros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+        }
+
+        private void navSeguiSaldos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+        }
+
+        private void navEstudiantesDeshabi_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
         }
     }
     

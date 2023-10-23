@@ -153,6 +153,16 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap control_de_accesox32 {
+            get {
+                object obj = ResourceManager.GetObject("control-de-accesox32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap control_de_accesso {
             get {
                 object obj = ResourceManager.GetObject("control-de-accesso", resourceCulture);
@@ -226,6 +236,16 @@ namespace ERP_INTECOLI.Properties {
         internal static System.Drawing.Bitmap email_envelope_inbox_sending_mail_outbox_message_send_icon_231915 {
             get {
                 object obj = ResourceManager.GetObject("email_envelope_inbox_sending_mail_outbox_message_send_icon_231915", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap empleados_x32 {
+            get {
+                object obj = ResourceManager.GetObject("empleados_x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +376,16 @@ namespace ERP_INTECOLI.Properties {
         internal static System.Drawing.Bitmap Niveles_x32 {
             get {
                 object obj = ResourceManager.GetObject("Niveles x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ordenador_portatilx32 {
+            get {
+                object obj = ResourceManager.GetObject("ordenador-portatilx32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
