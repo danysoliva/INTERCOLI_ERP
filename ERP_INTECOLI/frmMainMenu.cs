@@ -36,6 +36,7 @@ using JAGUAR_APP.Facturacion.Mantenimientos;
 using ERP_INTECOLI.Accesos.AccesosUsuarios;
 using JAGUAR_APP.Facturacion.Numeracion_Fiscal;
 using ERP_INTECOLI.Accesos.GrupoLosa;
+using ERP_INTECOLI.Administracion.Empresas;
 
 namespace ERP_INTECOLI
 {
@@ -126,7 +127,7 @@ namespace ERP_INTECOLI
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #9 (Gestion de Estudiantes)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #9 (Gestion de Estudiantes)");
                 }
             }
         }
@@ -181,7 +182,7 @@ namespace ERP_INTECOLI
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #6 (Matricula de Alumno)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #6 (Matricula de Alumno)");
                 }
             }
         }
@@ -233,7 +234,7 @@ namespace ERP_INTECOLI
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #7 (Consulta y Edicion de Matricula)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #7 (Consulta y Edicion de Matricula)");
                 }
             }
 
@@ -414,7 +415,7 @@ namespace ERP_INTECOLI
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #11 (Facturacion punto de venta)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #11 (Facturacion punto de venta)");
                 }
             }
         }
@@ -480,7 +481,7 @@ namespace ERP_INTECOLI
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #1 (Gestion de Usuarios)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #1 (Gestion de Usuarios)");
                 }
             }
 
@@ -522,7 +523,7 @@ namespace ERP_INTECOLI
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #VT-02 (Administracion de Niveles de acceso)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-02 (Administracion de Niveles de acceso)");
                 }
             }
 
@@ -573,7 +574,7 @@ namespace ERP_INTECOLI
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #VT-19 (Niveles de Acceso Usuarios)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-19 (Niveles de Acceso Usuarios)");
                 }
             }
 
@@ -621,7 +622,7 @@ namespace ERP_INTECOLI
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #16 (Configuraciones de Facturacion)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #16 (Configuraciones de Facturacion)");
                 }
             }
         }
@@ -664,7 +665,7 @@ namespace ERP_INTECOLI
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #VT-13 (Mantenimiento Docs Fiscales)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-13 (Mantenimiento Docs Fiscales)");
                 }
             }
 
@@ -851,7 +852,7 @@ namespace ERP_INTECOLI
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #VT-17 (Rangos de pagos)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-17 (Rangos de pagos)");
                 }
             }
 
@@ -877,6 +878,49 @@ namespace ERP_INTECOLI
             PrincipalGrupoLosa frm = new PrincipalGrupoLosa();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void navCRUDEmpresa_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmEmpresa mtx = new frmEmpresa(UsuarioLogeado);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(20))
+                {
+                    frmEmpresa mtx = new frmEmpresa(UsuarioLogeado);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-20 (Gestion de Empresa)");
+                }
+            }
         }
     }
     

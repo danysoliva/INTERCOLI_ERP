@@ -69,12 +69,14 @@ namespace ERP_INTECOLI
             this.navAdminUsuarios = new DevExpress.XtraNavBar.NavBarItem();
             this.navPermisosUsuarios = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navGruposUsuarios = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup7 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navCrudCursos = new DevExpress.XtraNavBar.NavBarItem();
             this.nbConfig_PuntoVenta2 = new DevExpress.XtraNavBar.NavBarItem();
             this.navDocFiscales = new DevExpress.XtraNavBar.NavBarItem();
             this.navNivelesAcademicos = new DevExpress.XtraNavBar.NavBarItem();
             this.navInstructores = new DevExpress.XtraNavBar.NavBarItem();
+            this.navCRUDEmpresa = new DevExpress.XtraNavBar.NavBarItem();
             this.TabConsultas = new DevExpress.XtraTab.XtraTabPage();
             this.navBarControl3 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -94,7 +96,6 @@ namespace ERP_INTECOLI
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblServerName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.navGruposUsuarios = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).BeginInit();
             this.xtraTabControlMenu.SuspendLayout();
             this.TabAdministracion.SuspendLayout();
@@ -419,7 +420,8 @@ namespace ERP_INTECOLI
             this.navDocFiscales,
             this.navNivelesAcademicos,
             this.navInstructores,
-            this.navGruposUsuarios});
+            this.navGruposUsuarios,
+            this.navCRUDEmpresa});
             this.navBarControl2.Location = new System.Drawing.Point(4, 4);
             this.navBarControl2.Name = "navBarControl2";
             this.navBarControl2.OptionsNavPane.ExpandedWidth = 238;
@@ -459,6 +461,13 @@ namespace ERP_INTECOLI
             this.navBarItem6.Name = "navBarItem6";
             this.navBarItem6.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem6_LinkClicked);
             // 
+            // navGruposUsuarios
+            // 
+            this.navGruposUsuarios.Caption = "Grupos de Usuario";
+            this.navGruposUsuarios.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.gestion_de_equipos_x32;
+            this.navGruposUsuarios.Name = "navGruposUsuarios";
+            this.navGruposUsuarios.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGruposUsuarios_LinkClicked);
+            // 
             // navBarGroup7
             // 
             this.navBarGroup7.Caption = "Gestiones Varias";
@@ -468,7 +477,8 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbConfig_PuntoVenta2),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navDocFiscales),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navNivelesAcademicos),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navInstructores)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navInstructores),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navCRUDEmpresa)});
             this.navBarGroup7.Name = "navBarGroup7";
             // 
             // navCrudCursos
@@ -505,6 +515,13 @@ namespace ERP_INTECOLI
             this.navInstructores.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.maestro_x32;
             this.navInstructores.Name = "navInstructores";
             this.navInstructores.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navInstructores_LinkClicked);
+            // 
+            // navCRUDEmpresa
+            // 
+            this.navCRUDEmpresa.Caption = "Empresas";
+            this.navCRUDEmpresa.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navCRUDEmpresa.ImageOptions.SmallImage")));
+            this.navCRUDEmpresa.Name = "navCRUDEmpresa";
+            this.navCRUDEmpresa.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navCRUDEmpresa_LinkClicked);
             // 
             // TabConsultas
             // 
@@ -675,13 +692,6 @@ namespace ERP_INTECOLI
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(0, 17);
             // 
-            // navGruposUsuarios
-            // 
-            this.navGruposUsuarios.Caption = "Grupos de Usuario";
-            this.navGruposUsuarios.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.gestion_de_equipos_x32;
-            this.navGruposUsuarios.Name = "navGruposUsuarios";
-            this.navGruposUsuarios.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGruposUsuarios_LinkClicked);
-            // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -774,5 +784,6 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navArqueoCajas;
         private DevExpress.XtraNavBar.NavBarItem navDistribucioZonaResidencial;
         private DevExpress.XtraNavBar.NavBarItem navGruposUsuarios;
+        private DevExpress.XtraNavBar.NavBarItem navCRUDEmpresa;
     }
 }
