@@ -244,6 +244,23 @@
     <Compile Include="Administracion\Cursos\frmNuevo_Editar_Curso.Designer.cs">
       <DependentUpon>frmNuevo_Editar_Curso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Empresas\dsEmpresa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEmpresa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Empresas\frmCRUDEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Empresas\frmCRUDEmpresa.Designer.cs">
+      <DependentUpon>frmCRUDEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Empresas\frmEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Empresas\frmEmpresa.Designer.cs">
+      <DependentUpon>frmEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1140,6 +1157,12 @@
     <EmbeddedResource Include="Administracion\Cursos\frmNuevo_Editar_Curso.resx">
       <DependentUpon>frmNuevo_Editar_Curso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Empresas\frmCRUDEmpresa.resx">
+      <DependentUpon>frmCRUDEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Empresas\frmEmpresa.resx">
+      <DependentUpon>frmEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.resx">
       <DependentUpon>frmEstadisticasPorResidencia.cs</DependentUpon>
     </EmbeddedResource>
@@ -1509,6 +1532,17 @@
     </None>
     <None Include="Administracion\Cursos\dsCursos_.xss">
       <DependentUpon>dsCursos_.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Empresas\dsEmpresa.xsc">
+      <DependentUpon>dsEmpresa.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Empresas\dsEmpresa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEmpresa.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administracion\Empresas\dsEmpresa.xss">
+      <DependentUpon>dsEmpresa.xsd</DependentUpon>
     </None>
     <None Include="Administracion\Estudiantes\dsAntiguedad.xsc">
       <DependentUpon>dsAntiguedad.xsd</DependentUpon>
