@@ -146,7 +146,7 @@ namespace Eatery.Ventas
 
         void BuscarCliente(int pParametro)
         {
-            frmSearch frm = new frmSearch(frmSearch.TipoBusqueda.Clientes);
+            frmSearch frm = new frmSearch(frmSearch.TipoBusqueda.Estudiantes);
             if(frm.ShowDialog()== DialogResult.OK)
             {
                 ProIdCliente = frm.ItemSeleccionado.id;

@@ -418,7 +418,7 @@ namespace JAGUAR_APP
         private void simpleButton3_Click_1(object sender, EventArgs e)
         {
             txtUsuario.Text = "doliva";
-            txtClave.Text = "01ultra_instinct_2023";
+            txtClave.Text = "Gto1804";
             ValidateUserInfo();
 
         }
