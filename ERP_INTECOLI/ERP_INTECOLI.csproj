@@ -300,6 +300,17 @@
     <Compile Include="Clases\PuntoVenta.cs" />
     <Compile Include="Clases\PuntoVentaEquipo.cs" />
     <Compile Include="Clases\ReciboH.cs" />
+    <Compile Include="Compras\dsCompras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCompras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\frmSolicitudesMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\frmSolicitudesMain.Designer.cs">
+      <DependentUpon>frmSolicitudesMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\ConsultaMiembros\dsMiembrosClase.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1172,6 +1183,9 @@
     <EmbeddedResource Include="Administracion\frmRecordatorio.resx">
       <DependentUpon>frmRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Compras\frmSolicitudesMain.resx">
+      <DependentUpon>frmSolicitudesMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.resx">
       <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>
     </EmbeddedResource>
@@ -1631,6 +1645,17 @@
     </None>
     <None Include="Administracion\Planilla\dsPlanilla.xss">
       <DependentUpon>dsPlanilla.xsd</DependentUpon>
+    </None>
+    <None Include="Compras\dsCompras.xsc">
+      <DependentUpon>dsCompras.xsd</DependentUpon>
+    </None>
+    <None Include="Compras\dsCompras.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCompras.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Compras\dsCompras.xss">
+      <DependentUpon>dsCompras.xsd</DependentUpon>
     </None>
     <None Include="Consultas\ConsultaMiembros\dsMiembrosClase.xsc">
       <DependentUpon>dsMiembrosClase.xsd</DependentUpon>
