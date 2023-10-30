@@ -300,6 +300,7 @@
     <Compile Include="Clases\PuntoVenta.cs" />
     <Compile Include="Clases\PuntoVentaEquipo.cs" />
     <Compile Include="Clases\ReciboH.cs" />
+    <Compile Include="Clases\Solicitud.cs" />
     <Compile Include="Compras\dsCompras.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

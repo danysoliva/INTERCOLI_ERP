@@ -29,17 +29,17 @@ namespace ERP_INTECOLI.Compras
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSolicitudesMain));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.grDetalle = new DevExpress.XtraGrid.GridControl();
             this.dsCompras1 = new ERP_INTECOLI.Compras.dsCompras();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -48,20 +48,18 @@ namespace ERP_INTECOLI.Compras
             this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colid_h = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltotal = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ButtonDeleteRow = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.ButtonGridEstadoEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colid_status = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.grd_proyecto = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
-            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ButtonGridEstadoEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.cmdAddDetalle = new DevExpress.XtraEditors.SimpleButton();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtUsuarioCreador = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -76,17 +74,19 @@ namespace ERP_INTECOLI.Compras
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.txtComentarios = new System.Windows.Forms.TextBox();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.repositoryItemGrdItem = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDeleteRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonGridEstadoEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grd_proyecto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGrdItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // grDetalle
@@ -96,14 +96,14 @@ namespace ERP_INTECOLI.Compras
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grDetalle.DataMember = "solicitud_compras_detalle";
             this.grDetalle.DataSource = this.dsCompras1;
-            this.grDetalle.Location = new System.Drawing.Point(2, 146);
+            this.grDetalle.Location = new System.Drawing.Point(2, 178);
             this.grDetalle.MainView = this.gridView1;
             this.grDetalle.Name = "grDetalle";
             this.grDetalle.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.ButtonDeleteRow,
             this.ButtonGridEstadoEdit,
-            this.grd_proyecto});
-            this.grDetalle.Size = new System.Drawing.Size(963, 320);
+            this.repositoryItemGrdItem});
+            this.grDetalle.Size = new System.Drawing.Size(1122, 351);
             this.grDetalle.TabIndex = 49;
             this.grDetalle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -125,7 +125,6 @@ namespace ERP_INTECOLI.Compras
             this.colQuantity,
             this.colPrice,
             this.colid,
-            this.colid_h,
             this.coltotal,
             this.coldelete,
             this.colid_status});
@@ -135,6 +134,7 @@ namespace ERP_INTECOLI.Compras
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
             // colItemCode
             // 
@@ -175,11 +175,6 @@ namespace ERP_INTECOLI.Compras
             this.colid.Name = "colid";
             this.colid.OptionsColumn.AllowEdit = false;
             // 
-            // colid_h
-            // 
-            this.colid_h.Name = "colid_h";
-            this.colid_h.OptionsColumn.AllowEdit = false;
-            // 
             // coltotal
             // 
             this.coltotal.Caption = "Total";
@@ -203,52 +198,37 @@ namespace ERP_INTECOLI.Compras
             // ButtonDeleteRow
             // 
             this.ButtonDeleteRow.AutoHeight = false;
-            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.ButtonDeleteRow.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.ButtonDeleteRow.Name = "ButtonDeleteRow";
             this.ButtonDeleteRow.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // ButtonGridEstadoEdit
-            // 
-            this.ButtonGridEstadoEdit.AutoHeight = false;
-            editorButtonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions6.Image")));
-            editorButtonImageOptions6.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.ButtonGridEstadoEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.ButtonGridEstadoEdit.Name = "ButtonGridEstadoEdit";
+            this.ButtonDeleteRow.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.ButtonDeleteRow_ButtonClick);
             // 
             // colid_status
             // 
             this.colid_status.FieldName = "id_estado";
             this.colid_status.Name = "colid_status";
             // 
-            // grd_proyecto
+            // ButtonGridEstadoEdit
             // 
-            this.grd_proyecto.AutoHeight = false;
-            this.grd_proyecto.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.grd_proyecto.DisplayMember = "nombre";
-            this.grd_proyecto.Name = "grd_proyecto";
-            this.grd_proyecto.PopupView = this.repositoryItemGridLookUpEdit1View;
-            this.grd_proyecto.ValueMember = "proyecto";
-            // 
-            // repositoryItemGridLookUpEdit1View
-            // 
-            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
-            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            this.ButtonGridEstadoEdit.AutoHeight = false;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions2.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.ButtonGridEstadoEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.ButtonGridEstadoEdit.Name = "ButtonGridEstadoEdit";
             // 
             // panelControl1
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.cmdAddDetalle);
             this.panelControl1.Controls.Add(this.dateTimePicker2);
             this.panelControl1.Controls.Add(this.labelControl4);
             this.panelControl1.Controls.Add(this.dateTimePicker1);
             this.panelControl1.Controls.Add(this.labelControl3);
-            this.panelControl1.Controls.Add(this.textBox1);
+            this.panelControl1.Controls.Add(this.txtEstado);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.txtUsuarioCreador);
             this.panelControl1.Controls.Add(this.labelControl1);
@@ -262,8 +242,21 @@ namespace ERP_INTECOLI.Compras
             this.panelControl1.Controls.Add(this.cmdAnterior);
             this.panelControl1.Location = new System.Drawing.Point(2, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(963, 140);
+            this.panelControl1.Size = new System.Drawing.Size(1122, 172);
             this.panelControl1.TabIndex = 50;
+            // 
+            // cmdAddDetalle
+            // 
+            this.cmdAddDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdAddDetalle.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.cmdAddDetalle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdAddDetalle.ImageOptions.SvgImage")));
+            this.cmdAddDetalle.Location = new System.Drawing.Point(5, 139);
+            this.cmdAddDetalle.Name = "cmdAddDetalle";
+            this.cmdAddDetalle.Size = new System.Drawing.Size(47, 33);
+            this.cmdAddDetalle.TabIndex = 66;
+            this.cmdAddDetalle.Tag = "Agregar Item o Servicio";
+            this.cmdAddDetalle.ToolTip = "Guardar";
+            this.cmdAddDetalle.Click += new System.EventHandler(this.cmdAddDetalle_Click);
             // 
             // dateTimePicker2
             // 
@@ -304,19 +297,19 @@ namespace ERP_INTECOLI.Compras
             this.labelControl3.TabIndex = 62;
             this.labelControl3.Text = "Fecha Registro___________";
             // 
-            // textBox1
+            // txtEstado
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEstado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.textBox1.Location = new System.Drawing.Point(116, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 19);
-            this.textBox1.TabIndex = 61;
+            this.txtEstado.BackColor = System.Drawing.Color.White;
+            this.txtEstado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEstado.Enabled = false;
+            this.txtEstado.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.txtEstado.Location = new System.Drawing.Point(116, 109);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(206, 19);
+            this.txtEstado.TabIndex = 61;
             // 
             // labelControl2
             // 
@@ -339,7 +332,7 @@ namespace ERP_INTECOLI.Compras
             this.txtUsuarioCreador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.txtUsuarioCreador.Location = new System.Drawing.Point(116, 84);
             this.txtUsuarioCreador.Name = "txtUsuarioCreador";
-            this.txtUsuarioCreador.Size = new System.Drawing.Size(214, 19);
+            this.txtUsuarioCreador.Size = new System.Drawing.Size(206, 19);
             this.txtUsuarioCreador.TabIndex = 59;
             // 
             // labelControl1
@@ -363,7 +356,7 @@ namespace ERP_INTECOLI.Compras
             this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.txtId.Location = new System.Drawing.Point(116, 58);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(214, 19);
+            this.txtId.Size = new System.Drawing.Size(206, 19);
             this.txtId.TabIndex = 57;
             // 
             // labelControl7
@@ -381,11 +374,12 @@ namespace ERP_INTECOLI.Compras
             this.cmdClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdClose.ImageOptions.Image")));
             this.cmdClose.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.cmdClose.Location = new System.Drawing.Point(909, 12);
+            this.cmdClose.Location = new System.Drawing.Point(1068, 12);
             this.cmdClose.Name = "cmdClose";
             this.cmdClose.Size = new System.Drawing.Size(47, 33);
             this.cmdClose.TabIndex = 52;
             this.cmdClose.ToolTip = "Cerrar Ventana";
+            this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
             // 
             // cmdGuardar
             // 
@@ -396,6 +390,7 @@ namespace ERP_INTECOLI.Compras
             this.cmdGuardar.Size = new System.Drawing.Size(47, 33);
             this.cmdGuardar.TabIndex = 51;
             this.cmdGuardar.ToolTip = "Guardar";
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
             // cmdNuevo
             // 
@@ -443,9 +438,9 @@ namespace ERP_INTECOLI.Compras
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl2.Controls.Add(this.txtComentarios);
             this.panelControl2.Controls.Add(this.labelControl11);
-            this.panelControl2.Location = new System.Drawing.Point(2, 472);
+            this.panelControl2.Location = new System.Drawing.Point(2, 535);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(963, 126);
+            this.panelControl2.Size = new System.Drawing.Size(1122, 126);
             this.panelControl2.TabIndex = 51;
             // 
             // txtComentarios
@@ -459,7 +454,7 @@ namespace ERP_INTECOLI.Compras
             this.txtComentarios.Location = new System.Drawing.Point(132, 17);
             this.txtComentarios.Multiline = true;
             this.txtComentarios.Name = "txtComentarios";
-            this.txtComentarios.Size = new System.Drawing.Size(423, 88);
+            this.txtComentarios.Size = new System.Drawing.Size(525, 88);
             this.txtComentarios.TabIndex = 76;
             // 
             // labelControl11
@@ -472,11 +467,26 @@ namespace ERP_INTECOLI.Compras
             this.labelControl11.TabIndex = 77;
             this.labelControl11.Text = "Comentarios_______";
             // 
+            // repositoryItemGrdItem
+            // 
+            this.repositoryItemGrdItem.AutoHeight = false;
+            this.repositoryItemGrdItem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemGrdItem.Name = "repositoryItemGrdItem";
+            this.repositoryItemGrdItem.PopupView = this.repositoryItemGridLookUpEdit1View;
+            // 
+            // repositoryItemGridLookUpEdit1View
+            // 
+            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
+            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
             // frmSolicitudesMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 601);
+            this.ClientSize = new System.Drawing.Size(1129, 664);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.grDetalle);
@@ -487,14 +497,14 @@ namespace ERP_INTECOLI.Compras
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDeleteRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonGridEstadoEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grd_proyecto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGrdItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -508,14 +518,11 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraGrid.Columns.GridColumn colQuantity;
         private DevExpress.XtraGrid.Columns.GridColumn colPrice;
         private DevExpress.XtraGrid.Columns.GridColumn colid;
-        private DevExpress.XtraGrid.Columns.GridColumn colid_h;
         private DevExpress.XtraGrid.Columns.GridColumn coltotal;
         private DevExpress.XtraGrid.Columns.GridColumn coldelete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ButtonDeleteRow;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ButtonGridEstadoEdit;
         private DevExpress.XtraGrid.Columns.GridColumn colid_status;
-        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit grd_proyecto;
-        private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton cmdGuardar;
         private DevExpress.XtraEditors.SimpleButton cmdNuevo;
@@ -534,8 +541,11 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEstado;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private dsCompras dsCompras1;
+        private DevExpress.XtraEditors.SimpleButton cmdAddDetalle;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGrdItem;
+        private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
     }
 }

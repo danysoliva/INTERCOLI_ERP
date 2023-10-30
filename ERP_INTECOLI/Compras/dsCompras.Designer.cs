@@ -322,6 +322,8 @@ namespace ERP_INTECOLI.Compras {
             
             private global::System.Data.DataColumn columnprecio;
             
+            private global::System.Data.DataColumn columntotal;
+            
             private global::System.Data.DataColumn columnid_estado;
             
             private global::System.Data.DataColumn columnid;
@@ -393,6 +395,14 @@ namespace ERP_INTECOLI.Compras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn totalColumn {
+                get {
+                    return this.columntotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn id_estadoColumn {
                 get {
                     return this.columnid_estado;
@@ -444,13 +454,14 @@ namespace ERP_INTECOLI.Compras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public solicitud_compras_detalleRow Addsolicitud_compras_detalleRow(string itemcode, string descripcion, decimal cantidad, decimal precio, int id_estado, int id) {
+            public solicitud_compras_detalleRow Addsolicitud_compras_detalleRow(string itemcode, string descripcion, decimal cantidad, decimal precio, decimal total, int id_estado, int id) {
                 solicitud_compras_detalleRow rowsolicitud_compras_detalleRow = ((solicitud_compras_detalleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         itemcode,
                         descripcion,
                         cantidad,
                         precio,
+                        total,
                         id_estado,
                         id};
                 rowsolicitud_compras_detalleRow.ItemArray = columnValuesArray;
@@ -479,6 +490,7 @@ namespace ERP_INTECOLI.Compras {
                 this.columndescripcion = base.Columns["descripcion"];
                 this.columncantidad = base.Columns["cantidad"];
                 this.columnprecio = base.Columns["precio"];
+                this.columntotal = base.Columns["total"];
                 this.columnid_estado = base.Columns["id_estado"];
                 this.columnid = base.Columns["id"];
             }
@@ -494,12 +506,15 @@ namespace ERP_INTECOLI.Compras {
                 base.Columns.Add(this.columncantidad);
                 this.columnprecio = new global::System.Data.DataColumn("precio", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprecio);
+                this.columntotal = new global::System.Data.DataColumn("total", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal);
                 this.columnid_estado = new global::System.Data.DataColumn("id_estado", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_estado);
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
                 this.columncantidad.DefaultValue = ((decimal)(0m));
                 this.columnprecio.DefaultValue = ((decimal)(0m));
+                this.columntotal.DefaultValue = ((decimal)(0m));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -943,6 +958,23 @@ namespace ERP_INTECOLI.Compras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal total {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablesolicitud_compras_detalle.totalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'total\' de la tabla \'solicitud_compras_detalle\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablesolicitud_compras_detalle.totalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int id_estado {
                 get {
                     try {
@@ -1020,6 +1052,18 @@ namespace ERP_INTECOLI.Compras {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetprecioNull() {
                 this[this.tablesolicitud_compras_detalle.precioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IstotalNull() {
+                return this.IsNull(this.tablesolicitud_compras_detalle.totalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SettotalNull() {
+                this[this.tablesolicitud_compras_detalle.totalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
