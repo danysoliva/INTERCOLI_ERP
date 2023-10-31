@@ -37,6 +37,7 @@ using ERP_INTECOLI.Accesos.AccesosUsuarios;
 using JAGUAR_APP.Facturacion.Numeracion_Fiscal;
 using ERP_INTECOLI.Accesos.GrupoLosa;
 using ERP_INTECOLI.Administracion.Empresas;
+using ERP_INTECOLI.Compras;
 
 namespace ERP_INTECOLI
 {
@@ -919,6 +920,49 @@ namespace ERP_INTECOLI
                 else
                 {
                     CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-20 (Gestion de Empresa)");
+                }
+            }
+        }
+
+        private void navSolicCompras_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmSolicitudesMain mtx = new frmSolicitudesMain(UsuarioLogeado, frmSolicitudesMain.TipoOperacion.New);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(20))
+                {
+                    frmSolicitudesMain mtx = new frmSolicitudesMain(UsuarioLogeado,frmSolicitudesMain.TipoOperacion.New);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-21 (Solicitudes de Compra)");
                 }
             }
         }
