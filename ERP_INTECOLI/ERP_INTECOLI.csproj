@@ -1033,6 +1033,9 @@
     <Compile Include="frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimiento\dsMantenimiento.cs">
+      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimiento\dsMantenimiento.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1043,6 +1046,12 @@
     </Compile>
     <Compile Include="Mantenimiento\Productos\frmItemsCRUD.Designer.cs">
       <DependentUpon>frmItemsCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Productos\frmItemsOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Productos\frmItemsOP.Designer.cs">
+      <DependentUpon>frmItemsOP.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1496,6 +1505,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\Productos\frmItemsCRUD.resx">
       <DependentUpon>frmItemsCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\Productos\frmItemsOP.resx">
+      <DependentUpon>frmItemsOP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
