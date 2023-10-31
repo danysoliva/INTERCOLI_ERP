@@ -37,6 +37,7 @@ namespace Eatery.Ventas
         FacturacionEquipo EquipoActual;
         int ProIdCliente;
         ClienteFacturacion ClienteFactura;
+        Estudiante EstudianteFactura;
         int IdTerminoPago;
 
         UserLogin UsuarioLogeado;
@@ -146,31 +147,33 @@ namespace Eatery.Ventas
 
         void BuscarCliente(int pParametro)
         {
-            frmSearch frm = new frmSearch(frmSearch.TipoBusqueda.Clientes);
+            frmSearch frm = new frmSearch(frmSearch.TipoBusqueda.Estudiantes);
             if(frm.ShowDialog()== DialogResult.OK)
             {
                 ProIdCliente = frm.ItemSeleccionado.id;
-                if (ClienteFactura == null)
-                    ClienteFactura = new ClienteFacturacion();
+                if (EstudianteFactura == null)
+                    EstudianteFactura = new Estudiante();
 
-                if (ClienteFactura.RecuperarRegistro(frm.ItemSeleccionado.id))
+                if (EstudianteFactura.RecuperarRegistro(frm.ItemSeleccionado.id))
                 {
                     //txtNombreCliente.Text = ClienteFactura.Nombre;
                     //txtRTN.Text = ClienteFactura.rtn
-                    ClienteEmpresa clienteEmpresa1 = new ClienteEmpresa();
-                    if (clienteEmpresa1.RecuperarRegistro(frm.EmpresaID, ClienteFactura.Id))
+                    //ClienteEmpresa clienteEmpresa1 = new ClienteEmpresa();
+                    EstudianteEmpresa EstudianteEmpresa1 = new EstudianteEmpresa();
+                    if (EstudianteEmpresa1.RecuperarRegistro(frm.EmpresaID, EstudianteFactura.IdEstudiante))
                     {
-                        txtNombreCliente.Text = clienteEmpresa1.NombreLargo;
-                        txtRTN.Text = clienteEmpresa1.RTN;
-                        txtDireccion.Text = clienteEmpresa1.Direccion;
+                        txtNombreCliente.Text = EstudianteEmpresa1.NombreLargo;
+                        txtRTN.Text = EstudianteEmpresa1.RTN;
+                        txtDireccion.Text = EstudianteEmpresa1.Direccion;
                     }
                     else
                     {
-                        txtNombreCliente.Text = ClienteFactura.NombreCliente;
-                        txtDireccion.Text = ClienteFactura.Direccion;
+                        txtNombreCliente.Text = string.Concat( EstudianteFactura.Nombres," ", EstudianteFactura.Apellidos);
+                        txtDireccion.Text = EstudianteFactura.Direccion;
                         txtRTN.Text = "";
                     }
 
+                    //SI hay lineas agregadas regeneraremos las validaciones de precios
                     if (dsVentas1.detalle_factura_transaction.Count > 0)
                     {
                         decimal AcumuladoTotalFactura = 0;

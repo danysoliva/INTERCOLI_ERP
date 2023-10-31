@@ -49,6 +49,8 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.cmdNuevo = new System.Windows.Forms.Button();
             this.tsHabilitados = new DevExpress.XtraEditors.ToggleSwitch();
+            this.colid_pt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colItemCode = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdNiveles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsInstructores1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -86,7 +88,9 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             this.colvalor,
             this.colhabilitado,
             this.colid_usuario,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.colid_pt,
+            this.colItemCode});
             this.gridView1.GridControl = this.grdNiveles;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -104,6 +108,7 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             this.coldescripcion.OptionsColumn.ReadOnly = true;
             this.coldescripcion.Visible = true;
             this.coldescripcion.VisibleIndex = 0;
+            this.coldescripcion.Width = 257;
             // 
             // colvalor
             // 
@@ -112,6 +117,7 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             this.colvalor.OptionsColumn.ReadOnly = true;
             this.colvalor.Visible = true;
             this.colvalor.VisibleIndex = 1;
+            this.colvalor.Width = 164;
             // 
             // colhabilitado
             // 
@@ -119,7 +125,8 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             this.colhabilitado.Name = "colhabilitado";
             this.colhabilitado.OptionsColumn.ReadOnly = true;
             this.colhabilitado.Visible = true;
-            this.colhabilitado.VisibleIndex = 2;
+            this.colhabilitado.VisibleIndex = 3;
+            this.colhabilitado.Width = 164;
             // 
             // colid_usuario
             // 
@@ -133,7 +140,8 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             this.gridColumn1.ColumnEdit = this.repost_edit;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 3;
+            this.gridColumn1.VisibleIndex = 4;
+            this.gridColumn1.Width = 168;
             // 
             // repost_edit
             // 
@@ -207,6 +215,20 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             this.tsHabilitados.TabIndex = 46;
             this.tsHabilitados.Toggled += new System.EventHandler(this.tsHabilitados_Toggled);
             // 
+            // colid_pt
+            // 
+            this.colid_pt.FieldName = "id_pt";
+            this.colid_pt.Name = "colid_pt";
+            // 
+            // colItemCode
+            // 
+            this.colItemCode.FieldName = "ItemCode";
+            this.colItemCode.Name = "colItemCode";
+            this.colItemCode.OptionsColumn.ReadOnly = true;
+            this.colItemCode.Visible = true;
+            this.colItemCode.VisibleIndex = 2;
+            this.colItemCode.Width = 164;
+            // 
             // frmNiveles_Academicos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -244,5 +266,7 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
         private System.Windows.Forms.Button cmdNuevo;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.ToggleSwitch tsHabilitados;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_pt;
+        private DevExpress.XtraGrid.Columns.GridColumn colItemCode;
     }
 }

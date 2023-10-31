@@ -161,7 +161,7 @@ namespace ERP_INTECOLI.Clases
         {
             try
             {//Recupera las caracteristicas 
-                string sql = @"[codesahn].[sp_get_datos_maestros_pt_v5]";
+                string sql = @"[dbo].[sp_get_datos_maestros_pt]";
                 DataOperations dp = new DataOperations();
 
                 SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
@@ -195,11 +195,11 @@ namespace ERP_INTECOLI.Clases
                     if (!dl.IsDBNull(dl.GetOrdinal("id_tipo_buffet")))
                         tipo_buffet_id = dl.GetInt32(16);
 
-                    if (!dl.IsDBNull(dl.GetOrdinal("id_tipo_facturacion_prd")))
-                        id_tipo_facturacion_prd = dl.GetInt32(17);
+                    //if (!dl.IsDBNull(dl.GetOrdinal("id_tipo_facturacion_prd")))
+                    //    id_tipo_facturacion_prd = dl.GetInt32(17);
 
-                    if (!dl.IsDBNull(dl.GetOrdinal("tipo_facturacion_prd")))
-                        TipoFacturacion_prd_name = dl.GetString(18);
+                    //if (!dl.IsDBNull(dl.GetOrdinal("tipo_facturacion_prd")))
+                    //    TipoFacturacion_prd_name = dl.GetString(18);
 
                     if (!dl.IsDBNull(dl.GetOrdinal("id_clase")))
                         _id_clase = dl.GetInt32(19);
