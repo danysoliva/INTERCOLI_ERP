@@ -35,7 +35,7 @@ namespace ERP_INTECOLI.Compras
                     txtUsuarioCreador.Text = UsuarioLogueado.Nombre;
                     GetSigID();
                     txtEstado.Text = "Creada";
-
+                    cmdNuevo.Enabled = false;
                     break;
                 case TipoOperacion.Update:
                     break;
@@ -78,16 +78,79 @@ namespace ERP_INTECOLI.Compras
             }
 
 
+            foreach (dsCompras.solicitud_compras_detalleRow item in dsCompras1.solicitud_compras_detalle.Rows)
+            {
+                if (item.cantidad <= 0)
+                {
+                    CajaDialogo.Error("Cantidad debe ser Mayor que (0)!");
+                    return;
+                }
+            }
 
 
             switch (tipooperacion)
             {
                 case TipoOperacion.New:
+                    SqlTransaction transaction = null;
 
+                    SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                    bool Guardar = false;
+
+                    try
+                    {
+                        conn.Open();
+                        transaction = conn.BeginTransaction("Transaction Order");
+
+                        SqlCommand cmd = conn.CreateCommand();
+                        cmd.CommandText = "sp_compras_solicitudes_insert";
+                        cmd.Connection = conn;
+                        cmd.Transaction = transaction;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@id_user", UsuarioLogueado.Id);
+                        cmd.Parameters.AddWithValue("@fecha_registro", dtFechaRegistro.Value);
+                        cmd.Parameters.AddWithValue("@fecha_contabilizacion", dtFechaContabilizacion.Value); 
+                        cmd.Parameters.AddWithValue("@comentario", txtComentarios.Text);
+
+                        int id_header = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        foreach (dsCompras.solicitud_compras_detalleRow row in dsCompras1.solicitud_compras_detalle.Rows)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.CommandText = "sp_compras_solicitudes_detalle_insert";
+                            cmd.Connection = conn;
+                            cmd.Transaction = transaction;
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@id_h_solicitud", id_header);
+                            cmd.Parameters.AddWithValue("@itemcode", row.itemcode);
+                            cmd.Parameters.AddWithValue("@descripcion", row.descripcion);
+                            cmd.Parameters.AddWithValue("@cantidad", row.cantidad);
+                            cmd.Parameters.AddWithValue("@precio", row.precio);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                        Guardar = true;
+
+                        
+
+                    }
+                    catch (Exception ec)
+                    {
+                        transaction.Rollback();
+                        CajaDialogo.Error(ec.Message);
+                        Guardar = false;
+                    }
+
+                    if (Guardar)
+                    {
+                        CajaDialogo.Information("Solicitud Creada!");
+
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
 
                     break;
                 case TipoOperacion.Update:
-
 
 
                     break;
@@ -103,12 +166,15 @@ namespace ERP_INTECOLI.Compras
             DataRow dr = dsCompras1.solicitud_compras_detalle.NewRow();
             dr[0] = "";
             dr[1] = "";
-            dr[2] = 0;
+            dr[2] = 1;
             dr[3] = 0.00;
             dr[4] = 0;
             dr[5] = 0;
+            dr[6] = 0;
             dsCompras1.solicitud_compras_detalle.Rows.Add(dr);
-            dsCompras1.solicitud_compras_detalle.AcceptChanges();
+
+
+            //dsCompras1.solicitud_compras_detalle.AcceptChanges();
         }
 
         private void ButtonDeleteRow_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -120,46 +186,38 @@ namespace ERP_INTECOLI.Compras
             if (r != DialogResult.Yes)
                 return;
 
-            switch (tipooperacion)
+            if (row.id > 0)
             {
-                case TipoOperacion.New:
+                try
+                {
+                    DataOperations dp = new DataOperations();
+                    SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                    con.Open();
 
-                    try
-                    {
-                        gridView1.DeleteRow(gridView1.FocusedRowHandle);
-                    }
-                    catch (Exception ec)
-                    {
-                        CajaDialogo.Error(ec.Message);
-                    }
+                    SqlCommand cmd = new SqlCommand("", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id", row.id);
+                    cmd.ExecuteNonQuery();
 
-                    break;
-                case TipoOperacion.Update:
+                    CargarSolicitud(IdSolicitudActual);
 
-                    try
-                    {
-                        DataOperations dp = new DataOperations();
-                        SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
-                        con.Open();
-
-                        SqlCommand cmd = new SqlCommand("", con);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@id", row.id);
-                        cmd.ExecuteNonQuery();
-                        
-                        CargarSolicitud(IdSolicitudActual);
-
-                        con.Close();
-                    }
-                    catch (Exception ec)
-                    {
-                        CajaDialogo.Error(ec.Message);
-                    }
-
-
-                    break;
-                default:
-                    break;
+                    con.Close();
+                }
+                catch (Exception ec)
+                {
+                    CajaDialogo.Error(ec.Message);
+                }
+            }
+            else
+            {
+                try
+                {
+                    grdvDetalle.DeleteRow(grdvDetalle.FocusedRowHandle);
+                }
+                catch (Exception ec)
+                {
+                    CajaDialogo.Error(ec.Message);
+                }
             }
         }
 
@@ -180,12 +238,12 @@ namespace ERP_INTECOLI.Compras
 
             try
             {
-                string query = @""; //Detalle Solicitud
+                string query = @"sp_get_solicitud_detalle"; //Detalle Solicitud
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("", idSolicitudActual);
+                cmd.Parameters.AddWithValue("@id_solicitud_h", idSolicitudActual);
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 dsCompras1.solicitud_compras_detalle.Clear();
                 adat.Fill(dsCompras1.solicitud_compras_detalle);
@@ -207,6 +265,58 @@ namespace ERP_INTECOLI.Compras
             var gridView = (GridView)grDetalle.FocusedView;
             var row = (dsCompras.solicitud_compras_detalleRow)gridView.GetFocusedDataRow();
 
+            try
+            {
+                if (e.Column.FieldName == "cantidad")
+                {
+                    row.total = row.cantidad * row.precio;
+                }
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
+        }
+
+        private void cmdBuscar_Click(object sender, EventArgs e)
+        {
+            frmSearchSolicitud frm = new frmSearchSolicitud();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                Solicitud soli = new Solicitud();
+                if (soli.RecuperarRegistros(frm.IdSolicitudSeleccionado))
+                {
+                    txtUsuarioCreador.Text = soli.Usuario;
+                    txtId.Text = Convert.ToString(frm.IdSolicitudSeleccionado);
+                    IdSolicitudActual = frm.IdSolicitudSeleccionado;
+                    txtEstado.Text = soli.Estado;
+                    dtFechaRegistro.Value = soli.Fecha_registro;
+                    dtFechaContabilizacion.Value = soli.Fecha_contabilizacion;
+                    txtComentarios.Text = soli.Comentario;
+
+                    loaddetalle(frm.IdSolicitudSeleccionado);
+                    tipooperacion = TipoOperacion.Update;
+                }
+            }
+
+            cmdNuevo.Enabled = true;
+        }
+
+        private void cmdNuevo_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+        }
+
+        private void LimpiarControles()
+        {
+            tipooperacion = TipoOperacion.New;
+            dtFechaContabilizacion.Value = dp.Now();
+            dtFechaRegistro.Value = dp.Now();
+            txtEstado.Text = "Creado";
+
+            txtUsuarioCreador.Text = UsuarioLogueado.Nombre;
+            dsCompras1.solicitud_compras_detalle.Clear();
+            GetSigID();
 
         }
     }

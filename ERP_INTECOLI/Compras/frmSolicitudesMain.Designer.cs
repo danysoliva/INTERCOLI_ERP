@@ -42,7 +42,7 @@ namespace ERP_INTECOLI.Compras
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.grDetalle = new DevExpress.XtraGrid.GridControl();
             this.dsCompras1 = new ERP_INTECOLI.Compras.dsCompras();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grdvDetalle = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colItemCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDscription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,11 +53,13 @@ namespace ERP_INTECOLI.Compras
             this.ButtonDeleteRow = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colid_status = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ButtonGridEstadoEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemGrdItem = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.cmdAddDetalle = new DevExpress.XtraEditors.SimpleButton();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtFechaContabilizacion = new System.Windows.Forms.DateTimePicker();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtFechaRegistro = new System.Windows.Forms.DateTimePicker();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -74,19 +76,17 @@ namespace ERP_INTECOLI.Compras
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.txtComentarios = new System.Windows.Forms.TextBox();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.repositoryItemGrdItem = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
-            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDeleteRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonGridEstadoEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGrdItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGrdItem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // grDetalle
@@ -97,7 +97,7 @@ namespace ERP_INTECOLI.Compras
             this.grDetalle.DataMember = "solicitud_compras_detalle";
             this.grDetalle.DataSource = this.dsCompras1;
             this.grDetalle.Location = new System.Drawing.Point(2, 178);
-            this.grDetalle.MainView = this.gridView1;
+            this.grDetalle.MainView = this.grdvDetalle;
             this.grDetalle.Name = "grDetalle";
             this.grDetalle.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.ButtonDeleteRow,
@@ -106,20 +106,20 @@ namespace ERP_INTECOLI.Compras
             this.grDetalle.Size = new System.Drawing.Size(1122, 351);
             this.grDetalle.TabIndex = 49;
             this.grDetalle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.grdvDetalle});
             // 
             // dsCompras1
             // 
             this.dsCompras1.DataSetName = "dsCompras";
             this.dsCompras1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // gridView1
+            // grdvDetalle
             // 
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.grdvDetalle.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdvDetalle.Appearance.HeaderPanel.Options.UseFont = true;
+            this.grdvDetalle.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdvDetalle.Appearance.Row.Options.UseFont = true;
+            this.grdvDetalle.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colItemCode,
             this.colDscription,
             this.colQuantity,
@@ -128,13 +128,13 @@ namespace ERP_INTECOLI.Compras
             this.coltotal,
             this.coldelete,
             this.colid_status});
-            this.gridView1.CustomizationFormBounds = new System.Drawing.Rectangle(774, 457, 260, 282);
-            this.gridView1.GridControl = this.grDetalle;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowAutoFilterRow = true;
-            this.gridView1.OptionsView.ShowFooter = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
+            this.grdvDetalle.CustomizationFormBounds = new System.Drawing.Rectangle(774, 457, 260, 282);
+            this.grdvDetalle.GridControl = this.grDetalle;
+            this.grdvDetalle.Name = "grdvDetalle";
+            this.grdvDetalle.OptionsView.ShowAutoFilterRow = true;
+            this.grdvDetalle.OptionsView.ShowFooter = true;
+            this.grdvDetalle.OptionsView.ShowGroupPanel = false;
+            this.grdvDetalle.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
             // colItemCode
             // 
@@ -219,14 +219,29 @@ namespace ERP_INTECOLI.Compras
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.ButtonGridEstadoEdit.Name = "ButtonGridEstadoEdit";
             // 
+            // repositoryItemGrdItem
+            // 
+            this.repositoryItemGrdItem.AutoHeight = false;
+            this.repositoryItemGrdItem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemGrdItem.Name = "repositoryItemGrdItem";
+            this.repositoryItemGrdItem.PopupView = this.repositoryItemGridLookUpEdit1View;
+            // 
+            // repositoryItemGridLookUpEdit1View
+            // 
+            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
+            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
             // panelControl1
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.cmdAddDetalle);
-            this.panelControl1.Controls.Add(this.dateTimePicker2);
+            this.panelControl1.Controls.Add(this.dtFechaContabilizacion);
             this.panelControl1.Controls.Add(this.labelControl4);
-            this.panelControl1.Controls.Add(this.dateTimePicker1);
+            this.panelControl1.Controls.Add(this.dtFechaRegistro);
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.txtEstado);
             this.panelControl1.Controls.Add(this.labelControl2);
@@ -258,40 +273,40 @@ namespace ERP_INTECOLI.Compras
             this.cmdAddDetalle.ToolTip = "Guardar";
             this.cmdAddDetalle.Click += new System.EventHandler(this.cmdAddDetalle_Click);
             // 
-            // dateTimePicker2
+            // dtFechaContabilizacion
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(707, 80);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker2.TabIndex = 65;
+            this.dtFechaContabilizacion.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.dtFechaContabilizacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaContabilizacion.Location = new System.Drawing.Point(800, 80);
+            this.dtFechaContabilizacion.Name = "dtFechaContabilizacion";
+            this.dtFechaContabilizacion.Size = new System.Drawing.Size(200, 26);
+            this.dtFechaContabilizacion.TabIndex = 65;
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(519, 88);
+            this.labelControl4.Location = new System.Drawing.Point(612, 88);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(274, 18);
             this.labelControl4.TabIndex = 64;
             this.labelControl4.Text = "Fecha Contabilizacion___________";
             // 
-            // dateTimePicker1
+            // dtFechaRegistro
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(707, 51);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker1.TabIndex = 63;
+            this.dtFechaRegistro.Enabled = false;
+            this.dtFechaRegistro.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.dtFechaRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaRegistro.Location = new System.Drawing.Point(800, 51);
+            this.dtFechaRegistro.Name = "dtFechaRegistro";
+            this.dtFechaRegistro.Size = new System.Drawing.Size(200, 26);
+            this.dtFechaRegistro.TabIndex = 63;
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(519, 60);
+            this.labelControl3.Location = new System.Drawing.Point(612, 60);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(223, 18);
             this.labelControl3.TabIndex = 62;
@@ -401,6 +416,7 @@ namespace ERP_INTECOLI.Compras
             this.cmdNuevo.Size = new System.Drawing.Size(47, 33);
             this.cmdNuevo.TabIndex = 50;
             this.cmdNuevo.ToolTip = "Nuevo";
+            this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
             // 
             // cmdBuscar
             // 
@@ -411,6 +427,7 @@ namespace ERP_INTECOLI.Compras
             this.cmdBuscar.Size = new System.Drawing.Size(47, 33);
             this.cmdBuscar.TabIndex = 49;
             this.cmdBuscar.ToolTip = "Buscar";
+            this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
             // 
             // cmdSiguiente
             // 
@@ -467,21 +484,6 @@ namespace ERP_INTECOLI.Compras
             this.labelControl11.TabIndex = 77;
             this.labelControl11.Text = "Comentarios_______";
             // 
-            // repositoryItemGrdItem
-            // 
-            this.repositoryItemGrdItem.AutoHeight = false;
-            this.repositoryItemGrdItem.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemGrdItem.Name = "repositoryItemGrdItem";
-            this.repositoryItemGrdItem.PopupView = this.repositoryItemGridLookUpEdit1View;
-            // 
-            // repositoryItemGridLookUpEdit1View
-            // 
-            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
-            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
             // frmSolicitudesMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -494,17 +496,17 @@ namespace ERP_INTECOLI.Compras
             this.Name = "frmSolicitudesMain";
             ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvDetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDeleteRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonGridEstadoEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGrdItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGrdItem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -512,7 +514,7 @@ namespace ERP_INTECOLI.Compras
         #endregion
 
         private DevExpress.XtraGrid.GridControl grDetalle;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView grdvDetalle;
         private DevExpress.XtraGrid.Columns.GridColumn colItemCode;
         private DevExpress.XtraGrid.Columns.GridColumn colDscription;
         private DevExpress.XtraGrid.Columns.GridColumn colQuantity;
@@ -537,9 +539,9 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraEditors.SimpleButton cmdClose;
         private System.Windows.Forms.TextBox txtComentarios;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtFechaContabilizacion;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtFechaRegistro;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.TextBox txtEstado;
         private DevExpress.XtraEditors.LabelControl labelControl2;

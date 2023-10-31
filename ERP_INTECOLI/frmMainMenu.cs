@@ -930,7 +930,7 @@ namespace ERP_INTECOLI
             int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
             switch (idNivel)                                                      //11 = Jaguar //12 = Success
             {
-                case 1://Basic View
+                //case 1://Basic View
                     break;
                 case 2://Basic No Autorization
                     accesoprevio = false;
@@ -965,6 +965,11 @@ namespace ERP_INTECOLI
                     CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-21 (Solicitudes de Compra)");
                 }
             }
+        }
+
+        private void navBarProducto_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
         }
     }
     
