@@ -200,8 +200,12 @@ namespace LOSA.Calidad.LoteConfConsumo
 
         private void txtParametroBusqueda_EditValueChanged(object sender, EventArgs e)
         {
-            dv.RowFilter = @"[concat_] like '%" + txtParametroBusqueda.Text + "%'";
-            gridControlDetalleMP.DataSource = dv;
+            try
+            {
+                dv.RowFilter = @"[concat_] like '%" + txtParametroBusqueda.Text + "%'";
+                gridControlDetalleMP.DataSource = dv;
+            }
+            catch { }
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
@@ -229,7 +233,7 @@ namespace LOSA.Calidad.LoteConfConsumo
             {
                 //Next
                 navigationFrameSearch.SelectedPage = navigationPage2;
-                LoadRTN_EmpresasClietne();
+                LoadRTN_EmpresasEstudiantes();
             }
             else
             {
@@ -238,7 +242,7 @@ namespace LOSA.Calidad.LoteConfConsumo
 
         }
 
-        private void LoadRTN_EmpresasClietne()
+        private void LoadRTN_EmpresasEstudiantes()
         {
             try
             {
@@ -246,9 +250,9 @@ namespace LOSA.Calidad.LoteConfConsumo
                 con = new SqlConnection(dp.ConnectionStringERP);
                 con.Open();
 
-                SqlCommand cmd = new SqlCommand("[dbo].[sp_get_empresas_rtn_cliente]", con);
+                SqlCommand cmd = new SqlCommand("[dbo].[sp_get_rtn_asociados_al_estudiante]", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id_cliente", ItemSeleccionado.id);
+                cmd.Parameters.AddWithValue("@id_estudiante", ItemSeleccionado.id);
 
                 dsSearchWindow1.RTN_Cliente.Clear();
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);

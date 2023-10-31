@@ -282,6 +282,7 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\ClientesPuntoVentaLP.cs" />
     <Compile Include="Clases\Conf_TablesID.cs" />
+    <Compile Include="Clases\EstudianteEmpresa.cs" />
     <Compile Include="Clases\Factura.cs" />
     <Compile Include="Clases\FacturacionCierreDiaPuntoVenta.cs" />
     <Compile Include="Clases\FacturacionEquipo.cs" />
@@ -297,6 +298,7 @@
     <Compile Include="Clases\Notas_CreditoDebito.cs" />
     <Compile Include="Clases\NumberToLetters.cs" />
     <Compile Include="Clases\ProductoTerminado.cs" />
+    <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Clases\PuntoVenta.cs" />
     <Compile Include="Clases\PuntoVentaEquipo.cs" />
     <Compile Include="Clases\ReciboH.cs" />

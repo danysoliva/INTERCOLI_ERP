@@ -56,7 +56,7 @@ namespace ERP_INTECOLI.Clases
             {
                 DataOperations dp = new DataOperations();
                 SqlConnection cnx = new SqlConnection(dp.ConnectionStringERP);
-                using (SqlCommand cmd = new SqlCommand("[dbo].[sp_get_precio_pt_from_lista_y_punto_venta_v2]", cnx))
+                using (SqlCommand cmd = new SqlCommand("[dbo].[sp_get_precio_pt_from_lista_y_punto_venta]", cnx))
                 {
                     cnx.Open();
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
