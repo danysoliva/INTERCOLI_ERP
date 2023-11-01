@@ -30,15 +30,18 @@ namespace ERP_INTECOLI.Clases
         public int IdAprobacion;
 
 
-        public int _id;
+        private int id;
         public string _codigo;
         public string _nombre;
         public string _RTN;
         public string _direccion;
         public bool _enable;
 
+        public int ID { get => id; set => id = value; }
+
         public Proveedor()
         {
+            id = 0;
         }
 
 
@@ -57,7 +60,7 @@ namespace ERP_INTECOLI.Clases
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    _id = dr.GetInt32(0);
+                    ID = dr.GetInt32(0);
                     _codigo = dr.GetString(1);
                     _nombre = dr.GetString(2);
 

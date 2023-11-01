@@ -1024,6 +1024,11 @@
     <Compile Include="frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimientos\dsMantenimiento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transacciones\dsMensualidades.Designer.cs">
@@ -1795,6 +1800,17 @@
     </None>
     <None Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscal.resx.bak" />
     <None Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscalCRUD.resx.bak" />
+    <None Include="Mantenimientos\dsMantenimiento.xsc">
+      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
+    </None>
+    <None Include="Mantenimientos\dsMantenimiento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMantenimiento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Mantenimientos\dsMantenimiento.xss">
+      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
