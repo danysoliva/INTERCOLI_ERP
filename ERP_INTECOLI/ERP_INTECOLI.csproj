@@ -303,19 +303,10 @@
     <Compile Include="Clases\PuntoVentaEquipo.cs" />
     <Compile Include="Clases\ReciboH.cs" />
     <Compile Include="Clases\Solicitud.cs" />
-    <Compile Include="Compras\dsCompras.cs">
-      <DependentUpon>dsCompras.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Compras\dsCompras.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCompras.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Compras\frmSearchSolicitud.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Compras\frmSearchSolicitud.Designer.cs">
-      <DependentUpon>frmSearchSolicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Compras\frmSolicitudesMain.cs">
       <SubType>Form</SubType>
@@ -1033,37 +1024,10 @@
     <Compile Include="frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimiento\dsMantenimiento.cs">
-      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimiento\dsMantenimiento.Designer.cs">
+    <Compile Include="Mantenimientos\dsMantenimiento.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMantenimiento.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimiento\Productos\frmItemsCRUD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimiento\Productos\frmItemsCRUD.Designer.cs">
-      <DependentUpon>frmItemsCRUD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimiento\Productos\frmItemsOP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimiento\Productos\frmItemsOP.Designer.cs">
-      <DependentUpon>frmItemsOP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimiento\Proveedor\frmProveedorCRUD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimiento\Proveedor\frmProveedorCRUD.Designer.cs">
-      <DependentUpon>frmProveedorCRUD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Mantenimiento\Proveedor\frmProveedorMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimiento\Proveedor\frmProveedorMain.Designer.cs">
-      <DependentUpon>frmProveedorMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1226,9 +1190,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\frmRecordatorio.resx">
       <DependentUpon>frmRecordatorio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Compras\frmSearchSolicitud.resx">
-      <DependentUpon>frmSearchSolicitud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compras\frmSolicitudesMain.resx">
       <DependentUpon>frmSolicitudesMain.cs</DependentUpon>
@@ -1514,15 +1475,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimiento\Productos\frmItemsCRUD.resx">
-      <DependentUpon>frmItemsCRUD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimiento\Productos\frmItemsOP.resx">
-      <DependentUpon>frmItemsOP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimiento\Proveedor\frmProveedorMain.resx">
-      <DependentUpon>frmProveedorMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -1848,15 +1800,15 @@
     </None>
     <None Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscal.resx.bak" />
     <None Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscalCRUD.resx.bak" />
-    <None Include="Mantenimiento\dsMantenimiento.xsc">
+    <None Include="Mantenimientos\dsMantenimiento.xsc">
       <DependentUpon>dsMantenimiento.xsd</DependentUpon>
     </None>
-    <None Include="Mantenimiento\dsMantenimiento.xsd">
+    <None Include="Mantenimientos\dsMantenimiento.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsMantenimiento.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Mantenimiento\dsMantenimiento.xss">
+    <None Include="Mantenimientos\dsMantenimiento.xss">
       <DependentUpon>dsMantenimiento.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -1974,7 +1926,6 @@
     <None Include="Resources\proyeccion_32.png" />
     <None Include="Resources\presente_x32.png" />
     <None Include="Resources\ordenador-portatilx32.png" />
-    <None Include="Resources\orden_compra_x32.png" />
     <Content Include="Resources\reaload_24x24.png" />
     <Content Include="Resources\reaload_32x32.png" />
     <Content Include="Resources\refresh-button32px.png" />
@@ -1999,7 +1950,6 @@
     <None Include="Resources\tarjeta-de-creditox16.png" />
     <None Include="Resources\transferencia-movilx16.png" />
     <None Include="Resources\seguro_32x.png" />
-    <None Include="Resources\solicitud_compra_x32.png" />
     <Content Include="Resources\Upload-Folder-icon.png" />
     <None Include="Resources\userx32.png" />
     <Content Include="Resources\_click_24X24.png" />
