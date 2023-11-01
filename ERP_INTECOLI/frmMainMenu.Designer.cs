@@ -63,6 +63,7 @@ namespace ERP_INTECOLI
             this.nbCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navSolicCompras = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navNuevoRecordatorio = new DevExpress.XtraNavBar.NavBarItem();
             this.TabMantenimientos = new DevExpress.XtraTab.XtraTabPage();
@@ -99,7 +100,6 @@ namespace ERP_INTECOLI
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblServerName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).BeginInit();
             this.xtraTabControlMenu.SuspendLayout();
             this.TabAdministracion.SuspendLayout();
@@ -248,6 +248,7 @@ namespace ERP_INTECOLI
             // navBarGroup2
             // 
             this.navBarGroup2.Caption = "Transacciones";
+            this.navBarGroup2.Expanded = true;
             this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navPostearMensualidad),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navMovimientoSaldos),
@@ -405,6 +406,12 @@ namespace ERP_INTECOLI
             this.navSolicCompras.Name = "navSolicCompras";
             this.navSolicCompras.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navSolicCompras_LinkClicked);
             // 
+            // navBarItem1
+            // 
+            this.navBarItem1.Caption = "Ordenes de Compra";
+            this.navBarItem1.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.orden_compra_x32;
+            this.navBarItem1.Name = "navBarItem1";
+            // 
             // navBarGroup4
             // 
             this.navBarGroup4.Caption = "Recordatorios";
@@ -548,7 +555,8 @@ namespace ERP_INTECOLI
             // 
             // navBarProducto
             // 
-            this.navBarProducto.Caption = "Items";
+            this.navBarProducto.Caption = "Productos";
+            this.navBarProducto.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarProducto.ImageOptions.SvgImage")));
             this.navBarProducto.Name = "navBarProducto";
             this.navBarProducto.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarProducto_LinkClicked);
             // 
@@ -720,12 +728,6 @@ namespace ERP_INTECOLI
             // 
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(0, 17);
-            // 
-            // navBarItem1
-            // 
-            this.navBarItem1.Caption = "Ordenes de Compra";
-            this.navBarItem1.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.orden_compra_x32;
-            this.navBarItem1.Name = "navBarItem1";
             // 
             // frmMainMenu
             // 

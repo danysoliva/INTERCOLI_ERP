@@ -315,19 +315,22 @@ namespace JAGUAR_APP
 
         private void SaltarLogin_Click(object sender, EventArgs e)
         {
-            Teclado.cerrarTeclado();
-            UserLogin Log1 = new UserLogin();
-            if (Log1.RecuperarRegistro(1035))
-            {
-                //Log1.GrupoUsuario.GrupoUsuarioActivo = (GrupoUser.GrupoUsuario)Log1.IdGrupo;
-                //Log1.GrupoUsuario.GrupoUsuarioActivo = (GrupoUser.GrupoUsuario)1;
-                Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Logistica;
-            }
-            else
-            {
-                Log1.Id = 1069;
-                Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Calidad;
-            }
+            txtUsuario.Text = "rgarcia";
+            txtClave.Text = "Marathones00";
+            simpleButton2_Click(sender, e);
+            //Teclado.cerrarTeclado();
+            //UserLogin Log1 = new UserLogin();
+            //if (Log1.RecuperarRegistro(1035))
+            //{
+            //    //Log1.GrupoUsuario.GrupoUsuarioActivo = (GrupoUser.GrupoUsuario)Log1.IdGrupo;
+            //    //Log1.GrupoUsuario.GrupoUsuarioActivo = (GrupoUser.GrupoUsuario)1;
+            //    Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Logistica;
+            //}
+            //else
+            //{
+            //    Log1.Id = 1069;
+            //    Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Calidad;
+            //}
             //frmOpciones frm = new frmOpciones(Log1);
             //frm.MdiParent = this.MdiParent;
             //frm.WindowState = FormWindowState.Maximized;

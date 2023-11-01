@@ -12,6 +12,7 @@ using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Compras;
 using System.Data.SqlClient;
 using DevExpress.XtraGrid.Views.Grid;
+using LOSA.Calidad.LoteConfConsumo;
 
 namespace ERP_INTECOLI.Compras
 {
@@ -163,15 +164,20 @@ namespace ERP_INTECOLI.Compras
 
         private void cmdAddDetalle_Click(object sender, EventArgs e)
         {
-            DataRow dr = dsCompras1.solicitud_compras_detalle.NewRow();
-            dr[0] = "";
-            dr[1] = "";
-            dr[2] = 1;
-            dr[3] = 0.00;
-            dr[4] = 0;
-            dr[5] = 0;
-            dr[6] = 0;
-            dsCompras1.solicitud_compras_detalle.Rows.Add(dr);
+            frmSearchDefault frm = new frmSearchDefault(frmSearchDefault.TipoBusqueda.ProductoTerminado);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                DataRow dr = dsCompras1.solicitud_compras_detalle.NewRow();
+                dr[0] = frm.ItemSeleccionado.ItemCode;
+                dr[1] = frm.ItemSeleccionado.ItemName;
+                dr[2] = 0;
+                dr[3] = 0.00;
+                dr[4] = 0;
+                dr[5] = 0;
+                dr[6] = 0;
+                dsCompras1.solicitud_compras_detalle.Rows.Add(dr);
+            }
+           
 
 
             //dsCompras1.solicitud_compras_detalle.AcceptChanges();

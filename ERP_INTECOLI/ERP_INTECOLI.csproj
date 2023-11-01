@@ -1053,6 +1053,18 @@
     <Compile Include="Mantenimiento\Productos\frmItemsOP.Designer.cs">
       <DependentUpon>frmItemsOP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenimiento\Proveedor\frmProveedorCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Proveedor\frmProveedorCRUD.Designer.cs">
+      <DependentUpon>frmProveedorCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Proveedor\frmProveedorMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Proveedor\frmProveedorMain.Designer.cs">
+      <DependentUpon>frmProveedorMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transacciones\dsMensualidades.Designer.cs">
@@ -1508,6 +1520,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\Productos\frmItemsOP.resx">
       <DependentUpon>frmItemsOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\Proveedor\frmProveedorMain.resx">
+      <DependentUpon>frmProveedorMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
