@@ -12,7 +12,7 @@
   <xs:element name="dsMantenimiento" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsMantenimiento" msprop:Generator_UserDSName="dsMantenimiento">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="items" msprop:Generator_TableClassName="itemsDataTable" msprop:Generator_TableVarName="tableitems" msprop:Generator_TablePropName="items" msprop:Generator_RowDeletingName="itemsRowDeleting" msprop:Generator_RowChangingName="itemsRowChanging" msprop:Generator_RowEvHandlerName="itemsRowChangeEventHandler" msprop:Generator_RowDeletedName="itemsRowDeleted" msprop:Generator_UserTableName="items" msprop:Generator_RowChangedName="itemsRowChanged" msprop:Generator_RowEvArgName="itemsRowChangeEvent" msprop:Generator_RowClassName="itemsRow">
+        <xs:element name="Producto" msprop:Generator_TableClassName="ProductoDataTable" msprop:Generator_TableVarName="tableProducto" msprop:Generator_TablePropName="Producto" msprop:Generator_RowDeletingName="ProductoRowDeleting" msprop:Generator_RowChangingName="ProductoRowChanging" msprop:Generator_RowEvHandlerName="ProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductoRowDeleted" msprop:Generator_UserTableName="Producto" msprop:Generator_RowChangedName="ProductoRowChanged" msprop:Generator_RowEvArgName="ProductoRowChangeEvent" msprop:Generator_RowClassName="ProductoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />

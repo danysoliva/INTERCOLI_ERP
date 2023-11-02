@@ -41,8 +41,8 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@habilitado", tsHabilitados.IsOn);
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
-                dsMantenimiento1.items.Clear();
-                adat.Fill(dsMantenimiento1.items);
+                dsMantenimiento1.Producto.Clear();
+                adat.Fill(dsMantenimiento1.Producto);
                 conn.Close();
             }
             catch (Exception ex)
@@ -68,7 +68,7 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
         private void ButtonEditar_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             var gridview = (GridView)grdProductos.FocusedView;
-            var row = (dsMantenimiento.itemsRow)gridview.GetFocusedDataRow();
+            var row = (dsMantenimiento.ProductoRow)gridview.GetFocusedDataRow();
 
             frmItemsOP frm = new frmItemsOP(UsuarioLogeado, frmItemsOP.TipoOperacion.Editar, row.id);
             if (frm.ShowDialog() == DialogResult.OK)

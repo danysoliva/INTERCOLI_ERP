@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace ERP_INTECOLI.Mantenimiento {
+namespace ERP_INTECOLI.Mantenimiento.Productos {
     
     
     /// <summary>
@@ -24,7 +24,7 @@ namespace ERP_INTECOLI.Mantenimiento {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class dsMantenimiento : global::System.Data.DataSet {
         
-        private itemsDataTable tableitems;
+        private ProductoDataTable tableProducto;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace ERP_INTECOLI.Mantenimiento {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["items"] != null)) {
-                    base.Tables.Add(new itemsDataTable(ds.Tables["items"]));
+                if ((ds.Tables["Producto"] != null)) {
+                    base.Tables.Add(new ProductoDataTable(ds.Tables["Producto"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace ERP_INTECOLI.Mantenimiento {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public itemsDataTable items {
+        public ProductoDataTable Producto {
             get {
-                return this.tableitems;
+                return this.tableProducto;
             }
         }
         
@@ -152,8 +152,8 @@ namespace ERP_INTECOLI.Mantenimiento {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["items"] != null)) {
-                    base.Tables.Add(new itemsDataTable(ds.Tables["items"]));
+                if ((ds.Tables["Producto"] != null)) {
+                    base.Tables.Add(new ProductoDataTable(ds.Tables["Producto"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace ERP_INTECOLI.Mantenimiento {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableitems = ((itemsDataTable)(base.Tables["items"]));
+            this.tableProducto = ((ProductoDataTable)(base.Tables["Producto"]));
             if ((initTable == true)) {
-                if ((this.tableitems != null)) {
-                    this.tableitems.InitVars();
+                if ((this.tableProducto != null)) {
+                    this.tableProducto.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace ERP_INTECOLI.Mantenimiento {
             this.Namespace = "http://tempuri.org/dsMantenimiento.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableitems = new itemsDataTable();
-            base.Tables.Add(this.tableitems);
+            this.tableProducto = new ProductoDataTable();
+            base.Tables.Add(this.tableProducto);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeitems() {
+        private bool ShouldSerializeProducto() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace ERP_INTECOLI.Mantenimiento {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void itemsRowChangeEventHandler(object sender, itemsRowChangeEvent e);
+        public delegate void ProductoRowChangeEventHandler(object sender, ProductoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class itemsDataTable : global::System.Data.TypedTableBase<itemsRow> {
+        public partial class ProductoDataTable : global::System.Data.TypedTableBase<ProductoRow> {
             
             private global::System.Data.DataColumn columnid;
             
@@ -297,8 +297,8 @@ namespace ERP_INTECOLI.Mantenimiento {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public itemsDataTable() {
-                this.TableName = "items";
+            public ProductoDataTable() {
+                this.TableName = "Producto";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +306,7 @@ namespace ERP_INTECOLI.Mantenimiento {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal itemsDataTable(global::System.Data.DataTable table) {
+            internal ProductoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,7 +323,7 @@ namespace ERP_INTECOLI.Mantenimiento {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected itemsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ProductoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -403,34 +403,34 @@ namespace ERP_INTECOLI.Mantenimiento {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public itemsRow this[int index] {
+            public ProductoRow this[int index] {
                 get {
-                    return ((itemsRow)(this.Rows[index]));
+                    return ((ProductoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event itemsRowChangeEventHandler itemsRowChanging;
+            public event ProductoRowChangeEventHandler ProductoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event itemsRowChangeEventHandler itemsRowChanged;
+            public event ProductoRowChangeEventHandler ProductoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event itemsRowChangeEventHandler itemsRowDeleting;
+            public event ProductoRowChangeEventHandler ProductoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event itemsRowChangeEventHandler itemsRowDeleted;
+            public event ProductoRowChangeEventHandler ProductoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AdditemsRow(itemsRow row) {
+            public void AddProductoRow(ProductoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public itemsRow AdditemsRow(int id, int id_user_created, int id_estado, string descripcion, string code, System.DateTime fecha, string nombre, string estado) {
-                itemsRow rowitemsRow = ((itemsRow)(this.NewRow()));
+            public ProductoRow AddProductoRow(int id, int id_user_created, int id_estado, string descripcion, string code, System.DateTime fecha, string nombre, string estado) {
+                ProductoRow rowProductoRow = ((ProductoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         id_user_created,
@@ -440,15 +440,15 @@ namespace ERP_INTECOLI.Mantenimiento {
                         fecha,
                         nombre,
                         estado};
-                rowitemsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowitemsRow);
-                return rowitemsRow;
+                rowProductoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProductoRow);
+                return rowProductoRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                itemsDataTable cln = ((itemsDataTable)(base.Clone()));
+                ProductoDataTable cln = ((ProductoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -456,7 +456,7 @@ namespace ERP_INTECOLI.Mantenimiento {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new itemsDataTable();
+                return new ProductoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -495,28 +495,28 @@ namespace ERP_INTECOLI.Mantenimiento {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public itemsRow NewitemsRow() {
-                return ((itemsRow)(this.NewRow()));
+            public ProductoRow NewProductoRow() {
+                return ((ProductoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new itemsRow(builder);
+                return new ProductoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(itemsRow);
+                return typeof(ProductoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.itemsRowChanged != null)) {
-                    this.itemsRowChanged(this, new itemsRowChangeEvent(((itemsRow)(e.Row)), e.Action));
+                if ((this.ProductoRowChanged != null)) {
+                    this.ProductoRowChanged(this, new ProductoRowChangeEvent(((ProductoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -524,8 +524,8 @@ namespace ERP_INTECOLI.Mantenimiento {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.itemsRowChanging != null)) {
-                    this.itemsRowChanging(this, new itemsRowChangeEvent(((itemsRow)(e.Row)), e.Action));
+                if ((this.ProductoRowChanging != null)) {
+                    this.ProductoRowChanging(this, new ProductoRowChangeEvent(((ProductoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -533,8 +533,8 @@ namespace ERP_INTECOLI.Mantenimiento {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.itemsRowDeleted != null)) {
-                    this.itemsRowDeleted(this, new itemsRowChangeEvent(((itemsRow)(e.Row)), e.Action));
+                if ((this.ProductoRowDeleted != null)) {
+                    this.ProductoRowDeleted(this, new ProductoRowChangeEvent(((ProductoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -542,14 +542,14 @@ namespace ERP_INTECOLI.Mantenimiento {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.itemsRowDeleting != null)) {
-                    this.itemsRowDeleting(this, new itemsRowChangeEvent(((itemsRow)(e.Row)), e.Action));
+                if ((this.ProductoRowDeleting != null)) {
+                    this.ProductoRowDeleting(this, new ProductoRowChangeEvent(((ProductoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveitemsRow(itemsRow row) {
+            public void RemoveProductoRow(ProductoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -576,7 +576,7 @@ namespace ERP_INTECOLI.Mantenimiento {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "itemsDataTable";
+                attribute2.FixedValue = "ProductoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -620,15 +620,15 @@ namespace ERP_INTECOLI.Mantenimiento {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class itemsRow : global::System.Data.DataRow {
+        public partial class ProductoRow : global::System.Data.DataRow {
             
-            private itemsDataTable tableitems;
+            private ProductoDataTable tableProducto;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal itemsRow(global::System.Data.DataRowBuilder rb) : 
+            internal ProductoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableitems = ((itemsDataTable)(this.Table));
+                this.tableProducto = ((ProductoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -636,14 +636,14 @@ namespace ERP_INTECOLI.Mantenimiento {
             public int id {
                 get {
                     try {
-                        return ((int)(this[this.tableitems.idColumn]));
+                        return ((int)(this[this.tableProducto.idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id\' de la tabla \'items\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id\' de la tabla \'Producto\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableitems.idColumn] = value;
+                    this[this.tableProducto.idColumn] = value;
                 }
             }
             
@@ -652,14 +652,14 @@ namespace ERP_INTECOLI.Mantenimiento {
             public int id_user_created {
                 get {
                     try {
-                        return ((int)(this[this.tableitems.id_user_createdColumn]));
+                        return ((int)(this[this.tableProducto.id_user_createdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_user_created\' de la tabla \'items\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_user_created\' de la tabla \'Producto\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableitems.id_user_createdColumn] = value;
+                    this[this.tableProducto.id_user_createdColumn] = value;
                 }
             }
             
@@ -668,14 +668,14 @@ namespace ERP_INTECOLI.Mantenimiento {
             public int id_estado {
                 get {
                     try {
-                        return ((int)(this[this.tableitems.id_estadoColumn]));
+                        return ((int)(this[this.tableProducto.id_estadoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_estado\' de la tabla \'items\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_estado\' de la tabla \'Producto\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableitems.id_estadoColumn] = value;
+                    this[this.tableProducto.id_estadoColumn] = value;
                 }
             }
             
@@ -684,14 +684,14 @@ namespace ERP_INTECOLI.Mantenimiento {
             public string descripcion {
                 get {
                     try {
-                        return ((string)(this[this.tableitems.descripcionColumn]));
+                        return ((string)(this[this.tableProducto.descripcionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'items\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'Producto\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableitems.descripcionColumn] = value;
+                    this[this.tableProducto.descripcionColumn] = value;
                 }
             }
             
@@ -700,14 +700,14 @@ namespace ERP_INTECOLI.Mantenimiento {
             public string code {
                 get {
                     try {
-                        return ((string)(this[this.tableitems.codeColumn]));
+                        return ((string)(this[this.tableProducto.codeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'code\' de la tabla \'items\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'code\' de la tabla \'Producto\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableitems.codeColumn] = value;
+                    this[this.tableProducto.codeColumn] = value;
                 }
             }
             
@@ -716,14 +716,14 @@ namespace ERP_INTECOLI.Mantenimiento {
             public System.DateTime fecha {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableitems.fechaColumn]));
+                        return ((global::System.DateTime)(this[this.tableProducto.fechaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha\' de la tabla \'items\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha\' de la tabla \'Producto\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableitems.fechaColumn] = value;
+                    this[this.tableProducto.fechaColumn] = value;
                 }
             }
             
@@ -732,14 +732,14 @@ namespace ERP_INTECOLI.Mantenimiento {
             public string nombre {
                 get {
                     try {
-                        return ((string)(this[this.tableitems.nombreColumn]));
+                        return ((string)(this[this.tableProducto.nombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'items\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'Producto\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableitems.nombreColumn] = value;
+                    this[this.tableProducto.nombreColumn] = value;
                 }
             }
             
@@ -748,111 +748,111 @@ namespace ERP_INTECOLI.Mantenimiento {
             public string estado {
                 get {
                     try {
-                        return ((string)(this[this.tableitems.estadoColumn]));
+                        return ((string)(this[this.tableProducto.estadoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'estado\' de la tabla \'items\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'estado\' de la tabla \'Producto\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableitems.estadoColumn] = value;
+                    this[this.tableProducto.estadoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsidNull() {
-                return this.IsNull(this.tableitems.idColumn);
+                return this.IsNull(this.tableProducto.idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetidNull() {
-                this[this.tableitems.idColumn] = global::System.Convert.DBNull;
+                this[this.tableProducto.idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isid_user_createdNull() {
-                return this.IsNull(this.tableitems.id_user_createdColumn);
+                return this.IsNull(this.tableProducto.id_user_createdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setid_user_createdNull() {
-                this[this.tableitems.id_user_createdColumn] = global::System.Convert.DBNull;
+                this[this.tableProducto.id_user_createdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isid_estadoNull() {
-                return this.IsNull(this.tableitems.id_estadoColumn);
+                return this.IsNull(this.tableProducto.id_estadoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setid_estadoNull() {
-                this[this.tableitems.id_estadoColumn] = global::System.Convert.DBNull;
+                this[this.tableProducto.id_estadoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsdescripcionNull() {
-                return this.IsNull(this.tableitems.descripcionColumn);
+                return this.IsNull(this.tableProducto.descripcionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetdescripcionNull() {
-                this[this.tableitems.descripcionColumn] = global::System.Convert.DBNull;
+                this[this.tableProducto.descripcionColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IscodeNull() {
-                return this.IsNull(this.tableitems.codeColumn);
+                return this.IsNull(this.tableProducto.codeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetcodeNull() {
-                this[this.tableitems.codeColumn] = global::System.Convert.DBNull;
+                this[this.tableProducto.codeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsfechaNull() {
-                return this.IsNull(this.tableitems.fechaColumn);
+                return this.IsNull(this.tableProducto.fechaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetfechaNull() {
-                this[this.tableitems.fechaColumn] = global::System.Convert.DBNull;
+                this[this.tableProducto.fechaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsnombreNull() {
-                return this.IsNull(this.tableitems.nombreColumn);
+                return this.IsNull(this.tableProducto.nombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetnombreNull() {
-                this[this.tableitems.nombreColumn] = global::System.Convert.DBNull;
+                this[this.tableProducto.nombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsestadoNull() {
-                return this.IsNull(this.tableitems.estadoColumn);
+                return this.IsNull(this.tableProducto.estadoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetestadoNull() {
-                this[this.tableitems.estadoColumn] = global::System.Convert.DBNull;
+                this[this.tableProducto.estadoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -860,22 +860,22 @@ namespace ERP_INTECOLI.Mantenimiento {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class itemsRowChangeEvent : global::System.EventArgs {
+        public class ProductoRowChangeEvent : global::System.EventArgs {
             
-            private itemsRow eventRow;
+            private ProductoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public itemsRowChangeEvent(itemsRow row, global::System.Data.DataRowAction action) {
+            public ProductoRowChangeEvent(ProductoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public itemsRow Row {
+            public ProductoRow Row {
                 get {
                     return this.eventRow;
                 }

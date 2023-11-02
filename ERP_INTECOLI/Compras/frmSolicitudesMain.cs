@@ -22,7 +22,7 @@ namespace ERP_INTECOLI.Compras
         DataOperations dp = new DataOperations();
         TipoOperacion tipooperacion;
         int IdSolicitudActual;
-
+        int IdEstadoSolicitud;
         public frmSolicitudesMain(UserLogin pUserLog, TipoOperacion ptipo)
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace ERP_INTECOLI.Compras
 
                     txtUsuarioCreador.Text = UsuarioLogueado.Nombre;
                     GetSigID();
-                    txtEstado.Text = "Creada";
+                    txtEstado.Text = "Nueva";
                     cmdNuevo.Enabled = false;
                     break;
                 case TipoOperacion.Update:
@@ -75,6 +75,12 @@ namespace ERP_INTECOLI.Compras
             if (string.IsNullOrEmpty(txtComentarios.Text))
             {
                 CajaDialogo.Error("Debe agregar un comentario!");
+                return;
+            }
+
+            if (grdvDetalle.RowCount == 0)
+            {
+                CajaDialogo.Error("Debe seleccionar 1 Producto!");
                 return;
             }
 
@@ -153,6 +159,61 @@ namespace ERP_INTECOLI.Compras
                     break;
                 case TipoOperacion.Update:
 
+                    SqlTransaction transaction2 = null;
+
+                    SqlConnection conn2 = new SqlConnection(dp.ConnectionStringERP);
+                    bool Guardar1 = false;
+
+                    try
+                    {
+                        conn2.Open();
+                        transaction2 = conn2.BeginTransaction("Transaction Order");
+
+                        SqlCommand cmd = conn2.CreateCommand();
+                        cmd.CommandText = "[sp_compras_solicitudes_update]";
+                        cmd.Connection = conn2;
+                        cmd.Transaction = transaction2;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@fecha_contabilizacion", dtFechaContabilizacion.Value);
+                        cmd.Parameters.AddWithValue("@comentario", txtComentarios.Text);
+                        cmd.Parameters.AddWithValue("@id_solicitud", IdSolicitudActual);
+                        cmd.ExecuteNonQuery();
+
+                        foreach (dsCompras.solicitud_compras_detalleRow row in dsCompras1.solicitud_compras_detalle.Rows)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.CommandText = "sp_compras_solicitudes_detalle_insert";
+                            cmd.Connection = conn2;
+                            cmd.Transaction = transaction2;
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@id_h_solicitud", IdSolicitudActual);
+                            cmd.Parameters.AddWithValue("@itemcode", row.itemcode);
+                            cmd.Parameters.AddWithValue("@descripcion", row.descripcion);
+                            cmd.Parameters.AddWithValue("@cantidad", row.cantidad);
+                            cmd.Parameters.AddWithValue("@precio", row.precio);
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        transaction2.Commit();
+                        Guardar1 = true;
+
+
+
+                    }
+                    catch (Exception ec)
+                    {
+                        transaction2.Rollback();
+                        CajaDialogo.Error(ec.Message);
+                        Guardar1 = false;
+                    }
+
+                    if (Guardar1)
+                    {
+                        CajaDialogo.Information("Solicitud Creada!");
+
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
 
                     break;
                 default:
@@ -167,15 +228,34 @@ namespace ERP_INTECOLI.Compras
             frmSearchDefault frm = new frmSearchDefault(frmSearchDefault.TipoBusqueda.ProductoTerminado);
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                DataRow dr = dsCompras1.solicitud_compras_detalle.NewRow();
-                dr[0] = frm.ItemSeleccionado.ItemCode;
-                dr[1] = frm.ItemSeleccionado.ItemName;
-                dr[2] = 0;
-                dr[3] = 0.00;
-                dr[4] = 0;
-                dr[5] = 0;
-                dr[6] = 0;
-                dsCompras1.solicitud_compras_detalle.Rows.Add(dr);
+                bool Agregar = true;
+                
+                foreach (dsCompras.solicitud_compras_detalleRow item in dsCompras1.solicitud_compras_detalle.Rows)
+                {
+                    if (item.itemcode == frm.ItemSeleccionado.ItemCode)
+                    {
+                        item.cantidad = item.cantidad + 1;
+                        Agregar = false;
+                    }
+                }
+                
+
+                if (Agregar)
+                {
+                    DataRow dr = dsCompras1.solicitud_compras_detalle.NewRow();
+                    dr[0] = frm.ItemSeleccionado.ItemCode;
+                    dr[1] = frm.ItemSeleccionado.ItemName;
+                    dr[2] = 1;
+                    dr[3] = 0.00;
+                    dr[4] = 0;
+                    dr[5] = 0;
+                    dr[6] = 0;
+                    dsCompras1.solicitud_compras_detalle.Rows.Add(dr);
+                }
+                
+
+                
+
             }
            
 
@@ -192,30 +272,30 @@ namespace ERP_INTECOLI.Compras
             if (r != DialogResult.Yes)
                 return;
 
-            if (row.id > 0)
-            {
-                try
-                {
-                    DataOperations dp = new DataOperations();
-                    SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
-                    con.Open();
+            //if (row.id > 0)
+            //{
+            //    try
+            //    {
+            //        DataOperations dp = new DataOperations();
+            //        SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+            //        con.Open();
 
-                    SqlCommand cmd = new SqlCommand("", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@id", row.id);
-                    cmd.ExecuteNonQuery();
+            //        SqlCommand cmd = new SqlCommand("sp_delete_compras_solicitudes_detalle", con);
+            //        cmd.CommandType = CommandType.StoredProcedure;
+            //        cmd.Parameters.AddWithValue("@id", row.id);
+            //        cmd.ExecuteNonQuery();
 
-                    CargarSolicitud(IdSolicitudActual);
+            //        CargarSolicitud(IdSolicitudActual);
 
-                    con.Close();
-                }
-                catch (Exception ec)
-                {
-                    CajaDialogo.Error(ec.Message);
-                }
-            }
-            else
-            {
+            //        con.Close();
+            //    }
+            //    catch (Exception ec)
+            //    {
+            //        CajaDialogo.Error(ec.Message);
+            //    }
+            //}
+            //else
+            //{
                 try
                 {
                     grdvDetalle.DeleteRow(grdvDetalle.FocusedRowHandle);
@@ -224,7 +304,7 @@ namespace ERP_INTECOLI.Compras
                 {
                     CajaDialogo.Error(ec.Message);
                 }
-            }
+            //}
         }
 
         private void CargarSolicitud(int idSolicitudActual)
@@ -277,6 +357,11 @@ namespace ERP_INTECOLI.Compras
                 {
                     row.total = row.cantidad * row.precio;
                 }
+
+                if (e.Column.FieldName == "precio")
+                {
+                    row.total = row.cantidad * row.precio;
+                }
             }
             catch (Exception ex)
             {
@@ -299,10 +384,49 @@ namespace ERP_INTECOLI.Compras
                     dtFechaRegistro.Value = soli.Fecha_registro;
                     dtFechaContabilizacion.Value = soli.Fecha_contabilizacion;
                     txtComentarios.Text = soli.Comentario;
-
+                    IdEstadoSolicitud = soli.Id_estado;
                     loaddetalle(frm.IdSolicitudSeleccionado);
                     tipooperacion = TipoOperacion.Update;
                 }
+
+                switch (IdEstadoSolicitud)
+                {
+                    case 1://Nueva
+                        cmdNuevo.Enabled = true;
+                        cmdAddDetalle.Enabled = true;
+                        txtComentarios.Enabled = true;
+                        grDetalle.Enabled = true;
+                        dtFechaContabilizacion.Enabled = true;
+                        break;
+
+                    case 2://Abierta
+                        cmdNuevo.Enabled = true;
+                        cmdAddDetalle.Enabled = true;
+                        txtComentarios.Enabled = true;
+                        grDetalle.Enabled = true;
+                        dtFechaContabilizacion.Enabled = true;
+                        break;
+                        
+                    case 3://Cerrada
+                        cmdNuevo.Enabled = false;
+                        cmdAddDetalle.Enabled = false;
+                        txtComentarios.Enabled = false;
+                        grDetalle.Enabled = false;
+                        dtFechaContabilizacion.Enabled = false;
+                        break;
+
+                    case 4://Cancelada
+                        cmdNuevo.Enabled = false;
+                        cmdAddDetalle.Enabled = false;
+                        txtComentarios.Enabled = false;
+                        grDetalle.Enabled = false;
+                        dtFechaContabilizacion.Enabled = false;
+                        break;
+
+                    default:
+                        break;
+                }
+
             }
 
             cmdNuevo.Enabled = true;
@@ -318,12 +442,79 @@ namespace ERP_INTECOLI.Compras
             tipooperacion = TipoOperacion.New;
             dtFechaContabilizacion.Value = dp.Now();
             dtFechaRegistro.Value = dp.Now();
-            txtEstado.Text = "Creado";
+            txtEstado.Text = "Nueva";
+            IdSolicitudActual = 0;
 
             txtUsuarioCreador.Text = UsuarioLogueado.Nombre;
             dsCompras1.solicitud_compras_detalle.Clear();
             GetSigID();
 
+        }
+
+        private void barButtonCancelar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+
+            switch (tipooperacion)
+            {
+                case TipoOperacion.New:
+                    break;
+                case TipoOperacion.Update:
+                    CancelarSolicitud(IdSolicitudActual);
+                    break;
+                default:
+                    break;
+            }
+            
+        }
+
+        private void CancelarSolicitud(int pidSolicitudActual)
+        {
+            popupMenu1.HidePopup();
+            DialogResult r = CajaDialogo.Pregunta("¿Confirma que desea Cancelar esta Solicitud?");
+            if (r != DialogResult.Yes)
+                return;
+
+            try
+            {
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_solicitud_compra_cancelar", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idSolicitudActual", pidSolicitudActual);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+                CajaDialogo.Information("Soliciud Cancelada!");
+
+                cmdNuevo.Enabled = false;
+                cmdAddDetalle.Enabled = false;
+                txtComentarios.Enabled = false;
+                grDetalle.Enabled = false;
+                dtFechaContabilizacion.Enabled = false;
+
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
+        }
+
+        private void frmSolicitudesMain_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (IdSolicitudActual > 0)
+                {
+                    Solicitud soli = new Solicitud();
+                    soli.RecuperarRegistros(IdSolicitudActual);
+
+                    CancelarSolicitud(IdSolicitudActual);
+
+                   
+
+                }
+            }
         }
     }
 }
