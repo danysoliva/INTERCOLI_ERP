@@ -1534,6 +1534,9 @@
     <EmbeddedResource Include="Mantenimiento\Productos\frmItemsOP.resx">
       <DependentUpon>frmItemsOP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\Proveedor\frmProveedorCRUD.resx">
+      <DependentUpon>frmProveedorCRUD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\Proveedor\frmProveedorMain.resx">
       <DependentUpon>frmProveedorMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -2020,6 +2023,7 @@
     <None Include="Resources\proyeccion_32.png" />
     <None Include="Resources\presente_x32.png" />
     <None Include="Resources\ordenador-portatilx32.png" />
+    <None Include="Resources\proveedor_x32.png" />
     <Content Include="Resources\reaload_24x24.png" />
     <Content Include="Resources\reaload_32x32.png" />
     <Content Include="Resources\refresh-button32px.png" />
