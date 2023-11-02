@@ -279,6 +279,11 @@
     <Compile Include="Administracion\frmRecordatorio.Designer.cs">
       <DependentUpon>frmRecordatorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Niveles_Academicos\dsNivelesItems.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNivelesItems.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\ClientesPuntoVentaLP.cs" />
     <Compile Include="Clases\Conf_TablesID.cs" />
@@ -295,6 +300,7 @@
     <Compile Include="Clases\ListaPrecioPuntoVenta.cs" />
     <Compile Include="Clases\ListaPrecios.cs" />
     <Compile Include="Clases\ListToDataTable.cs" />
+    <Compile Include="Clases\Niveles.cs" />
     <Compile Include="Clases\Notas_CreditoDebito.cs" />
     <Compile Include="Clases\NumberToLetters.cs" />
     <Compile Include="Clases\ProductoTerminado.cs" />
@@ -728,6 +734,14 @@
     </Compile>
     <Compile Include="Facturacion\CoreFacturas\dsSearchWindow.Designer.cs" />
     <Compile Include="Facturacion\CoreFacturas\dsVentas1.Designer.cs" />
+    <Compile Include="Facturacion\CoreFacturas\dsVentaSuccess.cs">
+      <DependentUpon>dsVentaSuccess.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\dsVentaSuccess.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsVentaSuccess.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\dsBusquedas1.Designer.cs" />
     <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmFacturaBackup.cs">
       <SubType>Form</SubType>
@@ -1690,6 +1704,17 @@
     <None Include="Administracion\Movimientos\dsMovimientosSaldos.xss">
       <DependentUpon>dsMovimientosSaldos.xsd</DependentUpon>
     </None>
+    <None Include="Administracion\Niveles_Academicos\dsNivelesItems.xsc">
+      <DependentUpon>dsNivelesItems.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Niveles_Academicos\dsNivelesItems.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNivelesItems.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administracion\Niveles_Academicos\dsNivelesItems.xss">
+      <DependentUpon>dsNivelesItems.xsd</DependentUpon>
+    </None>
     <None Include="Administracion\Planilla\dsPlanilla.xsc">
       <DependentUpon>dsPlanilla.xsd</DependentUpon>
     </None>
@@ -1802,6 +1827,17 @@
     <None Include="Facturacion\CoreFacturas\dsVentas.xsd" />
     <None Include="Facturacion\CoreFacturas\dsVentas.xss">
       <DependentUpon>dsVentas.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsVentaSuccess.xsc">
+      <DependentUpon>dsVentaSuccess.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsVentaSuccess.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsVentaSuccess.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsVentaSuccess.xss">
+      <DependentUpon>dsVentaSuccess.xsd</DependentUpon>
     </None>
     <None Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\dsBusquedas.xsc">
       <DependentUpon>dsBusquedas.xsd</DependentUpon>

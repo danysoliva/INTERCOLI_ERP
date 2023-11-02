@@ -27,9 +27,7 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             InitializeComponent();
             UsuarioLogueado = pUserLogin;
             
-
             CargarNiveles();
-
 
         }
 
