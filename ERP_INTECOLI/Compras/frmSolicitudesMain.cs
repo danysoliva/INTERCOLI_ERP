@@ -413,6 +413,7 @@ namespace ERP_INTECOLI.Compras
                         txtComentarios.Enabled = false;
                         grDetalle.Enabled = false;
                         dtFechaContabilizacion.Enabled = false;
+                        cmdGuardar.Enabled = false;
                         break;
 
                     case 4://Cancelada
@@ -421,6 +422,7 @@ namespace ERP_INTECOLI.Compras
                         txtComentarios.Enabled = false;
                         grDetalle.Enabled = false;
                         dtFechaContabilizacion.Enabled = false;
+                        cmdGuardar.Enabled = false;
                         break;
 
                     default:
@@ -444,6 +446,12 @@ namespace ERP_INTECOLI.Compras
             dtFechaRegistro.Value = dp.Now();
             txtEstado.Text = "Nueva";
             IdSolicitudActual = 0;
+            txtComentarios.Clear();
+            txtComentarios.Enabled = true;
+            grDetalle.Enabled = true;
+            dtFechaContabilizacion.Enabled = true;
+            cmdGuardar.Enabled = true;
+            cmdAddDetalle.Enabled = true;
 
             txtUsuarioCreador.Text = UsuarioLogueado.Nombre;
             dsCompras1.solicitud_compras_detalle.Clear();
@@ -453,7 +461,9 @@ namespace ERP_INTECOLI.Compras
 
         private void barButtonCancelar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+            DialogResult r = CajaDialogo.Pregunta("¿Confirma que desea Cancelar esta Solicitud?");
+            if (r != DialogResult.Yes)
+                return;
 
             switch (tipooperacion)
             {
@@ -470,10 +480,10 @@ namespace ERP_INTECOLI.Compras
 
         private void CancelarSolicitud(int pidSolicitudActual)
         {
+           
+
             popupMenu1.HidePopup();
-            DialogResult r = CajaDialogo.Pregunta("¿Confirma que desea Cancelar esta Solicitud?");
-            if (r != DialogResult.Yes)
-                return;
+            
 
             try
             {
@@ -492,6 +502,7 @@ namespace ERP_INTECOLI.Compras
                 txtComentarios.Enabled = false;
                 grDetalle.Enabled = false;
                 dtFechaContabilizacion.Enabled = false;
+                txtComentarios.Text = "Cancelada";
 
             }
             catch (Exception ex)
@@ -506,13 +517,29 @@ namespace ERP_INTECOLI.Compras
             {
                 if (IdSolicitudActual > 0)
                 {
-                    Solicitud soli = new Solicitud();
-                    soli.RecuperarRegistros(IdSolicitudActual);
+                    popupMenu1.ShowPopup(Cursor.Position);
+                }
+            }
+        }
 
-                    CancelarSolicitud(IdSolicitudActual);
+        private void panelControl1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (IdSolicitudActual > 0)
+                {
+                    popupMenu1.ShowPopup(Cursor.Position);
+                }
+            }
+        }
 
-                   
-
+        private void grDetalle_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (IdSolicitudActual > 0)
+                {
+                    popupMenu1.ShowPopup(Cursor.Position);
                 }
             }
         }
