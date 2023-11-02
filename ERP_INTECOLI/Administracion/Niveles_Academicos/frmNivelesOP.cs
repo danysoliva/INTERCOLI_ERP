@@ -24,6 +24,7 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             Insert = 1,
             Update = 2
         }
+        Niveles NivelActual;
 
         private TipoOperacion TipoOP;
 
@@ -32,6 +33,9 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             InitializeComponent();
             TipoOP = pTipoOP;
             UsuarioLogueado = pUserLogin;
+            NivelActual = new Niveles();
+
+            LoadITEMS(pId_nivel);
             switch (TipoOP)
             {
                 case TipoOperacion.Insert:
@@ -49,6 +53,32 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
             }
         }
 
+        private void LoadITEMS(int pIdNivel)
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_get_detalle_pt_for_niveles_cursos", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idnivel", pIdNivel);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+                sqlDataAdapter.Fill(dsNivelesItems1.item_pt_selection);
+
+                if (NivelActual.CargarDatosPorId(pIdNivel))
+                {
+                    if (dsNivelesItems1.item_pt_selection.Rows.Count > 0)
+                        gridLookUpEdit1.EditValue = NivelActual.id_pt;
+                }
+                
+                conn.Close();
+            }
+            catch (Exception EX)
+            {
+                CajaDialogo.Error(EX.Message);
+            }
+        }
+
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -56,17 +86,28 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
             if (string.IsNullOrEmpty(txtDescripcion.Text))
             {
-                CajaDialogo.Error("No puede dejar vacio este campo!");
+                //CajaDialogo.Error("No puede dejar vacio este campo!");
+                errorProvider1.SetError(txtDescripcion, "No puede dejar vacio este campo!");
                 txtDescripcion.Focus();
                 return;
             }
 
             if (string.IsNullOrEmpty(txtValor.Text))
             {
-                CajaDialogo.Error("No puede dejar vacio este campo!");
+                //CajaDialogo.Error("No puede dejar vacio este campo!");
+                errorProvider1.SetError(txtDescripcion, "No puede dejar vacio este campo!");
                 txtValor.Focus();
+                return;
+            }
+
+            if (string.IsNullOrEmpty(gridLookUpEdit1.Text))
+            {
+                //CajaDialogo.Error("No puede dejar vacio este campo!");
+                errorProvider1.SetError(txtDescripcion, "No puede dejar vacio este campo!");
+                gridLookUpEdit1.Focus();
                 return;
             }
 
@@ -78,7 +119,7 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
                     {
                         SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                         conn.Open();
-                        SqlCommand cmd = new SqlCommand("sp_niveles_academicos_insert_update", conn);
+                        SqlCommand cmd = new SqlCommand("dbo.[sp_niveles_academicos_insert_update_v2]", conn);
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@id_nivel", 0);
                         cmd.Parameters.AddWithValue("@descripcion",txtDescripcion.Text);
@@ -86,6 +127,7 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
                         cmd.Parameters.AddWithValue("@habilitado", chkHabilitado.Checked);
                         cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogueado.Id);
                         cmd.Parameters.AddWithValue("@TipoOperacion", 1); //Insert
+                        cmd.Parameters.AddWithValue("@idpt", gridLookUpEdit1.EditValue); //Insert
                         cmd.ExecuteNonQuery();
                         conn.Close();
                     }
@@ -105,7 +147,7 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
                     {
                         SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                         conn.Open();
-                        SqlCommand cmd = new SqlCommand("sp_niveles_academicos_insert_update", conn);
+                        SqlCommand cmd = new SqlCommand("dbo.[sp_niveles_academicos_insert_update_v2]", conn);
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@id_nivel", id_nivel);
                         cmd.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
@@ -113,6 +155,7 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
                         cmd.Parameters.AddWithValue("@habilitado",chkHabilitado.Checked);
                         cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogueado.Id);
                         cmd.Parameters.AddWithValue("@TipoOperacion", 2);
+                        cmd.Parameters.AddWithValue("@idpt", gridLookUpEdit1.EditValue); //Update
                         cmd.ExecuteNonQuery();
                         conn.Close();
                     }
@@ -129,6 +172,11 @@ namespace ERP_INTECOLI.Administracion.Niveles_Academicos
                 default:
                     break;
             }
+
+        }
+
+        private void gridLookUpEdit1_EditValueChanged(object sender, EventArgs e)
+        {
 
         }
     }

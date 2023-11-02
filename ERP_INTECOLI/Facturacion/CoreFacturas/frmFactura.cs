@@ -173,6 +173,24 @@ namespace Eatery.Ventas
                         txtRTN.Text = "";
                     }
 
+                    //Vamos poner por defecto los cursos matriculados por el alumno mas los saldos
+                    try
+                    {
+                        SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand("dbo.sp_get_detalle_lineas_for_factura_by_estudiante", conn);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@id_estudiante", EstudianteFactura.IdEstudiante);
+                        SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                        dsVentaSuccess1.detalle_factura_transaction.Clear();
+                        adat.Fill(dsVentaSuccess1.detalle_factura_transaction);
+                        conn.Close();
+                    }
+                    catch (Exception EX)
+                    {
+                        CajaDialogo.Error(EX.Message);
+                    }
+
                     //SI hay lineas agregadas regeneraremos las validaciones de precios
                     if (dsVentas1.detalle_factura_transaction.Count > 0)
                     {
@@ -221,6 +239,8 @@ namespace Eatery.Ventas
                 }
             }
         }
+
+       
 
         private void cmdPlusAQ_Click(object sender, EventArgs e)
         {

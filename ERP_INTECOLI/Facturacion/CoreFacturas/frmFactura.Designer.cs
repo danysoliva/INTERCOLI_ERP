@@ -32,11 +32,11 @@ namespace Eatery.Ventas
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFactura));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.txtNombreCliente = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.cmdAbrirBusqueda = new DevExpress.XtraEditors.SimpleButton();
@@ -62,6 +62,7 @@ namespace Eatery.Ventas
             this.label2 = new System.Windows.Forms.Label();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.dsVentaSuccess1 = new ERP_INTECOLI.Facturacion.CoreFacturas.dsVentaSuccess();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid_pt1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colitemcode = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -76,6 +77,11 @@ namespace Eatery.Ventas
             this.colDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmdDeleteRowFactura = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colinventario = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colcurso_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_detalle = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_isv_aplicable = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colsaldo = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreCliente.Properties)).BeginInit();
             this.panelNotificacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsVentas1)).BeginInit();
@@ -85,6 +91,7 @@ namespace Eatery.Ventas
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRTN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsVentaSuccess1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdDeleteRowFactura)).BeginInit();
             this.SuspendLayout();
@@ -250,6 +257,7 @@ namespace Eatery.Ventas
             // 
             // navigationPage1
             // 
+            this.navigationPage1.Caption = "navigationPage1";
             this.navigationPage1.Controls.Add(this.rdCredito);
             this.navigationPage1.Controls.Add(this.rdContado);
             this.navigationPage1.Controls.Add(this.label4);
@@ -383,7 +391,7 @@ namespace Eatery.Ventas
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl1.DataMember = "detalle_factura_transaction";
-            this.gridControl1.DataSource = this.dsVentas1;
+            this.gridControl1.DataSource = this.dsVentaSuccess1;
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Location = new System.Drawing.Point(16, 162);
             this.gridControl1.MainView = this.gridView1;
@@ -395,6 +403,11 @@ namespace Eatery.Ventas
             this.gridControl1.TabIndex = 20;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // dsVentaSuccess1
+            // 
+            this.dsVentaSuccess1.DataSetName = "dsVentaSuccess";
+            this.dsVentaSuccess1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -414,7 +427,12 @@ namespace Eatery.Ventas
             this.colisv3,
             this.coltotal_linea,
             this.colDelete,
-            this.colinventario});
+            this.colinventario,
+            this.colcurso_id,
+            this.colid_detalle,
+            this.colid_estudiante,
+            this.colid_isv_aplicable,
+            this.colsaldo});
             this.gridView1.DetailHeight = 182;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.LevelIndent = 0;
@@ -436,7 +454,7 @@ namespace Eatery.Ventas
             this.colitemcode.OptionsColumn.ReadOnly = true;
             this.colitemcode.Visible = true;
             this.colitemcode.VisibleIndex = 0;
-            this.colitemcode.Width = 47;
+            this.colitemcode.Width = 88;
             // 
             // colitemname
             // 
@@ -445,26 +463,27 @@ namespace Eatery.Ventas
             this.colitemname.OptionsColumn.ReadOnly = true;
             this.colitemname.Visible = true;
             this.colitemname.VisibleIndex = 1;
-            this.colitemname.Width = 109;
+            this.colitemname.Width = 235;
             // 
             // colcantidad
             // 
             this.colcantidad.FieldName = "cantidad";
             this.colcantidad.Name = "colcantidad";
             this.colcantidad.Visible = true;
-            this.colcantidad.VisibleIndex = 3;
-            this.colcantidad.Width = 45;
+            this.colcantidad.VisibleIndex = 4;
+            this.colcantidad.Width = 55;
             // 
             // colprecio
             // 
+            this.colprecio.Caption = "Valor Curso";
             this.colprecio.DisplayFormat.FormatString = "n2";
             this.colprecio.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colprecio.FieldName = "precio";
             this.colprecio.Name = "colprecio";
             this.colprecio.OptionsColumn.ReadOnly = true;
             this.colprecio.Visible = true;
-            this.colprecio.VisibleIndex = 4;
-            this.colprecio.Width = 63;
+            this.colprecio.VisibleIndex = 5;
+            this.colprecio.Width = 131;
             // 
             // coldescuento
             // 
@@ -481,8 +500,8 @@ namespace Eatery.Ventas
             this.colisv1.Name = "colisv1";
             this.colisv1.OptionsColumn.ReadOnly = true;
             this.colisv1.Visible = true;
-            this.colisv1.VisibleIndex = 5;
-            this.colisv1.Width = 46;
+            this.colisv1.VisibleIndex = 6;
+            this.colisv1.Width = 96;
             // 
             // colisv2
             // 
@@ -502,8 +521,8 @@ namespace Eatery.Ventas
             this.coltotal_linea.Name = "coltotal_linea";
             this.coltotal_linea.OptionsColumn.ReadOnly = true;
             this.coltotal_linea.Visible = true;
-            this.coltotal_linea.VisibleIndex = 6;
-            this.coltotal_linea.Width = 76;
+            this.coltotal_linea.VisibleIndex = 7;
+            this.coltotal_linea.Width = 159;
             // 
             // colDelete
             // 
@@ -511,15 +530,15 @@ namespace Eatery.Ventas
             this.colDelete.ColumnEdit = this.cmdDeleteRowFactura;
             this.colDelete.Name = "colDelete";
             this.colDelete.Visible = true;
-            this.colDelete.VisibleIndex = 7;
-            this.colDelete.Width = 53;
+            this.colDelete.VisibleIndex = 8;
+            this.colDelete.Width = 133;
             // 
             // cmdDeleteRowFactura
             // 
             this.cmdDeleteRowFactura.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.cmdDeleteRowFactura.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.cmdDeleteRowFactura.Name = "cmdDeleteRowFactura";
             this.cmdDeleteRowFactura.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.cmdDeleteRowFactura.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cmdDeleteRowFactura_ButtonClick);
@@ -534,7 +553,38 @@ namespace Eatery.Ventas
             this.colinventario.OptionsColumn.ReadOnly = true;
             this.colinventario.Visible = true;
             this.colinventario.VisibleIndex = 2;
-            this.colinventario.Width = 48;
+            this.colinventario.Width = 67;
+            // 
+            // colcurso_id
+            // 
+            this.colcurso_id.FieldName = "curso_id";
+            this.colcurso_id.Name = "colcurso_id";
+            // 
+            // colid_detalle
+            // 
+            this.colid_detalle.FieldName = "id_detalle";
+            this.colid_detalle.Name = "colid_detalle";
+            // 
+            // colid_estudiante
+            // 
+            this.colid_estudiante.FieldName = "id_estudiante";
+            this.colid_estudiante.Name = "colid_estudiante";
+            // 
+            // colid_isv_aplicable
+            // 
+            this.colid_isv_aplicable.FieldName = "id_isv_aplicable";
+            this.colid_isv_aplicable.Name = "colid_isv_aplicable";
+            // 
+            // colsaldo
+            // 
+            this.colsaldo.DisplayFormat.FormatString = "n2";
+            this.colsaldo.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colsaldo.FieldName = "saldo";
+            this.colsaldo.Name = "colsaldo";
+            this.colsaldo.OptionsColumn.ReadOnly = true;
+            this.colsaldo.Visible = true;
+            this.colsaldo.VisibleIndex = 3;
+            this.colsaldo.Width = 100;
             // 
             // frmFactura
             // 
@@ -557,6 +607,7 @@ namespace Eatery.Ventas
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRTN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsVentaSuccess1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdDeleteRowFactura)).EndInit();
             this.ResumeLayout(false);
@@ -603,5 +654,11 @@ namespace Eatery.Ventas
         private System.Windows.Forms.RadioButton rdCredito;
         private System.Windows.Forms.RadioButton rdContado;
         private System.Windows.Forms.Label label4;
+        private ERP_INTECOLI.Facturacion.CoreFacturas.dsVentaSuccess dsVentaSuccess1;
+        private DevExpress.XtraGrid.Columns.GridColumn colcurso_id;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_detalle;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_estudiante;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_isv_aplicable;
+        private DevExpress.XtraGrid.Columns.GridColumn colsaldo;
     }
 }
