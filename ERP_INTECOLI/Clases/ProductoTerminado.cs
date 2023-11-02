@@ -174,47 +174,47 @@ namespace ERP_INTECOLI.Clases
                 {
 
                     Id = dl.GetInt32(0);
-                    enable = dl.GetBoolean(1);
-                    id_user_created = dl.GetInt32(2);
-                    usuario_nombre = dl.GetString(3);
-                    id_presentacion = dl.GetInt32(4);
-                    Presentacion_name = dl.GetString(5);
-                    id_estado = dl.GetInt32(6);
-                    Descripcion = dl.GetString(7);
-                    code = dl.GetString(8);
-                    fecha = dl.GetDateTime(9);
-                    tipo_id = dl.GetInt32(10);
-                    TipoDescripcion = dl.GetString(11);
-                    EstadoDescripcion = dl.GetString(12);
-                    CostoDeMO_porArrobaBit = dl.GetBoolean(13);
-                    CostoPorArroba = dl.GetDecimal(14);
+                    Enable = dl.GetBoolean(1);
+                    Id_user_created = dl.GetInt32(2);
+                    Usuario_nombre = dl.GetString(3);
+                    //id_presentacion = dl.GetInt32(4);
+                    //Presentacion_name = dl.GetString(5);
+                    Id_estado = dl.GetInt32(4);
+                    Descripcion = dl.GetString(5);
+                    Code = dl.GetString(6);
+                    //fecha = dl.GetDateTime(9);
+                    //tipo_id = dl.GetInt32(10);
+                    //TipoDescripcion = dl.GetString(11);
+                    //EstadoDescripcion = dl.GetString(12);
+                    //CostoDeMO_porArrobaBit = dl.GetBoolean(13);
+                    //CostoPorArroba = dl.GetDecimal(14);
 
-                    if (!dl.IsDBNull(dl.GetOrdinal("id_tipo_facturacion")))
-                        tipo_facturacion_id = dl.GetInt32(15);
+                    //if (!dl.IsDBNull(dl.GetOrdinal("id_tipo_facturacion")))
+                    //    tipo_facturacion_id = dl.GetInt32(15);
 
-                    if (!dl.IsDBNull(dl.GetOrdinal("id_tipo_buffet")))
-                        tipo_buffet_id = dl.GetInt32(16);
+                    //if (!dl.IsDBNull(dl.GetOrdinal("id_tipo_buffet")))
+                    //    tipo_buffet_id = dl.GetInt32(16);
 
-                    //if (!dl.IsDBNull(dl.GetOrdinal("id_tipo_facturacion_prd")))
-                    //    id_tipo_facturacion_prd = dl.GetInt32(17);
+                    ////if (!dl.IsDBNull(dl.GetOrdinal("id_tipo_facturacion_prd")))
+                    ////    id_tipo_facturacion_prd = dl.GetInt32(17);
 
-                    //if (!dl.IsDBNull(dl.GetOrdinal("tipo_facturacion_prd")))
-                    //    TipoFacturacion_prd_name = dl.GetString(18);
+                    ////if (!dl.IsDBNull(dl.GetOrdinal("tipo_facturacion_prd")))
+                    ////    TipoFacturacion_prd_name = dl.GetString(18);
 
-                    if (!dl.IsDBNull(dl.GetOrdinal("id_clase")))
-                        _id_clase = dl.GetInt32(19);
-                    else
-                        _id_clase = 0;
+                    //if (!dl.IsDBNull(dl.GetOrdinal("id_clase")))
+                    //    _id_clase = dl.GetInt32(19);
+                    //else
+                    //    _id_clase = 0;
 
-                    if (!dl.IsDBNull(dl.GetOrdinal("id_isv_aplicable")))
-                        _id_isv_aplicable = dl.GetInt32(20);
-                    else
-                        _id_isv_aplicable = 0;
+                    //if (!dl.IsDBNull(dl.GetOrdinal("id_isv_aplicable")))
+                    //    _id_isv_aplicable = dl.GetInt32(20);
+                    //else
+                    //    _id_isv_aplicable = 0;
 
                     Recuperado = true;
-                    Recuperar_Latas_and_bolsas(IdProd);
+                    //Recuperar_Latas_and_bolsas(IdProd);
 
-                    CantInventarioKardex = Recuperar_Cant_Inv_Actual_by_PT(IdProd);
+                    //CantInventarioKardex = Recuperar_Cant_Inv_Actual_by_PT(IdProd);
                     //CantInventarioKardexFor_Facturacion = Recuperar_Cant_Inv_Actual_PT_for_facturacion(IdProd);    
                 }
             }

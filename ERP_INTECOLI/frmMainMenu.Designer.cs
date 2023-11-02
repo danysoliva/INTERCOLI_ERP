@@ -61,6 +61,9 @@ namespace ERP_INTECOLI
             this.nbPagoMultiple = new DevExpress.XtraNavBar.NavBarItem();
             this.nbNotasCredito = new DevExpress.XtraNavBar.NavBarItem();
             this.nbCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navSolicCompras = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navNuevoRecordatorio = new DevExpress.XtraNavBar.NavBarItem();
             this.TabMantenimientos = new DevExpress.XtraTab.XtraTabPage();
@@ -77,6 +80,7 @@ namespace ERP_INTECOLI
             this.navNivelesAcademicos = new DevExpress.XtraNavBar.NavBarItem();
             this.navInstructores = new DevExpress.XtraNavBar.NavBarItem();
             this.navCRUDEmpresa = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarProducto = new DevExpress.XtraNavBar.NavBarItem();
             this.TabConsultas = new DevExpress.XtraTab.XtraTabPage();
             this.navBarControl3 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -96,8 +100,6 @@ namespace ERP_INTECOLI
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblServerName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navSolicCompras = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).BeginInit();
             this.xtraTabControlMenu.SuspendLayout();
             this.TabAdministracion.SuspendLayout();
@@ -171,7 +173,8 @@ namespace ERP_INTECOLI
             this.nbPagoMultiple,
             this.nbNotasCredito,
             this.nbCierreCaja,
-            this.navSolicCompras});
+            this.navSolicCompras,
+            this.navBarItem1});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 242;
@@ -245,6 +248,7 @@ namespace ERP_INTECOLI
             // navBarGroup2
             // 
             this.navBarGroup2.Caption = "Transacciones";
+            this.navBarGroup2.Expanded = true;
             this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navPostearMensualidad),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navMovimientoSaldos),
@@ -386,6 +390,28 @@ namespace ERP_INTECOLI
             this.nbCierreCaja.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbCierreCaja.ImageOptions.SmallImage")));
             this.nbCierreCaja.Name = "nbCierreCaja";
             // 
+            // navBarGroup3
+            // 
+            this.navBarGroup3.Caption = "Compras";
+            this.navBarGroup3.Expanded = true;
+            this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navSolicCompras),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1)});
+            this.navBarGroup3.Name = "navBarGroup3";
+            // 
+            // navSolicCompras
+            // 
+            this.navSolicCompras.Caption = "Solicitudes de Compra";
+            this.navSolicCompras.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.solicitud_compra_x32;
+            this.navSolicCompras.Name = "navSolicCompras";
+            this.navSolicCompras.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navSolicCompras_LinkClicked);
+            // 
+            // navBarItem1
+            // 
+            this.navBarItem1.Caption = "Ordenes de Compra";
+            this.navBarItem1.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.orden_compra_x32;
+            this.navBarItem1.Name = "navBarItem1";
+            // 
             // navBarGroup4
             // 
             this.navBarGroup4.Caption = "Recordatorios";
@@ -423,7 +449,8 @@ namespace ERP_INTECOLI
             this.navNivelesAcademicos,
             this.navInstructores,
             this.navGruposUsuarios,
-            this.navCRUDEmpresa});
+            this.navCRUDEmpresa,
+            this.navBarProducto});
             this.navBarControl2.Location = new System.Drawing.Point(4, 4);
             this.navBarControl2.Name = "navBarControl2";
             this.navBarControl2.OptionsNavPane.ExpandedWidth = 238;
@@ -480,7 +507,8 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.navDocFiscales),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navNivelesAcademicos),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navInstructores),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navCRUDEmpresa)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navCRUDEmpresa),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarProducto)});
             this.navBarGroup7.Name = "navBarGroup7";
             // 
             // navCrudCursos
@@ -524,6 +552,13 @@ namespace ERP_INTECOLI
             this.navCRUDEmpresa.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navCRUDEmpresa.ImageOptions.SmallImage")));
             this.navCRUDEmpresa.Name = "navCRUDEmpresa";
             this.navCRUDEmpresa.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navCRUDEmpresa_LinkClicked);
+            // 
+            // navBarProducto
+            // 
+            this.navBarProducto.Caption = "Productos";
+            this.navBarProducto.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarProducto.ImageOptions.SvgImage")));
+            this.navBarProducto.Name = "navBarProducto";
+            this.navBarProducto.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarProducto_LinkClicked);
             // 
             // TabConsultas
             // 
@@ -694,20 +729,6 @@ namespace ERP_INTECOLI
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(0, 17);
             // 
-            // navBarGroup3
-            // 
-            this.navBarGroup3.Caption = "Compras";
-            this.navBarGroup3.Expanded = true;
-            this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navSolicCompras)});
-            this.navBarGroup3.Name = "navBarGroup3";
-            // 
-            // navSolicCompras
-            // 
-            this.navSolicCompras.Caption = "Solicitudes de Compra";
-            this.navSolicCompras.Name = "navSolicCompras";
-            this.navSolicCompras.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navSolicCompras_LinkClicked);
-            // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -803,5 +824,7 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navCRUDEmpresa;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup3;
         private DevExpress.XtraNavBar.NavBarItem navSolicCompras;
+        private DevExpress.XtraNavBar.NavBarItem navBarProducto;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
     }
 }
