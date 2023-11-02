@@ -284,7 +284,7 @@ namespace ERP_INTECOLI.Clases
             decimal val = 0;
             try
             {//Recupera las caracteristicas 
-                string sql = @"[codesahn].[jaguar_sp_get_cantidad_inv_kardex_pt_for_facturacion_v2]";
+                string sql = @"dbo.[jaguar_sp_get_cantidad_inv_kardex_pt_for_facturacion]";
                 DataOperations dp = new DataOperations();
 
                 SqlConnection con = new SqlConnection(dp.ConnectionStringERP);

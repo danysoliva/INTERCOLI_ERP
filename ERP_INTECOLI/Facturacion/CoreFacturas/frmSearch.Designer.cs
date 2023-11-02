@@ -208,10 +208,11 @@ namespace LOSA.Calidad.LoteConfConsumo
             this.navigationFrameSearch.Size = new System.Drawing.Size(646, 412);
             this.navigationFrameSearch.TabIndex = 12;
             this.navigationFrameSearch.Text = "navigationFrame1";
+            this.navigationFrameSearch.TransitionAnimationProperties.FrameCount = 500;
+            this.navigationFrameSearch.TransitionAnimationProperties.FrameInterval = 5000;
             // 
             // navigationPage1
             // 
-            this.navigationPage1.Caption = "navigationPage1";
             this.navigationPage1.Controls.Add(this.cmdSiguiente);
             this.navigationPage1.Controls.Add(this.labelControl1);
             this.navigationPage1.Controls.Add(this.cmdAplicar);

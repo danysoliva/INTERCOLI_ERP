@@ -149,7 +149,7 @@ namespace LOSA.Calidad.LoteConfConsumo
                 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@parametro_busqueda", Convert.ToInt32(TipoBusquedaActual));
-                cmd.Parameters.AddWithValue("@tipo_facturacion", this.PuntoVentaActual.FacturaComidaBuffet);
+                //cmd.Parameters.AddWithValue("@tipo_facturacion", this.PuntoVentaActual.FacturaComidaBuffet);
                 cmd.Parameters.AddWithValue("@id_punto_venta", this.PuntoVentaActual.ID);
 
                 dsConfigLoteConsumo1.search_mp.Clear();
