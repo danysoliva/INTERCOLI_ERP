@@ -57,7 +57,6 @@ namespace ERP_INTECOLI.Compras
             this.repositoryItemGrdItem = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.cmdAddDetalle = new DevExpress.XtraEditors.SimpleButton();
             this.dtFechaContabilizacion = new System.Windows.Forms.DateTimePicker();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.dtFechaRegistro = new System.Windows.Forms.DateTimePicker();
@@ -74,6 +73,7 @@ namespace ERP_INTECOLI.Compras
             this.cmdBuscar = new DevExpress.XtraEditors.SimpleButton();
             this.cmdSiguiente = new DevExpress.XtraEditors.SimpleButton();
             this.cmdAnterior = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdAddDetalle = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.txtComentarios = new System.Windows.Forms.TextBox();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
@@ -117,6 +117,7 @@ namespace ERP_INTECOLI.Compras
             this.grDetalle.TabIndex = 49;
             this.grDetalle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvDetalle});
+            this.grDetalle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.grDetalle_MouseDown);
             // 
             // dsCompras1
             // 
@@ -269,19 +270,7 @@ namespace ERP_INTECOLI.Compras
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1122, 133);
             this.panelControl1.TabIndex = 50;
-            // 
-            // cmdAddDetalle
-            // 
-            this.cmdAddDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdAddDetalle.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.cmdAddDetalle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdAddDetalle.ImageOptions.SvgImage")));
-            this.cmdAddDetalle.Location = new System.Drawing.Point(7, 139);
-            this.cmdAddDetalle.Name = "cmdAddDetalle";
-            this.cmdAddDetalle.Size = new System.Drawing.Size(47, 33);
-            this.cmdAddDetalle.TabIndex = 66;
-            this.cmdAddDetalle.Tag = "Agregar Item o Servicio";
-            this.cmdAddDetalle.ToolTip = "Guardar";
-            this.cmdAddDetalle.Click += new System.EventHandler(this.cmdAddDetalle_Click);
+            this.panelControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControl1_MouseDown);
             // 
             // dtFechaContabilizacion
             // 
@@ -448,6 +437,7 @@ namespace ERP_INTECOLI.Compras
             this.cmdSiguiente.Size = new System.Drawing.Size(47, 33);
             this.cmdSiguiente.TabIndex = 48;
             this.cmdSiguiente.ToolTip = "Siguiente";
+            this.cmdSiguiente.Click += new System.EventHandler(this.cmdSiguiente_Click);
             // 
             // cmdAnterior
             // 
@@ -458,6 +448,20 @@ namespace ERP_INTECOLI.Compras
             this.cmdAnterior.Size = new System.Drawing.Size(47, 33);
             this.cmdAnterior.TabIndex = 47;
             this.cmdAnterior.ToolTip = "Anterior";
+            this.cmdAnterior.Click += new System.EventHandler(this.cmdAnterior_Click);
+            // 
+            // cmdAddDetalle
+            // 
+            this.cmdAddDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdAddDetalle.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.cmdAddDetalle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdAddDetalle.ImageOptions.SvgImage")));
+            this.cmdAddDetalle.Location = new System.Drawing.Point(7, 139);
+            this.cmdAddDetalle.Name = "cmdAddDetalle";
+            this.cmdAddDetalle.Size = new System.Drawing.Size(47, 33);
+            this.cmdAddDetalle.TabIndex = 66;
+            this.cmdAddDetalle.Tag = "Agregar Item o Servicio";
+            this.cmdAddDetalle.ToolTip = "Guardar";
+            this.cmdAddDetalle.Click += new System.EventHandler(this.cmdAddDetalle_Click);
             // 
             // panelControl2
             // 
@@ -565,8 +569,9 @@ namespace ERP_INTECOLI.Compras
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.IconOptions.ShowIcon = false;
+            this.IconOptions.Image = global::ERP_INTECOLI.Properties.Resources.solicitud_compra_x32;
             this.Name = "frmSolicitudesMain";
+            this.Text = "Solicitudes de Compra";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmSolicitudesMain_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).EndInit();

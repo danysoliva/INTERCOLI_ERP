@@ -343,6 +343,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCompras.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Compras\frmOrdenesCompraMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\frmOrdenesCompraMain.Designer.cs">
+      <DependentUpon>frmOrdenesCompraMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Compras\frmSearchSolicitud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1269,6 +1275,9 @@
     <EmbeddedResource Include="Administracion\frmRecordatorio.resx">
       <DependentUpon>frmRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Compras\frmOrdenesCompraMain.resx">
+      <DependentUpon>frmOrdenesCompraMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Compras\frmSearchSolicitud.resx">
       <DependentUpon>frmSearchSolicitud.cs</DependentUpon>
     </EmbeddedResource>
@@ -1562,6 +1571,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\Productos\frmItemsOP.resx">
       <DependentUpon>frmItemsOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\Proveedor\frmProveedorCRUD.resx">
+      <DependentUpon>frmProveedorCRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\Proveedor\frmProveedorMain.resx">
       <DependentUpon>frmProveedorMain.cs</DependentUpon>
@@ -2050,6 +2062,7 @@
     <None Include="Resources\proyeccion_32.png" />
     <None Include="Resources\presente_x32.png" />
     <None Include="Resources\ordenador-portatilx32.png" />
+    <None Include="Resources\proveedor_x32.png" />
     <Content Include="Resources\reaload_24x24.png" />
     <Content Include="Resources\reaload_32x32.png" />
     <Content Include="Resources\refresh-button32px.png" />

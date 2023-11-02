@@ -34,7 +34,8 @@ namespace LOSA.Calidad.LoteConfConsumo
             MaterialEmpaque = 6,
             Reproceso = 7,
             Clientes = 8,
-            PuntosDeVenta = 9
+            PuntosDeVenta = 9,
+            Proveedores = 10
         }
 
         public enum TipoFacturacion
@@ -77,6 +78,9 @@ namespace LOSA.Calidad.LoteConfConsumo
                     LoadData();
                     break;
                 case TipoBusqueda.PuntosDeVenta:
+                    LoadData();
+                    break;
+                case TipoBusqueda.Proveedores:
                     LoadData();
                     break;
                 default:

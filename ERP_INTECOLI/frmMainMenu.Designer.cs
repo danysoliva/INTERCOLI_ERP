@@ -61,9 +61,39 @@ namespace ERP_INTECOLI
             this.nbPagoMultiple = new DevExpress.XtraNavBar.NavBarItem();
             this.nbNotasCredito = new DevExpress.XtraNavBar.NavBarItem();
             this.nbCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
-            this.navSolicCompras = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navNuevoRecordatorio = new DevExpress.XtraNavBar.NavBarItem();
+            this.navSolicCompras = new DevExpress.XtraNavBar.NavBarItem();
+            this.TabCompras = new DevExpress.XtraTab.XtraTabPage();
+            this.navBarControl4 = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarGroup11 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarSolicitudesCompras = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarOrdenesCompras = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarSeparatorItem6 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
+            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarSeparatorItem7 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
+            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarSeparatorItem8 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
+            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem13 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem14 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarSeparatorItem9 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
+            this.navBarSeparatorItem10 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
+            this.navBarItem15 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem16 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem17 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem18 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem19 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem20 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
             this.TabMantenimientos = new DevExpress.XtraTab.XtraTabPage();
             this.navBarControl2 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -79,6 +109,7 @@ namespace ERP_INTECOLI
             this.navInstructores = new DevExpress.XtraNavBar.NavBarItem();
             this.navCRUDEmpresa = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarProducto = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarProveedores = new DevExpress.XtraNavBar.NavBarItem();
             this.TabConsultas = new DevExpress.XtraTab.XtraTabPage();
             this.navBarControl3 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -98,48 +129,18 @@ namespace ERP_INTECOLI
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblServerName = new System.Windows.Forms.ToolStripStatusLabel();
-            this.TabCompras = new DevExpress.XtraTab.XtraTabPage();
             this.navBarGroup8 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarControl4 = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarSeparatorItem6 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarSeparatorItem7 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarSeparatorItem8 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem8 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem13 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem14 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarSeparatorItem9 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navBarSeparatorItem10 = new DevExpress.XtraNavBar.NavBarSeparatorItem();
-            this.navBarItem15 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem16 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem17 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem18 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem19 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem20 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem21 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup11 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarSolicitudesCompras = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarOrdenesCompras = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControlMenu)).BeginInit();
             this.xtraTabControlMenu.SuspendLayout();
             this.TabAdministracion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
+            this.TabCompras.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl4)).BeginInit();
             this.TabMantenimientos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).BeginInit();
             this.TabConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl3)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            this.TabCompras.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl4)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControlMenu
@@ -420,13 +421,6 @@ namespace ERP_INTECOLI
             this.nbCierreCaja.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("nbCierreCaja.ImageOptions.SmallImage")));
             this.nbCierreCaja.Name = "nbCierreCaja";
             // 
-            // navSolicCompras
-            // 
-            this.navSolicCompras.Caption = "Solicitudes de Compra";
-            this.navSolicCompras.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.solicitud_compra_x32;
-            this.navSolicCompras.Name = "navSolicCompras";
-            this.navSolicCompras.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navSolicCompras_LinkClicked);
-            // 
             // navBarGroup4
             // 
             this.navBarGroup4.Caption = "Recordatorios";
@@ -440,6 +434,249 @@ namespace ERP_INTECOLI
             this.navNuevoRecordatorio.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.recordatorio_x32;
             this.navNuevoRecordatorio.Name = "navNuevoRecordatorio";
             this.navNuevoRecordatorio.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navNuevoRecordatorio_LinkClicked);
+            // 
+            // navSolicCompras
+            // 
+            this.navSolicCompras.Caption = "Solicitudes de Compra";
+            this.navSolicCompras.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.solicitud_compra_x32;
+            this.navSolicCompras.Name = "navSolicCompras";
+            this.navSolicCompras.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navSolicCompras_LinkClicked);
+            // 
+            // TabCompras
+            // 
+            this.TabCompras.Controls.Add(this.navBarControl4);
+            this.TabCompras.Name = "TabCompras";
+            this.TabCompras.Size = new System.Drawing.Size(245, 734);
+            this.TabCompras.Text = "Compras";
+            // 
+            // navBarControl4
+            // 
+            this.navBarControl4.ActiveGroup = this.navBarGroup11;
+            this.navBarControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.navBarControl4.BackColor = System.Drawing.Color.White;
+            this.navBarControl4.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.navBarGroup11});
+            this.navBarControl4.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.navBarItem2,
+            this.navBarSeparatorItem6,
+            this.navBarItem3,
+            this.navBarSeparatorItem7,
+            this.navBarItem4,
+            this.navBarSeparatorItem8,
+            this.navBarItem5,
+            this.navBarItem7,
+            this.navBarItem8,
+            this.navBarItem9,
+            this.navBarItem10,
+            this.navBarItem11,
+            this.navBarItem12,
+            this.navBarItem13,
+            this.navBarItem14,
+            this.navBarItem24,
+            this.navBarSeparatorItem9,
+            this.navBarSeparatorItem10,
+            this.navBarItem15,
+            this.navBarItem16,
+            this.navBarItem17,
+            this.navBarItem18,
+            this.navBarItem19,
+            this.navBarItem20,
+            this.navBarItem21,
+            this.navBarSolicitudesCompras,
+            this.navBarOrdenesCompras});
+            this.navBarControl4.Location = new System.Drawing.Point(1, 3);
+            this.navBarControl4.Name = "navBarControl4";
+            this.navBarControl4.OptionsNavPane.ExpandedWidth = 242;
+            this.navBarControl4.Size = new System.Drawing.Size(242, 712);
+            this.navBarControl4.TabIndex = 1;
+            this.navBarControl4.Text = "navBarControl4";
+            // 
+            // navBarGroup11
+            // 
+            this.navBarGroup11.Caption = "Compras";
+            this.navBarGroup11.Expanded = true;
+            this.navBarGroup11.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSolicitudesCompras),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarOrdenesCompras)});
+            this.navBarGroup11.Name = "navBarGroup11";
+            // 
+            // navBarSolicitudesCompras
+            // 
+            this.navBarSolicitudesCompras.Caption = "Solicitudes de Compra";
+            this.navBarSolicitudesCompras.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.solicitud_compra_x32;
+            this.navBarSolicitudesCompras.Name = "navBarSolicitudesCompras";
+            this.navBarSolicitudesCompras.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarSolicitudesCompras_LinkClicked);
+            // 
+            // navBarOrdenesCompras
+            // 
+            this.navBarOrdenesCompras.Caption = "Ordenes de Compra";
+            this.navBarOrdenesCompras.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.orden_compra_x32;
+            this.navBarOrdenesCompras.Name = "navBarOrdenesCompras";
+            this.navBarOrdenesCompras.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarOrdenesCompras_LinkClicked);
+            // 
+            // navBarItem2
+            // 
+            this.navBarItem2.Caption = "Desconectar";
+            this.navBarItem2.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem2.ImageOptions.SmallImage")));
+            this.navBarItem2.Name = "navBarItem2";
+            // 
+            // navBarSeparatorItem6
+            // 
+            this.navBarSeparatorItem6.CanDrag = false;
+            this.navBarSeparatorItem6.Enabled = false;
+            this.navBarSeparatorItem6.Hint = null;
+            this.navBarSeparatorItem6.Name = "navBarSeparatorItem6";
+            // 
+            // navBarItem3
+            // 
+            this.navBarItem3.Caption = "Estudiantes";
+            this.navBarItem3.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.Estudiantex32;
+            this.navBarItem3.Name = "navBarItem3";
+            // 
+            // navBarSeparatorItem7
+            // 
+            this.navBarSeparatorItem7.CanDrag = false;
+            this.navBarSeparatorItem7.Enabled = false;
+            this.navBarSeparatorItem7.Hint = null;
+            this.navBarSeparatorItem7.Name = "navBarSeparatorItem7";
+            // 
+            // navBarItem4
+            // 
+            this.navBarItem4.Caption = "Matricula";
+            this.navBarItem4.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.matriculax32;
+            this.navBarItem4.Name = "navBarItem4";
+            // 
+            // navBarSeparatorItem8
+            // 
+            this.navBarSeparatorItem8.CanDrag = false;
+            this.navBarSeparatorItem8.Enabled = false;
+            this.navBarSeparatorItem8.Hint = null;
+            this.navBarSeparatorItem8.Name = "navBarSeparatorItem8";
+            // 
+            // navBarItem5
+            // 
+            this.navBarItem5.Caption = "Consultar Matriculados";
+            this.navBarItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem5.ImageOptions.SvgImage")));
+            this.navBarItem5.Name = "navBarItem5";
+            // 
+            // navBarItem7
+            // 
+            this.navBarItem7.Appearance.Options.UseTextOptions = true;
+            this.navBarItem7.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.navBarItem7.Caption = "Posteo de Pagos - Recibos";
+            this.navBarItem7.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.cash_icon24px;
+            this.navBarItem7.Name = "navBarItem7";
+            this.navBarItem7.Visible = false;
+            // 
+            // navBarItem8
+            // 
+            this.navBarItem8.Appearance.Options.UseTextOptions = true;
+            this.navBarItem8.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.navBarItem8.Caption = "Movimientos Cobros Estudiantes";
+            this.navBarItem8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem8.ImageOptions.SvgImage")));
+            this.navBarItem8.Name = "navBarItem8";
+            this.navBarItem8.Visible = false;
+            // 
+            // navBarItem9
+            // 
+            this.navBarItem9.Caption = "Planilla";
+            this.navBarItem9.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem9.ImageOptions.SmallImage")));
+            this.navBarItem9.Name = "navBarItem9";
+            // 
+            // navBarItem10
+            // 
+            this.navBarItem10.Caption = "Caja";
+            this.navBarItem10.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.caja_registradorax32;
+            this.navBarItem10.Name = "navBarItem10";
+            this.navBarItem10.Visible = false;
+            // 
+            // navBarItem11
+            // 
+            this.navBarItem11.Caption = "Matricula Rapida";
+            this.navBarItem11.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem11.ImageOptions.SvgImage")));
+            this.navBarItem11.Name = "navBarItem11";
+            // 
+            // navBarItem12
+            // 
+            this.navBarItem12.Caption = "Marca Asistencia Manual";
+            this.navBarItem12.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.seguro_32x;
+            this.navBarItem12.Name = "navBarItem12";
+            this.navBarItem12.Visible = false;
+            // 
+            // navBarItem13
+            // 
+            this.navBarItem13.Caption = "Estado de Cuenta";
+            this.navBarItem13.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.presupuestox32;
+            this.navBarItem13.Name = "navBarItem13";
+            // 
+            // navBarItem14
+            // 
+            this.navBarItem14.Caption = "Reserva de Cupo";
+            this.navBarItem14.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.reservadox32;
+            this.navBarItem14.Name = "navBarItem14";
+            // 
+            // navBarItem24
+            // 
+            this.navBarItem24.Caption = "Nuevo Recordatorio";
+            this.navBarItem24.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.recordatorio_x32;
+            this.navBarItem24.Name = "navBarItem24";
+            // 
+            // navBarSeparatorItem9
+            // 
+            this.navBarSeparatorItem9.CanDrag = false;
+            this.navBarSeparatorItem9.Enabled = false;
+            this.navBarSeparatorItem9.Hint = null;
+            this.navBarSeparatorItem9.Name = "navBarSeparatorItem9";
+            // 
+            // navBarSeparatorItem10
+            // 
+            this.navBarSeparatorItem10.CanDrag = false;
+            this.navBarSeparatorItem10.Enabled = false;
+            this.navBarSeparatorItem10.Hint = null;
+            this.navBarSeparatorItem10.Name = "navBarSeparatorItem10";
+            // 
+            // navBarItem15
+            // 
+            this.navBarItem15.Caption = "Facturación";
+            this.navBarItem15.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem15.ImageOptions.SvgImage")));
+            this.navBarItem15.Name = "navBarItem15";
+            // 
+            // navBarItem16
+            // 
+            this.navBarItem16.Caption = "Facturas Emitidas";
+            this.navBarItem16.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem16.ImageOptions.SvgImage")));
+            this.navBarItem16.Name = "navBarItem16";
+            // 
+            // navBarItem17
+            // 
+            this.navBarItem17.Caption = "Estado de Cuenta";
+            this.navBarItem17.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem17.ImageOptions.SvgImage")));
+            this.navBarItem17.Name = "navBarItem17";
+            // 
+            // navBarItem18
+            // 
+            this.navBarItem18.Caption = "Solicitudes de Autorizaciones";
+            this.navBarItem18.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem18.ImageOptions.SmallImage")));
+            this.navBarItem18.Name = "navBarItem18";
+            // 
+            // navBarItem19
+            // 
+            this.navBarItem19.Caption = "Pago Múltiple";
+            this.navBarItem19.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem19.ImageOptions.SmallImage")));
+            this.navBarItem19.Name = "navBarItem19";
+            // 
+            // navBarItem20
+            // 
+            this.navBarItem20.Caption = "Notas Crédito/Débito";
+            this.navBarItem20.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem20.ImageOptions.SmallImage")));
+            this.navBarItem20.Name = "navBarItem20";
+            // 
+            // navBarItem21
+            // 
+            this.navBarItem21.Caption = "Cierre de Caja";
+            this.navBarItem21.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem21.ImageOptions.SmallImage")));
+            this.navBarItem21.Name = "navBarItem21";
             // 
             // TabMantenimientos
             // 
@@ -465,7 +702,8 @@ namespace ERP_INTECOLI
             this.navInstructores,
             this.navGruposUsuarios,
             this.navCRUDEmpresa,
-            this.navBarProducto});
+            this.navBarProducto,
+            this.navBarProveedores});
             this.navBarControl2.Location = new System.Drawing.Point(4, 4);
             this.navBarControl2.Name = "navBarControl2";
             this.navBarControl2.OptionsNavPane.ExpandedWidth = 238;
@@ -523,7 +761,8 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.navNivelesAcademicos),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navInstructores),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navCRUDEmpresa),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarProducto)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarProducto),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarProveedores)});
             this.navBarGroup7.Name = "navBarGroup7";
             // 
             // navCrudCursos
@@ -574,6 +813,13 @@ namespace ERP_INTECOLI
             this.navBarProducto.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarProducto.ImageOptions.SvgImage")));
             this.navBarProducto.Name = "navBarProducto";
             this.navBarProducto.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarProducto_LinkClicked);
+            // 
+            // navBarProveedores
+            // 
+            this.navBarProveedores.Caption = "Proveedores";
+            this.navBarProveedores.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.proveedor_x32;
+            this.navBarProveedores.Name = "navBarProveedores";
+            this.navBarProveedores.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarProveedores_LinkClicked);
             // 
             // TabConsultas
             // 
@@ -744,13 +990,6 @@ namespace ERP_INTECOLI
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(0, 17);
             // 
-            // TabCompras
-            // 
-            this.TabCompras.Controls.Add(this.navBarControl4);
-            this.TabCompras.Name = "TabCompras";
-            this.TabCompras.Size = new System.Drawing.Size(245, 734);
-            this.TabCompras.Text = "Compras";
-            // 
             // navBarGroup8
             // 
             this.navBarGroup8.Caption = "Consultas - Reportes";
@@ -770,235 +1009,6 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.navDistribucioZonaResidencial)});
             this.navBarGroup8.Name = "navBarGroup8";
             // 
-            // navBarControl4
-            // 
-            this.navBarControl4.ActiveGroup = this.navBarGroup11;
-            this.navBarControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.navBarControl4.BackColor = System.Drawing.Color.White;
-            this.navBarControl4.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup11});
-            this.navBarControl4.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.navBarItem2,
-            this.navBarSeparatorItem6,
-            this.navBarItem3,
-            this.navBarSeparatorItem7,
-            this.navBarItem4,
-            this.navBarSeparatorItem8,
-            this.navBarItem5,
-            this.navBarItem7,
-            this.navBarItem8,
-            this.navBarItem9,
-            this.navBarItem10,
-            this.navBarItem11,
-            this.navBarItem12,
-            this.navBarItem13,
-            this.navBarItem14,
-            this.navBarItem24,
-            this.navBarSeparatorItem9,
-            this.navBarSeparatorItem10,
-            this.navBarItem15,
-            this.navBarItem16,
-            this.navBarItem17,
-            this.navBarItem18,
-            this.navBarItem19,
-            this.navBarItem20,
-            this.navBarItem21,
-            this.navBarSolicitudesCompras,
-            this.navBarOrdenesCompras});
-            this.navBarControl4.Location = new System.Drawing.Point(1, 3);
-            this.navBarControl4.Name = "navBarControl4";
-            this.navBarControl4.OptionsNavPane.ExpandedWidth = 242;
-            this.navBarControl4.Size = new System.Drawing.Size(242, 712);
-            this.navBarControl4.TabIndex = 1;
-            this.navBarControl4.Text = "navBarControl4";
-            // 
-            // navBarItem2
-            // 
-            this.navBarItem2.Caption = "Desconectar";
-            this.navBarItem2.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem2.ImageOptions.SmallImage")));
-            this.navBarItem2.Name = "navBarItem2";
-            // 
-            // navBarSeparatorItem6
-            // 
-            this.navBarSeparatorItem6.CanDrag = false;
-            this.navBarSeparatorItem6.Enabled = false;
-            this.navBarSeparatorItem6.Hint = null;
-            this.navBarSeparatorItem6.Name = "navBarSeparatorItem6";
-            // 
-            // navBarItem3
-            // 
-            this.navBarItem3.Caption = "Estudiantes";
-            this.navBarItem3.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.Estudiantex32;
-            this.navBarItem3.Name = "navBarItem3";
-            // 
-            // navBarSeparatorItem7
-            // 
-            this.navBarSeparatorItem7.CanDrag = false;
-            this.navBarSeparatorItem7.Enabled = false;
-            this.navBarSeparatorItem7.Hint = null;
-            this.navBarSeparatorItem7.Name = "navBarSeparatorItem7";
-            // 
-            // navBarItem4
-            // 
-            this.navBarItem4.Caption = "Matricula";
-            this.navBarItem4.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.matriculax32;
-            this.navBarItem4.Name = "navBarItem4";
-            // 
-            // navBarSeparatorItem8
-            // 
-            this.navBarSeparatorItem8.CanDrag = false;
-            this.navBarSeparatorItem8.Enabled = false;
-            this.navBarSeparatorItem8.Hint = null;
-            this.navBarSeparatorItem8.Name = "navBarSeparatorItem8";
-            // 
-            // navBarItem5
-            // 
-            this.navBarItem5.Caption = "Consultar Matriculados";
-            this.navBarItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem5.ImageOptions.SvgImage")));
-            this.navBarItem5.Name = "navBarItem5";
-            // 
-            // navBarItem7
-            // 
-            this.navBarItem7.Appearance.Options.UseTextOptions = true;
-            this.navBarItem7.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.navBarItem7.Caption = "Posteo de Pagos - Recibos";
-            this.navBarItem7.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.cash_icon24px;
-            this.navBarItem7.Name = "navBarItem7";
-            this.navBarItem7.Visible = false;
-            // 
-            // navBarItem8
-            // 
-            this.navBarItem8.Appearance.Options.UseTextOptions = true;
-            this.navBarItem8.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.navBarItem8.Caption = "Movimientos Cobros Estudiantes";
-            this.navBarItem8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem8.ImageOptions.SvgImage")));
-            this.navBarItem8.Name = "navBarItem8";
-            this.navBarItem8.Visible = false;
-            // 
-            // navBarItem9
-            // 
-            this.navBarItem9.Caption = "Planilla";
-            this.navBarItem9.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem9.ImageOptions.SmallImage")));
-            this.navBarItem9.Name = "navBarItem9";
-            // 
-            // navBarItem10
-            // 
-            this.navBarItem10.Caption = "Caja";
-            this.navBarItem10.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.caja_registradorax32;
-            this.navBarItem10.Name = "navBarItem10";
-            this.navBarItem10.Visible = false;
-            // 
-            // navBarItem11
-            // 
-            this.navBarItem11.Caption = "Matricula Rapida";
-            this.navBarItem11.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem11.ImageOptions.SvgImage")));
-            this.navBarItem11.Name = "navBarItem11";
-            // 
-            // navBarItem12
-            // 
-            this.navBarItem12.Caption = "Marca Asistencia Manual";
-            this.navBarItem12.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.seguro_32x;
-            this.navBarItem12.Name = "navBarItem12";
-            this.navBarItem12.Visible = false;
-            // 
-            // navBarItem13
-            // 
-            this.navBarItem13.Caption = "Estado de Cuenta";
-            this.navBarItem13.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.presupuestox32;
-            this.navBarItem13.Name = "navBarItem13";
-            // 
-            // navBarItem14
-            // 
-            this.navBarItem14.Caption = "Reserva de Cupo";
-            this.navBarItem14.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.reservadox32;
-            this.navBarItem14.Name = "navBarItem14";
-            // 
-            // navBarSeparatorItem9
-            // 
-            this.navBarSeparatorItem9.CanDrag = false;
-            this.navBarSeparatorItem9.Enabled = false;
-            this.navBarSeparatorItem9.Hint = null;
-            this.navBarSeparatorItem9.Name = "navBarSeparatorItem9";
-            // 
-            // navBarSeparatorItem10
-            // 
-            this.navBarSeparatorItem10.CanDrag = false;
-            this.navBarSeparatorItem10.Enabled = false;
-            this.navBarSeparatorItem10.Hint = null;
-            this.navBarSeparatorItem10.Name = "navBarSeparatorItem10";
-            // 
-            // navBarItem15
-            // 
-            this.navBarItem15.Caption = "Facturación";
-            this.navBarItem15.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem15.ImageOptions.SvgImage")));
-            this.navBarItem15.Name = "navBarItem15";
-            // 
-            // navBarItem16
-            // 
-            this.navBarItem16.Caption = "Facturas Emitidas";
-            this.navBarItem16.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem16.ImageOptions.SvgImage")));
-            this.navBarItem16.Name = "navBarItem16";
-            // 
-            // navBarItem17
-            // 
-            this.navBarItem17.Caption = "Estado de Cuenta";
-            this.navBarItem17.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem17.ImageOptions.SvgImage")));
-            this.navBarItem17.Name = "navBarItem17";
-            // 
-            // navBarItem18
-            // 
-            this.navBarItem18.Caption = "Solicitudes de Autorizaciones";
-            this.navBarItem18.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem18.ImageOptions.SmallImage")));
-            this.navBarItem18.Name = "navBarItem18";
-            // 
-            // navBarItem19
-            // 
-            this.navBarItem19.Caption = "Pago Múltiple";
-            this.navBarItem19.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem19.ImageOptions.SmallImage")));
-            this.navBarItem19.Name = "navBarItem19";
-            // 
-            // navBarItem20
-            // 
-            this.navBarItem20.Caption = "Notas Crédito/Débito";
-            this.navBarItem20.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem20.ImageOptions.SmallImage")));
-            this.navBarItem20.Name = "navBarItem20";
-            // 
-            // navBarItem21
-            // 
-            this.navBarItem21.Caption = "Cierre de Caja";
-            this.navBarItem21.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem21.ImageOptions.SmallImage")));
-            this.navBarItem21.Name = "navBarItem21";
-            // 
-            // navBarGroup11
-            // 
-            this.navBarGroup11.Caption = "Compras";
-            this.navBarGroup11.Expanded = true;
-            this.navBarGroup11.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSolicitudesCompras),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarOrdenesCompras)});
-            this.navBarGroup11.Name = "navBarGroup11";
-            // 
-            // navBarSolicitudesCompras
-            // 
-            this.navBarSolicitudesCompras.Caption = "Solicitudes de Compra";
-            this.navBarSolicitudesCompras.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.solicitud_compra_x32;
-            this.navBarSolicitudesCompras.Name = "navBarSolicitudesCompras";
-            this.navBarSolicitudesCompras.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarSolicitudesCompras_LinkClicked);
-            // 
-            // navBarOrdenesCompras
-            // 
-            this.navBarOrdenesCompras.Caption = "Ordenes de Compra";
-            this.navBarOrdenesCompras.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.orden_compra_x32;
-            this.navBarOrdenesCompras.Name = "navBarOrdenesCompras";
-            this.navBarOrdenesCompras.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarOrdenesCompras_LinkClicked);
-            // 
-            // navBarItem24
-            // 
-            this.navBarItem24.Caption = "Nuevo Recordatorio";
-            this.navBarItem24.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.recordatorio_x32;
-            this.navBarItem24.Name = "navBarItem24";
-            // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1015,14 +1025,14 @@ namespace ERP_INTECOLI
             this.xtraTabControlMenu.ResumeLayout(false);
             this.TabAdministracion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
+            this.TabCompras.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl4)).EndInit();
             this.TabMantenimientos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).EndInit();
             this.TabConsultas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl3)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.TabCompras.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1127,5 +1137,6 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navBarItem20;
         private DevExpress.XtraNavBar.NavBarItem navBarItem21;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup8;
+        private DevExpress.XtraNavBar.NavBarItem navBarProveedores;
     }
 }
