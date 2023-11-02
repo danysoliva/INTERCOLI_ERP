@@ -314,6 +314,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCompras.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Compras\frmOrdenesCompraMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\frmOrdenesCompraMain.Designer.cs">
+      <DependentUpon>frmOrdenesCompraMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Compras\frmSearchSolicitud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1239,6 +1245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\frmRecordatorio.resx">
       <DependentUpon>frmRecordatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\frmOrdenesCompraMain.resx">
+      <DependentUpon>frmOrdenesCompraMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compras\frmSearchSolicitud.resx">
       <DependentUpon>frmSearchSolicitud.cs</DependentUpon>

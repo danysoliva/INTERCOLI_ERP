@@ -307,16 +307,64 @@ namespace ERP_INTECOLI.Compras
             //}
         }
 
-        private void CargarSolicitud(int idSolicitudActual)
+        private void CargarSolicitud(int pidSolicitudActual)
         {
-            Solicitud solic = new Solicitud();
-            if (solic.RecuperarRegistros(idSolicitudActual))
+
+            Solicitud soli = new Solicitud();
+            if (soli.RecuperarRegistros(pidSolicitudActual))
             {
-
-
-                loaddetalle(idSolicitudActual);
+                txtUsuarioCreador.Text = soli.Usuario;
+                txtId.Text = Convert.ToString(pidSolicitudActual);
+                IdSolicitudActual = pidSolicitudActual;
+                txtEstado.Text = soli.Estado;
+                dtFechaRegistro.Value = soli.Fecha_registro;
+                dtFechaContabilizacion.Value = soli.Fecha_contabilizacion;
+                txtComentarios.Text = soli.Comentario;
+                IdEstadoSolicitud = soli.Id_estado;
+                loaddetalle(pidSolicitudActual);
+                tipooperacion = TipoOperacion.Update;
             }
-            
+
+            switch (IdEstadoSolicitud)
+            {
+                case 1://Nueva
+                    cmdNuevo.Enabled = true;
+                    cmdAddDetalle.Enabled = true;
+                    txtComentarios.Enabled = true;
+                    grDetalle.Enabled = true;
+                    dtFechaContabilizacion.Enabled = true;
+                    break;
+
+                case 2://Abierta
+                    cmdNuevo.Enabled = true;
+                    cmdAddDetalle.Enabled = true;
+                    txtComentarios.Enabled = true;
+                    grDetalle.Enabled = true;
+                    dtFechaContabilizacion.Enabled = true;
+                    break;
+
+                case 3://Cerrada
+                    cmdNuevo.Enabled = false;
+                    cmdAddDetalle.Enabled = false;
+                    txtComentarios.Enabled = false;
+                    grDetalle.Enabled = false;
+                    dtFechaContabilizacion.Enabled = false;
+                    cmdGuardar.Enabled = false;
+                    break;
+
+                case 4://Cancelada
+                    cmdNuevo.Enabled = false;
+                    cmdAddDetalle.Enabled = false;
+                    txtComentarios.Enabled = false;
+                    grDetalle.Enabled = false;
+                    dtFechaContabilizacion.Enabled = false;
+                    cmdGuardar.Enabled = false;
+                    break;
+
+                default:
+                    break;
+            }
+
         }
 
         private void loaddetalle(int idSolicitudActual)
@@ -374,60 +422,9 @@ namespace ERP_INTECOLI.Compras
             frmSearchSolicitud frm = new frmSearchSolicitud();
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                Solicitud soli = new Solicitud();
-                if (soli.RecuperarRegistros(frm.IdSolicitudSeleccionado))
-                {
-                    txtUsuarioCreador.Text = soli.Usuario;
-                    txtId.Text = Convert.ToString(frm.IdSolicitudSeleccionado);
-                    IdSolicitudActual = frm.IdSolicitudSeleccionado;
-                    txtEstado.Text = soli.Estado;
-                    dtFechaRegistro.Value = soli.Fecha_registro;
-                    dtFechaContabilizacion.Value = soli.Fecha_contabilizacion;
-                    txtComentarios.Text = soli.Comentario;
-                    IdEstadoSolicitud = soli.Id_estado;
-                    loaddetalle(frm.IdSolicitudSeleccionado);
-                    tipooperacion = TipoOperacion.Update;
-                }
+                CargarSolicitud(frm.IdSolicitudSeleccionado);
 
-                switch (IdEstadoSolicitud)
-                {
-                    case 1://Nueva
-                        cmdNuevo.Enabled = true;
-                        cmdAddDetalle.Enabled = true;
-                        txtComentarios.Enabled = true;
-                        grDetalle.Enabled = true;
-                        dtFechaContabilizacion.Enabled = true;
-                        break;
 
-                    case 2://Abierta
-                        cmdNuevo.Enabled = true;
-                        cmdAddDetalle.Enabled = true;
-                        txtComentarios.Enabled = true;
-                        grDetalle.Enabled = true;
-                        dtFechaContabilizacion.Enabled = true;
-                        break;
-                        
-                    case 3://Cerrada
-                        cmdNuevo.Enabled = false;
-                        cmdAddDetalle.Enabled = false;
-                        txtComentarios.Enabled = false;
-                        grDetalle.Enabled = false;
-                        dtFechaContabilizacion.Enabled = false;
-                        cmdGuardar.Enabled = false;
-                        break;
-
-                    case 4://Cancelada
-                        cmdNuevo.Enabled = false;
-                        cmdAddDetalle.Enabled = false;
-                        txtComentarios.Enabled = false;
-                        grDetalle.Enabled = false;
-                        dtFechaContabilizacion.Enabled = false;
-                        cmdGuardar.Enabled = false;
-                        break;
-
-                    default:
-                        break;
-                }
 
             }
 
@@ -540,6 +537,120 @@ namespace ERP_INTECOLI.Compras
                 if (IdSolicitudActual > 0)
                 {
                     popupMenu1.ShowPopup(Cursor.Position);
+                }
+            }
+        }
+
+        private void cmdAnterior_Click(object sender, EventArgs e)
+        {
+            tipooperacion = TipoOperacion.Update;
+
+            if (IdSolicitudActual == 0)//vamos a mostrar el ultimo
+            {
+                try
+                {
+                    DataOperations dp = new DataOperations();
+                    SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                    con.Open();
+
+                    SqlCommand cmd = new SqlCommand("[sp_get_last_or_first_solicitud_and_oc]", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@case", 1);//Solicitudes de Compra
+                    IdSolicitudActual = Convert.ToInt32(cmd.ExecuteScalar());
+                    CargarSolicitud(IdSolicitudActual);
+                    con.Close();
+                }
+                catch (Exception ec)
+                {
+                    CajaDialogo.Error(ec.Message);
+                }
+            }
+            else//vamos a mostrar el anteior al actual
+            {
+                try
+                {
+                    DataOperations dp = new DataOperations();
+                    SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                    con.Open();
+
+                    SqlCommand cmd = new SqlCommand("[sp_get_navigation_solicitudes]", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@case", 1);
+                    cmd.Parameters.AddWithValue("@idactual", IdSolicitudActual);
+                    IdSolicitudActual = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    if (IdSolicitudActual == 0)
+                    {
+                        //Si es cero debemos cargar el primero
+                        cmd = new SqlCommand("[sp_get_navigation_solicitudes]", con);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@case", 2);
+                        cmd.Parameters.AddWithValue("@idactual", IdSolicitudActual);
+                        IdSolicitudActual = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                    CargarSolicitud(IdSolicitudActual);
+                    con.Close();
+                }
+                catch (Exception ec)
+                {
+                    CajaDialogo.Error(ec.Message);
+                }
+            }
+        }
+
+        private void cmdSiguiente_Click(object sender, EventArgs e)
+        {
+            tipooperacion = TipoOperacion.Update;
+            if (IdSolicitudActual == 0)//vamos a mostrar el primero
+            {
+                try
+                {
+                    DataOperations dp = new DataOperations();
+                    SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                    con.Open();
+
+                    SqlCommand cmd = new SqlCommand("[sp_get_last_or_first_solicitud_and_oc]", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@case", 2);
+                    IdSolicitudActual = Convert.ToInt32(cmd.ExecuteScalar());
+                    CargarSolicitud(IdSolicitudActual);
+                    con.Close();
+                }
+                catch (Exception ec)
+                {
+                    CajaDialogo.Error(ec.Message);
+                }
+            }
+            else//vamos a mostrar el posterior al actual
+            {
+                try
+                {
+                    DataOperations dp = new DataOperations();
+                    SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                    con.Open();
+
+                    SqlCommand cmd = new SqlCommand("[sp_get_navigation_solicitudes]", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@case", 3);
+                    cmd.Parameters.AddWithValue("@idactual", IdSolicitudActual);
+                    IdSolicitudActual = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    if (IdSolicitudActual == 0)
+                    {
+                        //Si es cero debemos cargar el primero
+                        cmd = new SqlCommand("[sp_get_navigation_solicitudes]", con);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@case", 4);
+                        cmd.Parameters.AddWithValue("@idactual", IdSolicitudActual);
+                        IdSolicitudActual = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+
+                    CargarSolicitud(IdSolicitudActual);
+                    con.Close();
+                }
+                catch (Exception ec)
+                {
+                    CajaDialogo.Error(ec.Message);
                 }
             }
         }
