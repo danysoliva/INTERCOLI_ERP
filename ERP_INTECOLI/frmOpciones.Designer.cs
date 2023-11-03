@@ -63,8 +63,12 @@ namespace ERP_INTECOLI
             this.navBarItem92 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem93 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup10 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarSolicitudesCompras = new DevExpress.XtraNavBar.NavBarItem();
-            this.navOrdenesCompra = new DevExpress.XtraNavBar.NavBarItem();
+            this.navFactEstadoCuente = new DevExpress.XtraNavBar.NavBarItem();
+            this.navSolicitudesAutori = new DevExpress.XtraNavBar.NavBarItem();
+            this.navPagosMultiples = new DevExpress.XtraNavBar.NavBarItem();
+            this.navNotas = new DevExpress.XtraNavBar.NavBarItem();
+            this.navCierredeCaja = new DevExpress.XtraNavBar.NavBarItem();
+            this.navGeneracionPlanillas = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem60 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem61 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem94 = new DevExpress.XtraNavBar.NavBarItem();
@@ -222,7 +226,6 @@ namespace ERP_INTECOLI
             this.btnBodegas = new DevExpress.XtraEditors.SimpleButton();
             this.TabCalidad = new DevExpress.XtraTab.XtraTabPage();
             this.navBarControl4 = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup8 = new DevExpress.XtraNavBar.NavBarGroup();
             this.TabTransacciones = new DevExpress.XtraTab.XtraTabPage();
             this.navBarControl2 = new DevExpress.XtraNavBar.NavBarControl();
             this.TabAcciones = new DevExpress.XtraTab.XtraTabPage();
@@ -234,12 +237,6 @@ namespace ERP_INTECOLI
             this.navNotasCredito = new DevExpress.XtraNavBar.NavBarItem();
             this.navCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
-            this.navFactEstadoCuente = new DevExpress.XtraNavBar.NavBarItem();
-            this.navSolicitudesAutori = new DevExpress.XtraNavBar.NavBarItem();
-            this.navPagosMultiples = new DevExpress.XtraNavBar.NavBarItem();
-            this.navNotas = new DevExpress.XtraNavBar.NavBarItem();
-            this.navCierredeCaja = new DevExpress.XtraNavBar.NavBarItem();
-            this.navGeneracionPlanillas = new DevExpress.XtraNavBar.NavBarItem();
             this.TabRRHH.SuspendLayout();
             this.txtProduccion.SuspendLayout();
             this.tabProduccion.SuspendLayout();
@@ -662,8 +659,6 @@ namespace ERP_INTECOLI
             this.navBarGroup10.Caption = "Facturación";
             this.navBarGroup10.Expanded = true;
             this.navBarGroup10.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSolicitudesCompras),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navOrdenesCompra),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navFactEstadoCuente),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navSolicitudesAutori),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navPagosMultiples),
@@ -672,31 +667,72 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.navGeneracionPlanillas)});
             this.navBarGroup10.Name = "navBarGroup10";
             // 
-            // navBarSolicitudesCompras
+            // navFactEstadoCuente
             // 
-            this.navBarSolicitudesCompras.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.navBarSolicitudesCompras.Appearance.Options.UseFont = true;
-            this.navBarSolicitudesCompras.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navBarSolicitudesCompras.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarSolicitudesCompras.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navBarSolicitudesCompras.AppearancePressed.Options.UseFont = true;
-            this.navBarSolicitudesCompras.Caption = "Solicitudes de Compras";
-            this.navBarSolicitudesCompras.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.solicitud_compra_x32;
-            this.navBarSolicitudesCompras.Name = "navBarSolicitudesCompras";
-            this.navBarSolicitudesCompras.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFacturacion_LinkClicked);
+            this.navFactEstadoCuente.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFactEstadoCuente.Appearance.Options.UseFont = true;
+            this.navFactEstadoCuente.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFactEstadoCuente.AppearanceHotTracked.Options.UseFont = true;
+            this.navFactEstadoCuente.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFactEstadoCuente.AppearancePressed.Options.UseFont = true;
+            this.navFactEstadoCuente.Caption = "Estado de Cuenta";
+            this.navFactEstadoCuente.Name = "navFactEstadoCuente";
             // 
-            // navOrdenesCompra
+            // navSolicitudesAutori
             // 
-            this.navOrdenesCompra.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navOrdenesCompra.Appearance.Options.UseFont = true;
-            this.navOrdenesCompra.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navOrdenesCompra.AppearanceHotTracked.Options.UseFont = true;
-            this.navOrdenesCompra.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navOrdenesCompra.AppearancePressed.Options.UseFont = true;
-            this.navOrdenesCompra.Caption = "Ordenes de Compra";
-            this.navOrdenesCompra.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.orden_compra_x32;
-            this.navOrdenesCompra.Name = "navOrdenesCompra";
-            this.navOrdenesCompra.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFactEmitidas_LinkClicked);
+            this.navSolicitudesAutori.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navSolicitudesAutori.Appearance.Options.UseFont = true;
+            this.navSolicitudesAutori.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navSolicitudesAutori.AppearanceHotTracked.Options.UseFont = true;
+            this.navSolicitudesAutori.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navSolicitudesAutori.AppearancePressed.Options.UseFont = true;
+            this.navSolicitudesAutori.Caption = "Solicitudes de Autorizaciones";
+            this.navSolicitudesAutori.Name = "navSolicitudesAutori";
+            // 
+            // navPagosMultiples
+            // 
+            this.navPagosMultiples.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navPagosMultiples.Appearance.Options.UseFont = true;
+            this.navPagosMultiples.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navPagosMultiples.AppearanceHotTracked.Options.UseFont = true;
+            this.navPagosMultiples.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navPagosMultiples.AppearancePressed.Options.UseFont = true;
+            this.navPagosMultiples.Caption = "Pago Multiple";
+            this.navPagosMultiples.Name = "navPagosMultiples";
+            // 
+            // navNotas
+            // 
+            this.navNotas.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navNotas.Appearance.Options.UseFont = true;
+            this.navNotas.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navNotas.AppearanceHotTracked.Options.UseFont = true;
+            this.navNotas.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navNotas.AppearancePressed.Options.UseFont = true;
+            this.navNotas.Caption = "Notas Credito/Debito";
+            this.navNotas.Name = "navNotas";
+            // 
+            // navCierredeCaja
+            // 
+            this.navCierredeCaja.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navCierredeCaja.Appearance.Options.UseFont = true;
+            this.navCierredeCaja.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navCierredeCaja.AppearanceHotTracked.Options.UseFont = true;
+            this.navCierredeCaja.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navCierredeCaja.AppearancePressed.Options.UseFont = true;
+            this.navCierredeCaja.Caption = "Cierre de Caja";
+            this.navCierredeCaja.Name = "navCierredeCaja";
+            // 
+            // navGeneracionPlanillas
+            // 
+            this.navGeneracionPlanillas.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navGeneracionPlanillas.Appearance.Options.UseFont = true;
+            this.navGeneracionPlanillas.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navGeneracionPlanillas.AppearanceHotTracked.Options.UseFont = true;
+            this.navGeneracionPlanillas.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navGeneracionPlanillas.AppearancePressed.Options.UseFont = true;
+            this.navGeneracionPlanillas.Caption = "Planilla";
+            this.navGeneracionPlanillas.Name = "navGeneracionPlanillas";
+            this.navGeneracionPlanillas.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanillas_LinkClicked);
             // 
             // navBarItem60
             // 
@@ -2688,14 +2724,11 @@ namespace ERP_INTECOLI
             // 
             // navBarControl4
             // 
-            this.navBarControl4.ActiveGroup = this.navBarGroup8;
             this.navBarControl4.Appearance.Button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navBarControl4.Appearance.Button.Options.UseFont = true;
             this.navBarControl4.Appearance.ButtonPressed.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navBarControl4.Appearance.ButtonPressed.Options.UseFont = true;
             this.navBarControl4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.navBarControl4.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup8});
             this.navBarControl4.Location = new System.Drawing.Point(0, 0);
             this.navBarControl4.Name = "navBarControl4";
             this.navBarControl4.OptionsNavPane.ExpandedWidth = 347;
@@ -2703,19 +2736,6 @@ namespace ERP_INTECOLI
             this.navBarControl4.Size = new System.Drawing.Size(347, 496);
             this.navBarControl4.TabIndex = 23;
             this.navBarControl4.Text = "navBarControl4";
-            // 
-            // navBarGroup8
-            // 
-            this.navBarGroup8.Appearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.navBarGroup8.Appearance.Options.UseFont = true;
-            this.navBarGroup8.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.navBarGroup8.AppearancePressed.Options.UseFont = true;
-            this.navBarGroup8.Caption = "Compras";
-            this.navBarGroup8.Expanded = true;
-            this.navBarGroup8.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarSolicitudesCompras),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navOrdenesCompra)});
-            this.navBarGroup8.Name = "navBarGroup8";
             // 
             // TabTransacciones
             // 
@@ -2869,73 +2889,6 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla.Name = "navGeneracionPlanilla";
             this.navGeneracionPlanilla.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanilla_LinkClicked);
             // 
-            // navFactEstadoCuente
-            // 
-            this.navFactEstadoCuente.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navFactEstadoCuente.Appearance.Options.UseFont = true;
-            this.navFactEstadoCuente.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navFactEstadoCuente.AppearanceHotTracked.Options.UseFont = true;
-            this.navFactEstadoCuente.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navFactEstadoCuente.AppearancePressed.Options.UseFont = true;
-            this.navFactEstadoCuente.Caption = "Estado de Cuenta";
-            this.navFactEstadoCuente.Name = "navFactEstadoCuente";
-            // 
-            // navSolicitudesAutori
-            // 
-            this.navSolicitudesAutori.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navSolicitudesAutori.Appearance.Options.UseFont = true;
-            this.navSolicitudesAutori.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navSolicitudesAutori.AppearanceHotTracked.Options.UseFont = true;
-            this.navSolicitudesAutori.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navSolicitudesAutori.AppearancePressed.Options.UseFont = true;
-            this.navSolicitudesAutori.Caption = "Solicitudes de Autorizaciones";
-            this.navSolicitudesAutori.Name = "navSolicitudesAutori";
-            // 
-            // navPagosMultiples
-            // 
-            this.navPagosMultiples.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navPagosMultiples.Appearance.Options.UseFont = true;
-            this.navPagosMultiples.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navPagosMultiples.AppearanceHotTracked.Options.UseFont = true;
-            this.navPagosMultiples.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navPagosMultiples.AppearancePressed.Options.UseFont = true;
-            this.navPagosMultiples.Caption = "Pago Multiple";
-            this.navPagosMultiples.Name = "navPagosMultiples";
-            // 
-            // navNotas
-            // 
-            this.navNotas.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navNotas.Appearance.Options.UseFont = true;
-            this.navNotas.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navNotas.AppearanceHotTracked.Options.UseFont = true;
-            this.navNotas.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navNotas.AppearancePressed.Options.UseFont = true;
-            this.navNotas.Caption = "Notas Credito/Debito";
-            this.navNotas.Name = "navNotas";
-            // 
-            // navCierredeCaja
-            // 
-            this.navCierredeCaja.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navCierredeCaja.Appearance.Options.UseFont = true;
-            this.navCierredeCaja.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navCierredeCaja.AppearanceHotTracked.Options.UseFont = true;
-            this.navCierredeCaja.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navCierredeCaja.AppearancePressed.Options.UseFont = true;
-            this.navCierredeCaja.Caption = "Cierre de Caja";
-            this.navCierredeCaja.Name = "navCierredeCaja";
-            // 
-            // navGeneracionPlanillas
-            // 
-            this.navGeneracionPlanillas.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navGeneracionPlanillas.Appearance.Options.UseFont = true;
-            this.navGeneracionPlanillas.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navGeneracionPlanillas.AppearanceHotTracked.Options.UseFont = true;
-            this.navGeneracionPlanillas.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navGeneracionPlanillas.AppearancePressed.Options.UseFont = true;
-            this.navGeneracionPlanillas.Caption = "Planilla";
-            this.navGeneracionPlanillas.Name = "navGeneracionPlanillas";
-            this.navGeneracionPlanillas.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanillas_LinkClicked);
-            // 
             // frmOpciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3078,8 +3031,6 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navBarItem56;
         private DevExpress.XtraNavBar.NavBarItem navBarItem57;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup10;
-        private DevExpress.XtraNavBar.NavBarItem navBarSolicitudesCompras;
-        private DevExpress.XtraNavBar.NavBarItem navOrdenesCompra;
         private DevExpress.XtraNavBar.NavBarItem navBarItem60;
         private DevExpress.XtraNavBar.NavBarItem navBarItem61;
         private DevExpress.XtraNavBar.NavBarItem navBarItem94;
@@ -3157,7 +3108,6 @@ namespace ERP_INTECOLI
         private DevExpress.XtraEditors.SimpleButton btnBodegas;
         private DevExpress.XtraTab.XtraTabPage TabCalidad;
         private DevExpress.XtraNavBar.NavBarControl navBarControl4;
-        private DevExpress.XtraNavBar.NavBarGroup navBarGroup8;
         private DevExpress.XtraTab.XtraTabPage TabTransacciones;
         private DevExpress.XtraNavBar.NavBarControl navBarControl2;
         private DevExpress.XtraTab.XtraTabPage TabAcciones;
