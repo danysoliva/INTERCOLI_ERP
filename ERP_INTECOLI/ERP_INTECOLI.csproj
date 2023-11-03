@@ -2021,6 +2021,7 @@
     <Content Include="Resources\cerrar.png" />
     <None Include="Resources\control-de-accesox32.png" />
     <None Include="Resources\contabilidad_x32.png" />
+    <None Include="Resources\compras_x32.png" />
     <Content Include="Resources\control-de-accesso.png" />
     <None Include="Resources\control-de-accessox32.png" />
     <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Cash.512.png" />
@@ -2050,6 +2051,7 @@
     <None Include="Resources\jefe_x128.png" />
     <None Include="Resources\gestion-de-equipos_x32.png" />
     <None Include="Resources\facturacion_x32.png" />
+    <None Include="Resources\factura_x32.png" />
     <Content Include="Resources\maestro x32.png" />
     <None Include="Resources\matriculax32.png" />
     <None Include="Resources\metodo-de-pago_x32.png" />

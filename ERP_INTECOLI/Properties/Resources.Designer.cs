@@ -153,6 +153,16 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap compras_x32 {
+            get {
+                object obj = ResourceManager.GetObject("compras_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap contabilidad_x32 {
             get {
                 object obj = ResourceManager.GetObject("contabilidad_x32", resourceCulture);
@@ -296,6 +306,16 @@ namespace ERP_INTECOLI.Properties {
         internal static System.Drawing.Bitmap Estudiantex32 {
             get {
                 object obj = ResourceManager.GetObject("Estudiantex32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap factura_x32 {
+            get {
+                object obj = ResourceManager.GetObject("factura_x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
