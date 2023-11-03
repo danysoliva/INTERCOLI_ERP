@@ -237,6 +237,8 @@ namespace ERP_INTECOLI
             this.navNotasCredito = new DevExpress.XtraNavBar.NavBarItem();
             this.navCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
+            this.navFacturacion = new DevExpress.XtraNavBar.NavBarItem();
+            this.navFacturaEmitidas = new DevExpress.XtraNavBar.NavBarItem();
             this.TabRRHH.SuspendLayout();
             this.txtProduccion.SuspendLayout();
             this.tabProduccion.SuspendLayout();
@@ -664,7 +666,9 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.navPagosMultiples),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navNotas),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navCierredeCaja),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navGeneracionPlanillas)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navGeneracionPlanillas),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navFacturacion),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navFacturaEmitidas)});
             this.navBarGroup10.Name = "navBarGroup10";
             // 
             // navFactEstadoCuente
@@ -2763,7 +2767,9 @@ namespace ERP_INTECOLI
             this.navPagosMultiples,
             this.navNotas,
             this.navCierredeCaja,
-            this.navGeneracionPlanillas});
+            this.navGeneracionPlanillas,
+            this.navFacturacion,
+            this.navFacturaEmitidas});
             this.navBarControl2.Location = new System.Drawing.Point(0, 0);
             this.navBarControl2.Name = "navBarControl2";
             this.navBarControl2.OptionsNavPane.ExpandedWidth = 347;
@@ -2888,6 +2894,29 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.contabilidad_x32;
             this.navGeneracionPlanilla.Name = "navGeneracionPlanilla";
             this.navGeneracionPlanilla.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanilla_LinkClicked);
+            // 
+            // navFacturacion
+            // 
+            this.navFacturacion.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFacturacion.Appearance.Options.UseFont = true;
+            this.navFacturacion.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFacturacion.AppearanceHotTracked.Options.UseFont = true;
+            this.navFacturacion.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFacturacion.AppearancePressed.Options.UseFont = true;
+            this.navFacturacion.Caption = "Facturacion";
+            this.navFacturacion.Name = "navFacturacion";
+            this.navFacturacion.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFacturacion_LinkClicked);
+            // 
+            // navFacturaEmitidas
+            // 
+            this.navFacturaEmitidas.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFacturaEmitidas.Appearance.Options.UseFont = true;
+            this.navFacturaEmitidas.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFacturaEmitidas.AppearanceHotTracked.Options.UseFont = true;
+            this.navFacturaEmitidas.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFacturaEmitidas.AppearancePressed.Options.UseFont = true;
+            this.navFacturaEmitidas.Caption = "Facturas Emitidas";
+            this.navFacturaEmitidas.Name = "navFacturaEmitidas";
             // 
             // frmOpciones
             // 
@@ -3125,6 +3154,8 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navNotas;
         private DevExpress.XtraNavBar.NavBarItem navCierredeCaja;
         private DevExpress.XtraNavBar.NavBarItem navGeneracionPlanillas;
+        private DevExpress.XtraNavBar.NavBarItem navFacturacion;
+        private DevExpress.XtraNavBar.NavBarItem navFacturaEmitidas;
     }
 }
 
