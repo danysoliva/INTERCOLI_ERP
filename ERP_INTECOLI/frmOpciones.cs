@@ -15,6 +15,7 @@ using ERP_INTECOLI.Administracion.Estudiantes;
 using ERP_INTECOLI.Administracion.Matricula;
 using ERP_INTECOLI.Administracion.Planilla;
 using ERP_INTECOLI.Clases;
+using ERP_INTECOLI.Compras;
 using ERP_INTECOLI.Transacciones;
 
 namespace ERP_INTECOLI
@@ -279,6 +280,92 @@ namespace ERP_INTECOLI
                 else
                 {
                     CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #11 (Facturacion punto de venta)");
+                }
+            }
+        }
+
+        private void navComprasSolicitudes_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmSolicitudesMain mtx = new frmSolicitudesMain(UsuarioLogeado, frmSolicitudesMain.TipoOperacion.New);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(21))
+                {
+                    frmSolicitudesMain mtx = new frmSolicitudesMain(UsuarioLogeado, frmSolicitudesMain.TipoOperacion.New);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-21 (Solicitud de Compras)");
+                }
+            }
+        }
+
+        private void navComprasOrdenes_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmOrdenesCompraMain mtx = new frmOrdenesCompraMain(UsuarioLogeado, frmOrdenesCompraMain.TipoOperacion.New);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(24))
+                {
+                    frmOrdenesCompraMain mtx = new frmOrdenesCompraMain(UsuarioLogeado, frmOrdenesCompraMain.TipoOperacion.New);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-24 (Ordenes de Compra)");
                 }
             }
         }
