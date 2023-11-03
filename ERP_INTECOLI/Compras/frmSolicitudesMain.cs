@@ -419,7 +419,7 @@ namespace ERP_INTECOLI.Compras
 
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
-            frmSearchSolicitud frm = new frmSearchSolicitud();
+            frmSearchSolicitud frm = new frmSearchSolicitud(frmSearchSolicitud.FiltroSolicitudes.Todas);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 CargarSolicitud(frm.IdSolicitudSeleccionado);

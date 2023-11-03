@@ -43,6 +43,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="orden_compra" msprop:Generator_TableClassName="orden_compraDataTable" msprop:Generator_TableVarName="tableorden_compra" msprop:Generator_TablePropName="orden_compra" msprop:Generator_RowDeletingName="orden_compraRowDeleting" msprop:Generator_RowChangingName="orden_compraRowChanging" msprop:Generator_RowEvHandlerName="orden_compraRowChangeEventHandler" msprop:Generator_RowDeletedName="orden_compraRowDeleted" msprop:Generator_UserTableName="orden_compra" msprop:Generator_RowChangedName="orden_compraRowChanged" msprop:Generator_RowEvArgName="orden_compraRowChangeEvent" msprop:Generator_RowClassName="orden_compraRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

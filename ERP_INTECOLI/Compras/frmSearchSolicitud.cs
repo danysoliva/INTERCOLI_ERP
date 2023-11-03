@@ -18,10 +18,19 @@ namespace ERP_INTECOLI.Compras
     {
         DataOperations dp = new DataOperations();
         public int IdSolicitudSeleccionado = 0;
-        public frmSearchSolicitud()
+
+        public enum FiltroSolicitudes
+        {
+            Todas = 1,
+            Abiertas = 2
+        }
+
+        FiltroSolicitudes Filtro;
+
+        public frmSearchSolicitud(frmSearchSolicitud.FiltroSolicitudes pfiltroSolicitudes)
         {
             InitializeComponent();
-
+            Filtro = pfiltroSolicitudes;
             CargarSolicitudes();
             
         }
@@ -35,7 +44,20 @@ namespace ERP_INTECOLI.Compras
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                //cmd.Parameters.AddWithValue("",);
+                switch (Filtro)
+                {
+                    case FiltroSolicitudes.Todas:
+                        cmd.Parameters.AddWithValue("@filtro",1);
+                        break;
+
+                    case FiltroSolicitudes.Abiertas:
+                        cmd.Parameters.AddWithValue("@filtro", 2);
+                        break;
+
+                    default:
+                        break;
+                }
+                
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 dsCompras1.solicitudes.Clear();
                 adat.Fill(dsCompras1.solicitudes);
