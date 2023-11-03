@@ -133,17 +133,14 @@
   <data name="ruptura_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ruptura_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="documentos_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\documentos_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dinero_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dinero_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="recordatorio_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\recordatorio_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="orden_compra_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\orden_compra_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="transferencia-movilx16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\transferencia-movilx16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="empresa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\empresa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +184,8 @@
   <data name="credito_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\credito_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="libro-de-contabilidadx32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\libro-de-contabilidadx32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="orden_compra_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orden_compra_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,8 +196,17 @@
   <data name="userx32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\userx32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="transaccion_32x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transaccion_32x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="anadir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anadir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ensenando_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ensenando_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Niveles x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Niveles x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cash-icon24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cash-icon24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,14 +223,17 @@
   <data name="actualizar_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\actualizar_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ordenador-portatilx32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ordenador-portatilx32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="presente_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\presente_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="maestro x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maestro x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tarjeta-de-creditox16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tarjeta-de-creditox16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="proveedor_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\proveedor_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="empleados_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\empleados_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,17 +247,17 @@
   <data name="proyeccion_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\proyeccion_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Custom-Icon-Design-Pretty-Office-11-Cash.512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Custom-Icon-Design-Pretty-Office-11-Cash.512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="reservax32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reservax32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="anadir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anadir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Custom-Icon-Design-Pretty-Office-11-Cash.512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Custom-Icon-Design-Pretty-Office-11-Cash.512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Niveles x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Niveles x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="facturacion_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\facturacion_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transferencia-movilx16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transferencia-movilx16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Estudiantex32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Estudiantex32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,13 +274,13 @@
   <data name="control-de-accesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\control-de-accesso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="documentos_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\documentos_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ordenador-portatilx32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ordenador-portatilx32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="presente_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\presente_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="libro-de-contabilidadx32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\libro-de-contabilidadx32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="proveedor_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\proveedor_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="contabilidad_x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\contabilidad_x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

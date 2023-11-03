@@ -1056,11 +1056,11 @@
     <Compile Include="Facturacion\Reportes\xfrmDialogFormatoFactura.Designer.cs">
       <DependentUpon>xfrmDialogFormatoFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmOpciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmOpciones.Designer.cs">
+      <DependentUpon>frmOpciones.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -1555,8 +1555,8 @@
     <EmbeddedResource Include="Facturacion\Reportes\xfrmDialogFormatoFactura.resx">
       <DependentUpon>xfrmDialogFormatoFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmOpciones.resx">
+      <DependentUpon>frmOpciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -2020,6 +2020,7 @@
     <None Include="Resources\bloquear_x32.png" />
     <Content Include="Resources\cerrar.png" />
     <None Include="Resources\control-de-accesox32.png" />
+    <None Include="Resources\contabilidad_x32.png" />
     <Content Include="Resources\control-de-accesso.png" />
     <None Include="Resources\control-de-accessox32.png" />
     <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Cash.512.png" />
@@ -2048,6 +2049,7 @@
     <None Include="Resources\libro-de-contabilidadx32.png" />
     <None Include="Resources\jefe_x128.png" />
     <None Include="Resources\gestion-de-equipos_x32.png" />
+    <None Include="Resources\facturacion_x32.png" />
     <Content Include="Resources\maestro x32.png" />
     <None Include="Resources\matriculax32.png" />
     <None Include="Resources\metodo-de-pago_x32.png" />
@@ -2088,6 +2090,7 @@
     <None Include="Resources\tarjeta-de-creditox16.png" />
     <None Include="Resources\transferencia-movilx16.png" />
     <None Include="Resources\seguro_32x.png" />
+    <None Include="Resources\transaccion_32x.png" />
     <Content Include="Resources\Upload-Folder-icon.png" />
     <None Include="Resources\userx32.png" />
     <Content Include="Resources\_click_24X24.png" />

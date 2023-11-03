@@ -153,6 +153,16 @@ namespace ERP_INTECOLI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap contabilidad_x32 {
+            get {
+                object obj = ResourceManager.GetObject("contabilidad_x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap control_de_accesox32 {
             get {
                 object obj = ResourceManager.GetObject("control-de-accesox32", resourceCulture);
@@ -286,6 +296,16 @@ namespace ERP_INTECOLI.Properties {
         internal static System.Drawing.Bitmap Estudiantex32 {
             get {
                 object obj = ResourceManager.GetObject("Estudiantex32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap facturacion_x32 {
+            get {
+                object obj = ResourceManager.GetObject("facturacion_x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -546,6 +566,16 @@ namespace ERP_INTECOLI.Properties {
         internal static System.Drawing.Bitmap tarjeta_de_creditox16 {
             get {
                 object obj = ResourceManager.GetObject("tarjeta-de-creditox16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transaccion_32x {
+            get {
+                object obj = ResourceManager.GetObject("transaccion_32x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

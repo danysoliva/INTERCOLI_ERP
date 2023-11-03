@@ -424,6 +424,7 @@ namespace ERP_INTECOLI
             // navBarGroup4
             // 
             this.navBarGroup4.Caption = "Recordatorios";
+            this.navBarGroup4.Expanded = true;
             this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navNuevoRecordatorio)});
             this.navBarGroup4.Name = "navBarGroup4";
