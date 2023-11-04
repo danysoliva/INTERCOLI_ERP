@@ -32,11 +32,11 @@ namespace Eatery.Ventas
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFactura));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.txtNombreCliente = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.cmdAbrirBusqueda = new DevExpress.XtraEditors.SimpleButton();
@@ -82,6 +82,8 @@ namespace Eatery.Ventas
             this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid_isv_aplicable = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colsaldo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltipo_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltipo_pt_name = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreCliente.Properties)).BeginInit();
             this.panelNotificacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsVentas1)).BeginInit();
@@ -257,6 +259,7 @@ namespace Eatery.Ventas
             // 
             // navigationPage1
             // 
+            this.navigationPage1.Caption = "navigationPage1";
             this.navigationPage1.Controls.Add(this.rdCredito);
             this.navigationPage1.Controls.Add(this.rdContado);
             this.navigationPage1.Controls.Add(this.label4);
@@ -431,7 +434,9 @@ namespace Eatery.Ventas
             this.colid_detalle,
             this.colid_estudiante,
             this.colid_isv_aplicable,
-            this.colsaldo});
+            this.colsaldo,
+            this.coltipo_id,
+            this.coltipo_pt_name});
             this.gridView1.DetailHeight = 182;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.LevelIndent = 0;
@@ -468,7 +473,6 @@ namespace Eatery.Ventas
             // 
             this.colcantidad.FieldName = "cantidad";
             this.colcantidad.Name = "colcantidad";
-            this.colcantidad.OptionsColumn.ReadOnly = true;
             this.colcantidad.Visible = true;
             this.colcantidad.VisibleIndex = 4;
             this.colcantidad.Width = 57;
@@ -535,9 +539,9 @@ namespace Eatery.Ventas
             // cmdDeleteRowFactura
             // 
             this.cmdDeleteRowFactura.AutoHeight = false;
-            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.cmdDeleteRowFactura.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.cmdDeleteRowFactura.Name = "cmdDeleteRowFactura";
             this.cmdDeleteRowFactura.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.cmdDeleteRowFactura.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cmdDeleteRowFactura_ButtonClick);
@@ -584,6 +588,16 @@ namespace Eatery.Ventas
             this.colsaldo.Visible = true;
             this.colsaldo.VisibleIndex = 3;
             this.colsaldo.Width = 106;
+            // 
+            // coltipo_id
+            // 
+            this.coltipo_id.FieldName = "tipo_id";
+            this.coltipo_id.Name = "coltipo_id";
+            // 
+            // coltipo_pt_name
+            // 
+            this.coltipo_pt_name.FieldName = "tipo_pt_name";
+            this.coltipo_pt_name.Name = "coltipo_pt_name";
             // 
             // frmFactura
             // 
@@ -659,5 +673,7 @@ namespace Eatery.Ventas
         private DevExpress.XtraGrid.Columns.GridColumn colid_estudiante;
         private DevExpress.XtraGrid.Columns.GridColumn colid_isv_aplicable;
         private DevExpress.XtraGrid.Columns.GridColumn colsaldo;
+        private DevExpress.XtraGrid.Columns.GridColumn coltipo_id;
+        private DevExpress.XtraGrid.Columns.GridColumn coltipo_pt_name;
     }
 }

@@ -58,6 +58,7 @@
             this.cmdCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.txtDireccion = new DevExpress.XtraEditors.TextEdit();
             this.label3 = new System.Windows.Forms.Label();
+            this.dsVentaSuccess1 = new ERP_INTECOLI.Facturacion.CoreFacturas.dsVentaSuccess();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsVentas1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -65,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRTN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreCliente.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsVentaSuccess1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -73,7 +75,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl1.DataMember = "detalle_factura_transaction";
-            this.gridControl1.DataSource = this.dsVentas1;
+            this.gridControl1.DataSource = this.dsVentaSuccess1;
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.Location = new System.Drawing.Point(2, 132);
             this.gridControl1.MainView = this.gridView1;
@@ -344,6 +346,11 @@
             this.label3.TabIndex = 40;
             this.label3.Text = "Dirección:";
             // 
+            // dsVentaSuccess1
+            // 
+            this.dsVentaSuccess1.DataSetName = "dsVentaSuccess";
+            this.dsVentaSuccess1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // frmConfirmationFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,6 +374,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRTN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreCliente.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsVentaSuccess1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,5 +406,6 @@
         public DevExpress.XtraEditors.TextEdit txtNombreCliente;
         public DevExpress.XtraEditors.TextEdit txtDireccion;
         private System.Windows.Forms.Label label3;
+        private ERP_INTECOLI.Facturacion.CoreFacturas.dsVentaSuccess dsVentaSuccess1;
     }
 }

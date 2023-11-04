@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using ERP_INTECOLI.Facturacion.CoreFacturas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,16 +17,16 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
         public string NombreCliente;
         public string RTN;
         public string Direccion;
-        public frmConfirmationFactura(string nombreCliente, string rTN, string pDireccion, dsVentas.detalle_factura_transactionDataTable pdatasetlleno)
+        public frmConfirmationFactura(string nombreCliente, string rTN, string pDireccion, dsVentaSuccess.detalle_factura_transactionDataTable pdatasetlleno)
         {
             InitializeComponent();
             txtNombreCliente.Text = NombreCliente = nombreCliente;
             txtRTN.Text = RTN = rTN;
             this.Direccion = txtDireccion.Text = pDireccion;
 
-            foreach(dsVentas.detalle_factura_transactionRow row in pdatasetlleno) 
+            foreach(dsVentaSuccess.detalle_factura_transactionRow row in pdatasetlleno) 
             {
-                dsVentas.detalle_factura_transactionRow row1 = dsVentas1.detalle_factura_transaction.Newdetalle_factura_transactionRow();
+                dsVentaSuccess.detalle_factura_transactionRow row1 = dsVentaSuccess1.detalle_factura_transaction.Newdetalle_factura_transactionRow();
                 row1.cantidad = row.cantidad;  
                 row1.id_pt = row.id_pt;
                 row1.inventario = row.inventario;
@@ -39,7 +40,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
                 row1.total_linea = row.total_linea;
                 row1.itemcode = row.itemcode;
                 row1.itemname = row.itemname;
-                dsVentas1.detalle_factura_transaction.Adddetalle_factura_transactionRow(row1);
+                dsVentaSuccess1.detalle_factura_transaction.Adddetalle_factura_transactionRow(row1);
             }
         }
 

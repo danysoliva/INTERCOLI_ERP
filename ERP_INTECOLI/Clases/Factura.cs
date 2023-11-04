@@ -23,6 +23,7 @@ namespace ERP_INTECOLI.Clases
         public DateTime FechaRow { get; set; }
         public DateTime FechaDocumento { get; set; }
         public int IdCliente { get; set; }
+        public long IdEstudiante { get; set; }
         public string RTN { get; set; }
         public string NumOrdenCompra { get; set; }
         public int IdPuntoVenta { get; set; }
