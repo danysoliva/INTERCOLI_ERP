@@ -84,6 +84,7 @@ namespace Eatery.Ventas
             this.colsaldo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltipo_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltipo_pt_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreCliente.Properties)).BeginInit();
             this.panelNotificacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsVentas1)).BeginInit();
@@ -260,6 +261,7 @@ namespace Eatery.Ventas
             // navigationPage1
             // 
             this.navigationPage1.Caption = "navigationPage1";
+            this.navigationPage1.Controls.Add(this.simpleButton2);
             this.navigationPage1.Controls.Add(this.rdCredito);
             this.navigationPage1.Controls.Add(this.rdContado);
             this.navigationPage1.Controls.Add(this.label4);
@@ -599,6 +601,20 @@ namespace Eatery.Ventas
             this.coltipo_pt_name.FieldName = "tipo_pt_name";
             this.coltipo_pt_name.Name = "coltipo_pt_name";
             // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(972, 3);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(133, 38);
+            this.simpleButton2.TabIndex = 40;
+            this.simpleButton2.Text = "&Salir";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click_1);
+            // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -675,5 +691,6 @@ namespace Eatery.Ventas
         private DevExpress.XtraGrid.Columns.GridColumn colsaldo;
         private DevExpress.XtraGrid.Columns.GridColumn coltipo_id;
         private DevExpress.XtraGrid.Columns.GridColumn coltipo_pt_name;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

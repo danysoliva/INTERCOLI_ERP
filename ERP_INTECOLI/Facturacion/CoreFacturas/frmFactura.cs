@@ -2231,5 +2231,11 @@ namespace Eatery.Ventas
                 rdContado.CheckedChanged += new EventHandler(rdContado_CheckedChanged);
             }
         }
+
+        private void simpleButton2_Click_1(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
     }
 }

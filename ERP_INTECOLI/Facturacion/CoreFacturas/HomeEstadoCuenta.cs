@@ -23,6 +23,11 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             //LoadData(20);
         }
 
+        public HomeEstadoCuenta(UserLogin pUser, PuntoVenta pPuntoDeVentaActual, FacturacionEquipo pEquipoActual, Int64 pIdEstudiante)
+        {
+            InitializeComponent();
+        }
+
         int id_cliente_selected=0;
         private void LoadData(int id_cliente)
         {

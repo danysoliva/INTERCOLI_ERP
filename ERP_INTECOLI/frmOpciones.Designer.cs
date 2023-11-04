@@ -735,7 +735,9 @@ namespace ERP_INTECOLI
             this.navFacturaEmitidas.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.navFacturaEmitidas.AppearancePressed.Options.UseFont = true;
             this.navFacturaEmitidas.Caption = "Facturas Emitidas";
+            this.navFacturaEmitidas.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navFacturaEmitidas.ImageOptions.SvgImage")));
             this.navFacturaEmitidas.Name = "navFacturaEmitidas";
+            this.navFacturaEmitidas.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFacturaEmitidas_LinkClicked);
             // 
             // navFactEstadoCuente
             // 
@@ -746,7 +748,9 @@ namespace ERP_INTECOLI
             this.navFactEstadoCuente.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.navFactEstadoCuente.AppearancePressed.Options.UseFont = true;
             this.navFactEstadoCuente.Caption = "Estado de Cuenta";
+            this.navFactEstadoCuente.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navFactEstadoCuente.ImageOptions.SvgImage")));
             this.navFactEstadoCuente.Name = "navFactEstadoCuente";
+            this.navFactEstadoCuente.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFactEstadoCuente_LinkClicked);
             // 
             // navSolicitudesAutori
             // 
