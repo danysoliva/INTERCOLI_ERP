@@ -2047,6 +2047,10 @@ namespace ERP_INTECOLI.Facturacion.CoreFacturas {
             
             private global::System.Data.DataColumn columnid_detalle;
             
+            private global::System.Data.DataColumn columntipo_id;
+            
+            private global::System.Data.DataColumn columntipo_pt_name;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public detalle_factura_transactionDataTable() {
@@ -2218,6 +2222,22 @@ namespace ERP_INTECOLI.Facturacion.CoreFacturas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn tipo_idColumn {
+                get {
+                    return this.columntipo_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn tipo_pt_nameColumn {
+                get {
+                    return this.columntipo_pt_name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2270,7 +2290,9 @@ namespace ERP_INTECOLI.Facturacion.CoreFacturas {
                         decimal saldo, 
                         long id_estudiante, 
                         int curso_id, 
-                        long id_detalle) {
+                        long id_detalle, 
+                        int tipo_id, 
+                        string tipo_pt_name) {
                 detalle_factura_transactionRow rowdetalle_factura_transactionRow = ((detalle_factura_transactionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_pt,
@@ -2289,7 +2311,9 @@ namespace ERP_INTECOLI.Facturacion.CoreFacturas {
                         saldo,
                         id_estudiante,
                         curso_id,
-                        id_detalle};
+                        id_detalle,
+                        tipo_id,
+                        tipo_pt_name};
                 rowdetalle_factura_transactionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdetalle_factura_transactionRow);
                 return rowdetalle_factura_transactionRow;
@@ -2329,6 +2353,8 @@ namespace ERP_INTECOLI.Facturacion.CoreFacturas {
                 this.columnid_estudiante = base.Columns["id_estudiante"];
                 this.columncurso_id = base.Columns["curso_id"];
                 this.columnid_detalle = base.Columns["id_detalle"];
+                this.columntipo_id = base.Columns["tipo_id"];
+                this.columntipo_pt_name = base.Columns["tipo_pt_name"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2368,6 +2394,10 @@ namespace ERP_INTECOLI.Facturacion.CoreFacturas {
                 base.Columns.Add(this.columncurso_id);
                 this.columnid_detalle = new global::System.Data.DataColumn("id_detalle", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_detalle);
+                this.columntipo_id = new global::System.Data.DataColumn("tipo_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipo_id);
+                this.columntipo_pt_name = new global::System.Data.DataColumn("tipo_pt_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipo_pt_name);
                 this.columnitemcode.Caption = "Código";
                 this.columnitemname.Caption = "Descripción";
                 this.columncantidad.Caption = "Cant.";
@@ -3663,6 +3693,39 @@ namespace ERP_INTECOLI.Facturacion.CoreFacturas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int tipo_id {
+                get {
+                    try {
+                        return ((int)(this[this.tabledetalle_factura_transaction.tipo_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tipo_id\' in table \'detalle_factura_transaction\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledetalle_factura_transaction.tipo_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string tipo_pt_name {
+                get {
+                    try {
+                        return ((string)(this[this.tabledetalle_factura_transaction.tipo_pt_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tipo_pt_name\' in table \'detalle_factura_transaction\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledetalle_factura_transaction.tipo_pt_nameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isid_ptNull() {
                 return this.IsNull(this.tabledetalle_factura_transaction.id_ptColumn);
             }
@@ -3863,6 +3926,30 @@ namespace ERP_INTECOLI.Facturacion.CoreFacturas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setid_detalleNull() {
                 this[this.tabledetalle_factura_transaction.id_detalleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Istipo_idNull() {
+                return this.IsNull(this.tabledetalle_factura_transaction.tipo_idColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Settipo_idNull() {
+                this[this.tabledetalle_factura_transaction.tipo_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Istipo_pt_nameNull() {
+                return this.IsNull(this.tabledetalle_factura_transaction.tipo_pt_nameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Settipo_pt_nameNull() {
+                this[this.tabledetalle_factura_transaction.tipo_pt_nameColumn] = global::System.Convert.DBNull;
             }
         }
         

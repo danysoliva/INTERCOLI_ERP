@@ -94,6 +94,7 @@ namespace Eatery.Ventas
             this.colDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmdDeleteRowFactura = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colinventario = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dsVentaSuccess1 = new ERP_INTECOLI.Facturacion.CoreFacturas.dsVentaSuccess();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreCliente.Properties)).BeginInit();
             this.panelNotificacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsVentas1)).BeginInit();
@@ -108,10 +109,10 @@ namespace Eatery.Ventas
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdAddToCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTilePanel1)).BeginInit();
-            this.ultraTilePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdDeleteRowFactura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsVentaSuccess1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombreCliente
@@ -305,6 +306,7 @@ namespace Eatery.Ventas
             // 
             // navigationPage1
             // 
+            this.navigationPage1.Caption = "navigationPage1";
             this.navigationPage1.Controls.Add(this.txtDireccion);
             this.navigationPage1.Controls.Add(this.label3);
             this.navigationPage1.Controls.Add(this.panelNotificacion);
@@ -704,6 +706,11 @@ namespace Eatery.Ventas
             this.colinventario.VisibleIndex = 2;
             this.colinventario.Width = 48;
             // 
+            // dsVentaSuccess1
+            // 
+            this.dsVentaSuccess1.DataSetName = "dsVentaSuccess";
+            this.dsVentaSuccess1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // frmFacturaBackup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -730,10 +737,10 @@ namespace Eatery.Ventas
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdAddToCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTilePanel1)).EndInit();
-            this.ultraTilePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdDeleteRowFactura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsVentaSuccess1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -788,5 +795,6 @@ namespace Eatery.Ventas
         private DevExpress.XtraGrid.Columns.GridColumn colinventario;
         private DevExpress.XtraEditors.TextEdit txtDireccion;
         private System.Windows.Forms.Label label3;
+        private ERP_INTECOLI.Facturacion.CoreFacturas.dsVentaSuccess dsVentaSuccess1;
     }
 }

@@ -5,6 +5,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Facturacion.CoreFacturas;
+using ERP_INTECOLI.Transacciones;
 using Infragistics.Win.Misc;
 using JAGUAR_APP.Facturacion.CoreFacturas;
 using JAGUAR_APP.Facturacion.Mantenimientos.Models;
@@ -473,20 +474,20 @@ namespace Eatery.Ventas
                 return;
             }
 
-            if(ClienteFactura.Recuperado)
-            //Vamos a verificar que el cliente tenga RTN
-            {
-                //if (dp.ValidateStringIsNullOrEmpty(txtRTN.Text))
-                //{
-                //    SetErrorBarra("Se ha seleccionado un cliente, pero se dejo vacio el campo RTN!");
-                //    return;
-                //}
-                //if (dp.ValidateStringIsNullOrEmpty(txtNombreCliente.Text))
-                //{
-                //    SetErrorBarra("Se ha seleccionado un cliente, pero se dejo vacio el Nombre de cliente de forma manual, es un campo obligatorio!");
-                //    return;
-                //}
-            }
+            //if(ClienteFactura.Recuperado)
+            ////Vamos a verificar que el cliente tenga RTN
+            //{
+            //    //if (dp.ValidateStringIsNullOrEmpty(txtRTN.Text))
+            //    //{
+            //    //    SetErrorBarra("Se ha seleccionado un cliente, pero se dejo vacio el campo RTN!");
+            //    //    return;
+            //    //}
+            //    //if (dp.ValidateStringIsNullOrEmpty(txtNombreCliente.Text))
+            //    //{
+            //    //    SetErrorBarra("Se ha seleccionado un cliente, pero se dejo vacio el Nombre de cliente de forma manual, es un campo obligatorio!");
+            //    //    return;
+            //    //}
+            //}
 
             if (dp.ValidateNumberDecimal(txtTotal.Text)<=0)
             {
@@ -514,7 +515,7 @@ namespace Eatery.Ventas
             if (PuntoDeVentaActual.EmisionFacturaDosPasos)
             {
                 //Primero postear el pago
-                frmConfirmationFactura frm2 = new frmConfirmationFactura(txtNombreCliente.Text, txtRTN.Text, txtDireccion.Text, dsVentas1.detalle_factura_transaction);
+                frmConfirmationFactura frm2 = new frmConfirmationFactura(txtNombreCliente.Text, txtRTN.Text, txtDireccion.Text, dsVentaSuccess1.detalle_factura_transaction);
                 if (frm2.ShowDialog() == DialogResult.OK)
                 {
                     Factura factura = new Factura();
@@ -525,6 +526,10 @@ namespace Eatery.Ventas
                     if(ClienteFactura != null)
                         if(ClienteFactura.Id>0)
                             factura.IdCliente = ClienteFactura.Id;
+
+                    if (EstudianteFactura != null)
+                        if (EstudianteFactura.IdEstudiante > 0)
+                            factura.IdEstudiante = EstudianteFactura.IdEstudiante;
 
                     factura.FechaDocumento = dp.NowSetDateTime();
                     //1   Emitida
@@ -543,7 +548,7 @@ namespace Eatery.Ventas
                     factura.descuentoTotalFactura = factura.subtotalFactura = 
                     factura.ISV1 = factura.ISV2 = 0;
 
-                    foreach (dsVentas.detalle_factura_transactionRow row in dsVentas1.detalle_factura_transaction)
+                    foreach (dsVentaSuccess.detalle_factura_transactionRow row in dsVentaSuccess1.detalle_factura_transaction)
                     {
                         factura.subtotalFactura += dp.ValidateNumberDecimal((row.cantidad * row.precio));
                         factura.descuentoTotalFactura += dp.ValidateNumberDecimal(row.descuento);
@@ -615,7 +620,7 @@ namespace Eatery.Ventas
                         try
                         {
                             //Guardamos el Header de la factura 
-                            command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta_v4]";
+                            command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta]";
                             command.CommandType = CommandType.StoredProcedure;
                             command.Parameters.AddWithValue("@numero_documento", factura.NumeroDocumento);
                             command.Parameters.AddWithValue("@enable", 1);
@@ -668,15 +673,16 @@ namespace Eatery.Ventas
                             command.Parameters.AddWithValue("@isv2", factura.ISV2);
                             command.Parameters.AddWithValue("@id_formato_impresion", PuntoDeVentaActual.IdFormatoFactura);
                             command.Parameters.AddWithValue("@id_termino_pago", IdTerminoPago);
+                            command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
 
                             Int64 IdFacturaH = Convert.ToInt64(command.ExecuteScalar());
                             decimal TotalFactura = 0;
                             factura.Id = IdFacturaH;
 
                             //Posteamos lineas de factura y Transaccion en Kardex
-                            foreach(dsVentas.detalle_factura_transactionRow row in dsVentas1.detalle_factura_transaction)
+                            foreach(dsVentaSuccess.detalle_factura_transactionRow row in dsVentaSuccess1.detalle_factura_transaction)
                             {
-                                command.CommandText = "dbo.sp_set_insert_factura__lineas__punto_venta_dos_pasos";
+                                command.CommandText = "dbo.[sp_set_insert_factura_lineas_punto_venta_dos_pasos]";
                                 command.Parameters.Clear();
                                 command.CommandType = CommandType.StoredProcedure;
                                 command.Parameters.AddWithValue("@id_facturaH", IdFacturaH);
@@ -698,27 +704,44 @@ namespace Eatery.Ventas
                                     command.Parameters.AddWithValue("@id_isv_aplicado", row.id_isv_aplicable);
                                 else
                                     command.Parameters.AddWithValue("@id_isv_aplicado", DBNull.Value);
+
+                                command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
+                                command.Parameters.AddWithValue("@id_detalle_matricula", row.id_detalle);
                                 TotalFactura += row.total_linea;
                                 command.ExecuteNonQuery();
+
+
+
+                                //Vamos a postear transaccion en estado de cuenta de cliente
+                                if (factura.IdEstudiante > 0)
+                                {
+                                    command.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente]";
+                                    command.CommandType = CommandType.StoredProcedure;
+                                    command.Parameters.Clear();
+                                    command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
+                                    command.Parameters.AddWithValue("@enable", 1);
+                                    command.Parameters.AddWithValue("@credito", 0);//Abonos
+                                    command.Parameters.AddWithValue("@debito", row.total_linea);//cargos
+                                    command.Parameters.AddWithValue("@concepto", string.Concat("Por Factura #", factura.NumeroDocumento, " Correspondiente a: ", row.itemname));
+                                    command.Parameters.AddWithValue("@doc_date", factura.FechaDocumento);
+                                    command.Parameters.AddWithValue("@date_created", factura.FechaDocumento);
+                                    command.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
+
+                                    //if (factura.IdEstudiante == 0)
+                                    //    command.Parameters.AddWithValue("@id_estudiante", DBNull.Value);
+                                    //else
+                                        command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
+
+                                    if (row.id_detalle == 0)
+                                        command.Parameters.AddWithValue("@id_detalle_matricula", DBNull.Value);
+                                    else
+                                        command.Parameters.AddWithValue("@id_detalle_matricula", row.id_detalle);
+
+                                    command.ExecuteNonQuery();
+                                }
                             }
 
-                            //Vamos a postear transaccion en estado de cuenta de cliente
-                            if (factura.IdCliente > 0)
-                            {
-                                command.CommandText = "dbo.sp_set_insert_estado_cuenta_cliente";
-                                command.CommandType = CommandType.StoredProcedure;
-                                command.Parameters.Clear();
-                                command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
-                                command.Parameters.AddWithValue("@enable", 1);
-                                command.Parameters.AddWithValue("@credito", 0);//Abonos
-                                command.Parameters.AddWithValue("@debito", TotalFactura);//cargos
-                                command.Parameters.AddWithValue("@concepto",string.Concat("Por Factura #",factura.NumeroDocumento));
-                                command.Parameters.AddWithValue("@doc_date", factura.FechaDocumento);
-                                command.Parameters.AddWithValue("@date_created", factura.FechaDocumento);
-                                command.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
-                                command.Parameters.AddWithValue("@id_cliente", factura.IdCliente);
-                                command.ExecuteNonQuery();
-                            }
+                            
 
                             // Attempt to commit the transaction.
                             transaction.Commit();
@@ -749,14 +772,10 @@ namespace Eatery.Ventas
             }
             else
             {
-
-
-
                 //PRIMERO EL PAGO LUEGO LA FACTURA
 
-
                 //Sino, significa que primero el pago y despues la factura.
-                frmConfirmationFactura frm2 = new frmConfirmationFactura(txtNombreCliente.Text, txtRTN.Text, txtDireccion.Text, dsVentas1.detalle_factura_transaction);
+                frmConfirmationFactura frm2 = new frmConfirmationFactura(txtNombreCliente.Text, txtRTN.Text, txtDireccion.Text, dsVentaSuccess1.detalle_factura_transaction);
                 if (frm2.ShowDialog() == DialogResult.OK)
                 {
                     decimal ValorTotalFactura = dp.ValidateNumberDecimal(txtTotal.Text);
@@ -769,10 +788,13 @@ namespace Eatery.Ventas
                         factura.ClienteNombre = frm2.NombreCliente;
                         factura.direccion_cliente = frm2.Direccion;
 
-
                         if (ClienteFactura != null)
                             if (ClienteFactura.Id > 0)
                                 factura.IdCliente = ClienteFactura.Id;
+
+                        if (EstudianteFactura != null)
+                            if (EstudianteFactura.IdEstudiante > 0)
+                                factura.IdEstudiante = EstudianteFactura.IdEstudiante;
 
                         factura.FechaDocumento = dp.NowSetDateTime();
                         
@@ -836,7 +858,7 @@ namespace Eatery.Ventas
                         factura.descuentoTotalFactura = factura.subtotalFactura =
                         factura.ISV1 = factura.ISV2 = 0;
 
-                        foreach (dsVentas.detalle_factura_transactionRow row in dsVentas1.detalle_factura_transaction)
+                        foreach (dsVentaSuccess.detalle_factura_transactionRow row in dsVentaSuccess1.detalle_factura_transaction)
                         {
                             factura.subtotalFactura += dp.ValidateNumberDecimal((row.cantidad * row.precio));
                             factura.descuentoTotalFactura += dp.ValidateNumberDecimal(row.descuento);
@@ -864,7 +886,8 @@ namespace Eatery.Ventas
                             try
                             {
                                 //Guardamos el Header de la factura 
-                                command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta_v2]";
+                                command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta]";
+                                                            
                                 command.CommandType = CommandType.StoredProcedure;
                                 command.Parameters.AddWithValue("@numero_documento", factura.NumeroDocumento);
                                 command.Parameters.AddWithValue("@enable", 1);
@@ -919,6 +942,8 @@ namespace Eatery.Ventas
                                 command.Parameters.AddWithValue("@isv1", factura.ISV1);
                                 command.Parameters.AddWithValue("@isv2", factura.ISV2);
                                 command.Parameters.AddWithValue("@id_formato_impresion", PuntoDeVentaActual.IdFormatoFactura);
+                                command.Parameters.AddWithValue("@id_termino_pago", IdTerminoPago); 
+                                command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
 
                                 Int64 IdFacturaH = Convert.ToInt64(command.ExecuteScalar());
                                 decimal TotalFactura = 0;
@@ -926,9 +951,9 @@ namespace Eatery.Ventas
 
 
                                 //Posteamos lineas de factura y Transaccion en Kardex
-                                foreach (dsVentas.detalle_factura_transactionRow row in dsVentas1.detalle_factura_transaction)
+                                foreach (dsVentaSuccess.detalle_factura_transactionRow row in dsVentaSuccess1.detalle_factura_transaction)
                                 {
-                                    command.CommandText = "dbo.sp_set_insert_factura__lineas__punto_venta_dos_pasos";
+                                    command.CommandText = "dbo.sp_set_insert_factura_lineas_punto_venta_dos_pasos";
                                     command.Parameters.Clear();
                                     command.CommandType = CommandType.StoredProcedure;
                                     command.Parameters.AddWithValue("@id_facturaH", IdFacturaH);
@@ -945,71 +970,156 @@ namespace Eatery.Ventas
                                     command.Parameters.AddWithValue("@id_punto_venta", this.PuntoDeVentaActual.ID);
                                     command.Parameters.AddWithValue("@fecha_hora_row", factura.FechaDocumento);
                                     command.Parameters.AddWithValue("@id_user", this.UsuarioLogeado.Id);
+                                    
                                     if (row.id_isv_aplicable > 0)
                                         command.Parameters.AddWithValue("@id_isv_aplicado", row.id_isv_aplicable);
                                     else
                                         command.Parameters.AddWithValue("@id_isv_aplicado", DBNull.Value);
 
+
+                                    if (factura.IdEstudiante == 0)
+                                        command.Parameters.AddWithValue("@id_estudiante", DBNull.Value);
+                                    else
+                                        command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
+
+
+                                    if (row.id_detalle == 0)
+                                        command.Parameters.AddWithValue("@id_detalle_matricula", DBNull.Value);
+                                    else
+                                        command.Parameters.AddWithValue("@id_detalle_matricula", row.id_detalle);
+
                                     TotalFactura += row.total_linea;
+                                    command.ExecuteNonQuery();
+
+
+
+
+                                    //Cargo en el caso de cursos y productos agregados manualmente
+                                    if (row.id_detalle <= 0)
+                                    {
+                                        command.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente]";
+                                        command.CommandType = CommandType.StoredProcedure;
+                                        command.Parameters.Clear();
+                                        command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
+                                        command.Parameters.AddWithValue("@enable", 1);
+                                        command.Parameters.AddWithValue("@credito", 0);//Abonos
+                                        command.Parameters.AddWithValue("@debito", TotalFactura);//cargos
+                                        command.Parameters.AddWithValue("@concepto", string.Concat("Por Factura #", factura.NumeroDocumento));
+                                        command.Parameters.AddWithValue("@doc_date", factura.FechaDocumento);
+                                        command.Parameters.AddWithValue("@date_created", factura.FechaDocumento);
+                                        command.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
+
+                                        //Cliente
+                                        if (factura.IdCliente == 0)
+                                            command.Parameters.AddWithValue("@id_cliente", DBNull.Value);
+                                        else
+                                            command.Parameters.AddWithValue("@id_cliente", factura.IdCliente);
+
+                                        if (factura.IdEstudiante == 0)
+                                            command.Parameters.AddWithValue("@id_estudiante", DBNull.Value);
+                                        else
+                                            command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
+
+
+                                        command.Parameters.AddWithValue("@id_detalle_matricula", row.id_detalle);
+
+                                        command.ExecuteNonQuery();
+                                    }
+
+
+
+                                    //El pago de la misma ***********************************************
+                                    command.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente]";
+                                    command.CommandType = CommandType.StoredProcedure;
+                                    command.Parameters.Clear();
+                                    command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
+                                    command.Parameters.AddWithValue("@enable", 1);
+                                    command.Parameters.AddWithValue("@credito", TotalFactura);//Abonos
+                                    command.Parameters.AddWithValue("@debito", 0);//cargos
+                                    command.Parameters.AddWithValue("@concepto", string.Concat("Pago de Factura #", factura.NumeroDocumento));
+                                    command.Parameters.AddWithValue("@doc_date", factura.FechaDocumento);
+                                    command.Parameters.AddWithValue("@date_created", factura.FechaDocumento);
+                                    command.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
+
+                                    ////Cliente
+                                    //if (factura.IdCliente == 0)
+                                    //    command.Parameters.AddWithValue("@id_cliente", DBNull.Value);
+                                    //else
+                                    //    command.Parameters.AddWithValue("@id_cliente", factura.IdCliente);
+
+
+                                    if (factura.IdEstudiante == 0)
+                                        command.Parameters.AddWithValue("@id_estudiante", DBNull.Value);
+                                    else
+                                        command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
+
+
+                                    if (row.id_detalle == 0)
+                                        command.Parameters.AddWithValue("@id_detalle_matricula", DBNull.Value);
+                                    else
+                                        command.Parameters.AddWithValue("@id_detalle_matricula", row.id_detalle);
+
                                     command.ExecuteNonQuery();
                                 }
 
 
                                 //Vamos a postear transaccion en estado de cuenta de cliente
-                                //if (factura.IdCliente > 0)
-                                //{
                                 //El cargo por la factura
-                                command.CommandText = "dbo.sp_set_insert_estado_cuenta_cliente_v2";
-                                command.CommandType = CommandType.StoredProcedure;
-                                command.Parameters.Clear();
-                                command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
-                                command.Parameters.AddWithValue("@enable", 1);
-                                command.Parameters.AddWithValue("@credito", 0);//Abonos
-                                command.Parameters.AddWithValue("@debito", TotalFactura);//cargos
-                                command.Parameters.AddWithValue("@concepto", string.Concat("Por Factura #", factura.NumeroDocumento));
-                                command.Parameters.AddWithValue("@doc_date", factura.FechaDocumento);
-                                command.Parameters.AddWithValue("@date_created", factura.FechaDocumento);
-                                command.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
 
-                                //Cliente
-                                if (factura.IdCliente == 0)
-                                    command.Parameters.AddWithValue("@id_cliente", DBNull.Value);
-                                else
-                                    command.Parameters.AddWithValue("@id_cliente", factura.IdCliente);
+                                //********* LO MOVIMOS A LA ITERACION DEL FOR YA QUE SE HACE POSTEO POR CADA LINEA
 
-                                command.Parameters.AddWithValue("@referencia", DBNull.Value);
-                                command.ExecuteNonQuery();
+                                //command.CommandText = "dbo.sp_set_insert_estado_cuenta_cliente_v2";
+                                //command.CommandType = CommandType.StoredProcedure;
+                                //command.Parameters.Clear();
+                                //command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
+                                //command.Parameters.AddWithValue("@enable", 1);
+                                //command.Parameters.AddWithValue("@credito", 0);//Abonos
+                                //command.Parameters.AddWithValue("@debito", TotalFactura);//cargos
+                                //command.Parameters.AddWithValue("@concepto", string.Concat("Por Factura #", factura.NumeroDocumento));
+                                //command.Parameters.AddWithValue("@doc_date", factura.FechaDocumento);
+                                //command.Parameters.AddWithValue("@date_created", factura.FechaDocumento);
+                                //command.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
+
+                                ////Cliente
+                                //if (factura.IdCliente == 0)
+                                //    command.Parameters.AddWithValue("@id_cliente", DBNull.Value);
+                                //else
+                                //    command.Parameters.AddWithValue("@id_cliente", factura.IdCliente);
+
+                                //command.Parameters.AddWithValue("@referencia", DBNull.Value);
+                                //command.ExecuteNonQuery();
 
 
 
 
-                                //El pago de la misma ***********************************************
-                                command.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente_v2]";
-                                command.CommandType = CommandType.StoredProcedure;
-                                command.Parameters.Clear();
-                                command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
-                                command.Parameters.AddWithValue("@enable", 1);
-                                command.Parameters.AddWithValue("@credito", TotalFactura);//Abonos
-                                command.Parameters.AddWithValue("@debito", 0);//cargos
-                                command.Parameters.AddWithValue("@concepto", string.Concat("Pago de Factura #", factura.NumeroDocumento));
-                                command.Parameters.AddWithValue("@doc_date", factura.FechaDocumento);
-                                command.Parameters.AddWithValue("@date_created", factura.FechaDocumento);
-                                command.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
 
-                                //Cliente
-                                if (factura.IdCliente == 0)
-                                    command.Parameters.AddWithValue("@id_cliente", DBNull.Value);
-                                else
-                                    command.Parameters.AddWithValue("@id_cliente", factura.IdCliente);
+                                //********* LO MOVIMOS A LA ITERACION DEL FOR YA QUE SE HACE POSTEO POR CADA LINEA
+                                ////El pago de la misma ***********************************************
+                                //command.CommandText = "dbo.[sp_set_insert_estado_cuenta_cliente_v2]";
+                                //command.CommandType = CommandType.StoredProcedure;
+                                //command.Parameters.Clear();
+                                //command.Parameters.AddWithValue("@num_doc", factura.NumeroDocumento);
+                                //command.Parameters.AddWithValue("@enable", 1);
+                                //command.Parameters.AddWithValue("@credito", TotalFactura);//Abonos
+                                //command.Parameters.AddWithValue("@debito", 0);//cargos
+                                //command.Parameters.AddWithValue("@concepto", string.Concat("Pago de Factura #", factura.NumeroDocumento));
+                                //command.Parameters.AddWithValue("@doc_date", factura.FechaDocumento);
+                                //command.Parameters.AddWithValue("@date_created", factura.FechaDocumento);
+                                //command.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
 
-                                //Referencia
-                                if (string.IsNullOrEmpty(frm.ReferenciaReciboPago))
-                                    command.Parameters.AddWithValue("@referencia", DBNull.Value);
-                                else
-                                    command.Parameters.AddWithValue("@referencia", frm.ReferenciaReciboPago);
+                                ////Cliente
+                                //if (factura.IdCliente == 0)
+                                //    command.Parameters.AddWithValue("@id_cliente", DBNull.Value);
+                                //else
+                                //    command.Parameters.AddWithValue("@id_cliente", factura.IdCliente);
 
-                                command.ExecuteNonQuery();
-                                //}end  if (factura.IdCliente > 0)
+                                ////Referencia
+                                //if (string.IsNullOrEmpty(frm.ReferenciaReciboPago))
+                                //    command.Parameters.AddWithValue("@referencia", DBNull.Value);
+                                //else
+                                //    command.Parameters.AddWithValue("@referencia", frm.ReferenciaReciboPago);
+
+                                //command.ExecuteNonQuery();
 
                                 // Attempt to commit the transaction.
                                 transaction.Commit();
@@ -1827,6 +1937,8 @@ namespace Eatery.Ventas
                             rowF.isv1 = rowF.isv2 = rowF.isv3 = 0;
                             rowF.isv1 = ((rowF.cantidad * rowF.precio) - rowF.descuento) * rowF.tasa_isv;
                             rowF.total_linea = (rowF.cantidad * rowF.precio) - rowF.descuento + rowF.isv1 + rowF.isv2 + rowF.isv3;
+                            rowF.tipo_id = pt1.Tipo_id;
+
                             AgregarNuevo = false;
                         }
                         valor_total += (rowF.total_linea + rowF.isv1);
@@ -1883,6 +1995,7 @@ namespace Eatery.Ventas
                         row1.itemcode = frm.ItemSeleccionado.ItemCode;
                         row1.itemname = frm.ItemSeleccionado.ItemName;
                         row1.inventario = pt1.Recuperar_Cant_Inv_Actual_PT_for_facturacion(pt1.Id, this.PuntoDeVentaActual.ID);
+                        row1.tipo_id = pt1.Tipo_id;
 
                         row1.isv1 = row1.isv2 = row1.isv3 = 0;
                         Impuesto impuesto = new Impuesto();
@@ -1904,8 +2017,24 @@ namespace Eatery.Ventas
                             row1.precio = (row1.precio - row1.descuento);
                         }
 
-                        row1.total_linea = (row1.cantidad * row1.precio) + (row1.cantidad * row1.isv1) + (row1.cantidad * row1.isv2) + (row1.cantidad * row1.isv3);
+                        if (pt1.Tipo_id <= 1)
+                        {
+                            row1.id_detalle = 0;
+                        }
+                        else
+                        {
+                            Niveles NivelFact = new Niveles();
+                            if (NivelFact.CargarDatosPorId_PT(pt1.Id))
+                            {
+                                Int64 rIdDetalleMatricula = EstudianteFactura.BuscarMatriculaDetalle(EstudianteFactura.IdEstudiante, NivelFact.id_nivel);
+                                if (rIdDetalleMatricula > 0)
+                                    row1.id_detalle = rIdDetalleMatricula;
+                                else
+                                    row1.id_detalle = 0;
+                            }
+                        }
 
+                        row1.total_linea = (row1.cantidad * row1.precio) + (row1.cantidad * row1.isv1) + (row1.cantidad * row1.isv2) + (row1.cantidad * row1.isv3);
 
                         //dsCompras.oc_d_normal.Addoc_d_normalRow(row1);
                         dsVentaSuccess1.detalle_factura_transaction.Adddetalle_factura_transactionRow(row1);
@@ -1948,7 +2077,7 @@ namespace Eatery.Ventas
             }
 
             var gridView1 = (GridView)gridControl1.FocusedView;
-            var row = (dsVentas.detalle_factura_transactionRow)gridView1.GetFocusedDataRow();
+            var row = (dsVentaSuccess.detalle_factura_transactionRow)gridView1.GetFocusedDataRow();
 
             try
             {
@@ -1968,6 +2097,17 @@ namespace Eatery.Ventas
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
+            switch (e.Column.FieldName)
+            {
+                case "cantidad":
+                    var row = (dsVentaSuccess.detalle_factura_transactionRow)gridView1.GetFocusedDataRow();
+                    if (row.tipo_id > 1)
+                    {
+                        row.cantidad = Convert.ToDecimal(e.OldValue);
+                        row.SetColumnError("cantidad", "No se permite modificar la cantidad para Items de Cursos!");
+                    }
+                    break;
+            }
             CalcularTotalFactura();
         }
 

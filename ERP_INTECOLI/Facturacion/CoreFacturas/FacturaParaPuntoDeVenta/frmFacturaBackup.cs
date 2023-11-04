@@ -4,6 +4,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
 using ERP_INTECOLI.Clases;
+using ERP_INTECOLI.Facturacion.CoreFacturas;
 using Infragistics.Win.Misc;
 using JAGUAR_APP.Facturacion.CoreFacturas;
 using JAGUAR_APP.Facturacion.Mantenimientos.Models;
@@ -477,7 +478,7 @@ namespace Eatery.Ventas
             if (PuntoDeVentaActual.EmisionFacturaDosPasos)
             {
                 //Primero postear el pago
-                frmConfirmationFactura frm2 = new frmConfirmationFactura(txtNombreCliente.Text, txtRTN.Text, txtDireccion.Text, dsVentas1.detalle_factura_transaction);
+                frmConfirmationFactura frm2 = new frmConfirmationFactura(txtNombreCliente.Text, txtRTN.Text, txtDireccion.Text, dsVentaSuccess1.detalle_factura_transaction);
                 if (frm2.ShowDialog() == DialogResult.OK)
                 {
                     Factura factura = new Factura();
@@ -717,7 +718,7 @@ namespace Eatery.Ventas
 
 
                 //Sino, significa que primero el pago y despues la factura.
-                frmConfirmationFactura frm2 = new frmConfirmationFactura(txtNombreCliente.Text, txtRTN.Text, txtDireccion.Text, dsVentas1.detalle_factura_transaction);
+                frmConfirmationFactura frm2 = new frmConfirmationFactura(txtNombreCliente.Text, txtRTN.Text, txtDireccion.Text, dsVentaSuccess1.detalle_factura_transaction);
                 if (frm2.ShowDialog() == DialogResult.OK)
                 {
                     decimal ValorTotalFactura = dp.ValidateNumberDecimal(txtTotal.Text);

@@ -43,6 +43,28 @@ namespace ERP_INTECOLI.Clases
             Posterior = 2
         }
 
+        public Int64 BuscarMatriculaDetalle(Int64 pidEstudiante, int pIdNivel)
+        {
+            Int64 rIdMatriculaDetalle = 0;
+
+            try
+            {
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("dbo.sp_get_detalle_matricula_from_estudiante_and_nivel", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_estudiante", pidEstudiante);
+                cmd.Parameters.AddWithValue("@id_nivel", pIdNivel);
+                rIdMatriculaDetalle = Convert.ToInt64(cmd.ExecuteScalar()); 
+            }
+            catch (Exception ex)
+            {
+                rIdMatriculaDetalle = 0;
+                CajaDialogo.Error(ex.Message);
+            }
+            return rIdMatriculaDetalle;
+        }
+
         public bool RecuperarRegistro(Int64 pidEstudiante)
         {
             bool Recuperado = false;
