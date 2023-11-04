@@ -33,6 +33,7 @@ using ERP_INTECOLI.Mantenimiento.Productos;
 using ERP_INTECOLI.Mantenimiento.Proveedor;
 using ERP_INTECOLI.Transacciones;
 using ERP_INTECOLI.Usuarios;
+using JAGUAR_APP;
 using JAGUAR_APP.Facturacion.Mantenimientos;
 using JAGUAR_APP.Facturacion.Numeracion_Fiscal;
 
@@ -105,7 +106,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
                     frmEstudiantesGroup frm1 = new frmEstudiantesGroup(this.UsuarioLogeado);
-                    frm1.MdiParent = this;
+                    frm1.MdiParent = this.MdiParent;
                     frm1.Show();
 
                     break;
@@ -118,7 +119,7 @@ namespace ERP_INTECOLI
                 if (UsuarioLogeado.ValidarNivelPermisos(9))
                 {
                     frmEstudiantesGroup frm1 = new frmEstudiantesGroup(this.UsuarioLogeado);
-                    frm1.MdiParent = this;
+                    frm1.MdiParent = this.MdiParent;
                     frm1.Show();
                 }
                 else
@@ -144,7 +145,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
                     frmMatriculaReal mtx = new frmMatriculaReal(this.UsuarioLogeado);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
                     break;
                 default:
@@ -156,7 +157,7 @@ namespace ERP_INTECOLI
                 if (UsuarioLogeado.ValidarNivelPermisos(6)) //Matricula de Alumno
                 {
                     frmMatriculaReal mtx = new frmMatriculaReal(this.UsuarioLogeado);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
                 }
                 else
@@ -184,7 +185,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
                     frmConsultarMatriculados mtx = new frmConsultarMatriculados(this.UsuarioLogeado);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
                     break;
@@ -197,7 +198,7 @@ namespace ERP_INTECOLI
                 if (UsuarioLogeado.ValidarNivelPermisos(7))
                 {
                     frmConsultarMatriculados mtx = new frmConsultarMatriculados(this.UsuarioLogeado);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
                 }
                 else
@@ -214,7 +215,7 @@ namespace ERP_INTECOLI
             frmRecordatorio frx = new frmRecordatorio(this.UsuarioLogeado);
             if (frx != null)
             {
-                frx.MdiParent = this;
+                frx.MdiParent = this.MdiParent;
                 try
                 {
                     frx.Show();
@@ -231,7 +232,7 @@ namespace ERP_INTECOLI
             if (mtx != null)
             {
 
-                mtx.MdiParent = this;
+                mtx.MdiParent = this.MdiParent;
                 try
                 {
                     mtx.Show();
@@ -244,14 +245,14 @@ namespace ERP_INTECOLI
         private void navBarItem58_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             frmReservaCupoTransaction frm = new frmReservaCupoTransaction(this.UsuarioLogeado);
-            frm.MdiParent = this;
+            frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
         private void navEstadoCuentaOld_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             frmEstadoCuenta frm = new frmEstadoCuenta(this.UsuarioLogeado);
-            frm.MdiParent = this;
+            frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
@@ -266,7 +267,7 @@ namespace ERP_INTECOLI
             if (mtx != null)
             {
 
-                mtx.MdiParent = this;
+                mtx.MdiParent = this.MdiParent;
                 try
                 {
                     mtx.Show();
@@ -353,7 +354,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
                     frmSolicitudesMain mtx = new frmSolicitudesMain(UsuarioLogeado, frmSolicitudesMain.TipoOperacion.New);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
 
@@ -367,7 +368,7 @@ namespace ERP_INTECOLI
                 if (UsuarioLogeado.ValidarNivelPermisos(21))
                 {
                     frmSolicitudesMain mtx = new frmSolicitudesMain(UsuarioLogeado, frmSolicitudesMain.TipoOperacion.New);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
                 }
@@ -396,7 +397,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
                     frmOrdenesCompraMain mtx = new frmOrdenesCompraMain(UsuarioLogeado, frmOrdenesCompraMain.TipoOperacion.New);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
 
@@ -410,7 +411,7 @@ namespace ERP_INTECOLI
                 if (UsuarioLogeado.ValidarNivelPermisos(24))
                 {
                     frmOrdenesCompraMain mtx = new frmOrdenesCompraMain(UsuarioLogeado, frmOrdenesCompraMain.TipoOperacion.New);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
                 }
@@ -424,7 +425,7 @@ namespace ERP_INTECOLI
         private void navProyCobros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             frmSaldosAjustados frm = new frmSaldosAjustados(this.UsuarioLogeado);
-            frm.MdiParent = this;
+            frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
@@ -433,7 +434,7 @@ namespace ERP_INTECOLI
             frmConsultarMiembroCurso frx = new frmConsultarMiembroCurso(this.UsuarioLogeado);
             if (frx != null)
             {
-                frx.MdiParent = this;
+                frx.MdiParent = this.MdiParent;
                 try
                 {
                     frx.Show();
@@ -448,7 +449,7 @@ namespace ERP_INTECOLI
             frmConsultaCumpleanieros frx = new frmConsultaCumpleanieros(this.UsuarioLogeado);
             if (frx != null)
             {
-                frx.MdiParent = this;
+                frx.MdiParent = this.MdiParent;
                 try
                 {
                     frx.Show();
@@ -465,7 +466,7 @@ namespace ERP_INTECOLI
             frmRecuentoGeneros frx = new frmRecuentoGeneros(this.UsuarioLogeado);
             if (frx != null)
             {
-                frx.MdiParent = this;
+                frx.MdiParent = this.MdiParent;
                 try
                 {
                     frx.Show();
@@ -482,7 +483,7 @@ namespace ERP_INTECOLI
             if (mtx != null)
             {
 
-                mtx.MdiParent = this;
+                mtx.MdiParent = this.MdiParent;
                 try
                 {
                     mtx.Show();
@@ -495,7 +496,7 @@ namespace ERP_INTECOLI
         private void nbEstudiantesDesh_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             frmConsultaAnulados frm = new frmConsultaAnulados();
-            frm.MdiParent = this;
+            frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
@@ -504,7 +505,7 @@ namespace ERP_INTECOLI
             frmConsultaTipoPago mtx = new frmConsultaTipoPago();
             if (mtx != null)
             {
-                mtx.MdiParent = this;
+                mtx.MdiParent = this.MdiParent;
                 mtx.Show();
             }
         }
@@ -514,7 +515,7 @@ namespace ERP_INTECOLI
             frmNuevosIngresos mtx = new frmNuevosIngresos();
             if (mtx != null)
             {
-                mtx.MdiParent = this;
+                mtx.MdiParent = this.MdiParent;
                 mtx.Show();
             }
         }
@@ -524,7 +525,7 @@ namespace ERP_INTECOLI
             frmConsultaEstSaldosCobrables mtx = new frmConsultaEstSaldosCobrables();
             if (mtx != null)
             {
-                mtx.MdiParent = this;
+                mtx.MdiParent = this.MdiParent;
                 mtx.Show();
             }
         }
@@ -543,7 +544,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
                     frmRangosPago mtx = new frmRangosPago();
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
                     break;
@@ -556,7 +557,7 @@ namespace ERP_INTECOLI
                 if (UsuarioLogeado.ValidarNivelPermisos(17))
                 {
                     frmRangosPago mtx = new frmRangosPago();
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
                 }
@@ -570,14 +571,14 @@ namespace ERP_INTECOLI
         private void navArqueoCaja_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             frmArqueoCaja frm = new frmArqueoCaja(UsuarioLogeado);
-            frm.MdiParent = this;
+            frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
         private void navDistribucionZona_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             frmEstadisticasPorResidencia frm = new frmEstadisticasPorResidencia();
-            frm.MdiParent = this;
+            frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
@@ -585,7 +586,7 @@ namespace ERP_INTECOLI
         {
 
             frmCursos frm = new frmCursos(this.UsuarioLogeado);
-            frm.MdiParent = this;
+            frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
@@ -641,7 +642,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
                     frmNumeracionFiscal frm = new frmNumeracionFiscal(UsuarioLogeado);
-                    frm.MdiParent = this;
+                    frm.MdiParent = this.MdiParent;
                     frm.Show();
 
                     break;
@@ -654,7 +655,7 @@ namespace ERP_INTECOLI
                 if (UsuarioLogeado.ValidarNivelPermisos(13))
                 {
                     frmNumeracionFiscal frm = new frmNumeracionFiscal(UsuarioLogeado);
-                    frm.MdiParent = this;
+                    frm.MdiParent = this.MdiParent;
                     frm.Show();
                 }
                 else
@@ -669,7 +670,7 @@ namespace ERP_INTECOLI
             frmNiveles_Academicos mtx = new frmNiveles_Academicos(this.UsuarioLogeado);
             if (mtx != null)
             {
-                mtx.MdiParent = this;
+                mtx.MdiParent = this.MdiParent;
                 try
                 {
                     mtx.Show();
@@ -684,7 +685,7 @@ namespace ERP_INTECOLI
             frmBuscarInstructores frx = new frmBuscarInstructores(UsuarioLogeado);
             if (frx != null)
             {
-                frx.MdiParent = this;
+                frx.MdiParent = this.MdiParent;
                 try
                 {
                     frx.Show();
@@ -710,14 +711,14 @@ namespace ERP_INTECOLI
                 case 3://Medium Autorization
                     accesoprevio = true;
                     frmEmpresa mtx3 = new frmEmpresa(UsuarioLogeado);
-                    mtx3.MdiParent = this;
+                    mtx3.MdiParent = this.MdiParent;
                     mtx3.Show();
                     break;
                 case 4://Depth With Delta
                 case 5://Depth Without Delta
                     accesoprevio = true;
                     frmEmpresa mtx = new frmEmpresa(UsuarioLogeado);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
                     break;
@@ -730,7 +731,7 @@ namespace ERP_INTECOLI
                 if (UsuarioLogeado.ValidarNivelPermisos(20))
                 {
                     frmEmpresa mtx = new frmEmpresa(UsuarioLogeado);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
                 }
@@ -757,7 +758,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
                     frmItemsCRUD mtx = new frmItemsCRUD(UsuarioLogeado);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
 
@@ -771,7 +772,7 @@ namespace ERP_INTECOLI
                 if (UsuarioLogeado.ValidarNivelPermisos(21))
                 {
                     frmItemsCRUD mtx = new frmItemsCRUD(UsuarioLogeado);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
                 }
@@ -798,7 +799,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
                     frmProveedorMain mtx = new frmProveedorMain(UsuarioLogeado);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
 
@@ -812,7 +813,7 @@ namespace ERP_INTECOLI
                 if (UsuarioLogeado.ValidarNivelPermisos(23))
                 {
                     frmProveedorMain mtx = new frmProveedorMain(UsuarioLogeado);
-                    mtx.MdiParent = this;
+                    mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
                 }
@@ -882,7 +883,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
                     frmMantVentanas frm = new frmMantVentanas();
-                    frm.MdiParent = this;
+                    frm.MdiParent = this.MdiParent;
                     frm.Show();
 
                     break;
@@ -895,7 +896,7 @@ namespace ERP_INTECOLI
                 if (UsuarioLogeado.ValidarNivelPermisos(2))
                 {
                     frmMantVentanas frm = new frmMantVentanas();
-                    frm.MdiParent = this;
+                    frm.MdiParent = this.MdiParent;
                     frm.Show();
                 }
                 else
@@ -923,7 +924,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
                     AccesoUsuario frm = new AccesoUsuario(UsuarioLogeado);
-                    frm.MdiParent = this;
+                    frm.MdiParent = this.MdiParent;
                     frm.Show();
 
                     break;
