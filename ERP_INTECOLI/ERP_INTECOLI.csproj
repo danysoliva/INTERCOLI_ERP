@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
     <PublishUrl>https://drive.google.com/drive/folders/1zVET3b_gsJxSfc_HzFxp69XxMFKnGX-2%3fusp=drive_link/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -25,7 +26,6 @@
     <InstallUrl>https://drive.google.com/drive/folders/1zVET3b_gsJxSfc_HzFxp69XxMFKnGX-2%3fusp=drive_link/</InstallUrl>
     <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>true</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -59,7 +59,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -332,6 +332,7 @@
     <Compile Include="Clases\Niveles.cs" />
     <Compile Include="Clases\Notas_CreditoDebito.cs" />
     <Compile Include="Clases\NumberToLetters.cs" />
+    <Compile Include="Clases\OrdenesCompra.cs" />
     <Compile Include="Clases\ProductoTerminado.cs" />
     <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Clases\PuntoVenta.cs" />
@@ -1055,11 +1056,11 @@
     <Compile Include="Facturacion\Reportes\xfrmDialogFormatoFactura.Designer.cs">
       <DependentUpon>xfrmDialogFormatoFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmOpciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmOpciones.Designer.cs">
+      <DependentUpon>frmOpciones.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -1554,8 +1555,8 @@
     <EmbeddedResource Include="Facturacion\Reportes\xfrmDialogFormatoFactura.resx">
       <DependentUpon>xfrmDialogFormatoFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmOpciones.resx">
+      <DependentUpon>frmOpciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -2019,6 +2020,8 @@
     <None Include="Resources\bloquear_x32.png" />
     <Content Include="Resources\cerrar.png" />
     <None Include="Resources\control-de-accesox32.png" />
+    <None Include="Resources\contabilidad_x32.png" />
+    <None Include="Resources\compras_x32.png" />
     <Content Include="Resources\control-de-accesso.png" />
     <None Include="Resources\control-de-accessox32.png" />
     <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Cash.512.png" />
@@ -2047,6 +2050,8 @@
     <None Include="Resources\libro-de-contabilidadx32.png" />
     <None Include="Resources\jefe_x128.png" />
     <None Include="Resources\gestion-de-equipos_x32.png" />
+    <None Include="Resources\facturacion_x32.png" />
+    <None Include="Resources\factura_x32.png" />
     <Content Include="Resources\maestro x32.png" />
     <None Include="Resources\matriculax32.png" />
     <None Include="Resources\metodo-de-pago_x32.png" />
@@ -2087,6 +2092,7 @@
     <None Include="Resources\tarjeta-de-creditox16.png" />
     <None Include="Resources\transferencia-movilx16.png" />
     <None Include="Resources\seguro_32x.png" />
+    <None Include="Resources\transaccion_32x.png" />
     <Content Include="Resources\Upload-Folder-icon.png" />
     <None Include="Resources\userx32.png" />
     <Content Include="Resources\_click_24X24.png" />
@@ -2095,7 +2101,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
