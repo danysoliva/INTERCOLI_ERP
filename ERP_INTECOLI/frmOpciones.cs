@@ -11,11 +11,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Eatery.Ventas;
 using ERP_INTECOLI.Administracion;
+using ERP_INTECOLI.Administracion.Consultas;
 using ERP_INTECOLI.Administracion.Estudiantes;
 using ERP_INTECOLI.Administracion.Matricula;
 using ERP_INTECOLI.Administracion.Planilla;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Compras;
+using ERP_INTECOLI.Consultas.ConsultaMiembros;
 using ERP_INTECOLI.Transacciones;
 
 namespace ERP_INTECOLI
@@ -367,6 +369,104 @@ namespace ERP_INTECOLI
                 {
                     CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-24 (Ordenes de Compra)");
                 }
+            }
+        }
+
+        private void navProyCobros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmSaldosAjustados frm = new frmSaldosAjustados(this.UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void nbMiembrosClase_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmConsultarMiembroCurso frx = new frmConsultarMiembroCurso(this.UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
+                { }
+            }
+        }
+
+        private void nbCumpleanieros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmConsultaCumpleanieros frx = new frmConsultaCumpleanieros(this.UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
+                {
+                }
+            }
+        }
+
+        private void bnDistribucionGeneros_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+            frmRecuentoGeneros frx = new frmRecuentoGeneros(this.UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
+                {
+                }
+            }
+        }
+
+        private void bnSeguiSalods_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmSeguimientoSaldos mtx = new frmSeguimientoSaldos(this.UsuarioLogeado);
+            if (mtx != null)
+            {
+
+                mtx.MdiParent = this;
+                try
+                {
+                    mtx.Show();
+                }
+                catch { }
+
+            }
+        }
+
+        private void nbEstudiantesDesh_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmConsultaAnulados frm = new frmConsultaAnulados();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void navTiposPago_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmConsultaTipoPago mtx = new frmConsultaTipoPago();
+            if (mtx != null)
+            {
+                mtx.MdiParent = this;
+                mtx.Show();
+            }
+        }
+
+        private void nbNuevosIngresos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmNuevosIngresos mtx = new frmNuevosIngresos();
+            if (mtx != null)
+            {
+                mtx.MdiParent = this;
+                mtx.Show();
             }
         }
     }
