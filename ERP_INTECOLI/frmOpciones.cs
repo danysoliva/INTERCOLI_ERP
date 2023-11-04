@@ -43,10 +43,43 @@ namespace ERP_INTECOLI
         UserLogin UsuarioLogeado;
 
         DataOperations dp = new DataOperations();
-        public frmOpciones()
+        public frmOpciones(UserLogin pUser)
         {
             InitializeComponent();
-            
+            UsuarioLogeado = pUser;
+
+            int i = Convert.ToInt32(pUser.GrupoUsuario.GrupoUsuarioActivo);
+
+            switch (pUser.GrupoUsuario.GrupoUsuarioActivo)
+            {
+                case GrupoUser.GrupoUsuario.Manager:
+                    
+                    tabOpciones.TabPages[0].PageVisible = true;
+                    tabOpciones.TabPages[1].PageVisible = true;
+                    tabOpciones.TabPages[2].PageVisible = true;
+                    tabOpciones.TabPages[3].PageVisible = true;
+                    tabOpciones.TabPages[4].PageVisible = true;
+                    tabOpciones.TabPages[5].PageVisible = true;
+                    tabOpciones.SelectedTabPageIndex = 5;
+                    break;
+                case GrupoUser.GrupoUsuario.Facturacion:
+                    break;
+                case GrupoUser.GrupoUsuario.Atencion_al_cliente:
+                    
+                    tabOpciones.TabPages[0].PageVisible = true;
+                    tabOpciones.TabPages[1].PageVisible = true;
+                    tabOpciones.TabPages[3].PageVisible = true;
+                    tabOpciones.SelectedTabPageIndex = 0;
+                    break;
+                case GrupoUser.GrupoUsuario.Cajero:
+                    tabOpciones.TabPages[3].PageVisible = true;
+                    tabOpciones.SelectedTabPageIndex = 3;
+                    break;
+                case GrupoUser.GrupoUsuario.Supervisor:
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void cmdHome_Click(object sender, EventArgs e)
@@ -808,7 +841,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
                     frmMantenimientoUsuarios msu = new frmMantenimientoUsuarios(this.UsuarioLogeado);
-                    msu.MdiParent = this;
+                    //msu.MdiParent = this;
                     msu.Show();
 
                     break;
@@ -821,7 +854,7 @@ namespace ERP_INTECOLI
                 if (UsuarioLogeado.ValidarNivelPermisos(1))
                 {
                     frmMantenimientoUsuarios msu = new frmMantenimientoUsuarios(this.UsuarioLogeado);
-                    msu.MdiParent = this;
+                    //msu.MdiParent = this.MdiParent;
                     msu.Show();
                 }
                 else
@@ -903,7 +936,7 @@ namespace ERP_INTECOLI
                 if (UsuarioLogeado.ValidarNivelPermisos(19))
                 {
                     AccesoUsuario frm = new AccesoUsuario(UsuarioLogeado);
-                    frm.MdiParent = this;
+                    frm.MdiParent = this.MdiParent;
                     frm.Show();
                 }
                 else
@@ -917,7 +950,7 @@ namespace ERP_INTECOLI
         private void navGruposUser_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             PrincipalGrupoLosa frm = new PrincipalGrupoLosa();
-            frm.MdiParent = this;
+            //frm.MdiParent = this;
             frm.Show();
         }
     }

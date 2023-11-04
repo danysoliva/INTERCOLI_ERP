@@ -59,7 +59,7 @@ namespace ERP_INTECOLI.Clases
 
         public UserLogin()
         {
-            //GrupoUsuario = new GrupoUser();
+            GrupoUsuario = new GrupoUser();
         }
 
         public string EncrypPassword(string pass)

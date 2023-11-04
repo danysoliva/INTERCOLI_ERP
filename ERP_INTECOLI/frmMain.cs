@@ -1,6 +1,7 @@
 ﻿using Core.Clases.Herramientas;
 using DevExpress.Utils.TouchHelpers;
 using DevExpress.XtraReports.UI;
+using ERP_INTECOLI;
 using ERP_INTECOLI.Clases;
 using System;
 using System.Collections.Generic;
@@ -51,7 +52,7 @@ namespace JAGUAR_APP
             else
             {
                 Log1.Id = 1067;
-                Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Produccion;
+                //Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Produccion;
             }
             
             //frmOpciones frm = new frmOpciones(Log1);
@@ -179,14 +180,14 @@ namespace JAGUAR_APP
                         user1 = user;
 
 
-                        //frmOpciones frm = new frmOpciones(user1);
-                        ////if (this.MdiParent != null)
-                        //frm.MdiParent = this.MdiParent;
-                        //frm.WindowState = FormWindowState.Maximized;
-                        //frm.Show();
-                        //this.DialogResult = DialogResult.OK;
-                        //this.Close();
-                        LogeadoComplete(user.Id);
+                        frmOpciones frm = new frmOpciones(user1);
+                        //if (this.MdiParent != null)
+                        frm.MdiParent = this.MdiParent;
+                        frm.WindowState = FormWindowState.Maximized;
+                        frm.Show();
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                        //LogeadoComplete(user.Id);
                         this.Close();
                     }
                     catch (Exception ex)
@@ -294,11 +295,11 @@ namespace JAGUAR_APP
             {
                 Log1.GrupoUsuario.GrupoUsuarioActivo = (GrupoUser.GrupoUsuario)Log1.IdGrupo;
             }
-            else
-            {
-                Log1.Id = 1069;
-                Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Produccion;
-            }                                                                
+            //else
+            //{
+            //    Log1.Id = 1069;
+            //    Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Produccion;
+            //}                                                                
             //frmOpciones frm = new frmOpciones(Log1);
             //frm.MdiParent = this.MdiParent;
             //frm.WindowState = FormWindowState.Maximized;
@@ -343,16 +344,16 @@ namespace JAGUAR_APP
             //frm.MdiParent = this.MdiParent;
             //frm.WindowState = FormWindowState.Maximized;
             //frm.Show();
-            UserLogin Log1 = new UserLogin();
-            if (Log1.RecuperarRegistro(1067))
-            {
-                Log1.GrupoUsuario.GrupoUsuarioActivo = (GrupoUser.GrupoUsuario)Log1.IdGrupo;
-            }
-            else
-            {
-                Log1.Id = 1067;
-                Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Produccion;
-            }
+            //UserLogin Log1 = new UserLogin();
+            //if (Log1.RecuperarRegistro(1067))
+            //{
+            //    Log1.GrupoUsuario.GrupoUsuarioActivo = (GrupoUser.GrupoUsuario)Log1.IdGrupo;
+            //}
+            //else
+            //{
+            //    Log1.Id = 1067;
+            //    Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Produccion;
+            //}
 
             //xfrmMenuMicros menu = new xfrmMenuMicros(Log1);
             //menu.MdiParent = this.MdiParent;
@@ -364,21 +365,21 @@ namespace JAGUAR_APP
 
         private void simpleButton2_Click_1(object sender, EventArgs e)
         {
-            Teclado.cerrarTeclado();
-            UserLogin Log1 = new UserLogin();
-            if (Log1.RecuperarRegistro(1035))
-            {
-                Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Calidad;
-                Log1.ADuser = "op_tablet";
-                Log1.Password = "Tempo1234";
-            }
-            else
-            {
-                Log1.Id = 1067;
-                Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Calidad;
-                Log1.ADuser = "op_tablet";
-                Log1.Password = "Tempo1234";
-            }
+            //Teclado.cerrarTeclado();
+            //UserLogin Log1 = new UserLogin();
+            //if (Log1.RecuperarRegistro(1035))
+            //{
+            //    Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Calidad;
+            //    Log1.ADuser = "op_tablet";
+            //    Log1.Password = "Tempo1234";
+            //}
+            //else
+            //{
+            //    Log1.Id = 1067;
+            //    Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Calidad;
+            //    Log1.ADuser = "op_tablet";
+            //    Log1.Password = "Tempo1234";
+            //}
 
             //frmOpciones frm = new frmOpciones(Log1);
             //frm.MdiParent = this.MdiParent;
@@ -400,12 +401,12 @@ namespace JAGUAR_APP
             {
                 //Log1.GrupoUsuario.GrupoUsuarioActivo = (GrupoUser.GrupoUsuario)Log1.IdGrupo;
                 //Log1.GrupoUsuario.GrupoUsuarioActivo = (GrupoUser.GrupoUsuario)1;
-                Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.ProduccionV2;
+                //Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.ProduccionV2;
             }
             else
             {
                 Log1.Id = 1069;
-                Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Calidad;
+                //Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Calidad;
             }
             //frmOpciones frm = new frmOpciones(Log1);
             //frm.MdiParent = this.MdiParent;
