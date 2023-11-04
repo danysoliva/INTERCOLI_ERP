@@ -196,6 +196,10 @@ namespace ERP_INTECOLI
             this.navNotasCredito = new DevExpress.XtraNavBar.NavBarItem();
             this.navCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
+            this.navDeudores = new DevExpress.XtraNavBar.NavBarItem();
+            this.navRangosPago = new DevExpress.XtraNavBar.NavBarItem();
+            this.navArqueoCaja = new DevExpress.XtraNavBar.NavBarItem();
+            this.navDistribucionZona = new DevExpress.XtraNavBar.NavBarItem();
             this.TabMantenimientos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.TabConsultas.SuspendLayout();
@@ -975,7 +979,7 @@ namespace ERP_INTECOLI
             this.navBarGroup1.Appearance.Options.UseFont = true;
             this.navBarGroup1.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.navBarGroup1.AppearancePressed.Options.UseFont = true;
-            this.navBarGroup1.Caption = "Producción";
+            this.navBarGroup1.Caption = "Gestiones Varias";
             this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navProyCobros),
@@ -2007,6 +2011,11 @@ namespace ERP_INTECOLI
             this.navBarControl5.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl5.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup2});
+            this.navBarControl5.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.navDeudores,
+            this.navRangosPago,
+            this.navArqueoCaja,
+            this.navDistribucionZona});
             this.navBarControl5.Location = new System.Drawing.Point(0, 0);
             this.navBarControl5.Name = "navBarControl5";
             this.navBarControl5.OptionsNavPane.ExpandedWidth = 347;
@@ -2031,7 +2040,11 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.bnSeguiSalods),
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbEstudiantesDesh),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navTiposPago),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbNuevosIngresos)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbNuevosIngresos),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navDeudores),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navRangosPago),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navArqueoCaja),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navDistribucionZona)});
             this.navBarGroup2.Name = "navBarGroup2";
             // 
             // TabCompras
@@ -2252,6 +2265,58 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla.Name = "navGeneracionPlanilla";
             this.navGeneracionPlanilla.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanilla_LinkClicked);
             // 
+            // navDeudores
+            // 
+            this.navDeudores.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navDeudores.Appearance.Options.UseFont = true;
+            this.navDeudores.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navDeudores.AppearanceHotTracked.Options.UseFont = true;
+            this.navDeudores.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navDeudores.AppearancePressed.Options.UseFont = true;
+            this.navDeudores.Caption = "Deudores Saldos Acumulados";
+            this.navDeudores.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.dinero_x32;
+            this.navDeudores.Name = "navDeudores";
+            this.navDeudores.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navDeudores_LinkClicked);
+            // 
+            // navRangosPago
+            // 
+            this.navRangosPago.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navRangosPago.Appearance.Options.UseFont = true;
+            this.navRangosPago.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navRangosPago.AppearanceHotTracked.Options.UseFont = true;
+            this.navRangosPago.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navRangosPago.AppearancePressed.Options.UseFont = true;
+            this.navRangosPago.Caption = "Rangos de Pago";
+            this.navRangosPago.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.credito_x32;
+            this.navRangosPago.Name = "navRangosPago";
+            this.navRangosPago.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navRangosPago_LinkClicked);
+            // 
+            // navArqueoCaja
+            // 
+            this.navArqueoCaja.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navArqueoCaja.Appearance.Options.UseFont = true;
+            this.navArqueoCaja.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navArqueoCaja.AppearanceHotTracked.Options.UseFont = true;
+            this.navArqueoCaja.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navArqueoCaja.AppearancePressed.Options.UseFont = true;
+            this.navArqueoCaja.Caption = "Arqueo de Caja";
+            this.navArqueoCaja.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.caja_registradorax32;
+            this.navArqueoCaja.Name = "navArqueoCaja";
+            this.navArqueoCaja.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navArqueoCaja_LinkClicked);
+            // 
+            // navDistribucionZona
+            // 
+            this.navDistribucionZona.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navDistribucionZona.Appearance.Options.UseFont = true;
+            this.navDistribucionZona.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navDistribucionZona.AppearanceHotTracked.Options.UseFont = true;
+            this.navDistribucionZona.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navDistribucionZona.AppearancePressed.Options.UseFont = true;
+            this.navDistribucionZona.Caption = "Distribucion por Zona Residencial";
+            this.navDistribucionZona.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.ruptura_x32;
+            this.navDistribucionZona.Name = "navDistribucionZona";
+            this.navDistribucionZona.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navDistribucionZona_LinkClicked);
+            // 
             // frmOpciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2446,6 +2511,10 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navComprasOrdenes;
         private DevExpress.XtraNavBar.NavBarControl navBarControl5;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private DevExpress.XtraNavBar.NavBarItem navDeudores;
+        private DevExpress.XtraNavBar.NavBarItem navRangosPago;
+        private DevExpress.XtraNavBar.NavBarItem navArqueoCaja;
+        private DevExpress.XtraNavBar.NavBarItem navDistribucionZona;
     }
 }
 

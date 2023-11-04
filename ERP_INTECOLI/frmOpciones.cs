@@ -11,13 +11,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Eatery.Ventas;
 using ERP_INTECOLI.Administracion;
+using ERP_INTECOLI.Administracion.Caja;
 using ERP_INTECOLI.Administracion.Consultas;
+using ERP_INTECOLI.Administracion.Estadisticas;
 using ERP_INTECOLI.Administracion.Estudiantes;
 using ERP_INTECOLI.Administracion.Matricula;
 using ERP_INTECOLI.Administracion.Planilla;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Compras;
 using ERP_INTECOLI.Consultas.ConsultaMiembros;
+using ERP_INTECOLI.Consultas.RangosPago;
 using ERP_INTECOLI.Transacciones;
 
 namespace ERP_INTECOLI
@@ -468,6 +471,68 @@ namespace ERP_INTECOLI
                 mtx.MdiParent = this;
                 mtx.Show();
             }
+        }
+
+        private void navDeudores_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmConsultaEstSaldosCobrables mtx = new frmConsultaEstSaldosCobrables();
+            if (mtx != null)
+            {
+                mtx.MdiParent = this;
+                mtx.Show();
+            }
+        }
+
+        private void navRangosPago_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                case 3://Medium Autorization  
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmRangosPago mtx = new frmRangosPago();
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(17))
+                {
+                    frmRangosPago mtx = new frmRangosPago();
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-17 (Rangos de pagos)");
+                }
+            }
+        }
+
+        private void navArqueoCaja_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmArqueoCaja frm = new frmArqueoCaja(UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void navDistribucionZona_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmEstadisticasPorResidencia frm = new frmEstadisticasPorResidencia();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }
