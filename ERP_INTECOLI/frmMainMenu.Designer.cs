@@ -804,7 +804,7 @@ namespace ERP_INTECOLI
             // navCRUDEmpresa
             // 
             this.navCRUDEmpresa.Caption = "Empresas";
-            this.navCRUDEmpresa.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navCRUDEmpresa.ImageOptions.SmallImage")));
+            this.navCRUDEmpresa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navCRUDEmpresa.ImageOptions.SvgImage")));
             this.navCRUDEmpresa.Name = "navCRUDEmpresa";
             this.navCRUDEmpresa.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navCRUDEmpresa_LinkClicked);
             // 

@@ -10,18 +10,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Eatery.Ventas;
+using ERP_INTECOLI.Accesos.AccesosUsuarios;
+using ERP_INTECOLI.Accesos.GrupoLosa;
 using ERP_INTECOLI.Administracion;
 using ERP_INTECOLI.Administracion.Caja;
 using ERP_INTECOLI.Administracion.Consultas;
+using ERP_INTECOLI.Administracion.Cursos;
+using ERP_INTECOLI.Administracion.Empresas;
 using ERP_INTECOLI.Administracion.Estadisticas;
 using ERP_INTECOLI.Administracion.Estudiantes;
+using ERP_INTECOLI.Administracion.Instructores;
 using ERP_INTECOLI.Administracion.Matricula;
+using ERP_INTECOLI.Administracion.Niveles_Academicos;
 using ERP_INTECOLI.Administracion.Planilla;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Compras;
+using ERP_INTECOLI.Consultas;
 using ERP_INTECOLI.Consultas.ConsultaMiembros;
+using ERP_INTECOLI.Consultas.ConsultaMovimientosSaldos;
 using ERP_INTECOLI.Consultas.RangosPago;
+using ERP_INTECOLI.Mantenimiento.Productos;
+using ERP_INTECOLI.Mantenimiento.Proveedor;
 using ERP_INTECOLI.Transacciones;
+using ERP_INTECOLI.Usuarios;
+using JAGUAR_APP.Facturacion.Mantenimientos;
+using JAGUAR_APP.Facturacion.Numeracion_Fiscal;
 
 namespace ERP_INTECOLI
 {
@@ -30,10 +43,10 @@ namespace ERP_INTECOLI
         UserLogin UsuarioLogeado;
 
         DataOperations dp = new DataOperations();
-        public frmOpciones(UserLogin pUserLogin)
+        public frmOpciones()
         {
             InitializeComponent();
-            UsuarioLogeado = pUserLogin;
+            
         }
 
         private void cmdHome_Click(object sender, EventArgs e)
@@ -531,6 +544,379 @@ namespace ERP_INTECOLI
         private void navDistribucionZona_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             frmEstadisticasPorResidencia frm = new frmEstadisticasPorResidencia();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void navCursos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+            frmCursos frm = new frmCursos(this.UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void nbPuntoVenta_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 11);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                case 3://Medium Autorization
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    xfrm_PDV frm = new xfrm_PDV(UsuarioLogeado);
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(16))
+                {
+                    xfrm_PDV frm = new xfrm_PDV(UsuarioLogeado);
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #16 (Configuraciones de Facturacion)");
+                }
+            }
+        }
+
+        private void nbDocFiscales_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    accesoprevio = false;
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmNumeracionFiscal frm = new frmNumeracionFiscal(UsuarioLogeado);
+                    frm.MdiParent = this;
+                    frm.Show();
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(13))
+                {
+                    frmNumeracionFiscal frm = new frmNumeracionFiscal(UsuarioLogeado);
+                    frm.MdiParent = this;
+                    frm.Show();
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-13 (Mantenimiento Docs Fiscales)");
+                }
+            }
+        }
+
+        private void bnNivelesAcademicos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmNiveles_Academicos mtx = new frmNiveles_Academicos(this.UsuarioLogeado);
+            if (mtx != null)
+            {
+                mtx.MdiParent = this;
+                try
+                {
+                    mtx.Show();
+                }
+                catch { }
+
+            }
+        }
+
+        private void bnInstructores_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            frmBuscarInstructores frx = new frmBuscarInstructores(UsuarioLogeado);
+            if (frx != null)
+            {
+                frx.MdiParent = this;
+                try
+                {
+                    frx.Show();
+                }
+                catch (Exception ec)
+                {
+                    Console.WriteLine(ec.Message);
+                }
+            }
+        }
+
+        private void nbEmpresas_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = true;
+                    frmEmpresa mtx3 = new frmEmpresa(UsuarioLogeado);
+                    mtx3.MdiParent = this;
+                    mtx3.Show();
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmEmpresa mtx = new frmEmpresa(UsuarioLogeado);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(20))
+                {
+                    frmEmpresa mtx = new frmEmpresa(UsuarioLogeado);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-20 (Gestion de Empresa)");
+                }
+            }
+        }
+
+        private void navProductos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmItemsCRUD mtx = new frmItemsCRUD(UsuarioLogeado);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(21))
+                {
+                    frmItemsCRUD mtx = new frmItemsCRUD(UsuarioLogeado);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-22 (Gestion de Items)");
+                }
+            }
+        }
+
+        private void nbProveedores_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmProveedorMain mtx = new frmProveedorMain(UsuarioLogeado);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(23))
+                {
+                    frmProveedorMain mtx = new frmProveedorMain(UsuarioLogeado);
+                    mtx.MdiParent = this;
+                    mtx.Show();
+
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-23 (Gestion de Proveedores)");
+                }
+            }
+        }
+
+        private void navUsuarios_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmMantenimientoUsuarios msu = new frmMantenimientoUsuarios(this.UsuarioLogeado);
+                    msu.MdiParent = this;
+                    msu.Show();
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(1))
+                {
+                    frmMantenimientoUsuarios msu = new frmMantenimientoUsuarios(this.UsuarioLogeado);
+                    msu.MdiParent = this;
+                    msu.Show();
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #1 (Gestion de Usuarios)");
+                }
+            }
+        }
+
+        private void navGestionPerm_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmMantVentanas frm = new frmMantVentanas();
+                    frm.MdiParent = this;
+                    frm.Show();
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(2))
+                {
+                    frmMantVentanas frm = new frmMantVentanas();
+                    frm.MdiParent = this;
+                    frm.Show();
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-02 (Administracion de Niveles de acceso)");
+                }
+            }
+        }
+
+        private void navNivelesAccesos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    AccesoUsuario frm = new AccesoUsuario(UsuarioLogeado);
+                    frm.MdiParent = this;
+                    frm.Show();
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(19))
+                {
+                    AccesoUsuario frm = new AccesoUsuario(UsuarioLogeado);
+                    frm.MdiParent = this;
+                    frm.Show();
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-19 (Niveles de Acceso Usuarios)");
+                }
+            }
+
+        }
+
+        private void navGruposUser_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            PrincipalGrupoLosa frm = new PrincipalGrupoLosa();
             frm.MdiParent = this;
             frm.Show();
         }
