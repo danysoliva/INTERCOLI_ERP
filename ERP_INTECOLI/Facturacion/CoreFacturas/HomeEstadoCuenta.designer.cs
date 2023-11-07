@@ -38,7 +38,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.dsContabilidad = new dsContabilidad();
+            this.dsContabilidad = new ERP_INTECOLI.Facturacion.CoreFacturas.dsContabilidad();
             this.gvEstadoCuenta = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnum_doc = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -85,12 +85,12 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl1.DataMember = "EstadoCuenta";
             this.gridControl1.DataSource = this.dsContabilidad;
-            this.gridControl1.Location = new System.Drawing.Point(-1, 186);
+            this.gridControl1.Location = new System.Drawing.Point(1, 122);
             this.gridControl1.MainView = this.gvEstadoCuenta;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnPrint});
-            this.gridControl1.Size = new System.Drawing.Size(1219, 349);
+            this.gridControl1.Size = new System.Drawing.Size(1216, 413);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvEstadoCuenta});
@@ -119,6 +119,8 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.gridColumn2});
             this.gvEstadoCuenta.GridControl = this.gridControl1;
             this.gvEstadoCuenta.Name = "gvEstadoCuenta";
+            this.gvEstadoCuenta.OptionsView.ShowAutoFilterRow = true;
+            this.gvEstadoCuenta.OptionsView.ShowFooter = true;
             this.gvEstadoCuenta.OptionsView.ShowGroupPanel = false;
             // 
             // colid
@@ -256,9 +258,9 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.labelControl1.Appearance.Options.UseTextOptions = true;
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(-1, 13);
+            this.labelControl1.Location = new System.Drawing.Point(237, -4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(1219, 19);
+            this.labelControl1.Size = new System.Drawing.Size(765, 19);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Estado de Cuenta";
             // 
@@ -270,7 +272,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.btnAtras.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.btnAtras.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.ImageOptions.Image")));
             this.btnAtras.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnAtras.Location = new System.Drawing.Point(1060, 13);
+            this.btnAtras.Location = new System.Drawing.Point(1060, 1);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(145, 44);
             this.btnAtras.TabIndex = 50;
@@ -279,7 +281,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(116, 88);
+            this.txtCodigo.Location = new System.Drawing.Point(83, 32);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Properties.Appearance.Options.UseFont = true;
@@ -291,7 +293,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(63, 91);
+            this.labelControl2.Location = new System.Drawing.Point(30, 35);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(48, 17);
             this.labelControl2.TabIndex = 52;
@@ -301,7 +303,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(63, 121);
+            this.labelControl3.Location = new System.Drawing.Point(30, 65);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(47, 17);
             this.labelControl3.TabIndex = 54;
@@ -309,7 +311,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(116, 118);
+            this.txtCliente.Location = new System.Drawing.Point(83, 62);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCliente.Properties.Appearance.Options.UseFont = true;
@@ -321,7 +323,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(507, 91);
+            this.labelControl4.Location = new System.Drawing.Point(484, 35);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(59, 17);
             this.labelControl4.TabIndex = 56;
@@ -329,7 +331,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(572, 88);
+            this.txtTelefono.Location = new System.Drawing.Point(549, 32);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Properties.Appearance.Options.UseFont = true;
@@ -341,7 +343,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(521, 121);
+            this.labelControl5.Location = new System.Drawing.Point(498, 65);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(45, 17);
             this.labelControl5.TabIndex = 58;
@@ -349,7 +351,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(572, 118);
+            this.txtCorreo.Location = new System.Drawing.Point(549, 62);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Properties.Appearance.Options.UseFont = true;
@@ -360,10 +362,12 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // simpleButton1
             // 
             this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            //this.simpleButton1.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.print_32x32;
-            this.simpleButton1.Location = new System.Drawing.Point(1102, 121);
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(1060, 67);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(103, 47);
+            this.simpleButton1.Size = new System.Drawing.Size(145, 47);
             this.simpleButton1.TabIndex = 59;
             this.simpleButton1.Text = "Imprimir";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -372,10 +376,10 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             this.btnBuscar.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Appearance.Options.UseFont = true;
-            //this.btnBuscar.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.search_24x24;
-            this.btnBuscar.Location = new System.Drawing.Point(265, 79);
+            this.btnBuscar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBuscar.ImageOptions.SvgImage")));
+            this.btnBuscar.Location = new System.Drawing.Point(222, 23);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 33);
+            this.btnBuscar.Size = new System.Drawing.Size(103, 33);
             this.btnBuscar.TabIndex = 60;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -384,7 +388,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(48, 151);
+            this.labelControl6.Location = new System.Drawing.Point(15, 95);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(62, 17);
             this.labelControl6.TabIndex = 62;
@@ -392,7 +396,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(116, 148);
+            this.txtDireccion.Location = new System.Drawing.Point(83, 92);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Properties.Appearance.Options.UseFont = true;
@@ -402,13 +406,12 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             // labelControl7
             // 
-            this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Appearance.Options.UseTextOptions = true;
             this.labelControl7.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl7.Location = new System.Drawing.Point(856, 84);
+            this.labelControl7.Location = new System.Drawing.Point(431, 95);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(112, 19);
             this.labelControl7.TabIndex = 63;
@@ -416,11 +419,10 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             // lblSaldo
             // 
-            this.lblSaldo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSaldo.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSaldo.Appearance.Options.UseFont = true;
             this.lblSaldo.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblSaldo.Location = new System.Drawing.Point(974, 84);
+            this.lblSaldo.Location = new System.Drawing.Point(549, 95);
             this.lblSaldo.Name = "lblSaldo";
             this.lblSaldo.Size = new System.Drawing.Size(231, 19);
             this.lblSaldo.TabIndex = 64;

@@ -31,7 +31,6 @@ namespace JAGUAR_APP.Facturacion.Reportes
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptEstadoCuenta));
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
@@ -44,7 +43,7 @@ namespace JAGUAR_APP.Facturacion.Reportes
             this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.dsContabilidad1 = new dsContabilidad();
+            this.dsContabilidad1 = new ERP_INTECOLI.Facturacion.CoreFacturas.dsContabilidad();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -336,7 +335,6 @@ namespace JAGUAR_APP.Facturacion.Reportes
             // 
             // xrPictureBox1
             // 
-            this.xrPictureBox1.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox1.ImageSource"));
             this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(9.999974F, 10.00001F);
             this.xrPictureBox1.Name = "xrPictureBox1";
             this.xrPictureBox1.SizeF = new System.Drawing.SizeF(100F, 62.5F);
@@ -374,7 +372,7 @@ namespace JAGUAR_APP.Facturacion.Reportes
             this.xrTableCell29.Multiline = true;
             this.xrTableCell29.Name = "xrTableCell29";
             this.xrTableCell29.StylePriority.UseFont = false;
-            this.xrTableCell29.Text = "Panadería Jerusalem";
+            this.xrTableCell29.Text = "Success English Academy";
             this.xrTableCell29.Weight = 1.3270519647400532D;
             // 
             // xrTableRow8
@@ -398,7 +396,7 @@ namespace JAGUAR_APP.Facturacion.Reportes
             this.xrTableCell32.Multiline = true;
             this.xrTableCell32.Name = "xrTableCell32";
             this.xrTableCell32.StylePriority.UseFont = false;
-            this.xrTableCell32.Text = "RTN: 05019998180726";
+            this.xrTableCell32.Text = "RTN: 1804-1972-015523";
             this.xrTableCell32.Weight = 1.3270519647400532D;
             // 
             // xrTableRow6
@@ -423,6 +421,7 @@ namespace JAGUAR_APP.Facturacion.Reportes
             this.xrTableCell26.Name = "xrTableCell26";
             this.xrTableCell26.StylePriority.UseFont = false;
             this.xrTableCell26.Text = "Teléfono:";
+            this.xrTableCell26.Visible = false;
             this.xrTableCell26.Weight = 1.3270519647400532D;
             // 
             // xrLabel1

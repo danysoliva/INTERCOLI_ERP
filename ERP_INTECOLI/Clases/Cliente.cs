@@ -36,10 +36,10 @@ namespace ERP_INTECOLI.Clases
 
                 SqlConnection cnx = new SqlConnection(dp.ConnectionStringERP);
 
-                using (SqlCommand cmd = new SqlCommand("[dbo].[dbo.uspGetClienteFacturacionByID]", cnx))
+                using (SqlCommand cmd = new SqlCommand("[dbo].[uspGetClienteFacturacionByID]", cnx))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@id_cliente", System.Data.SqlDbType.Int).Value = pIdCliente;
+                    cmd.Parameters.Add("@id_estudiante", System.Data.SqlDbType.Int).Value = pIdCliente;
 
                     cnx.Open();
                     SqlDataReader dr = cmd.ExecuteReader();

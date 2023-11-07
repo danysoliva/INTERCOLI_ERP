@@ -30,11 +30,11 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
         private void InitializeComponent()
         {
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(xfrmSelectCliente));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(xfrmSelectCliente));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.dsMantenimientosFacturacion = new JAGUAR_APP.Facturacion.Mantenimientos.dsMantenimientosFacturacion();
             this.gvCliente = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -130,8 +130,6 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.colNombreCorto.Name = "colNombreCorto";
             this.colNombreCorto.OptionsColumn.ReadOnly = true;
             this.colNombreCorto.OptionsFilter.AllowFilter = false;
-            this.colNombreCorto.Visible = true;
-            this.colNombreCorto.VisibleIndex = 2;
             this.colNombreCorto.Width = 186;
             // 
             // colDireccion
@@ -141,7 +139,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.colDireccion.OptionsColumn.ReadOnly = true;
             this.colDireccion.OptionsFilter.AllowFilter = false;
             this.colDireccion.Visible = true;
-            this.colDireccion.VisibleIndex = 3;
+            this.colDireccion.VisibleIndex = 2;
             this.colDireccion.Width = 139;
             // 
             // colFechaCreacion
@@ -156,7 +154,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.colCorreo.OptionsColumn.ReadOnly = true;
             this.colCorreo.OptionsFilter.AllowFilter = false;
             this.colCorreo.Visible = true;
-            this.colCorreo.VisibleIndex = 4;
+            this.colCorreo.VisibleIndex = 3;
             this.colCorreo.Width = 78;
             // 
             // colTelefono
@@ -166,7 +164,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.colTelefono.OptionsColumn.ReadOnly = true;
             this.colTelefono.OptionsFilter.AllowFilter = false;
             this.colTelefono.Visible = true;
-            this.colTelefono.VisibleIndex = 5;
+            this.colTelefono.VisibleIndex = 4;
             this.colTelefono.Width = 100;
             // 
             // gridColumn1
@@ -176,13 +174,13 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsFilter.AllowFilter = false;
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 6;
+            this.gridColumn1.VisibleIndex = 5;
             this.gridColumn1.Width = 65;
             // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.AutoHeight = false;
-            //editorButtonImageOptions1.Image = global::JAGUAR_APP.Properties.Resources.tap24px;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.btnSeleccionar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnSeleccionar.Name = "btnSeleccionar";

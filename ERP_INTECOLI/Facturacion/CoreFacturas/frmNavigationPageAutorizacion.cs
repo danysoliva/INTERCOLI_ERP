@@ -156,13 +156,13 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
                 {
                     case 2:
                         this.tipoAutorizacionActual = TipoAutorizacion.Reimpresion;
-                       
                         this.navigationFrame1.SelectedPage = npGestionSolicitudConfirmation;
+                        txtJustificacion.Focus();
                         break;
                     case 1:
                         this.tipoAutorizacionActual = TipoAutorizacion.Anulacion;
-                        
                         this.navigationFrame1.SelectedPage = npGestionSolicitudConfirmation;
+                        txtJustificacion.Focus();
                         break;
                     case 3:
                         this.tipoAutorizacionActual = TipoAutorizacion.NotaCredito_Debito;
@@ -266,7 +266,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
 
                                 cmd.Parameters.Add("@id_tipoAutorizacion", SqlDbType.Int).Value = solicitud.TipoAutorizacionID;
                                 cmd.Parameters.Add("@justificacion", SqlDbType.VarChar).Value = txtJustificacion.Text;
-                                cmd.Parameters.Add("@created_date", SqlDbType.DateTime).Value = DateTime.Now;
+                                cmd.Parameters.Add("@created_date", SqlDbType.DateTime).Value = dp.NowSetDateTime();
                                 cmd.Parameters.Add("@id_PuntoVenta", SqlDbType.Int).Value = solicitud.PuntoDeVenta_Id;
                                 cmd.Parameters.Add("@id_usuario_solicita", SqlDbType.Int).Value = solicitud.UsuarioSolicita_Id;
                                 cmd.Parameters.Add("@id_cliente", SqlDbType.BigInt).Value = solicitud.ClienteId;

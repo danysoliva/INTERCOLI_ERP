@@ -42,7 +42,7 @@ namespace JAGUAR_APP.Facturacion.Reportes
                     dsContabilidad1.EstadoCuenta.Clear();
 
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add("@id_cliente", SqlDbType.Int).Value = id_cliente;
+                    da.SelectCommand.Parameters.Add("@id_estudiante", SqlDbType.Int).Value = id_cliente;
                     da.Fill(dsContabilidad1.EstadoCuenta);
 
                     cnx.Close();

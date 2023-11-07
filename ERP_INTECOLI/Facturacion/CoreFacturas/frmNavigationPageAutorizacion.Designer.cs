@@ -29,17 +29,12 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNavigationPageAutorizacion));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             this.navigationFrame1 = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.npGestionSolicitud = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -58,6 +53,8 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.npNC_ND = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
             this.btnAtras = new DevExpress.XtraEditors.SimpleButton();
             this.cmdNext = new DevExpress.XtraEditors.SimpleButton();
             this.gcFactura = new DevExpress.XtraGrid.GridControl();
@@ -65,10 +62,8 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.colid_factura = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnumero_factura = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colmonto = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.toggleSwitch1 = new DevExpress.XtraEditors.ToggleSwitch();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).BeginInit();
             this.navigationFrame1.SuspendLayout();
             this.npGestionSolicitud.SuspendLayout();
@@ -81,10 +76,10 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             ((System.ComponentModel.ISupportInitialize)(this.txtJustificacion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             this.npNC_ND.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcFactura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_facturas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // navigationFrame1
@@ -106,7 +101,6 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             // npGestionSolicitud
             // 
-            this.npGestionSolicitud.Caption = "npGestionSolicitud";
             this.npGestionSolicitud.Controls.Add(this.gridControl1);
             this.npGestionSolicitud.Controls.Add(this.labelControl1);
             this.npGestionSolicitud.Controls.Add(this.pictureEdit1);
@@ -118,12 +112,12 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.gridControl1.DataMember = "TipoAutorizacion";
             this.gridControl1.DataSource = this.dsFacturasGestion;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gridControl1.Location = new System.Drawing.Point(0, 87);
+            this.gridControl1.Location = new System.Drawing.Point(0, 62);
             this.gridControl1.MainView = this.grd_data;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnAutorizar});
-            this.gridControl1.Size = new System.Drawing.Size(516, 207);
+            this.gridControl1.Size = new System.Drawing.Size(516, 232);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grd_data});
@@ -177,9 +171,9 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // btnAutorizar
             // 
             this.btnAutorizar.AutoHeight = false;
-            //editorButtonImageOptions3.Image = global::JAGUAR_APP.Properties.Resources.shield_24X24;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.btnAutorizar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnAutorizar.Name = "btnAutorizar";
             this.btnAutorizar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnAutorizar.ButtonPressed += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnAutorizar_ButtonPressed);
@@ -200,21 +194,20 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             // pictureEdit1
             // 
-            //this.pictureEdit1.EditValue = global::JAGUAR_APP.Properties.Resources.information_64X64;
-            this.pictureEdit1.Location = new System.Drawing.Point(12, 1);
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+            this.pictureEdit1.Location = new System.Drawing.Point(12, 5);
             this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.pictureEdit1.Size = new System.Drawing.Size(62, 52);
             this.pictureEdit1.TabIndex = 3;
             // 
             // npGestionSolicitudConfirmation
             // 
-            this.npGestionSolicitudConfirmation.Caption = "npGestionSolicitudConfirmation";
             this.npGestionSolicitudConfirmation.Controls.Add(this.cdmCancelar);
             this.npGestionSolicitudConfirmation.Controls.Add(this.cdmConfirmar);
             this.npGestionSolicitudConfirmation.Controls.Add(this.txtJustificacion);
@@ -247,7 +240,6 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.cdmConfirmar.Appearance.Options.UseFont = true;
             this.cdmConfirmar.Appearance.Options.UseForeColor = true;
             this.cdmConfirmar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            //this.cdmConfirmar.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.check_mark_24X24;
             this.cdmConfirmar.Location = new System.Drawing.Point(394, 82);
             this.cdmConfirmar.Name = "cdmConfirmar";
             this.cdmConfirmar.Size = new System.Drawing.Size(110, 47);
@@ -261,9 +253,8 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.txtJustificacion.Name = "txtJustificacion";
             this.txtJustificacion.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJustificacion.Properties.Appearance.Options.UseFont = true;
-            this.txtJustificacion.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtJustificacion.Properties.MaxLength = 200;
-            this.txtJustificacion.Size = new System.Drawing.Size(377, 210);
+            this.txtJustificacion.Size = new System.Drawing.Size(377, 201);
             this.txtJustificacion.TabIndex = 7;
             // 
             // labelControl2
@@ -279,7 +270,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             // 
             // pictureEdit2
             // 
-            //this.pictureEdit2.EditValue = global::JAGUAR_APP.Properties.Resources.information_64X64;
+            this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
             this.pictureEdit2.Location = new System.Drawing.Point(11, 12);
             this.pictureEdit2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureEdit2.Name = "pictureEdit2";
@@ -287,7 +278,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.pictureEdit2.Size = new System.Drawing.Size(62, 52);
             this.pictureEdit2.TabIndex = 5;
             // 
@@ -301,6 +292,29 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.npNC_ND.Controls.Add(this.gcFactura);
             this.npNC_ND.Name = "npNC_ND";
             this.npNC_ND.Size = new System.Drawing.Size(516, 294);
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(22, 51);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(250, 20);
+            this.labelControl3.TabIndex = 52;
+            this.labelControl3.Text = "Puede cambiar los montos de la Nota";
+            // 
+            // toggleSwitch1
+            // 
+            this.toggleSwitch1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.toggleSwitch1.EditValue = true;
+            this.toggleSwitch1.Location = new System.Drawing.Point(22, 12);
+            this.toggleSwitch1.Name = "toggleSwitch1";
+            this.toggleSwitch1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleSwitch1.Properties.Appearance.Options.UseFont = true;
+            this.toggleSwitch1.Properties.OffText = "Débito";
+            this.toggleSwitch1.Properties.OnText = "Crédito";
+            this.toggleSwitch1.Size = new System.Drawing.Size(112, 20);
+            this.toggleSwitch1.TabIndex = 51;
             // 
             // btnAtras
             // 
@@ -326,7 +340,6 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.cmdNext.Appearance.Options.UseFont = true;
             this.cmdNext.Appearance.Options.UseForeColor = true;
             this.cmdNext.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            //this.cmdNext.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.right_arrow32px;
             this.cmdNext.Location = new System.Drawing.Point(400, 12);
             this.cmdNext.Name = "cmdNext";
             this.cmdNext.Size = new System.Drawing.Size(113, 47);
@@ -393,15 +406,6 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.colmonto.VisibleIndex = 2;
             this.colmonto.Width = 100;
             // 
-            // repositoryItemButtonEdit1
-            // 
-            this.repositoryItemButtonEdit1.AutoHeight = false;
-            //editorButtonImageOptions4.Image = global::JAGUAR_APP.Properties.Resources.shield_24X24;
-            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
-            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Punto Venta";
@@ -413,28 +417,13 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.gridColumn2.VisibleIndex = 0;
             this.gridColumn2.Width = 148;
             // 
-            // toggleSwitch1
+            // repositoryItemButtonEdit1
             // 
-            this.toggleSwitch1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.toggleSwitch1.EditValue = true;
-            this.toggleSwitch1.Location = new System.Drawing.Point(22, 12);
-            this.toggleSwitch1.Name = "toggleSwitch1";
-            this.toggleSwitch1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggleSwitch1.Properties.Appearance.Options.UseFont = true;
-            this.toggleSwitch1.Properties.OffText = "Débito";
-            this.toggleSwitch1.Properties.OnText = "Crédito";
-            this.toggleSwitch1.Size = new System.Drawing.Size(112, 20);
-            this.toggleSwitch1.TabIndex = 51;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(22, 51);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(250, 20);
-            this.labelControl3.TabIndex = 52;
-            this.labelControl3.Text = "Puede cambiar los montos de la Nota";
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // frmNavigationPageAutorizacion
             // 
@@ -462,10 +451,10 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             this.npNC_ND.ResumeLayout(false);
             this.npNC_ND.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcFactura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_facturas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleSwitch1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

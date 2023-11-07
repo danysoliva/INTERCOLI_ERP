@@ -131,35 +131,88 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
         {
             try
             {
-                //var row = (dsFacturasGestion.HomeFacturasRow)gridView1.GetFocusedDataRow();
-
-                //var gridView = (GridView)gvFacturas.FocusedView;
                 var row = (dsFacturasGestion.HomeFacturasRow)gvFacturas.GetFocusedDataRow();
 
                 Factura factura = new Factura();
-
-                xfrmDialogFormatoFactura frm = new xfrmDialogFormatoFactura(row.id);
-
-                frm.ShowDialog();
-
-                //if (factura.RecuperarRegistro(row.id))
-                //{
-                //    if (factura.CantPrint == 0)
-                //    {
-                //        rptFactura report = new rptFactura(factura, rptFactura.TipoCopia.Blanco);
-
-                //        using (ReportPrintTool printTool = new ReportPrintTool(report))
-                //        {
-                //            // Send the report to the default printer.
-                //            factura.UpdatePrintCount(row.id);
-                //            printTool.ShowPreviewDialog();
-                //        }
-                //    }
-                //    else
-                //    {
-                //        CajaDialogo.Error("Esta factura ya se imprimió! Para una reimpresión debe solicitar una autorización!");
-                //    }
-                //}
+                if (factura.RecuperarRegistro(row.id))
+                {
+                    if (factura.CantidadImpresionesFactura == 0)
+                    {
+                        switch (factura.idFormatoFactura)
+                        {
+                            case 1://3.5 pulg. cinta
+                                if (factura.IdNumeracionFiscal == 0)
+                                {
+                                    rptFact_ReciboVentaLetterSize reportSinCAI = new rptFact_ReciboVentaLetterSize(factura, rptFact_ReciboVentaLetterSize.TipoCopia.Blanco);
+                                    using (ReportPrintTool printTool = new ReportPrintTool(reportSinCAI))
+                                    {
+                                        // Send the report to the default printer.
+                                        factura.UpdatePrintCount(factura.Id);
+                                        printTool.ShowPreviewDialog();
+                                    }
+                                }
+                                else
+                                {
+                                    rptFactura report = new rptFactura(factura, rptFactura.TipoCopia.Blanco);
+                                    using (ReportPrintTool printTool = new ReportPrintTool(report))
+                                    {
+                                        // Send the report to the default printer.
+                                        factura.UpdatePrintCount(factura.Id);
+                                        printTool.ShowPreviewDialog();
+                                    }
+                                }
+                                break;
+                            case 2://8x11.5 pulg. Carta
+                                if (factura.IdNumeracionFiscal == 0)
+                                {
+                                    rptFact_ReciboVentaLetterSize reportSinCAI = new rptFact_ReciboVentaLetterSize(factura, rptFact_ReciboVentaLetterSize.TipoCopia.Blanco);
+                                    using (ReportPrintTool printTool = new ReportPrintTool(reportSinCAI))
+                                    {
+                                        // Send the report to the default printer.
+                                        factura.UpdatePrintCount(factura.Id);
+                                        printTool.ShowPreviewDialog();
+                                    }
+                                }
+                                else
+                                {
+                                    rptFacturaLetterSize reportCaiLetter = new rptFacturaLetterSize(factura, rptFacturaLetterSize.TipoCopia.Blanco);
+                                    using (ReportPrintTool printTool = new ReportPrintTool(reportCaiLetter))
+                                    {
+                                        // Send the report to the default printer.
+                                        factura.UpdatePrintCount(factura.Id);
+                                        printTool.ShowPreviewDialog();
+                                    }
+                                }
+                                break;
+                            default://sin configuracion aparente
+                                if (factura.IdNumeracionFiscal == 0)
+                                {
+                                    rptFact_ReciboVentaLetterSize reportSinCAI = new rptFact_ReciboVentaLetterSize(factura, rptFact_ReciboVentaLetterSize.TipoCopia.Blanco);
+                                    using (ReportPrintTool printTool = new ReportPrintTool(reportSinCAI))
+                                    {
+                                        // Send the report to the default printer.
+                                        factura.UpdatePrintCount(factura.Id);
+                                        printTool.ShowPreviewDialog();
+                                    }
+                                }
+                                else
+                                {
+                                    rptFacturaLetterSize reportCaiLetter = new rptFacturaLetterSize(factura, rptFacturaLetterSize.TipoCopia.Blanco);
+                                    using (ReportPrintTool printTool = new ReportPrintTool(reportCaiLetter))
+                                    {
+                                        // Send the report to the default printer.
+                                        factura.UpdatePrintCount(factura.Id);
+                                        printTool.ShowPreviewDialog();
+                                    }
+                                }
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        CajaDialogo.Error("Esta factura ya se imprimió! Para una reimpresión debe solicitar una autorización!");
+                    }
+                }
             }
             catch (Exception ex)
             {
