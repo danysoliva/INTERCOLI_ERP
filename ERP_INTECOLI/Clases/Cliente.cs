@@ -18,7 +18,7 @@ namespace ERP_INTECOLI.Clases
 
         }
 
-        public int Id { get; set; }
+        public Int64 Id { get; set; }
         public string Codigo { get; set; }
         public string Nombre { get; set; }
         public string NombreCorto { get; set; }
@@ -28,18 +28,17 @@ namespace ERP_INTECOLI.Clases
         public decimal SaldoActual { get; set; }
         public bool Recuperado { get; set; }
 
-        public bool RecuperarRegistro(int pIdCliente)
+        public bool RecuperarRegistro(Int64 pIdCliente)
         {
             try
             {
                 DataOperations dp = new DataOperations();
-
                 SqlConnection cnx = new SqlConnection(dp.ConnectionStringERP);
 
                 using (SqlCommand cmd = new SqlCommand("[dbo].[uspGetClienteFacturacionByID]", cnx))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@id_estudiante", System.Data.SqlDbType.Int).Value = pIdCliente;
+                    cmd.Parameters.AddWithValue("@id_estudiante", pIdCliente);
 
                     cnx.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -53,15 +52,12 @@ namespace ERP_INTECOLI.Clases
                         Codigo = dr["codigo"].ToString();
                         Telefono = dr["Telefono"].ToString();
                         Correo = dr["Correo"].ToString();
-                        //Correo = dr["Correo"].ToString();
                         SaldoActual = Convert.ToDecimal(dr["saldo_actual"].ToString());
 
                         Recuperado = true;
                     }
                     cnx.Close();
                 }
-
-
                 return Recuperado;
             }
             catch (Exception ex)

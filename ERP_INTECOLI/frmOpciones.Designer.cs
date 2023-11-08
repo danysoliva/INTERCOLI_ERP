@@ -279,6 +279,7 @@ namespace ERP_INTECOLI
             this.navNotasCredito = new DevExpress.XtraNavBar.NavBarItem();
             this.navCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemListaPrecios = new DevExpress.XtraNavBar.NavBarItem();
             this.TabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl7)).BeginInit();
             this.TabMantenimientos.SuspendLayout();
@@ -2591,7 +2592,8 @@ namespace ERP_INTECOLI
             this.navBarItem107,
             this.navBarItem108,
             this.navBarItem99,
-            this.navBarItem100});
+            this.navBarItem100,
+            this.navBarItemListaPrecios});
             this.navBarControl6.Location = new System.Drawing.Point(0, 0);
             this.navBarControl6.Name = "navBarControl6";
             this.navBarControl6.OptionsNavPane.ExpandedWidth = 347;
@@ -2616,7 +2618,8 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.bnInstructores),
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbEmpresas),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navProductos),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbProveedores)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbProveedores),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemListaPrecios)});
             this.navBarGroup1.Name = "navBarGroup1";
             // 
             // navCursos
@@ -3434,6 +3437,19 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla.Name = "navGeneracionPlanilla";
             this.navGeneracionPlanilla.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanilla_LinkClicked);
             // 
+            // navBarItemListaPrecios
+            // 
+            this.navBarItemListaPrecios.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemListaPrecios.Appearance.Options.UseFont = true;
+            this.navBarItemListaPrecios.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemListaPrecios.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarItemListaPrecios.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemListaPrecios.AppearancePressed.Options.UseFont = true;
+            this.navBarItemListaPrecios.Caption = "Lista Precios";
+            this.navBarItemListaPrecios.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItemListaPrecios.ImageOptions.SmallImage")));
+            this.navBarItemListaPrecios.Name = "navBarItemListaPrecios";
+            this.navBarItemListaPrecios.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemListaPrecios_LinkClicked);
+            // 
             // frmOpciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3714,6 +3730,7 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navBarItem99;
         private DevExpress.XtraNavBar.NavBarItem navBarItem100;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemListaPrecios;
     }
 }
 

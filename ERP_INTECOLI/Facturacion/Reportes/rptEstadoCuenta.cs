@@ -11,7 +11,7 @@ namespace JAGUAR_APP.Facturacion.Reportes
 {
     public partial class rptEstadoCuenta : DevExpress.XtraReports.UI.XtraReport
     {
-        public rptEstadoCuenta(int id_cliente)
+        public rptEstadoCuenta(Int64 id_cliente)
         {
             InitializeComponent();
             Cliente cliente = new Cliente();
@@ -28,7 +28,7 @@ namespace JAGUAR_APP.Facturacion.Reportes
 
         }
 
-        private void LoadData(int id_cliente)
+        private void LoadData(Int64 id_cliente)
         {
             try
             {

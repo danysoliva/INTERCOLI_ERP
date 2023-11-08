@@ -697,12 +697,6 @@
     <Compile Include="Facturacion\Configuraciones\xfrmEditPriceFromListaPrecio.Designer.cs">
       <DependentUpon>xfrmEditPriceFromListaPrecio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Configuraciones\xfrmListaPrecios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Facturacion\Configuraciones\xfrmListaPrecios.Designer.cs">
-      <DependentUpon>xfrmListaPrecios.cs</DependentUpon>
-    </Compile>
     <Compile Include="Facturacion\Configuraciones\xfrmListaPreciosClientesAplicaCRUD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -802,6 +796,12 @@
     </Compile>
     <Compile Include="Facturacion\CoreFacturas\frmAjusteKardexFactura.designer.cs">
       <DependentUpon>frmAjusteKardexFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmAjusteSaldoEstadoCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmAjusteSaldoEstadoCuenta.Designer.cs">
+      <DependentUpon>frmAjusteSaldoEstadoCuenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\CoreFacturas\frmConfirmationFactura.cs">
       <SubType>Form</SubType>
@@ -1434,6 +1434,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\CoreFacturas\frmAjusteKardexFactura.resx">
       <DependentUpon>frmAjusteKardexFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmAjusteSaldoEstadoCuenta.resx">
+      <DependentUpon>frmAjusteSaldoEstadoCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\CoreFacturas\frmConfirmationFactura.resx">
       <DependentUpon>frmConfirmationFactura.cs</DependentUpon>

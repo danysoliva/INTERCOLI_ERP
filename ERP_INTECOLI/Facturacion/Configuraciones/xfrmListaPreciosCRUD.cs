@@ -983,7 +983,7 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
 
                     dsListaPrecios.PDV.Clear();
 
-                    SqlDataAdapter da = new SqlDataAdapter("dbo.usp_GetPDV", cnx);
+                    SqlDataAdapter da = new SqlDataAdapter("[dbo].sp_get_lista_puntos_de_venta", cnx);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     //da.SelectCommand.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     da.Fill(dsListaPrecios.PDV);

@@ -9,7 +9,7 @@ using System.Data;
 
 namespace ERP_INTECOLI.Clases
 {
-    class Estudiante
+    public class Estudiante
     {
         public Int64 IdEstudiante;
         public string identidad;
@@ -67,7 +67,7 @@ namespace ERP_INTECOLI.Clases
 
         public bool RecuperarRegistro(Int64 pidEstudiante)
         {
-            bool Recuperado = false;
+            Recuperado = false;
 
             try
             {
