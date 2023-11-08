@@ -1113,7 +1113,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
 
-                    xfrmListaPreciosCRUD frm = new xfrmListaPreciosCRUD(this.UsuarioLogeado, xfrmListaPreciosCRUD.TipoTipoTransaccionActual.Nuevo, 0);
+                    xfrnListaPrecioAdmin frm = new xfrnListaPrecioAdmin(this.UsuarioLogeado);
                     frm.MdiParent = this.MdiParent;
                     frm.Show();
                     break;
@@ -1125,7 +1125,7 @@ namespace ERP_INTECOLI
             {
                 if (UsuarioLogeado.ValidarNivelPermisos(26))
                 {
-                    xfrmListaPreciosCRUD frm = new xfrmListaPreciosCRUD(this.UsuarioLogeado, xfrmListaPreciosCRUD.TipoTipoTransaccionActual.Nuevo, 0);
+                    xfrnListaPrecioAdmin frm = new xfrnListaPrecioAdmin(this.UsuarioLogeado);
                     frm.MdiParent = this.MdiParent;
                     frm.MdiParent = this.MdiParent;
                     frm.Show();

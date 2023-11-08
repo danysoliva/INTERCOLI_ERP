@@ -20,11 +20,13 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
     {
         decimal ValorCeldaOLD;
         DataOperations dp;
+        PuntoVenta PuntoVentaActual; 
         public xfrmSelectProductos()
         {
             InitializeComponent();
             dp = new DataOperations();
-            ObtenerClientes();
+            //PuntoVentaActual = pPuntoVenta;
+            ObtenerProductos();
             ObtenerPDVs();
             if (dsListaPrecios.Productos.Count > 0)
                 gvCliente.FocusedRowHandle = 0;
@@ -35,7 +37,7 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
         }
         public List<ProductoListaPreciosAplica> productos = new List<ProductoListaPreciosAplica>();
 
-        private void ObtenerClientes()
+        private void ObtenerProductos()
         {
             try
             {
@@ -123,24 +125,23 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             {
                 if (item.seleccion == true)
                 {
-                    //if (pdv.RecuperaRegistro(item.id_pdv))
+                    //pdv = new PuntoVenta();
+                    //if (pdv.RecuperaRegistro(punto))
                     //{
-                    pdv = new PuntoVenta();
-                    pdv.RecuperaRegistro(item.id_pdv);
-                    ProductoListaPreciosAplica productosNew = new ProductoListaPreciosAplica()
-                    {
-                        ID = item.id_pt,
-                        Producto = item.descripcion,
-                        Codigo = item.codigo,
-                        Precio = item.precio,
-                        PresentacionID =item.id_presentacion,
-                        Presentacion = item.presentacion,
-                        PDV_ID = item.id_pdv,
-                        PDV = pdv.Nombre
-                    };
+                        ProductoListaPreciosAplica productosNew = new ProductoListaPreciosAplica()
+                        {
+                            ID = item.id_pt,
+                            Producto = item.descripcion,
+                            Codigo = item.codigo,
+                            Precio = item.precio,
+                            PresentacionID = dp.ValidateNumberInt32(item.id_presentacion),
+                            Presentacion = item.presentacion,
+                            //PDV_ID = PuntoVentaActual.ID,
+                            //PDV = PuntoVentaActual.Nombre
+                        };
 
-                    productos.Add(productosNew);
-                    //}
+                        productos.Add(productosNew);
+                    
                 }
             }
 
@@ -159,7 +160,7 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
 
                     dsListaPrecios.PDV.Clear();
 
-                    SqlDataAdapter da = new SqlDataAdapter("dbo.usp_GetPDV", cnx);
+                    SqlDataAdapter da = new SqlDataAdapter("dbo.[sp_get_lista_puntos_de_venta]", cnx);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     //da.SelectCommand.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     da.Fill(dsListaPrecios.PDV);
