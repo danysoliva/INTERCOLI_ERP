@@ -1411,6 +1411,11 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
                         LP_PuntoVenta.Enable = true;
                         LP_PuntoVenta.CreatedDate = dp.NowSetDateTime();
                         LP_PuntoVenta.UsuarioId = this.usuarioLogueado.Id;
+                        LP_PuntoVenta.IdPt = v_idpt;
+                        LP_PuntoVenta.IdPdv = frmS.ItemSeleccionado.id;
+                        LP_PuntoVenta.IdListaPrecio = this.Lista_precioActual.ID;
+                        LP_PuntoVenta.IdLPProductosAplica = v_idDetalleLista;
+
                         row1.id = LP_PuntoVenta.Id = LP_PuntoVenta.InsertNewRow();
 
                         dsListaPrecios.ListaPrecioPuntosDeVenta.AddListaPrecioPuntosDeVentaRow(row1);
