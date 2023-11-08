@@ -1136,5 +1136,10 @@ namespace ERP_INTECOLI
                 }
             }
         }
+
+        private void navSolicitudesAutori_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+        }
     }
 }

@@ -223,6 +223,7 @@ namespace ERP_INTECOLI
             this.nbEmpresas = new DevExpress.XtraNavBar.NavBarItem();
             this.navProductos = new DevExpress.XtraNavBar.NavBarItem();
             this.nbProveedores = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemListaPrecios = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem58 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem59 = new DevExpress.XtraNavBar.NavBarItem();
@@ -279,7 +280,6 @@ namespace ERP_INTECOLI
             this.navNotasCredito = new DevExpress.XtraNavBar.NavBarItem();
             this.navCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItemListaPrecios = new DevExpress.XtraNavBar.NavBarItem();
             this.TabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl7)).BeginInit();
             this.TabMantenimientos.SuspendLayout();
@@ -762,7 +762,9 @@ namespace ERP_INTECOLI
             this.navSolicitudesAutori.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.navSolicitudesAutori.AppearancePressed.Options.UseFont = true;
             this.navSolicitudesAutori.Caption = "Solicitudes de Autorizaciones";
+            this.navSolicitudesAutori.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navSolicitudesAutori.ImageOptions.SmallImage")));
             this.navSolicitudesAutori.Name = "navSolicitudesAutori";
+            this.navSolicitudesAutori.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navSolicitudesAutori_LinkClicked);
             // 
             // navPagosMultiples
             // 
@@ -2727,6 +2729,19 @@ namespace ERP_INTECOLI
             this.nbProveedores.Name = "nbProveedores";
             this.nbProveedores.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbProveedores_LinkClicked);
             // 
+            // navBarItemListaPrecios
+            // 
+            this.navBarItemListaPrecios.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemListaPrecios.Appearance.Options.UseFont = true;
+            this.navBarItemListaPrecios.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemListaPrecios.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarItemListaPrecios.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemListaPrecios.AppearancePressed.Options.UseFont = true;
+            this.navBarItemListaPrecios.Caption = "Lista Precios";
+            this.navBarItemListaPrecios.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItemListaPrecios.ImageOptions.SmallImage")));
+            this.navBarItemListaPrecios.Name = "navBarItemListaPrecios";
+            this.navBarItemListaPrecios.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemListaPrecios_LinkClicked);
+            // 
             // navBarItem24
             // 
             this.navBarItem24.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
@@ -3436,19 +3451,6 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.contabilidad_x32;
             this.navGeneracionPlanilla.Name = "navGeneracionPlanilla";
             this.navGeneracionPlanilla.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanilla_LinkClicked);
-            // 
-            // navBarItemListaPrecios
-            // 
-            this.navBarItemListaPrecios.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navBarItemListaPrecios.Appearance.Options.UseFont = true;
-            this.navBarItemListaPrecios.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navBarItemListaPrecios.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarItemListaPrecios.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navBarItemListaPrecios.AppearancePressed.Options.UseFont = true;
-            this.navBarItemListaPrecios.Caption = "Lista Precios";
-            this.navBarItemListaPrecios.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItemListaPrecios.ImageOptions.SmallImage")));
-            this.navBarItemListaPrecios.Name = "navBarItemListaPrecios";
-            this.navBarItemListaPrecios.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemListaPrecios_LinkClicked);
             // 
             // frmOpciones
             // 
