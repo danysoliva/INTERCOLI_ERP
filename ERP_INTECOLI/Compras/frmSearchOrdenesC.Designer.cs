@@ -1,7 +1,7 @@
 ﻿
 namespace ERP_INTECOLI.Compras
 {
-    partial class frmSearchSolicitud
+    partial class frmSearchOrdenesC
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,12 @@ namespace ERP_INTECOLI.Compras
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearchSolicitud));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.grdSolicitudes = new DevExpress.XtraGrid.GridControl();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearchOrdenesC));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.dsCompras1 = new ERP_INTECOLI.Compras.dsCompras();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid_solicitud = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -46,28 +45,14 @@ namespace ERP_INTECOLI.Compras
             this.colfecha_registro = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colfecha_contabilizacion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcomentario = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.reposSelect = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.grdSolicitudes)).BeginInit();
+            this.reposSelected = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.grdSolicitudes = new DevExpress.XtraGrid.GridControl();
             ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reposSelect)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposSelected)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSolicitudes)).BeginInit();
             this.SuspendLayout();
-            // 
-            // grdSolicitudes
-            // 
-            this.grdSolicitudes.DataMember = "solicitudes";
-            this.grdSolicitudes.DataSource = this.dsCompras1;
-            this.grdSolicitudes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdSolicitudes.Location = new System.Drawing.Point(0, 0);
-            this.grdSolicitudes.MainView = this.gridView1;
-            this.grdSolicitudes.Name = "grdSolicitudes";
-            this.grdSolicitudes.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.reposSelect});
-            this.grdSolicitudes.Size = new System.Drawing.Size(1111, 454);
-            this.grdSolicitudes.TabIndex = 0;
-            this.grdSolicitudes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
             // 
             // dsCompras1
             // 
@@ -103,7 +88,7 @@ namespace ERP_INTECOLI.Compras
             this.colid_solicitud.OptionsColumn.AllowEdit = false;
             this.colid_solicitud.Visible = true;
             this.colid_solicitud.VisibleIndex = 0;
-            this.colid_solicitud.Width = 85;
+            this.colid_solicitud.Width = 84;
             // 
             // colid_user
             // 
@@ -135,7 +120,7 @@ namespace ERP_INTECOLI.Compras
             this.colestado.OptionsColumn.AllowEdit = false;
             this.colestado.Visible = true;
             this.colestado.VisibleIndex = 2;
-            this.colestado.Width = 202;
+            this.colestado.Width = 168;
             // 
             // colfecha_registro
             // 
@@ -151,7 +136,7 @@ namespace ERP_INTECOLI.Compras
             this.colfecha_contabilizacion.OptionsColumn.AllowEdit = false;
             this.colfecha_contabilizacion.Visible = true;
             this.colfecha_contabilizacion.VisibleIndex = 3;
-            this.colfecha_contabilizacion.Width = 118;
+            this.colfecha_contabilizacion.Width = 116;
             // 
             // colcomentario
             // 
@@ -161,49 +146,62 @@ namespace ERP_INTECOLI.Compras
             this.colcomentario.OptionsColumn.AllowEdit = false;
             this.colcomentario.Visible = true;
             this.colcomentario.VisibleIndex = 4;
-            this.colcomentario.Width = 314;
-            // 
-            // reposSelect
-            // 
-            this.reposSelect.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            this.reposSelect.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.reposSelect.Name = "reposSelect";
-            this.reposSelect.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.reposSelect.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposSelect_ButtonClick);
+            this.colcomentario.Width = 406;
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "Selecccionar";
-            this.gridColumn1.ColumnEdit = this.reposSelect;
+            this.gridColumn1.Caption = "Seleccionar";
+            this.gridColumn1.ColumnEdit = this.reposSelected;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 5;
-            this.gridColumn1.Width = 178;
+            this.gridColumn1.Width = 121;
             // 
-            // frmSearchSolicitud
+            // reposSelected
+            // 
+            this.reposSelected.AutoHeight = false;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            this.reposSelected.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.reposSelected.Name = "reposSelected";
+            this.reposSelected.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.reposSelected.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposSelected_ButtonClick);
+            // 
+            // grdSolicitudes
+            // 
+            this.grdSolicitudes.DataMember = "orden_compra";
+            this.grdSolicitudes.DataSource = this.dsCompras1;
+            this.grdSolicitudes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdSolicitudes.Location = new System.Drawing.Point(0, 0);
+            this.grdSolicitudes.MainView = this.gridView1;
+            this.grdSolicitudes.Name = "grdSolicitudes";
+            this.grdSolicitudes.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.reposSelected});
+            this.grdSolicitudes.Size = new System.Drawing.Size(1109, 422);
+            this.grdSolicitudes.TabIndex = 1;
+            this.grdSolicitudes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // frmSearchOrdenesC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1111, 454);
+            this.ClientSize = new System.Drawing.Size(1109, 422);
             this.Controls.Add(this.grdSolicitudes);
-            this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("frmSearchSolicitud.IconOptions.LargeImage")));
-            this.Name = "frmSearchSolicitud";
-            this.Text = "Seleccionar Solicitud de Compra";
-            ((System.ComponentModel.ISupportInitialize)(this.grdSolicitudes)).EndInit();
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("frmSearchOrdenesC.IconOptions.SvgImage")));
+            this.Name = "frmSearchOrdenesC";
+            this.Text = "Seleccionar Orden de Compra";
             ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reposSelect)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reposSelected)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSolicitudes)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraGrid.GridControl grdSolicitudes;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private dsCompras dsCompras1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colid_solicitud;
         private DevExpress.XtraGrid.Columns.GridColumn colid_user;
         private DevExpress.XtraGrid.Columns.GridColumn colusuario;
@@ -212,7 +210,8 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraGrid.Columns.GridColumn colfecha_registro;
         private DevExpress.XtraGrid.Columns.GridColumn colfecha_contabilizacion;
         private DevExpress.XtraGrid.Columns.GridColumn colcomentario;
+        private DevExpress.XtraGrid.GridControl grdSolicitudes;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit reposSelect;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit reposSelected;
     }
 }

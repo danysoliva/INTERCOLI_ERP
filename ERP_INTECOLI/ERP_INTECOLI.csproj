@@ -350,6 +350,12 @@
     <Compile Include="Compras\frmOrdenesCompraMain.Designer.cs">
       <DependentUpon>frmOrdenesCompraMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Compras\frmSearchOrdenesC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\frmSearchOrdenesC.Designer.cs">
+      <DependentUpon>frmSearchOrdenesC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Compras\frmSearchSolicitud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1278,6 +1284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Compras\frmOrdenesCompraMain.resx">
       <DependentUpon>frmOrdenesCompraMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\frmSearchOrdenesC.resx">
+      <DependentUpon>frmSearchOrdenesC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compras\frmSearchSolicitud.resx">
       <DependentUpon>frmSearchSolicitud.cs</DependentUpon>

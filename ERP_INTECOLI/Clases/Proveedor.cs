@@ -85,6 +85,45 @@ namespace ERP_INTECOLI.Clases
             return Recuperado;
         }
 
+        public bool RecuperarRegistroFromItemCode(string pItemCode)
+        {
+            Recuperado = false;
+            try
+            {
+                DataOperations dp = new DataOperations();
+                SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("[sp_get_proveedor_by_ItemCode]", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ItemCode", pItemCode.Trim());
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    ID = dr.GetInt32(0);
+                    _codigo = dr.GetString(1);
+                    _nombre = dr.GetString(2);
+
+                    if (!dr.IsDBNull(dr.GetOrdinal("RTN")))
+                        _RTN = dr.GetString(3);
+
+                    if (!dr.IsDBNull(dr.GetOrdinal("direccion")))
+                        _direccion = dr.GetString(4);
+
+                    if (!dr.IsDBNull(dr.GetOrdinal("enable")))
+                        _enable = dr.GetBoolean(5);
+
+                    Recuperado = true;
+                }
+                con.Close();
+            }
+            catch (Exception ec)
+            {
+                CajaDialogo.Error(ec.Message);
+            }
+
+            return Recuperado;
+        }
 
     }
 }

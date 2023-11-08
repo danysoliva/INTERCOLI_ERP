@@ -29,6 +29,12 @@ namespace ERP_INTECOLI.Compras
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrdenesCompraMain));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -39,13 +45,9 @@ namespace ERP_INTECOLI.Compras
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrdenesCompraMain));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.txtCodProv = new DevExpress.XtraEditors.ButtonEdit();
+            this.txtProveedor = new DevExpress.XtraEditors.TextEdit();
             this.cmdAddDetalle = new DevExpress.XtraEditors.SimpleButton();
             this.dtFechaContabilizacion = new System.Windows.Forms.DateTimePicker();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -63,7 +65,10 @@ namespace ERP_INTECOLI.Compras
             this.cmdBuscar = new DevExpress.XtraEditors.SimpleButton();
             this.cmdSiguiente = new DevExpress.XtraEditors.SimpleButton();
             this.cmdAnterior = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.grDetalle = new DevExpress.XtraGrid.GridControl();
+            this.dsCompras1 = new ERP_INTECOLI.Compras.dsCompras();
             this.grdvDetalle = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colItemCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDscription = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -77,28 +82,33 @@ namespace ERP_INTECOLI.Compras
             this.ButtonGridEstadoEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemGrdItem = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.txtProveedor = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCodProv = new DevExpress.XtraEditors.ButtonEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.txtComentarios = new System.Windows.Forms.TextBox();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.txtComentarios = new DevExpress.XtraEditors.MemoEdit();
+            this.txtTotal = new DevExpress.XtraEditors.TextEdit();
+            this.txtImpuesto = new DevExpress.XtraEditors.TextEdit();
+            this.txtSubtotal = new DevExpress.XtraEditors.TextEdit();
             this.btnShowPopu = new DevExpress.XtraEditors.SimpleButton();
-            this.dsCompras1 = new ERP_INTECOLI.Compras.dsCompras();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodProv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProveedor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDeleteRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonGridEstadoEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGrdItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProveedor.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodProv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtComentarios.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtImpuesto.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubtotal.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -131,9 +141,34 @@ namespace ERP_INTECOLI.Compras
             this.panelControl1.Size = new System.Drawing.Size(1122, 225);
             this.panelControl1.TabIndex = 51;
             // 
+            // txtCodProv
+            // 
+            this.txtCodProv.Location = new System.Drawing.Point(154, 84);
+            this.txtCodProv.Name = "txtCodProv";
+            this.txtCodProv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtCodProv.Properties.Appearance.Options.UseFont = true;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.txtCodProv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.txtCodProv.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtCodProv.Properties.ReadOnly = true;
+            this.txtCodProv.Size = new System.Drawing.Size(204, 24);
+            this.txtCodProv.TabIndex = 69;
+            this.txtCodProv.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtCodProv_ButtonClick);
+            this.txtCodProv.Click += new System.EventHandler(this.txtCodProv_Click);
+            // 
+            // txtProveedor
+            // 
+            this.txtProveedor.Enabled = false;
+            this.txtProveedor.Location = new System.Drawing.Point(154, 115);
+            this.txtProveedor.Name = "txtProveedor";
+            this.txtProveedor.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtProveedor.Properties.Appearance.Options.UseFont = true;
+            this.txtProveedor.Size = new System.Drawing.Size(204, 24);
+            this.txtProveedor.TabIndex = 70;
+            // 
             // cmdAddDetalle
             // 
-            this.cmdAddDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdAddDetalle.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.cmdAddDetalle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdAddDetalle.ImageOptions.SvgImage")));
             this.cmdAddDetalle.Location = new System.Drawing.Point(10, 187);
@@ -142,6 +177,7 @@ namespace ERP_INTECOLI.Compras
             this.cmdAddDetalle.TabIndex = 67;
             this.cmdAddDetalle.Tag = "Agregar Item o Servicio";
             this.cmdAddDetalle.ToolTip = "Guardar";
+            this.cmdAddDetalle.Click += new System.EventHandler(this.cmdAddDetalle_Click);
             // 
             // dtFechaContabilizacion
             // 
@@ -151,6 +187,7 @@ namespace ERP_INTECOLI.Compras
             this.dtFechaContabilizacion.Name = "dtFechaContabilizacion";
             this.dtFechaContabilizacion.Size = new System.Drawing.Size(175, 26);
             this.dtFechaContabilizacion.TabIndex = 65;
+            this.dtFechaContabilizacion.ValueChanged += new System.EventHandler(this.dtFechaContabilizacion_ValueChanged);
             // 
             // labelControl4
             // 
@@ -184,8 +221,6 @@ namespace ERP_INTECOLI.Compras
             // 
             // txtEstado
             // 
-            this.txtEstado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEstado.BackColor = System.Drawing.Color.White;
             this.txtEstado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEstado.Enabled = false;
@@ -208,8 +243,6 @@ namespace ERP_INTECOLI.Compras
             // 
             // txtUsuarioCreador
             // 
-            this.txtUsuarioCreador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsuarioCreador.BackColor = System.Drawing.Color.White;
             this.txtUsuarioCreador.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuarioCreador.Enabled = false;
@@ -217,7 +250,7 @@ namespace ERP_INTECOLI.Compras
             this.txtUsuarioCreador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.txtUsuarioCreador.Location = new System.Drawing.Point(154, 145);
             this.txtUsuarioCreador.Name = "txtUsuarioCreador";
-            this.txtUsuarioCreador.Size = new System.Drawing.Size(214, 19);
+            this.txtUsuarioCreador.Size = new System.Drawing.Size(204, 19);
             this.txtUsuarioCreador.TabIndex = 59;
             // 
             // labelControl1
@@ -232,8 +265,6 @@ namespace ERP_INTECOLI.Compras
             // 
             // txtId
             // 
-            this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtId.BackColor = System.Drawing.Color.White;
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.Enabled = false;
@@ -241,7 +272,7 @@ namespace ERP_INTECOLI.Compras
             this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.txtId.Location = new System.Drawing.Point(154, 58);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(214, 19);
+            this.txtId.Size = new System.Drawing.Size(204, 19);
             this.txtId.TabIndex = 57;
             // 
             // labelControl7
@@ -264,6 +295,7 @@ namespace ERP_INTECOLI.Compras
             this.cmdClose.Size = new System.Drawing.Size(47, 33);
             this.cmdClose.TabIndex = 52;
             this.cmdClose.ToolTip = "Cerrar Ventana";
+            this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
             // 
             // cmdGuardar
             // 
@@ -274,6 +306,7 @@ namespace ERP_INTECOLI.Compras
             this.cmdGuardar.Size = new System.Drawing.Size(47, 33);
             this.cmdGuardar.TabIndex = 51;
             this.cmdGuardar.ToolTip = "Guardar";
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
             // 
             // cmdNuevo
             // 
@@ -284,6 +317,7 @@ namespace ERP_INTECOLI.Compras
             this.cmdNuevo.Size = new System.Drawing.Size(47, 33);
             this.cmdNuevo.TabIndex = 50;
             this.cmdNuevo.ToolTip = "Nuevo";
+            this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
             // 
             // cmdBuscar
             // 
@@ -294,6 +328,7 @@ namespace ERP_INTECOLI.Compras
             this.cmdBuscar.Size = new System.Drawing.Size(47, 33);
             this.cmdBuscar.TabIndex = 49;
             this.cmdBuscar.ToolTip = "Buscar";
+            this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
             // 
             // cmdSiguiente
             // 
@@ -304,6 +339,7 @@ namespace ERP_INTECOLI.Compras
             this.cmdSiguiente.Size = new System.Drawing.Size(47, 33);
             this.cmdSiguiente.TabIndex = 48;
             this.cmdSiguiente.ToolTip = "Siguiente";
+            this.cmdSiguiente.Click += new System.EventHandler(this.cmdSiguiente_Click);
             // 
             // cmdAnterior
             // 
@@ -314,13 +350,35 @@ namespace ERP_INTECOLI.Compras
             this.cmdAnterior.Size = new System.Drawing.Size(47, 33);
             this.cmdAnterior.TabIndex = 47;
             this.cmdAnterior.ToolTip = "Anterior";
+            this.cmdAnterior.Click += new System.EventHandler(this.cmdAnterior_Click);
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(48, 88);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(189, 18);
+            this.labelControl5.TabIndex = 71;
+            this.labelControl5.Text = "Proveedor___________";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(48, 120);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(170, 18);
+            this.labelControl6.TabIndex = 72;
+            this.labelControl6.Text = "Nombre___________";
             // 
             // grDetalle
             // 
             this.grDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grDetalle.DataMember = "solicitud_compras_detalle";
+            this.grDetalle.DataMember = "oc_detalle";
+            this.grDetalle.DataSource = this.dsCompras1;
             this.grDetalle.Location = new System.Drawing.Point(4, 231);
             this.grDetalle.MainView = this.grdvDetalle;
             this.grDetalle.Name = "grDetalle";
@@ -328,10 +386,15 @@ namespace ERP_INTECOLI.Compras
             this.ButtonDeleteRow,
             this.ButtonGridEstadoEdit,
             this.repositoryItemGrdItem});
-            this.grDetalle.Size = new System.Drawing.Size(1122, 341);
+            this.grDetalle.Size = new System.Drawing.Size(1122, 271);
             this.grDetalle.TabIndex = 52;
             this.grDetalle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvDetalle});
+            // 
+            // dsCompras1
+            // 
+            this.dsCompras1.DataSetName = "dsCompras";
+            this.dsCompras1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // grdvDetalle
             // 
@@ -354,6 +417,7 @@ namespace ERP_INTECOLI.Compras
             this.grdvDetalle.OptionsView.ShowAutoFilterRow = true;
             this.grdvDetalle.OptionsView.ShowFooter = true;
             this.grdvDetalle.OptionsView.ShowGroupPanel = false;
+            this.grdvDetalle.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.grdvDetalle_CellValueChanged);
             // 
             // colItemCode
             // 
@@ -391,7 +455,6 @@ namespace ERP_INTECOLI.Compras
             // 
             // colid
             // 
-            this.colid.FieldName = "id";
             this.colid.Name = "colid";
             this.colid.OptionsColumn.AllowEdit = false;
             // 
@@ -423,6 +486,7 @@ namespace ERP_INTECOLI.Compras
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.ButtonDeleteRow.Name = "ButtonDeleteRow";
             this.ButtonDeleteRow.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.ButtonDeleteRow.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.ButtonDeleteRow_ButtonClick);
             // 
             // colid_status
             // 
@@ -453,100 +517,139 @@ namespace ERP_INTECOLI.Compras
             this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
-            // txtProveedor
-            // 
-            this.txtProveedor.Enabled = false;
-            this.txtProveedor.Location = new System.Drawing.Point(154, 115);
-            this.txtProveedor.Name = "txtProveedor";
-            this.txtProveedor.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtProveedor.Properties.Appearance.Options.UseFont = true;
-            this.txtProveedor.Size = new System.Drawing.Size(214, 24);
-            this.txtProveedor.TabIndex = 70;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(48, 88);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(189, 18);
-            this.labelControl5.TabIndex = 71;
-            this.labelControl5.Text = "Proveedor___________";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(48, 120);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(170, 18);
-            this.labelControl6.TabIndex = 72;
-            this.labelControl6.Text = "Nombre___________";
-            // 
-            // txtCodProv
-            // 
-            this.txtCodProv.Location = new System.Drawing.Point(154, 84);
-            this.txtCodProv.Name = "txtCodProv";
-            this.txtCodProv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtCodProv.Properties.Appearance.Options.UseFont = true;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            this.txtCodProv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtCodProv.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtCodProv.Size = new System.Drawing.Size(214, 24);
-            this.txtCodProv.TabIndex = 69;
-            this.txtCodProv.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtCodProv_ButtonClick);
-            // 
             // panelControl2
             // 
-            this.panelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl2.Controls.Add(this.btnShowPopu);
+            this.panelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl2.Controls.Add(this.txtComentarios);
+            this.panelControl2.Controls.Add(this.txtTotal);
+            this.panelControl2.Controls.Add(this.txtImpuesto);
+            this.panelControl2.Controls.Add(this.txtSubtotal);
+            this.panelControl2.Controls.Add(this.btnShowPopu);
             this.panelControl2.Controls.Add(this.labelControl11);
-            this.panelControl2.Location = new System.Drawing.Point(4, 578);
+            this.panelControl2.Controls.Add(this.labelControl10);
+            this.panelControl2.Controls.Add(this.labelControl8);
+            this.panelControl2.Controls.Add(this.labelControl9);
+            this.panelControl2.Location = new System.Drawing.Point(4, 508);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1122, 128);
+            this.panelControl2.Size = new System.Drawing.Size(1122, 198);
             this.panelControl2.TabIndex = 53;
+            this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
             // txtComentarios
             // 
-            this.txtComentarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtComentarios.BackColor = System.Drawing.Color.White;
-            this.txtComentarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtComentarios.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.txtComentarios.ForeColor = System.Drawing.Color.Black;
-            this.txtComentarios.Location = new System.Drawing.Point(132, 17);
-            this.txtComentarios.Multiline = true;
+            this.txtComentarios.Location = new System.Drawing.Point(154, 89);
             this.txtComentarios.Name = "txtComentarios";
-            this.txtComentarios.Size = new System.Drawing.Size(525, 88);
-            this.txtComentarios.TabIndex = 76;
+            this.txtComentarios.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtComentarios.Properties.Appearance.Options.UseFont = true;
+            this.txtComentarios.Size = new System.Drawing.Size(408, 96);
+            this.txtComentarios.TabIndex = 85;
             // 
-            // labelControl11
+            // txtTotal
             // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(5, 17);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(165, 18);
-            this.labelControl11.TabIndex = 77;
-            this.labelControl11.Text = "Comentarios_______";
+            this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTotal.EditValue = "0.00";
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(800, 64);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtTotal.Properties.Appearance.Options.UseFont = true;
+            this.txtTotal.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTotal.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTotal.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtTotal.Properties.MaskSettings.Set("mask", "c");
+            this.txtTotal.Properties.NullText = "0.00";
+            this.txtTotal.Properties.NullValuePrompt = "0.00";
+            this.txtTotal.Size = new System.Drawing.Size(130, 24);
+            this.txtTotal.TabIndex = 81;
+            // 
+            // txtImpuesto
+            // 
+            this.txtImpuesto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtImpuesto.EditValue = "0.00";
+            this.txtImpuesto.Enabled = false;
+            this.txtImpuesto.Location = new System.Drawing.Point(800, 34);
+            this.txtImpuesto.Name = "txtImpuesto";
+            this.txtImpuesto.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtImpuesto.Properties.Appearance.Options.UseFont = true;
+            this.txtImpuesto.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtImpuesto.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtImpuesto.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtImpuesto.Properties.MaskSettings.Set("mask", "c");
+            this.txtImpuesto.Properties.NullText = "0.00";
+            this.txtImpuesto.Size = new System.Drawing.Size(130, 24);
+            this.txtImpuesto.TabIndex = 80;
+            // 
+            // txtSubtotal
+            // 
+            this.txtSubtotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSubtotal.EditValue = "0.00";
+            this.txtSubtotal.Enabled = false;
+            this.txtSubtotal.Location = new System.Drawing.Point(800, 5);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubtotal.Properties.Appearance.Options.UseFont = true;
+            this.txtSubtotal.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSubtotal.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtSubtotal.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtSubtotal.Properties.MaskSettings.Set("mask", "c");
+            this.txtSubtotal.Properties.NullText = "0.00";
+            this.txtSubtotal.Size = new System.Drawing.Size(130, 24);
+            this.txtSubtotal.TabIndex = 79;
             // 
             // btnShowPopu
             // 
             this.btnShowPopu.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowPopu.Appearance.Options.UseFont = true;
-            this.btnShowPopu.Location = new System.Drawing.Point(972, 76);
+            this.btnShowPopu.Location = new System.Drawing.Point(855, 162);
             this.btnShowPopu.Name = "btnShowPopu";
-            this.btnShowPopu.Size = new System.Drawing.Size(114, 29);
+            this.btnShowPopu.Size = new System.Drawing.Size(248, 29);
             this.btnShowPopu.TabIndex = 78;
-            this.btnShowPopu.Text = "Copiar de";
+            this.btnShowPopu.Text = "Copiar de Solicitud de Compra";
             this.btnShowPopu.Click += new System.EventHandler(this.btnShowPopu_Click);
             // 
-            // dsCompras1
+            // labelControl11
             // 
-            this.dsCompras1.DataSetName = "dsCompras";
-            this.dsCompras1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Appearance.Options.UseFont = true;
+            this.labelControl11.Location = new System.Drawing.Point(5, 90);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(165, 18);
+            this.labelControl11.TabIndex = 77;
+            this.labelControl11.Text = "Comentarios_______";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(698, 11);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(137, 18);
+            this.labelControl10.TabIndex = 84;
+            this.labelControl10.Text = "SubTotal_______";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Location = new System.Drawing.Point(698, 69);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(189, 18);
+            this.labelControl8.TabIndex = 82;
+            this.labelControl8.Text = "Total_______________";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(698, 41);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(141, 18);
+            this.labelControl9.TabIndex = 83;
+            this.labelControl9.Text = "Impuesto_______";
             // 
             // frmOrdenesCompraMain
             // 
@@ -562,18 +665,22 @@ namespace ERP_INTECOLI.Compras
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodProv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProveedor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvDetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDeleteRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonGridEstadoEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGrdItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProveedor.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodProv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtComentarios.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtImpuesto.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubtotal.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -617,9 +724,15 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.ButtonEdit txtCodProv;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private System.Windows.Forms.TextBox txtComentarios;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.SimpleButton btnShowPopu;
         private dsCompras dsCompras1;
+        private DevExpress.XtraEditors.TextEdit txtTotal;
+        private DevExpress.XtraEditors.TextEdit txtImpuesto;
+        private DevExpress.XtraEditors.TextEdit txtSubtotal;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.MemoEdit txtComentarios;
     }
 }

@@ -14,50 +14,50 @@ using System.Windows.Forms;
 
 namespace ERP_INTECOLI.Compras
 {
-    public partial class frmSearchSolicitud : DevExpress.XtraEditors.XtraForm
+    public partial class frmSearchOrdenesC : DevExpress.XtraEditors.XtraForm
     {
         DataOperations dp = new DataOperations();
-        public int IdSolicitudSeleccionado = 0;
+        public int IdOrdenesSeleccionado = 0;
 
-        public enum FiltroSolicitudes
+        public enum FiltroOrdenesCompra
         {
             Todas = 1,
             Abiertas = 2
         }
 
-        FiltroSolicitudes Filtro;
+        FiltroOrdenesCompra Filtro;
 
-        public frmSearchSolicitud(frmSearchSolicitud.FiltroSolicitudes pfiltroSolicitudes)
+        public frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra pfiltro)
         {
             InitializeComponent();
-            Filtro = pfiltroSolicitudes;
-            CargarSolicitudes();
-            
+            Filtro = pfiltro;
+            LoadData();
         }
 
-        private void CargarSolicitudes()
+        private void LoadData()
         {
+
             try
             {
-                string query = @"sp_get_all_solicitudes";
+                string query = @"sp_get_ordenes_compra_open";
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 switch (Filtro)
                 {
-                    case FiltroSolicitudes.Todas:
-                        cmd.Parameters.AddWithValue("@filtro",1);
+                    case FiltroOrdenesCompra.Todas:
+                        cmd.Parameters.AddWithValue("@filtro", 1);
                         break;
 
-                    case FiltroSolicitudes.Abiertas:
+                    case FiltroOrdenesCompra.Abiertas:
                         cmd.Parameters.AddWithValue("@filtro", 2);
                         break;
 
                     default:
                         break;
                 }
-                
+
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 dsCompras1.solicitudes.Clear();
                 adat.Fill(dsCompras1.solicitudes);
@@ -72,25 +72,25 @@ namespace ERP_INTECOLI.Compras
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
             var gridview = (GridView)grdSolicitudes.FocusedView;
-            var row = (dsCompras.solicitudesRow)gridview.GetFocusedDataRow();
+            var row = (dsCompras.orden_compraRow)gridview.GetFocusedDataRow();
 
-            if (row.id_estado_solicitud > 0)
+            if (row.id > 0)
             {
-                IdSolicitudSeleccionado = row.id_solicitud;
+                IdOrdenesSeleccionado = row.id;
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
         }
 
-        private void reposSelect_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void reposSelected_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             var gridview = (GridView)grdSolicitudes.FocusedView;
-            var row = (dsCompras.solicitudesRow)gridview.GetFocusedDataRow();
+            var row = (dsCompras.orden_compraRow)gridview.GetFocusedDataRow();
 
-            if (row.id_estado_solicitud > 0)
+            if (row.id > 0)
             {
-                IdSolicitudSeleccionado = row.id_solicitud;
+                IdOrdenesSeleccionado = row.id;
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
