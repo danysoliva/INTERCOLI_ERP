@@ -1132,7 +1132,7 @@ namespace ERP_INTECOLI
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #11 (Facturacion punto de venta)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #26 (Facturacion punto de venta)");
                 }
             }
         }
@@ -1186,7 +1186,7 @@ namespace ERP_INTECOLI
 
             if (!accesoprevio)
             {
-                if (UsuarioLogeado.ValidarNivelPermisos(26))
+                if (UsuarioLogeado.ValidarNivelPermisos(27))
                 {
                     frmHomeSolicitudesAutorizacion frm = new frmHomeSolicitudesAutorizacion(this.UsuarioLogeado);
                     frm.MdiParent = this.MdiParent;
@@ -1195,7 +1195,7 @@ namespace ERP_INTECOLI
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #11 (Facturacion punto de venta)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #27 (Facturacion punto de venta)");
                 }
             }
         }
