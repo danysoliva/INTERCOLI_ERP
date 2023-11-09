@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -88,6 +89,22 @@ namespace ERP_INTECOLI.Clases
                     command.Parameters.AddWithValue("@IdLPProductosAplica", IdLPProductosAplica ?? (object)DBNull.Value);
 
                     this.Id = Convert.ToInt64(command.ExecuteScalar());
+
+                    command.CommandText = "dbo.sp_set_InsertarNuevoRegistroClientes_precio";
+                    command.Parameters.Clear();
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@id_pt_lista_precio_detalle", this.Id);
+                    command.Parameters.AddWithValue("@precio", Precio);
+                    command.Parameters.AddWithValue("@id_cliente", DBNull.Value);
+                    command.Parameters.AddWithValue("@enable", 1);
+                    command.Parameters.AddWithValue("@date_writed", CreatedDate);
+                    command.Parameters.AddWithValue("@id_user_writed", UsuarioId);
+                    command.Parameters.AddWithValue("@id_user_updated", DBNull.Value);
+                    command.Parameters.AddWithValue("@date_updated", DBNull.Value);
+                    command.ExecuteNonQuery();
+
+
                     return this.Id;
                 }
             }

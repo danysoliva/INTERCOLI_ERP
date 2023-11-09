@@ -983,7 +983,7 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
 
                     dsListaPrecios.PDV.Clear();
 
-                    SqlDataAdapter da = new SqlDataAdapter("dbo.usp_GetPDV", cnx);
+                    SqlDataAdapter da = new SqlDataAdapter("[dbo].sp_get_lista_puntos_de_venta", cnx);
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
                     //da.SelectCommand.Parameters.Add("@id", SqlDbType.Int).Value = id;
                     da.Fill(dsListaPrecios.PDV);
@@ -1411,6 +1411,11 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
                         LP_PuntoVenta.Enable = true;
                         LP_PuntoVenta.CreatedDate = dp.NowSetDateTime();
                         LP_PuntoVenta.UsuarioId = this.usuarioLogueado.Id;
+                        LP_PuntoVenta.IdPt = v_idpt;
+                        LP_PuntoVenta.IdPdv = frmS.ItemSeleccionado.id;
+                        LP_PuntoVenta.IdListaPrecio = this.Lista_precioActual.ID;
+                        LP_PuntoVenta.IdLPProductosAplica = v_idDetalleLista;
+
                         row1.id = LP_PuntoVenta.Id = LP_PuntoVenta.InsertNewRow();
 
                         dsListaPrecios.ListaPrecioPuntosDeVenta.AddListaPrecioPuntosDeVentaRow(row1);

@@ -90,7 +90,7 @@ namespace ERP_INTECOLI.Clases
 
                 SqlConnection cnx = new SqlConnection(dp.ConnectionStringERP);
 
-                using (SqlCommand cmd = new SqlCommand("dbo.uspGetPDVById_V2", cnx))
+                using (SqlCommand cmd = new SqlCommand("dbo.[uspGetPDVById_V2]", cnx))
                 {
                     cnx.Open();
 

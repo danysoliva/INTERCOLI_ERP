@@ -67,6 +67,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.txtDireccion = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.lblSaldo = new DevExpress.XtraEditors.LabelControl();
+            this.cmdAjusteSaldo = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsContabilidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvEstadoCuenta)).BeginInit();
@@ -428,11 +429,25 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.lblSaldo.TabIndex = 64;
             this.lblSaldo.Text = "0.00";
             // 
+            // cmdAjusteSaldo
+            // 
+            this.cmdAjusteSaldo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdAjusteSaldo.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdAjusteSaldo.Appearance.Options.UseFont = true;
+            this.cmdAjusteSaldo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdAjusteSaldo.ImageOptions.Image")));
+            this.cmdAjusteSaldo.Location = new System.Drawing.Point(909, 67);
+            this.cmdAjusteSaldo.Name = "cmdAjusteSaldo";
+            this.cmdAjusteSaldo.Size = new System.Drawing.Size(145, 47);
+            this.cmdAjusteSaldo.TabIndex = 65;
+            this.cmdAjusteSaldo.Text = "Ajustar Saldo";
+            this.cmdAjusteSaldo.Click += new System.EventHandler(this.cmdAjusteSaldo_Click);
+            // 
             // HomeEstadoCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1217, 535);
+            this.Controls.Add(this.cmdAjusteSaldo);
             this.Controls.Add(this.lblSaldo);
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.labelControl6);
@@ -498,5 +513,6 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl lblSaldo;
+        private DevExpress.XtraEditors.SimpleButton cmdAjusteSaldo;
     }
 }

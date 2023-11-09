@@ -77,7 +77,7 @@ namespace ERP_INTECOLI.Clases
                 {
                     cnx.Open();
 
-                    SqlCommand cmd = new SqlCommand("dbo.usp_GetCodigoTabaleID_V2", cnx);
+                    SqlCommand cmd = new SqlCommand("dbo.[usp_GetCodigoTabaleID]", cnx);
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = IDTabla;
                     cmd.Parameters.Add("@cantidadCaracteres", System.Data.SqlDbType.Int).Value = CantidadCaracteres;

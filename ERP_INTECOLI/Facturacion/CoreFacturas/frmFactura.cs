@@ -37,7 +37,7 @@ namespace Eatery.Ventas
         DataOperations dp = new DataOperations();
         PuntoVenta PuntoDeVentaActual;
         FacturacionEquipo EquipoActual;
-        int ProIdCliente;
+        Int64 ProIdCliente;
         ClienteFacturacion ClienteFactura;
         Estudiante EstudianteFactura;
         int IdTerminoPago;

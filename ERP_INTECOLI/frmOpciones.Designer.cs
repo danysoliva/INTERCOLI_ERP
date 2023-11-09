@@ -223,6 +223,7 @@ namespace ERP_INTECOLI
             this.nbEmpresas = new DevExpress.XtraNavBar.NavBarItem();
             this.navProductos = new DevExpress.XtraNavBar.NavBarItem();
             this.nbProveedores = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemListaPrecios = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem58 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem59 = new DevExpress.XtraNavBar.NavBarItem();
@@ -761,7 +762,9 @@ namespace ERP_INTECOLI
             this.navSolicitudesAutori.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.navSolicitudesAutori.AppearancePressed.Options.UseFont = true;
             this.navSolicitudesAutori.Caption = "Solicitudes de Autorizaciones";
+            this.navSolicitudesAutori.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navSolicitudesAutori.ImageOptions.SmallImage")));
             this.navSolicitudesAutori.Name = "navSolicitudesAutori";
+            this.navSolicitudesAutori.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navSolicitudesAutori_LinkClicked);
             // 
             // navPagosMultiples
             // 
@@ -2591,7 +2594,8 @@ namespace ERP_INTECOLI
             this.navBarItem107,
             this.navBarItem108,
             this.navBarItem99,
-            this.navBarItem100});
+            this.navBarItem100,
+            this.navBarItemListaPrecios});
             this.navBarControl6.Location = new System.Drawing.Point(0, 0);
             this.navBarControl6.Name = "navBarControl6";
             this.navBarControl6.OptionsNavPane.ExpandedWidth = 347;
@@ -2616,7 +2620,8 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.bnInstructores),
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbEmpresas),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navProductos),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbProveedores)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbProveedores),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemListaPrecios)});
             this.navBarGroup1.Name = "navBarGroup1";
             // 
             // navCursos
@@ -2723,6 +2728,19 @@ namespace ERP_INTECOLI
             this.nbProveedores.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.proveedor_x32;
             this.nbProveedores.Name = "nbProveedores";
             this.nbProveedores.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbProveedores_LinkClicked);
+            // 
+            // navBarItemListaPrecios
+            // 
+            this.navBarItemListaPrecios.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemListaPrecios.Appearance.Options.UseFont = true;
+            this.navBarItemListaPrecios.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemListaPrecios.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarItemListaPrecios.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemListaPrecios.AppearancePressed.Options.UseFont = true;
+            this.navBarItemListaPrecios.Caption = "Lista Precios";
+            this.navBarItemListaPrecios.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItemListaPrecios.ImageOptions.SmallImage")));
+            this.navBarItemListaPrecios.Name = "navBarItemListaPrecios";
+            this.navBarItemListaPrecios.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemListaPrecios_LinkClicked);
             // 
             // navBarItem24
             // 
@@ -3714,6 +3732,7 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navBarItem99;
         private DevExpress.XtraNavBar.NavBarItem navBarItem100;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemListaPrecios;
     }
 }
 

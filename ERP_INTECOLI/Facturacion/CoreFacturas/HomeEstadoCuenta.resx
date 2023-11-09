@@ -197,4 +197,21 @@
         Cjwvc3ZnPgs=
 </value>
   </data>
+  <data name="cmdAjusteSaldo.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        6gAAAOoB+Ss1JgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJ4SURBVFhH7dZJ
+        yE1hHMfx15RZIhRSshBSlMxEKFmQhbKgDJHsKEU2UoaEBVIiO4koUmShyJwhC0MKG4QQkSnj93s6/7fH
+        6b7ve+/VK+X+6lP3Puc559zzf4Z76mqp5X9IR0zCFPSw4W+lPXbgI37mvmI3OqBZ0xoX4E2vYTle5t91
+        Ci1RMoMwFwsxDq1QadbAG/3AVPTBWDxA/Aiv/1tG4AqiQ3iMeagkd+G5LzAdM3ALTxHXPYf62OELPHAZ
+        h/LPqY0oN+8R5y1FP4zGkbxNT5ClN94gDli+rnDm3snbwkyUk/uIcz7Byi7CGHyD7c6RLFsQnc/AsRmP
+        h5iPOKabKCfbEOecxAIMxEQ4L2xfjSy3EZ0t/XasgEMR7Skr1lRc788Q5xyDc+xG/t0KtUOWt4iOn2GZ
+        h8DVsBLpOtYolJPBSIfQH+Q8czh8CFdXG2STIb1BdHbn2o+1eVvwwuXGm/hAG3KLsQxOxtfIJvZRpDc4
+        AUs0DZbM8YtjnlTJvtAdc7AHj5DeR14/e9K08R5GYjgGwIkXxzajsTiuXm8T3AG/I7126h2cc1n2Ij3o
+        vLD8q5I2J2snpGmBYbDfaRTnS8r/gYtYB1dZNv4Rv/jHEUskxAR11+oF46bimj4Id7q0f5HV3AnnQRc0
+        GZ/GZXgW52EV3IZnYxfSDaaU5zgA95K+qCpWYwLW4xIsXamb6QP8Z9uKWXBIqk5PuALSfbzIbfQqXFKT
+        0RZOvOuwOmWVuaH45uJGVLypW7LLyOXUDcXsQ/Q9jj+qgmP/CoexBP3RWOyT/ljV7/HVpDMafFMpZChK
+        Vcxh8kWm2eNw+LZTSizZWmr511NX9wulHQXKp4++7gAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>
