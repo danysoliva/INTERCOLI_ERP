@@ -320,8 +320,8 @@ namespace JAGUAR_APP.Facturacion.Numeracion_Fiscal
             // btnCancel
             // 
             this.btnCancel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            //this.btnCancel.ImageOptions.Image = global::JAGUAR_APP.Properties.Resources.cancel_48;
             this.btnCancel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnCancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCancel.ImageOptions.SvgImage")));
             this.btnCancel.Location = new System.Drawing.Point(1442, 12);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(57, 55);

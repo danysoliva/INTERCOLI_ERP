@@ -29,6 +29,7 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmItemsOP));
             this.lblOperacion = new System.Windows.Forms.Label();
             this.cmdCancelar = new System.Windows.Forms.Button();
@@ -39,9 +40,20 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
             this.txtItemCode = new DevExpress.XtraEditors.TextEdit();
             this.txtDescripcion = new DevExpress.XtraEditors.TextEdit();
             this.label3 = new System.Windows.Forms.Label();
+            this.grdTipoProducto = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dsMantenimiento1 = new ERP_INTECOLI.Mantenimiento.Productos.dsMantenimiento();
+            this.tipoProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tsHabilitado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTipoProducto.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMantenimiento1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoProductoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblOperacion
@@ -96,7 +108,7 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
             this.lblTS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTS.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.lblTS.Appearance.Options.UseFont = true;
-            this.lblTS.Location = new System.Drawing.Point(101, 144);
+            this.lblTS.Location = new System.Drawing.Point(101, 150);
             this.lblTS.Name = "lblTS";
             this.lblTS.Size = new System.Drawing.Size(60, 17);
             this.lblTS.TabIndex = 60;
@@ -106,7 +118,7 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
             // tsHabilitado
             // 
             this.tsHabilitado.EditValue = true;
-            this.tsHabilitado.Location = new System.Drawing.Point(180, 142);
+            this.tsHabilitado.Location = new System.Drawing.Point(180, 148);
             this.tsHabilitado.Name = "tsHabilitado";
             this.tsHabilitado.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.tsHabilitado.Properties.Appearance.Options.UseFont = true;
@@ -120,7 +132,7 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
             // 
             this.lblItemCode.AutoSize = true;
             this.lblItemCode.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.lblItemCode.Location = new System.Drawing.Point(63, 54);
+            this.lblItemCode.Location = new System.Drawing.Point(38, 54);
             this.lblItemCode.Name = "lblItemCode";
             this.lblItemCode.Size = new System.Drawing.Size(54, 17);
             this.lblItemCode.TabIndex = 66;
@@ -130,7 +142,7 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
             // txtItemCode
             // 
             this.txtItemCode.Enabled = false;
-            this.txtItemCode.Location = new System.Drawing.Point(124, 51);
+            this.txtItemCode.Location = new System.Drawing.Point(134, 51);
             this.txtItemCode.Name = "txtItemCode";
             this.txtItemCode.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtItemCode.Properties.Appearance.Options.UseFont = true;
@@ -141,29 +153,92 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(124, 81);
+            this.txtDescripcion.Location = new System.Drawing.Point(134, 120);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtDescripcion.Properties.Appearance.Options.UseFont = true;
             this.txtDescripcion.Properties.MaxLength = 100;
-            this.txtDescripcion.Size = new System.Drawing.Size(133, 24);
+            this.txtDescripcion.Size = new System.Drawing.Size(156, 24);
             this.txtDescripcion.TabIndex = 64;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label3.Location = new System.Drawing.Point(38, 84);
+            this.label3.Location = new System.Drawing.Point(38, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 17);
             this.label3.TabIndex = 63;
             this.label3.Text = "Descripcion:";
+            // 
+            // grdTipoProducto
+            // 
+            this.grdTipoProducto.Location = new System.Drawing.Point(134, 86);
+            this.grdTipoProducto.Name = "grdTipoProducto";
+            this.grdTipoProducto.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.grdTipoProducto.Properties.Appearance.Options.UseFont = true;
+            this.grdTipoProducto.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.grdTipoProducto.Properties.DataSource = this.tipoProductoBindingSource;
+            this.grdTipoProducto.Properties.DisplayMember = "descripcion";
+            this.grdTipoProducto.Properties.NullText = "";
+            this.grdTipoProducto.Properties.PopupView = this.gridLookUpEdit1View;
+            this.grdTipoProducto.Properties.ValueMember = "id";
+            this.grdTipoProducto.Size = new System.Drawing.Size(156, 24);
+            this.grdTipoProducto.TabIndex = 67;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid,
+            this.coldescripcion});
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.label1.Location = new System.Drawing.Point(38, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 17);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Tipo Producto:";
+            // 
+            // dsMantenimiento1
+            // 
+            this.dsMantenimiento1.DataSetName = "dsMantenimiento";
+            this.dsMantenimiento1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tipoProductoBindingSource
+            // 
+            this.tipoProductoBindingSource.DataMember = "Tipo_Producto";
+            this.tipoProductoBindingSource.DataSource = this.dsMantenimiento1;
+            // 
+            // colid
+            // 
+            this.colid.FieldName = "id";
+            this.colid.Name = "colid";
+            this.colid.OptionsColumn.AllowEdit = false;
+            // 
+            // coldescripcion
+            // 
+            this.coldescripcion.Caption = "Tipo Producto";
+            this.coldescripcion.FieldName = "descripcion";
+            this.coldescripcion.Name = "coldescripcion";
+            this.coldescripcion.OptionsColumn.AllowEdit = false;
+            this.coldescripcion.Visible = true;
+            this.coldescripcion.VisibleIndex = 0;
             // 
             // frmItemsOP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(365, 252);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.grdTipoProducto);
             this.Controls.Add(this.lblItemCode);
             this.Controls.Add(this.txtItemCode);
             this.Controls.Add(this.txtDescripcion);
@@ -178,6 +253,10 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
             ((System.ComponentModel.ISupportInitialize)(this.tsHabilitado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTipoProducto.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMantenimiento1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoProductoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +273,12 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
         private DevExpress.XtraEditors.TextEdit txtItemCode;
         private DevExpress.XtraEditors.TextEdit txtDescripcion;
         private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.GridLookUpEdit grdTipoProducto;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource tipoProductoBindingSource;
+        private dsMantenimiento dsMantenimiento1;
+        private DevExpress.XtraGrid.Columns.GridColumn colid;
+        private DevExpress.XtraGrid.Columns.GridColumn coldescripcion;
     }
 }

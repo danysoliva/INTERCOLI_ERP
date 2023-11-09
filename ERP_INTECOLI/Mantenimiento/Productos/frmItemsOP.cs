@@ -34,6 +34,8 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
             TipoEdit = pTipo;
             IdItems = pIdITEMS;
 
+            Load_Tipos_Productos();
+
             switch (TipoEdit)
             {
                 case TipoOperacion.Nuevo:
@@ -54,6 +56,7 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
                     pt.Recuperar_producto(IdItems);
                     txtItemCode.Text = pt.Code;
                     txtDescripcion.Text = pt.Descripcion;
+                    grdTipoProducto.EditValue = pt.Tipo_id;
                     if (pt.Id_estado == 1)
                         tsHabilitado.IsOn = true;
                     else
@@ -65,6 +68,29 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
                 default:
 
                     break;
+            }
+        }
+
+        private void Load_Tipos_Productos()
+        {
+
+       
+            try
+            {
+                string query = @"sp_get_tipos_productos";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.AddWithValue("",);
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                dsMantenimiento1.Tipo_Producto.Clear();
+                adat.Fill(dsMantenimiento1.Tipo_Producto);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
             }
         }
 
@@ -82,6 +108,12 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
                 return;
             }
 
+            if (string.IsNullOrEmpty(grdTipoProducto.Text))
+            {
+                CajaDialogo.Error("Debe seleccionar un Tipo de Procuto!");
+                return;
+            }
+
             switch (TipoEdit)
             {
                 case TipoOperacion.Nuevo:
@@ -95,6 +127,7 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
                         cmd.Parameters.AddWithValue("@id_estado",1);
                         cmd.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
                         cmd.Parameters.AddWithValue("@fecha",dp.Now());
+                        cmd.Parameters.AddWithValue("@id_tipo_pt", grdTipoProducto.EditValue);
                         cmd.ExecuteNonQuery();
                         conn.Close();
                     }
@@ -122,6 +155,7 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
                         else
                             cmd.Parameters.AddWithValue("@id_estado", 2);
                         cmd.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
+                        cmd.Parameters.AddWithValue("@id_tipo_pt", grdTipoProducto.EditValue);
                         cmd.ExecuteNonQuery();
                         conn.Close();
                     }
