@@ -552,15 +552,16 @@ namespace ERP_INTECOLI.Compras
                     return;
                 }
             }
-
+           
             switch (tipooperacion)
-            {
-                case TipoOperacion.New:
+            { 
+                
 
+                case TipoOperacion.New:
+                    bool Guardar = false;
                     SqlTransaction transaction = null;
 
                     SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
-                    bool Guardar = false;
 
                     try
                     {
@@ -634,33 +635,65 @@ namespace ERP_INTECOLI.Compras
                     break;
                 case TipoOperacion.Update:
 
+
+                    SqlTransaction transactionUpdate = null;
+
+                    SqlConnection connUpdate = new SqlConnection(dp.ConnectionStringERP);
+                    bool GuardarUpdate = false;
+
                     try
                     {
-                        SqlConnection connUP = new SqlConnection(dp.ConnectionStringERP);
-                        connUP.Open();
-                        SqlCommand cmdUP = new SqlCommand("sp_compras_ordenes_update", connUP);
-                        cmdUP.CommandType = CommandType.StoredProcedure;
-                        cmdUP.Parameters.AddWithValue("@id_orden",IdOrdenCompraActual);
-                        cmdUP.Parameters.AddWithValue("@code_prov",txtCodProv.Text.Trim());
-                        cmdUP.Parameters.AddWithValue("@proveedor",txtProveedor.Text); 
-                        cmdUP.Parameters.AddWithValue("@fecha_contabilizacion",dtFechaContabilizacion.Value);
-                        cmdUP.Parameters.AddWithValue("@direccion",direccion);
-                        cmdUP.Parameters.AddWithValue("@comentario",txtComentarios.Text);
-                        cmdUP.Parameters.AddWithValue("@impuesto",txtImpuesto.EditValue);
-                        cmdUP.Parameters.AddWithValue("@subtotal",txtSubtotal.EditValue);
-                        cmdUP.Parameters.AddWithValue("@total",txtTotal.EditValue);
-                        cmdUP.Parameters.AddWithValue("@id_user_modi",UsuarioLogueado.Id);
-                        cmdUP.Parameters.AddWithValue("@fecha_modi",dp.Now());
-                        cmdUP.ExecuteNonQuery();
-                        Guardar = true;
+                        connUpdate.Open();
+                        transactionUpdate = connUpdate.BeginTransaction("Transaction Order");
+                        SqlCommand cmdUpdate = connUpdate.CreateCommand();
+                        cmdUpdate.CommandText = "sp_compras_ordenes_update";
+                        cmdUpdate.Connection = connUpdate;
+                        cmdUpdate.Transaction = transactionUpdate;
+                        cmdUpdate.CommandType = CommandType.StoredProcedure;
+                        cmdUpdate.Parameters.AddWithValue("@id_orden",IdOrdenCompraActual);
+                        cmdUpdate.Parameters.AddWithValue("@code_prov",txtCodProv.Text.Trim());
+                        cmdUpdate.Parameters.AddWithValue("@proveedor",txtProveedor.Text);
+                        cmdUpdate.Parameters.AddWithValue("@fecha_contabilizacion",dtFechaContabilizacion.Value);
+                        cmdUpdate.Parameters.AddWithValue("@direccion",direccion);
+                        cmdUpdate.Parameters.AddWithValue("@comentario",txtComentarios.Text);
+                        cmdUpdate.Parameters.AddWithValue("@impuesto",txtImpuesto.EditValue);
+                        cmdUpdate.Parameters.AddWithValue("@subtotal",txtSubtotal.EditValue);
+                        cmdUpdate.Parameters.AddWithValue("@total",txtTotal.EditValue);
+                        cmdUpdate.Parameters.AddWithValue("@id_user_modi",UsuarioLogueado.Id);
+                        cmdUpdate.Parameters.AddWithValue("@fecha_modi",dp.Now());
+                        cmdUpdate.ExecuteNonQuery();
+
+                        foreach (dsCompras.oc_detalleRow row in dsCompras1.oc_detalle.Rows)
+                        {
+                            cmdUpdate.Parameters.Clear();
+                            cmdUpdate.CommandText = "sp_compras_ordenes_detalle_insert";
+                            cmdUpdate.Connection = connUpdate;
+                            cmdUpdate.Transaction = transactionUpdate;
+                            cmdUpdate.CommandType = CommandType.StoredProcedure;
+                            cmdUpdate.Parameters.AddWithValue("@id_header_orden", IdOrdenCompraActual);
+                            //cmd.Parameters.AddWithValue("@id_pt", row.);
+                            cmdUpdate.Parameters.AddWithValue("@itemcode", row.itemcode);
+                            cmdUpdate.Parameters.AddWithValue("@descripcion", row.descripcion);
+                            cmdUpdate.Parameters.AddWithValue("@cantidad", row.cantidad);
+                            cmdUpdate.Parameters.AddWithValue("@precio", row.precio);
+                            cmdUpdate.Parameters.AddWithValue("@total_linea", Convert.ToDecimal(row.cantidad * row.precio));
+                            cmdUpdate.Parameters.AddWithValue("@fecha_creacion", dp.Now());
+                            cmdUpdate.ExecuteNonQuery();
+                        }
+
+
+                        GuardarUpdate = true;
+                        transactionUpdate.Commit();
+                        GuardarUpdate = true;
+
                     }
                     catch (Exception ec)
                     {
                         CajaDialogo.Error(ec.Message);
-                        Guardar = false;
+                        GuardarUpdate = false;
                     }
 
-                    if (Guardar)
+                    if (GuardarUpdate)
                     {
                         CajaDialogo.Information("Orden de Compra Modificada!");
 
