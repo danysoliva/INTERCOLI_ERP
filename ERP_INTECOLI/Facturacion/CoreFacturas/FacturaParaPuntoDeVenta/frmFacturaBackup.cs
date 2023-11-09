@@ -578,7 +578,7 @@ namespace Eatery.Ventas
                         try
                         {
                             //Guardamos el Header de la factura 
-                            command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta_v2]";
+                            command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta]";
                             command.CommandType = CommandType.StoredProcedure;
                             command.Parameters.AddWithValue("@numero_documento", factura.NumeroDocumento);
                             command.Parameters.AddWithValue("@enable", 1);
@@ -630,6 +630,17 @@ namespace Eatery.Ventas
                             command.Parameters.AddWithValue("@isv1", factura.ISV1);
                             command.Parameters.AddWithValue("@isv2", factura.ISV2);
                             command.Parameters.AddWithValue("@id_formato_impresion", PuntoDeVentaActual.IdFormatoFactura);
+                            command.Parameters.AddWithValue("@id_termino_pago", DBNull.Value);
+
+                            if (factura.IdEstudiante == 0)
+                                command.Parameters.AddWithValue("@id_estudiante", DBNull.Value);
+                            else
+                                command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
+
+                            if (factura.id_tipo_pago_electronico == 0)
+                                command.Parameters.AddWithValue("@id_tipo_pago_electronico", DBNull.Value);
+                            else
+                                command.Parameters.AddWithValue("@id_tipo_pago_electronico", factura.id_tipo_pago_electronico);
 
                             Int64 IdFacturaH = Convert.ToInt64(command.ExecuteScalar());
                             decimal TotalFactura = 0;
@@ -730,7 +741,7 @@ namespace Eatery.Ventas
                         factura.RTN = frm2.RTN;
                         factura.ClienteNombre = frm2.NombreCliente;
                         factura.direccion_cliente = frm2.Direccion;
-
+                        factura.id_tipo_pago_electronico = frm.IdMetodoPagoElectronico;
 
                         if (ClienteFactura != null)
                             if (ClienteFactura.Id > 0)
@@ -826,7 +837,7 @@ namespace Eatery.Ventas
                             try
                             {
                                 //Guardamos el Header de la factura 
-                                command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta_v2]";
+                                command.CommandText = "[dbo].[sp_set_insert_factura_header_punto_venta]";
                                 command.CommandType = CommandType.StoredProcedure;
                                 command.Parameters.AddWithValue("@numero_documento", factura.NumeroDocumento);
                                 command.Parameters.AddWithValue("@enable", 1);
@@ -881,6 +892,18 @@ namespace Eatery.Ventas
                                 command.Parameters.AddWithValue("@isv1", factura.ISV1);
                                 command.Parameters.AddWithValue("@isv2", factura.ISV2);
                                 command.Parameters.AddWithValue("@id_formato_impresion", PuntoDeVentaActual.IdFormatoFactura);
+                                command.Parameters.AddWithValue("@id_termino_pago", DBNull.Value);
+
+                                if (factura.IdEstudiante == 0)
+                                    command.Parameters.AddWithValue("@id_estudiante", DBNull.Value);
+                                else
+                                    command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
+
+                                if (factura.id_tipo_pago_electronico == 0)
+                                    command.Parameters.AddWithValue("@id_tipo_pago_electronico", DBNull.Value);
+                                else
+                                    command.Parameters.AddWithValue("@id_tipo_pago_electronico", factura.id_tipo_pago_electronico);
+
 
                                 Int64 IdFacturaH = Convert.ToInt64(command.ExecuteScalar());
                                 decimal TotalFactura = 0;

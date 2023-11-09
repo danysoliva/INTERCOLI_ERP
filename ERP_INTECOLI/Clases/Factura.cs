@@ -44,6 +44,8 @@ namespace ERP_INTECOLI.Clases
         public int IdPuntoVentaDestino { get; set; }
         public int IdTerminoPago { get; set; }
         public string TerminoPagoName { get; set; }
+        public int id_tipo_pago_electronico { get; set; }
+        public string TipoPagoElectronicoName { get; set; }
         public bool Recuperado { get; set; }
 
 
@@ -133,6 +135,12 @@ namespace ERP_INTECOLI.Clases
 
                         IdTerminoPago = Convert.ToInt32(reader["id_termino_pago"]);
                         TerminoPagoName = reader["termino_pago_name"].ToString();
+
+                        if (!reader.IsDBNull(reader.GetOrdinal("id_tipo_pago_electronico")))
+                            id_tipo_pago_electronico = Convert.ToInt32(reader["id_tipo_pago_electronico"]);
+
+                        if (!reader.IsDBNull(reader.GetOrdinal("TipoPagoElectronicoName")))
+                            TipoPagoElectronicoName = reader["TipoPagoElectronicoName"].ToString();
 
                         ValorLetras = valorEnLetras.Convertir((subtotalFactura - descuentoTotalFactura + ISV1 + ISV2).ToString(), true);
                         RecuperaDatosPDVFromFactura(IdPuntoVenta);
