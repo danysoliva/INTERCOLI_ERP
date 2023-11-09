@@ -59,8 +59,8 @@ namespace ERP_INTECOLI.Compras
                 }
 
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
-                dsCompras1.solicitudes.Clear();
-                adat.Fill(dsCompras1.solicitudes);
+                dsCompras1.orden_compra.Clear();
+                adat.Fill(dsCompras1.orden_compra);
                 conn.Close();
             }
             catch (Exception ex)

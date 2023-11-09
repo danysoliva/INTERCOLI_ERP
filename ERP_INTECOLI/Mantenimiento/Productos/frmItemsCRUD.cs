@@ -76,5 +76,10 @@ namespace ERP_INTECOLI.Mantenimiento.Productos
                 CargarItems();
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

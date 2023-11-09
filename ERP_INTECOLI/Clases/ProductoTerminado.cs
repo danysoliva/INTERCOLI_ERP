@@ -182,7 +182,7 @@ namespace ERP_INTECOLI.Clases
                     Id_estado = dl.GetInt32(4);
                     Descripcion = dl.GetString(5);
                     Code = dl.GetString(6);
-                    Tipo_id = dl.GetInt32(7);
+                    Tipo_id = dl.IsDBNull(7) ? 0 : dl.GetInt32(7); //dl.GetInt32(7);
                     //fecha = dl.GetDateTime(9);
                     //tipo_id = dl.GetInt32(10);
                     //TipoDescripcion = dl.GetString(11);
