@@ -801,6 +801,7 @@ namespace ERP_INTECOLI
             this.navCierredeCaja.Caption = "Cierre de Caja";
             this.navCierredeCaja.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navCierredeCaja.ImageOptions.SmallImage")));
             this.navCierredeCaja.Name = "navCierredeCaja";
+            this.navCierredeCaja.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navCierredeCaja_LinkClicked);
             // 
             // navGeneracionPlanillas
             // 
