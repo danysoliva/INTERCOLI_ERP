@@ -84,7 +84,7 @@ namespace ERP_INTECOLI.Compras
                         soli.RecuperarRegistros(IdSolicitud);
                         txtComentarios.Text = soli.Comentario;
                         
-                        CargarDetalleOrdenCompra(frm.IdSolicitudSeleccionado);
+                        CargarDetalleOrdenCompraFromSolicitud(frm.IdSolicitudSeleccionado);
 
                     }
 
@@ -98,12 +98,11 @@ namespace ERP_INTECOLI.Compras
             }
         }
 
-        private void CargarDetalleOrdenCompra(int idSolicitudSeleccionado)
+        private void CargarDetalleOrdenCompraFromSolicitud(int idSolicitudSeleccionado)
         {
-            
             try
             {
-                string query = @"sp_get_solicitud_detalle";
+                string query = @"sp_get_solicitud_detalle_for_oc";
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -113,6 +112,32 @@ namespace ERP_INTECOLI.Compras
                 dsCompras1.oc_detalle.Clear();
                 adat.Fill(dsCompras1.oc_detalle);
                 conn.Close();
+
+                CalcularTotal();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
+        }
+
+        private void CargarDetalleOrdenCompra(int idSolicitudSeleccionado)
+        {
+            
+            try
+            {
+                string query = @"[sp_get_compras_ordenes_detalle]";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_header_orden", idSolicitudSeleccionado);
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                dsCompras1.oc_detalle.Clear();
+                adat.Fill(dsCompras1.oc_detalle);
+                conn.Close();
+
+                CalcularTotal();
             }
             catch (Exception ex)
             {
@@ -276,7 +301,10 @@ namespace ERP_INTECOLI.Compras
             cmdAddDetalle.Enabled = true;
             txtCodProv.Enabled = true;
             txtUsuarioCreador.Text = UsuarioLogueado.Nombre;
-            dsCompras1.solicitud_compras_detalle.Clear();
+            dsCompras1.oc_detalle.Clear();
+            txtCodProv.Clear();
+            txtProveedor.Clear();
+            txtId.Clear();
             //GetSigID();
 
         }
@@ -310,7 +338,9 @@ namespace ERP_INTECOLI.Compras
                 txtCodProv.Text = oc.Itemcode_Prov;
                 txtProveedor.Text = oc.Nombre_Prov;
                 direccion = oc.Direccion;
-                
+                txtSubtotal.EditValue = oc.Subtotal;
+                txtImpuesto.EditValue = oc.Impuesto;
+                txtTotal.EditValue = oc.Total;
                 CargarDetalleOrdenCompra(oc.Id_OrdenCompra);
                 tipooperacion = TipoOperacion.Update;
 
@@ -366,6 +396,10 @@ namespace ERP_INTECOLI.Compras
             {
                 txtCodProv.Text = frm.ItemSeleccionado.ItemCode;
                 txtProveedor.Text = frm.ItemSeleccionado.ItemName;
+                Proveedor prov = new Proveedor();
+                prov.RecuperarRegistroFromItemCode(frm.ItemSeleccionado.ItemCode);
+                direccion = prov._direccion;
+                cmdNuevo.Enabled = true;
             }
         }
 
@@ -405,7 +439,7 @@ namespace ERP_INTECOLI.Compras
                     SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
                     con.Open();
 
-                    SqlCommand cmd = new SqlCommand("[sp_get_navigation_solicitudes]", con);
+                    SqlCommand cmd = new SqlCommand("[sp_get_navigation_ordenes_compra]", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@case", 3);
                     cmd.Parameters.AddWithValue("@idactual", IdOrdenCompraActual);
@@ -414,7 +448,7 @@ namespace ERP_INTECOLI.Compras
                     if (IdOrdenCompraActual == 0)
                     {
                         //Si es cero debemos cargar el primero
-                        cmd = new SqlCommand("[sp_get_navigation_solicitudes]", con);
+                        cmd = new SqlCommand("[sp_get_navigation_ordenes_compra]", con);
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@case", 4);
                         cmd.Parameters.AddWithValue("@idactual", IdOrdenCompraActual);
@@ -462,7 +496,7 @@ namespace ERP_INTECOLI.Compras
                     SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
                     con.Open();
 
-                    SqlCommand cmd = new SqlCommand("[sp_get_navigation_solicitudes]", con);
+                    SqlCommand cmd = new SqlCommand("sp_get_navigation_ordenes_compra", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@case", 3);
                     cmd.Parameters.AddWithValue("@idactual", IdOrdenCompraActual);
@@ -471,7 +505,7 @@ namespace ERP_INTECOLI.Compras
                     if (IdOrdenCompraActual == 0)
                     {
                         //Si es cero debemos cargar el primero
-                        cmd = new SqlCommand("[sp_get_navigation_solicitudes]", con);
+                        cmd = new SqlCommand("[sp_get_navigation_ordenes_compra]", con);
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@case", 4);
                         cmd.Parameters.AddWithValue("@idactual", IdOrdenCompraActual);
@@ -492,6 +526,11 @@ namespace ERP_INTECOLI.Compras
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtCodProv.Text))
+            {
+                CajaDialogo.Error("Debe Agregar un Proveedor!");
+                return;
+            }
 
             if (string.IsNullOrEmpty(txtComentarios.Text))
             {
@@ -586,8 +625,9 @@ namespace ERP_INTECOLI.Compras
                     {
                         CajaDialogo.Information("Orden de Compra Creada!");
 
-                        this.DialogResult = DialogResult.OK;
-                        this.Close();
+                        LimpiarControles();
+                        //this.DialogResult = DialogResult.OK;
+                        //this.Close();
                     }
 
                   
@@ -642,7 +682,7 @@ namespace ERP_INTECOLI.Compras
 
         private void dtFechaContabilizacion_ValueChanged(object sender, EventArgs e)
         {
-            if (dtFechaRegistro.Value >= dtFechaContabilizacion.Value)
+            if (dtFechaRegistro.Value > dtFechaContabilizacion.Value)
             {
                 CajaDialogo.Error("La Fecha de Contabilizacion no puede ser menor a la de Registro!");
                 dtFechaContabilizacion.Value = dtFechaRegistro.Value;

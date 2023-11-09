@@ -52,6 +52,7 @@ namespace ERP_INTECOLI.Clases
 
         public bool RecuperarRegistos(int pIdOrdenCompra) 
         {
+            Recuperado = false;
             try
             {
                 DataOperations dp = new DataOperations();
@@ -64,28 +65,29 @@ namespace ERP_INTECOLI.Clases
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    Id_OrdenCompra = dr.GetOrdinal("[id]");
-                    Id_Solicitud = (int)(dr.IsDBNull(dr.GetOrdinal("[id_solicitud]")) ? 0 : (int)dr.GetInt32(dr.GetOrdinal("[id_solicitud]")));
-                    Itemcode_Prov = dr.IsDBNull(dr.GetOrdinal("[code_prov]")) ? "N/D" : dr.GetString(dr.GetOrdinal("[code_prov]"));
-                    Nombre_Prov = dr.IsDBNull(dr.GetOrdinal("[proveedor]")) ? "N/D" : dr.GetString(dr.GetOrdinal("[proveedor]"));
-                    Id_Estado = dr.GetOrdinal("[id_estado]");
+                    Id_OrdenCompra = (int)(dr.IsDBNull(dr.GetOrdinal("id")) ? 0 : (int)dr.GetInt32(dr.GetOrdinal("id")));
+                    Id_Solicitud = (int)(dr.IsDBNull(dr.GetOrdinal("id_solicitud")) ? 0 : (int)dr.GetInt32(dr.GetOrdinal("id_solicitud")));
+                    Itemcode_Prov = dr.IsDBNull(dr.GetOrdinal("code_prov")) ? "N/D" : dr.GetString(dr.GetOrdinal("code_prov"));
+                    Nombre_Prov = dr.IsDBNull(dr.GetOrdinal("proveedor")) ? "N/D" : dr.GetString(dr.GetOrdinal("proveedor"));
+                    Id_Estado = (int)(dr.IsDBNull(dr.GetOrdinal("id_estado")) ? 0 : (int)dr.GetInt32(dr.GetOrdinal("id_estado")));
                     Estado = dr.IsDBNull(dr.GetOrdinal("estado")) ? "" : dr.GetString(dr.GetOrdinal("estado"));
-                    Fecha_Registro =Convert.ToDateTime(dr.GetOrdinal("[fecha_registro]"));
-                    Fecha_Contabilizacion = Convert.ToDateTime(dr.GetOrdinal("[fecha_contabilizacion]"));
-                    Direccion = dr.IsDBNull(dr.GetOrdinal("[direccion]")) ? "" : dr.GetString(dr.GetOrdinal("[direccion]"));
-                    Comentario = dr.IsDBNull(dr.GetOrdinal("[comentario]")) ? "" : dr.GetString(dr.GetOrdinal("[comentario]"));
-                    Impuesto = (decimal)(dr.IsDBNull(dr.GetOrdinal("[impuesto]")) ? 0 : (decimal?)dr.GetDecimal(dr.GetOrdinal("[impuesto]")));
-                    Subtotal = (decimal)(dr.IsDBNull(dr.GetOrdinal("[subtotal]")) ? 0 : (decimal?)dr.GetDecimal(dr.GetOrdinal("[subtotal]")));
-                    Total = (decimal)(dr.IsDBNull(dr.GetOrdinal("[total]")) ? 0 : (decimal?)dr.GetDecimal(dr.GetOrdinal("[total]")));
-                    Id_UserCrea = dr.GetOrdinal("[id_user_cre]");
+                    Fecha_Registro = dr.GetDateTime(6);
+                    Fecha_Contabilizacion = dr.GetDateTime(7);
+                    Direccion = dr.IsDBNull(dr.GetOrdinal("direccion")) ? "" : dr.GetString(dr.GetOrdinal("direccion"));
+                    Comentario = dr.IsDBNull(dr.GetOrdinal("comentario")) ? "" : dr.GetString(dr.GetOrdinal("comentario"));
+                    Impuesto = (decimal)(dr.IsDBNull(dr.GetOrdinal("impuesto")) ? 0 : (decimal?)dr.GetDecimal(dr.GetOrdinal("impuesto")));
+                    Subtotal = (decimal)(dr.IsDBNull(dr.GetOrdinal("subtotal")) ? 0 : (decimal?)dr.GetDecimal(dr.GetOrdinal("subtotal")));
+                    Total = (decimal)(dr.IsDBNull(dr.GetOrdinal("total")) ? 0 : (decimal?)dr.GetDecimal(dr.GetOrdinal("total")));
+                    Id_UserCrea = dr.GetOrdinal("id_user_cre");
                     Usuario_Cre = dr.GetOrdinal("usuario_cre").ToString();
-                    Id_UserModi = (int)(dr.IsDBNull(dr.GetOrdinal("[id_user_modi]")) ? 0 : (int)dr.GetInt32(dr.GetOrdinal("[id_user_modi]")));
+                    Id_UserModi = (int)(dr.IsDBNull(dr.GetOrdinal("id_user_modi")) ? 0 : (int)dr.GetInt32(dr.GetOrdinal("id_user_modi")));
                     Usuario_Modi = dr.IsDBNull(dr.GetOrdinal("usuario_Modi")) ? "" : dr.GetString(dr.GetOrdinal("usuario_Modi"));
-                    if (!dr.IsDBNull(dr.GetOrdinal("[fecha_modi]")))
-                        Fecha_Modi = Convert.ToDateTime(dr.GetOrdinal("[fecha_modi]"));
-
+                    if (!dr.IsDBNull(dr.GetOrdinal("fecha_modi")))
+                        Fecha_Modi = Convert.ToDateTime(dr.GetOrdinal("fecha_modi"));
+                    Recuperado = true;
                 }
                 dr.Close();
+                cn.Close();
             }
             catch (Exception ex)
             {
