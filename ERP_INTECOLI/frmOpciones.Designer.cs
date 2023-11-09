@@ -776,6 +776,7 @@ namespace ERP_INTECOLI
             this.navPagosMultiples.AppearancePressed.Options.UseFont = true;
             this.navPagosMultiples.Caption = "Pago Multiple";
             this.navPagosMultiples.Name = "navPagosMultiples";
+            this.navPagosMultiples.Visible = false;
             // 
             // navNotas
             // 
@@ -787,6 +788,7 @@ namespace ERP_INTECOLI
             this.navNotas.AppearancePressed.Options.UseFont = true;
             this.navNotas.Caption = "Notas Credito/Debito";
             this.navNotas.Name = "navNotas";
+            this.navNotas.Visible = false;
             // 
             // navCierredeCaja
             // 
@@ -797,6 +799,7 @@ namespace ERP_INTECOLI
             this.navCierredeCaja.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.navCierredeCaja.AppearancePressed.Options.UseFont = true;
             this.navCierredeCaja.Caption = "Cierre de Caja";
+            this.navCierredeCaja.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navCierredeCaja.ImageOptions.SmallImage")));
             this.navCierredeCaja.Name = "navCierredeCaja";
             // 
             // navGeneracionPlanillas
