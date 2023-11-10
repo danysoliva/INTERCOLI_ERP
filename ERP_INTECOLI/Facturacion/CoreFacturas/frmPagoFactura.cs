@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -25,7 +26,8 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
         {
             Efectivo = 1,
             Tarjeta = 2,
-            DepositoBancario = 3
+            DepositoBancario = 3,
+            Otros = 4
         }
 
         public TipoPago TipoPagoSeleccionadoActual;
@@ -33,6 +35,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
         public decimal varPago;
 
         public int IdFormato;
+        public int IdMetodoPagoElectronico;
         public string PrinterName;
         public string ReferenciaReciboPago;
 
@@ -53,6 +56,77 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             
             SetRadioButtonFormatt();
             GetPrintersNames();
+            LoadBancosList();
+            LoadTipoPagoList();
+        }
+
+        private void LoadBancosList()
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("dbo.sp_get_lista_bancos", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.AddWithValue("", 0);
+                dsVentaSuccess1.lista_bancos.Clear();
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                adat.Fill(dsVentaSuccess1.lista_bancos);
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception EX)
+            {
+                CajaDialogo.Error(EX.Message);
+            }
+        }
+
+        private void LoadDetallePago(int pIdPago)
+        {
+            try
+            {
+
+                DataOperations dp = new DataOperations();
+                SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("[dbo].[sp_get_detalle_pago_from_id]", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_pago_electronico", pIdPago);
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                DataTable Table_ = new DataTable();
+                adat.Fill(Table_);
+                this.vGridControl1.DataSource = Table_;
+                con.Close();
+                this.vGridControl1.BestFit();
+            }
+            catch (Exception ec)
+            {
+                MessageBox.Show(ec.Message);
+            }
+        }
+
+        private void LoadTipoPagoList()
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("[dbo].[sp_get_lista_pagos]", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.AddWithValue("", 0);
+                dsVentaSuccess1.tipos_pagos.Clear();
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                adat.Fill(dsVentaSuccess1.tipos_pagos);
+
+                //cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception EX)
+            {
+                CajaDialogo.Error(EX.Message);
+            }
         }
 
         private void SetRadioButtonFormatt()
@@ -91,55 +165,62 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             //if (PuntoVentaActual.Recuperado)
             //{
 
-                ListboxPrintersEfectivo.Items.Clear();
-                foreach (string printname in PrinterSettings.InstalledPrinters)
-                {
-                    //Console.WriteLine(printname);
+            ListboxPrintersEfectivo.Items.Clear();
+            foreach (string printname in PrinterSettings.InstalledPrinters)
+            {
+                //Console.WriteLine(printname);
 
-                    //if (conf.Key == printname)
-                    //{
-                    //    ListboxPrinters.Items.Add(printname, true);
-                    //}
-                    //else
-                    //{
-                    //    ListboxPrinters.Items.Add(printname, false);
-                    //}
-                    ListboxPrintersEfectivo.Items.Add(printname, false);
-                }
+                //if (conf.Key == printname)
+                //{
+                //    ListboxPrinters.Items.Add(printname, true);
+                //}
+                //else
+                //{
+                //    ListboxPrinters.Items.Add(printname, false);
+                //}
+                ListboxPrintersEfectivo.Items.Add(printname, false);
+            }
 
-                ListboxPrintersTransferencia.Items.Clear();
-                foreach (string printname in PrinterSettings.InstalledPrinters)
-                {
-                    //Console.WriteLine(printname);
+            ListboxPrintersTransferencia.Items.Clear();
+            foreach (string printname in PrinterSettings.InstalledPrinters)
+            {
+                //Console.WriteLine(printname);
 
-                    //if (conf.Key == printname)
-                    //{
-                    //    ListboxPrinters.Items.Add(printname, true);
-                    //}
-                    //else
-                    //{
-                    //    ListboxPrinters.Items.Add(printname, false);
-                    //}
-                    ListboxPrintersTransferencia.Items.Add(printname, false);
-                }
+                //if (conf.Key == printname)
+                //{
+                //    ListboxPrinters.Items.Add(printname, true);
+                //}
+                //else
+                //{
+                //    ListboxPrinters.Items.Add(printname, false);
+                //}
+                ListboxPrintersTransferencia.Items.Add(printname, false);
+            }
 
-                ListboxPrintersTarjeta.Items.Clear();
-                foreach (string printname in PrinterSettings.InstalledPrinters)
-                {
-                    //Console.WriteLine(printname);
+            ListboxPrintersTarjeta.Items.Clear();
+            foreach (string printname in PrinterSettings.InstalledPrinters)
+            {
+                //Console.WriteLine(printname);
 
-                    //if (conf.Key == printname)
-                    //{
-                    //    ListboxPrinters.Items.Add(printname, true);
-                    //}
-                    //else
-                    //{
-                    //    ListboxPrinters.Items.Add(printname, false);
-                    //}
-                    ListboxPrintersTarjeta.Items.Add(printname, false);
-                }
+                //if (conf.Key == printname)
+                //{
+                //    ListboxPrinters.Items.Add(printname, true);
+                //}
+                //else
+                //{
+                //    ListboxPrinters.Items.Add(printname, false);
+                //}
+                ListboxPrintersTarjeta.Items.Add(printname, false);
+            }
 
-            
+
+            //Otros metodos de pago, compra click o tigo money
+            ListboxPrintersTarjeta.Items.Clear();
+            foreach (string printname in PrinterSettings.InstalledPrinters)
+            {
+                ListboxPrintersOtros.Items.Add(printname, false);
+            }
+
         }
 
         private void SetButtonPago()
@@ -150,25 +231,41 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
                     cmdEfectivo.Appearance.BackColor = Color.LightSkyBlue;
                     cmdTarjeta.Appearance.BackColor = Color.White;
                     cmdDepositoBancario.Appearance.BackColor = Color.White;
+                    cmdOtrosPagos.Appearance.BackColor = Color.White;   
                     xtraTabPage1.PageVisible = true;
                     xtraTabPage2.PageVisible = 
-                    xtraTabPage3.PageVisible = false;
+                    xtraTabPage3.PageVisible =
+                    xtraTabPage4.PageVisible = false;
                     break;
                 case TipoPago.Tarjeta: //2
                     cmdEfectivo.Appearance.BackColor = Color.White;
                     cmdTarjeta.Appearance.BackColor = Color.LightSkyBlue;
                     cmdDepositoBancario.Appearance.BackColor = Color.White;
+                    cmdOtrosPagos.Appearance.BackColor = Color.White;
                     xtraTabPage1.PageVisible = false;
                     xtraTabPage2.PageVisible = true;
-                    xtraTabPage3.PageVisible = false;
+                    xtraTabPage3.PageVisible = 
+                    xtraTabPage4.PageVisible = false;
                     break;
                 case TipoPago.DepositoBancario: //3
                     cmdEfectivo.Appearance.BackColor = Color.White;
                     cmdTarjeta.Appearance.BackColor = Color.White;
                     cmdDepositoBancario.Appearance.BackColor = Color.LightSkyBlue;
+                    cmdOtrosPagos.Appearance.BackColor = Color.White;
                     xtraTabPage1.PageVisible = 
                     xtraTabPage2.PageVisible = false;
+                    xtraTabPage4.PageVisible = false;
                     xtraTabPage3.PageVisible = true;
+                    break;
+                case TipoPago.Otros: //4
+                    cmdEfectivo.Appearance.BackColor = Color.White;
+                    cmdTarjeta.Appearance.BackColor = Color.White;
+                    cmdDepositoBancario.Appearance.BackColor = Color.White;
+                    cmdOtrosPagos.Appearance.BackColor = Color.LightSkyBlue;
+                    xtraTabPage1.PageVisible =
+                    xtraTabPage2.PageVisible =
+                    xtraTabPage3.PageVisible = false;
+                    xtraTabPage4.PageVisible = true;
                     break;
             }
         }
@@ -362,6 +459,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
                 CajaDialogo.Error("No se puede realizar la transaccion, el valor transferido debe ser mayor o igual al de la factura.");
                 return;
             }
+
             if (string.IsNullOrEmpty(PrinterName))
             {
                 foreach (DevExpress.XtraEditors.Controls.CheckedListBoxItem item in ListboxPrintersEfectivo.Items)
@@ -375,6 +473,14 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             {
                 ReferenciaReciboPago = txtReferencia.Text;
             }
+
+            if (string.IsNullOrEmpty(gridLookUpEditBancos.Text))
+            {
+                CajaDialogo.Error("Es necesario indicar el Banco y No. de Cuenta!");
+                return; 
+            }
+
+            IdMetodoPagoElectronico = dp.ValidateNumberInt32(gridLookUpEditBancos.EditValue);
 
             if (IdFormato == 0)
             {
@@ -436,6 +542,112 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             if(!string.IsNullOrEmpty(txtReferencia.Text)) 
             {
                 ReferenciaReciboPago = txtReferencia.Text;
+            }
+        }
+
+        private void cmdOtrosPagos_Click(object sender, EventArgs e)
+        {
+            tabPagos.SelectedTabPage = xtraTabPage4;
+            TipoPagoSeleccionadoActual = TipoPago.Otros;
+            SetButtonPago();
+            gleTiposPagosElectronicos.Focus();
+        }
+
+        private void gleTiposPagosElectronicos_EditValueChanged(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(gleTiposPagosElectronicos.Text))
+            {
+                IdMetodoPagoElectronico = dp.ValidateNumberInt32(gleTiposPagosElectronicos.EditValue);
+                LoadDetallePago(IdMetodoPagoElectronico);
+            }
+           
+        }
+
+        private void gleTiposPagosElectronicos_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                seMontoOtros.Focus();
+            }
+        }
+
+        private void seMontoOtros_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txtReferenciaOtros.Focus();
+        }
+
+        private void txtReferenciaOtros_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                rgFormatoOtros.Focus();
+        }
+
+        private void rgFormatoOtros_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Space)
+                ListboxPrintersOtros.Focus();
+        }
+
+        private void ListboxPrintersOtros_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                cmdPagarOtros.Focus();
+        }
+
+        private void cmdPagarOtros_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                cmdPagarOtros_Click(sender, new EventArgs());
+        }
+
+        private void cmdPagarOtros_Click(object sender, EventArgs e)
+        {
+            varPago = dp.ValidateNumberDecimal(seMontoOtros.Value);
+            if (ValorA_Pagar > varPago)
+            {
+                CajaDialogo.Error("No se puede realizar la transaccion, el valor transferido debe ser mayor o igual al de la factura.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(PrinterName))
+            {
+                foreach (DevExpress.XtraEditors.Controls.CheckedListBoxItem item in ListboxPrintersOtros.Items)
+                {
+                    if (item.CheckState == CheckState.Checked)
+                        PrinterName = item.Value.ToString();
+                }
+            }
+
+            if (!string.IsNullOrEmpty(txtReferenciaOtros.Text))
+            {
+                ReferenciaReciboPago = txtReferenciaOtros.Text;
+            }
+
+            //if (string.IsNullOrEmpty(gridLookUpEditBancos.Text))
+            if (string.IsNullOrEmpty(gleTiposPagosElectronicos.Text))
+            {
+                CajaDialogo.Error("Es necesario indicar el Banco y No. de Cuenta!");
+                return;
+            }
+
+            IdMetodoPagoElectronico = dp.ValidateNumberInt32(gleTiposPagosElectronicos.EditValue);
+
+            if (IdFormato == 0)
+            {
+                IdFormato = Convert.ToInt32(radioGroup1.EditValue);
+            }
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void gridLookUpEditBancos_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(gridLookUpEditBancos.Text))
+            {
+                IdMetodoPagoElectronico = dp.ValidateNumberInt32(gridLookUpEditBancos.EditValue);
+                //LoadDetallePago(IdMetodoPagoElectronico);
             }
         }
     }

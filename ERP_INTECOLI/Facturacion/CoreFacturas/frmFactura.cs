@@ -474,21 +474,6 @@ namespace Eatery.Ventas
                 return;
             }
 
-            //if(ClienteFactura.Recuperado)
-            ////Vamos a verificar que el cliente tenga RTN
-            //{
-            //    //if (dp.ValidateStringIsNullOrEmpty(txtRTN.Text))
-            //    //{
-            //    //    SetErrorBarra("Se ha seleccionado un cliente, pero se dejo vacio el campo RTN!");
-            //    //    return;
-            //    //}
-            //    //if (dp.ValidateStringIsNullOrEmpty(txtNombreCliente.Text))
-            //    //{
-            //    //    SetErrorBarra("Se ha seleccionado un cliente, pero se dejo vacio el Nombre de cliente de forma manual, es un campo obligatorio!");
-            //    //    return;
-            //    //}
-            //}
-
             if (dp.ValidateNumberDecimal(txtTotal.Text)<=0)
             {
                 SetErrorBarra("No se permite generar facturas con valor total cero(0)!");
@@ -672,8 +657,17 @@ namespace Eatery.Ventas
                             command.Parameters.AddWithValue("@isv1", factura.ISV1);
                             command.Parameters.AddWithValue("@isv2", factura.ISV2);
                             command.Parameters.AddWithValue("@id_formato_impresion", PuntoDeVentaActual.IdFormatoFactura);
-                            command.Parameters.AddWithValue("@id_termino_pago", IdTerminoPago);
-                            command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
+                            command.Parameters.AddWithValue("@id_termino_pago", DBNull.Value);
+
+                            if (factura.IdEstudiante == 0)
+                                command.Parameters.AddWithValue("@id_estudiante", DBNull.Value);
+                            else
+                                command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
+
+                            if (factura.id_tipo_pago_electronico == 0)
+                                command.Parameters.AddWithValue("@id_tipo_pago_electronico", DBNull.Value);
+                            else
+                                command.Parameters.AddWithValue("@id_tipo_pago_electronico", factura.id_tipo_pago_electronico);
 
                             Int64 IdFacturaH = Convert.ToInt64(command.ExecuteScalar());
                             decimal TotalFactura = 0;
@@ -750,7 +744,7 @@ namespace Eatery.Ventas
                             SetInformationBarra("Factura Generada con Exito!");
 
                             //Limpiar Datos
-                            dsVentas1.detalle_factura_transaction.Clear();
+                            dsVentaSuccess1.detalle_factura_transaction.Clear();
                             ClienteFactura = new ClienteFacturacion();
                             cmdConsumidorFinal_Click(sender, e);
                         }
@@ -809,6 +803,7 @@ namespace Eatery.Ventas
                         factura.Enable = true;
                         factura.NumOrdenCompra = "";
                         factura.idFormatoFactura = this.PuntoDeVentaActual.IdFormatoFactura;
+                        factura.id_tipo_pago_electronico = frm.IdMetodoPagoElectronico;
 
                         int correlativoSiguiente = 0;
                         int id_numeracion = 0;
@@ -942,8 +937,17 @@ namespace Eatery.Ventas
                                 command.Parameters.AddWithValue("@isv1", factura.ISV1);
                                 command.Parameters.AddWithValue("@isv2", factura.ISV2);
                                 command.Parameters.AddWithValue("@id_formato_impresion", PuntoDeVentaActual.IdFormatoFactura);
-                                command.Parameters.AddWithValue("@id_termino_pago", IdTerminoPago); 
-                                command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
+                                command.Parameters.AddWithValue("@id_termino_pago", DBNull.Value);
+
+                                if (factura.IdEstudiante == 0)
+                                    command.Parameters.AddWithValue("@id_estudiante", DBNull.Value);
+                                else
+                                    command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
+
+                                if (factura.id_tipo_pago_electronico == 0)
+                                    command.Parameters.AddWithValue("@id_tipo_pago_electronico", DBNull.Value);
+                                else
+                                    command.Parameters.AddWithValue("@id_tipo_pago_electronico", factura.id_tipo_pago_electronico);
 
                                 Int64 IdFacturaH = Convert.ToInt64(command.ExecuteScalar());
                                 decimal TotalFactura = 0;
@@ -1464,6 +1468,7 @@ namespace Eatery.Ventas
             txtRTN.Text = txtNombreCliente.Text = lblMensaje.Text = "";
             txtTotal.Text = "0.00";
             dsVentas1.detalle_factura_transaction.Clear();
+            dsVentaSuccess1.detalle_factura_transaction.Clear();
             ClienteFactura = new ClienteFacturacion();
             CalcularTotalFactura();
         }

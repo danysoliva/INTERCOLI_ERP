@@ -125,9 +125,9 @@ namespace Eatery.Ventas
             this.cmdAbrirBusqueda.Appearance.Options.UseFont = true;
             this.cmdAbrirBusqueda.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdAbrirBusqueda.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdAbrirBusqueda.ImageOptions.Image")));
-            this.cmdAbrirBusqueda.Location = new System.Drawing.Point(597, 78);
+            this.cmdAbrirBusqueda.Location = new System.Drawing.Point(597, 61);
             this.cmdAbrirBusqueda.Name = "cmdAbrirBusqueda";
-            this.cmdAbrirBusqueda.Size = new System.Drawing.Size(161, 34);
+            this.cmdAbrirBusqueda.Size = new System.Drawing.Size(161, 51);
             this.cmdAbrirBusqueda.TabIndex = 3;
             this.cmdAbrirBusqueda.Text = "&Buscar Cliente / \r\nEstudiante";
             this.cmdAbrirBusqueda.Click += new System.EventHandler(this.cmdAbrirBusqueda_Click);
@@ -362,9 +362,9 @@ namespace Eatery.Ventas
             this.cmdConsumidorFinal.Appearance.Options.UseFont = true;
             this.cmdConsumidorFinal.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdConsumidorFinal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdConsumidorFinal.ImageOptions.Image")));
-            this.cmdConsumidorFinal.Location = new System.Drawing.Point(763, 78);
+            this.cmdConsumidorFinal.Location = new System.Drawing.Point(763, 60);
             this.cmdConsumidorFinal.Name = "cmdConsumidorFinal";
-            this.cmdConsumidorFinal.Size = new System.Drawing.Size(172, 34);
+            this.cmdConsumidorFinal.Size = new System.Drawing.Size(172, 52);
             this.cmdConsumidorFinal.TabIndex = 34;
             this.cmdConsumidorFinal.Text = "Consumidor Final";
             this.cmdConsumidorFinal.Click += new System.EventHandler(this.cmdConsumidorFinal_Click);

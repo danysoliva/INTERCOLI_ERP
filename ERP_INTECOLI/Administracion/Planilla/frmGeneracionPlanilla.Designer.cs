@@ -32,6 +32,7 @@ namespace ERP_INTECOLI.Administracion.Planilla
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGeneracionPlanilla));
             this.button1 = new System.Windows.Forms.Button();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.dsPlanilla1 = new ERP_INTECOLI.Administracion.Planilla.dsPlanilla();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -52,12 +53,11 @@ namespace ERP_INTECOLI.Administracion.Planilla
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.cbxMes = new System.Windows.Forms.ComboBox();
-            this.dsPlanilla1 = new ERP_INTECOLI.Administracion.Planilla.dsPlanilla();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPlanilla1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxMeses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsPlanilla1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -90,6 +90,11 @@ namespace ERP_INTECOLI.Administracion.Planilla
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // dsPlanilla1
+            // 
+            this.dsPlanilla1.DataSetName = "dsPlanilla";
+            this.dsPlanilla1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -221,8 +226,8 @@ namespace ERP_INTECOLI.Administracion.Planilla
             this.cmdGuardar.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdGuardar.Appearance.Options.UseBackColor = true;
             this.cmdGuardar.Appearance.Options.UseFont = true;
-            this.cmdGuardar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.cmdGuardar.Location = new System.Drawing.Point(492, 451);
+            this.cmdGuardar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.ImageOptions.Image")));
+            this.cmdGuardar.Location = new System.Drawing.Point(562, 451);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(144, 44);
             this.cmdGuardar.TabIndex = 11;
@@ -236,8 +241,8 @@ namespace ERP_INTECOLI.Administracion.Planilla
             this.cmdCancelar.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCancelar.Appearance.Options.UseBackColor = true;
             this.cmdCancelar.Appearance.Options.UseFont = true;
-            this.cmdCancelar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.cmdCancelar.Location = new System.Drawing.Point(676, 451);
+            this.cmdCancelar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdCancelar.ImageOptions.Image")));
+            this.cmdCancelar.Location = new System.Drawing.Point(712, 451);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(144, 44);
             this.cmdCancelar.TabIndex = 12;
@@ -319,11 +324,6 @@ namespace ERP_INTECOLI.Administracion.Planilla
             this.cbxMes.TabIndex = 18;
             this.cbxMes.SelectedValueChanged += new System.EventHandler(this.cbxMes_SelectedValueChanged);
             // 
-            // dsPlanilla1
-            // 
-            this.dsPlanilla1.DataSetName = "dsPlanilla";
-            this.dsPlanilla1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // frmGeneracionPlanilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,10 +343,10 @@ namespace ERP_INTECOLI.Administracion.Planilla
             this.Text = "frmGeneracionPlanilla";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsPlanilla1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxMeses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsPlanilla1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
