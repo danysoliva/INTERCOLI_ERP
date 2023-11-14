@@ -127,7 +127,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             else
                 tsEstado.IsOn = false;
 
-            
+            spinMinPago.Value = est.Dia_min_pago;
+            spinMaxPago.Value = est.Dia_max_pago;
 
             switch (pTipoEdit)
             {
@@ -347,6 +348,23 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 return;
             }
 
+            if (spinMinPago.Value == 0)
+            {
+                CajaDialogo.Error("Dia Minimo Pago no puede ser Cero (0)");
+                return;
+            }
+
+            if (spinMaxPago.Value == 0)
+            {
+                CajaDialogo.Error("Dia Maximo Pago no puede ser Cero (0)");
+                return;
+            }
+
+            //if (spinMinPago.Value > spinMaxPago.Value)
+            //{
+            //    CajaDialogo.Error("Dias minimos de pago no pueden ser mayor a los dias maximos!");
+            //    return;
+            //}
 
             DialogResult r = CajaDialogo.Pregunta("Desea Guardar los datos del nuevo estudiante?");
 
@@ -424,7 +442,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                         cmd.Parameters.AddWithValue("@id_sucursal", 1);
                         cmd.Parameters.AddWithValue("@numero_identidad", txtIdentidad.Text.Trim());
                         cmd.Parameters.AddWithValue("@IsEmpleado", IsEmpleado);
-
+                        cmd.Parameters.AddWithValue("@dias_min_pago", spinMinPago.Value);
+                        cmd.Parameters.AddWithValue("@dias_max_pago", spinMaxPago.Value);
 
                         int id_header_estudiante = Convert.ToInt32(cmd.ExecuteScalar());
 
@@ -573,7 +592,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                         else
                             cmd.Parameters.AddWithValue("@id_estudiante_recomendo", IdEstudianteRecomendo);
 
-                        cmd.Parameters.AddWithValue("nombre_recomendo", txtRecomendo.Text);
+                        cmd.Parameters.AddWithValue("@nombre_recomendo", txtRecomendo.Text);
+                        cmd.Parameters.AddWithValue("@dias_min_pago", spinMinPago.Value);
+                        cmd.Parameters.AddWithValue("@dias_max_pago", spinMaxPago.Value);
                         cmd.ExecuteNonQuery();
                         connection.Close();
                         Guardar = true;

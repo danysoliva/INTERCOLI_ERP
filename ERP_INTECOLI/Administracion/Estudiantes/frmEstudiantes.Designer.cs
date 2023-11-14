@@ -31,41 +31,45 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstudiantes));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions9 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject33 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject34 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject35 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject36 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions10 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject37 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject38 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject39 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject40 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions11 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject41 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject42 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject43 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject44 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions12 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject45 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject46 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject47 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject48 = new DevExpress.Utils.SerializableAppearanceObject();
-            Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance28 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance35 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance36 = new Infragistics.Win.Appearance();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
             this.label2 = new System.Windows.Forms.Label();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.tabFicha = new DevExpress.XtraTab.XtraTabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.spinMaxPago = new DevExpress.XtraEditors.SpinEdit();
+            this.spinMinPago = new DevExpress.XtraEditors.SpinEdit();
             this.radioGroup2 = new DevExpress.XtraEditors.RadioGroup();
             this.cbxNivelIngreso2 = new DevExpress.XtraEditors.GridLookUpEdit();
             this.nivelesacademicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -148,6 +152,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tabFicha.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spinMaxPago.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinMinPago.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxNivelIngreso2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nivelesacademicosBindingSource)).BeginInit();
@@ -209,6 +215,10 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             // tabFicha
             // 
+            this.tabFicha.Controls.Add(this.label15);
+            this.tabFicha.Controls.Add(this.label13);
+            this.tabFicha.Controls.Add(this.spinMaxPago);
+            this.tabFicha.Controls.Add(this.spinMinPago);
             this.tabFicha.Controls.Add(this.radioGroup2);
             this.tabFicha.Controls.Add(this.cbxNivelIngreso2);
             this.tabFicha.Controls.Add(this.tsEstado);
@@ -252,6 +262,82 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.tabFicha.Size = new System.Drawing.Size(840, 550);
             this.tabFicha.Text = "Ficha";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.label15.Location = new System.Drawing.Point(405, 198);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(112, 17);
+            this.label15.TabIndex = 62;
+            this.label15.Text = "Dia Max de Pago:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.label13.Location = new System.Drawing.Point(405, 159);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 17);
+            this.label13.TabIndex = 61;
+            this.label13.Text = "Dia Min de Pago:";
+            // 
+            // spinMaxPago
+            // 
+            this.spinMaxPago.EditValue = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.spinMaxPago.Location = new System.Drawing.Point(526, 195);
+            this.spinMaxPago.Name = "spinMaxPago";
+            this.spinMaxPago.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.spinMaxPago.Properties.Appearance.Options.UseFont = true;
+            this.spinMaxPago.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spinMaxPago.Properties.IsFloatValue = false;
+            this.spinMaxPago.Properties.MaskSettings.Set("mask", "N00");
+            this.spinMaxPago.Properties.MaxValue = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.spinMaxPago.Properties.MinValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.spinMaxPago.Size = new System.Drawing.Size(132, 24);
+            this.spinMaxPago.TabIndex = 60;
+            // 
+            // spinMinPago
+            // 
+            this.spinMinPago.EditValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.spinMinPago.Location = new System.Drawing.Point(526, 156);
+            this.spinMinPago.Name = "spinMinPago";
+            this.spinMinPago.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.spinMinPago.Properties.Appearance.Options.UseFont = true;
+            this.spinMinPago.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spinMinPago.Properties.IsFloatValue = false;
+            this.spinMinPago.Properties.MaskSettings.Set("mask", "N00");
+            this.spinMinPago.Properties.MaxValue = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.spinMinPago.Properties.MinValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.spinMinPago.Size = new System.Drawing.Size(132, 24);
+            this.spinMinPago.TabIndex = 59;
+            // 
             // radioGroup2
             // 
             this.radioGroup2.EditValue = 1;
@@ -268,7 +354,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             // cbxNivelIngreso2
             // 
-            this.cbxNivelIngreso2.Location = new System.Drawing.Point(520, 12);
+            this.cbxNivelIngreso2.Location = new System.Drawing.Point(520, 10);
             this.cbxNivelIngreso2.Name = "cbxNivelIngreso2";
             this.cbxNivelIngreso2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cbxNivelIngreso2.Properties.Appearance.Options.UseFont = true;
@@ -391,7 +477,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.btnTelefono_Rtn.FlatAppearance.BorderColor = System.Drawing.Color.PaleGreen;
             this.btnTelefono_Rtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTelefono_Rtn.Image = ((System.Drawing.Image)(resources.GetObject("btnTelefono_Rtn.Image")));
-            this.btnTelefono_Rtn.Location = new System.Drawing.Point(769, 164);
+            this.btnTelefono_Rtn.Location = new System.Drawing.Point(769, 205);
             this.btnTelefono_Rtn.Name = "btnTelefono_Rtn";
             this.btnTelefono_Rtn.Size = new System.Drawing.Size(41, 36);
             this.btnTelefono_Rtn.TabIndex = 52;
@@ -400,10 +486,10 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             // xtraTabControl2
             // 
-            this.xtraTabControl2.Location = new System.Drawing.Point(408, 206);
+            this.xtraTabControl2.Location = new System.Drawing.Point(408, 236);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.tabTelefonos;
-            this.xtraTabControl2.Size = new System.Drawing.Size(403, 281);
+            this.xtraTabControl2.Size = new System.Drawing.Size(403, 251);
             this.xtraTabControl2.TabIndex = 51;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabTelefonos,
@@ -417,7 +503,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.tabTelefonos.Appearance.HeaderActive.Options.UseFont = true;
             this.tabTelefonos.Controls.Add(this.grdTelefonos);
             this.tabTelefonos.Name = "tabTelefonos";
-            this.tabTelefonos.Size = new System.Drawing.Size(401, 253);
+            this.tabTelefonos.Size = new System.Drawing.Size(401, 223);
             this.tabTelefonos.Text = "Telefonos";
             // 
             // grdTelefonos
@@ -431,7 +517,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.grdTelefonos.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.reposEditarTelefono,
             this.reposEliminar});
-            this.grdTelefonos.Size = new System.Drawing.Size(401, 253);
+            this.grdTelefonos.Size = new System.Drawing.Size(401, 223);
             this.grdTelefonos.TabIndex = 0;
             this.grdTelefonos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvTelefonos});
@@ -505,9 +591,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // reposEditarTelefono
             // 
             this.reposEditarTelefono.AutoHeight = false;
-            editorButtonImageOptions9.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions9.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.reposEditarTelefono.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions9, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject33, serializableAppearanceObject34, serializableAppearanceObject35, serializableAppearanceObject36, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.reposEditarTelefono.Name = "reposEditarTelefono";
             this.reposEditarTelefono.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.reposEditarTelefono.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposEditarTelefono_ButtonClick);
@@ -523,9 +609,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // reposEliminar
             // 
             this.reposEliminar.AutoHeight = false;
-            editorButtonImageOptions10.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions10.Image")));
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.reposEliminar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions10, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject37, serializableAppearanceObject38, serializableAppearanceObject39, serializableAppearanceObject40, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.reposEliminar.Name = "reposEliminar";
             this.reposEliminar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.reposEliminar.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposEliminar_ButtonClick);
@@ -538,7 +624,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.tabRTN.Appearance.HeaderActive.Options.UseFont = true;
             this.tabRTN.Controls.Add(this.grdRtn);
             this.tabRTN.Name = "tabRTN";
-            this.tabRTN.Size = new System.Drawing.Size(401, 253);
+            this.tabRTN.Size = new System.Drawing.Size(401, 223);
             this.tabRTN.Text = "RTN";
             // 
             // grdRtn
@@ -552,7 +638,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.grdRtn.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repostEditRTN,
             this.repostDeleteRTN});
-            this.grdRtn.Size = new System.Drawing.Size(401, 253);
+            this.grdRtn.Size = new System.Drawing.Size(401, 223);
             this.grdRtn.TabIndex = 1;
             this.grdRtn.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvRTN});
@@ -631,9 +717,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // repostEditRTN
             // 
             this.repostEditRTN.AutoHeight = false;
-            editorButtonImageOptions11.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions11.Image")));
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             this.repostEditRTN.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions11, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject41, serializableAppearanceObject42, serializableAppearanceObject43, serializableAppearanceObject44, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repostEditRTN.Name = "repostEditRTN";
             this.repostEditRTN.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repostEditRTN.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repostEditRTN_ButtonClick);
@@ -650,9 +736,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // repostDeleteRTN
             // 
             this.repostDeleteRTN.AutoHeight = false;
-            editorButtonImageOptions12.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions12.Image")));
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
             this.repostDeleteRTN.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions12, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject45, serializableAppearanceObject46, serializableAppearanceObject47, serializableAppearanceObject48, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repostDeleteRTN.Name = "repostDeleteRTN";
             this.repostDeleteRTN.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.repostDeleteRTN.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repostDeleteRTN_ButtonClick);
@@ -662,7 +748,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.rdGraduado.AutoSize = true;
             this.rdGraduado.Enabled = false;
             this.rdGraduado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.rdGraduado.Location = new System.Drawing.Point(492, 147);
+            this.rdGraduado.Location = new System.Drawing.Point(524, 119);
             this.rdGraduado.Name = "rdGraduado";
             this.rdGraduado.Size = new System.Drawing.Size(87, 20);
             this.rdGraduado.TabIndex = 50;
@@ -675,7 +761,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.rdDesertor.AutoSize = true;
             this.rdDesertor.Enabled = false;
             this.rdDesertor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.rdDesertor.Location = new System.Drawing.Point(408, 147);
+            this.rdDesertor.Location = new System.Drawing.Point(408, 119);
             this.rdDesertor.Name = "rdDesertor";
             this.rdDesertor.Size = new System.Drawing.Size(78, 20);
             this.rdDesertor.TabIndex = 49;
@@ -687,7 +773,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.chkReingreso.AutoSize = true;
             this.chkReingreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkReingreso.Location = new System.Drawing.Point(408, 116);
+            this.chkReingreso.Location = new System.Drawing.Point(409, 84);
             this.chkReingreso.Name = "chkReingreso";
             this.chkReingreso.Size = new System.Drawing.Size(178, 20);
             this.chkReingreso.TabIndex = 48;
@@ -698,7 +784,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.chkSeguimientoSaldo.AutoSize = true;
             this.chkSeguimientoSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkSeguimientoSaldo.Location = new System.Drawing.Point(408, 80);
+            this.chkSeguimientoSaldo.Location = new System.Drawing.Point(613, 84);
             this.chkSeguimientoSaldo.Name = "chkSeguimientoSaldo";
             this.chkSeguimientoSaldo.Size = new System.Drawing.Size(141, 20);
             this.chkSeguimientoSaldo.TabIndex = 47;
@@ -710,57 +796,57 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.cbxNivelIngreso.AutoSuggestFilterMode = Infragistics.Win.AutoSuggestFilterMode.Contains;
             this.cbxNivelIngreso.DataMember = "niveles_academicos";
             this.cbxNivelIngreso.DataSource = this.dsEstudiantesBindingSource;
-            appearance25.BackColor = System.Drawing.SystemColors.Window;
-            appearance25.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.cbxNivelIngreso.DisplayLayout.Appearance = appearance25;
+            appearance1.BackColor = System.Drawing.SystemColors.Window;
+            appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cbxNivelIngreso.DisplayLayout.Appearance = appearance1;
             this.cbxNivelIngreso.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.cbxNivelIngreso.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-            appearance26.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance26.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance26.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance26.BorderColor = System.Drawing.SystemColors.Window;
-            this.cbxNivelIngreso.DisplayLayout.GroupByBox.Appearance = appearance26;
-            appearance27.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.cbxNivelIngreso.DisplayLayout.GroupByBox.BandLabelAppearance = appearance27;
+            appearance2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            appearance2.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance2.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance2.BorderColor = System.Drawing.SystemColors.Window;
+            this.cbxNivelIngreso.DisplayLayout.GroupByBox.Appearance = appearance2;
+            appearance3.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.cbxNivelIngreso.DisplayLayout.GroupByBox.BandLabelAppearance = appearance3;
             this.cbxNivelIngreso.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            appearance28.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance28.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance28.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance28.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.cbxNivelIngreso.DisplayLayout.GroupByBox.PromptAppearance = appearance28;
+            appearance4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            appearance4.BackColor2 = System.Drawing.SystemColors.Control;
+            appearance4.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance4.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.cbxNivelIngreso.DisplayLayout.GroupByBox.PromptAppearance = appearance4;
             this.cbxNivelIngreso.DisplayLayout.MaxColScrollRegions = 1;
             this.cbxNivelIngreso.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance29.BackColor = System.Drawing.SystemColors.Window;
-            appearance29.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbxNivelIngreso.DisplayLayout.Override.ActiveCellAppearance = appearance29;
-            appearance30.BackColor = System.Drawing.SystemColors.Highlight;
-            appearance30.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.cbxNivelIngreso.DisplayLayout.Override.ActiveRowAppearance = appearance30;
+            appearance5.BackColor = System.Drawing.SystemColors.Window;
+            appearance5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbxNivelIngreso.DisplayLayout.Override.ActiveCellAppearance = appearance5;
+            appearance6.BackColor = System.Drawing.SystemColors.Highlight;
+            appearance6.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.cbxNivelIngreso.DisplayLayout.Override.ActiveRowAppearance = appearance6;
             this.cbxNivelIngreso.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
             this.cbxNivelIngreso.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-            appearance31.BackColor = System.Drawing.SystemColors.Window;
-            this.cbxNivelIngreso.DisplayLayout.Override.CardAreaAppearance = appearance31;
-            appearance32.BorderColor = System.Drawing.Color.Silver;
-            appearance32.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.cbxNivelIngreso.DisplayLayout.Override.CellAppearance = appearance32;
+            appearance7.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxNivelIngreso.DisplayLayout.Override.CardAreaAppearance = appearance7;
+            appearance8.BorderColor = System.Drawing.Color.Silver;
+            appearance8.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
+            this.cbxNivelIngreso.DisplayLayout.Override.CellAppearance = appearance8;
             this.cbxNivelIngreso.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
             this.cbxNivelIngreso.DisplayLayout.Override.CellPadding = 0;
-            appearance33.BackColor = System.Drawing.SystemColors.Control;
-            appearance33.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance33.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance33.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance33.BorderColor = System.Drawing.SystemColors.Window;
-            this.cbxNivelIngreso.DisplayLayout.Override.GroupByRowAppearance = appearance33;
-            appearance34.TextHAlignAsString = "Left";
-            this.cbxNivelIngreso.DisplayLayout.Override.HeaderAppearance = appearance34;
+            appearance9.BackColor = System.Drawing.SystemColors.Control;
+            appearance9.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance9.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
+            appearance9.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance9.BorderColor = System.Drawing.SystemColors.Window;
+            this.cbxNivelIngreso.DisplayLayout.Override.GroupByRowAppearance = appearance9;
+            appearance10.TextHAlignAsString = "Left";
+            this.cbxNivelIngreso.DisplayLayout.Override.HeaderAppearance = appearance10;
             this.cbxNivelIngreso.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
             this.cbxNivelIngreso.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
-            appearance35.BackColor = System.Drawing.SystemColors.Window;
-            appearance35.BorderColor = System.Drawing.Color.Silver;
-            this.cbxNivelIngreso.DisplayLayout.Override.RowAppearance = appearance35;
+            appearance11.BackColor = System.Drawing.SystemColors.Window;
+            appearance11.BorderColor = System.Drawing.Color.Silver;
+            this.cbxNivelIngreso.DisplayLayout.Override.RowAppearance = appearance11;
             this.cbxNivelIngreso.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance36.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.cbxNivelIngreso.DisplayLayout.Override.TemplateAddRowAppearance = appearance36;
+            appearance12.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.cbxNivelIngreso.DisplayLayout.Override.TemplateAddRowAppearance = appearance12;
             this.cbxNivelIngreso.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.cbxNivelIngreso.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.cbxNivelIngreso.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
@@ -800,7 +886,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label10.Location = new System.Drawing.Point(406, 16);
+            this.label10.Location = new System.Drawing.Point(405, 16);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(107, 17);
             this.label10.TabIndex = 46;
@@ -1164,6 +1250,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.xtraTabControl1.ResumeLayout(false);
             this.tabFicha.ResumeLayout(false);
             this.tabFicha.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spinMaxPago.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinMinPago.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxNivelIngreso2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nivelesacademicosBindingSource)).EndInit();
@@ -1288,5 +1376,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private DevExpress.XtraGrid.Columns.GridColumn colid_nivel;
         private DevExpress.XtraGrid.Columns.GridColumn coldescripcion1;
         private DevExpress.XtraEditors.RadioGroup radioGroup2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label13;
+        private DevExpress.XtraEditors.SpinEdit spinMaxPago;
+        private DevExpress.XtraEditors.SpinEdit spinMinPago;
     }
 }
