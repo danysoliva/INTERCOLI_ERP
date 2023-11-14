@@ -23,7 +23,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         //Estudiante vEstudiante;
         ArrayList ListaTelefonos;
         private Int64 IdEstudianteRecomendo = 0;
-        
+        bool IsEmpleado;
         public enum TipoEdicion
         { 
             Nuevo = 1,
@@ -47,6 +47,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             switch (pTipoEdit)
             {
                 case TipoEdicion.Nuevo:
+                    //rdEstudiante.Checked = true;
                     chkReingreso.Visible = false;
                     rdGraduado.Visible = rdDesertor.Visible = false;
                     grdvTelefonos.OptionsMenu.EnableColumnMenu = false;
@@ -60,6 +61,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                     chkReingreso.Visible = true;
                     rdGraduado.Visible = rdDesertor.Visible = true;
                     grdvTelefonos.OptionsMenu.EnableColumnMenu = false;
+                    radioGroup2.Enabled = false;
                     break;
 
                 default:
@@ -421,7 +423,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
                         cmd.Parameters.AddWithValue("@id_sucursal", 1);
                         cmd.Parameters.AddWithValue("@numero_identidad", txtIdentidad.Text.Trim());
-
+                        cmd.Parameters.AddWithValue("@IsEmpleado", IsEmpleado);
 
 
                         int id_header_estudiante = Convert.ToInt32(cmd.ExecuteScalar());
@@ -789,6 +791,19 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                     CajaDialogo.Error("No se logro definir un proceso de Nuevo/Edicion \n Contactar a su Administrador");
 
                     break;
+            }
+        }
+
+        private void radioGroup2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RadioGroup edit = sender as RadioGroup;
+            if (edit.SelectedIndex == 0) //Estudiante
+            {
+                IsEmpleado = false;
+            }
+            if (edit.SelectedIndex == 1) //Empleado
+            {
+                IsEmpleado = true;
             }
         }
     }
