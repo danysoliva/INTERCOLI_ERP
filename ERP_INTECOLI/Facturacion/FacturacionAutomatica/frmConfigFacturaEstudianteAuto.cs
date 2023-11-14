@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Facturacion.CoreFacturas;
+using JAGUAR_APP.Facturacion.Configuraciones;
 using LOSA.Calidad.LoteConfConsumo;
 using System;
 using System.Collections.Generic;
@@ -17,14 +18,20 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica
 {
     public partial class frmConfigFacturaEstudianteAuto : DevExpress.XtraEditors.XtraForm
     {
-        public frmConfigFacturaEstudianteAuto()
+        UserLogin UsuarioLogeado;
+        public frmConfigFacturaEstudianteAuto(UserLogin pUsuario)
         {
             InitializeComponent();
+            UsuarioLogeado = pUsuario;
         }
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
+            xfrmSelectEstudiante_FactAuto frm = new xfrmSelectEstudiante_FactAuto(this.UsuarioLogeado);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
 
+            }
         }
 
         private void cmdRefresh_Click(object sender, EventArgs e)

@@ -2,6 +2,7 @@
 using DevExpress.XtraExport.Helpers;
 using DevExpress.XtraGrid.Views.Grid;
 using ERP_INTECOLI.Clases;
+using ERP_INTECOLI.Facturacion.FacturacionAutomatica;
 using JAGUAR_APP.Facturacion.CoreFacturas;
 using System;
 using System.Collections.Generic;
@@ -20,41 +21,39 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
     {
         decimal ValorCeldaOLD;
         DataOperations dp;
-        PuntoVenta PuntoVentaActual; 
-        public xfrmSelectEstudiante_FactAuto()
+        PuntoVenta PuntoVentaActual;
+        UserLogin UsuarioLogeado;
+        public xfrmSelectEstudiante_FactAuto(UserLogin pUsuario)
         {
             InitializeComponent();
+            UsuarioLogeado = pUsuario;
             dp = new DataOperations();
-            //PuntoVentaActual = pPuntoVenta;
             ObtenerProductos();
-            ObtenerPDVs();
-            //if (dsListaPrecios.Productos.Count > 0)
-            //    gvCliente.FocusedRowHandle = 0;
 
-            gvCliente.FocusedColumn = gridColumn3;//PRECIO
+            gvCliente.FocusedColumn = colprecio;//PRECIO
             gvCliente.ShowEditor();
             
         }
-        public List<ProductoListaPreciosAplica> productos = new List<ProductoListaPreciosAplica>();
+        public List<ProductoListaPreciosAplicaLocal> productos = new List<ProductoListaPreciosAplicaLocal>();
 
         private void ObtenerProductos()
         {
-            //try
-            //{
-            //    DataOperations dp = new DataOperations();
-            //    using (SqlConnection cnx = new SqlConnection(dp.ConnectionStringERP))
-            //    {
-            //        cnx.Open();
-            //        dsListaPrecios.Productos.Clear();
-            //        SqlDataAdapter da = new SqlDataAdapter("dbo.uspObtenerProductosByListaPrecio", cnx);
-            //        da.Fill(dsListaPrecios.Productos);
-            //        cnx.Close();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    CajaDialogo.Error(ex.Message);
-            //}
+            try
+            {
+                DataOperations dp = new DataOperations();
+                using (SqlConnection cnx = new SqlConnection(dp.ConnectionStringERP))
+                {
+                    cnx.Open();
+                    dsConfigFacturaAutomatica1.busqueda_estudiante_cursos.Clear();
+                    SqlDataAdapter da = new SqlDataAdapter("[dbo].[uspObtenerEstudiantes]", cnx);
+                    da.Fill(dsConfigFacturaAutomatica1.busqueda_estudiante_cursos);
+                    cnx.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
         }
 
 
@@ -84,14 +83,14 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
                 {
 
                     var gridView = (GridView)gcCliente.FocusedView;
-                    var row = (dsListaPrecios.ProductosRow)gridView.GetFocusedDataRow();
+                    var row = (dsConfigFacturaAutomatica.busqueda_estudiante_cursosRow)gridView.GetFocusedDataRow();
 
                     row.seleccion = true;
                 }
                 else
                 {
                     var gridView = (GridView)gcCliente.FocusedView;
-                    var row = (dsListaPrecios.ProductosRow)gridView.GetFocusedDataRow();
+                    var row = (dsConfigFacturaAutomatica.busqueda_estudiante_cursosRow)gridView.GetFocusedDataRow();
 
                     if (valor_celda == 0)
                     {
@@ -111,6 +110,7 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             }
         }
 
+
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -119,60 +119,31 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
         PuntoVenta pdv = new PuntoVenta();
         private void cmdNew_Click(object sender, EventArgs e)
         {
-            productos = new List<ProductoListaPreciosAplica>();
+            productos = new List<ProductoListaPreciosAplicaLocal>();
 
-            //foreach (var item in dsListaPrecios.Productos)
-            //{
-            //    if (item.seleccion == true)
-            //    {
-            //        //pdv = new PuntoVenta();
-            //        //if (pdv.RecuperaRegistro(punto))
-            //        //{
-            //            ProductoListaPreciosAplica productosNew = new ProductoListaPreciosAplica()
-            //            {
-            //                ID = item.id_pt,
-            //                Producto = item.descripcion,
-            //                Codigo = item.codigo,
-            //                Precio = item.precio,
-            //                PresentacionID = dp.ValidateNumberInt32(item.id_presentacion),
-            //                Presentacion = item.presentacion,
-            //                //PDV_ID = PuntoVentaActual.ID,
-            //                //PDV = PuntoVentaActual.Nombre
-            //            };
+            foreach (var item in dsConfigFacturaAutomatica1.busqueda_estudiante_cursos)
+            {
+                if (item.seleccion == true)
+                {
+                    ProductoListaPreciosAplicaLocal productosNew = new ProductoListaPreciosAplicaLocal()
+                    {
+                        ID_PT = item.id_pt,
+                        ItemName = item.ItemNameFacturacion,
+                        ItemCode = item.ItemCodeFacturacion,
+                        Precio = item.precio,
+                        //PresentacionID = dp.ValidateNumberInt32(item.id_presentacion),
+                        //Presentacion = item.presentacion,
+                        IdEstudiante = item.id_estudiante,
+                        IdDetalleMatricula = item.id_detalle,
+                        CursoID = item.id_curso,
+                    };
 
-            //            productos.Add(productosNew);
-                    
-            //    }
-            //}
+                    productos.Add(productosNew);
+
+                }
+            }
 
             this.DialogResult = DialogResult.OK;
-        }
-
-        private void ObtenerPDVs()
-        {
-            //try
-            //{
-            //    DataOperations dp = new DataOperations();
-
-            //    using (SqlConnection cnx = new SqlConnection(dp.ConnectionStringERP))
-            //    {
-            //        cnx.Open();
-
-            //        dsListaPrecios.PDV.Clear();
-
-            //        SqlDataAdapter da = new SqlDataAdapter("dbo.[sp_get_lista_puntos_de_venta]", cnx);
-            //        da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            //        //da.SelectCommand.Parameters.Add("@id", SqlDbType.Int).Value = id;
-            //        da.Fill(dsListaPrecios.PDV);
-
-            //        cnx.Close();
-
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    CajaDialogo.Error(ex.Message);
-            //}
         }
 
         private void gvCliente_ShownEditor(object sender, EventArgs e)
@@ -185,16 +156,19 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
         }
     }
 }
-public class ProductoListaPreciosAplicaLocal
-{
+    public class ProductoListaPreciosAplicaLocal
+    {
 
-    public int ID { get; set; }
-    public string Producto { get; set; }
-    public string Codigo { get; set; }
-    public int PresentacionID { get; set; }
-    public string Presentacion { get; set; }
-    public decimal Precio { get; set; }
-    public int PDV_ID { get; set; }
-    public string PDV { get; set; }
-}
+        public int ID_PT { get; set; }
+        public string ItemName { get; set; }
+        public string ItemCode { get; set; }
+        public int PresentacionID { get; set; }
+        public string Presentacion { get; set; }
+        public decimal Precio { get; set; }
+        public int PDV_ID { get; set; }
+        public string PDV { get; set; }
+        public Int64 IdEstudiante { get; set; }
+        public Int64 IdDetalleMatricula { get; set; }
+        public int CursoID { get; set; }
+    }
 

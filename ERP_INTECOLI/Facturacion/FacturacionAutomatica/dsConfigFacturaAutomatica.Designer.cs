@@ -756,9 +756,23 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             private global::System.Data.DataColumn columncurso;
             
+            private global::System.Data.DataColumn columnid_punto_venta;
+            
             private global::System.Data.DataColumn columnsucursal_name;
             
-            private global::System.Data.DataColumn columnValor_Curso;
+            private global::System.Data.DataColumn columnprecio;
+            
+            private global::System.Data.DataColumn columnid_detalle;
+            
+            private global::System.Data.DataColumn columnid_pt;
+            
+            private global::System.Data.DataColumn columnItemNameFacturacion;
+            
+            private global::System.Data.DataColumn columnid_curso;
+            
+            private global::System.Data.DataColumn columnseleccion;
+            
+            private global::System.Data.DataColumn columnItemCodeFacturacion;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -827,6 +841,14 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_punto_ventaColumn {
+                get {
+                    return this.columnid_punto_venta;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn sucursal_nameColumn {
                 get {
                     return this.columnsucursal_name;
@@ -835,9 +857,57 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Valor_CursoColumn {
+            public global::System.Data.DataColumn precioColumn {
                 get {
-                    return this.columnValor_Curso;
+                    return this.columnprecio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_detalleColumn {
+                get {
+                    return this.columnid_detalle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_ptColumn {
+                get {
+                    return this.columnid_pt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ItemNameFacturacionColumn {
+                get {
+                    return this.columnItemNameFacturacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn id_cursoColumn {
+                get {
+                    return this.columnid_curso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn seleccionColumn {
+                get {
+                    return this.columnseleccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ItemCodeFacturacionColumn {
+                get {
+                    return this.columnItemCodeFacturacion;
                 }
             }
             
@@ -878,15 +948,22 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public busqueda_estudiante_cursosRow Addbusqueda_estudiante_cursosRow(string id_estudiante, string Item_Code, string nombre, string curso, string sucursal_name, decimal Valor_Curso) {
+            public busqueda_estudiante_cursosRow Addbusqueda_estudiante_cursosRow(long id_estudiante, string Item_Code, string nombre, string curso, int id_punto_venta, string sucursal_name, decimal precio, long id_detalle, int id_pt, string ItemNameFacturacion, int id_curso, bool seleccion, string ItemCodeFacturacion) {
                 busqueda_estudiante_cursosRow rowbusqueda_estudiante_cursosRow = ((busqueda_estudiante_cursosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_estudiante,
                         Item_Code,
                         nombre,
                         curso,
+                        id_punto_venta,
                         sucursal_name,
-                        Valor_Curso};
+                        precio,
+                        id_detalle,
+                        id_pt,
+                        ItemNameFacturacion,
+                        id_curso,
+                        seleccion,
+                        ItemCodeFacturacion};
                 rowbusqueda_estudiante_cursosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowbusqueda_estudiante_cursosRow);
                 return rowbusqueda_estudiante_cursosRow;
@@ -913,14 +990,21 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
                 this.columnItem_Code = base.Columns["Item Code"];
                 this.columnnombre = base.Columns["nombre"];
                 this.columncurso = base.Columns["curso"];
+                this.columnid_punto_venta = base.Columns["id_punto_venta"];
                 this.columnsucursal_name = base.Columns["sucursal_name"];
-                this.columnValor_Curso = base.Columns["Valor Curso"];
+                this.columnprecio = base.Columns["precio"];
+                this.columnid_detalle = base.Columns["id_detalle"];
+                this.columnid_pt = base.Columns["id_pt"];
+                this.columnItemNameFacturacion = base.Columns["ItemNameFacturacion"];
+                this.columnid_curso = base.Columns["id_curso"];
+                this.columnseleccion = base.Columns["seleccion"];
+                this.columnItemCodeFacturacion = base.Columns["ItemCodeFacturacion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid_estudiante = new global::System.Data.DataColumn("id_estudiante", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnid_estudiante = new global::System.Data.DataColumn("id_estudiante", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_estudiante);
                 this.columnItem_Code = new global::System.Data.DataColumn("Item Code", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnItem_Code);
@@ -928,10 +1012,30 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
                 base.Columns.Add(this.columnnombre);
                 this.columncurso = new global::System.Data.DataColumn("curso", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncurso);
+                this.columnid_punto_venta = new global::System.Data.DataColumn("id_punto_venta", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_punto_venta);
                 this.columnsucursal_name = new global::System.Data.DataColumn("sucursal_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsucursal_name);
-                this.columnValor_Curso = new global::System.Data.DataColumn("Valor Curso", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnValor_Curso);
+                this.columnprecio = new global::System.Data.DataColumn("precio", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprecio);
+                this.columnid_detalle = new global::System.Data.DataColumn("id_detalle", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_detalle);
+                this.columnid_pt = new global::System.Data.DataColumn("id_pt", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_pt);
+                this.columnItemNameFacturacion = new global::System.Data.DataColumn("ItemNameFacturacion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnItemNameFacturacion);
+                this.columnid_curso = new global::System.Data.DataColumn("id_curso", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_curso);
+                this.columnseleccion = new global::System.Data.DataColumn("seleccion", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnseleccion);
+                this.columnItemCodeFacturacion = new global::System.Data.DataColumn("ItemCodeFacturacion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnItemCodeFacturacion);
+                this.columnItem_Code.Caption = "Code";
+                this.columnnombre.Caption = "Nombre";
+                this.columncurso.Caption = "Curso";
+                this.columnsucursal_name.Caption = "Sucursal";
+                this.columnItemNameFacturacion.Caption = "Item Name Facturacion";
+                this.columnseleccion.Caption = "Seleccionado";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1495,10 +1599,10 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string id_estudiante {
+            public long id_estudiante {
                 get {
                     try {
-                        return ((string)(this[this.tablebusqueda_estudiante_cursos.id_estudianteColumn]));
+                        return ((long)(this[this.tablebusqueda_estudiante_cursos.id_estudianteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'id_estudiante\' in table \'busqueda_estudiante_cursos\' is DBN" +
@@ -1561,6 +1665,23 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_punto_venta {
+                get {
+                    try {
+                        return ((int)(this[this.tablebusqueda_estudiante_cursos.id_punto_ventaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_punto_venta\' in table \'busqueda_estudiante_cursos\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablebusqueda_estudiante_cursos.id_punto_ventaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string sucursal_name {
                 get {
                     try {
@@ -1578,18 +1699,117 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal Valor_Curso {
+            public decimal precio {
                 get {
                     try {
-                        return ((decimal)(this[this.tablebusqueda_estudiante_cursos.Valor_CursoColumn]));
+                        return ((decimal)(this[this.tablebusqueda_estudiante_cursos.precioColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Valor Curso\' in table \'busqueda_estudiante_cursos\' is DBNul" +
-                                "l.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'precio\' in table \'busqueda_estudiante_cursos\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablebusqueda_estudiante_cursos.Valor_CursoColumn] = value;
+                    this[this.tablebusqueda_estudiante_cursos.precioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public long id_detalle {
+                get {
+                    try {
+                        return ((long)(this[this.tablebusqueda_estudiante_cursos.id_detalleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_detalle\' in table \'busqueda_estudiante_cursos\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablebusqueda_estudiante_cursos.id_detalleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_pt {
+                get {
+                    try {
+                        return ((int)(this[this.tablebusqueda_estudiante_cursos.id_ptColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_pt\' in table \'busqueda_estudiante_cursos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebusqueda_estudiante_cursos.id_ptColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ItemNameFacturacion {
+                get {
+                    try {
+                        return ((string)(this[this.tablebusqueda_estudiante_cursos.ItemNameFacturacionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ItemNameFacturacion\' in table \'busqueda_estudiante_cursos\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebusqueda_estudiante_cursos.ItemNameFacturacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int id_curso {
+                get {
+                    try {
+                        return ((int)(this[this.tablebusqueda_estudiante_cursos.id_cursoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'id_curso\' in table \'busqueda_estudiante_cursos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebusqueda_estudiante_cursos.id_cursoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool seleccion {
+                get {
+                    try {
+                        return ((bool)(this[this.tablebusqueda_estudiante_cursos.seleccionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'seleccion\' in table \'busqueda_estudiante_cursos\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablebusqueda_estudiante_cursos.seleccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ItemCodeFacturacion {
+                get {
+                    try {
+                        return ((string)(this[this.tablebusqueda_estudiante_cursos.ItemCodeFacturacionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ItemCodeFacturacion\' in table \'busqueda_estudiante_cursos\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebusqueda_estudiante_cursos.ItemCodeFacturacionColumn] = value;
                 }
             }
             
@@ -1643,6 +1863,18 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isid_punto_ventaNull() {
+                return this.IsNull(this.tablebusqueda_estudiante_cursos.id_punto_ventaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setid_punto_ventaNull() {
+                this[this.tablebusqueda_estudiante_cursos.id_punto_ventaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Issucursal_nameNull() {
                 return this.IsNull(this.tablebusqueda_estudiante_cursos.sucursal_nameColumn);
             }
@@ -1655,14 +1887,86 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsValor_CursoNull() {
-                return this.IsNull(this.tablebusqueda_estudiante_cursos.Valor_CursoColumn);
+            public bool IsprecioNull() {
+                return this.IsNull(this.tablebusqueda_estudiante_cursos.precioColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetValor_CursoNull() {
-                this[this.tablebusqueda_estudiante_cursos.Valor_CursoColumn] = global::System.Convert.DBNull;
+            public void SetprecioNull() {
+                this[this.tablebusqueda_estudiante_cursos.precioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isid_detalleNull() {
+                return this.IsNull(this.tablebusqueda_estudiante_cursos.id_detalleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setid_detalleNull() {
+                this[this.tablebusqueda_estudiante_cursos.id_detalleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isid_ptNull() {
+                return this.IsNull(this.tablebusqueda_estudiante_cursos.id_ptColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setid_ptNull() {
+                this[this.tablebusqueda_estudiante_cursos.id_ptColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsItemNameFacturacionNull() {
+                return this.IsNull(this.tablebusqueda_estudiante_cursos.ItemNameFacturacionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetItemNameFacturacionNull() {
+                this[this.tablebusqueda_estudiante_cursos.ItemNameFacturacionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isid_cursoNull() {
+                return this.IsNull(this.tablebusqueda_estudiante_cursos.id_cursoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setid_cursoNull() {
+                this[this.tablebusqueda_estudiante_cursos.id_cursoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsseleccionNull() {
+                return this.IsNull(this.tablebusqueda_estudiante_cursos.seleccionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetseleccionNull() {
+                this[this.tablebusqueda_estudiante_cursos.seleccionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsItemCodeFacturacionNull() {
+                return this.IsNull(this.tablebusqueda_estudiante_cursos.ItemCodeFacturacionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetItemCodeFacturacionNull() {
+                this[this.tablebusqueda_estudiante_cursos.ItemCodeFacturacionColumn] = global::System.Convert.DBNull;
             }
         }
         

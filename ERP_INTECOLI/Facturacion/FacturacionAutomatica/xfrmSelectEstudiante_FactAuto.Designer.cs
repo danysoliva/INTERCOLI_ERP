@@ -29,29 +29,33 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(xfrmSelectEstudiante_FactAuto));
             this.gcCliente = new DevExpress.XtraGrid.GridControl();
+            this.dsConfigFacturaAutomatica1 = new ERP_INTECOLI.Facturacion.FacturacionAutomatica.dsConfigFacturaAutomatica();
             this.gvCliente = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colcodigo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colnombre_cliente = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colItemCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colcurso = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_punto_venta = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colsucursal_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colprecio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_detalle = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_pt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colItemNameFacturacion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_curso = new DevExpress.XtraGrid.Columns.GridColumn();
             this.sluePDV = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
             this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.cmdNew = new DevExpress.XtraEditors.SimpleButton();
-            this.dsConfigFacturaAutomatica1 = new ERP_INTECOLI.Facturacion.FacturacionAutomatica.dsConfigFacturaAutomatica();
+            this.colseleccion = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gcCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsConfigFacturaAutomatica1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sluePDV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsConfigFacturaAutomatica1)).BeginInit();
             this.SuspendLayout();
             // 
             // gcCliente
@@ -59,6 +63,8 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             this.gcCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gcCliente.DataMember = "busqueda_estudiante_cursos";
+            this.gcCliente.DataSource = this.dsConfigFacturaAutomatica1;
             this.gcCliente.Location = new System.Drawing.Point(0, 76);
             this.gcCliente.MainView = this.gvCliente;
             this.gcCliente.Name = "gcCliente";
@@ -69,6 +75,11 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             this.gcCliente.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCliente});
             // 
+            // dsConfigFacturaAutomatica1
+            // 
+            this.dsConfigFacturaAutomatica1.DataSetName = "dsConfigFacturaAutomatica";
+            this.dsConfigFacturaAutomatica1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gvCliente
             // 
             this.gvCliente.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,13 +87,18 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             this.gvCliente.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gvCliente.Appearance.Row.Options.UseFont = true;
             this.gvCliente.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colid,
-            this.colcodigo,
-            this.colnombre_cliente,
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4});
+            this.colid_estudiante,
+            this.colItemCode,
+            this.colnombre,
+            this.colcurso,
+            this.colid_punto_venta,
+            this.colsucursal_name,
+            this.colprecio,
+            this.colid_detalle,
+            this.colid_pt,
+            this.colItemNameFacturacion,
+            this.colid_curso,
+            this.colseleccion});
             this.gvCliente.GridControl = this.gcCliente;
             this.gvCliente.Name = "gvCliente";
             this.gvCliente.OptionsView.ShowAutoFilterRow = true;
@@ -90,72 +106,86 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             this.gvCliente.ShownEditor += new System.EventHandler(this.gvCliente_ShownEditor);
             this.gvCliente.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvCliente_CellValueChanged);
             // 
-            // colid
+            // colid_estudiante
             // 
-            this.colid.FieldName = "id";
-            this.colid.Name = "colid";
-            this.colid.Width = 81;
+            this.colid_estudiante.FieldName = "id_estudiante";
+            this.colid_estudiante.Name = "colid_estudiante";
             // 
-            // colcodigo
+            // colItemCode
             // 
-            this.colcodigo.Caption = "Código";
-            this.colcodigo.FieldName = "codigo";
-            this.colcodigo.Name = "colcodigo";
-            this.colcodigo.OptionsColumn.ReadOnly = true;
-            this.colcodigo.Visible = true;
-            this.colcodigo.VisibleIndex = 0;
-            this.colcodigo.Width = 111;
+            this.colItemCode.FieldName = "Item Code";
+            this.colItemCode.Name = "colItemCode";
+            this.colItemCode.OptionsColumn.ReadOnly = true;
+            this.colItemCode.Visible = true;
+            this.colItemCode.VisibleIndex = 0;
+            this.colItemCode.Width = 87;
             // 
-            // colnombre_cliente
+            // colnombre
             // 
-            this.colnombre_cliente.Caption = "Estudiante Nombre";
-            this.colnombre_cliente.FieldName = "descripcion";
-            this.colnombre_cliente.Name = "colnombre_cliente";
-            this.colnombre_cliente.OptionsColumn.ReadOnly = true;
-            this.colnombre_cliente.Visible = true;
-            this.colnombre_cliente.VisibleIndex = 1;
-            this.colnombre_cliente.Width = 323;
+            this.colnombre.FieldName = "nombre";
+            this.colnombre.Name = "colnombre";
+            this.colnombre.OptionsColumn.ReadOnly = true;
+            this.colnombre.Visible = true;
+            this.colnombre.VisibleIndex = 1;
+            this.colnombre.Width = 245;
             // 
-            // gridColumn1
+            // colcurso
             // 
-            this.gridColumn1.Caption = "Seleccionar";
-            this.gridColumn1.FieldName = "seleccion";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsFilter.AllowFilter = false;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 4;
-            this.gridColumn1.Width = 76;
+            this.colcurso.FieldName = "curso";
+            this.colcurso.Name = "colcurso";
+            this.colcurso.OptionsColumn.ReadOnly = true;
+            this.colcurso.Visible = true;
+            this.colcurso.VisibleIndex = 2;
+            this.colcurso.Width = 171;
             // 
-            // gridColumn2
+            // colid_punto_venta
             // 
-            this.gridColumn2.Caption = "Presentación";
-            this.gridColumn2.FieldName = "presentacion";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.OptionsColumn.ReadOnly = true;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 114;
+            this.colid_punto_venta.FieldName = "id_punto_venta";
+            this.colid_punto_venta.Name = "colid_punto_venta";
             // 
-            // gridColumn3
+            // colsucursal_name
             // 
-            this.gridColumn3.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.gridColumn3.AppearanceCell.Options.UseBackColor = true;
-            this.gridColumn3.Caption = "Precio";
-            this.gridColumn3.DisplayFormat.FormatString = "L. {0:N2}";
-            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn3.FieldName = "precio";
-            this.gridColumn3.MinWidth = 21;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 65;
+            this.colsucursal_name.FieldName = "sucursal_name";
+            this.colsucursal_name.Name = "colsucursal_name";
+            this.colsucursal_name.OptionsColumn.ReadOnly = true;
+            this.colsucursal_name.Visible = true;
+            this.colsucursal_name.VisibleIndex = 3;
+            this.colsucursal_name.Width = 128;
             // 
-            // gridColumn4
+            // colprecio
             // 
-            this.gridColumn4.ColumnEdit = this.sluePDV;
-            this.gridColumn4.FieldName = "id_pdv";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Width = 241;
+            this.colprecio.Caption = "Valor Curso";
+            this.colprecio.DisplayFormat.FormatString = "n2";
+            this.colprecio.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colprecio.FieldName = "precio";
+            this.colprecio.Name = "colprecio";
+            this.colprecio.Visible = true;
+            this.colprecio.VisibleIndex = 4;
+            this.colprecio.Width = 167;
+            // 
+            // colid_detalle
+            // 
+            this.colid_detalle.FieldName = "id_detalle";
+            this.colid_detalle.Name = "colid_detalle";
+            // 
+            // colid_pt
+            // 
+            this.colid_pt.FieldName = "id_pt";
+            this.colid_pt.Name = "colid_pt";
+            // 
+            // colItemNameFacturacion
+            // 
+            this.colItemNameFacturacion.FieldName = "ItemNameFacturacion";
+            this.colItemNameFacturacion.Name = "colItemNameFacturacion";
+            this.colItemNameFacturacion.OptionsColumn.ReadOnly = true;
+            this.colItemNameFacturacion.Visible = true;
+            this.colItemNameFacturacion.VisibleIndex = 5;
+            this.colItemNameFacturacion.Width = 132;
+            // 
+            // colid_curso
+            // 
+            this.colid_curso.FieldName = "id_curso";
+            this.colid_curso.Name = "colid_curso";
             // 
             // sluePDV
             // 
@@ -227,10 +257,12 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             this.cmdNew.Text = "Seleccionar";
             this.cmdNew.Click += new System.EventHandler(this.cmdNew_Click);
             // 
-            // dsConfigFacturaAutomatica1
+            // colseleccion
             // 
-            this.dsConfigFacturaAutomatica1.DataSetName = "dsConfigFacturaAutomatica";
-            this.dsConfigFacturaAutomatica1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.colseleccion.FieldName = "seleccion";
+            this.colseleccion.Name = "colseleccion";
+            this.colseleccion.Visible = true;
+            this.colseleccion.VisibleIndex = 6;
             // 
             // xfrmSelectEstudiante_FactAuto
             // 
@@ -243,10 +275,10 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             this.Name = "xfrmSelectEstudiante_FactAuto";
             this.Text = "Seleccionar Estudiante";
             ((System.ComponentModel.ISupportInitialize)(this.gcCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsConfigFacturaAutomatica1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sluePDV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsConfigFacturaAutomatica1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,20 +287,24 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
 
         private DevExpress.XtraGrid.GridControl gcCliente;
         private DevExpress.XtraGrid.Views.Grid.GridView gvCliente;
-        //private dsListaPrecios dsListaPrecios;
-        private DevExpress.XtraGrid.Columns.GridColumn colid;
-        private DevExpress.XtraGrid.Columns.GridColumn colcodigo;
-        private DevExpress.XtraGrid.Columns.GridColumn colnombre_cliente;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton cmdNew;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit sluePDV;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit1View;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private ERP_INTECOLI.Facturacion.FacturacionAutomatica.dsConfigFacturaAutomatica dsConfigFacturaAutomatica1;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_estudiante;
+        private DevExpress.XtraGrid.Columns.GridColumn colItemCode;
+        private DevExpress.XtraGrid.Columns.GridColumn colnombre;
+        private DevExpress.XtraGrid.Columns.GridColumn colcurso;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_punto_venta;
+        private DevExpress.XtraGrid.Columns.GridColumn colsucursal_name;
+        private DevExpress.XtraGrid.Columns.GridColumn colprecio;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_detalle;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_pt;
+        private DevExpress.XtraGrid.Columns.GridColumn colItemNameFacturacion;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_curso;
+        private DevExpress.XtraGrid.Columns.GridColumn colseleccion;
     }
 }
