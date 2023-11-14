@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.UI;
 using ERP_INTECOLI.Clases;
 using LOSA.Calidad.LoteConfConsumo;
 using System;
@@ -305,6 +306,7 @@ namespace ERP_INTECOLI.Compras
             txtCodProv.Clear();
             txtProveedor.Clear();
             txtId.Clear();
+            btnPrint.Enabled = false;
             //GetSigID();
 
         }
@@ -352,6 +354,7 @@ namespace ERP_INTECOLI.Compras
                         txtComentarios.Enabled = true;
                         grDetalle.Enabled = true;
                         dtFechaContabilizacion.Enabled = true;
+                        btnPrint.Enabled = false;
                         break;
 
                     case 2://Abierta
@@ -360,6 +363,7 @@ namespace ERP_INTECOLI.Compras
                         txtComentarios.Enabled = true;
                         grDetalle.Enabled = true;
                         dtFechaContabilizacion.Enabled = true;
+                        btnPrint.Enabled = true;
                         break;
 
                     case 3://Cerrada
@@ -370,6 +374,7 @@ namespace ERP_INTECOLI.Compras
                         dtFechaContabilizacion.Enabled = false;
                         cmdGuardar.Enabled = false;
                         txtCodProv.Enabled = false;
+                        btnPrint.Enabled = true;
                         break;
 
                     case 4://Cancelada
@@ -719,6 +724,22 @@ namespace ERP_INTECOLI.Compras
             {
                 CajaDialogo.Error("La Fecha de Contabilizacion no puede ser menor a la de Registro!");
                 dtFechaContabilizacion.Value = dtFechaRegistro.Value;
+                return;
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (IdOrdenCompraActual > 0)
+            {
+                rptOrdenCompra report = new rptOrdenCompra(IdOrdenCompraActual);
+                report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
+                ReportPrintTool reportPrint = new ReportPrintTool(report);
+                reportPrint.ShowPreview();
+            }
+            else
+            {
+                CajaDialogo.Error("Debe seleccionar una Orden de Compra!");
                 return;
             }
         }

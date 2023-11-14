@@ -83,7 +83,7 @@ namespace ERP_INTECOLI.Clases
                     Id_UserModi = (int)(dr.IsDBNull(dr.GetOrdinal("id_user_modi")) ? 0 : (int)dr.GetInt32(dr.GetOrdinal("id_user_modi")));
                     Usuario_Modi = dr.IsDBNull(dr.GetOrdinal("usuario_Modi")) ? "" : dr.GetString(dr.GetOrdinal("usuario_Modi"));
                     if (!dr.IsDBNull(dr.GetOrdinal("fecha_modi")))
-                        Fecha_Modi = Convert.ToDateTime(dr.GetOrdinal("fecha_modi"));
+                        Fecha_Modi = dr.GetDateTime(17);
                     Recuperado = true;
                 }
                 dr.Close();

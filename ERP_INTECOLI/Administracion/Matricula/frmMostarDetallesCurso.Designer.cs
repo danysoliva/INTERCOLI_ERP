@@ -30,17 +30,8 @@ namespace ERP_INTECOLI.Administracion.Matricula
         private void InitializeComponent()
         {
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Domingo = new System.Windows.Forms.CheckBox();
-            this.Sabado = new System.Windows.Forms.CheckBox();
-            this.Viernes = new System.Windows.Forms.CheckBox();
-            this.Jueves = new System.Windows.Forms.CheckBox();
-            this.Miercoles = new System.Windows.Forms.CheckBox();
-            this.Martes = new System.Windows.Forms.CheckBox();
-            this.lunes = new System.Windows.Forms.CheckBox();
             this.dsCursos_1 = new ERP_INTECOLI.Administracion.Cursos.dsCursos_();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid_nivel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -55,11 +46,24 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.colcurso_finalizado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEditar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEliminar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Domingo = new System.Windows.Forms.CheckBox();
+            this.Sabado = new System.Windows.Forms.CheckBox();
+            this.Viernes = new System.Windows.Forms.CheckBox();
+            this.Jueves = new System.Windows.Forms.CheckBox();
+            this.Miercoles = new System.Windows.Forms.CheckBox();
+            this.Martes = new System.Windows.Forms.CheckBox();
+            this.lunes = new System.Windows.Forms.CheckBox();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCursos_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCursos_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -71,10 +75,18 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.gridControl1.Location = new System.Drawing.Point(0, 3);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemButtonEdit1,
+            this.repositoryItemButtonEdit2});
             this.gridControl1.Size = new System.Drawing.Size(851, 161);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // dsCursos_1
+            // 
+            this.dsCursos_1.DataSetName = "dsCursos_";
+            this.dsCursos_1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -96,6 +108,117 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // colid
+            // 
+            this.colid.FieldName = "id";
+            this.colid.Name = "colid";
+            this.colid.OptionsColumn.ReadOnly = true;
+            // 
+            // colid_nivel
+            // 
+            this.colid_nivel.FieldName = "id_nivel";
+            this.colid_nivel.Name = "colid_nivel";
+            this.colid_nivel.OptionsColumn.ReadOnly = true;
+            // 
+            // colDescripcion
+            // 
+            this.colDescripcion.Caption = "Descripcion";
+            this.colDescripcion.FieldName = "Descripcion";
+            this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.OptionsColumn.ReadOnly = true;
+            this.colDescripcion.Visible = true;
+            this.colDescripcion.VisibleIndex = 0;
+            // 
+            // colid_instructor
+            // 
+            this.colid_instructor.FieldName = "id_instructor";
+            this.colid_instructor.Name = "colid_instructor";
+            this.colid_instructor.OptionsColumn.ReadOnly = true;
+            // 
+            // colnombres
+            // 
+            this.colnombres.Caption = "Instructor";
+            this.colnombres.FieldName = "nombres";
+            this.colnombres.Name = "colnombres";
+            this.colnombres.OptionsColumn.ReadOnly = true;
+            this.colnombres.Visible = true;
+            this.colnombres.VisibleIndex = 1;
+            // 
+            // colseccion
+            // 
+            this.colseccion.Caption = "Seccion";
+            this.colseccion.FieldName = "seccion";
+            this.colseccion.Name = "colseccion";
+            this.colseccion.OptionsColumn.ReadOnly = true;
+            this.colseccion.Visible = true;
+            this.colseccion.VisibleIndex = 2;
+            // 
+            // colhora_inicio
+            // 
+            this.colhora_inicio.Caption = "Hora Inicio";
+            this.colhora_inicio.FieldName = "hora_inicio";
+            this.colhora_inicio.Name = "colhora_inicio";
+            this.colhora_inicio.OptionsColumn.ReadOnly = true;
+            this.colhora_inicio.Visible = true;
+            this.colhora_inicio.VisibleIndex = 3;
+            // 
+            // colhora_fin
+            // 
+            this.colhora_fin.Caption = "Hora Fin";
+            this.colhora_fin.FieldName = "hora_fin";
+            this.colhora_fin.Name = "colhora_fin";
+            this.colhora_fin.OptionsColumn.ReadOnly = true;
+            this.colhora_fin.Visible = true;
+            this.colhora_fin.VisibleIndex = 4;
+            // 
+            // colfecha_posteo
+            // 
+            this.colfecha_posteo.Caption = "Fecha Posteo";
+            this.colfecha_posteo.FieldName = "fecha_posteo";
+            this.colfecha_posteo.Name = "colfecha_posteo";
+            this.colfecha_posteo.OptionsColumn.ReadOnly = true;
+            this.colfecha_posteo.Visible = true;
+            this.colfecha_posteo.VisibleIndex = 5;
+            // 
+            // colfecha_inicio
+            // 
+            this.colfecha_inicio.Caption = "Fecha Inicio";
+            this.colfecha_inicio.FieldName = "fecha_inicio";
+            this.colfecha_inicio.Name = "colfecha_inicio";
+            this.colfecha_inicio.OptionsColumn.ReadOnly = true;
+            this.colfecha_inicio.Visible = true;
+            this.colfecha_inicio.VisibleIndex = 6;
+            // 
+            // colfecha_fin
+            // 
+            this.colfecha_fin.Caption = "Fecha Fin";
+            this.colfecha_fin.FieldName = "fecha_fin";
+            this.colfecha_fin.Name = "colfecha_fin";
+            this.colfecha_fin.OptionsColumn.ReadOnly = true;
+            this.colfecha_fin.Visible = true;
+            this.colfecha_fin.VisibleIndex = 7;
+            // 
+            // colcurso_finalizado
+            // 
+            this.colcurso_finalizado.Caption = "Curso Finalizado";
+            this.colcurso_finalizado.FieldName = "curso_finalizado";
+            this.colcurso_finalizado.Name = "colcurso_finalizado";
+            this.colcurso_finalizado.OptionsColumn.ReadOnly = true;
+            this.colcurso_finalizado.Visible = true;
+            this.colcurso_finalizado.VisibleIndex = 8;
+            // 
+            // colEditar
+            // 
+            this.colEditar.Caption = "Editar";
+            this.colEditar.FieldName = "Editar";
+            this.colEditar.Name = "colEditar";
+            // 
+            // colEliminar
+            // 
+            this.colEliminar.Caption = "Eliminar";
+            this.colEliminar.FieldName = "Eliminar";
+            this.colEliminar.Name = "colEliminar";
             // 
             // panel1
             // 
@@ -206,125 +329,19 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.lunes.Text = "Lunes";
             this.lunes.UseVisualStyleBackColor = true;
             // 
-            // dsCursos_1
+            // repositoryItemButtonEdit1
             // 
-            this.dsCursos_1.DataSetName = "dsCursos_";
-            this.dsCursos_1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             // 
-            // colid
+            // repositoryItemButtonEdit2
             // 
-            this.colid.FieldName = "id";
-            this.colid.Name = "colid";
-            this.colid.OptionsColumn.ReadOnly = true;
-            // 
-            // colid_nivel
-            // 
-            this.colid_nivel.FieldName = "id_nivel";
-            this.colid_nivel.Name = "colid_nivel";
-            this.colid_nivel.OptionsColumn.ReadOnly = true;
-            // 
-            // colDescripcion
-            // 
-            this.colDescripcion.Caption = "Descripcion";
-            this.colDescripcion.FieldName = "Descripcion";
-            this.colDescripcion.Name = "colDescripcion";
-            this.colDescripcion.OptionsColumn.ReadOnly = true;
-            this.colDescripcion.Visible = true;
-            this.colDescripcion.VisibleIndex = 0;
-            // 
-            // colid_instructor
-            // 
-            this.colid_instructor.FieldName = "id_instructor";
-            this.colid_instructor.Name = "colid_instructor";
-            this.colid_instructor.OptionsColumn.ReadOnly = true;
-            // 
-            // colnombres
-            // 
-            this.colnombres.Caption = "Instructor";
-            this.colnombres.FieldName = "nombres";
-            this.colnombres.Name = "colnombres";
-            this.colnombres.OptionsColumn.ReadOnly = true;
-            this.colnombres.Visible = true;
-            this.colnombres.VisibleIndex = 1;
-            // 
-            // colseccion
-            // 
-            this.colseccion.Caption = "Seccion";
-            this.colseccion.FieldName = "seccion";
-            this.colseccion.Name = "colseccion";
-            this.colseccion.OptionsColumn.ReadOnly = true;
-            this.colseccion.Visible = true;
-            this.colseccion.VisibleIndex = 2;
-            // 
-            // colhora_inicio
-            // 
-            this.colhora_inicio.Caption = "Hora Inicio";
-            this.colhora_inicio.FieldName = "hora_inicio";
-            this.colhora_inicio.Name = "colhora_inicio";
-            this.colhora_inicio.OptionsColumn.ReadOnly = true;
-            this.colhora_inicio.Visible = true;
-            this.colhora_inicio.VisibleIndex = 3;
-            // 
-            // colhora_fin
-            // 
-            this.colhora_fin.Caption = "Hora Fin";
-            this.colhora_fin.FieldName = "hora_fin";
-            this.colhora_fin.Name = "colhora_fin";
-            this.colhora_fin.OptionsColumn.ReadOnly = true;
-            this.colhora_fin.Visible = true;
-            this.colhora_fin.VisibleIndex = 4;
-            // 
-            // colfecha_posteo
-            // 
-            this.colfecha_posteo.Caption = "Fecha Posteo";
-            this.colfecha_posteo.FieldName = "fecha_posteo";
-            this.colfecha_posteo.Name = "colfecha_posteo";
-            this.colfecha_posteo.OptionsColumn.ReadOnly = true;
-            this.colfecha_posteo.Visible = true;
-            this.colfecha_posteo.VisibleIndex = 5;
-            // 
-            // colfecha_inicio
-            // 
-            this.colfecha_inicio.Caption = "Fecha Inicio";
-            this.colfecha_inicio.FieldName = "fecha_inicio";
-            this.colfecha_inicio.Name = "colfecha_inicio";
-            this.colfecha_inicio.OptionsColumn.ReadOnly = true;
-            this.colfecha_inicio.Visible = true;
-            this.colfecha_inicio.VisibleIndex = 6;
-            // 
-            // colfecha_fin
-            // 
-            this.colfecha_fin.Caption = "Fecha Fin";
-            this.colfecha_fin.FieldName = "fecha_fin";
-            this.colfecha_fin.Name = "colfecha_fin";
-            this.colfecha_fin.OptionsColumn.ReadOnly = true;
-            this.colfecha_fin.Visible = true;
-            this.colfecha_fin.VisibleIndex = 7;
-            // 
-            // colcurso_finalizado
-            // 
-            this.colcurso_finalizado.Caption = "Curso Finalizado";
-            this.colcurso_finalizado.FieldName = "curso_finalizado";
-            this.colcurso_finalizado.Name = "colcurso_finalizado";
-            this.colcurso_finalizado.OptionsColumn.ReadOnly = true;
-            this.colcurso_finalizado.Visible = true;
-            this.colcurso_finalizado.VisibleIndex = 8;
-            // 
-            // colEditar
-            // 
-            this.colEditar.Caption = "Editar";
-            this.colEditar.FieldName = "Editar";
-            this.colEditar.Name = "colEditar";
-            this.colEditar.Visible = true;
-            this.colEditar.VisibleIndex = 9;
-            // 
-            // colEliminar
-            // 
-            this.colEliminar.Caption = "Eliminar";
-            this.colEliminar.FieldName = "Eliminar";
-            this.colEliminar.Name = "colEliminar";
-            this.colEliminar.Visible = true;
-            this.colEliminar.VisibleIndex = 10;
+            this.repositoryItemButtonEdit2.AutoHeight = false;
+            this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             // 
             // frmMostarDetallesCurso
             // 
@@ -339,11 +356,13 @@ namespace ERP_INTECOLI.Administracion.Matricula
             this.Name = "frmMostarDetallesCurso";
             this.Text = "Detalles del Curso";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCursos_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCursos_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,5 +395,7 @@ namespace ERP_INTECOLI.Administracion.Matricula
         private DevExpress.XtraGrid.Columns.GridColumn colcurso_finalizado;
         private DevExpress.XtraGrid.Columns.GridColumn colEditar;
         private DevExpress.XtraGrid.Columns.GridColumn colEliminar;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit2;
     }
 }

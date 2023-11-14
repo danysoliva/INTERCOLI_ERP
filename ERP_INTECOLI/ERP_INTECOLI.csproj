@@ -369,6 +369,12 @@
     <Compile Include="Compras\frmSolicitudesMain.Designer.cs">
       <DependentUpon>frmSolicitudesMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Compras\rptOrdenCompra.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Compras\rptOrdenCompra.Designer.cs">
+      <DependentUpon>rptOrdenCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\ConsultaMiembros\dsMiembrosClase.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1294,6 +1300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Compras\frmSolicitudesMain.resx">
       <DependentUpon>frmSolicitudesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\rptOrdenCompra.resx">
+      <DependentUpon>rptOrdenCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.resx">
       <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>

@@ -81,6 +81,7 @@ namespace ERP_INTECOLI.Transacciones
             // cmdGuardar
             // 
             this.cmdGuardar.BackColor = System.Drawing.Color.LightBlue;
+            this.cmdGuardar.Enabled = false;
             this.cmdGuardar.FlatAppearance.BorderColor = System.Drawing.Color.LightBlue;
             this.cmdGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
