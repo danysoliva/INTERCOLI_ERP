@@ -77,13 +77,13 @@ namespace ERP_INTECOLI.Administracion.Matricula
                 {
                     vEstudiante = new Estudiante();
                 }
-            }
 
-            if (vEstudiante.RecuperarRegistro(frm.ItemSeleccionado.id_estudiantes))
-            {
-                txtEstudiante.Text = vEstudiante.Nombres + " " + vEstudiante.Apellidos;
-                CargarDatos(vEstudiante.IdEstudiante);
-                IdEstudiante = vEstudiante.IdEstudiante;
+                if (vEstudiante.RecuperarRegistro(frm.ItemSeleccionado.id_estudiantes))
+                {
+                    txtEstudiante.Text = vEstudiante.Nombres + " " + vEstudiante.Apellidos;
+                    CargarDatos(vEstudiante.IdEstudiante);
+                    IdEstudiante = vEstudiante.IdEstudiante;
+                }
             }
         }
 
