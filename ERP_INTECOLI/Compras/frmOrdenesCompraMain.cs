@@ -249,6 +249,7 @@ namespace ERP_INTECOLI.Compras
                 try
                 {
                     grdvDetalle.DeleteRow(grdvDetalle.FocusedRowHandle);
+                    CalcularTotal();
                 }
                 catch (Exception ec)
                 {
@@ -263,12 +264,22 @@ namespace ERP_INTECOLI.Compras
             decimal SubTotal = 0;
             decimal valor_impuesto = 0;
             double isv15 = 0.15;
-            foreach (dsCompras.oc_detalleRow item in dsCompras1.oc_detalle)
+
+            var gridview = (GridView)grDetalle.FocusedView;
+            for (int i = 0; i < gridview.DataRowCount; i++)
             {
-                SubTotal += item.total;
+                DataRow row = gridview.GetDataRow(i);
+
+                SubTotal = SubTotal + (Convert.ToDecimal(row["total"]));
             }
 
-            txtSubtotal.EditValue = SubTotal;
+            //foreach (dsCompras.oc_detalleRow item in dsCompras1.oc_detalle.Rows)
+            //{
+                
+            //    SubTotal += item.total;
+            //}
+
+            txtSubtotal.EditValue = decimal.Round(SubTotal, 2,MidpointRounding.AwayFromZero);
 
             Impuesto isv = new Impuesto();
             if (isv.RecuperarRegistro(1))
@@ -277,8 +288,8 @@ namespace ERP_INTECOLI.Compras
             }
             else
                 valor_impuesto = Convert.ToDecimal(isv15);
-            txtImpuesto.EditValue = SubTotal * valor_impuesto;
-            txtTotal.EditValue = SubTotal + Convert.ToDecimal(txtImpuesto.EditValue);
+            txtImpuesto.EditValue = decimal.Round(SubTotal * valor_impuesto, 2,MidpointRounding.AwayFromZero);
+            txtTotal.EditValue = decimal.Round(SubTotal + Convert.ToDecimal(txtImpuesto.EditValue),2,MidpointRounding.AwayFromZero);
             
         }
 
