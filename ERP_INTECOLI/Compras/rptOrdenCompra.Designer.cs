@@ -67,7 +67,7 @@ namespace ERP_INTECOLI.Compras
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
-            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblComentario = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel35 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblIsv = new DevExpress.XtraReports.UI.XRLabel();
@@ -454,7 +454,7 @@ namespace ERP_INTECOLI.Compras
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel8,
+            this.lblComentario,
             this.xrLabel7,
             this.xrLabel35,
             this.lblIsv,
@@ -466,16 +466,16 @@ namespace ERP_INTECOLI.Compras
             this.ReportFooter.HeightF = 102.0833F;
             this.ReportFooter.Name = "ReportFooter";
             // 
-            // xrLabel8
+            // lblComentario
             // 
-            this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(103.4169F, 0F);
-            this.xrLabel8.Name = "xrLabel8";
-            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel8.SizeF = new System.Drawing.SizeF(346.5831F, 72.12492F);
-            this.xrLabel8.StylePriority.UseFont = false;
-            this.xrLabel8.StylePriority.UseTextAlignment = false;
-            this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.lblComentario.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
+            this.lblComentario.LocationFloat = new DevExpress.Utils.PointFloat(103.4169F, 0F);
+            this.lblComentario.Name = "lblComentario";
+            this.lblComentario.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblComentario.SizeF = new System.Drawing.SizeF(346.5831F, 72.12492F);
+            this.lblComentario.StylePriority.UseFont = false;
+            this.lblComentario.StylePriority.UseTextAlignment = false;
+            this.lblComentario.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel7
             // 
@@ -734,7 +734,7 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel8;
+        private DevExpress.XtraReports.UI.XRLabel lblComentario;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRLabel xrLabel35;
         private DevExpress.XtraReports.UI.XRLabel lblIsv;

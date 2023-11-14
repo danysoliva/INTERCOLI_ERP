@@ -25,6 +25,7 @@ namespace ERP_INTECOLI.Compras
             lblNumeroOrden.Text = "OC #" + oc.Id_OrdenCompra;
             lblFechaOrden.Text = string.Format("{0:dd/MM/yyyy}",oc.Fecha_Contabilizacion);
             lblFechaVencimiento.Text = string.Format("{0:dd/MM/yyyy}", oc.Fecha_Contabilizacion.AddDays(30).ToString());
+            lblComentario.Text = oc.Comentario;
             load_detalle(pIdOrdenCompraActual);
         }
 
