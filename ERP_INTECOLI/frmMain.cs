@@ -37,7 +37,7 @@ namespace JAGUAR_APP
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            LogeadoComplete(0);
+            //LogeadoComplete(0);
             this.Close();
         }
 
