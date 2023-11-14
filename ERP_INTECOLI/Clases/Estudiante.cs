@@ -37,6 +37,7 @@ namespace ERP_INTECOLI.Clases
         public string IdStudent;
         public int Dia_min_pago;
         public int Dia_max_pago;
+        public int Id_punto_venta;
         DataOperations dp = new DataOperations();
 
         public enum TipoPago
@@ -109,6 +110,7 @@ namespace ERP_INTECOLI.Clases
                         NameEstudianteRecomendo = dr.GetString(17);
                     Dia_min_pago = dr.GetInt32(18);
                     Dia_max_pago = dr.GetInt32(19);
+                    Id_punto_venta = dr.GetInt32(20);
                     Recuperado = true;
                 }
                 dr.Close();

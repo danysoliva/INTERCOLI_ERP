@@ -41,6 +41,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             
             CargarNiveles();
             CargarZonas();
+            CargarPuntosVentas();
 
             ListaTelefonos = new ArrayList();
 
@@ -70,6 +71,26 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
         }
 
+        private void CargarPuntosVentas()
+        {
+            try
+            {
+                DataOperations dp = new DataOperations();
+                SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("[sp_get_lista_puntos_de_venta]", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                dsEstudiantes1.punto_venta.Clear();
+                adat.Fill(dsEstudiantes1.punto_venta);
+                con.Close();
+            }
+            catch (Exception ec)
+            {
+                CajaDialogo.Error(ec.Message);
+            }
+        }
+
         public frmEstudiantes(UserLogin pUserLogin, TipoEdicion pTipo, int pid_estudiante)
         {
             InitializeComponent();
@@ -79,7 +100,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             Idestudiante = pid_estudiante;
             CargarNiveles();
             CargarZonas();
-
+            CargarPuntosVentas();
             Estudiante est = new Estudiante();
             est.RecuperarRegistro(Idestudiante);
             txtIdentidad.Text = est.identidad;
@@ -129,7 +150,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
             spinMinPago.Value = est.Dia_min_pago;
             spinMaxPago.Value = est.Dia_max_pago;
-
+            gridPuntoVenta.EditValue = est.Id_punto_venta;
             switch (pTipoEdit)
             {
                 case TipoEdicion.Nuevo:
@@ -360,6 +381,12 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 return;
             }
 
+            if (string.IsNullOrEmpty(gridPuntoVenta.Text))
+            {
+                CajaDialogo.Error("Debe seleccionar la Sucursal!");
+                return;
+            }
+
             //if (spinMinPago.Value > spinMaxPago.Value)
             //{
             //    CajaDialogo.Error("Dias minimos de pago no pueden ser mayor a los dias maximos!");
@@ -444,6 +471,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                         cmd.Parameters.AddWithValue("@IsEmpleado", IsEmpleado);
                         cmd.Parameters.AddWithValue("@dias_min_pago", spinMinPago.Value);
                         cmd.Parameters.AddWithValue("@dias_max_pago", spinMaxPago.Value);
+                        cmd.Parameters.AddWithValue("@id_punto_venta", gridPuntoVenta.EditValue);
 
                         int id_header_estudiante = Convert.ToInt32(cmd.ExecuteScalar());
 
@@ -595,6 +623,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                         cmd.Parameters.AddWithValue("@nombre_recomendo", txtRecomendo.Text);
                         cmd.Parameters.AddWithValue("@dias_min_pago", spinMinPago.Value);
                         cmd.Parameters.AddWithValue("@dias_max_pago", spinMaxPago.Value);
+                        cmd.Parameters.AddWithValue("@id_punto_venta", gridPuntoVenta.EditValue);
                         cmd.ExecuteNonQuery();
                         connection.Close();
                         Guardar = true;
