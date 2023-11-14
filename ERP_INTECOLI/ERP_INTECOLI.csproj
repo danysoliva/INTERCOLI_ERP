@@ -936,6 +936,23 @@
     <Compile Include="Facturacion\CoreFacturas\xfrmSelectCliente.Designer.cs">
       <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\dsConfigFacturaAutomatica.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConfigFacturaAutomatica.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmConfigFacturaEstudianteAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmConfigFacturaEstudianteAuto.Designer.cs">
+      <DependentUpon>frmConfigFacturaEstudianteAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\xfrmSelectEstudiante_FactAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\xfrmSelectEstudiante_FactAuto.Designer.cs">
+      <DependentUpon>xfrmSelectEstudiante_FactAuto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion\frmFacturaBK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1517,6 +1534,12 @@
     <EmbeddedResource Include="Facturacion\CoreFacturas\xfrmSelectCliente.resx">
       <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FacturacionAutomatica\frmConfigFacturaEstudianteAuto.resx">
+      <DependentUpon>frmConfigFacturaEstudianteAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FacturacionAutomatica\xfrmSelectEstudiante_FactAuto.resx">
+      <DependentUpon>xfrmSelectEstudiante_FactAuto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\frmFacturaBK.resx">
       <DependentUpon>frmFacturaBK.cs</DependentUpon>
     </EmbeddedResource>
@@ -1912,6 +1935,17 @@
       <DependentUpon>dsBusquedas.xsd</DependentUpon>
     </None>
     <None Include="Facturacion\CoreFacturas\frmSearch.resx.bak" />
+    <None Include="Facturacion\FacturacionAutomatica\dsConfigFacturaAutomatica.xsc">
+      <DependentUpon>dsConfigFacturaAutomatica.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\FacturacionAutomatica\dsConfigFacturaAutomatica.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConfigFacturaAutomatica.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Facturacion\FacturacionAutomatica\dsConfigFacturaAutomatica.xss">
+      <DependentUpon>dsConfigFacturaAutomatica.xsd</DependentUpon>
+    </None>
     <None Include="Facturacion\Mantenimientos\dsCRUDS_Facturacion.xsc">
       <DependentUpon>dsCRUDS_Facturacion.xsd</DependentUpon>
     </None>

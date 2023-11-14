@@ -269,10 +269,6 @@ namespace ERP_INTECOLI
             this.navBarGroup8 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navComprasSolicitudes = new DevExpress.XtraNavBar.NavBarItem();
             this.navComprasOrdenes = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem133 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem134 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
             this.TabTransacciones = new DevExpress.XtraTab.XtraTabPage();
             this.navBarControl2 = new DevExpress.XtraNavBar.NavBarControl();
             this.TabAcciones = new DevExpress.XtraTab.XtraTabPage();
@@ -284,6 +280,7 @@ namespace ERP_INTECOLI
             this.navNotasCredito = new DevExpress.XtraNavBar.NavBarItem();
             this.navCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemConfigFacturaAutomatica = new DevExpress.XtraNavBar.NavBarItem();
             this.TabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl7)).BeginInit();
             this.TabMantenimientos.SuspendLayout();
@@ -818,6 +815,7 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanillas.Caption = "Planilla";
             this.navGeneracionPlanillas.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.presupuestox32;
             this.navGeneracionPlanillas.Name = "navGeneracionPlanillas";
+            this.navGeneracionPlanillas.Visible = false;
             this.navGeneracionPlanillas.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanillas_LinkClicked);
             // 
             // navBarItem60
@@ -2603,7 +2601,8 @@ namespace ERP_INTECOLI
             this.navBarItem108,
             this.navBarItem99,
             this.navBarItem100,
-            this.navBarItemListaPrecios});
+            this.navBarItemListaPrecios,
+            this.navBarItemConfigFacturaAutomatica});
             this.navBarControl6.Location = new System.Drawing.Point(0, 0);
             this.navBarControl6.Name = "navBarControl6";
             this.navBarControl6.OptionsNavPane.ExpandedWidth = 347;
@@ -2629,7 +2628,8 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbEmpresas),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navProductos),
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbProveedores),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemListaPrecios)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemListaPrecios),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemConfigFacturaAutomatica)});
             this.navBarGroup1.Name = "navBarGroup1";
             // 
             // navCursos
@@ -3263,11 +3263,7 @@ namespace ERP_INTECOLI
             this.navBarGroup8});
             this.navBarControl4.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navComprasSolicitudes,
-            this.navComprasOrdenes,
-            this.navBarItem1,
-            this.navBarItem7,
-            this.navBarItem133,
-            this.navBarItem134});
+            this.navComprasOrdenes});
             this.navBarControl4.Location = new System.Drawing.Point(0, 0);
             this.navBarControl4.Name = "navBarControl4";
             this.navBarControl4.OptionsNavPane.ExpandedWidth = 347;
@@ -3278,13 +3274,11 @@ namespace ERP_INTECOLI
             // 
             // navBarGroup8
             // 
-            this.navBarGroup8.Caption = "Compras - Proveedores";
+            this.navBarGroup8.Caption = "Compras";
             this.navBarGroup8.Expanded = true;
             this.navBarGroup8.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navComprasSolicitudes),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navComprasOrdenes),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem133),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem134)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navComprasOrdenes)});
             this.navBarGroup8.Name = "navBarGroup8";
             // 
             // navComprasSolicitudes
@@ -3312,28 +3306,6 @@ namespace ERP_INTECOLI
             this.navComprasOrdenes.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.orden_compra_x32;
             this.navComprasOrdenes.Name = "navComprasOrdenes";
             this.navComprasOrdenes.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navComprasOrdenes_LinkClicked);
-            // 
-            // navBarItem133
-            // 
-            this.navBarItem133.Caption = "Entrada de Mercancia";
-            this.navBarItem133.Name = "navBarItem133";
-            this.navBarItem133.Visible = false;
-            // 
-            // navBarItem134
-            // 
-            this.navBarItem134.Caption = "Facturas de Proveedores";
-            this.navBarItem134.Name = "navBarItem134";
-            this.navBarItem134.Visible = false;
-            // 
-            // navBarItem1
-            // 
-            this.navBarItem1.Caption = "Entrada de Mercancia";
-            this.navBarItem1.Name = "navBarItem1";
-            // 
-            // navBarItem7
-            // 
-            this.navBarItem7.Caption = "Facturas de Proveedores";
-            this.navBarItem7.Name = "navBarItem7";
             // 
             // TabTransacciones
             // 
@@ -3487,6 +3459,19 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.contabilidad_x32;
             this.navGeneracionPlanilla.Name = "navGeneracionPlanilla";
             this.navGeneracionPlanilla.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanilla_LinkClicked);
+            // 
+            // navBarItemConfigFacturaAutomatica
+            // 
+            this.navBarItemConfigFacturaAutomatica.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemConfigFacturaAutomatica.Appearance.Options.UseFont = true;
+            this.navBarItemConfigFacturaAutomatica.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemConfigFacturaAutomatica.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarItemConfigFacturaAutomatica.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemConfigFacturaAutomatica.AppearancePressed.Options.UseFont = true;
+            this.navBarItemConfigFacturaAutomatica.Caption = "Config. Factura Automatica";
+            this.navBarItemConfigFacturaAutomatica.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItemConfigFacturaAutomatica.ImageOptions.SmallImage")));
+            this.navBarItemConfigFacturaAutomatica.Name = "navBarItemConfigFacturaAutomatica";
+            this.navBarItemConfigFacturaAutomatica.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemConfigFacturaAutomatica_LinkClicked);
             // 
             // frmOpciones
             // 
@@ -3769,10 +3754,7 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navBarItem100;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarItem navBarItemListaPrecios;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem133;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem134;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem1;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem7;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemConfigFacturaAutomatica;
     }
 }
 

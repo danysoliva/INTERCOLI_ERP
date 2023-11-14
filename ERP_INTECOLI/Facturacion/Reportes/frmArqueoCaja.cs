@@ -264,7 +264,7 @@ namespace JAGUAR_APP.Facturacion.Reportes
 
                             foreach (dsContabilidad.resumen_cobrosRow row in dsContabilidad1.resumen_cobros)
                             {
-                                if (row.id_tipo_pago != 4)
+                                if (row.id_tipo_pago != 5)
                                 {
                                     command.CommandText = "[dbo].[sp_set_cierre_dia_punto_venta_resumen]";
                                     command.CommandType = CommandType.StoredProcedure;
@@ -419,7 +419,7 @@ namespace JAGUAR_APP.Facturacion.Reportes
             {
                 try
                 {
-                    if(rowi.id_tipo_pago<4)
+                    if(rowi.id_tipo_pago<5)
                         valor += rowi.valor_contado;
                     else
                         rowi.valor_contado = valor;
