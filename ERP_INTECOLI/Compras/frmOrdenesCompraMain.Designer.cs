@@ -153,7 +153,6 @@ namespace ERP_INTECOLI.Compras
             this.btnPrint.Size = new System.Drawing.Size(47, 33);
             this.btnPrint.TabIndex = 73;
             this.btnPrint.ToolTip = "Impirmir";
-            this.btnPrint.Visible = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // txtCodProv

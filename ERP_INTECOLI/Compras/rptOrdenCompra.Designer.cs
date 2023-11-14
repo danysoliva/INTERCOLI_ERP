@@ -29,7 +29,6 @@ namespace ERP_INTECOLI.Compras
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptOrdenCompra));
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
@@ -86,6 +85,9 @@ namespace ERP_INTECOLI.Compras
             this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -109,6 +111,9 @@ namespace ERP_INTECOLI.Compras
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel1,
+            this.xrLabel2,
+            this.xrLabel3,
             this.xrTable1,
             this.xrLine2,
             this.lblCliente,
@@ -396,10 +401,10 @@ namespace ERP_INTECOLI.Compras
             // 
             this.lblNumeroOrden.AnchorHorizontal = DevExpress.XtraReports.UI.HorizontalAnchorStyles.Left;
             this.lblNumeroOrden.Font = new DevExpress.Drawing.DXFont("Calibri", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.lblNumeroOrden.LocationFloat = new DevExpress.Utils.PointFloat(184.375F, 111.7867F);
+            this.lblNumeroOrden.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 111.7867F);
             this.lblNumeroOrden.Name = "lblNumeroOrden";
             this.lblNumeroOrden.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblNumeroOrden.SizeF = new System.Drawing.SizeF(310.4165F, 22.99998F);
+            this.lblNumeroOrden.SizeF = new System.Drawing.SizeF(323.9582F, 22.99998F);
             this.lblNumeroOrden.StylePriority.UseFont = false;
             this.lblNumeroOrden.StylePriority.UseTextAlignment = false;
             this.lblNumeroOrden.Text = "Numero";
@@ -409,46 +414,46 @@ namespace ERP_INTECOLI.Compras
             // 
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Calibri", 9.75F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
             new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(184.375F, 69.12001F);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 95.7867F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(310.4165F, 16F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(323.9582F, 16F);
             this.xrLabel5.StylePriority.UseFont = false;
             this.xrLabel5.StylePriority.UseTextAlignment = false;
-            this.xrLabel5.Text = "R.T.N.  0501-9009231724";
+            this.xrLabel5.Text = "R.T.N.  1804-1972-015523";
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel4
             // 
             this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(184.375F, 53.12001F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 79.78668F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(310.4165F, 16F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(323.9582F, 16F);
             this.xrLabel4.StylePriority.UseFont = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
-            this.xrLabel4.Text = "TELEFONO 2606-8137 /8138";
+            this.xrLabel4.Text = "Tel: 2608-3403 / 9518-2139";
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel6
             // 
             this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Calibri", 18F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
             new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(184.375F, 0F);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 0F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(310.4165F, 33.41669F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(323.9582F, 33.41669F);
             this.xrLabel6.StylePriority.UseFont = false;
             this.xrLabel6.StylePriority.UseTextAlignment = false;
-            this.xrLabel6.Text = "ORDEN DE COMPRA";
+            this.xrLabel6.Text = "Success English Academy";
             this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrPictureBox1
             // 
-            this.xrPictureBox1.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox1.ImageSource"));
+            this.xrPictureBox1.ImageUrl = "C:\\Users\\ruben.garcia\\Downloads\\Logo_Success.jpg";
             this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(184.375F, 103.12F);
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(199.4483F, 156.9951F);
             this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
             // 
             // ReportFooter
@@ -469,7 +474,7 @@ namespace ERP_INTECOLI.Compras
             // lblComentario
             // 
             this.lblComentario.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
-            this.lblComentario.LocationFloat = new DevExpress.Utils.PointFloat(103.4169F, 0F);
+            this.lblComentario.LocationFloat = new DevExpress.Utils.PointFloat(103.4169F, 1.999969F);
             this.lblComentario.Name = "lblComentario";
             this.lblComentario.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblComentario.SizeF = new System.Drawing.SizeF(346.5831F, 72.12492F);
@@ -504,10 +509,10 @@ namespace ERP_INTECOLI.Compras
             // lblIsv
             // 
             this.lblIsv.Font = new DevExpress.Drawing.DXFont("Calibri", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.lblIsv.LocationFloat = new DevExpress.Utils.PointFloat(581.4005F, 26.12489F);
+            this.lblIsv.LocationFloat = new DevExpress.Utils.PointFloat(581.4006F, 26.12489F);
             this.lblIsv.Name = "lblIsv";
             this.lblIsv.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblIsv.SizeF = new System.Drawing.SizeF(119.3298F, 23F);
+            this.lblIsv.SizeF = new System.Drawing.SizeF(109.5994F, 23F);
             this.lblIsv.StylePriority.UseFont = false;
             this.lblIsv.StylePriority.UseTextAlignment = false;
             xrSummary1.IgnoreNullValues = true;
@@ -548,10 +553,10 @@ namespace ERP_INTECOLI.Compras
             // lblTotal
             // 
             this.lblTotal.Font = new DevExpress.Drawing.DXFont("Calibri", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.lblTotal.LocationFloat = new DevExpress.Utils.PointFloat(581.4005F, 51.12489F);
+            this.lblTotal.LocationFloat = new DevExpress.Utils.PointFloat(581.4006F, 51.12489F);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTotal.SizeF = new System.Drawing.SizeF(119.3298F, 23F);
+            this.lblTotal.SizeF = new System.Drawing.SizeF(109.5994F, 23F);
             this.lblTotal.StylePriority.UseFont = false;
             this.lblTotal.StylePriority.UseTextAlignment = false;
             xrSummary2.IgnoreNullValues = true;
@@ -565,7 +570,7 @@ namespace ERP_INTECOLI.Compras
             this.lblSub.LocationFloat = new DevExpress.Utils.PointFloat(581.3999F, 3.125F);
             this.lblSub.Name = "lblSub";
             this.lblSub.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblSub.SizeF = new System.Drawing.SizeF(119.33F, 23F);
+            this.lblSub.SizeF = new System.Drawing.SizeF(109.6001F, 23F);
             this.lblSub.StylePriority.UseFont = false;
             this.lblSub.StylePriority.UseTextAlignment = false;
             xrSummary3.FormatString = "{0}";
@@ -675,6 +680,48 @@ namespace ERP_INTECOLI.Compras
             this.xrTableCell9.Text = "TOTAL";
             this.xrTableCell9.Weight = 1.5906989310258854D;
             // 
+            // xrLabel1
+            // 
+            this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 66.6665F);
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(323.9581F, 13F);
+            this.xrLabel1.StylePriority.UseBorders = false;
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.StylePriority.UseTextAlignment = false;
+            this.xrLabel1.Text = "Local #22, El Progreso, Yoro, C.A.";
+            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 53.6665F);
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(323.9582F, 13F);
+            this.xrLabel2.StylePriority.UseBorders = false;
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.StylePriority.UseTextAlignment = false;
+            this.xrLabel2.Text = "Edificio Honduplaza, 2a Planta,";
+            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel3
+            // 
+            this.xrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 37.95818F);
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(323.9582F, 15.70833F);
+            this.xrLabel3.StylePriority.UseBorders = false;
+            this.xrLabel3.StylePriority.UseFont = false;
+            this.xrLabel3.StylePriority.UseTextAlignment = false;
+            this.xrLabel3.Text = "Bo. La Sirena, 2 calle, 6 ave. S.E.";
+            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
             // rptOrdenCompra
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -753,5 +800,8 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
     }
 }

@@ -732,7 +732,7 @@ namespace ERP_INTECOLI.Compras
         {
             if (IdOrdenCompraActual > 0)
             {
-                rptOrdenCompra report = new rptOrdenCompra(IdOrdenCompraActual);
+                rptOrdenCompra report = new rptOrdenCompra(IdOrdenCompraActual) { DataSource = dsCompras1, DataMember = "oc_detalle", ShowPrintMarginsWarning = false };
                 report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
                 ReportPrintTool reportPrint = new ReportPrintTool(report);
                 reportPrint.ShowPreview();
