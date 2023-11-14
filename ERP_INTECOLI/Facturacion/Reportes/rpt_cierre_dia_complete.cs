@@ -91,6 +91,14 @@ namespace JAGUAR_APP.Facturacion.Reportes
                             lblTotalBancosVerificado.Text = string.Format("{0:L ###,##0.00}", valorC3);
                             break;
                             case 4:
+                            decimal valor4 = dr.GetDecimal(3);
+                            decimal valorC4 = dr.GetDecimal(4);
+                            Total += valor4;
+                            TotalC += valorC4;
+                            lblTotalDeposito.Text = string.Format("{0:L ###,##0.00}", valor4);
+                            lblTotalBancosVerificado.Text = string.Format("{0:L ###,##0.00}", valorC4);
+                            break;
+                        case 5:
                             break;
                         default:
                             break;

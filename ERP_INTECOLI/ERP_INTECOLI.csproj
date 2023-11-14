@@ -930,6 +930,12 @@
     <Compile Include="Facturacion\CoreFacturas\xfrmSelectCliente.Designer.cs">
       <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmConfiguracionFacturaEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmConfiguracionFacturaEstudiante.Designer.cs">
+      <DependentUpon>frmConfiguracionFacturaEstudiante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion\frmFacturaBK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1507,6 +1513,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\CoreFacturas\xfrmSelectCliente.resx">
       <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FacturacionAutomatica\frmConfiguracionFacturaEstudiante.resx">
+      <DependentUpon>frmConfiguracionFacturaEstudiante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\frmFacturaBK.resx">
       <DependentUpon>frmFacturaBK.cs</DependentUpon>

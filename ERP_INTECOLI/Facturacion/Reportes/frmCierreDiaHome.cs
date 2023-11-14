@@ -32,9 +32,16 @@ namespace JAGUAR_APP.Facturacion.Reportes
             LoadPuntosVenta();
 
             if (PuntoVenta == null)
+            {
                 PuntoVenta = new PuntoVenta();
+            }
             else
+            {
+                glePuntoVenta.EditValueChanged -= new EventHandler(glePuntoVenta_EditValueChanged);
                 glePuntoVenta.EditValue = PuntoVenta.ID;
+                glePuntoVenta.EditValueChanged -= new EventHandler(glePuntoVenta_EditValueChanged);
+            }
+                
             
 
             bool accesoprevio = false;
@@ -84,7 +91,7 @@ namespace JAGUAR_APP.Facturacion.Reportes
                 SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
                 con.Open();
 
-                SqlCommand cmd = new SqlCommand("dbo.sp_get_lista_puntos_venta_ovejita", con);
+                SqlCommand cmd = new SqlCommand("[dbo].[sp_get_lista_puntos_de_venta]", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 //cmd.Parameters.AddWithValue("@idbodega", idBodega);
                 dsContabilidad1.punto_venta.Clear();
@@ -163,6 +170,7 @@ namespace JAGUAR_APP.Facturacion.Reportes
             switch (idNivel)                                                      //11 = Jaguar
             {
                 case 1://Basic View
+                    accesoprevio = true;
                     break;
                 case 2://Basic No Autorization
                     accesoprevio = true;
@@ -178,13 +186,6 @@ namespace JAGUAR_APP.Facturacion.Reportes
                     break;
             }
 
-            if (!accesoprevio)
-            {
-                if (UsuarioLogeado.ValidarNivelPermisos(14))
-                    PermitirAcceso = true;
-                else 
-                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #15 (Autorizacion de Cierre de caja)");
-            }
 
             if (PermitirAcceso)
             {
@@ -200,7 +201,32 @@ namespace JAGUAR_APP.Facturacion.Reportes
                     row.id = frm.CierreDiaActual.id;
                 }
             }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(14))
+                {
+                    PermitirAcceso = true;
+
+                    var row = (dsContabilidad.cierre_dia_homeRow)gridView1.GetFocusedDataRow();
+                    frmArqueoCaja frm = new frmArqueoCaja(this.UsuarioLogeado, this.PuntoVenta, row.id, frmArqueoCaja.TipoTransaccion.Update, true);
+                    if (frm.ShowDialog() == DialogResult.OK)
+                    {
+                        row.id_estado = frm.CierreDiaActual.id_estado;
+                        row.estado_descripcion = frm.CierreDiaActual.estado_descripcion;
+                        row.id_user_validacion = frm.CierreDiaActual.id_user_validacion;
+                        row.usuario_validacion_nombre = frm.CierreDiaActual.usuario_validacion_nombre;
+                        row.codigo = frm.CierreDiaActual.codigo;
+                        row.id = frm.CierreDiaActual.id;
+                    }
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función! Permiso Requerido #15 (Autorizacion de Cierre de caja)");
+                }
+            }
         }
+
 
         private void cmdImprimirCierres_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
