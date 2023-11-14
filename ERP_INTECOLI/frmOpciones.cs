@@ -835,6 +835,7 @@ namespace ERP_INTECOLI
             switch (idNivel)                                                      //11 = Jaguar //12 = Success
             {
                 case 1://Basic View
+                    accesoprevio = false;
                     break;
                 case 2://Basic No Autorization
                     accesoprevio = false;
@@ -918,6 +919,7 @@ namespace ERP_INTECOLI
             switch (idNivel)                                                      //11 = Jaguar //12 = Success
             {
                 case 1://Basic View
+                    accesoprevio = false;
                     break;
                 case 2://Basic No Autorization
                     accesoprevio = false;
@@ -985,6 +987,7 @@ namespace ERP_INTECOLI
             switch (idNivel)                                                      //11 = Jaguar //12 = Success
             {
                 case 1://Basic View
+                    accesoprevio = false;
                     break;
                 case 2://Basic No Autorization
                     accesoprevio = false;
