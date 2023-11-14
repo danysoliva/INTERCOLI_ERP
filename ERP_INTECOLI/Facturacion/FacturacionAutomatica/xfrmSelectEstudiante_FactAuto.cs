@@ -23,7 +23,7 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
         DataOperations dp;
         PuntoVenta PuntoVentaActual;
         UserLogin UsuarioLogeado;
-        public xfrmSelectEstudiante_FactAuto(UserLogin pUsuario)
+        public xfrmSelectEstudiante_FactAuto(UserLogin pUsuario, PuntoVenta pPuntoVenta)
         {
             InitializeComponent();
             UsuarioLogeado = pUsuario;

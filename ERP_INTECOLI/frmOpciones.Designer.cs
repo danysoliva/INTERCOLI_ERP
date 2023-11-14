@@ -280,6 +280,7 @@ namespace ERP_INTECOLI
             this.navNotasCredito = new DevExpress.XtraNavBar.NavBarItem();
             this.navCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemConfigFacturaAutomatica = new DevExpress.XtraNavBar.NavBarItem();
             this.TabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl7)).BeginInit();
             this.TabMantenimientos.SuspendLayout();
@@ -814,6 +815,7 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanillas.Caption = "Planilla";
             this.navGeneracionPlanillas.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.presupuestox32;
             this.navGeneracionPlanillas.Name = "navGeneracionPlanillas";
+            this.navGeneracionPlanillas.Visible = false;
             this.navGeneracionPlanillas.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanillas_LinkClicked);
             // 
             // navBarItem60
@@ -2599,7 +2601,8 @@ namespace ERP_INTECOLI
             this.navBarItem108,
             this.navBarItem99,
             this.navBarItem100,
-            this.navBarItemListaPrecios});
+            this.navBarItemListaPrecios,
+            this.navBarItemConfigFacturaAutomatica});
             this.navBarControl6.Location = new System.Drawing.Point(0, 0);
             this.navBarControl6.Name = "navBarControl6";
             this.navBarControl6.OptionsNavPane.ExpandedWidth = 347;
@@ -2625,7 +2628,8 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbEmpresas),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navProductos),
             new DevExpress.XtraNavBar.NavBarItemLink(this.nbProveedores),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemListaPrecios)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemListaPrecios),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemConfigFacturaAutomatica)});
             this.navBarGroup1.Name = "navBarGroup1";
             // 
             // navCursos
@@ -3456,6 +3460,19 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla.Name = "navGeneracionPlanilla";
             this.navGeneracionPlanilla.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanilla_LinkClicked);
             // 
+            // navBarItemConfigFacturaAutomatica
+            // 
+            this.navBarItemConfigFacturaAutomatica.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemConfigFacturaAutomatica.Appearance.Options.UseFont = true;
+            this.navBarItemConfigFacturaAutomatica.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemConfigFacturaAutomatica.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarItemConfigFacturaAutomatica.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItemConfigFacturaAutomatica.AppearancePressed.Options.UseFont = true;
+            this.navBarItemConfigFacturaAutomatica.Caption = "Config. Factura Automatica";
+            this.navBarItemConfigFacturaAutomatica.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItemConfigFacturaAutomatica.ImageOptions.SmallImage")));
+            this.navBarItemConfigFacturaAutomatica.Name = "navBarItemConfigFacturaAutomatica";
+            this.navBarItemConfigFacturaAutomatica.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemConfigFacturaAutomatica_LinkClicked);
+            // 
             // frmOpciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3737,6 +3754,7 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navBarItem100;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarItem navBarItemListaPrecios;
+        private DevExpress.XtraNavBar.NavBarItem navBarItemConfigFacturaAutomatica;
     }
 }
 

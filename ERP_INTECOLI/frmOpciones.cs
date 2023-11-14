@@ -29,6 +29,7 @@ using ERP_INTECOLI.Consultas;
 using ERP_INTECOLI.Consultas.ConsultaMiembros;
 using ERP_INTECOLI.Consultas.ConsultaMovimientosSaldos;
 using ERP_INTECOLI.Consultas.RangosPago;
+using ERP_INTECOLI.Facturacion.FacturacionAutomatica;
 using ERP_INTECOLI.Mantenimiento.Productos;
 using ERP_INTECOLI.Mantenimiento.Proveedor;
 using ERP_INTECOLI.Transacciones;
@@ -1259,6 +1260,68 @@ namespace ERP_INTECOLI
                 else
                 {
                     CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #11 (Facturacion punto de venta)");
+                }
+            }
+        }
+
+        private void navBarItemConfigFacturaAutomatica_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //frmConfigFacturaEstudianteAuto
+            string HostName = Dns.GetHostName();
+            FacturacionEquipo EquipoActual = new FacturacionEquipo();
+            PuntoVenta puntoVenta1 = new PuntoVenta();
+
+            if (EquipoActual.RecuperarRegistro(HostName))
+            {
+                if (!puntoVenta1.RecuperaRegistro(EquipoActual.id_punto_venta))
+                {
+                    CajaDialogo.Error("Este equipo de nombre: " + HostName + " no esta configurado en ningun punto de venta!");
+                    return;
+                }
+            }
+            else
+            {
+                CajaDialogo.Error("Este equipo de nombre: " + HostName + " no esta configurado en ningun punto de venta!");
+                return;
+            }
+
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    accesoprevio = false;
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+
+                    frmConfigFacturaEstudianteAuto frm = new frmConfigFacturaEstudianteAuto(this.UsuarioLogeado, puntoVenta1);
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(26))
+                {
+                    frmConfigFacturaEstudianteAuto frm = new frmConfigFacturaEstudianteAuto(this.UsuarioLogeado, puntoVenta1);
+                    frm.MdiParent = this.MdiParent;
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #26 (Listas de Precio / Facturacion Automatica)");
                 }
             }
         }

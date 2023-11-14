@@ -19,15 +19,17 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica
     public partial class frmConfigFacturaEstudianteAuto : DevExpress.XtraEditors.XtraForm
     {
         UserLogin UsuarioLogeado;
-        public frmConfigFacturaEstudianteAuto(UserLogin pUsuario)
+        PuntoVenta puntoVentaActual;
+        public frmConfigFacturaEstudianteAuto(UserLogin pUsuario, PuntoVenta pPuntoVenta)
         {
             InitializeComponent();
             UsuarioLogeado = pUsuario;
+            puntoVentaActual = pPuntoVenta;
         }
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-            xfrmSelectEstudiante_FactAuto frm = new xfrmSelectEstudiante_FactAuto(this.UsuarioLogeado);
+            xfrmSelectEstudiante_FactAuto frm = new xfrmSelectEstudiante_FactAuto(this.UsuarioLogeado, puntoVentaActual);
             if (frm.ShowDialog() == DialogResult.OK)
             {
 
