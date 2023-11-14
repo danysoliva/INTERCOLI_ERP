@@ -44,13 +44,14 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             this.colid_pt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colItemNameFacturacion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid_curso = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colseleccion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.sluePDV = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
             this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.cmdNew = new DevExpress.XtraEditors.SimpleButton();
-            this.colseleccion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.checkSeleccionarTodos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.gcCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfigFacturaAutomatica1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCliente)).BeginInit();
@@ -187,6 +188,13 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             this.colid_curso.FieldName = "id_curso";
             this.colid_curso.Name = "colid_curso";
             // 
+            // colseleccion
+            // 
+            this.colseleccion.FieldName = "seleccion";
+            this.colseleccion.Name = "colseleccion";
+            this.colseleccion.Visible = true;
+            this.colseleccion.VisibleIndex = 6;
+            // 
             // sluePDV
             // 
             this.sluePDV.AutoHeight = false;
@@ -234,7 +242,7 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(829, 12);
+            this.simpleButton1.Location = new System.Drawing.Point(842, -3);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(113, 45);
             this.simpleButton1.TabIndex = 8;
@@ -250,25 +258,31 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             this.cmdNew.Appearance.Options.UseFont = true;
             this.cmdNew.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cmdNew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdNew.ImageOptions.SvgImage")));
-            this.cmdNew.Location = new System.Drawing.Point(699, 12);
+            this.cmdNew.Location = new System.Drawing.Point(712, -3);
             this.cmdNew.Name = "cmdNew";
             this.cmdNew.Size = new System.Drawing.Size(124, 45);
             this.cmdNew.TabIndex = 7;
             this.cmdNew.Text = "Seleccionar";
             this.cmdNew.Click += new System.EventHandler(this.cmdNew_Click);
             // 
-            // colseleccion
+            // checkSeleccionarTodos
             // 
-            this.colseleccion.FieldName = "seleccion";
-            this.colseleccion.Name = "colseleccion";
-            this.colseleccion.Visible = true;
-            this.colseleccion.VisibleIndex = 6;
+            this.checkSeleccionarTodos.AutoSize = true;
+            this.checkSeleccionarTodos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkSeleccionarTodos.Location = new System.Drawing.Point(835, 51);
+            this.checkSeleccionarTodos.Name = "checkSeleccionarTodos";
+            this.checkSeleccionarTodos.Size = new System.Drawing.Size(120, 19);
+            this.checkSeleccionarTodos.TabIndex = 9;
+            this.checkSeleccionarTodos.Text = "Seleccionar Todos";
+            this.checkSeleccionarTodos.UseVisualStyleBackColor = true;
+            this.checkSeleccionarTodos.CheckedChanged += new System.EventHandler(this.checkSeleccionarTodos_CheckedChanged);
             // 
             // xfrmSelectEstudiante_FactAuto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 445);
+            this.Controls.Add(this.checkSeleccionarTodos);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.cmdNew);
             this.Controls.Add(this.gcCliente);
@@ -280,6 +294,7 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             ((System.ComponentModel.ISupportInitialize)(this.sluePDV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -306,5 +321,6 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
         private DevExpress.XtraGrid.Columns.GridColumn colItemNameFacturacion;
         private DevExpress.XtraGrid.Columns.GridColumn colid_curso;
         private DevExpress.XtraGrid.Columns.GridColumn colseleccion;
+        private System.Windows.Forms.CheckBox checkSeleccionarTodos;
     }
 }

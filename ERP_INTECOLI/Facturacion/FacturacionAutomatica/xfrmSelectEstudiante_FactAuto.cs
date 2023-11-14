@@ -128,14 +128,18 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
                     ProductoListaPreciosAplicaLocal productosNew = new ProductoListaPreciosAplicaLocal()
                     {
                         ID_PT = item.id_pt,
-                        ItemName = item.ItemNameFacturacion,
-                        ItemCode = item.ItemCodeFacturacion,
+                        ItemName_Pt_Facturacion = item.ItemNameFacturacion,
+                        ItemCodePT_Facturacion = item.ItemCodeFacturacion,
+                        ItemCodeEstudiante = item.Item_Code,
                         Precio = item.precio,
-                        //PresentacionID = dp.ValidateNumberInt32(item.id_presentacion),
-                        //Presentacion = item.presentacion,
                         IdEstudiante = item.id_estudiante,
+                        EstudianteName = item.nombre,
                         IdDetalleMatricula = item.id_detalle,
                         CursoID = item.id_curso,
+                        Curso_Name = item.curso,
+                        Punto_Venta_id = item.id_punto_venta,
+                        Punto_venta_Name = item.sucursal_name,
+
                     };
 
                     productos.Add(productosNew);
@@ -154,21 +158,51 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
                 gvCliente.ActiveEditor.EditValue = null;
             }
         }
+
+        private void checkSeleccionarTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            var gridView = (GridView)gcCliente.FocusedView;
+            int conta = dsConfigFacturaAutomatica1.busqueda_estudiante_cursos.Count;
+            //int filtered = 0;
+            //string ids = "";
+
+            for (int i = 0; i < conta; i++)
+            {
+                dsConfigFacturaAutomatica.busqueda_estudiante_cursosRow row = (dsConfigFacturaAutomatica.busqueda_estudiante_cursosRow)gridView.GetDataRow(i);
+                int r = gridView.GetVisibleRowHandle(i + 0);
+                if (r >= 0)
+                {
+                    //filtered++;
+                    if (row != null)
+                    {
+                        row.seleccion = checkSeleccionarTodos.Checked;
+                        //ids+= ", "+ row.id;
+                    }
+                }
+                else
+                {
+                    if (row != null)
+                        row.seleccion = false;
+                }
+            }
+        }
     }
 }
-    public class ProductoListaPreciosAplicaLocal
-    {
+public class ProductoListaPreciosAplicaLocal
+{
 
-        public int ID_PT { get; set; }
-        public string ItemName { get; set; }
-        public string ItemCode { get; set; }
-        public int PresentacionID { get; set; }
-        public string Presentacion { get; set; }
-        public decimal Precio { get; set; }
-        public int PDV_ID { get; set; }
-        public string PDV { get; set; }
-        public Int64 IdEstudiante { get; set; }
-        public Int64 IdDetalleMatricula { get; set; }
-        public int CursoID { get; set; }
-    }
+    public string ItemCodeEstudiante { get; set; }
+    public decimal Precio { get; set; }
+    public Int64 IdEstudiante { get; set; }
+    public Int64 IdDetalleMatricula { get; set; }
+    public int CursoID { get; set; }
+    public string ItemCodePT_Facturacion { get; set; }
+    public  string Punto_venta_Name { get; set; }
+    public int Punto_Venta_id { get; set; }
+    public string Curso_Name { get; set; }
+    public string EstudianteName { get; set; }
+    public string ItemName_Pt_Facturacion { get; set; }
+    public int ID_PT { get; set; }
+}
+
 

@@ -45,11 +45,11 @@
             this.colcurso_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcurso = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colItemCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colUltimaEjecucion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmdAgregar = new DevExpress.XtraEditors.SimpleButton();
             this.cmdRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.cmdCerrar = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.colUltimaEjecucion = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfigFacturaAutomatica1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -134,6 +134,8 @@
             // 
             // colvalor
             // 
+            this.colvalor.DisplayFormat.FormatString = "N2";
+            this.colvalor.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colvalor.FieldName = "valor";
             this.colvalor.Name = "colvalor";
             this.colvalor.Visible = true;
@@ -180,6 +182,14 @@
             this.colItemCode.VisibleIndex = 0;
             this.colItemCode.Width = 85;
             // 
+            // colUltimaEjecucion
+            // 
+            this.colUltimaEjecucion.FieldName = "Ultima Ejecucion";
+            this.colUltimaEjecucion.Name = "colUltimaEjecucion";
+            this.colUltimaEjecucion.OptionsColumn.ReadOnly = true;
+            this.colUltimaEjecucion.Visible = true;
+            this.colUltimaEjecucion.VisibleIndex = 5;
+            // 
             // cmdAgregar
             // 
             this.cmdAgregar.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -206,6 +216,7 @@
             // 
             // cmdCerrar
             // 
+            this.cmdCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdCerrar.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCerrar.Appearance.Options.UseFont = true;
             this.cmdCerrar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdCerrar.ImageOptions.SvgImage")));
@@ -225,14 +236,6 @@
             this.labelControl1.Size = new System.Drawing.Size(360, 20);
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Configuracion para Facturacion Automatica Mensual";
-            // 
-            // colUltimaEjecucion
-            // 
-            this.colUltimaEjecucion.FieldName = "Ultima Ejecucion";
-            this.colUltimaEjecucion.Name = "colUltimaEjecucion";
-            this.colUltimaEjecucion.OptionsColumn.ReadOnly = true;
-            this.colUltimaEjecucion.Visible = true;
-            this.colUltimaEjecucion.VisibleIndex = 5;
             // 
             // frmConfigFacturaEstudianteAuto
             // 
