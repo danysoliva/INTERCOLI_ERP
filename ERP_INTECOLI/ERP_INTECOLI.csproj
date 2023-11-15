@@ -1543,6 +1543,9 @@
     <EmbeddedResource Include="Facturacion\FacturacionAutomatica\frmConfigFacturaEstudianteAuto.resx">
       <DependentUpon>frmConfigFacturaEstudianteAuto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FacturacionAutomatica\frmFacturasAutomaticasHome.resx">
+      <DependentUpon>frmFacturasAutomaticasHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\FacturacionAutomatica\xfrmSelectEstudiante_FactAuto.resx">
       <DependentUpon>xfrmSelectEstudiante_FactAuto.cs</DependentUpon>
     </EmbeddedResource>

@@ -113,6 +113,7 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
