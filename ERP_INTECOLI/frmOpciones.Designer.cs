@@ -225,6 +225,7 @@ namespace ERP_INTECOLI
             this.nbProveedores = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemListaPrecios = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemConfigFacturaAutomatica = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem24 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem58 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem59 = new DevExpress.XtraNavBar.NavBarItem();
@@ -281,7 +282,7 @@ namespace ERP_INTECOLI
             this.navNotasCredito = new DevExpress.XtraNavBar.NavBarItem();
             this.navCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navFacturasProvee = new DevExpress.XtraNavBar.NavBarItem();
             this.TabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl7)).BeginInit();
             this.TabMantenimientos.SuspendLayout();
@@ -2766,6 +2767,19 @@ namespace ERP_INTECOLI
             this.navBarItemConfigFacturaAutomatica.Name = "navBarItemConfigFacturaAutomatica";
             this.navBarItemConfigFacturaAutomatica.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItemConfigFacturaAutomatica_LinkClicked);
             // 
+            // navBarItem1
+            // 
+            this.navBarItem1.Appearance.Font = new System.Drawing.Font("Segoe UI", 12.25F);
+            this.navBarItem1.Appearance.Options.UseFont = true;
+            this.navBarItem1.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 12.25F);
+            this.navBarItem1.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarItem1.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 12.25F);
+            this.navBarItem1.AppearancePressed.Options.UseFont = true;
+            this.navBarItem1.Caption = "Facturas Generadas en Automatico";
+            this.navBarItem1.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.SmallImage")));
+            this.navBarItem1.Name = "navBarItem1";
+            this.navBarItem1.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem1_LinkClicked);
+            // 
             // navBarItem24
             // 
             this.navBarItem24.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
@@ -3279,7 +3293,8 @@ namespace ERP_INTECOLI
             this.navBarGroup8});
             this.navBarControl4.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.navComprasSolicitudes,
-            this.navComprasOrdenes});
+            this.navComprasOrdenes,
+            this.navFacturasProvee});
             this.navBarControl4.Location = new System.Drawing.Point(0, 0);
             this.navBarControl4.Name = "navBarControl4";
             this.navBarControl4.OptionsNavPane.ExpandedWidth = 347;
@@ -3290,11 +3305,12 @@ namespace ERP_INTECOLI
             // 
             // navBarGroup8
             // 
-            this.navBarGroup8.Caption = "Compras";
+            this.navBarGroup8.Caption = "Compras - Proveedores";
             this.navBarGroup8.Expanded = true;
             this.navBarGroup8.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navComprasSolicitudes),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navComprasOrdenes)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navComprasOrdenes),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navFacturasProvee)});
             this.navBarGroup8.Name = "navBarGroup8";
             // 
             // navComprasSolicitudes
@@ -3476,18 +3492,18 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla.Name = "navGeneracionPlanilla";
             this.navGeneracionPlanilla.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanilla_LinkClicked);
             // 
-            // navBarItem1
+            // navFacturasProvee
             // 
-            this.navBarItem1.Appearance.Font = new System.Drawing.Font("Segoe UI", 12.25F);
-            this.navBarItem1.Appearance.Options.UseFont = true;
-            this.navBarItem1.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 12.25F);
-            this.navBarItem1.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarItem1.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 12.25F);
-            this.navBarItem1.AppearancePressed.Options.UseFont = true;
-            this.navBarItem1.Caption = "Facturas Generadas en Automatico";
-            this.navBarItem1.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.SmallImage")));
-            this.navBarItem1.Name = "navBarItem1";
-            this.navBarItem1.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem1_LinkClicked);
+            this.navFacturasProvee.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFacturasProvee.Appearance.Options.UseFont = true;
+            this.navFacturasProvee.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFacturasProvee.AppearanceHotTracked.Options.UseFont = true;
+            this.navFacturasProvee.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFacturasProvee.AppearancePressed.Options.UseFont = true;
+            this.navFacturasProvee.Caption = "Factura Proveedores";
+            this.navFacturasProvee.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navFacturasProvee.ImageOptions.SmallImage")));
+            this.navFacturasProvee.Name = "navFacturasProvee";
+            this.navFacturasProvee.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFacturasProvee_LinkClicked);
             // 
             // frmOpciones
             // 
@@ -3772,6 +3788,7 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navBarItemListaPrecios;
         private DevExpress.XtraNavBar.NavBarItem navBarItemConfigFacturaAutomatica;
         private DevExpress.XtraNavBar.NavBarItem navBarItem1;
+        private DevExpress.XtraNavBar.NavBarItem navFacturasProvee;
     }
 }
 

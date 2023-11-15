@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ERP_INTECOLI.Clases;
 
 namespace ERP_INTECOLI.Compras
 {
     public partial class frmFacturasProveedoresMain : DevExpress.XtraEditors.XtraForm
     {
-        public frmFacturasProveedoresMain()
+        public frmFacturasProveedoresMain(UserLogin pUserLog)
         {
             InitializeComponent();
         }
