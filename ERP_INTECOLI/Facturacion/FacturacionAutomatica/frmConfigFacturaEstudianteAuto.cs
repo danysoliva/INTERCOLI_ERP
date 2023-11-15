@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Drawing;
 using DevExpress.XtraGrid.Views.Grid;
 using ERP_INTECOLI.Clases;
 using ERP_INTECOLI.Facturacion.CoreFacturas;
@@ -80,7 +81,8 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica
 
                                     command.Parameters.Clear();
                                     command.Parameters.AddWithValue("@id_estudiante", item.IdEstudiante);
-                                    command.Parameters.AddWithValue("@dia_pago", 0);
+                                    command.Parameters.AddWithValue("@min_dia_pago", item.min_dia_pago);
+                                    command.Parameters.AddWithValue("@max_dia_pago", item.max_dia_pago);
                                     command.Parameters.AddWithValue("@fecha_registro_creado", FechaActual);
                                     command.Parameters.AddWithValue("@valor", item.Precio);
                                     command.Parameters.AddWithValue("@id_usuario", this.UsuarioLogeado.Id);
@@ -89,28 +91,62 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica
                                     command.Parameters.AddWithValue("@enable", 1);
 
                                     IdDetalleCOnfigInserted = dp.ValidateNumberInt32(command.ExecuteScalar());
+                                    int RowEncontrado = 0;
 
-                                    row1.id= IdDetalleCOnfigInserted;
-                                    row1.id_pt = item.ID_PT;
-                                    row1.ItemCodeFacturacion = item.ItemCodePT_Facturacion;
-                                    row1.ItemNameFacturacion = item.ItemName_Pt_Facturacion;
-                                    row1.Item_Code = item.ItemCodeEstudiante;
-                                    row1.id_estudiante = item.IdEstudiante;
-                                    row1.nombre = item.EstudianteName;
-                                    row1.dia_pago = 0;
-                                    row1.enable = true;
-                                    row1.fecha_registrado = FechaActual;
-                                    row1.valor = item.Precio;
-                                    row1.id_usuario = this.UsuarioLogeado.Id;
-                                    row1.Usuario_Nombre = this.UsuarioLogeado.Nombre;
-                                    row1.id_matricula_detalle = item.IdDetalleMatricula;
-                                    row1.curso_id = item.CursoID;
-                                    row1.curso = item.Curso_Name;
-                                    
-                                    
 
-                                    dsConfigFacturaAutomatica1.detalle_cursos_estudiantes_config.Adddetalle_cursos_estudiantes_configRow(row1);
+                                    //Si el row existe solo actualizamos los valores
+                                    foreach(dsConfigFacturaAutomatica.detalle_cursos_estudiantes_configRow row in dsConfigFacturaAutomatica1.detalle_cursos_estudiantes_config)
+                                    {
+                                        if(IdDetalleCOnfigInserted == row.id)
+                                        {
+                                            //row.id = IdDetalleCOnfigInserted;
+                                            row.id_pt = item.ID_PT;
+                                            row.ItemCodeFacturacion = item.ItemCodePT_Facturacion;
+                                            row.ItemNameFacturacion = item.ItemName_Pt_Facturacion;
+                                            row.Item_Code = item.ItemCodeEstudiante;
+                                            row.id_estudiante = item.IdEstudiante;
+                                            row.nombre = item.EstudianteName;
+                                            row.min_dia_pago = item.min_dia_pago;
+                                            row.max_dia_pago = item.max_dia_pago;
+                                            row.enable = true;
+                                            row.fecha_registrado = FechaActual;
+                                            row.valor = item.Precio;
+                                            row.id_usuario = this.UsuarioLogeado.Id;
+                                            row.Usuario_Nombre = this.UsuarioLogeado.Nombre;
+                                            row.id_matricula_detalle = item.IdDetalleMatricula;
+                                            row.curso_id = item.CursoID;
+                                            row.curso = item.Curso_Name;
+                                            row.rango_pago = "Del " + item.min_dia_pago.ToString() + " al " + item.max_dia_pago.ToString();
+                                            RowEncontrado++;
+                                            break;
+                                        }
+                                    }
 
+
+                                    //Si el row no existe, agregaremos un row al grid.
+                                    if (RowEncontrado == 0)
+                                    {
+                                        row1.id = IdDetalleCOnfigInserted;
+                                        row1.id_pt = item.ID_PT;
+                                        row1.ItemCodeFacturacion = item.ItemCodePT_Facturacion;
+                                        row1.ItemNameFacturacion = item.ItemName_Pt_Facturacion;
+                                        row1.Item_Code = item.ItemCodeEstudiante;
+                                        row1.id_estudiante = item.IdEstudiante;
+                                        row1.nombre = item.EstudianteName;
+                                        row1.min_dia_pago = item.min_dia_pago;
+                                        row1.max_dia_pago = item.max_dia_pago;
+                                        row1.enable = true;
+                                        row1.fecha_registrado = FechaActual;
+                                        row1.valor = item.Precio;
+                                        row1.id_usuario = this.UsuarioLogeado.Id;
+                                        row1.Usuario_Nombre = this.UsuarioLogeado.Nombre;
+                                        row1.id_matricula_detalle = item.IdDetalleMatricula;
+                                        row1.curso_id = item.CursoID;
+                                        row1.curso = item.Curso_Name;
+                                        row1.rango_pago = "Del " + item.min_dia_pago.ToString() + " al " + item.max_dia_pago.ToString();
+
+                                        dsConfigFacturaAutomatica1.detalle_cursos_estudiantes_config.Adddetalle_cursos_estudiantes_configRow(row1);
+                                    }
                                 }
                             }
                         }

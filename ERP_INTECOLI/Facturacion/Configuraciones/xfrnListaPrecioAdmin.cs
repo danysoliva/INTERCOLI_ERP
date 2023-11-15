@@ -158,5 +158,10 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
                 }
             }
         }
+
+        private void cmdRefresh_Click(object sender, EventArgs e)
+        {
+            ObtenerListaPrecios();
         }
+    }
 }

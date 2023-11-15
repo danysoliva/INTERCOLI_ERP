@@ -320,8 +320,6 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             private global::System.Data.DataColumn columnnombre;
             
-            private global::System.Data.DataColumn columndia_pago;
-            
             private global::System.Data.DataColumn columnenable;
             
             private global::System.Data.DataColumn columnfecha_registrado;
@@ -347,6 +345,12 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             private global::System.Data.DataColumn columnItemNameFacturacion;
             
             private global::System.Data.DataColumn columnid_pt;
+            
+            private global::System.Data.DataColumn columnrango_pago;
+            
+            private global::System.Data.DataColumn columnmin_dia_pago;
+            
+            private global::System.Data.DataColumn columnmax_dia_pago;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -402,14 +406,6 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             public global::System.Data.DataColumn nombreColumn {
                 get {
                     return this.columnnombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn dia_pagoColumn {
-                get {
-                    return this.columndia_pago;
                 }
             }
             
@@ -519,6 +515,30 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn rango_pagoColumn {
+                get {
+                    return this.columnrango_pago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn min_dia_pagoColumn {
+                get {
+                    return this.columnmin_dia_pago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn max_dia_pagoColumn {
+                get {
+                    return this.columnmax_dia_pago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -558,7 +578,6 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
                         long id, 
                         long id_estudiante, 
                         string nombre, 
-                        int dia_pago, 
                         bool enable, 
                         System.DateTime fecha_registrado, 
                         decimal valor, 
@@ -571,13 +590,15 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
                         System.DateTime Ultima_Ejecucion, 
                         string ItemCodeFacturacion, 
                         string ItemNameFacturacion, 
-                        int id_pt) {
+                        int id_pt, 
+                        string rango_pago, 
+                        int min_dia_pago, 
+                        int max_dia_pago) {
                 detalle_cursos_estudiantes_configRow rowdetalle_cursos_estudiantes_configRow = ((detalle_cursos_estudiantes_configRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         id_estudiante,
                         nombre,
-                        dia_pago,
                         enable,
                         fecha_registrado,
                         valor,
@@ -590,7 +611,10 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
                         Ultima_Ejecucion,
                         ItemCodeFacturacion,
                         ItemNameFacturacion,
-                        id_pt};
+                        id_pt,
+                        rango_pago,
+                        min_dia_pago,
+                        max_dia_pago};
                 rowdetalle_cursos_estudiantes_configRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdetalle_cursos_estudiantes_configRow);
                 return rowdetalle_cursos_estudiantes_configRow;
@@ -616,7 +640,6 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
                 this.columnid = base.Columns["id"];
                 this.columnid_estudiante = base.Columns["id_estudiante"];
                 this.columnnombre = base.Columns["nombre"];
-                this.columndia_pago = base.Columns["dia_pago"];
                 this.columnenable = base.Columns["enable"];
                 this.columnfecha_registrado = base.Columns["fecha_registrado"];
                 this.columnvalor = base.Columns["valor"];
@@ -630,6 +653,9 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
                 this.columnItemCodeFacturacion = base.Columns["ItemCodeFacturacion"];
                 this.columnItemNameFacturacion = base.Columns["ItemNameFacturacion"];
                 this.columnid_pt = base.Columns["id_pt"];
+                this.columnrango_pago = base.Columns["rango_pago"];
+                this.columnmin_dia_pago = base.Columns["min_dia_pago"];
+                this.columnmax_dia_pago = base.Columns["max_dia_pago"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -641,8 +667,6 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
                 base.Columns.Add(this.columnid_estudiante);
                 this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre);
-                this.columndia_pago = new global::System.Data.DataColumn("dia_pago", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndia_pago);
                 this.columnenable = new global::System.Data.DataColumn("enable", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnenable);
                 this.columnfecha_registrado = new global::System.Data.DataColumn("fecha_registrado", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -669,11 +693,17 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
                 base.Columns.Add(this.columnItemNameFacturacion);
                 this.columnid_pt = new global::System.Data.DataColumn("id_pt", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_pt);
+                this.columnrango_pago = new global::System.Data.DataColumn("rango_pago", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrango_pago);
+                this.columnmin_dia_pago = new global::System.Data.DataColumn("min_dia_pago", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmin_dia_pago);
+                this.columnmax_dia_pago = new global::System.Data.DataColumn("max_dia_pago", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmax_dia_pago);
                 this.columnnombre.Caption = "Nombre Estudiante";
-                this.columndia_pago.Caption = "Dia Pago";
                 this.columnfecha_registrado.Caption = "Fecha Registro";
                 this.columnvalor.Caption = "Valor Configurado";
                 this.columncurso.Caption = "Curso";
+                this.columnrango_pago.Caption = "Rango de Pago";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -833,6 +863,10 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             private global::System.Data.DataColumn columnItemCodeFacturacion;
             
+            private global::System.Data.DataColumn columnmin_dia_pago;
+            
+            private global::System.Data.DataColumn columnmax_dia_pago;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public busqueda_estudiante_cursosDataTable() {
@@ -972,6 +1006,22 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn min_dia_pagoColumn {
+                get {
+                    return this.columnmin_dia_pago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn max_dia_pagoColumn {
+                get {
+                    return this.columnmax_dia_pago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1007,7 +1057,7 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public busqueda_estudiante_cursosRow Addbusqueda_estudiante_cursosRow(long id_estudiante, string Item_Code, string nombre, string curso, int id_punto_venta, string sucursal_name, decimal precio, long id_detalle, int id_pt, string ItemNameFacturacion, int id_curso, bool seleccion, string ItemCodeFacturacion) {
+            public busqueda_estudiante_cursosRow Addbusqueda_estudiante_cursosRow(long id_estudiante, string Item_Code, string nombre, string curso, int id_punto_venta, string sucursal_name, decimal precio, long id_detalle, int id_pt, string ItemNameFacturacion, int id_curso, bool seleccion, string ItemCodeFacturacion, int min_dia_pago, int max_dia_pago) {
                 busqueda_estudiante_cursosRow rowbusqueda_estudiante_cursosRow = ((busqueda_estudiante_cursosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_estudiante,
@@ -1022,7 +1072,9 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
                         ItemNameFacturacion,
                         id_curso,
                         seleccion,
-                        ItemCodeFacturacion};
+                        ItemCodeFacturacion,
+                        min_dia_pago,
+                        max_dia_pago};
                 rowbusqueda_estudiante_cursosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowbusqueda_estudiante_cursosRow);
                 return rowbusqueda_estudiante_cursosRow;
@@ -1058,6 +1110,8 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
                 this.columnid_curso = base.Columns["id_curso"];
                 this.columnseleccion = base.Columns["seleccion"];
                 this.columnItemCodeFacturacion = base.Columns["ItemCodeFacturacion"];
+                this.columnmin_dia_pago = base.Columns["min_dia_pago"];
+                this.columnmax_dia_pago = base.Columns["max_dia_pago"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1089,6 +1143,10 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
                 base.Columns.Add(this.columnseleccion);
                 this.columnItemCodeFacturacion = new global::System.Data.DataColumn("ItemCodeFacturacion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnItemCodeFacturacion);
+                this.columnmin_dia_pago = new global::System.Data.DataColumn("min_dia_pago", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmin_dia_pago);
+                this.columnmax_dia_pago = new global::System.Data.DataColumn("max_dia_pago", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmax_dia_pago);
                 this.columnItem_Code.Caption = "Code";
                 this.columnnombre.Caption = "Nombre";
                 this.columncurso.Caption = "Curso";
@@ -1283,23 +1341,6 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
                 }
                 set {
                     this[this.tabledetalle_cursos_estudiantes_config.nombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int dia_pago {
-                get {
-                    try {
-                        return ((int)(this[this.tabledetalle_cursos_estudiantes_config.dia_pagoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dia_pago\' in table \'detalle_cursos_estudiantes_config\' is D" +
-                                "BNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledetalle_cursos_estudiantes_config.dia_pagoColumn] = value;
                 }
             }
             
@@ -1526,6 +1567,57 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string rango_pago {
+                get {
+                    try {
+                        return ((string)(this[this.tabledetalle_cursos_estudiantes_config.rango_pagoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rango_pago\' in table \'detalle_cursos_estudiantes_config\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledetalle_cursos_estudiantes_config.rango_pagoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int min_dia_pago {
+                get {
+                    try {
+                        return ((int)(this[this.tabledetalle_cursos_estudiantes_config.min_dia_pagoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'min_dia_pago\' in table \'detalle_cursos_estudiantes_config\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledetalle_cursos_estudiantes_config.min_dia_pagoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int max_dia_pago {
+                get {
+                    try {
+                        return ((int)(this[this.tabledetalle_cursos_estudiantes_config.max_dia_pagoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'max_dia_pago\' in table \'detalle_cursos_estudiantes_config\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledetalle_cursos_estudiantes_config.max_dia_pagoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tabledetalle_cursos_estudiantes_config.idColumn);
             }
@@ -1558,18 +1650,6 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetnombreNull() {
                 this[this.tabledetalle_cursos_estudiantes_config.nombreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isdia_pagoNull() {
-                return this.IsNull(this.tabledetalle_cursos_estudiantes_config.dia_pagoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setdia_pagoNull() {
-                this[this.tabledetalle_cursos_estudiantes_config.dia_pagoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1726,6 +1806,42 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setid_ptNull() {
                 this[this.tabledetalle_cursos_estudiantes_config.id_ptColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isrango_pagoNull() {
+                return this.IsNull(this.tabledetalle_cursos_estudiantes_config.rango_pagoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setrango_pagoNull() {
+                this[this.tabledetalle_cursos_estudiantes_config.rango_pagoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Ismin_dia_pagoNull() {
+                return this.IsNull(this.tabledetalle_cursos_estudiantes_config.min_dia_pagoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setmin_dia_pagoNull() {
+                this[this.tabledetalle_cursos_estudiantes_config.min_dia_pagoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Ismax_dia_pagoNull() {
+                return this.IsNull(this.tabledetalle_cursos_estudiantes_config.max_dia_pagoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setmax_dia_pagoNull() {
+                this[this.tabledetalle_cursos_estudiantes_config.max_dia_pagoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1961,6 +2077,40 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int min_dia_pago {
+                get {
+                    try {
+                        return ((int)(this[this.tablebusqueda_estudiante_cursos.min_dia_pagoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'min_dia_pago\' in table \'busqueda_estudiante_cursos\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablebusqueda_estudiante_cursos.min_dia_pagoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int max_dia_pago {
+                get {
+                    try {
+                        return ((int)(this[this.tablebusqueda_estudiante_cursos.max_dia_pagoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'max_dia_pago\' in table \'busqueda_estudiante_cursos\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablebusqueda_estudiante_cursos.max_dia_pagoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isid_estudianteNull() {
                 return this.IsNull(this.tablebusqueda_estudiante_cursos.id_estudianteColumn);
             }
@@ -2113,6 +2263,30 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetItemCodeFacturacionNull() {
                 this[this.tablebusqueda_estudiante_cursos.ItemCodeFacturacionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Ismin_dia_pagoNull() {
+                return this.IsNull(this.tablebusqueda_estudiante_cursos.min_dia_pagoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setmin_dia_pagoNull() {
+                this[this.tablebusqueda_estudiante_cursos.min_dia_pagoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Ismax_dia_pagoNull() {
+                return this.IsNull(this.tablebusqueda_estudiante_cursos.max_dia_pagoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setmax_dia_pagoNull() {
+                this[this.tablebusqueda_estudiante_cursos.max_dia_pagoColumn] = global::System.Convert.DBNull;
             }
         }
         

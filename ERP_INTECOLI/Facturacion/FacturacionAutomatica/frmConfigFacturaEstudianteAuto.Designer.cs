@@ -35,7 +35,6 @@
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coldia_pago = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colenable = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colfecha_registrado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colvalor = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -46,10 +45,13 @@
             this.colcurso = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colItemCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUltimaEjecucion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colrango_pago = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmdAgregar = new DevExpress.XtraEditors.SimpleButton();
             this.cmdRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.cmdCerrar = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.colmin_dia_pago = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colmax_dia_pago = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfigFacturaAutomatica1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -81,7 +83,6 @@
             this.colid,
             this.colid_estudiante,
             this.colnombre,
-            this.coldia_pago,
             this.colenable,
             this.colfecha_registrado,
             this.colvalor,
@@ -91,7 +92,10 @@
             this.colcurso_id,
             this.colcurso,
             this.colItemCode,
-            this.colUltimaEjecucion});
+            this.colUltimaEjecucion,
+            this.colrango_pago,
+            this.colmin_dia_pago,
+            this.colmax_dia_pago});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -112,15 +116,7 @@
             this.colnombre.OptionsColumn.ReadOnly = true;
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 1;
-            this.colnombre.Width = 194;
-            // 
-            // coldia_pago
-            // 
-            this.coldia_pago.FieldName = "dia_pago";
-            this.coldia_pago.Name = "coldia_pago";
-            this.coldia_pago.Visible = true;
-            this.coldia_pago.VisibleIndex = 4;
-            this.coldia_pago.Width = 91;
+            this.colnombre.Width = 218;
             // 
             // colenable
             // 
@@ -140,7 +136,7 @@
             this.colvalor.Name = "colvalor";
             this.colvalor.Visible = true;
             this.colvalor.VisibleIndex = 3;
-            this.colvalor.Width = 190;
+            this.colvalor.Width = 177;
             // 
             // colid_usuario
             // 
@@ -170,7 +166,7 @@
             this.colcurso.OptionsColumn.ReadOnly = true;
             this.colcurso.Visible = true;
             this.colcurso.VisibleIndex = 2;
-            this.colcurso.Width = 204;
+            this.colcurso.Width = 230;
             // 
             // colItemCode
             // 
@@ -180,7 +176,7 @@
             this.colItemCode.OptionsColumn.ReadOnly = true;
             this.colItemCode.Visible = true;
             this.colItemCode.VisibleIndex = 0;
-            this.colItemCode.Width = 85;
+            this.colItemCode.Width = 95;
             // 
             // colUltimaEjecucion
             // 
@@ -189,6 +185,16 @@
             this.colUltimaEjecucion.OptionsColumn.ReadOnly = true;
             this.colUltimaEjecucion.Visible = true;
             this.colUltimaEjecucion.VisibleIndex = 5;
+            this.colUltimaEjecucion.Width = 107;
+            // 
+            // colrango_pago
+            // 
+            this.colrango_pago.FieldName = "rango_pago";
+            this.colrango_pago.Name = "colrango_pago";
+            this.colrango_pago.OptionsColumn.ReadOnly = true;
+            this.colrango_pago.Visible = true;
+            this.colrango_pago.VisibleIndex = 4;
+            this.colrango_pago.Width = 102;
             // 
             // cmdAgregar
             // 
@@ -237,6 +243,16 @@
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Configuracion para Facturacion Automatica Mensual";
             // 
+            // colmin_dia_pago
+            // 
+            this.colmin_dia_pago.FieldName = "min_dia_pago";
+            this.colmin_dia_pago.Name = "colmin_dia_pago";
+            // 
+            // colmax_dia_pago
+            // 
+            this.colmax_dia_pago.FieldName = "max_dia_pago";
+            this.colmax_dia_pago.Name = "colmax_dia_pago";
+            // 
             // frmConfigFacturaEstudianteAuto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,7 +284,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colid;
         private DevExpress.XtraGrid.Columns.GridColumn colid_estudiante;
         private DevExpress.XtraGrid.Columns.GridColumn colnombre;
-        private DevExpress.XtraGrid.Columns.GridColumn coldia_pago;
         private DevExpress.XtraGrid.Columns.GridColumn colenable;
         private DevExpress.XtraGrid.Columns.GridColumn colfecha_registrado;
         private DevExpress.XtraGrid.Columns.GridColumn colvalor;
@@ -280,5 +295,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colItemCode;
         private dsConfigFacturaAutomatica dsConfigFacturaAutomatica1;
         private DevExpress.XtraGrid.Columns.GridColumn colUltimaEjecucion;
+        private DevExpress.XtraGrid.Columns.GridColumn colrango_pago;
+        private DevExpress.XtraGrid.Columns.GridColumn colmin_dia_pago;
+        private DevExpress.XtraGrid.Columns.GridColumn colmax_dia_pago;
     }
 }

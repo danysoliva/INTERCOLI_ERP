@@ -69,9 +69,9 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
                     deDesde.EditValue = dp.NowSetDateTime();
                     deDesde.EditValueChanged += new EventHandler(deDesde_EditValueChanged);
 
-                    deHasta.EditValueChanged -= new EventHandler(deHasta_EditValueChanged);
+                    deHasta.EditValueChanged -= new EventHandler(deHasta_EditValueChanged_1);
                     deHasta.EditValue = dp.NowSetDateTime().AddDays(30);
-                    deHasta.EditValueChanged -= new EventHandler(deHasta_EditValueChanged);
+                    deHasta.EditValueChanged += new EventHandler(deHasta_EditValueChanged_1);
 
                     txtNombreListaPrecio.Focus();
                     break;
@@ -87,9 +87,9 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
                     deDesde.EditValue = Lista_precioActual.Desde;
                     deDesde.EditValueChanged += new EventHandler(deDesde_EditValueChanged);
 
-                    deHasta.EditValueChanged -= new EventHandler(deHasta_EditValueChanged); 
+                    deHasta.EditValueChanged -= new EventHandler(deHasta_EditValueChanged_1); 
                     deHasta.EditValue = Lista_precioActual.Hasta;
-                    deHasta.EditValueChanged -= new EventHandler(deHasta_EditValueChanged);
+                    deHasta.EditValueChanged += new EventHandler(deHasta_EditValueChanged_1);
 
                     //ObtenerClientesById(Lista_precioActual.ID);
                     //ObtenerProductosById(Lista_precioActual.ID);
@@ -99,8 +99,14 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
                 case TipoTipoTransaccionActual.Copiar:
                     GetIDTable();
                     txtNombreListaPrecio.Text = Lista_precioActual.Descripcion;
+
+                    deDesde.EditValueChanged -= new EventHandler(deDesde_EditValueChanged);
                     deDesde.EditValue = Lista_precioActual.Desde;
+                    deDesde.EditValueChanged += new EventHandler(deDesde_EditValueChanged);
+
+                    deHasta.EditValueChanged -= new EventHandler(deHasta_EditValueChanged_1);
                     deHasta.EditValue = Lista_precioActual.Hasta;
+                    deHasta.EditValueChanged += new EventHandler(deHasta_EditValueChanged_1);
 
                     //ObtenerClientesById(Lista_precioActual.ID);
                     //ObtenerProductosById(Lista_precioActual.ID);
@@ -1455,8 +1461,7 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
                         Lista_precioActual.Hasta = Convert.ToDateTime(deHasta.EditValue);
 
                         Lista_precioActual.Descripcion = txtNombreListaPrecio.Text;
-                        Lista_precioActual.Desde = Convert.ToDateTime(deDesde.EditValue);
-                        Lista_precioActual.Desde = Convert.ToDateTime(deHasta.EditValue);
+
                         Lista_precioActual.ActualizarListaPrecios(Lista_precioActual.ID,
                                                                   Lista_precioActual.Descripcion,
                                                                   Lista_precioActual.Desde,
@@ -1477,7 +1482,8 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             ActualizarDatosHeader();
         }
 
-        private void deHasta_EditValueChanged(object sender, EventArgs e)
+
+        private void deHasta_EditValueChanged_1(object sender, EventArgs e)
         {
             ActualizarDatosHeader();
         }

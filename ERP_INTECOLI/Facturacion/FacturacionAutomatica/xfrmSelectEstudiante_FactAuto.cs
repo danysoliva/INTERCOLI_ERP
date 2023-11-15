@@ -139,7 +139,8 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
                         Curso_Name = item.curso,
                         Punto_Venta_id = item.id_punto_venta,
                         Punto_venta_Name = item.sucursal_name,
-
+                        min_dia_pago = item.min_dia_pago,
+                        max_dia_pago = item.max_dia_pago,
                     };
 
                     productos.Add(productosNew);
@@ -203,6 +204,8 @@ public class ProductoListaPreciosAplicaLocal
     public string EstudianteName { get; set; }
     public string ItemName_Pt_Facturacion { get; set; }
     public int ID_PT { get; set; }
+    public int min_dia_pago { get; set; }
+    public int max_dia_pago { get;set; }
 }
 
 

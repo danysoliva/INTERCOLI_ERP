@@ -785,7 +785,7 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             this.deHasta.Properties.MaskSettings.Set("mask", "");
             this.deHasta.Size = new System.Drawing.Size(226, 26);
             this.deHasta.TabIndex = 15;
-            this.deHasta.EditValueChanged += new System.EventHandler(this.deHasta_EditValueChanged);
+            this.deHasta.EditValueChanged += new System.EventHandler(this.deHasta_EditValueChanged_1);
             // 
             // labelControl2
             // 

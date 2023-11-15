@@ -52,6 +52,7 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.cmdNew = new DevExpress.XtraEditors.SimpleButton();
             this.checkSeleccionarTodos = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gcCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfigFacturaAutomatica1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCliente)).BeginInit();
@@ -277,11 +278,22 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
             this.checkSeleccionarTodos.UseVisualStyleBackColor = true;
             this.checkSeleccionarTodos.CheckedChanged += new System.EventHandler(this.checkSeleccionarTodos_CheckedChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(431, 21);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Seleccione los estudiantes para configuracion Automatica";
+            // 
             // xfrmSelectEstudiante_FactAuto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 445);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.checkSeleccionarTodos);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.cmdNew);
@@ -322,5 +334,6 @@ namespace JAGUAR_APP.Facturacion.Configuraciones
         private DevExpress.XtraGrid.Columns.GridColumn colid_curso;
         private DevExpress.XtraGrid.Columns.GridColumn colseleccion;
         private System.Windows.Forms.CheckBox checkSeleccionarTodos;
+        private System.Windows.Forms.Label label1;
     }
 }
