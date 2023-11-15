@@ -953,6 +953,12 @@
     <Compile Include="Facturacion\FacturacionAutomatica\frmConfigFacturaEstudianteAuto.Designer.cs">
       <DependentUpon>frmConfigFacturaEstudianteAuto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmFacturasAutomaticasHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmFacturasAutomaticasHome.Designer.cs">
+      <DependentUpon>frmFacturasAutomaticasHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion\FacturacionAutomatica\xfrmSelectEstudiante_FactAuto.cs">
       <SubType>Form</SubType>
     </Compile>

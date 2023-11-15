@@ -1329,13 +1329,35 @@ namespace ERP_INTECOLI
             }
         }
 
-        private void navFactProveedor_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            //Historial de facturas generadas por el automatico
+            
+            //frmConfigFacturaEstudianteAuto
+            string HostName = Dns.GetHostName();
+            FacturacionEquipo EquipoActual = new FacturacionEquipo();
+            PuntoVenta puntoVenta1 = new PuntoVenta();
+
+            if (EquipoActual.RecuperarRegistro(HostName))
+            {
+                if (!puntoVenta1.RecuperaRegistro(EquipoActual.id_punto_venta))
+                {
+                    CajaDialogo.Error("Este equipo de nombre: " + HostName + " no esta configurado en ningun punto de venta!");
+                    return;
+                }
+            }
+            else
+            {
+                CajaDialogo.Error("Este equipo de nombre: " + HostName + " no esta configurado en ningun punto de venta!");
+                return;
+            }
+
             bool accesoprevio = false;
             int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
             switch (idNivel)                                                      //11 = Jaguar //12 = Success
             {
                 case 1://Basic View
+                    accesoprevio = false;
                     break;
                 case 2://Basic No Autorization
                     accesoprevio = false;
@@ -1346,11 +1368,10 @@ namespace ERP_INTECOLI
                 case 4://Depth With Delta
                 case 5://Depth Without Delta
                     accesoprevio = true;
-                    frmFacturasProveedoresMain mtx = new frmFacturasProveedoresMain(UsuarioLogeado, frmOrdenesCompraMain.TipoOperacion.New);
-                    mtx.MdiParent = this.MdiParent;
-                    mtx.Show();
 
-
+                    frmFacturasAutomaticasHome frm = new frmFacturasAutomaticasHome(this.UsuarioLogeado, puntoVenta1);
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
                     break;
                 default:
                     break;
@@ -1358,15 +1379,16 @@ namespace ERP_INTECOLI
 
             if (!accesoprevio)
             {
-                if (UsuarioLogeado.ValidarNivelPermisos(24))
+                if (UsuarioLogeado.ValidarNivelPermisos(26))
                 {
-                    frmFacturasProveedoresMain mtx = new frmFacturasProveedoresMain(UsuarioLogeado, frmOrdenesCompraMain.TipoOperacion.New);
-                    mtx.MdiParent = this.MdiParent;
-                    mtx.Show();
+                    frmFacturasAutomaticasHome frm = new frmFacturasAutomaticasHome(this.UsuarioLogeado, puntoVenta1);
+                    frm.MdiParent = this.MdiParent;
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-24 (Ordenes de Compra)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #26 (Listas de Precio / Facturacion Automatica)");
                 }
             }
         }
