@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfigFacturaEstudianteAuto));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.dsConfigFacturaAutomatica1 = new ERP_INTECOLI.Facturacion.FacturacionAutomatica.dsConfigFacturaAutomatica();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -46,15 +51,18 @@
             this.colItemCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUltimaEjecucion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colrango_pago = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colmin_dia_pago = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colmax_dia_pago = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmdAgregar = new DevExpress.XtraEditors.SimpleButton();
             this.cmdRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.cmdCerrar = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.colmin_dia_pago = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colmax_dia_pago = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumnEliminar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cmdEliminarLinea = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfigFacturaAutomatica1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdEliminarLinea)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -67,6 +75,8 @@
             this.gridControl1.Location = new System.Drawing.Point(2, 55);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.cmdEliminarLinea});
             this.gridControl1.Size = new System.Drawing.Size(954, 447);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -95,7 +105,8 @@
             this.colUltimaEjecucion,
             this.colrango_pago,
             this.colmin_dia_pago,
-            this.colmax_dia_pago});
+            this.colmax_dia_pago,
+            this.gridColumnEliminar});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -196,6 +207,16 @@
             this.colrango_pago.VisibleIndex = 4;
             this.colrango_pago.Width = 102;
             // 
+            // colmin_dia_pago
+            // 
+            this.colmin_dia_pago.FieldName = "min_dia_pago";
+            this.colmin_dia_pago.Name = "colmin_dia_pago";
+            // 
+            // colmax_dia_pago
+            // 
+            this.colmax_dia_pago.FieldName = "max_dia_pago";
+            this.colmax_dia_pago.Name = "colmax_dia_pago";
+            // 
             // cmdAgregar
             // 
             this.cmdAgregar.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -243,31 +264,40 @@
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Configuracion para Facturacion Automatica Mensual";
             // 
-            // colmin_dia_pago
+            // gridColumnEliminar
             // 
-            this.colmin_dia_pago.FieldName = "min_dia_pago";
-            this.colmin_dia_pago.Name = "colmin_dia_pago";
+            this.gridColumnEliminar.Caption = "Eliminar";
+            this.gridColumnEliminar.ColumnEdit = this.cmdEliminarLinea;
+            this.gridColumnEliminar.Name = "gridColumnEliminar";
+            this.gridColumnEliminar.Visible = true;
+            this.gridColumnEliminar.VisibleIndex = 6;
             // 
-            // colmax_dia_pago
+            // cmdEliminarLinea
             // 
-            this.colmax_dia_pago.FieldName = "max_dia_pago";
-            this.colmax_dia_pago.Name = "colmax_dia_pago";
+            this.cmdEliminarLinea.AutoHeight = false;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            this.cmdEliminarLinea.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.cmdEliminarLinea.Name = "cmdEliminarLinea";
+            this.cmdEliminarLinea.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.cmdEliminarLinea.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cmdEliminarLinea_ButtonClick);
             // 
             // frmConfigFacturaEstudianteAuto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 512);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.cmdCerrar);
             this.Controls.Add(this.cmdRefresh);
             this.Controls.Add(this.cmdAgregar);
-            this.Controls.Add(this.gridControl1);
             this.Name = "frmConfigFacturaEstudianteAuto";
             this.Text = "Configuracion Factura Estudiante";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfigFacturaAutomatica1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdEliminarLinea)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,5 +328,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colrango_pago;
         private DevExpress.XtraGrid.Columns.GridColumn colmin_dia_pago;
         private DevExpress.XtraGrid.Columns.GridColumn colmax_dia_pago;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumnEliminar;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit cmdEliminarLinea;
     }
 }

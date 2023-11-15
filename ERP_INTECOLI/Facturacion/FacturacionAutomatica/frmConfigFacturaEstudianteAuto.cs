@@ -211,5 +211,36 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica
         {
             
         }
+
+        private void cmdEliminarLinea_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            //Eliminar row del grid
+            DialogResult r = MessageBox.Show("¿Desea Eliminar ésta linea?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r != DialogResult.Yes)
+            {
+                return;
+            }
+
+            var gridView1 = (GridView)gridControl1.FocusedView;
+            var row = (dsConfigFacturaAutomatica.detalle_cursos_estudiantes_configRow)gridView1.GetFocusedDataRow();
+
+            try
+            {
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("dbo.sp_update_config_linea_factuacion_automatica", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_config", row.id);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+                gridView1.DeleteRow(gridView1.FocusedRowHandle);
+                dsConfigFacturaAutomatica1.AcceptChanges();
+            }
+            catch (Exception ec)
+            {
+                CajaDialogo.Error(ec.Message);
+            }
+        }
     }
 }
