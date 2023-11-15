@@ -1328,5 +1328,47 @@ namespace ERP_INTECOLI
                 }
             }
         }
+
+        private void navFactProveedor_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+                    frmFacturasProveedoresMain mtx = new frmFacturasProveedoresMain(UsuarioLogeado, frmOrdenesCompraMain.TipoOperacion.New);
+                    mtx.MdiParent = this.MdiParent;
+                    mtx.Show();
+
+
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(24))
+                {
+                    frmFacturasProveedoresMain mtx = new frmFacturasProveedoresMain(UsuarioLogeado, frmOrdenesCompraMain.TipoOperacion.New);
+                    mtx.MdiParent = this.MdiParent;
+                    mtx.Show();
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-24 (Ordenes de Compra)");
+                }
+            }
+        }
     }
 }
