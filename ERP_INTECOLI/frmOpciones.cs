@@ -1412,7 +1412,7 @@ namespace ERP_INTECOLI
                 case 5://Depth Without Delta
                     accesoprevio = true;
 
-                    frmFacturasProveedoresMain frm = new frmFacturasProveedoresMain(this.UsuarioLogeado);
+                    frmFacturasProveedoresMain frm = new frmFacturasProveedoresMain(this.UsuarioLogeado, frmFacturasProveedoresMain.TipoOperacion.Insert);
                     frm.MdiParent = this.MdiParent;
                     frm.Show();
                     break;
@@ -1424,7 +1424,7 @@ namespace ERP_INTECOLI
             {
                 if (UsuarioLogeado.ValidarNivelPermisos(26))
                 {
-                    frmFacturasProveedoresMain frm = new frmFacturasProveedoresMain(this.UsuarioLogeado);
+                    frmFacturasProveedoresMain frm = new frmFacturasProveedoresMain(this.UsuarioLogeado, frmFacturasProveedoresMain.TipoOperacion.Insert);
                     frm.MdiParent = this.MdiParent;
                     frm.Show();
                 }

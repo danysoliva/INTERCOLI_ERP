@@ -323,6 +323,7 @@
     <Compile Include="Clases\FacturacionEquipo.cs" />
     <Compile Include="Clases\FacturaDetalle.cs" />
     <Compile Include="Clases\FacturaEstado.cs" />
+    <Compile Include="Clases\FacturaProveedores.cs" />
     <Compile Include="Clases\FacturasPagoMultiple.cs" />
     <Compile Include="Clases\Factura_SolicitudAutorizacion.cs" />
     <Compile Include="Clases\Impuesto.cs" />
