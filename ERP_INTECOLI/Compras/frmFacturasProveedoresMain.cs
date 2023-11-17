@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using ERP_INTECOLI.Clases;
 using LOSA.Calidad.LoteConfConsumo;
 using System.Data.SqlClient;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace ERP_INTECOLI.Compras
 {
@@ -19,6 +20,7 @@ namespace ERP_INTECOLI.Compras
         DataOperations dp = new DataOperations();
         UserLogin UsuarioLogueado;
         public int Id_FacturaActual = 0;
+        int Id_OrdenCompra = 0;
         int Id_Estado;
         string Direccion;
         public enum TipoOperacion
@@ -67,6 +69,8 @@ namespace ERP_INTECOLI.Compras
             dtFechaDocumento.Value = fact.Fecha_Documento;
             txtEstado.Text = fact.Estado;
             Id_Estado = fact.Id_Estado;
+            Id_FacturaActual = fact.Id_Factura;
+            Direccion = fact.Direccion;
             txtUsuarioCreador.Text = fact.Usuario_creador;
             txtComentarios.Text = fact.Comentario;
             txtSubtotal.EditValue = fact.Subtotal;
@@ -130,7 +134,190 @@ namespace ERP_INTECOLI.Compras
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtCodProv.Text))
+            {
+                CajaDialogo.Error("Debe seleccionar un Proveedor!");
+                return;
+            }
 
+            if (string.IsNullOrEmpty(txtCAI.Text))
+            {
+                CajaDialogo.Error("Debe seleccionar un CAI!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtNumFactura.Text))
+            {
+                CajaDialogo.Error("Debe digital el Numero de Factura!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtComentarios.Text))
+            {
+                CajaDialogo.Error("Debe escribir un Comentario!");
+                return;
+            }
+
+            if (Convert.ToDecimal(txtSubtotal.EditValue) <= 0)
+            {
+                CajaDialogo.Error("No puede Registrar una Factura en 0!");
+                return;
+            }
+
+            if (dtFechaVencimiento.Value <= dtFechaDocumento.Value || dtFechaVencimiento.Value <= dtFechaContabilizacion.Value)
+            {
+                CajaDialogo.Error("La Fecha de Vencimiento no puede ser menor que Fecha Contabilizacion y Fecha de Documento!");
+                return;
+            }
+
+            if (grdvDetalle.DataRowCount == 0)
+            {
+                CajaDialogo.Error("Debe Agregar por lo menos 1 Articulo!");
+                return;
+            }
+
+            switch (Operacion)
+            {
+                case TipoOperacion.Insert:
+
+                    SqlTransaction transaction = null;
+
+                    SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                    bool Guardar = false;
+
+                    try
+                    {
+                        conn.Open();
+                        transaction = conn.BeginTransaction("Transaction Order");
+
+                        SqlCommand cmd = conn.CreateCommand();
+                        cmd.CommandText = "sp_compras_insert_facturas_h";
+                        cmd.Connection = conn;
+                        cmd.Transaction = transaction;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        if (Id_OrdenCompra == 0) 
+                            cmd.Parameters.AddWithValue("@id_orden_compra", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@id_orden_compra", Id_OrdenCompra);
+                        cmd.Parameters.AddWithValue("@code_prov",txtCodProv.Text.Trim());
+                        cmd.Parameters.AddWithValue("@proveedor",txtProveedor.Text);
+                        if (string.IsNullOrEmpty(txtPersonaContact.Text))
+                            cmd.Parameters.AddWithValue("@persona_contacto", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@persona_contacto", txtPersonaContact.Text);
+                        cmd.Parameters.AddWithValue("@direccion",Direccion);
+                        cmd.Parameters.AddWithValue("@cai", txtCAI.Text);
+                        cmd.Parameters.AddWithValue("@num_factura", txtNumFactura.Text);
+                        cmd.Parameters.AddWithValue("@fecha_contabilizacion", dtFechaContabilizacion.Value);
+                        cmd.Parameters.AddWithValue("@fecha_vencimiento", dtFechaVencimiento.Value);
+                        cmd.Parameters.AddWithValue("@fecha_documento",dtFechaDocumento.Value);
+                        cmd.Parameters.AddWithValue("@fecha_registro", dp.Now());
+                        cmd.Parameters.AddWithValue("@id_estado", 2);
+                        cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogueado.Id);
+                        cmd.Parameters.AddWithValue("@comentario",txtComentarios.Text);
+                        cmd.Parameters.AddWithValue("@punto_venta", 2); //No lo definido.
+                        cmd.Parameters.AddWithValue("@subtotal", txtSubtotal.EditValue);
+                        cmd.Parameters.AddWithValue("@impuesto", txtImpuesto.EditValue);
+                        cmd.Parameters.AddWithValue("@total", txtTotal.EditValue);
+                        
+                        int id_header_factura = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        foreach (dsCompras.oc_detalleRow row in dsCompras1.oc_detalle.Rows)
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.CommandText = "sp_compras_inert_factura_d";
+                            cmd.Connection = conn;
+                            cmd.Transaction = transaction;
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@id_factura", id_header_factura);
+                            cmd.Parameters.AddWithValue("@itemcode", row.itemcode);
+                            cmd.Parameters.AddWithValue("@descripcion", row.descripcion);
+                            cmd.Parameters.AddWithValue("@cantidad",row.cantidad);
+                            cmd.Parameters.AddWithValue("@precio",row.precio);
+                            cmd.Parameters.AddWithValue("@fecha_registro", dp.Now());
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        transaction.Commit();
+                        Guardar = true;
+
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+
+                    }
+                    catch (Exception ec)
+                    {
+                        transaction.Rollback();
+                        CajaDialogo.Error(ec.Message);
+                        Guardar = false;
+                    }
+
+                    if (Guardar)
+                    {
+                        CajaDialogo.Information("Factura Registrada Exitosamente!");
+                        LimpiarControles();
+                    }
+
+                    break;
+
+
+                case TipoOperacion.Update:
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void txtSubtotal_EditValueChanged(object sender, EventArgs e)
+        {
+            decimal SubTotal = 0;
+            decimal valor_impuesto = 0;
+            double isv15 = 0.15;
+
+            
+
+            Impuesto isv = new Impuesto();
+            if (isv.RecuperarRegistro(1))
+            {
+                valor_impuesto = isv.Valor;
+            }
+            else
+                valor_impuesto = Convert.ToDecimal(isv15);
+
+            txtSubtotal.EditValue = decimal.Round(SubTotal, 2, MidpointRounding.AwayFromZero);
+            txtImpuesto.EditValue = decimal.Round(SubTotal * valor_impuesto, 2, MidpointRounding.AwayFromZero);
+            txtTotal.EditValue = decimal.Round(SubTotal + Convert.ToDecimal(txtImpuesto.EditValue), 2, MidpointRounding.AwayFromZero);
+
+        }
+
+        private void cmdNuevo_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+        }
+
+        private void LimpiarControles()
+        {
+            txtCodProv.Clear();
+            txtProveedor.Clear();
+            txtCAI.Clear();
+            txtNumFactura.Clear();
+            txtId.Clear();
+            dtFechaContabilizacion.Value = dp.Now();
+            dtFechaDocumento.Value = dp.Now();
+            dtFechaVencimiento.Value = dp.Now();
+            dsCompras1.oc_detalle.Clear();
+            txtUsuarioCreador.Text = UsuarioLogueado.Nombre;
+            txtComentarios.Clear();
+            txtEstado.Text = "Nueva";
+            btnShowPopu.Enabled = false;
+
+            txtSubtotal.EditValue = 0.00;
+            txtImpuesto.EditValue = 0.00;
+            txtTotal.EditValue = 0.00;
+
+            Id_FacturaActual = 0;
+            Direccion = "";
+            Id_Estado = 0;
         }
     }
 }
