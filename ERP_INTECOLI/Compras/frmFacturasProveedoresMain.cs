@@ -176,6 +176,21 @@ namespace ERP_INTECOLI.Compras
                 return;
             }
 
+            foreach (dsCompras.factura_detalleRow item in dsCompras1.factura_detalle.Rows)
+            {
+                if (item.cantidad <= 0)
+                {
+                    CajaDialogo.Error("Cantidad debe ser Mayor que (0)!");
+                    return;
+                }
+
+                if (item.precio <= 0)
+                {
+                    CajaDialogo.Error("Precio debe ser Mayor que (0)!");
+                    return;
+                }
+            }
+
             switch (Operacion)
             {
                 case TipoOperacion.Insert:
@@ -222,7 +237,7 @@ namespace ERP_INTECOLI.Compras
                         
                         int id_header_factura = Convert.ToInt32(cmd.ExecuteScalar());
 
-                        foreach (dsCompras.oc_detalleRow row in dsCompras1.oc_detalle.Rows)
+                        foreach (dsCompras.factura_detalleRow row in dsCompras1.factura_detalle.Rows)
                         {
                             cmd.Parameters.Clear();
                             cmd.CommandText = "sp_compras_inert_factura_d";
@@ -240,9 +255,6 @@ namespace ERP_INTECOLI.Compras
 
                         transaction.Commit();
                         Guardar = true;
-
-                        this.DialogResult = DialogResult.OK;
-                        this.Close();
 
                     }
                     catch (Exception ec)

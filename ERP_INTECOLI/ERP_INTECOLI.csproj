@@ -358,6 +358,12 @@
     <Compile Include="Compras\frmOrdenesCompraMain.Designer.cs">
       <DependentUpon>frmOrdenesCompraMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Compras\frmSearchFacturasProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\frmSearchFacturasProveedor.Designer.cs">
+      <DependentUpon>frmSearchFacturasProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Compras\frmSearchOrdenesC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1324,6 +1330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Compras\frmOrdenesCompraMain.resx">
       <DependentUpon>frmOrdenesCompraMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\frmSearchFacturasProveedor.resx">
+      <DependentUpon>frmSearchFacturasProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compras\frmSearchOrdenesC.resx">
       <DependentUpon>frmSearchOrdenesC.cs</DependentUpon>
