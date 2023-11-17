@@ -331,5 +331,14 @@ namespace ERP_INTECOLI.Compras
             Direccion = "";
             Id_Estado = 0;
         }
+
+        private void cmdBuscar_Click(object sender, EventArgs e)
+        {
+            frmSearchFacturasProveedor frm = new frmSearchFacturasProveedor();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                //Id_FacturaActual
+            }
+        }
     }
 }
