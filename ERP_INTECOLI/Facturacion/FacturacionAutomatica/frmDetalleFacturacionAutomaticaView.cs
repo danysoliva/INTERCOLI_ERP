@@ -1,7 +1,5 @@
 ﻿using DevExpress.XtraEditors;
-using DevExpress.XtraGrid.Views.Grid;
 using ERP_INTECOLI.Clases;
-using ERP_INTECOLI.Transacciones;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,32 +13,32 @@ using System.Windows.Forms;
 
 namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica
 {
-    public partial class frmFacturasAutomaticasHome : DevExpress.XtraEditors.XtraForm
+    public partial class frmDetalleFacturacionAutomaticaView : DevExpress.XtraEditors.XtraForm
     {
         UserLogin UsuarioLogeado;
         PuntoVenta PuntoVentaActual;
         DataOperations dp;
-        public frmFacturasAutomaticasHome(UserLogin pUsuarioLogeado, PuntoVenta pPuntoVenta)
+        Int64 Id_H;
+        public frmDetalleFacturacionAutomaticaView(UserLogin pUsuarioLogeado, Int64 pIdH)
         {
-            InitializeComponent();
+            InitializeComponent(); 
             dp = new DataOperations();
             UsuarioLogeado = pUsuarioLogeado;
-            PuntoVentaActual = pPuntoVenta;
+            Id_H = pIdH;
             LoadDatos();
         }
-
         private void LoadDatos()
         {
             try
             {
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("dbo.sp_get_generacion_automatica_facturas_h", conn);
+                SqlCommand cmd = new SqlCommand("dbo.sp_get_detalle_transacciones_cargos_generados_for_auto_factura", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                dsConfigFacturaAutomatica1.lista_generacion_h.Clear();
-                //cmd.Parameters.AddWithValue("", 0);
+                dsConfigFacturaAutomatica1.detalle_transaccion_h.Clear();
+                cmd.Parameters.AddWithValue("@id_h", Id_H);
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
-                adat.Fill(dsConfigFacturaAutomatica1.lista_generacion_h);
+                adat.Fill(dsConfigFacturaAutomatica1.detalle_transaccion_h);
                 conn.Close();
             }
             catch (Exception EX)
@@ -53,13 +51,6 @@ namespace ERP_INTECOLI.Facturacion.FacturacionAutomatica
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
-        }
-
-        private void cmdVerDetalle_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            var row = (dsConfigFacturaAutomatica.lista_generacion_hRow)gridView1.GetFocusedDataRow();
-            frmDetalleFacturacionAutomaticaView frm = new frmDetalleFacturacionAutomaticaView(this.UsuarioLogeado, row.id);
-            frm.ShowDialog();
         }
     }
 }

@@ -19,11 +19,11 @@ namespace ERP_INTECOLI.Clases
         #region Credenciales de Desarrollo
 
         ////PC - Ruben 
-        //public static string ERP_ServerAddress = "6G1SST3"; //172.106.0.59,19433
-        //public static string ERP_ServerName = "6G1SST3";
+        //public static string ERP_ServerAddress = "7L12TV3"; //172.106.0.59,19433
+        //public static string ERP_ServerName = "7L12TV3";
         //public static string ERP_ActiveDB = "Success";
         //public static string ERP_DB_User = "sa";
-        //public static string ERP_DB_Pass = "Marathones00";
+        //public static string ERP_DB_Pass = "Aq4x_3Fj2#";
         #endregion
 
 
