@@ -90,7 +90,7 @@ namespace ERP_INTECOLI.Compras
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("",);
+                cmd.Parameters.AddWithValue("@id_Factura", Id_FacturaActual);
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 dsCompras1.factura_detalle.Clear();
                 adat.Fill(dsCompras1.factura_detalle);
@@ -317,7 +317,7 @@ namespace ERP_INTECOLI.Compras
             dtFechaContabilizacion.Value = dp.Now();
             dtFechaDocumento.Value = dp.Now();
             dtFechaVencimiento.Value = dp.Now();
-            dsCompras1.oc_detalle.Clear();
+            dsCompras1.factura_detalle.Clear();
             txtUsuarioCreador.Text = UsuarioLogueado.Nombre;
             txtComentarios.Clear();
             txtEstado.Text = "Nueva";
@@ -334,10 +334,161 @@ namespace ERP_INTECOLI.Compras
 
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
-            frmSearchFacturasProveedor frm = new frmSearchFacturasProveedor();
+            frmSearchFacturasProveedor frm = new frmSearchFacturasProveedor(frmSearchFacturasProveedor.FiltroFacturas.Todas);
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                //Id_FacturaActual
+                Id_FacturaActual = frm.IdFacturaSeleccionado;
+
+                CargarInfoFactura();
+            }
+        }
+
+        private void cmdAddDetalle_Click(object sender, EventArgs e)
+        {
+            frmSearchDefault frm = new frmSearchDefault(frmSearchDefault.TipoBusqueda.ProductoTerminado);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                switch (Operacion)
+                {
+                    case TipoOperacion.Insert:
+                        bool Agregar = true;
+
+                        foreach (dsCompras.factura_detalleRow item in dsCompras1.factura_detalle.Rows)
+                        {
+                            if (item.itemcode == frm.ItemSeleccionado.ItemCode)
+                            {
+                                item.cantidad = item.cantidad + 1;
+                                Agregar = false;
+
+                            }
+                        }
+
+                        if (Agregar)
+                        {
+                            DataRow dr = dsCompras1.factura_detalle.NewRow();
+                            dr[0] = 0;
+                            dr[1] = frm.ItemSeleccionado.ItemName;
+                            dr[2] = frm.ItemSeleccionado.ItemCode;
+                            dr[3] = 1;
+                            dr[4] = 0;
+                            dr[5] = 0;
+                            //dr[6] = 0;
+                            dsCompras1.factura_detalle.Rows.Add(dr);
+                        }
+                        break;
+                    case TipoOperacion.Update:
+
+
+
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+        }
+
+        private void grdvDetalle_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            var gridView = (GridView)grDetalle.FocusedView;
+            var row = (dsCompras.factura_detalleRow)gridView.GetFocusedDataRow();
+
+            try
+            {
+                if (e.Column.FieldName == "cantidad")
+                {
+                    row.total = row.cantidad * row.precio;
+                    CalcularTotal();
+                }
+
+                if (e.Column.FieldName == "precio")
+                {
+                    row.total = row.cantidad * row.precio;
+                    CalcularTotal();
+                }
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
+        }
+
+        private void CalcularTotal()
+        {
+            decimal SubTotal = 0;
+            decimal valor_impuesto = 0;
+            double isv15 = 0.15;
+
+            var gridview = (GridView)grDetalle.FocusedView;
+            for (int i = 0; i < gridview.DataRowCount; i++)
+            {
+                DataRow row = gridview.GetDataRow(i);
+
+                SubTotal = SubTotal + (Convert.ToDecimal(row["total"]));
+            }
+
+            txtSubtotal.EditValue = decimal.Round(SubTotal, 2, MidpointRounding.AwayFromZero);
+
+            Impuesto isv = new Impuesto();
+            if (isv.RecuperarRegistro(1))
+            {
+                valor_impuesto = isv.Valor;
+            }
+            else
+                valor_impuesto = Convert.ToDecimal(isv15);
+            txtImpuesto.EditValue = decimal.Round(SubTotal * valor_impuesto, 2, MidpointRounding.AwayFromZero);
+            txtTotal.EditValue = decimal.Round(SubTotal + Convert.ToDecimal(txtImpuesto.EditValue), 2, MidpointRounding.AwayFromZero);
+
+        }
+
+        private void btnShowPopu_Click(object sender, EventArgs e)
+        {
+            switch (Operacion)
+            {
+                case TipoOperacion.Insert:
+
+                    frmSearchOrdenesC frm = new frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra.Abiertas);
+                    if (frm.ShowDialog() == DialogResult.OK)
+                    {
+                        Id_OrdenCompra = frm.IdOrdenesSeleccionado;
+                        OrdenesCompra oc = new OrdenesCompra();
+                        oc.RecuperarRegistos(Id_OrdenCompra);
+                        txtComentarios.Text = oc.Comentario;
+
+                        CargarDetalleFacturaFromOrdenCompra(frm.IdOrdenesSeleccionado);
+
+                    }
+
+                    cmdNuevo.Enabled = true;
+
+                    break;
+                case TipoOperacion.Update:
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void CargarDetalleFacturaFromOrdenCompra(int idOCSeleccionado)
+        {
+            try
+            {
+                string query = @"[sp_get_compras_ordenes_detalle]";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_header_orden", idOCSeleccionado);
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                dsCompras1.factura_detalle.Clear();
+                adat.Fill(dsCompras1.factura_detalle);
+                conn.Close();
+
+                CalcularTotal();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
             }
         }
     }

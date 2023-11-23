@@ -76,6 +76,7 @@ namespace ERP_INTECOLI.Compras
             this.txtUsuarioCreador = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.grDetalle = new DevExpress.XtraGrid.GridControl();
+            this.dsCompras1 = new ERP_INTECOLI.Compras.dsCompras();
             this.grdvDetalle = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colItemCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDscription = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -99,7 +100,6 @@ namespace ERP_INTECOLI.Compras
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.dsCompras1 = new ERP_INTECOLI.Compras.dsCompras();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumFactura.Properties)).BeginInit();
@@ -108,6 +108,7 @@ namespace ERP_INTECOLI.Compras
             ((System.ComponentModel.ISupportInitialize)(this.txtCodProv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProveedor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDeleteRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonGridEstadoEdit)).BeginInit();
@@ -119,7 +120,6 @@ namespace ERP_INTECOLI.Compras
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtImpuesto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubtotal.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -263,6 +263,7 @@ namespace ERP_INTECOLI.Compras
             this.cmdAddDetalle.TabIndex = 67;
             this.cmdAddDetalle.Tag = "Agregar Item o Servicio";
             this.cmdAddDetalle.ToolTip = "Guardar";
+            this.cmdAddDetalle.Click += new System.EventHandler(this.cmdAddDetalle_Click);
             // 
             // dtFechaVencimiento
             // 
@@ -468,7 +469,8 @@ namespace ERP_INTECOLI.Compras
             this.grDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grDetalle.DataMember = "oc_detalle";
+            this.grDetalle.DataMember = "factura_detalle";
+            this.grDetalle.DataSource = this.dsCompras1;
             this.grDetalle.Location = new System.Drawing.Point(3, 254);
             this.grDetalle.MainView = this.grdvDetalle;
             this.grDetalle.Name = "grDetalle";
@@ -480,6 +482,11 @@ namespace ERP_INTECOLI.Compras
             this.grDetalle.TabIndex = 53;
             this.grDetalle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvDetalle});
+            // 
+            // dsCompras1
+            // 
+            this.dsCompras1.DataSetName = "dsCompras";
+            this.dsCompras1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // grdvDetalle
             // 
@@ -502,6 +509,7 @@ namespace ERP_INTECOLI.Compras
             this.grdvDetalle.OptionsView.ShowAutoFilterRow = true;
             this.grdvDetalle.OptionsView.ShowFooter = true;
             this.grdvDetalle.OptionsView.ShowGroupPanel = false;
+            this.grdvDetalle.CellValueChanging += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.grdvDetalle_CellValueChanging);
             // 
             // colItemCode
             // 
@@ -683,6 +691,7 @@ namespace ERP_INTECOLI.Compras
             // 
             // btnShowPopu
             // 
+            this.btnShowPopu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnShowPopu.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowPopu.Appearance.Options.UseFont = true;
             this.btnShowPopu.Enabled = false;
@@ -692,6 +701,7 @@ namespace ERP_INTECOLI.Compras
             this.btnShowPopu.TabIndex = 78;
             this.btnShowPopu.Text = "Copiar de Orden de Compra";
             this.btnShowPopu.ToolTip = "Seleccione un Proveedor para Copia de una Orden de Compra";
+            this.btnShowPopu.Click += new System.EventHandler(this.btnShowPopu_Click);
             // 
             // labelControl11
             // 
@@ -736,11 +746,6 @@ namespace ERP_INTECOLI.Compras
             this.labelControl9.TabIndex = 83;
             this.labelControl9.Text = "Impuesto_______";
             // 
-            // dsCompras1
-            // 
-            this.dsCompras1.DataSetName = "dsCompras";
-            this.dsCompras1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // frmFacturasProveedoresMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -761,6 +766,7 @@ namespace ERP_INTECOLI.Compras
             ((System.ComponentModel.ISupportInitialize)(this.txtCodProv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProveedor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvDetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDeleteRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonGridEstadoEdit)).EndInit();
@@ -773,7 +779,6 @@ namespace ERP_INTECOLI.Compras
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtImpuesto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubtotal.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).EndInit();
             this.ResumeLayout(false);
 
         }

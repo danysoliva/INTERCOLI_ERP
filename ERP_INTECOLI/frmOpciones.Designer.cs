@@ -271,6 +271,7 @@ namespace ERP_INTECOLI
             this.navBarGroup8 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navComprasSolicitudes = new DevExpress.XtraNavBar.NavBarItem();
             this.navComprasOrdenes = new DevExpress.XtraNavBar.NavBarItem();
+            this.navFacturasProvee = new DevExpress.XtraNavBar.NavBarItem();
             this.TabTransacciones = new DevExpress.XtraTab.XtraTabPage();
             this.navBarControl2 = new DevExpress.XtraNavBar.NavBarControl();
             this.TabAcciones = new DevExpress.XtraTab.XtraTabPage();
@@ -282,7 +283,6 @@ namespace ERP_INTECOLI
             this.navNotasCredito = new DevExpress.XtraNavBar.NavBarItem();
             this.navCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
-            this.navFacturasProvee = new DevExpress.XtraNavBar.NavBarItem();
             this.TabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl7)).BeginInit();
             this.TabMantenimientos.SuspendLayout();
@@ -3339,6 +3339,20 @@ namespace ERP_INTECOLI
             this.navComprasOrdenes.Name = "navComprasOrdenes";
             this.navComprasOrdenes.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navComprasOrdenes_LinkClicked);
             // 
+            // navFacturasProvee
+            // 
+            this.navFacturasProvee.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFacturasProvee.Appearance.Options.UseFont = true;
+            this.navFacturasProvee.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFacturasProvee.AppearanceHotTracked.Options.UseFont = true;
+            this.navFacturasProvee.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navFacturasProvee.AppearancePressed.Options.UseFont = true;
+            this.navFacturasProvee.Caption = "Factura Proveedores";
+            this.navFacturasProvee.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navFacturasProvee.ImageOptions.SmallImage")));
+            this.navFacturasProvee.Name = "navFacturasProvee";
+            this.navFacturasProvee.Visible = false;
+            this.navFacturasProvee.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFacturasProvee_LinkClicked);
+            // 
             // TabTransacciones
             // 
             this.TabTransacciones.Controls.Add(this.navBarControl2);
@@ -3491,19 +3505,6 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.contabilidad_x32;
             this.navGeneracionPlanilla.Name = "navGeneracionPlanilla";
             this.navGeneracionPlanilla.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanilla_LinkClicked);
-            // 
-            // navFacturasProvee
-            // 
-            this.navFacturasProvee.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navFacturasProvee.Appearance.Options.UseFont = true;
-            this.navFacturasProvee.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navFacturasProvee.AppearanceHotTracked.Options.UseFont = true;
-            this.navFacturasProvee.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navFacturasProvee.AppearancePressed.Options.UseFont = true;
-            this.navFacturasProvee.Caption = "Factura Proveedores";
-            this.navFacturasProvee.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navFacturasProvee.ImageOptions.SmallImage")));
-            this.navFacturasProvee.Name = "navFacturasProvee";
-            this.navFacturasProvee.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFacturasProvee_LinkClicked);
             // 
             // frmOpciones
             // 

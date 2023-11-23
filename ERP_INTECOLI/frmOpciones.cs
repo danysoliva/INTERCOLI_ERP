@@ -1430,7 +1430,7 @@ namespace ERP_INTECOLI
                 }
                 else
                 {
-                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #26 (Listas de Precio / Facturacion Automatica)");
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-27 (Facturas Proveedores)");
                 }
             }
         }
