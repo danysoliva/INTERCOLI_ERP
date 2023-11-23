@@ -960,6 +960,12 @@
     <Compile Include="Facturacion\FacturacionAutomatica\frmConfigFacturaEstudianteAuto.Designer.cs">
       <DependentUpon>frmConfigFacturaEstudianteAuto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmDetalleFacturacionAutomaticaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmDetalleFacturacionAutomaticaView.Designer.cs">
+      <DependentUpon>frmDetalleFacturacionAutomaticaView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion\FacturacionAutomatica\frmFacturasAutomaticasHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1561,6 +1567,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\FacturacionAutomatica\frmConfigFacturaEstudianteAuto.resx">
       <DependentUpon>frmConfigFacturaEstudianteAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FacturacionAutomatica\frmDetalleFacturacionAutomaticaView.resx">
+      <DependentUpon>frmDetalleFacturacionAutomaticaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FacturacionAutomatica\frmFacturasAutomaticasHome.resx">
+      <DependentUpon>frmFacturasAutomaticasHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\FacturacionAutomatica\xfrmSelectEstudiante_FactAuto.resx">
       <DependentUpon>xfrmSelectEstudiante_FactAuto.cs</DependentUpon>
