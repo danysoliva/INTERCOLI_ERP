@@ -121,6 +121,7 @@ namespace ERP_INTECOLI.Compras
                 txtProveedor.Text = frm.ItemSeleccionado.ItemName;
                 Proveedor prov = new Proveedor();
                 prov.RecuperarRegistroFromItemCode(frm.ItemSeleccionado.ItemCode);
+                txtPersonaContact.Text = prov.Contacto;
                 Direccion = prov._direccion;
                 cmdNuevo.Enabled = true;
                 btnShowPopu.Enabled = true;
@@ -250,6 +251,9 @@ namespace ERP_INTECOLI.Compras
                             cmd.Parameters.AddWithValue("@cantidad",row.cantidad);
                             cmd.Parameters.AddWithValue("@precio",row.precio);
                             cmd.Parameters.AddWithValue("@fecha_registro", dp.Now());
+                            cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogueado.Id);
+                            cmd.Parameters.AddWithValue("@id_punto_facturacion", 2); //DEFINIR COMO SELECCIONARA EL PUNTO DE VENTA(COMPRA)
+
                             cmd.ExecuteNonQuery();
                         }
 

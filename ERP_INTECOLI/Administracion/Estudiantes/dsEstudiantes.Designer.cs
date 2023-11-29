@@ -898,6 +898,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             
             private global::System.Data.DataColumn columnconcatenacion;
             
+            private global::System.Data.DataColumn columncodigo;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public estudiantesDataTable() {
@@ -1029,6 +1031,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn codigoColumn {
+                get {
+                    return this.columncodigo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1064,7 +1074,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public estudiantesRow AddestudiantesRow(int id_estudiante, string numero_identidad, string nombres, string apellidos, string direccion, System.DateTime fecha_nacimiento, System.DateTime fecha_ingreso, bool habilitado, char sexo, string correo, string editar, string concatenacion) {
+            public estudiantesRow AddestudiantesRow(int id_estudiante, string numero_identidad, string nombres, string apellidos, string direccion, System.DateTime fecha_nacimiento, System.DateTime fecha_ingreso, bool habilitado, char sexo, string correo, string editar, string concatenacion, string codigo) {
                 estudiantesRow rowestudiantesRow = ((estudiantesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_estudiante,
@@ -1078,7 +1088,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
                         sexo,
                         correo,
                         editar,
-                        concatenacion};
+                        concatenacion,
+                        codigo};
                 rowestudiantesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowestudiantesRow);
                 return rowestudiantesRow;
@@ -1113,6 +1124,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
                 this.columncorreo = base.Columns["correo"];
                 this.columneditar = base.Columns["editar"];
                 this.columnconcatenacion = base.Columns["concatenacion"];
+                this.columncodigo = base.Columns["codigo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1142,6 +1154,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
                 base.Columns.Add(this.columneditar);
                 this.columnconcatenacion = new global::System.Data.DataColumn("concatenacion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnconcatenacion);
+                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodigo);
                 this.columnnumero_identidad.Caption = "Identidad";
                 this.columnnombres.Caption = "Nombres";
                 this.columnapellidos.Caption = "Apellidos";
@@ -6266,6 +6280,22 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string codigo {
+                get {
+                    try {
+                        return ((string)(this[this.tableestudiantes.codigoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'codigo\' de la tabla \'estudiantes\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableestudiantes.codigoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isid_estudianteNull() {
                 return this.IsNull(this.tableestudiantes.id_estudianteColumn);
             }
@@ -6406,6 +6436,18 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetconcatenacionNull() {
                 this[this.tableestudiantes.concatenacionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IscodigoNull() {
+                return this.IsNull(this.tableestudiantes.codigoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetcodigoNull() {
+                this[this.tableestudiantes.codigoColumn] = global::System.Convert.DBNull;
             }
         }
         

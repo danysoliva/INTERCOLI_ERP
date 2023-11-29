@@ -115,6 +115,10 @@ namespace ERP_INTECOLI.Clases
 
                     if (!dr.IsDBNull(dr.GetOrdinal("enable")))
                         _enable = dr.GetBoolean(5);
+                    if (!dr.IsDBNull(dr.GetOrdinal("contacto")))
+                        Contacto = dr.GetString(6);
+                    if (!dr.IsDBNull(dr.GetOrdinal("telefono")))
+                        Telefono1 = dr.GetString(7);
 
                     Recuperado = true;
                 }
