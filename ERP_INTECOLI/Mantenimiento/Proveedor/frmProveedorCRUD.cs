@@ -53,7 +53,8 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
                     txtDescripcion.Text = prov._nombre;
                     txtRTN.Text = prov._RTN;
                     txtDireccion.Text = prov._direccion;
-
+                    txtContacto.Text = prov.Contacto;
+                    txtTelefono.Text = prov.Telefono1;
                     if (prov._enable)
                         tsHabilitado.IsOn = true;
                     else
@@ -114,7 +115,14 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
                         cmd.Parameters.AddWithValue("@RTN",txtRTN.Text.Trim());
                         cmd.Parameters.AddWithValue("@direccion",txtDireccion.Text);
                         cmd.Parameters.AddWithValue("@FechaCreacion", dp.Now());
-                        cmd.Parameters.AddWithValue("@usuario_id", UsuarioLogeado.Id);
+                        if (string.IsNullOrEmpty(txtContacto.Text))
+                            cmd.Parameters.AddWithValue("@contacto", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@contacto", txtContacto.Text);
+                        if(string.IsNullOrEmpty(txtTelefono.Text))
+                            cmd.Parameters.AddWithValue("@telefono", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@telefono", txtTelefono.Text);
                         cmd.ExecuteNonQuery();
                         conn.Close();
 
@@ -143,6 +151,14 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
                         cmd.Parameters.AddWithValue("@habilitado", tsHabilitado.IsOn);
                         cmd.Parameters.AddWithValue("@FechaModi", dp.Now());
                         cmd.Parameters.AddWithValue("@usuario_id_modi", UsuarioLogeado.Id);
+                        if (string.IsNullOrEmpty(txtContacto.Text))
+                            cmd.Parameters.AddWithValue("@contacto", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@contacto", txtContacto.Text);
+                        if (string.IsNullOrEmpty(txtTelefono.Text))
+                            cmd.Parameters.AddWithValue("@telefono", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@telefono", txtTelefono.Text);
                         cmd.ExecuteNonQuery();
                         conn.Close();
 

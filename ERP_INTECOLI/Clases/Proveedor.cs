@@ -28,7 +28,7 @@ namespace ERP_INTECOLI.Clases
         public int IdRiesgo;
         public bool Auditoria;
         public int IdAprobacion;
-
+        
 
         private int id;
         public string _codigo;
@@ -72,7 +72,10 @@ namespace ERP_INTECOLI.Clases
 
                     if (!dr.IsDBNull(dr.GetOrdinal("enable")))
                         _enable = dr.GetBoolean(5);
-
+                    if (!dr.IsDBNull(dr.GetOrdinal("contacto")))
+                        Contacto = dr.GetString(6);
+                    if (!dr.IsDBNull(dr.GetOrdinal("telefono")))
+                        Telefono1 = dr.GetString(7);
                     Recuperado = true;
                 }
                 con.Close();

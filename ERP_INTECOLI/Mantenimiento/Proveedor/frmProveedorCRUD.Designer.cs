@@ -43,10 +43,16 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             this.txtDescripcion = new DevExpress.XtraEditors.TextEdit();
             this.txtCodigo = new DevExpress.XtraEditors.TextEdit();
             this.lblProveedor = new System.Windows.Forms.Label();
+            this.txtContacto = new DevExpress.XtraEditors.TextEdit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTelefono = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.tsHabilitado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRTN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContacto.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTS
@@ -54,7 +60,7 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             this.lblTS.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTS.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.lblTS.Appearance.Options.UseFont = true;
-            this.lblTS.Location = new System.Drawing.Point(150, 303);
+            this.lblTS.Location = new System.Drawing.Point(189, 379);
             this.lblTS.Name = "lblTS";
             this.lblTS.Size = new System.Drawing.Size(60, 17);
             this.lblTS.TabIndex = 65;
@@ -63,7 +69,7 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.txtDireccion.Location = new System.Drawing.Point(131, 186);
+            this.txtDireccion.Location = new System.Drawing.Point(158, 262);
             this.txtDireccion.MaxLength = 200;
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
@@ -74,7 +80,7 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label5.Location = new System.Drawing.Point(59, 186);
+            this.label5.Location = new System.Drawing.Point(18, 262);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 17);
             this.label5.TabIndex = 62;
@@ -84,7 +90,7 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 108);
+            this.label1.Location = new System.Drawing.Point(18, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 17);
             this.label1.TabIndex = 58;
@@ -94,7 +100,7 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.label3.Location = new System.Drawing.Point(89, 145);
+            this.label3.Location = new System.Drawing.Point(18, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 17);
             this.label3.TabIndex = 59;
@@ -104,7 +110,7 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             // 
             this.lblOperacion.AutoSize = true;
             this.lblOperacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOperacion.Location = new System.Drawing.Point(146, 36);
+            this.lblOperacion.Location = new System.Drawing.Point(173, 39);
             this.lblOperacion.Name = "lblOperacion";
             this.lblOperacion.Size = new System.Drawing.Size(149, 24);
             this.lblOperacion.TabIndex = 57;
@@ -119,7 +125,7 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
             this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdCancelar.Location = new System.Drawing.Point(282, 344);
+            this.cmdCancelar.Location = new System.Drawing.Point(309, 420);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(116, 44);
             this.cmdCancelar.TabIndex = 69;
@@ -137,7 +143,7 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             this.cmdGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdGuardar.Image = global::ERP_INTECOLI.Properties.Resources.save;
             this.cmdGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdGuardar.Location = new System.Drawing.Point(108, 344);
+            this.cmdGuardar.Location = new System.Drawing.Point(135, 420);
             this.cmdGuardar.Name = "cmdGuardar";
             this.cmdGuardar.Size = new System.Drawing.Size(108, 44);
             this.cmdGuardar.TabIndex = 68;
@@ -150,7 +156,7 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             // tsHabilitado
             // 
             this.tsHabilitado.EditValue = true;
-            this.tsHabilitado.Location = new System.Drawing.Point(216, 301);
+            this.tsHabilitado.Location = new System.Drawing.Point(255, 377);
             this.tsHabilitado.Name = "tsHabilitado";
             this.tsHabilitado.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.tsHabilitado.Properties.Appearance.Options.UseFont = true;
@@ -161,7 +167,7 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             // 
             // txtRTN
             // 
-            this.txtRTN.Location = new System.Drawing.Point(131, 142);
+            this.txtRTN.Location = new System.Drawing.Point(158, 145);
             this.txtRTN.Name = "txtRTN";
             this.txtRTN.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtRTN.Properties.Appearance.Options.UseFont = true;
@@ -171,7 +177,7 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(131, 105);
+            this.txtDescripcion.Location = new System.Drawing.Point(158, 108);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtDescripcion.Properties.Appearance.Options.UseFont = true;
@@ -182,7 +188,7 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(131, 66);
+            this.txtCodigo.Location = new System.Drawing.Point(158, 69);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.txtCodigo.Properties.Appearance.Options.UseFont = true;
@@ -195,17 +201,61 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             // 
             this.lblProveedor.AutoSize = true;
             this.lblProveedor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProveedor.Location = new System.Drawing.Point(70, 69);
+            this.lblProveedor.Location = new System.Drawing.Point(18, 72);
             this.lblProveedor.Name = "lblProveedor";
             this.lblProveedor.Size = new System.Drawing.Size(54, 17);
             this.lblProveedor.TabIndex = 72;
             this.lblProveedor.Text = "Codigo:";
             // 
+            // txtContacto
+            // 
+            this.txtContacto.Location = new System.Drawing.Point(158, 184);
+            this.txtContacto.Name = "txtContacto";
+            this.txtContacto.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtContacto.Properties.Appearance.Options.UseFont = true;
+            this.txtContacto.Properties.MaxLength = 50;
+            this.txtContacto.Size = new System.Drawing.Size(239, 24);
+            this.txtContacto.TabIndex = 73;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.label2.Location = new System.Drawing.Point(18, 187);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(133, 17);
+            this.label2.TabIndex = 74;
+            this.label2.Text = "Persona de Contacto:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.label4.Location = new System.Drawing.Point(18, 224);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 17);
+            this.label4.TabIndex = 76;
+            this.label4.Text = "Telefono:";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(158, 221);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.txtTelefono.Properties.Appearance.Options.UseFont = true;
+            this.txtTelefono.Properties.MaxLength = 30;
+            this.txtTelefono.Size = new System.Drawing.Size(239, 24);
+            this.txtTelefono.TabIndex = 75;
+            // 
             // frmProveedorCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 427);
+            this.ClientSize = new System.Drawing.Size(511, 479);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtContacto);
             this.Controls.Add(this.lblProveedor);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.cmdCancelar);
@@ -225,6 +275,8 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
             ((System.ComponentModel.ISupportInitialize)(this.txtRTN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtContacto.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,5 +297,9 @@ namespace ERP_INTECOLI.Mantenimiento.Proveedor
         private System.Windows.Forms.Label lblOperacion;
         private DevExpress.XtraEditors.TextEdit txtCodigo;
         private System.Windows.Forms.Label lblProveedor;
+        private DevExpress.XtraEditors.TextEdit txtContacto;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.TextEdit txtTelefono;
     }
 }
