@@ -20,6 +20,7 @@ namespace ERP_INTECOLI.Compras
     {
         UserLogin UsuarioLogueado;
         DataOperations dp = new DataOperations();
+        PuntoVenta PuntoDeVentaActual;
         TipoOperacion tipooperacion;
         int IdOrdenCompraActual;
         int IdEstadoOrdenCompra;
@@ -31,10 +32,11 @@ namespace ERP_INTECOLI.Compras
             Update = 2
         }
 
-        public frmOrdenesCompraMain(UserLogin pUserLog, TipoOperacion ptipo)
+        public frmOrdenesCompraMain(UserLogin pUserLog, TipoOperacion ptipo, PuntoVenta pPuntoDeVentaActual)
         {
             InitializeComponent();
             UsuarioLogueado = pUserLog;
+            this.PuntoDeVentaActual = pPuntoDeVentaActual;
             tipooperacion = ptipo;
             switch (tipooperacion)
             {
@@ -604,7 +606,7 @@ namespace ERP_INTECOLI.Compras
                         cmd.Parameters.AddWithValue("@subtotal",txtSubtotal.EditValue);
                         cmd.Parameters.AddWithValue("@total",txtTotal.EditValue);
                         cmd.Parameters.AddWithValue("@id_user_cre", UsuarioLogueado.Id);
-
+                        cmd.Parameters.AddWithValue("@id_punto_venta", PuntoDeVentaActual.ID);
                         int id_header = Convert.ToInt32(cmd.ExecuteScalar());
 
                         foreach (dsCompras.oc_detalleRow row in dsCompras1.oc_detalle.Rows)

@@ -20,10 +20,13 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
     {
         UserLogin UsuarioLogeado;
         DataOperations dp = new DataOperations();
-        public frmEstudiantesGroup(UserLogin pUserLogin)
+        PuntoVenta PuntoDeVentaActual;
+
+        public frmEstudiantesGroup(UserLogin pUserLogin, PuntoVenta pPuntoDeVentaActual)
         {
             InitializeComponent();
             UsuarioLogeado = pUserLogin;
+            this.PuntoDeVentaActual = pPuntoDeVentaActual;
             load_data();
             txtParametro.Focus();
         }
@@ -37,6 +40,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 SqlCommand cmd = new SqlCommand("sp_load_estudiantes", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@ver_todos", tsVerTodos.IsOn);
+                cmd.Parameters.AddWithValue("@id_punto_venta", this.PuntoDeVentaActual.ID);
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 dsEstudiantes1.estudiantes.Clear();
                 adat.Fill(dsEstudiantes1.estudiantes);
@@ -77,7 +81,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
         private void cmdNuevo_Click(object sender, EventArgs e)
         {
-            frmEstudiantes frm = new frmEstudiantes(UsuarioLogeado, frmEstudiantes.TipoEdicion.Nuevo);
+            frmEstudiantes frm = new frmEstudiantes(UsuarioLogeado, frmEstudiantes.TipoEdicion.Nuevo, PuntoDeVentaActual);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 load_data();
@@ -89,7 +93,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             switch (e.Cell.Column.Key)
             {
                 case "editar":
-                    frmEstudiantes frm = new frmEstudiantes(this.UsuarioLogeado, frmEstudiantes.TipoEdicion.Editar, Convert.ToInt32(e.Cell.Row.Cells["id_estudiante"].Value));
+                    frmEstudiantes frm = new frmEstudiantes(this.UsuarioLogeado, frmEstudiantes.TipoEdicion.Editar, Convert.ToInt32(e.Cell.Row.Cells["id_estudiante"].Value), PuntoDeVentaActual);
                     frm.ShowDialog(this);
                     load_data();
                     break;
@@ -120,7 +124,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             var gridview = (GridView)gridEstudiantes.FocusedView;
             var row = (dsEstudiantes.estudiantesRow)gridview.GetFocusedDataRow();
 
-            frmEstudiantes frm = new frmEstudiantes(this.UsuarioLogeado, frmEstudiantes.TipoEdicion.Editar, row.id_estudiante);
+            frmEstudiantes frm = new frmEstudiantes(this.UsuarioLogeado, frmEstudiantes.TipoEdicion.Editar, row.id_estudiante, PuntoDeVentaActual);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 load_data();

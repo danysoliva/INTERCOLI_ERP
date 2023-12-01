@@ -61,8 +61,8 @@ namespace ERP_INTECOLI.Compras
             this.xrLabel40 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblFechaOrden = new DevExpress.XtraReports.UI.XRLabel();
             this.lblNumeroOrden = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblRTNPuntoVenta = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblTelefonoPuntoVenta = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
@@ -85,9 +85,7 @@ namespace ERP_INTECOLI.Compras
             this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblDireccionPuntoVenta = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -111,9 +109,7 @@ namespace ERP_INTECOLI.Compras
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel1,
-            this.xrLabel2,
-            this.xrLabel3,
+            this.lblDireccionPuntoVenta,
             this.xrTable1,
             this.xrLine2,
             this.lblCliente,
@@ -133,8 +129,8 @@ namespace ERP_INTECOLI.Compras
             this.xrLabel40,
             this.lblFechaOrden,
             this.lblNumeroOrden,
-            this.xrLabel5,
-            this.xrLabel4,
+            this.lblRTNPuntoVenta,
+            this.lblTelefonoPuntoVenta,
             this.xrLabel6,
             this.xrPictureBox1});
             this.ReportHeader.HeightF = 306.245F;
@@ -401,7 +397,7 @@ namespace ERP_INTECOLI.Compras
             // 
             this.lblNumeroOrden.AnchorHorizontal = DevExpress.XtraReports.UI.HorizontalAnchorStyles.Left;
             this.lblNumeroOrden.Font = new DevExpress.Drawing.DXFont("Calibri", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.lblNumeroOrden.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 111.7867F);
+            this.lblNumeroOrden.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 133.9951F);
             this.lblNumeroOrden.Name = "lblNumeroOrden";
             this.lblNumeroOrden.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblNumeroOrden.SizeF = new System.Drawing.SizeF(323.9582F, 22.99998F);
@@ -410,30 +406,30 @@ namespace ERP_INTECOLI.Compras
             this.lblNumeroOrden.Text = "Numero";
             this.lblNumeroOrden.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLabel5
+            // lblRTNPuntoVenta
             // 
-            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Calibri", 9.75F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            this.lblRTNPuntoVenta.Font = new DevExpress.Drawing.DXFont("Calibri", 9.75F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
             new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 95.7867F);
-            this.xrLabel5.Name = "xrLabel5";
-            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(323.9582F, 16F);
-            this.xrLabel5.StylePriority.UseFont = false;
-            this.xrLabel5.StylePriority.UseTextAlignment = false;
-            this.xrLabel5.Text = "R.T.N.  1804-1972-015523";
-            this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.lblRTNPuntoVenta.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 117.9951F);
+            this.lblRTNPuntoVenta.Name = "lblRTNPuntoVenta";
+            this.lblRTNPuntoVenta.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblRTNPuntoVenta.SizeF = new System.Drawing.SizeF(323.9582F, 16F);
+            this.lblRTNPuntoVenta.StylePriority.UseFont = false;
+            this.lblRTNPuntoVenta.StylePriority.UseTextAlignment = false;
+            this.lblRTNPuntoVenta.Text = "R.T.N.  1804-1972-015523";
+            this.lblRTNPuntoVenta.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
-            // xrLabel4
+            // lblTelefonoPuntoVenta
             // 
-            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 79.78668F);
-            this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(323.9582F, 16F);
-            this.xrLabel4.StylePriority.UseFont = false;
-            this.xrLabel4.StylePriority.UseTextAlignment = false;
-            this.xrLabel4.Text = "Tel: 2608-3403 / 9518-2139";
-            this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.lblTelefonoPuntoVenta.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
+            this.lblTelefonoPuntoVenta.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 101.9951F);
+            this.lblTelefonoPuntoVenta.Name = "lblTelefonoPuntoVenta";
+            this.lblTelefonoPuntoVenta.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblTelefonoPuntoVenta.SizeF = new System.Drawing.SizeF(323.9582F, 16F);
+            this.lblTelefonoPuntoVenta.StylePriority.UseFont = false;
+            this.lblTelefonoPuntoVenta.StylePriority.UseTextAlignment = false;
+            this.lblTelefonoPuntoVenta.Text = "Tel: 2608-3403 / 9518-2139";
+            this.lblTelefonoPuntoVenta.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel6
             // 
@@ -474,10 +470,10 @@ namespace ERP_INTECOLI.Compras
             // lblComentario
             // 
             this.lblComentario.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
-            this.lblComentario.LocationFloat = new DevExpress.Utils.PointFloat(103.4169F, 1.999969F);
+            this.lblComentario.LocationFloat = new DevExpress.Utils.PointFloat(103.4169F, 3.125F);
             this.lblComentario.Name = "lblComentario";
             this.lblComentario.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblComentario.SizeF = new System.Drawing.SizeF(346.5831F, 72.12492F);
+            this.lblComentario.SizeF = new System.Drawing.SizeF(346.5831F, 70.99991F);
             this.lblComentario.StylePriority.UseFont = false;
             this.lblComentario.StylePriority.UseTextAlignment = false;
             this.lblComentario.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -680,47 +676,19 @@ namespace ERP_INTECOLI.Compras
             this.xrTableCell9.Text = "TOTAL";
             this.xrTableCell9.Weight = 1.5906989310258854D;
             // 
-            // xrLabel1
+            // lblDireccionPuntoVenta
             // 
-            this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 66.6665F);
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(323.9581F, 13F);
-            this.xrLabel1.StylePriority.UseBorders = false;
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "Local #22, El Progreso, Yoro, C.A.";
-            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel2
-            // 
-            this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 53.6665F);
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(323.9582F, 13F);
-            this.xrLabel2.StylePriority.UseBorders = false;
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "Edificio Honduplaza, 2a Planta,";
-            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel3
-            // 
-            this.xrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 37.95818F);
-            this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(323.9582F, 15.70833F);
-            this.xrLabel3.StylePriority.UseBorders = false;
-            this.xrLabel3.StylePriority.UseFont = false;
-            this.xrLabel3.StylePriority.UseTextAlignment = false;
-            this.xrLabel3.Text = "Bo. La Sirena, 2 calle, 6 ave. S.E.";
-            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblDireccionPuntoVenta.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.lblDireccionPuntoVenta.Font = new DevExpress.Drawing.DXFont("Calibri", 10F);
+            this.lblDireccionPuntoVenta.LocationFloat = new DevExpress.Utils.PointFloat(199.4483F, 33.41668F);
+            this.lblDireccionPuntoVenta.Name = "lblDireccionPuntoVenta";
+            this.lblDireccionPuntoVenta.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblDireccionPuntoVenta.SizeF = new System.Drawing.SizeF(323.9582F, 68.5784F);
+            this.lblDireccionPuntoVenta.StylePriority.UseBorders = false;
+            this.lblDireccionPuntoVenta.StylePriority.UseFont = false;
+            this.lblDireccionPuntoVenta.StylePriority.UseTextAlignment = false;
+            this.lblDireccionPuntoVenta.Text = "Punto de Venta";
+            this.lblDireccionPuntoVenta.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // rptOrdenCompra
             // 
@@ -776,8 +744,8 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraReports.UI.XRLabel xrLabel40;
         private DevExpress.XtraReports.UI.XRLabel lblFechaOrden;
         private DevExpress.XtraReports.UI.XRLabel lblNumeroOrden;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel5;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel4;
+        private DevExpress.XtraReports.UI.XRLabel lblRTNPuntoVenta;
+        private DevExpress.XtraReports.UI.XRLabel lblTelefonoPuntoVenta;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
@@ -800,8 +768,6 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell7;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+        private DevExpress.XtraReports.UI.XRLabel lblDireccionPuntoVenta;
     }
 }

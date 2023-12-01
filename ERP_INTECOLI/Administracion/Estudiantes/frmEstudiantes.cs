@@ -22,6 +22,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private int Idestudiante = 0;
         //Estudiante vEstudiante;
         ArrayList ListaTelefonos;
+        PuntoVenta PuntoDeVentaActual;
         private Int64 IdEstudianteRecomendo = 0;
         bool IsEmpleado;
         public enum TipoEdicion
@@ -33,11 +34,12 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private UserLogin UsuarioLogeado;
         private TipoEdicion pTipoEdit;
 
-        public frmEstudiantes(UserLogin pUserLogin, TipoEdicion pTipo)
+        public frmEstudiantes(UserLogin pUserLogin, TipoEdicion pTipo, PuntoVenta pPuntoDeVentaActual)
         {
             InitializeComponent();
             pTipoEdit = pTipo;
             UsuarioLogeado = pUserLogin;
+            this.PuntoDeVentaActual = pPuntoDeVentaActual;
             
             CargarNiveles();
             CargarZonas();
@@ -91,12 +93,12 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             }
         }
 
-        public frmEstudiantes(UserLogin pUserLogin, TipoEdicion pTipo, int pid_estudiante)
+        public frmEstudiantes(UserLogin pUserLogin, TipoEdicion pTipo, int pid_estudiante, PuntoVenta pPuntoDeVentaActual)
         {
             InitializeComponent();
             pTipoEdit = pTipo;
             UsuarioLogeado = pUserLogin;
-
+            this.PuntoDeVentaActual = pPuntoDeVentaActual;
             Idestudiante = pid_estudiante;
             CargarNiveles();
             CargarZonas();

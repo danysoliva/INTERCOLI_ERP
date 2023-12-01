@@ -32,6 +32,12 @@ namespace ERP_INTECOLI.Compras
             lblIsv.Text = oc.Impuesto.ToString();
             lblTotal.Text = oc.Total.ToString();
 
+            PuntoVenta PuntoVentaActual = new PuntoVenta();
+            PuntoVentaActual.RecuperaRegistro(oc.Id_PuntoVenta);
+            lblDireccionPuntoVenta.Text = PuntoVentaActual.Direccion + " " + PuntoVentaActual.Ciudad + " " + PuntoVentaActual.Departamento;
+            lblTelefonoPuntoVenta.Text = PuntoVentaActual.Telefono;
+            lblRTNPuntoVenta.Text = PuntoVentaActual.RTN;
+
         }
 
         private void load_detalle(int PIdOrdenCompraActual)

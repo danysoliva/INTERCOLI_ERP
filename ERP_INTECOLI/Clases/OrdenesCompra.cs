@@ -29,6 +29,7 @@ namespace ERP_INTECOLI.Clases
         int id_UserModi;
         string usuario_Modi;
         DateTime fecha_Modi;
+        int id_PuntoVenta;
 
         public bool Recuperado { get => recuperado; set => recuperado = value; }
         public int Id_OrdenCompra { get => id_OrdenCompra; set => id_OrdenCompra = value; }
@@ -49,6 +50,7 @@ namespace ERP_INTECOLI.Clases
         public int Id_UserModi { get => id_UserModi; set => id_UserModi = value; }
         public string Usuario_Modi { get => usuario_Modi; set => usuario_Modi = value; }
         public DateTime Fecha_Modi { get => fecha_Modi; set => fecha_Modi = value; }
+        public int Id_PuntoVenta { get => id_PuntoVenta; set => id_PuntoVenta = value; }
 
         public bool RecuperarRegistos(int pIdOrdenCompra) 
         {
@@ -84,6 +86,7 @@ namespace ERP_INTECOLI.Clases
                     Usuario_Modi = dr.IsDBNull(dr.GetOrdinal("usuario_Modi")) ? "" : dr.GetString(dr.GetOrdinal("usuario_Modi"));
                     if (!dr.IsDBNull(dr.GetOrdinal("fecha_modi")))
                         Fecha_Modi = dr.GetDateTime(17);
+                    Id_PuntoVenta = dr.GetInt32(18);
                     Recuperado = true;
                 }
                 dr.Close();

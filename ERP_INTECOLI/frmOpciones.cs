@@ -94,6 +94,24 @@ namespace ERP_INTECOLI
 
         private void navEstudiantes_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            string HostName = Dns.GetHostName();
+            FacturacionEquipo EquipoActual = new FacturacionEquipo();
+            PuntoVenta puntoVenta1 = new PuntoVenta();
+
+            if (EquipoActual.RecuperarRegistro(HostName))
+            {
+                if (!puntoVenta1.RecuperaRegistro(EquipoActual.id_punto_venta))
+                {
+                    CajaDialogo.Error("Este Equipo de Nombre: " + HostName + " no esta Configurado en ningun Punto de Venta!");
+                    return;
+                }
+            }
+            else
+            {
+                CajaDialogo.Error("Este Equipo de Nombre: " + HostName + " no esta Configurado en ningun Punto de Venta!");
+                return;
+            }
+
             bool accesoprevio = false;
             int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
             switch (idNivel)                                                      //11 = Jaguar //12 = Success
@@ -109,7 +127,7 @@ namespace ERP_INTECOLI
                 case 4://Depth With Delta
                 case 5://Depth Without Delta
                     accesoprevio = true;
-                    frmEstudiantesGroup frm1 = new frmEstudiantesGroup(this.UsuarioLogeado);
+                    frmEstudiantesGroup frm1 = new frmEstudiantesGroup(this.UsuarioLogeado, puntoVenta1);
                     frm1.MdiParent = this.MdiParent;
                     frm1.Show();
 
@@ -122,7 +140,7 @@ namespace ERP_INTECOLI
             {
                 if (UsuarioLogeado.ValidarNivelPermisos(9))
                 {
-                    frmEstudiantesGroup frm1 = new frmEstudiantesGroup(this.UsuarioLogeado);
+                    frmEstudiantesGroup frm1 = new frmEstudiantesGroup(this.UsuarioLogeado, puntoVenta1);
                     frm1.MdiParent = this.MdiParent;
                     frm1.Show();
                 }
@@ -385,6 +403,24 @@ namespace ERP_INTECOLI
 
         private void navComprasOrdenes_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            string HostName = Dns.GetHostName();
+            FacturacionEquipo EquipoActual = new FacturacionEquipo();
+            PuntoVenta puntoVenta1 = new PuntoVenta();
+
+            if (EquipoActual.RecuperarRegistro(HostName))
+            {
+                if (!puntoVenta1.RecuperaRegistro(EquipoActual.id_punto_venta))
+                {
+                    CajaDialogo.Error("Este Equipo de Nombre: " + HostName + " no esta Configurado en ningun Punto de Venta!");
+                    return;
+                }
+            }
+            else
+            {
+                CajaDialogo.Error("Este Equipo de Nombre: "+HostName+" no esta Configurado en ningun Punto de Venta!");
+                return;
+            }
+
             bool accesoprevio = false;
             int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
             switch (idNivel)                                                      //11 = Jaguar //12 = Success
@@ -400,7 +436,7 @@ namespace ERP_INTECOLI
                 case 4://Depth With Delta
                 case 5://Depth Without Delta
                     accesoprevio = true;
-                    frmOrdenesCompraMain mtx = new frmOrdenesCompraMain(UsuarioLogeado, frmOrdenesCompraMain.TipoOperacion.New);
+                    frmOrdenesCompraMain mtx = new frmOrdenesCompraMain(UsuarioLogeado, frmOrdenesCompraMain.TipoOperacion.New, puntoVenta1);
                     mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
@@ -414,7 +450,7 @@ namespace ERP_INTECOLI
             {
                 if (UsuarioLogeado.ValidarNivelPermisos(24))
                 {
-                    frmOrdenesCompraMain mtx = new frmOrdenesCompraMain(UsuarioLogeado, frmOrdenesCompraMain.TipoOperacion.New);
+                    frmOrdenesCompraMain mtx = new frmOrdenesCompraMain(UsuarioLogeado, frmOrdenesCompraMain.TipoOperacion.New, puntoVenta1);
                     mtx.MdiParent = this.MdiParent;
                     mtx.Show();
 
@@ -1395,6 +1431,24 @@ namespace ERP_INTECOLI
 
         private void navFacturasProvee_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            string HostName = Dns.GetHostName();
+            FacturacionEquipo EquipoActual = new FacturacionEquipo();
+            PuntoVenta puntoVenta1 = new PuntoVenta();
+
+            if (EquipoActual.RecuperarRegistro(HostName))
+            {
+                if (!puntoVenta1.RecuperaRegistro(EquipoActual.id_punto_venta))
+                {
+                    CajaDialogo.Error("Este Equipo de Nombre: " + HostName + " no esta Configurado en ningun Punto de Venta!");
+                    return;
+                }
+            }
+            else
+            {
+                CajaDialogo.Error("Este Equipo de Nombre: " + HostName + " no esta Configurado en ningun Punto de Venta!");
+                return;
+            }
+
             bool accesoprevio = false;
             int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
             switch (idNivel)                                                      //11 = Jaguar //12 = Success
