@@ -19,6 +19,7 @@ namespace ERP_INTECOLI.Compras
     {
         DataOperations dp = new DataOperations();
         UserLogin UsuarioLogueado;
+        PuntoVenta PuntoVentaActual;
         public int Id_FacturaActual = 0;
         int Id_OrdenCompra = 0;
         int Id_Estado;
@@ -30,10 +31,11 @@ namespace ERP_INTECOLI.Compras
         }
 
         TipoOperacion Operacion;
-        public frmFacturasProveedoresMain(UserLogin pUserLog, TipoOperacion pTipo)
+        public frmFacturasProveedoresMain(UserLogin pUserLog, TipoOperacion pTipo, PuntoVenta pPuntoVentaActual)
         {
             InitializeComponent();
             UsuarioLogueado = pUserLog;
+            PuntoVentaActual = pPuntoVentaActual;
             Operacion = pTipo;
 
             switch (Operacion)
@@ -231,7 +233,7 @@ namespace ERP_INTECOLI.Compras
                         cmd.Parameters.AddWithValue("@id_estado", 2);
                         cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogueado.Id);
                         cmd.Parameters.AddWithValue("@comentario",txtComentarios.Text);
-                        cmd.Parameters.AddWithValue("@punto_venta", 2); //No lo definido.
+                        cmd.Parameters.AddWithValue("@punto_venta", PuntoVentaActual.ID);
                         cmd.Parameters.AddWithValue("@subtotal", txtSubtotal.EditValue);
                         cmd.Parameters.AddWithValue("@impuesto", txtImpuesto.EditValue);
                         cmd.Parameters.AddWithValue("@total", txtTotal.EditValue);
@@ -338,7 +340,7 @@ namespace ERP_INTECOLI.Compras
 
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
-            frmSearchFacturasProveedor frm = new frmSearchFacturasProveedor(frmSearchFacturasProveedor.FiltroFacturas.Todas);
+            frmSearchFacturasProveedor frm = new frmSearchFacturasProveedor(frmSearchFacturasProveedor.FiltroFacturas.Todas, PuntoVentaActual);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 Id_FacturaActual = frm.IdFacturaSeleccionado;
@@ -494,6 +496,16 @@ namespace ERP_INTECOLI.Compras
             {
                 CajaDialogo.Error(ex.Message);
             }
+        }
+
+        private void cmdAnterior_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdSiguiente_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

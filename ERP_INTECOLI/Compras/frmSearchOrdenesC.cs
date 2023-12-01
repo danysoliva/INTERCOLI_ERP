@@ -17,6 +17,7 @@ namespace ERP_INTECOLI.Compras
     public partial class frmSearchOrdenesC : DevExpress.XtraEditors.XtraForm
     {
         DataOperations dp = new DataOperations();
+        PuntoVenta PuntoVentaActual;
         public int IdOrdenesSeleccionado = 0;
 
         public enum FiltroOrdenesCompra
@@ -27,10 +28,11 @@ namespace ERP_INTECOLI.Compras
 
         FiltroOrdenesCompra Filtro;
 
-        public frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra pfiltro)
+        public frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra pfiltro, PuntoVenta pPuntoVentaActual)
         {
             InitializeComponent();
             Filtro = pfiltro;
+            this.PuntoVentaActual = pPuntoVentaActual;
             LoadData();
         }
 
@@ -57,7 +59,7 @@ namespace ERP_INTECOLI.Compras
                     default:
                         break;
                 }
-
+                cmd.Parameters.AddWithValue("@PuntoVentaActual", PuntoVentaActual.ID);
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 dsCompras1.orden_compra.Clear();
                 adat.Fill(dsCompras1.orden_compra);

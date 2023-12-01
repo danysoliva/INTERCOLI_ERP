@@ -326,7 +326,7 @@ namespace ERP_INTECOLI.Compras
 
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
-            frmSearchOrdenesC frm = new frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra.Todas);
+            frmSearchOrdenesC frm = new frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra.Todas, PuntoDeVentaActual);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 //CargarSolicitud(frm.IdSolicitudSeleccionado);
@@ -440,6 +440,7 @@ namespace ERP_INTECOLI.Compras
                     SqlCommand cmd = new SqlCommand("[sp_get_last_or_first_solicitud_and_oc]", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@case", 3);//Ordenes de Compra
+                    cmd.Parameters.AddWithValue("@PuntoVentaActual", PuntoDeVentaActual.ID);
                     IdOrdenCompraActual = Convert.ToInt32(cmd.ExecuteScalar());
                     CargarInfoOrden(IdOrdenCompraActual);
                     con.Close();
@@ -461,6 +462,7 @@ namespace ERP_INTECOLI.Compras
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@case", 3);
                     cmd.Parameters.AddWithValue("@idactual", IdOrdenCompraActual);
+                    cmd.Parameters.AddWithValue("@PuntoVentaActual", PuntoDeVentaActual.ID);
                     IdOrdenCompraActual = Convert.ToInt32(cmd.ExecuteScalar());
 
                     if (IdOrdenCompraActual == 0)
@@ -497,6 +499,7 @@ namespace ERP_INTECOLI.Compras
                     SqlCommand cmd = new SqlCommand("[sp_get_last_or_first_solicitud_and_oc]", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@case", 4);
+                    cmd.Parameters.AddWithValue("@PuntoVentaActual", PuntoDeVentaActual.ID);
                     IdOrdenCompraActual = Convert.ToInt32(cmd.ExecuteScalar());
                     CargarInfoOrden(IdOrdenCompraActual);
                     con.Close();
@@ -518,6 +521,7 @@ namespace ERP_INTECOLI.Compras
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@case", 3);
                     cmd.Parameters.AddWithValue("@idactual", IdOrdenCompraActual);
+                    cmd.Parameters.AddWithValue("@PuntoVentaActual", PuntoDeVentaActual.ID);
                     IdOrdenCompraActual = Convert.ToInt32(cmd.ExecuteScalar());
 
                     if (IdOrdenCompraActual == 0)
@@ -527,6 +531,7 @@ namespace ERP_INTECOLI.Compras
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@case", 4);
                         cmd.Parameters.AddWithValue("@idactual", IdOrdenCompraActual);
+                        cmd.Parameters.AddWithValue("@PuntoVentaActual", PuntoDeVentaActual.ID);
                         IdOrdenCompraActual = Convert.ToInt32(cmd.ExecuteScalar());
                     }
 

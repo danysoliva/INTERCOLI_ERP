@@ -18,6 +18,7 @@ namespace ERP_INTECOLI.Compras
     {
         DataOperations dp = new DataOperations();
         public int IdFacturaSeleccionado = 0;
+        PuntoVenta PuntoVentaActual;
         public enum FiltroFacturas
         {
             Todas = 1,
@@ -25,10 +26,11 @@ namespace ERP_INTECOLI.Compras
         }
         FiltroFacturas Filtro;
 
-        public frmSearchFacturasProveedor(FiltroFacturas pfiltro)
+        public frmSearchFacturasProveedor(FiltroFacturas pfiltro, PuntoVenta pPuntoVentaActual)
         {
             InitializeComponent();
             Filtro = pfiltro;
+            this.PuntoVentaActual = pPuntoVentaActual;
             LoadData();
         }
 
@@ -55,7 +57,7 @@ namespace ERP_INTECOLI.Compras
                     default:
                         break;
                 }
-
+                cmd.Parameters.AddWithValue("@PuntoVentaActual", PuntoVentaActual.ID);
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 dsCompras1.search_facturas.Clear();
                 adat.Fill(dsCompras1.search_facturas);
