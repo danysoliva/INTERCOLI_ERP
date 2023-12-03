@@ -472,6 +472,7 @@ namespace ERP_INTECOLI.Compras
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@case", 4);
                         cmd.Parameters.AddWithValue("@idactual", IdOrdenCompraActual);
+                        cmd.Parameters.AddWithValue("@PuntoVentaActual", PuntoDeVentaActual.ID);
                         IdOrdenCompraActual = Convert.ToInt32(cmd.ExecuteScalar());
                     }
                     CargarInfoOrden(IdOrdenCompraActual);
@@ -758,6 +759,130 @@ namespace ERP_INTECOLI.Compras
             else
             {
                 CajaDialogo.Error("Debe seleccionar una Orden de Compra!");
+                return;
+            }
+        }
+
+        private void panelControl1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (IdOrdenCompraActual > 0)
+                {
+                    popupMenu1.ShowPopup(Cursor.Position);
+                }
+            }
+        }
+
+        private void grDetalle_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (IdOrdenCompraActual > 0)
+                {
+                    popupMenu1.ShowPopup(Cursor.Position);
+                }
+            }
+        }
+
+        private void panelControl2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (IdOrdenCompraActual > 0)
+                {
+                    popupMenu1.ShowPopup(Cursor.Position);
+                }
+            }
+        }
+
+        private void barbtnCancelOrden_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DialogResult r = CajaDialogo.Pregunta("¿Confirma que desea Cancelar esta Orden de Compra?");
+            if (r != DialogResult.Yes)
+                return;
+
+            switch (tipooperacion)
+            {
+                case TipoOperacion.New:
+                    break;
+                case TipoOperacion.Update:
+                    CancelarOrdenCompra(IdOrdenCompraActual);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void CancelarOrdenCompra(int pidOrdenCompraActual)
+        {
+            OrdenesCompra oc = new OrdenesCompra();
+            oc.RecuperarRegistos(pidOrdenCompraActual);
+
+            bool Proceder;
+            string mensaje = "";
+
+            switch (oc.Id_Estado)
+            {
+                case 1: //Nueva 
+                    Proceder = true;
+                    break;
+
+                case 5://Pendiente Aprobacion
+                    Proceder = true;
+                    break;
+
+                case 2: //Abierta
+                    Proceder = true;
+                    break;
+
+                case 3: //Cerrada
+                    Proceder = false;
+                    mensaje = "La Orden de Compra esta Cerrada, esta Ligada a una Factura Proveedor, debe Cancelar la Factura primero!";
+                    break;
+
+                case 4: //Cancelada
+                    Proceder = false;
+                    mensaje = "La Orden de Conpra se encuentra Cancelada!";
+                    break;
+
+                default:
+                    Proceder = false;
+                    break;
+            }
+
+            popupMenu1.HidePopup();
+
+            if (Proceder)
+            {
+                try
+                {
+                    SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("sp_compras_cancelar_orden", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_OrdenCompra", pidOrdenCompraActual);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                    CajaDialogo.Information("Orden de Compra Cancelada!");
+
+                    cmdNuevo.Enabled = false;
+                    cmdAddDetalle.Enabled = false;
+                    txtComentarios.Enabled = false;
+                    grDetalle.Enabled = false;
+                    dtFechaContabilizacion.Enabled = false;
+                    txtComentarios.Text = "Cancelada";
+
+                }
+                catch (Exception ex)
+                {
+                    CajaDialogo.Error(ex.Message);
+                }
+            }
+            else
+            {
+                CajaDialogo.Error(mensaje);
                 return;
             }
         }

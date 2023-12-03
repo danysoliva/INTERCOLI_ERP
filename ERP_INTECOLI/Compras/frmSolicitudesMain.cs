@@ -333,6 +333,7 @@ namespace ERP_INTECOLI.Compras
                     txtComentarios.Enabled = true;
                     grDetalle.Enabled = true;
                     dtFechaContabilizacion.Enabled = true;
+                    btnEditar.Enabled = false;
                     break;
 
                 case 2://Abierta
@@ -341,6 +342,7 @@ namespace ERP_INTECOLI.Compras
                     txtComentarios.Enabled = true;
                     grDetalle.Enabled = true;
                     dtFechaContabilizacion.Enabled = true;
+                    btnEditar.Enabled = true;
                     break;
 
                 case 3://Cerrada
@@ -350,6 +352,7 @@ namespace ERP_INTECOLI.Compras
                     grDetalle.Enabled = false;
                     dtFechaContabilizacion.Enabled = false;
                     cmdGuardar.Enabled = false;
+                    btnEditar.Enabled = false;
                     break;
 
                 case 4://Cancelada
@@ -359,6 +362,7 @@ namespace ERP_INTECOLI.Compras
                     grDetalle.Enabled = false;
                     dtFechaContabilizacion.Enabled = false;
                     cmdGuardar.Enabled = false;
+                    btnEditar.Enabled = false;
                     break;
 
                 default:
@@ -477,35 +481,76 @@ namespace ERP_INTECOLI.Compras
 
         private void CancelarSolicitud(int pidSolicitudActual)
         {
-           
+            if (pidSolicitudActual > 0)
+            { 
+                Solicitud soli = new Solicitud();
+                soli.RecuperarRegistros(pidSolicitudActual);
 
-            popupMenu1.HidePopup();
             
+                bool Proceder = false;
+                string mensaje = "";
+                switch (soli.Id_estado)
+                {
+                    case 1: //Nueva 
+                        Proceder = true;
+                        break;
 
-            try
-            {
-                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("sp_solicitud_compra_cancelar", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idSolicitudActual", pidSolicitudActual);
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                    case 2: //Abierta
+                        Proceder = true;
+                        break;
 
-                CajaDialogo.Information("Soliciud Cancelada!");
+                    case 3: //Cerrada
+                        Proceder = false;
+                        mensaje = "La Solicitud se encuentra Cerrada!";
+                        break;
 
-                cmdNuevo.Enabled = false;
-                cmdAddDetalle.Enabled = false;
-                txtComentarios.Enabled = false;
-                grDetalle.Enabled = false;
-                dtFechaContabilizacion.Enabled = false;
-                txtComentarios.Text = "Cancelada";
+                    case 4: //Cancelada
+                        Proceder = false;
+                        mensaje = "La Solicitud se encuentra Cancelada!";
+                        break;
 
+                    default:
+                        Proceder = false;
+                        break;
+                }
+
+                popupMenu1.HidePopup();
+
+
+                if (Proceder)
+                {
+                    try
+                    {
+                        SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand("sp_solicitud_compra_cancelar", conn);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@idSolicitudActual", pidSolicitudActual);
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                        CajaDialogo.Information("Soliciud Cancelada!");
+
+                        cmdNuevo.Enabled = false;
+                        cmdAddDetalle.Enabled = false;
+                        txtComentarios.Enabled = false;
+                        grDetalle.Enabled = false;
+                        dtFechaContabilizacion.Enabled = false;
+                        txtComentarios.Text = "Cancelada";
+
+                    }
+                    catch (Exception ex)
+                    {
+                        CajaDialogo.Error(ex.Message);
+                    }
+                }
+                else
+                {
+                    CajaDialogo.Error(mensaje);
+                    return;
+                }
             }
-            catch (Exception ex)
-            {
-                CajaDialogo.Error(ex.Message);
-            }
+
         }
 
         private void frmSolicitudesMain_MouseDown(object sender, MouseEventArgs e)
@@ -556,6 +601,7 @@ namespace ERP_INTECOLI.Compras
                     SqlCommand cmd = new SqlCommand("[sp_get_last_or_first_solicitud_and_oc]", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@case", 1);//Solicitudes de Compra
+                    cmd.Parameters.AddWithValue("@PuntoVentaActual", 0);
                     IdSolicitudActual = Convert.ToInt32(cmd.ExecuteScalar());
                     CargarSolicitud(IdSolicitudActual);
                     con.Close();
@@ -612,6 +658,7 @@ namespace ERP_INTECOLI.Compras
                     SqlCommand cmd = new SqlCommand("[sp_get_last_or_first_solicitud_and_oc]", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@case", 2);
+                    cmd.Parameters.AddWithValue("@PuntoVentaActual", 0);
                     IdSolicitudActual = Convert.ToInt32(cmd.ExecuteScalar());
                     CargarSolicitud(IdSolicitudActual);
                     con.Close();
@@ -652,6 +699,35 @@ namespace ERP_INTECOLI.Compras
                 {
                     CajaDialogo.Error(ec.Message);
                 }
+            }
+        }
+
+        private void panelControl2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (IdSolicitudActual > 0)
+                {
+                    popupMenu1.ShowPopup(Cursor.Position);
+                }
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            switch (tipooperacion)
+            {
+                case TipoOperacion.New:
+                    break;
+                case TipoOperacion.Update:
+                    cmdGuardar.Enabled = true;
+                    grDetalle.Enabled = true;
+                    txtComentarios.Enabled = true;
+                    dtFechaContabilizacion.Enabled = true;
+                    cmdAddDetalle.Enabled = true;
+                    break;
+                default:
+                    break;
             }
         }
     }

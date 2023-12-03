@@ -453,7 +453,7 @@ namespace ERP_INTECOLI.Compras
             {
                 case TipoOperacion.Insert:
 
-                    frmSearchOrdenesC frm = new frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra.Abiertas);
+                    frmSearchOrdenesC frm = new frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra.Abiertas, PuntoVentaActual);
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
                         Id_OrdenCompra = frm.IdOrdenesSeleccionado;
