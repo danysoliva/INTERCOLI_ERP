@@ -102,6 +102,8 @@ namespace ERP_INTECOLI.Compras
             txtSubtotal.EditValue = fact.Subtotal;
             txtImpuesto.EditValue = fact.Impuesto;
             txtTotal.EditValue = fact.Total;
+            grdSucursales.EditValue = fact.Punto_Venta;
+            grdSucursales.Enabled = false;
 
             CargarDetalleFactura();
 
@@ -356,7 +358,7 @@ namespace ERP_INTECOLI.Compras
             txtSubtotal.EditValue = 0.00;
             txtImpuesto.EditValue = 0.00;
             txtTotal.EditValue = 0.00;
-
+            grdSucursales.Enabled = true;
             Id_FacturaActual = 0;
             Direccion = "";
             Id_Estado = 0;

@@ -144,5 +144,14 @@ namespace ERP_INTECOLI.Compras
                 this.Close();
             }
         }
+
+        private void grdSucursales_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(grdSucursales.EditValue) > 0)
+            {
+                PuntoVentaID = Convert.ToInt32(grdSucursales.EditValue);
+                LoadData();
+            }
+        }
     }
 }
