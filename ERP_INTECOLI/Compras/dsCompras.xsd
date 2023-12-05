@@ -64,6 +64,7 @@
               <xs:element name="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_UserColumnName="usuario" type="xs:string" minOccurs="0" />
               <xs:element name="id_estado" msprop:Generator_ColumnVarNameInTable="columnid_estado" msprop:Generator_ColumnPropNameInRow="id_estado" msprop:Generator_ColumnPropNameInTable="id_estadoColumn" msprop:Generator_UserColumnName="id_estado" type="xs:int" minOccurs="0" />
               <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado" type="xs:string" minOccurs="0" />
+              <xs:element name="docnum" msprop:Generator_ColumnVarNameInTable="columndocnum" msprop:Generator_ColumnPropNameInRow="docnum" msprop:Generator_ColumnPropNameInTable="docnumColumn" msprop:Generator_UserColumnName="docnum" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -89,6 +90,14 @@
               <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:decimal" minOccurs="0" />
               <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado" type="xs:string" minOccurs="0" />
               <xs:element name="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_UserColumnName="usuario" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sucursales" msprop:Generator_TableClassName="sucursalesDataTable" msprop:Generator_TableVarName="tablesucursales" msprop:Generator_RowChangedName="sucursalesRowChanged" msprop:Generator_TablePropName="sucursales" msprop:Generator_RowDeletingName="sucursalesRowDeleting" msprop:Generator_RowChangingName="sucursalesRowChanging" msprop:Generator_RowEvHandlerName="sucursalesRowChangeEventHandler" msprop:Generator_RowDeletedName="sucursalesRowDeleted" msprop:Generator_RowClassName="sucursalesRow" msprop:Generator_UserTableName="sucursales" msprop:Generator_RowEvArgName="sucursalesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="pdv" msprop:Generator_ColumnVarNameInTable="columnpdv" msprop:Generator_ColumnPropNameInRow="pdv" msprop:Generator_ColumnPropNameInTable="pdvColumn" msprop:Generator_UserColumnName="pdv" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -18,7 +18,9 @@ namespace ERP_INTECOLI.Compras
     {
         DataOperations dp = new DataOperations();
         PuntoVenta PuntoVentaActual;
+        UserLogin UsuarioLogueado;
         public int IdOrdenesSeleccionado = 0;
+        int PuntoVentaID;
 
         public enum FiltroOrdenesCompra
         {
@@ -28,12 +30,56 @@ namespace ERP_INTECOLI.Compras
 
         FiltroOrdenesCompra Filtro;
 
-        public frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra pfiltro, PuntoVenta pPuntoVentaActual)
+        public frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra pfiltro, PuntoVenta pPuntoVentaActual, UserLogin pUserLogin)
         {
             InitializeComponent();
             Filtro = pfiltro;
+            UsuarioLogueado = pUserLogin;
             this.PuntoVentaActual = pPuntoVentaActual;
             LoadData();
+            PuntoVentaID = PuntoVentaActual.ID;
+            LoadSucursales();
+            grdSucursales.EditValue = PuntoVentaID;
+
+            int i = Convert.ToInt32(UsuarioLogueado.GrupoUsuario.GrupoUsuarioActivo);
+
+            switch (UsuarioLogueado.GrupoUsuario.GrupoUsuarioActivo)
+            {
+                case GrupoUser.GrupoUsuario.Manager:
+                    grdSucursales.Enabled = true;
+                    break;
+                case GrupoUser.GrupoUsuario.Facturacion:
+                    break;
+                case GrupoUser.GrupoUsuario.Atencion_al_cliente:
+                    break;
+                case GrupoUser.GrupoUsuario.Cajero:
+                    break;
+                case GrupoUser.GrupoUsuario.Supervisor:
+                    grdSucursales.Enabled = true;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void LoadSucursales()
+        {
+            try
+            {
+                string query = @"[sp_get_lista_puntos_de_venta]";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                dsCompras1.sucursales.Clear();
+                adat.Fill(dsCompras1.sucursales);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
         }
 
         private void LoadData()
@@ -59,7 +105,7 @@ namespace ERP_INTECOLI.Compras
                     default:
                         break;
                 }
-                cmd.Parameters.AddWithValue("@PuntoVentaActual", PuntoVentaActual.ID);
+                cmd.Parameters.AddWithValue("@PuntoVentaActual", PuntoVentaID);
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 dsCompras1.orden_compra.Clear();
                 adat.Fill(dsCompras1.orden_compra);
@@ -96,6 +142,15 @@ namespace ERP_INTECOLI.Compras
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
+            }
+        }
+
+        private void grdSucursales_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(grdSucursales.EditValue) > 0)
+            {
+                PuntoVentaID = Convert.ToInt32(grdSucursales.EditValue);
+                LoadData();
             }
         }
     }

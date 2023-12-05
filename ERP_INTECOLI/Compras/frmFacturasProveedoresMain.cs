@@ -24,6 +24,7 @@ namespace ERP_INTECOLI.Compras
         int Id_OrdenCompra = 0;
         int Id_Estado;
         string Direccion;
+        int IDPuntoVenta = 0;
         public enum TipoOperacion
         {
             Insert = 1,
@@ -36,6 +37,7 @@ namespace ERP_INTECOLI.Compras
             InitializeComponent();
             UsuarioLogueado = pUserLog;
             PuntoVentaActual = pPuntoVentaActual;
+            IDPuntoVenta = PuntoVentaActual.ID;
             Operacion = pTipo;
 
             switch (Operacion)
@@ -55,6 +57,28 @@ namespace ERP_INTECOLI.Compras
                 default:
                     break;
             }
+
+            int i = Convert.ToInt32(UsuarioLogueado.GrupoUsuario.GrupoUsuarioActivo);
+
+            switch (UsuarioLogueado.GrupoUsuario.GrupoUsuarioActivo)
+            {
+                case GrupoUser.GrupoUsuario.Manager:
+                    grdSucursales.Visible = true;
+                    lblSucursal.Visible = true;
+                    break;
+                case GrupoUser.GrupoUsuario.Facturacion:
+                    break;
+                case GrupoUser.GrupoUsuario.Atencion_al_cliente:
+                    break;
+                case GrupoUser.GrupoUsuario.Cajero:
+                    break;
+                case GrupoUser.GrupoUsuario.Supervisor:
+                    grdSucursales.Visible = true;
+                    lblSucursal.Visible = true;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void CargarInfoFactura()
@@ -65,7 +89,7 @@ namespace ERP_INTECOLI.Compras
             txtProveedor.Text = fact.Proveedor;
             txtCAI.Text = fact.Cai;
             txtNumFactura.Text = fact.Num_Factura;
-            txtId.Text = fact.Id_Factura.ToString();
+            txtDocNum.Text = fact.DocNum;
             dtFechaContabilizacion.Value = fact.Fecha_Contabilizacion;
             dtFechaVencimiento.Value = fact.Fecha_Vencimiento;
             dtFechaDocumento.Value = fact.Fecha_Documento;
@@ -233,7 +257,7 @@ namespace ERP_INTECOLI.Compras
                         cmd.Parameters.AddWithValue("@id_estado", 2);
                         cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogueado.Id);
                         cmd.Parameters.AddWithValue("@comentario",txtComentarios.Text);
-                        cmd.Parameters.AddWithValue("@punto_venta", PuntoVentaActual.ID);
+                        cmd.Parameters.AddWithValue("@punto_venta", IDPuntoVenta);
                         cmd.Parameters.AddWithValue("@subtotal", txtSubtotal.EditValue);
                         cmd.Parameters.AddWithValue("@impuesto", txtImpuesto.EditValue);
                         cmd.Parameters.AddWithValue("@total", txtTotal.EditValue);
@@ -254,7 +278,7 @@ namespace ERP_INTECOLI.Compras
                             cmd.Parameters.AddWithValue("@precio",row.precio);
                             cmd.Parameters.AddWithValue("@fecha_registro", dp.Now());
                             cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogueado.Id);
-                            cmd.Parameters.AddWithValue("@id_punto_facturacion", 2); //DEFINIR COMO SELECCIONARA EL PUNTO DE VENTA(COMPRA)
+                            cmd.Parameters.AddWithValue("@id_punto_facturacion", IDPuntoVenta); //DEFINIR COMO SELECCIONARA EL PUNTO DE VENTA(COMPRA)
 
                             cmd.ExecuteNonQuery();
                         }
@@ -319,7 +343,7 @@ namespace ERP_INTECOLI.Compras
             txtProveedor.Clear();
             txtCAI.Clear();
             txtNumFactura.Clear();
-            txtId.Clear();
+            txtDocNum.Clear();
             dtFechaContabilizacion.Value = dp.Now();
             dtFechaDocumento.Value = dp.Now();
             dtFechaVencimiento.Value = dp.Now();
@@ -340,7 +364,7 @@ namespace ERP_INTECOLI.Compras
 
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
-            frmSearchFacturasProveedor frm = new frmSearchFacturasProveedor(frmSearchFacturasProveedor.FiltroFacturas.Todas, PuntoVentaActual);
+            frmSearchFacturasProveedor frm = new frmSearchFacturasProveedor(frmSearchFacturasProveedor.FiltroFacturas.Todas, PuntoVentaActual, UsuarioLogueado);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 Id_FacturaActual = frm.IdFacturaSeleccionado;
@@ -453,7 +477,7 @@ namespace ERP_INTECOLI.Compras
             {
                 case TipoOperacion.Insert:
 
-                    frmSearchOrdenesC frm = new frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra.Abiertas, PuntoVentaActual);
+                    frmSearchOrdenesC frm = new frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra.Abiertas, PuntoVentaActual, UsuarioLogueado);
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
                         Id_OrdenCompra = frm.IdOrdenesSeleccionado;

@@ -29,6 +29,7 @@ namespace ERP_INTECOLI.Compras
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearchFacturasProveedor));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -45,25 +46,33 @@ namespace ERP_INTECOLI.Compras
             this.coltotal = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colestado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colusuario = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.reposSelected = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.reposSelected = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.grdSucursales = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colpdv = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.sucursalesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grdSolicitudes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reposSelected)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSucursales.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sucursalesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grdSolicitudes
             // 
             this.grdSolicitudes.DataMember = "search_facturas";
             this.grdSolicitudes.DataSource = this.dsCompras1;
-            this.grdSolicitudes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdSolicitudes.Location = new System.Drawing.Point(0, 0);
+            this.grdSolicitudes.Location = new System.Drawing.Point(0, 46);
             this.grdSolicitudes.MainView = this.gridView1;
             this.grdSolicitudes.Name = "grdSolicitudes";
             this.grdSolicitudes.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.reposSelected});
-            this.grdSolicitudes.Size = new System.Drawing.Size(1109, 422);
+            this.grdSolicitudes.Size = new System.Drawing.Size(1109, 376);
             this.grdSolicitudes.TabIndex = 2;
             this.grdSolicitudes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -153,6 +162,14 @@ namespace ERP_INTECOLI.Compras
             this.colusuario.Visible = true;
             this.colusuario.VisibleIndex = 4;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Seleccionar";
+            this.gridColumn1.ColumnEdit = this.reposSelected;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 6;
+            // 
             // reposSelected
             // 
             this.reposSelected.AutoHeight = false;
@@ -163,19 +180,69 @@ namespace ERP_INTECOLI.Compras
             this.reposSelected.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.reposSelected.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.reposSelected_ButtonClick);
             // 
-            // gridColumn1
+            // labelControl1
             // 
-            this.gridColumn1.Caption = "Seleccionar";
-            this.gridColumn1.ColumnEdit = this.reposSelected;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 6;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(52, 16);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(51, 17);
+            this.labelControl1.TabIndex = 5;
+            this.labelControl1.Text = "Sucursal:";
+            // 
+            // grdSucursales
+            // 
+            this.grdSucursales.Enabled = false;
+            this.grdSucursales.Location = new System.Drawing.Point(109, 12);
+            this.grdSucursales.Name = "grdSucursales";
+            this.grdSucursales.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.grdSucursales.Properties.Appearance.Options.UseFont = true;
+            this.grdSucursales.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.grdSucursales.Properties.DataSource = this.sucursalesBindingSource;
+            this.grdSucursales.Properties.DisplayMember = "pdv";
+            this.grdSucursales.Properties.PopupView = this.gridLookUpEdit1View;
+            this.grdSucursales.Properties.ValueMember = "id";
+            this.grdSucursales.Size = new System.Drawing.Size(306, 24);
+            this.grdSucursales.TabIndex = 4;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid,
+            this.colpdv});
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colid
+            // 
+            this.colid.FieldName = "id";
+            this.colid.Name = "colid";
+            this.colid.OptionsColumn.AllowEdit = false;
+            // 
+            // colpdv
+            // 
+            this.colpdv.Caption = "Sucursal";
+            this.colpdv.FieldName = "pdv";
+            this.colpdv.Name = "colpdv";
+            this.colpdv.OptionsColumn.AllowEdit = false;
+            this.colpdv.Visible = true;
+            this.colpdv.VisibleIndex = 0;
+            // 
+            // sucursalesBindingSource
+            // 
+            this.sucursalesBindingSource.DataMember = "sucursales";
+            this.sucursalesBindingSource.DataSource = this.dsCompras1;
             // 
             // frmSearchFacturasProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 422);
+            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.grdSucursales);
             this.Controls.Add(this.grdSolicitudes);
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmSearchFacturasProveedor.IconOptions.Image")));
             this.Name = "frmSearchFacturasProveedor";
@@ -184,7 +251,11 @@ namespace ERP_INTECOLI.Compras
             ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reposSelected)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSucursales.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sucursalesBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -202,5 +273,11 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraGrid.Columns.GridColumn colestado;
         private DevExpress.XtraGrid.Columns.GridColumn colusuario;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.GridLookUpEdit grdSucursales;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private DevExpress.XtraGrid.Columns.GridColumn colid;
+        private DevExpress.XtraGrid.Columns.GridColumn colpdv;
+        private System.Windows.Forms.BindingSource sucursalesBindingSource;
     }
 }

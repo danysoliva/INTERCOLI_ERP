@@ -30,6 +30,7 @@ namespace ERP_INTECOLI.Clases
         decimal subtotal;
         decimal impuesto;
         decimal total;
+        string docNum;
 
         public bool Recuperado { get => recuperado; set => recuperado = value; }
         public int Id_Factura { get => id_Factura; set => id_Factura = value; }
@@ -52,6 +53,7 @@ namespace ERP_INTECOLI.Clases
         public decimal Subtotal { get => subtotal; set => subtotal = value; }
         public decimal Impuesto { get => impuesto; set => impuesto = value; }
         public decimal Total { get => total; set => total = value; }
+        public string DocNum { get => docNum; set => docNum = value; }
 
         public bool Recuperar_FacturaProveedor(int id_fact)
         {
@@ -91,6 +93,7 @@ namespace ERP_INTECOLI.Clases
                     Subtotal = dl.IsDBNull(18) ? 0 : dl.GetDecimal(18);
                     Impuesto = dl.IsDBNull(19) ? 0 : dl.GetDecimal(19);
                     Total = dl.IsDBNull(20) ? 0 : dl.GetDecimal(20);
+                    DocNum = dl.IsDBNull(21) ? "0" : dl.GetString(21);
                     Recuperado = true;
 
                 }

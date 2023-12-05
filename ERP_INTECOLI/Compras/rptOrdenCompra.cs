@@ -22,7 +22,7 @@ namespace ERP_INTECOLI.Compras
             prov.RecuperarRegistroFromItemCode(oc.Itemcode_Prov);
             lblRTN.Text = prov._RTN;
             lblDireccion.Text = oc.Direccion;
-            lblNumeroOrden.Text = "Orden de Compra #" + oc.Id_OrdenCompra;
+            lblNumeroOrden.Text = "Orden de Compra #" + oc.DocNum1;
             lblFechaOrden.Text = string.Format("{0:dd/MM/yyyy}",oc.Fecha_Contabilizacion);
             lblFechaVencimiento.Text = string.Format("{0:dd/MM/yyyy}", oc.Fecha_Contabilizacion.AddDays(30).ToString());
             lblComentario.Text = oc.Comentario;

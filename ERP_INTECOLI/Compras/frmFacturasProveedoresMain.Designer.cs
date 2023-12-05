@@ -62,7 +62,7 @@ namespace ERP_INTECOLI.Compras
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtDocNum = new System.Windows.Forms.TextBox();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.cmdClose = new DevExpress.XtraEditors.SimpleButton();
             this.cmdGuardar = new DevExpress.XtraEditors.SimpleButton();
@@ -100,6 +100,11 @@ namespace ERP_INTECOLI.Compras
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.grdSucursales = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colpdv = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lblSucursal = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumFactura.Properties)).BeginInit();
@@ -120,12 +125,16 @@ namespace ERP_INTECOLI.Compras
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtImpuesto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubtotal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSucursales.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.grdSucursales);
+            this.panelControl1.Controls.Add(this.lblSucursal);
             this.panelControl1.Controls.Add(this.dtFechaDocumento);
             this.panelControl1.Controls.Add(this.labelControl15);
             this.panelControl1.Controls.Add(this.txtNumFactura);
@@ -142,7 +151,7 @@ namespace ERP_INTECOLI.Compras
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.txtEstado);
             this.panelControl1.Controls.Add(this.labelControl2);
-            this.panelControl1.Controls.Add(this.txtId);
+            this.panelControl1.Controls.Add(this.txtDocNum);
             this.panelControl1.Controls.Add(this.labelControl7);
             this.panelControl1.Controls.Add(this.cmdClose);
             this.panelControl1.Controls.Add(this.cmdGuardar);
@@ -319,23 +328,23 @@ namespace ERP_INTECOLI.Compras
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(626, 185);
+            this.labelControl2.Location = new System.Drawing.Point(624, 186);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(261, 18);
             this.labelControl2.TabIndex = 60;
             this.labelControl2.Text = "Estado_____________________";
             // 
-            // txtId
+            // txtDocNum
             // 
-            this.txtId.BackColor = System.Drawing.Color.White;
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.Enabled = false;
-            this.txtId.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.txtId.Location = new System.Drawing.Point(818, 60);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(175, 19);
-            this.txtId.TabIndex = 57;
+            this.txtDocNum.BackColor = System.Drawing.Color.White;
+            this.txtDocNum.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDocNum.Enabled = false;
+            this.txtDocNum.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtDocNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.txtDocNum.Location = new System.Drawing.Point(818, 60);
+            this.txtDocNum.Name = "txtDocNum";
+            this.txtDocNum.Size = new System.Drawing.Size(175, 19);
+            this.txtDocNum.TabIndex = 57;
             // 
             // labelControl7
             // 
@@ -748,6 +757,57 @@ namespace ERP_INTECOLI.Compras
             this.labelControl9.TabIndex = 83;
             this.labelControl9.Text = "Impuesto_______";
             // 
+            // grdSucursales
+            // 
+            this.grdSucursales.Location = new System.Drawing.Point(818, 214);
+            this.grdSucursales.Name = "grdSucursales";
+            this.grdSucursales.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.grdSucursales.Properties.Appearance.Options.UseFont = true;
+            this.grdSucursales.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.grdSucursales.Properties.DisplayMember = "pdv";
+            this.grdSucursales.Properties.PopupView = this.gridLookUpEdit1View;
+            this.grdSucursales.Properties.ValueMember = "id";
+            this.grdSucursales.Size = new System.Drawing.Size(218, 24);
+            this.grdSucursales.TabIndex = 81;
+            this.grdSucursales.Visible = false;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.colpdv});
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.FieldName = "id";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            // 
+            // colpdv
+            // 
+            this.colpdv.Caption = "Sucursal";
+            this.colpdv.FieldName = "pdv";
+            this.colpdv.Name = "colpdv";
+            this.colpdv.OptionsColumn.AllowEdit = false;
+            this.colpdv.Visible = true;
+            this.colpdv.VisibleIndex = 0;
+            // 
+            // lblSucursal
+            // 
+            this.lblSucursal.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblSucursal.Appearance.Options.UseFont = true;
+            this.lblSucursal.Location = new System.Drawing.Point(624, 217);
+            this.lblSucursal.Name = "lblSucursal";
+            this.lblSucursal.Size = new System.Drawing.Size(246, 18);
+            this.lblSucursal.TabIndex = 82;
+            this.lblSucursal.Text = "Sucursal__________________";
+            this.lblSucursal.Visible = false;
+            // 
             // frmFacturasProveedoresMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -781,6 +841,8 @@ namespace ERP_INTECOLI.Compras
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtImpuesto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubtotal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSucursales.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -799,7 +861,7 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.TextBox txtUsuarioCreador;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtDocNum;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.SimpleButton cmdClose;
         private DevExpress.XtraEditors.SimpleButton cmdGuardar;
@@ -842,5 +904,10 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraEditors.TextEdit txtPersonaContact;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private dsCompras dsCompras1;
+        private DevExpress.XtraEditors.GridLookUpEdit grdSucursales;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn colpdv;
+        private DevExpress.XtraEditors.LabelControl lblSucursal;
     }
 }

@@ -26,6 +26,7 @@ namespace ERP_INTECOLI.Compras
         int IdEstadoOrdenCompra;
         int IdSolicitud = 0;
         string direccion;
+        int PuntoVentaID;
         public enum TipoOperacion
         {
             New = 1,
@@ -37,6 +38,9 @@ namespace ERP_INTECOLI.Compras
             InitializeComponent();
             UsuarioLogueado = pUserLog;
             this.PuntoDeVentaActual = pPuntoDeVentaActual;
+            PuntoVentaID = PuntoDeVentaActual.ID;
+            LoadSucursales();
+            grdSucursales.EditValue = PuntoVentaID;
             tipooperacion = ptipo;
             switch (tipooperacion)
             {
@@ -51,6 +55,48 @@ namespace ERP_INTECOLI.Compras
                     break;
                 default:
                     break;
+            }
+
+            int i = Convert.ToInt32(UsuarioLogueado.GrupoUsuario.GrupoUsuarioActivo);
+
+            switch (UsuarioLogueado.GrupoUsuario.GrupoUsuarioActivo)
+            {
+                case GrupoUser.GrupoUsuario.Manager:
+                    grdSucursales.Visible = true;
+                    lblSucursal.Visible = true;
+                    break;
+                case GrupoUser.GrupoUsuario.Facturacion:
+                    break;
+                case GrupoUser.GrupoUsuario.Atencion_al_cliente:
+                    break;
+                case GrupoUser.GrupoUsuario.Cajero:
+                    break;
+                case GrupoUser.GrupoUsuario.Supervisor:
+                    grdSucursales.Visible = true;
+                    lblSucursal.Visible = true;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void LoadSucursales()
+        {
+            try
+            {
+                string query = @"[sp_get_lista_puntos_de_venta]";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                dsCompras1.sucursales.Clear();
+                adat.Fill(dsCompras1.sucursales);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
             }
         }
 
@@ -307,6 +353,7 @@ namespace ERP_INTECOLI.Compras
             dtFechaRegistro.Value = dp.Now();
             txtEstado.Text = "Nueva";
             IdSolicitud = 0;
+            IdOrdenCompraActual = 0;
             txtComentarios.Clear();
             txtComentarios.Enabled = true;
             grDetalle.Enabled = true;
@@ -318,7 +365,7 @@ namespace ERP_INTECOLI.Compras
             dsCompras1.oc_detalle.Clear();
             txtCodProv.Clear();
             txtProveedor.Clear();
-            txtId.Clear();
+            txtDocNum.Clear();
             btnPrint.Enabled = false;
             //GetSigID();
 
@@ -326,7 +373,7 @@ namespace ERP_INTECOLI.Compras
 
         private void cmdBuscar_Click(object sender, EventArgs e)
         {
-            frmSearchOrdenesC frm = new frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra.Todas, PuntoDeVentaActual);
+            frmSearchOrdenesC frm = new frmSearchOrdenesC(frmSearchOrdenesC.FiltroOrdenesCompra.Todas, PuntoDeVentaActual, UsuarioLogueado);
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 //CargarSolicitud(frm.IdSolicitudSeleccionado);
@@ -342,7 +389,7 @@ namespace ERP_INTECOLI.Compras
             if (oc.RecuperarRegistos(pidOrdenesSeleccionado))
             {
                 txtUsuarioCreador.Text = oc.Usuario_Cre;
-                txtId.Text = Convert.ToString(oc.Id_OrdenCompra);
+                txtDocNum.Text = oc.DocNum1;
                 IdOrdenCompraActual = oc.Id_OrdenCompra;
                 txtEstado.Text = oc.Estado;
                 dtFechaRegistro.Value = oc.Fecha_Registro;
@@ -356,6 +403,8 @@ namespace ERP_INTECOLI.Compras
                 txtSubtotal.EditValue = oc.Subtotal;
                 txtImpuesto.EditValue = oc.Impuesto;
                 txtTotal.EditValue = oc.Total;
+                grdSucursales.EditValue = oc.Id_PuntoVenta;
+                grdSucursales.Enabled = false;
                 CargarDetalleOrdenCompra(oc.Id_OrdenCompra);
                 tipooperacion = TipoOperacion.Update;
 
@@ -612,7 +661,7 @@ namespace ERP_INTECOLI.Compras
                         cmd.Parameters.AddWithValue("@subtotal",txtSubtotal.EditValue);
                         cmd.Parameters.AddWithValue("@total",txtTotal.EditValue);
                         cmd.Parameters.AddWithValue("@id_user_cre", UsuarioLogueado.Id);
-                        cmd.Parameters.AddWithValue("@id_punto_venta", PuntoDeVentaActual.ID);
+                        cmd.Parameters.AddWithValue("@id_punto_venta", PuntoVentaID);
                         int id_header = Convert.ToInt32(cmd.ExecuteScalar());
 
                         foreach (dsCompras.oc_detalleRow row in dsCompras1.oc_detalle.Rows)
@@ -884,6 +933,14 @@ namespace ERP_INTECOLI.Compras
             {
                 CajaDialogo.Error(mensaje);
                 return;
+            }
+        }
+
+        private void grdSucursales_EditValueChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(grdSucursales.EditValue) > 0)
+            {
+                PuntoVentaID = Convert.ToInt32(grdSucursales.EditValue);
             }
         }
     }
