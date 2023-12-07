@@ -29,23 +29,35 @@ namespace ERP_INTECOLI.Compras
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFacturasProveedoresMain));
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject21 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject22 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject23 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject24 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions7 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject25 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject26 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject28 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.cmdGuardar = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdSiguiente = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdBuscar = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdNuevo = new DevExpress.XtraEditors.SimpleButton();
+            this.grdSucursales = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.sucursalesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsCompras1 = new ERP_INTECOLI.Compras.dsCompras();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colpdv = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lblSucursal = new DevExpress.XtraEditors.LabelControl();
             this.dtFechaDocumento = new System.Windows.Forms.DateTimePicker();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.txtNumFactura = new DevExpress.XtraEditors.TextEdit();
@@ -65,10 +77,6 @@ namespace ERP_INTECOLI.Compras
             this.txtDocNum = new System.Windows.Forms.TextBox();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.cmdClose = new DevExpress.XtraEditors.SimpleButton();
-            this.cmdGuardar = new DevExpress.XtraEditors.SimpleButton();
-            this.cmdNuevo = new DevExpress.XtraEditors.SimpleButton();
-            this.cmdBuscar = new DevExpress.XtraEditors.SimpleButton();
-            this.cmdSiguiente = new DevExpress.XtraEditors.SimpleButton();
             this.cmdAnterior = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -76,7 +84,6 @@ namespace ERP_INTECOLI.Compras
             this.txtUsuarioCreador = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.grDetalle = new DevExpress.XtraGrid.GridControl();
-            this.dsCompras1 = new ERP_INTECOLI.Compras.dsCompras();
             this.grdvDetalle = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colItemCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDscription = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -91,29 +98,36 @@ namespace ERP_INTECOLI.Compras
             this.repositoryItemGrdItem = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.txtSubTotalLps = new DevExpress.XtraEditors.TextEdit();
             this.txtComentarios = new DevExpress.XtraEditors.MemoEdit();
             this.txtTotal = new DevExpress.XtraEditors.TextEdit();
             this.txtImpuesto = new DevExpress.XtraEditors.TextEdit();
-            this.txtSubtotal = new DevExpress.XtraEditors.TextEdit();
             this.btnShowPopu = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.grdSucursales = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colpdv = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.lblSucursal = new DevExpress.XtraEditors.LabelControl();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.bar1 = new DevExpress.XtraBars.Bar();
+            this.bar3 = new DevExpress.XtraBars.Bar();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barbtnCancelOrden = new DevExpress.XtraBars.BarButtonItem();
+            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSucursales.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sucursalesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumFactura.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCAI.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPersonaContact.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodProv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProveedor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDeleteRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonGridEstadoEdit)).BeginInit();
@@ -121,18 +135,22 @@ namespace ERP_INTECOLI.Compras
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubTotalLps.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtComentarios.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtImpuesto.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSubtotal.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdSucursales.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.cmdGuardar);
+            this.panelControl1.Controls.Add(this.cmdSiguiente);
+            this.panelControl1.Controls.Add(this.cmdBuscar);
+            this.panelControl1.Controls.Add(this.cmdNuevo);
             this.panelControl1.Controls.Add(this.grdSucursales);
             this.panelControl1.Controls.Add(this.lblSucursal);
             this.panelControl1.Controls.Add(this.dtFechaDocumento);
@@ -154,10 +172,6 @@ namespace ERP_INTECOLI.Compras
             this.panelControl1.Controls.Add(this.txtDocNum);
             this.panelControl1.Controls.Add(this.labelControl7);
             this.panelControl1.Controls.Add(this.cmdClose);
-            this.panelControl1.Controls.Add(this.cmdGuardar);
-            this.panelControl1.Controls.Add(this.cmdNuevo);
-            this.panelControl1.Controls.Add(this.cmdBuscar);
-            this.panelControl1.Controls.Add(this.cmdSiguiente);
             this.panelControl1.Controls.Add(this.cmdAnterior);
             this.panelControl1.Controls.Add(this.labelControl5);
             this.panelControl1.Controls.Add(this.labelControl6);
@@ -166,6 +180,113 @@ namespace ERP_INTECOLI.Compras
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1122, 259);
             this.panelControl1.TabIndex = 52;
+            this.panelControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControl1_MouseDown);
+            // 
+            // cmdGuardar
+            // 
+            this.cmdGuardar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.ImageOptions.Image")));
+            this.cmdGuardar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.cmdGuardar.Location = new System.Drawing.Point(237, 12);
+            this.cmdGuardar.Name = "cmdGuardar";
+            this.cmdGuardar.Size = new System.Drawing.Size(47, 33);
+            this.cmdGuardar.TabIndex = 51;
+            this.cmdGuardar.ToolTip = "Guardar";
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
+            // 
+            // cmdSiguiente
+            // 
+            this.cmdSiguiente.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.cmdSiguiente.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdSiguiente.ImageOptions.SvgImage")));
+            this.cmdSiguiente.Location = new System.Drawing.Point(78, 12);
+            this.cmdSiguiente.Name = "cmdSiguiente";
+            this.cmdSiguiente.Size = new System.Drawing.Size(47, 33);
+            this.cmdSiguiente.TabIndex = 48;
+            this.cmdSiguiente.ToolTip = "Siguiente";
+            this.cmdSiguiente.Click += new System.EventHandler(this.cmdSiguiente_Click);
+            // 
+            // cmdBuscar
+            // 
+            this.cmdBuscar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.cmdBuscar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdBuscar.ImageOptions.SvgImage")));
+            this.cmdBuscar.Location = new System.Drawing.Point(131, 12);
+            this.cmdBuscar.Name = "cmdBuscar";
+            this.cmdBuscar.Size = new System.Drawing.Size(47, 33);
+            this.cmdBuscar.TabIndex = 49;
+            this.cmdBuscar.ToolTip = "Buscar";
+            this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
+            // 
+            // cmdNuevo
+            // 
+            this.cmdNuevo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdNuevo.ImageOptions.Image")));
+            this.cmdNuevo.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.cmdNuevo.Location = new System.Drawing.Point(184, 12);
+            this.cmdNuevo.Name = "cmdNuevo";
+            this.cmdNuevo.Size = new System.Drawing.Size(47, 33);
+            this.cmdNuevo.TabIndex = 50;
+            this.cmdNuevo.ToolTip = "Nuevo";
+            this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
+            // 
+            // grdSucursales
+            // 
+            this.grdSucursales.Location = new System.Drawing.Point(818, 214);
+            this.grdSucursales.Name = "grdSucursales";
+            this.grdSucursales.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.grdSucursales.Properties.Appearance.Options.UseFont = true;
+            this.grdSucursales.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.grdSucursales.Properties.DataSource = this.sucursalesBindingSource;
+            this.grdSucursales.Properties.DisplayMember = "pdv";
+            this.grdSucursales.Properties.PopupView = this.gridLookUpEdit1View;
+            this.grdSucursales.Properties.ValueMember = "id";
+            this.grdSucursales.Size = new System.Drawing.Size(277, 24);
+            this.grdSucursales.TabIndex = 81;
+            this.grdSucursales.Visible = false;
+            // 
+            // sucursalesBindingSource
+            // 
+            this.sucursalesBindingSource.DataMember = "sucursales";
+            this.sucursalesBindingSource.DataSource = this.dsCompras1;
+            // 
+            // dsCompras1
+            // 
+            this.dsCompras1.DataSetName = "dsCompras";
+            this.dsCompras1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.colpdv});
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.FieldName = "id";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            // 
+            // colpdv
+            // 
+            this.colpdv.Caption = "Sucursal";
+            this.colpdv.FieldName = "pdv";
+            this.colpdv.Name = "colpdv";
+            this.colpdv.OptionsColumn.AllowEdit = false;
+            this.colpdv.Visible = true;
+            this.colpdv.VisibleIndex = 0;
+            // 
+            // lblSucursal
+            // 
+            this.lblSucursal.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblSucursal.Appearance.Options.UseFont = true;
+            this.lblSucursal.Location = new System.Drawing.Point(624, 217);
+            this.lblSucursal.Name = "lblSucursal";
+            this.lblSucursal.Size = new System.Drawing.Size(246, 18);
+            this.lblSucursal.TabIndex = 82;
+            this.lblSucursal.Text = "Sucursal__________________";
+            this.lblSucursal.Visible = false;
             // 
             // dtFechaDocumento
             // 
@@ -208,7 +329,6 @@ namespace ERP_INTECOLI.Compras
             // 
             // txtCAI
             // 
-            this.txtCAI.Enabled = false;
             this.txtCAI.Location = new System.Drawing.Point(215, 147);
             this.txtCAI.Name = "txtCAI";
             this.txtCAI.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
@@ -242,9 +362,9 @@ namespace ERP_INTECOLI.Compras
             this.txtCodProv.Name = "txtCodProv";
             this.txtCodProv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.txtCodProv.Properties.Appearance.Options.UseFont = true;
-            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
+            editorButtonImageOptions6.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions6.Image")));
             this.txtCodProv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject21, serializableAppearanceObject22, serializableAppearanceObject23, serializableAppearanceObject24, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.txtCodProv.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtCodProv.Properties.ReadOnly = true;
             this.txtCodProv.Size = new System.Drawing.Size(227, 24);
@@ -368,50 +488,6 @@ namespace ERP_INTECOLI.Compras
             this.cmdClose.ToolTip = "Cerrar Ventana";
             this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
             // 
-            // cmdGuardar
-            // 
-            this.cmdGuardar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdGuardar.ImageOptions.Image")));
-            this.cmdGuardar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.cmdGuardar.Location = new System.Drawing.Point(237, 12);
-            this.cmdGuardar.Name = "cmdGuardar";
-            this.cmdGuardar.Size = new System.Drawing.Size(47, 33);
-            this.cmdGuardar.TabIndex = 51;
-            this.cmdGuardar.ToolTip = "Guardar";
-            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
-            // 
-            // cmdNuevo
-            // 
-            this.cmdNuevo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdNuevo.ImageOptions.Image")));
-            this.cmdNuevo.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.cmdNuevo.Location = new System.Drawing.Point(184, 12);
-            this.cmdNuevo.Name = "cmdNuevo";
-            this.cmdNuevo.Size = new System.Drawing.Size(47, 33);
-            this.cmdNuevo.TabIndex = 50;
-            this.cmdNuevo.ToolTip = "Nuevo";
-            this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
-            // 
-            // cmdBuscar
-            // 
-            this.cmdBuscar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.cmdBuscar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdBuscar.ImageOptions.SvgImage")));
-            this.cmdBuscar.Location = new System.Drawing.Point(131, 12);
-            this.cmdBuscar.Name = "cmdBuscar";
-            this.cmdBuscar.Size = new System.Drawing.Size(47, 33);
-            this.cmdBuscar.TabIndex = 49;
-            this.cmdBuscar.ToolTip = "Buscar";
-            this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
-            // 
-            // cmdSiguiente
-            // 
-            this.cmdSiguiente.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.cmdSiguiente.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("cmdSiguiente.ImageOptions.SvgImage")));
-            this.cmdSiguiente.Location = new System.Drawing.Point(78, 12);
-            this.cmdSiguiente.Name = "cmdSiguiente";
-            this.cmdSiguiente.Size = new System.Drawing.Size(47, 33);
-            this.cmdSiguiente.TabIndex = 48;
-            this.cmdSiguiente.ToolTip = "Siguiente";
-            this.cmdSiguiente.Click += new System.EventHandler(this.cmdSiguiente_Click);
-            // 
             // cmdAnterior
             // 
             this.cmdAnterior.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
@@ -493,11 +569,7 @@ namespace ERP_INTECOLI.Compras
             this.grDetalle.TabIndex = 53;
             this.grDetalle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvDetalle});
-            // 
-            // dsCompras1
-            // 
-            this.dsCompras1.DataSetName = "dsCompras";
-            this.dsCompras1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.grDetalle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.grDetalle_MouseDown);
             // 
             // grdvDetalle
             // 
@@ -536,7 +608,7 @@ namespace ERP_INTECOLI.Compras
             this.colDscription.Caption = "Descripción";
             this.colDscription.FieldName = "descripcion";
             this.colDscription.Name = "colDscription";
-            this.colDscription.OptionsColumn.ReadOnly = true;
+            this.colDscription.OptionsColumn.AllowEdit = false;
             this.colDscription.Visible = true;
             this.colDscription.VisibleIndex = 1;
             // 
@@ -545,14 +617,18 @@ namespace ERP_INTECOLI.Compras
             this.colQuantity.Caption = "Cantidad";
             this.colQuantity.FieldName = "cantidad";
             this.colQuantity.Name = "colQuantity";
+            this.colQuantity.OptionsColumn.AllowEdit = false;
             this.colQuantity.Visible = true;
             this.colQuantity.VisibleIndex = 2;
             // 
             // colPrice
             // 
             this.colPrice.Caption = "Precio";
+            this.colPrice.DisplayFormat.FormatString = "{0:#,###,##0.00}";
+            this.colPrice.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colPrice.FieldName = "precio";
             this.colPrice.Name = "colPrice";
+            this.colPrice.OptionsColumn.AllowEdit = false;
             this.colPrice.Visible = true;
             this.colPrice.VisibleIndex = 3;
             // 
@@ -564,6 +640,8 @@ namespace ERP_INTECOLI.Compras
             // coltotal
             // 
             this.coltotal.Caption = "Total";
+            this.coltotal.DisplayFormat.FormatString = "{0:#,###,##0.00}";
+            this.coltotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.coltotal.FieldName = "total";
             this.coltotal.Name = "coltotal";
             this.coltotal.OptionsColumn.AllowEdit = false;
@@ -584,9 +662,9 @@ namespace ERP_INTECOLI.Compras
             // ButtonDeleteRow
             // 
             this.ButtonDeleteRow.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
             this.ButtonDeleteRow.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.ButtonDeleteRow.Name = "ButtonDeleteRow";
             this.ButtonDeleteRow.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -594,14 +672,15 @@ namespace ERP_INTECOLI.Compras
             // 
             this.colid_status.FieldName = "id_estado";
             this.colid_status.Name = "colid_status";
+            this.colid_status.OptionsColumn.AllowEdit = false;
             // 
             // ButtonGridEstadoEdit
             // 
             this.ButtonGridEstadoEdit.AutoHeight = false;
-            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
-            editorButtonImageOptions5.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            editorButtonImageOptions7.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions7.Image")));
+            editorButtonImageOptions7.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
             this.ButtonGridEstadoEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, serializableAppearanceObject26, serializableAppearanceObject27, serializableAppearanceObject28, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.ButtonGridEstadoEdit.Name = "ButtonGridEstadoEdit";
             // 
             // repositoryItemGrdItem
@@ -623,10 +702,10 @@ namespace ERP_INTECOLI.Compras
             // 
             this.panelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl2.Controls.Add(this.txtSubTotalLps);
             this.panelControl2.Controls.Add(this.txtComentarios);
             this.panelControl2.Controls.Add(this.txtTotal);
             this.panelControl2.Controls.Add(this.txtImpuesto);
-            this.panelControl2.Controls.Add(this.txtSubtotal);
             this.panelControl2.Controls.Add(this.btnShowPopu);
             this.panelControl2.Controls.Add(this.labelControl11);
             this.panelControl2.Controls.Add(this.labelControl10);
@@ -638,6 +717,25 @@ namespace ERP_INTECOLI.Compras
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(1122, 185);
             this.panelControl2.TabIndex = 54;
+            this.panelControl2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelControl2_MouseDown);
+            // 
+            // txtSubTotalLps
+            // 
+            this.txtSubTotalLps.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSubTotalLps.EditValue = "0.00";
+            this.txtSubTotalLps.Location = new System.Drawing.Point(800, 10);
+            this.txtSubTotalLps.Name = "txtSubTotalLps";
+            this.txtSubTotalLps.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubTotalLps.Properties.Appearance.Options.UseFont = true;
+            this.txtSubTotalLps.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSubTotalLps.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtSubTotalLps.Properties.DisplayFormat.FormatString = "{0:#,###,##0.00}";
+            this.txtSubTotalLps.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtSubTotalLps.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtSubTotalLps.Properties.MaskSettings.Set("mask", "c");
+            this.txtSubTotalLps.Properties.NullText = "0.00";
+            this.txtSubTotalLps.Size = new System.Drawing.Size(130, 24);
+            this.txtSubTotalLps.TabIndex = 86;
             // 
             // txtComentarios
             // 
@@ -659,6 +757,8 @@ namespace ERP_INTECOLI.Compras
             this.txtTotal.Properties.Appearance.Options.UseFont = true;
             this.txtTotal.Properties.Appearance.Options.UseTextOptions = true;
             this.txtTotal.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTotal.Properties.DisplayFormat.FormatString = "{0:#,###,##0.00}";
+            this.txtTotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtTotal.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtTotal.Properties.MaskSettings.Set("mask", "c");
             this.txtTotal.Properties.NullText = "0.00";
@@ -671,34 +771,19 @@ namespace ERP_INTECOLI.Compras
             this.txtImpuesto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtImpuesto.EditValue = "0.00";
             this.txtImpuesto.Enabled = false;
-            this.txtImpuesto.Location = new System.Drawing.Point(800, 39);
+            this.txtImpuesto.Location = new System.Drawing.Point(800, 40);
             this.txtImpuesto.Name = "txtImpuesto";
             this.txtImpuesto.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.txtImpuesto.Properties.Appearance.Options.UseFont = true;
             this.txtImpuesto.Properties.Appearance.Options.UseTextOptions = true;
             this.txtImpuesto.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtImpuesto.Properties.DisplayFormat.FormatString = "{0:#,###,##0.00}";
+            this.txtImpuesto.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtImpuesto.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtImpuesto.Properties.MaskSettings.Set("mask", "c");
             this.txtImpuesto.Properties.NullText = "0.00";
             this.txtImpuesto.Size = new System.Drawing.Size(130, 24);
             this.txtImpuesto.TabIndex = 80;
-            // 
-            // txtSubtotal
-            // 
-            this.txtSubtotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSubtotal.EditValue = "0.00";
-            this.txtSubtotal.Location = new System.Drawing.Point(800, 10);
-            this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubtotal.Properties.Appearance.Options.UseFont = true;
-            this.txtSubtotal.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtSubtotal.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtSubtotal.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtSubtotal.Properties.MaskSettings.Set("mask", "c");
-            this.txtSubtotal.Properties.NullText = "0.00";
-            this.txtSubtotal.Size = new System.Drawing.Size(130, 24);
-            this.txtSubtotal.TabIndex = 79;
-            this.txtSubtotal.EditValueChanged += new System.EventHandler(this.txtSubtotal_EditValueChanged);
             // 
             // btnShowPopu
             // 
@@ -757,56 +842,88 @@ namespace ERP_INTECOLI.Compras
             this.labelControl9.TabIndex = 83;
             this.labelControl9.Text = "Impuesto_______";
             // 
-            // grdSucursales
+            // barManager1
             // 
-            this.grdSucursales.Location = new System.Drawing.Point(818, 214);
-            this.grdSucursales.Name = "grdSucursales";
-            this.grdSucursales.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.grdSucursales.Properties.Appearance.Options.UseFont = true;
-            this.grdSucursales.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.grdSucursales.Properties.DisplayMember = "pdv";
-            this.grdSucursales.Properties.PopupView = this.gridLookUpEdit1View;
-            this.grdSucursales.Properties.ValueMember = "id";
-            this.grdSucursales.Size = new System.Drawing.Size(218, 24);
-            this.grdSucursales.TabIndex = 81;
-            this.grdSucursales.Visible = false;
+            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.bar1,
+            this.bar3});
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barbtnCancelOrden});
+            this.barManager1.MaxItemId = 1;
+            this.barManager1.StatusBar = this.bar3;
             // 
-            // gridLookUpEdit1View
+            // bar1
             // 
-            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.colpdv});
-            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
-            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            this.bar1.BarName = "Tools";
+            this.bar1.DockCol = 0;
+            this.bar1.DockRow = 0;
+            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar1.Text = "Tools";
             // 
-            // gridColumn1
+            // bar3
             // 
-            this.gridColumn1.FieldName = "id";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowEdit = false;
+            this.bar3.BarName = "Status bar";
+            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
+            this.bar3.DockCol = 0;
+            this.bar3.DockRow = 0;
+            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
+            this.bar3.OptionsBar.AllowQuickCustomization = false;
+            this.bar3.OptionsBar.DrawDragBorder = false;
+            this.bar3.OptionsBar.UseWholeRow = true;
+            this.bar3.Text = "Status bar";
             // 
-            // colpdv
+            // barDockControlTop
             // 
-            this.colpdv.Caption = "Sucursal";
-            this.colpdv.FieldName = "pdv";
-            this.colpdv.Name = "colpdv";
-            this.colpdv.OptionsColumn.AllowEdit = false;
-            this.colpdv.Visible = true;
-            this.colpdv.VisibleIndex = 0;
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(1129, 20);
             // 
-            // lblSucursal
+            // barDockControlBottom
             // 
-            this.lblSucursal.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblSucursal.Appearance.Options.UseFont = true;
-            this.lblSucursal.Location = new System.Drawing.Point(624, 217);
-            this.lblSucursal.Name = "lblSucursal";
-            this.lblSucursal.Size = new System.Drawing.Size(246, 18);
-            this.lblSucursal.TabIndex = 82;
-            this.lblSucursal.Text = "Sucursal__________________";
-            this.lblSucursal.Visible = false;
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 691);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(1129, 20);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 20);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 671);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1129, 20);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 671);
+            // 
+            // barbtnCancelOrden
+            // 
+            this.barbtnCancelOrden.Caption = "Cancelar";
+            this.barbtnCancelOrden.Id = 0;
+            this.barbtnCancelOrden.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnCancelOrden.ImageOptions.Image")));
+            this.barbtnCancelOrden.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnCancelOrden.ImageOptions.LargeImage")));
+            this.barbtnCancelOrden.Name = "barbtnCancelOrden";
+            this.barbtnCancelOrden.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnCancelOrden_ItemClick);
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barbtnCancelOrden)});
+            this.popupMenu1.Manager = this.barManager1;
+            this.popupMenu1.Name = "popupMenu1";
             // 
             // frmFacturasProveedoresMain
             // 
@@ -816,19 +933,26 @@ namespace ERP_INTECOLI.Compras
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.grDetalle);
             this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmFacturasProveedoresMain.IconOptions.Image")));
             this.Name = "frmFacturasProveedoresMain";
             this.Text = "Facturas Proveedores";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSucursales.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sucursalesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumFactura.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCAI.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPersonaContact.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodProv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProveedor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grDetalle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsCompras1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvDetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonDeleteRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ButtonGridEstadoEdit)).EndInit();
@@ -837,13 +961,14 @@ namespace ERP_INTECOLI.Compras
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubTotalLps.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtComentarios.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtImpuesto.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSubtotal.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdSucursales.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -889,7 +1014,6 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraEditors.MemoEdit txtComentarios;
         private DevExpress.XtraEditors.TextEdit txtTotal;
         private DevExpress.XtraEditors.TextEdit txtImpuesto;
-        private DevExpress.XtraEditors.TextEdit txtSubtotal;
         private DevExpress.XtraEditors.SimpleButton btnShowPopu;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl10;
@@ -909,5 +1033,16 @@ namespace ERP_INTECOLI.Compras
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn colpdv;
         private DevExpress.XtraEditors.LabelControl lblSucursal;
+        private System.Windows.Forms.BindingSource sucursalesBindingSource;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.Bar bar1;
+        private DevExpress.XtraBars.Bar bar3;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.BarButtonItem barbtnCancelOrden;
+        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraEditors.TextEdit txtSubTotalLps;
     }
 }

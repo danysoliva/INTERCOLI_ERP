@@ -57,6 +57,13 @@ namespace ERP_INTECOLI.Compras
                     break;
             }
 
+            ValidarAccesosSegunUsuario();
+
+           
+        }
+
+        private void ValidarAccesosSegunUsuario()
+        {
             int i = Convert.ToInt32(UsuarioLogueado.GrupoUsuario.GrupoUsuarioActivo);
 
             switch (UsuarioLogueado.GrupoUsuario.GrupoUsuarioActivo)
@@ -64,12 +71,20 @@ namespace ERP_INTECOLI.Compras
                 case GrupoUser.GrupoUsuario.Manager:
                     grdSucursales.Visible = true;
                     lblSucursal.Visible = true;
+                    grdSucursales.Enabled = true;
+                    lblSucursal.Enabled = true;
                     break;
                 case GrupoUser.GrupoUsuario.Facturacion:
+                    grdSucursales.Visible = false;
+                    lblSucursal.Visible = false;
                     break;
                 case GrupoUser.GrupoUsuario.Atencion_al_cliente:
+                    grdSucursales.Visible = false;
+                    lblSucursal.Visible = false;
                     break;
                 case GrupoUser.GrupoUsuario.Cajero:
+                    grdSucursales.Visible = false;
+                    lblSucursal.Visible = false;
                     break;
                 case GrupoUser.GrupoUsuario.Supervisor:
                     grdSucursales.Visible = true;
@@ -78,6 +93,8 @@ namespace ERP_INTECOLI.Compras
                 default:
                     break;
             }
+
+            grdSucursales.EditValue = PuntoVentaID;
         }
 
         private void LoadSucursales()
@@ -229,14 +246,18 @@ namespace ERP_INTECOLI.Compras
                     case TipoOperacion.New:
                         bool Agregar = true;
 
-                        foreach (dsCompras.oc_detalleRow item in dsCompras1.oc_detalle.Rows)
+                        foreach (dsCompras.oc_detalleRow item in dsCompras1.oc_detalle)
                         {
-                            if (item.itemcode == frm.ItemSeleccionado.ItemCode)
+                            if (item.itemcode == DBNull.Value.ToString())
                             {
-                                item.cantidad = item.cantidad + 1;
-                                Agregar = false;
-                                
+                                if (item.itemcode == frm.ItemSeleccionado.ItemCode)
+                                {
+                                    item.cantidad = item.cantidad + 1;
+                                    Agregar = false;
+
+                                }
                             }
+                            
                         }
 
                         if (Agregar)
@@ -266,12 +287,16 @@ namespace ERP_INTECOLI.Compras
 
         private void ButtonDeleteRow_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            var gridView = (GridView)grDetalle.FocusedView;
-            var row = (dsCompras.oc_detalleRow)gridView.GetFocusedDataRow();
-
             DialogResult r = CajaDialogo.Pregunta("Confirma que desea elminar este registro?");
             if (r != DialogResult.Yes)
+            {
                 return;
+            }
+
+            var grdvDetalle = (GridView)grDetalle.FocusedView;
+            var row = (dsCompras.oc_detalleRow)grdvDetalle.GetFocusedDataRow();
+
+            
             if (row.id_detalle > 0)
             {
                 try
@@ -297,6 +322,7 @@ namespace ERP_INTECOLI.Compras
                 try
                 {
                     grdvDetalle.DeleteRow(grdvDetalle.FocusedRowHandle);
+                    //grdvDetalle.
                     CalcularTotal();
                 }
                 catch (Exception ec)
@@ -344,6 +370,7 @@ namespace ERP_INTECOLI.Compras
         private void cmdNuevo_Click(object sender, EventArgs e)
         {
             LimpiarControles();
+            ValidarAccesosSegunUsuario();
         }
 
         private void LimpiarControles()
@@ -788,12 +815,12 @@ namespace ERP_INTECOLI.Compras
 
         private void dtFechaContabilizacion_ValueChanged(object sender, EventArgs e)
         {
-            if (dtFechaRegistro.Value > dtFechaContabilizacion.Value)
-            {
-                CajaDialogo.Error("La Fecha de Contabilizacion no puede ser menor a la de Registro!");
-                dtFechaContabilizacion.Value = dtFechaRegistro.Value;
-                return;
-            }
+            //if (dtFechaRegistro.Value > dtFechaContabilizacion.Value)
+            //{
+            //    CajaDialogo.Error("La Fecha de Contabilizacion no puede ser menor a la de Registro!");
+            //    dtFechaContabilizacion.Value = dtFechaRegistro.Value;
+            //    return;
+            //}
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

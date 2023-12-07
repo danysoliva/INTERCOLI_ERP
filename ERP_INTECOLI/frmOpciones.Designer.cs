@@ -3350,7 +3350,6 @@ namespace ERP_INTECOLI
             this.navFacturasProvee.Caption = "Factura Proveedores";
             this.navFacturasProvee.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navFacturasProvee.ImageOptions.SmallImage")));
             this.navFacturasProvee.Name = "navFacturasProvee";
-            this.navFacturasProvee.Visible = false;
             this.navFacturasProvee.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFacturasProvee_LinkClicked);
             // 
             // TabTransacciones

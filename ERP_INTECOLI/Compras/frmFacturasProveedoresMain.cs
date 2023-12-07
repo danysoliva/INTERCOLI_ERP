@@ -36,9 +36,12 @@ namespace ERP_INTECOLI.Compras
         {
             InitializeComponent();
             UsuarioLogueado = pUserLog;
+            LoadSucursales();
             PuntoVentaActual = pPuntoVentaActual;
             IDPuntoVenta = PuntoVentaActual.ID;
+            grdSucursales.EditValue = IDPuntoVenta;
             Operacion = pTipo;
+            
 
             switch (Operacion)
             {
@@ -58,6 +61,32 @@ namespace ERP_INTECOLI.Compras
                     break;
             }
 
+            ValidarAccesoUsuarios();
+
+            
+        }
+        private void LoadSucursales()
+        {
+            try
+            {
+                string query = @"[sp_get_lista_puntos_de_venta]";
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adat = new SqlDataAdapter(cmd);
+                dsCompras1.sucursales.Clear();
+                adat.Fill(dsCompras1.sucursales);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
+        }
+
+        private void ValidarAccesoUsuarios()
+        {
             int i = Convert.ToInt32(UsuarioLogueado.GrupoUsuario.GrupoUsuarioActivo);
 
             switch (UsuarioLogueado.GrupoUsuario.GrupoUsuarioActivo)
@@ -99,7 +128,7 @@ namespace ERP_INTECOLI.Compras
             Direccion = fact.Direccion;
             txtUsuarioCreador.Text = fact.Usuario_creador;
             txtComentarios.Text = fact.Comentario;
-            txtSubtotal.EditValue = fact.Subtotal;
+            txtSubTotalLps.EditValue = fact.Subtotal;
             txtImpuesto.EditValue = fact.Impuesto;
             txtTotal.EditValue = fact.Total;
             grdSucursales.EditValue = fact.Punto_Venta;
@@ -153,6 +182,15 @@ namespace ERP_INTECOLI.Compras
                 Direccion = prov._direccion;
                 cmdNuevo.Enabled = true;
                 btnShowPopu.Enabled = true;
+
+                txtNumFactura.Enabled = true;
+                dtFechaContabilizacion.Enabled = true;
+                dtFechaDocumento.Enabled = true;
+                dtFechaVencimiento.Enabled = true;
+                grDetalle.Enabled = true;
+                txtSubTotalLps.Enabled = true;
+                txtImpuesto.Enabled = true;
+                txtComentarios.Enabled = true;
             }
         }
 
@@ -187,7 +225,7 @@ namespace ERP_INTECOLI.Compras
                 return;
             }
 
-            if (Convert.ToDecimal(txtSubtotal.EditValue) <= 0)
+            if (Convert.ToDecimal(txtSubTotalLps.EditValue) <= 0)
             {
                 CajaDialogo.Error("No puede Registrar una Factura en 0!");
                 return;
@@ -256,11 +294,11 @@ namespace ERP_INTECOLI.Compras
                         cmd.Parameters.AddWithValue("@fecha_vencimiento", dtFechaVencimiento.Value);
                         cmd.Parameters.AddWithValue("@fecha_documento",dtFechaDocumento.Value);
                         cmd.Parameters.AddWithValue("@fecha_registro", dp.Now());
-                        cmd.Parameters.AddWithValue("@id_estado", 2);
+                        cmd.Parameters.AddWithValue("@id_estado", 3);
                         cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogueado.Id);
                         cmd.Parameters.AddWithValue("@comentario",txtComentarios.Text);
                         cmd.Parameters.AddWithValue("@punto_venta", IDPuntoVenta);
-                        cmd.Parameters.AddWithValue("@subtotal", txtSubtotal.EditValue);
+                        cmd.Parameters.AddWithValue("@subtotal", txtSubTotalLps.EditValue);
                         cmd.Parameters.AddWithValue("@impuesto", txtImpuesto.EditValue);
                         cmd.Parameters.AddWithValue("@total", txtTotal.EditValue);
                         
@@ -328,7 +366,7 @@ namespace ERP_INTECOLI.Compras
             else
                 valor_impuesto = Convert.ToDecimal(isv15);
 
-            txtSubtotal.EditValue = decimal.Round(SubTotal, 2, MidpointRounding.AwayFromZero);
+            txtSubTotalLps.EditValue = decimal.Round(SubTotal, 2, MidpointRounding.AwayFromZero);
             txtImpuesto.EditValue = decimal.Round(SubTotal * valor_impuesto, 2, MidpointRounding.AwayFromZero);
             txtTotal.EditValue = decimal.Round(SubTotal + Convert.ToDecimal(txtImpuesto.EditValue), 2, MidpointRounding.AwayFromZero);
 
@@ -355,7 +393,7 @@ namespace ERP_INTECOLI.Compras
             txtEstado.Text = "Nueva";
             btnShowPopu.Enabled = false;
 
-            txtSubtotal.EditValue = 0.00;
+            txtSubTotalLps.EditValue = 0.00;
             txtImpuesto.EditValue = 0.00;
             txtTotal.EditValue = 0.00;
             grdSucursales.Enabled = true;
@@ -456,10 +494,10 @@ namespace ERP_INTECOLI.Compras
             {
                 DataRow row = gridview.GetDataRow(i);
 
-                SubTotal = SubTotal + (Convert.ToDecimal(row["total"]));
+                SubTotal += (Convert.ToDecimal(row["total"]));
             }
 
-            txtSubtotal.EditValue = decimal.Round(SubTotal, 2, MidpointRounding.AwayFromZero);
+            txtSubTotalLps.EditValue = decimal.Round(SubTotal, 2, MidpointRounding.AwayFromZero);
 
             Impuesto isv = new Impuesto();
             if (isv.RecuperarRegistro(1))
@@ -526,12 +564,249 @@ namespace ERP_INTECOLI.Compras
 
         private void cmdAnterior_Click(object sender, EventArgs e)
         {
+            Operacion = TipoOperacion.Update;
+            if (Id_FacturaActual == 0)//vamos a mostrar el ultimo
+            {
+                try
+                {
+                    DataOperations dp = new DataOperations();
+                    SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                    con.Open();
 
+                    SqlCommand cmd = new SqlCommand("[sp_get_last_or_first_facturas_proveedores]", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@case", 3);//Facturas
+                    cmd.Parameters.AddWithValue("@PuntoVentaActual", IDPuntoVenta);
+                    Id_FacturaActual = Convert.ToInt32(cmd.ExecuteScalar());
+                    CargarInfoFactura();
+                    con.Close();
+                }
+                catch (Exception ec)
+                {
+                    CajaDialogo.Error(ec.Message);
+                }
+            }
+            else//vamos a mostrar el anteior al actual
+            {
+                try
+                {
+                    DataOperations dp = new DataOperations();
+                    SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                    con.Open();
+
+                    SqlCommand cmd = new SqlCommand("sp_get_navigation_factura", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@case", 3);
+                    cmd.Parameters.AddWithValue("@idactual", Id_FacturaActual);
+                    cmd.Parameters.AddWithValue("@PuntoVentaActual", IDPuntoVenta);
+                    Id_FacturaActual = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    if (Id_FacturaActual == 0)
+                    {
+                        //Si es cero debemos cargar el primero
+                        cmd = new SqlCommand("[sp_get_navigation_ordenes_compra]", con);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@case", 4);
+                        cmd.Parameters.AddWithValue("@idactual", Id_FacturaActual);
+                        cmd.Parameters.AddWithValue("@PuntoVentaActual", IDPuntoVenta);
+                        Id_FacturaActual = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                    CargarInfoFactura();
+                    con.Close();
+                }
+                catch (Exception ec)
+                {
+                    CajaDialogo.Error(ec.Message);
+                }
+            }
         }
 
         private void cmdSiguiente_Click(object sender, EventArgs e)
         {
+            Operacion = TipoOperacion.Update;
+            if (Id_FacturaActual == 0)//vamos a mostrar el primero
+            {
+                try
+                {
+                    DataOperations dp = new DataOperations();
+                    SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                    con.Open();
 
+                    SqlCommand cmd = new SqlCommand("sp_get_last_or_first_facturas_proveedores", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@case", 4);
+                    cmd.Parameters.AddWithValue("@PuntoVentaActual", IDPuntoVenta);
+                    Id_FacturaActual = Convert.ToInt32(cmd.ExecuteScalar());
+                    CargarInfoFactura();
+                    con.Close();
+                }
+                catch (Exception ec)
+                {
+                    CajaDialogo.Error(ec.Message);
+                }
+            }
+            else//vamos a mostrar el posterior al actual
+            {
+                try
+                {
+                    DataOperations dp = new DataOperations();
+                    SqlConnection con = new SqlConnection(dp.ConnectionStringERP);
+                    con.Open();
+
+                    SqlCommand cmd = new SqlCommand("sp_get_navigation_factura", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@case", 3);
+                    cmd.Parameters.AddWithValue("@idactual", Id_FacturaActual);
+                    cmd.Parameters.AddWithValue("@PuntoVentaActual", IDPuntoVenta);
+                    Id_FacturaActual = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    if (Id_FacturaActual == 0)
+                    {
+                        //Si es cero debemos cargar el primero
+                        cmd = new SqlCommand("[sp_get_navigation_ordenes_compra]", con);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@case", 4);
+                        cmd.Parameters.AddWithValue("@idactual", Id_FacturaActual);
+                        cmd.Parameters.AddWithValue("@PuntoVentaActual", IDPuntoVenta);
+                        Id_FacturaActual = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+
+                    CargarInfoFactura();
+                    con.Close();
+                }
+                catch (Exception ec)
+                {
+                    CajaDialogo.Error(ec.Message);
+                }
+            }
+
+        }
+
+        private void barbtnCancelOrden_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DialogResult r = CajaDialogo.Pregunta("¿Confirma que desea Cancelar esta Factura?\nSe creara un Registro de Cancelacion en los Productos.");
+            if (r != DialogResult.Yes)
+                return;
+
+            switch (Operacion)
+            {
+                case TipoOperacion.Insert:
+                    break;
+                case TipoOperacion.Update:
+                    CancelarFactura(Id_FacturaActual);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void CancelarFactura(int pid_FacturaActual)
+        {
+            
+            FacturaProveedores fac = new FacturaProveedores();
+            fac.Recuperar_FacturaProveedor(pid_FacturaActual);
+
+            bool Proceder;
+            string mensaje = "";
+
+            switch (fac.Id_Estado)
+            {
+                case 1: //Nueva 
+                    Proceder = true;
+                    break;
+
+                case 5://Pendiente Aprobacion
+                    Proceder = true;
+                    break;
+
+                case 2: //Abierta
+                    Proceder = true;
+                    break;
+
+                case 3: //Cerrada
+                    Proceder = true;
+                    //mensaje = "La Factura esta Cerrada, esta Ligada a una Factura Proveedor, debe Cancelar la Factura primero!";
+                    break;
+
+                case 4: //Cancelada
+                    Proceder = false;
+                    mensaje = "La Factura de Compra se encuentra Cancelada!";
+                    break;
+
+                default:
+                    Proceder = false;
+                    break;
+            }
+
+            popupMenu1.HidePopup();
+
+            if (Proceder)
+            {
+                try
+                {
+                    SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("sp_compras_factura_cancelar_factura", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_factura_proveedor", pid_FacturaActual);
+                    cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogueado.Id);
+                    cmd.Parameters.AddWithValue("@fecha_registro", dp.Now());
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                    CajaDialogo.Information("Factura de Compra Cancelada!");
+
+                    cmdNuevo.Enabled = false;
+                    cmdAddDetalle.Enabled = false;
+                    txtComentarios.Enabled = false;
+                    grDetalle.Enabled = false;
+                    dtFechaContabilizacion.Enabled = false;
+                    txtComentarios.Text = "Cancelada";
+
+                }
+                catch (Exception ex)
+                {
+                    CajaDialogo.Error(ex.Message);
+                }
+            }
+            else
+            {
+                CajaDialogo.Error(mensaje);
+                return;
+            }
+        }
+
+        private void panelControl1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (Id_FacturaActual > 0)
+                {
+                    popupMenu1.ShowPopup(Cursor.Position);
+                }
+            }
+        }
+
+        private void grDetalle_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (Id_FacturaActual > 0)
+                {
+                    popupMenu1.ShowPopup(Cursor.Position);
+                }
+            }
+        }
+
+        private void panelControl2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (Id_FacturaActual > 0)
+                {
+                    popupMenu1.ShowPopup(Cursor.Position);
+                }
+            }
         }
     }
 }
