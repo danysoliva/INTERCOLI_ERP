@@ -907,7 +907,8 @@ namespace Eatery.Ventas
                                     command.Parameters.AddWithValue("@id_numeracion_fiscal", id_numeracion);
 
                                 command.Parameters.AddWithValue("@cliente_nombre", factura.ClienteNombre);
-                                command.Parameters.AddWithValue("@id_tipo_pago", (int)frm.TipoPagoSeleccionadoActual);
+                                int pIdTipoPago = (int)frm.TipoPagoSeleccionadoActual;
+                                command.Parameters.AddWithValue("@id_tipo_pago", pIdTipoPago);
 
                                 //command.Parameters.AddWithValue("@CAI", NumDocumentoFiscal.CAI);
                                 if (factura.IdNumeracionFiscal == 0)
@@ -1013,11 +1014,11 @@ namespace Eatery.Ventas
                                         command.Parameters.AddWithValue("@date_created", factura.FechaDocumento);
                                         command.Parameters.AddWithValue("@id_user_created", this.UsuarioLogeado.Id);
 
-                                        //Cliente
-                                        if (factura.IdCliente == 0)
-                                            command.Parameters.AddWithValue("@id_cliente", DBNull.Value);
-                                        else
-                                            command.Parameters.AddWithValue("@id_cliente", factura.IdCliente);
+                                        ////Cliente
+                                        //if (factura.IdCliente == 0)
+                                        //    command.Parameters.AddWithValue("@id_cliente", DBNull.Value);
+                                        //else
+                                        //    command.Parameters.AddWithValue("@id_cliente", factura.IdCliente);
 
                                         if (factura.IdEstudiante == 0)
                                             command.Parameters.AddWithValue("@id_estudiante", DBNull.Value);
@@ -1025,7 +1026,7 @@ namespace Eatery.Ventas
                                             command.Parameters.AddWithValue("@id_estudiante", factura.IdEstudiante);
 
 
-                                        command.Parameters.AddWithValue("@id_detalle_matricula", row.id_detalle);
+                                        command.Parameters.AddWithValue("@id_detalle_matricula", DBNull.Value);
 
                                         command.ExecuteNonQuery();
                                     }
@@ -1134,7 +1135,7 @@ namespace Eatery.Ventas
 
 
                                 //Limpiar Datos
-                                dsVentas1.detalle_factura_transaction.Clear();
+                                dsVentaSuccess1.detalle_factura_transaction.Clear();
                                 ClienteFactura = new ClienteFacturacion();
                                 cmdConsumidorFinal_Click(sender, e);
                             }
@@ -2045,15 +2046,26 @@ namespace Eatery.Ventas
                         row.cantidad = Convert.ToDecimal(e.OldValue);
                         row.SetColumnError("cantidad", "No se permite modificar la cantidad para Items de Cursos!");
                     }
+                    CalcularTotalFactura();
+                    break;
+                case "total_linea":
+                    decimal total = 0;
+                    foreach (dsVentaSuccess.detalle_factura_transactionRow rowF in dsVentaSuccess1.detalle_factura_transaction)
+                    {
+                        //rowF.total_linea = (rowF.cantidad * rowF.precio) + (rowF.cantidad * rowF.isv1) + (rowF.cantidad * rowF.isv2) + (rowF.cantidad * rowF.isv3);
+                        total += rowF.total_linea;
+                    }
+
+                    txtTotal.Text = string.Format("{0:#,###,##0.00}", Math.Round(total, 2));
                     break;
             }
-            CalcularTotalFactura();
+            
         }
 
         decimal CalcularTotalFactura()
         {
             decimal total = 0;  
-            foreach(dsVentas.detalle_factura_transactionRow row in dsVentas1.detalle_factura_transaction)
+            foreach(dsVentaSuccess.detalle_factura_transactionRow row in dsVentaSuccess1.detalle_factura_transaction)
             {
                 row.total_linea = (row.cantidad * row.precio) + (row.cantidad * row.isv1) + (row.cantidad * row.isv2) + (row.cantidad * row.isv3);
                 total += row.total_linea;    

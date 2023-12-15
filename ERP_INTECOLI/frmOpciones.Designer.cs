@@ -283,6 +283,7 @@ namespace ERP_INTECOLI
             this.navNotasCredito = new DevExpress.XtraNavBar.NavBarItem();
             this.navCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
             this.TabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl7)).BeginInit();
             this.TabMantenimientos.SuspendLayout();
@@ -345,7 +346,8 @@ namespace ERP_INTECOLI
             new DevExpress.XtraNavBar.NavBarItemLink(this.navConsultarMatriculas),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navMatriculaRapida),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navReservaCupo),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navEstadoCuentaOld)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navEstadoCuentaOld),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem7)});
             this.navBarGroup6.Name = "navBarGroup6";
             // 
             // navEstudiantes
@@ -3408,6 +3410,8 @@ namespace ERP_INTECOLI
             this.navBarControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl3.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup6});
+            this.navBarControl3.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.navBarItem7});
             this.navBarControl3.Location = new System.Drawing.Point(0, 0);
             this.navBarControl3.Name = "navBarControl3";
             this.navBarControl3.OptionsNavPane.ExpandedWidth = 347;
@@ -3504,6 +3508,19 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.contabilidad_x32;
             this.navGeneracionPlanilla.Name = "navGeneracionPlanilla";
             this.navGeneracionPlanilla.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanilla_LinkClicked);
+            // 
+            // navBarItem7
+            // 
+            this.navBarItem7.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItem7.Appearance.Options.UseFont = true;
+            this.navBarItem7.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItem7.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarItem7.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItem7.AppearancePressed.Options.UseFont = true;
+            this.navBarItem7.Caption = "Historial Academico";
+            this.navBarItem7.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem7.ImageOptions.SmallImage")));
+            this.navBarItem7.Name = "navBarItem7";
+            this.navBarItem7.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem7_LinkClicked);
             // 
             // frmOpciones
             // 
@@ -3789,6 +3806,7 @@ namespace ERP_INTECOLI
         private DevExpress.XtraNavBar.NavBarItem navBarItemConfigFacturaAutomatica;
         private DevExpress.XtraNavBar.NavBarItem navBarItem1;
         private DevExpress.XtraNavBar.NavBarItem navFacturasProvee;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem7;
     }
 }
 
