@@ -248,15 +248,14 @@ namespace ERP_INTECOLI.Compras
 
                         foreach (dsCompras.oc_detalleRow item in dsCompras1.oc_detalle)
                         {
-                            if (item.itemcode == DBNull.Value.ToString())
+                            
+                            if (item.itemcode == frm.ItemSeleccionado.ItemCode)
                             {
-                                if (item.itemcode == frm.ItemSeleccionado.ItemCode)
-                                {
-                                    item.cantidad = item.cantidad + 1;
-                                    Agregar = false;
+                                item.cantidad = item.cantidad + 1;
+                                Agregar = false;
 
-                                }
                             }
+                            
                             
                         }
 

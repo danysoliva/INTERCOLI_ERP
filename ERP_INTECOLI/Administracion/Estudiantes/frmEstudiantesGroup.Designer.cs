@@ -67,6 +67,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.btnImportarExcel = new System.Windows.Forms.Button();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtParametro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tsVerTodos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantes1)).BeginInit();
@@ -116,7 +118,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // tsVerTodos
             // 
             this.tsVerTodos.EditValue = true;
-            this.tsVerTodos.Location = new System.Drawing.Point(406, 65);
+            this.tsVerTodos.Location = new System.Drawing.Point(527, 56);
             this.tsVerTodos.Name = "tsVerTodos";
             this.tsVerTodos.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.tsVerTodos.Properties.Appearance.Options.UseFont = true;
@@ -346,7 +348,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(229, 67);
+            this.labelControl1.Location = new System.Drawing.Point(350, 58);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(171, 20);
             this.labelControl1.TabIndex = 46;
@@ -362,11 +364,37 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.labelControl2.TabIndex = 47;
             this.labelControl2.Text = "Gestión de Estudiantes";
             // 
+            // btnImportarExcel
+            // 
+            this.btnImportarExcel.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnImportarExcel.FlatAppearance.BorderColor = System.Drawing.Color.PaleGreen;
+            this.btnImportarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportarExcel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnImportarExcel.Image = global::ERP_INTECOLI.Properties.Resources.anadir;
+            this.btnImportarExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImportarExcel.Location = new System.Drawing.Point(701, 47);
+            this.btnImportarExcel.Name = "btnImportarExcel";
+            this.btnImportarExcel.Size = new System.Drawing.Size(113, 43);
+            this.btnImportarExcel.TabIndex = 48;
+            this.btnImportarExcel.Text = "Agregar";
+            this.btnImportarExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnImportarExcel.UseVisualStyleBackColor = false;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(820, 47);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(113, 43);
+            this.simpleButton1.TabIndex = 49;
+            this.simpleButton1.Text = "Importar";
+            // 
             // frmEstudiantesGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1134, 575);
+            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnImportarExcel);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.gridEstudiantes);
@@ -420,5 +448,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private System.Windows.Forms.Button btnImportarExcel;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

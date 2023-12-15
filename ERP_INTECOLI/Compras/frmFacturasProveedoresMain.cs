@@ -808,5 +808,10 @@ namespace ERP_INTECOLI.Compras
                 }
             }
         }
+
+        private void ButtonDeleteRow_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+
+        }
     }
 }
