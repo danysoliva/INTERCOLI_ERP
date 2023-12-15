@@ -1135,6 +1135,17 @@
     <Compile Include="frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistorialAcademico\dsHistorialAcademico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHistorialAcademico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HistorialAcademico\frmHomeHistorialAcademico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistorialAcademico\frmHomeHistorialAcademico.Designer.cs">
+      <DependentUpon>frmHomeHistorialAcademico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\dsMantenimiento.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1649,6 +1660,9 @@
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HistorialAcademico\frmHomeHistorialAcademico.resx">
+      <DependentUpon>frmHomeHistorialAcademico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento\Productos\frmItemsCRUD.resx">
       <DependentUpon>frmItemsCRUD.cs</DependentUpon>
     </EmbeddedResource>
@@ -2019,6 +2033,17 @@
     </None>
     <None Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscal.resx.bak" />
     <None Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscalCRUD.resx.bak" />
+    <None Include="HistorialAcademico\dsHistorialAcademico.xsc">
+      <DependentUpon>dsHistorialAcademico.xsd</DependentUpon>
+    </None>
+    <None Include="HistorialAcademico\dsHistorialAcademico.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHistorialAcademico.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="HistorialAcademico\dsHistorialAcademico.xss">
+      <DependentUpon>dsHistorialAcademico.xsd</DependentUpon>
+    </None>
     <None Include="Mantenimientos\dsMantenimiento.xsc">
       <DependentUpon>dsMantenimiento.xsd</DependentUpon>
     </None>

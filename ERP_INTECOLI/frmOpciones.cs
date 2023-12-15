@@ -30,6 +30,7 @@ using ERP_INTECOLI.Consultas.ConsultaMiembros;
 using ERP_INTECOLI.Consultas.ConsultaMovimientosSaldos;
 using ERP_INTECOLI.Consultas.RangosPago;
 using ERP_INTECOLI.Facturacion.FacturacionAutomatica;
+using ERP_INTECOLI.HistorialAcademico;
 using ERP_INTECOLI.Mantenimiento.Productos;
 using ERP_INTECOLI.Mantenimiento.Proveedor;
 using ERP_INTECOLI.Transacciones;
@@ -1485,6 +1486,67 @@ namespace ERP_INTECOLI
                 else
                 {
                     CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-27 (Facturas Proveedores)");
+                }
+            }
+        }
+
+        private void navBarItem7_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            //frmHomeHistorialAcademico
+            string HostName = Dns.GetHostName();
+            FacturacionEquipo EquipoActual = new FacturacionEquipo();
+            PuntoVenta puntoVenta1 = new PuntoVenta();
+
+            if (EquipoActual.RecuperarRegistro(HostName))
+            {
+                if (!puntoVenta1.RecuperaRegistro(EquipoActual.id_punto_venta))
+                {
+                    CajaDialogo.Error("Este Equipo de Nombre: " + HostName + " no esta Configurado en ningun Punto de Venta!");
+                    return;
+                }
+            }
+            else
+            {
+                CajaDialogo.Error("Este Equipo de Nombre: " + HostName + " no esta Configurado en ningun Punto de Venta!");
+                return;
+            }
+
+            bool accesoprevio = false;
+            int idNivel = UsuarioLogeado.idNivelAcceso(UsuarioLogeado.Id, 12);//9 = AMS
+            switch (idNivel)                                                      //11 = Jaguar //12 = Success
+            {
+                case 1://Basic View
+                    accesoprevio = false;
+                    break;
+                case 2://Basic No Autorization
+                    accesoprevio = false;
+                    break;
+                case 3://Medium Autorization
+                    accesoprevio = false;
+                    break;
+                case 4://Depth With Delta
+                case 5://Depth Without Delta
+                    accesoprevio = true;
+
+                    frmHomeHistorialAcademico frm = new frmHomeHistorialAcademico();
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                    break;
+                default:
+                    break;
+            }
+
+            if (!accesoprevio)
+            {
+                if (UsuarioLogeado.ValidarNivelPermisos(26))
+                {
+                    frmHomeHistorialAcademico frm = new frmHomeHistorialAcademico();
+                    frm.MdiParent = this.MdiParent;
+                    frm.Show();
+                }
+                else
+                {
+                    CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-27 (Historial Academico)");
                 }
             }
         }

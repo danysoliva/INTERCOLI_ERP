@@ -1135,7 +1135,7 @@ namespace Eatery.Ventas
 
 
                                 //Limpiar Datos
-                                dsVentas1.detalle_factura_transaction.Clear();
+                                dsVentaSuccess1.detalle_factura_transaction.Clear();
                                 ClienteFactura = new ClienteFacturacion();
                                 cmdConsumidorFinal_Click(sender, e);
                             }
