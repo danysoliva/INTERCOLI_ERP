@@ -383,6 +383,19 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                 return;
             }
 
+            switch (pTipoEdit)
+            {
+                case TipoEdicion.Nuevo:
+                    break;
+                case TipoEdicion.Editar:
+
+
+
+                    break;
+                default:
+                    break;
+            }
+
             if (string.IsNullOrEmpty(gridPuntoVenta.Text))
             {
                 CajaDialogo.Error("Debe seleccionar la Sucursal!");

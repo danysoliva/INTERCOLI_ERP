@@ -54,6 +54,11 @@ namespace ERP_INTECOLI.Compras
                     break;
                 case TipoOperacion.Update:
 
+                    grdvDetalle.OptionsMenu.EnableColumnMenu = false;
+                    //Habilita o deshabilita que el user pueda manipular el menu haciendo clic derecho sobre el header de una columna, para elegir columnas, ordenar, etc
+
+                    grdvDetalle.Columns["delete"].Visible = false;
+                    //Permite mostrar o ocultar una columna, se utiliza colocando el string de FieldName que se define desde el datasets
                     CargarInfoFactura();
                     
                     break;
@@ -133,6 +138,12 @@ namespace ERP_INTECOLI.Compras
             txtTotal.EditValue = fact.Total;
             grdSucursales.EditValue = fact.Punto_Venta;
             grdSucursales.Enabled = false;
+
+            grdvDetalle.OptionsMenu.EnableColumnMenu = false;
+            //Habilita o deshabilita que el user pueda manipular el menu haciendo clic derecho sobre el header de una columna, para elegir columnas, ordenar, etc
+
+            grdvDetalle.Columns["delete"].Visible = false;
+            //Permite mostrar o ocultar una columna, se utiliza colocando el string de FieldName que se define desde el datasets
 
             CargarDetalleFactura();
 
@@ -375,6 +386,11 @@ namespace ERP_INTECOLI.Compras
         private void cmdNuevo_Click(object sender, EventArgs e)
         {
             LimpiarControles();
+            grdvDetalle.OptionsMenu.EnableColumnMenu = false;
+            //Habilita o deshabilita que el user pueda manipular el menu haciendo clic derecho sobre el header de una columna, para elegir columnas, ordenar, etc
+
+            grdvDetalle.Columns["delete"].Visible = true;
+            //Permite mostrar o ocultar una columna, se utiliza colocando el string de FieldName que se define desde el datasets
         }
 
         private void LimpiarControles()
@@ -812,6 +828,25 @@ namespace ERP_INTECOLI.Compras
         private void ButtonDeleteRow_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
 
+            DialogResult r = CajaDialogo.Pregunta("Confirma que desea elminar este registro?");
+            if (r != DialogResult.Yes)
+            {
+                return;
+            }
+
+            var grdvDetalle = (GridView)grDetalle.FocusedView;
+            var row = (dsCompras.oc_detalleRow)grdvDetalle.GetFocusedDataRow();
+
+            try
+            {
+                grdvDetalle.DeleteRow(grdvDetalle.FocusedRowHandle);
+                dsCompras1.AcceptChanges();
+                CalcularTotal();
+            }
+            catch (Exception ec)
+            {
+                CajaDialogo.Error(ec.Message);
+            }
         }
     }
 }

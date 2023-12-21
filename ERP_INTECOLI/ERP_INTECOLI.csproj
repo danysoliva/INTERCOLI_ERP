@@ -297,6 +297,12 @@
     <Compile Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.Designer.cs">
       <DependentUpon>frmEstadisticasPorResidencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Estudiantes\frmImportarEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmImportarEstudiantes.Designer.cs">
+      <DependentUpon>frmImportarEstudiantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Estudiantes\frmRecuentoGeneros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1335,6 +1341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.resx">
       <DependentUpon>frmEstadisticasPorResidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Estudiantes\frmImportarEstudiantes.resx">
+      <DependentUpon>frmImportarEstudiantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Estudiantes\frmRecuentoGeneros.resx">
       <DependentUpon>frmRecuentoGeneros.cs</DependentUpon>

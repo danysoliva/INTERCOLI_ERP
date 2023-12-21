@@ -321,7 +321,7 @@ namespace ERP_INTECOLI.Compras
                 try
                 {
                     grdvDetalle.DeleteRow(grdvDetalle.FocusedRowHandle);
-                    //grdvDetalle.
+                    dsCompras1.AcceptChanges();
                     CalcularTotal();
                 }
                 catch (Exception ec)
