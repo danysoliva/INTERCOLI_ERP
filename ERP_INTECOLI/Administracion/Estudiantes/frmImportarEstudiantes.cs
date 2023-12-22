@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
         UserLogin UsuarioLogueado;
         DataOperations dp = new DataOperations();
         PuntoVenta PuntoVentaActual;
+        bool Existe;
 
         public frmImportarEstudiantes(UserLogin pUserLog, PuntoVenta pPuntoVenta)
         {
@@ -46,6 +48,242 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             catch (Exception ec)
             {
                 CajaDialogo.Error(ec.Message);
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "Excel File (.xlsx)|*.xlsx";
+            dialog.FilterIndex = 0;
+
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                grdEstudiantes.ExportToXlsx(dialog.FileName);
+            }
+        }
+
+        private void btnImportar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string file_name = string.Empty;
+
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "Excel File(.xlsx)| *.xlsx";
+                dialog.Title = "Seleccione el archivo importado anteriormente";
+
+                dsEstudiantes dsEstu = new dsEstudiantes();
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    file_name = @dialog.FileName.ToString();
+                    string Connection = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + file_name + "; Extended Properties=\"Excel 12.0 Xml; HDR = YES\"";
+                    OleDbConnection con = new OleDbConnection(Connection);
+                    OleDbDataAdapter myCommand = new OleDbDataAdapter("Select * from [Sheet$]", con);
+                    dsEstudiantes1.prev_estudiantes.Clear();
+
+                    //SplashForm frm = new SplashForm();
+
+                    try
+                    {
+                        myCommand.Fill(dsEstudiantes1.prev_estudiantes);
+                        dsEstudiantes1.prev_estudiantes.AcceptChanges();
+
+
+                        //foreach (dsEstudiantes.prev_estudiantesRow item in dsEstudiantes1.prev_estudiantes.Rows)
+                        //{
+                        //    if (!string.IsNullOrEmpty(item.num_identidad))
+                        //    {
+                        //        ValidacionNumIdentidad(item.num_identidad);
+
+                        //        if (Existe == true)
+                        //        {
+                        //            item.ya_existe = true;
+                        //        }
+
+                        //    }
+                            
+                        //}
+
+                        //string Espacio = "";
+
+                        //foreach (dsEstudiantes.load_excelRow rowEexcel in dsEstu.load_excel.Rows)
+                        //{
+                        //    dsEstudiantes.load_excelRow rowWok = dsEstudiantes1.load_excel.Newload_excelRow();
+
+                        //    rowWok.nombre = rowEexcel.nombre;
+
+                        //    if (string.IsNullOrEmpty(rowEexcel.apellido))
+                        //        rowWok.apellido = Espacio;
+                        //    else
+                        //        rowWok.apellido = rowEexcel.apellido;
+
+                        //    rowWok.correo = rowEexcel.correo;
+
+                        //    rowWok.fecha_nacimiento = rowEexcel.fecha_nacimiento;
+
+                        //    if (string.IsNullOrEmpty(rowEexcel.num_identidad))
+                        //        rowWok.num_identidad = Espacio;
+                        //    else
+                        //        rowWok.num_identidad = rowEexcel.num_identidad;
+
+                        //    rowWok.telefono = rowEexcel.telefono;
+
+                        //    if (string.IsNullOrEmpty(rowEexcel.direccion))
+                        //        rowWok.direccion = Espacio;
+                        //    else
+                        //        rowWok.direccion = rowEexcel.direccion;
+
+                        //    dsEstudiantes1.load_excel.Addload_excelRow(rowWok);
+
+                        //    dsEstudiantes1.load_excel.AcceptChanges();
+                        //}
+                    }
+                    catch (Exception ex)
+                    {
+                        CajaDialogo.Error(ex.Message);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
+        }
+
+        private void ValidacionNumIdentidad(string num_identidad)
+        {
+            try
+            {
+                Existe = false;
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("[sp_estudiantes_validar_existencia_identidad]", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@identidad", num_identidad);
+                Existe = Convert.ToBoolean(cmd.ExecuteScalar());
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmdGuardar_Click(object sender, EventArgs e)
+        {
+            DialogResult r = CajaDialogo.Pregunta("Desea Guardar estos Registros como Estudiantes?");
+            if (r != System.Windows.Forms.DialogResult.Yes)
+                return;
+
+            if (gridView1.RowCount == 0)
+            {
+                CajaDialogo.Error("No se a cargado ningun dato!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(gridPuntoVenta.Text))
+            {
+                CajaDialogo.Error("Debe seleccionar una Sucursal!");
+                return;
+            }
+
+            foreach (dsEstudiantes.prev_estudiantesRow  item in dsEstudiantes1.prev_estudiantes.Rows)
+            {
+                SqlTransaction transaction = null;
+
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                bool Guardar = false;
+
+                try
+                {
+                    conn.Open();
+                    transaction = conn.BeginTransaction("Transaction Order");
+
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = "[sp_estudiantes_insert_new_estudiante]";
+                    cmd.Connection = conn;
+                    cmd.Transaction = transaction;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    if(string.IsNullOrEmpty(item.nombre))
+                        cmd.Parameters.AddWithValue("@nombres", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@nombres", item.nombre);
+
+                    if(string.IsNullOrEmpty(item.apellido))
+                        cmd.Parameters.AddWithValue("@apellidos", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@apellidos", item.apellido);
+
+                    if(string.IsNullOrEmpty(item.correo))
+                        cmd.Parameters.AddWithValue("@direccion", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@direccion", item.direccion);
+                    cmd.Parameters.AddWithValue("@fecha_nacimiento", item.fecha_nacimiento);
+
+                    cmd.Parameters.AddWithValue("@nivel_id_ingreso",DBNull.Value);
+                    cmd.Parameters.AddWithValue("@sexo", DBNull.Value);
+                    
+                    if(string.IsNullOrEmpty(item.correo))
+                        cmd.Parameters.AddWithValue("@correo", DBNull.Value);
+                    else
+                        cmd.Parameters.AddWithValue("@correo", item.correo);
+
+                    cmd.Parameters.AddWithValue("@id_usuario",UsuarioLogueado.Id);
+
+                    cmd.Parameters.AddWithValue("@proxima_fecha_pago", dp.Now().AddDays(30));
+                    cmd.Parameters.AddWithValue("@seguimiento_saldo", 1);
+                    cmd.Parameters.AddWithValue("@tipo_pago", 1);
+                    cmd.Parameters.AddWithValue("@id_zona", DBNull.Value);
+                    cmd.Parameters.AddWithValue("@id_estudiante_recomendo",DBNull.Value);
+                    cmd.Parameters.AddWithValue("@nombre_recomendo", DBNull.Value);
+                    cmd.Parameters.AddWithValue("@id_sucursal",gridPuntoVenta.EditValue);
+                    cmd.Parameters.AddWithValue("@numero_identidad",item.num_identidad);
+                    cmd.Parameters.AddWithValue("@IsEmpleado", 0);
+                    cmd.Parameters.AddWithValue("@dias_min_pago",1);
+                    cmd.Parameters.AddWithValue("@dias_max_pago",10);
+                    cmd.Parameters.AddWithValue("@id_punto_venta", gridPuntoVenta.EditValue);
+
+                    int id_header_estudiante = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    if (id_header_estudiante > 0)
+                    {
+                        if (!string.IsNullOrEmpty(item.telefono))
+                        {
+                            cmd.Parameters.Clear();
+                            cmd.CommandText = "[sp_estudiantes_insert_detalle_telefono]";
+                            cmd.Connection = conn;
+                            cmd.Transaction = transaction;
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@id_estudiante", id_header_estudiante);
+                            cmd.Parameters.AddWithValue("@telefono", item.telefono);
+                            cmd.Parameters.AddWithValue("@tipo_telefono_id", 1); //tipos_telefono: 1 celular
+                            cmd.ExecuteNonQuery();
+                        }
+                        
+                    }
+
+                    transaction.Commit();
+                    Guardar = true;
+
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+
+                }
+                catch (Exception ec)
+                {
+                    transaction.Rollback();
+                    CajaDialogo.Error(ec.Message);
+                    Guardar = false;
+                }
+
+
+
             }
         }
     }

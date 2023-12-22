@@ -62,6 +62,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
         
         private prev_estudiantesDataTable tableprev_estudiantes;
         
+        private load_excelDataTable tableload_excel;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -146,6 +148,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
                 }
                 if ((ds.Tables["prev_estudiantes"] != null)) {
                     base.Tables.Add(new prev_estudiantesDataTable(ds.Tables["prev_estudiantes"]));
+                }
+                if ((ds.Tables["load_excel"] != null)) {
+                    base.Tables.Add(new load_excelDataTable(ds.Tables["load_excel"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -357,6 +362,16 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public load_excelDataTable load_excel {
+            get {
+                return this.tableload_excel;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -478,6 +493,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
                 }
                 if ((ds.Tables["prev_estudiantes"] != null)) {
                     base.Tables.Add(new prev_estudiantesDataTable(ds.Tables["prev_estudiantes"]));
+                }
+                if ((ds.Tables["load_excel"] != null)) {
+                    base.Tables.Add(new load_excelDataTable(ds.Tables["load_excel"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -626,6 +644,12 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
                     this.tableprev_estudiantes.InitVars();
                 }
             }
+            this.tableload_excel = ((load_excelDataTable)(base.Tables["load_excel"]));
+            if ((initTable == true)) {
+                if ((this.tableload_excel != null)) {
+                    this.tableload_excel.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -674,6 +698,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             base.Tables.Add(this.tablepunto_venta);
             this.tableprev_estudiantes = new prev_estudiantesDataTable();
             base.Tables.Add(this.tableprev_estudiantes);
+            this.tableload_excel = new load_excelDataTable();
+            base.Tables.Add(this.tableload_excel);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -792,6 +818,12 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeload_excel() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -901,6 +933,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void prev_estudiantesRowChangeEventHandler(object sender, prev_estudiantesRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void load_excelRowChangeEventHandler(object sender, load_excelRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -6116,6 +6151,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             
             private global::System.Data.DataColumn columnnombre;
             
+            private global::System.Data.DataColumn columnapellido;
+            
             private global::System.Data.DataColumn columncorreo;
             
             private global::System.Data.DataColumn columnfecha_nacimiento;
@@ -6125,6 +6162,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             private global::System.Data.DataColumn columntelefono;
             
             private global::System.Data.DataColumn columndireccion;
+            
+            private global::System.Data.DataColumn columnya_existe;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -6164,6 +6203,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             public global::System.Data.DataColumn nombreColumn {
                 get {
                     return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn apellidoColumn {
+                get {
+                    return this.columnapellido;
                 }
             }
             
@@ -6209,6 +6256,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ya_existeColumn {
+                get {
+                    return this.columnya_existe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6244,15 +6299,17 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public prev_estudiantesRow Addprev_estudiantesRow(string nombre, string correo, System.DateTime fecha_nacimiento, string num_identidad, string telefono, string direccion) {
+            public prev_estudiantesRow Addprev_estudiantesRow(string nombre, string apellido, string correo, System.DateTime fecha_nacimiento, string num_identidad, string telefono, string direccion, bool ya_existe) {
                 prev_estudiantesRow rowprev_estudiantesRow = ((prev_estudiantesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         nombre,
+                        apellido,
                         correo,
                         fecha_nacimiento,
                         num_identidad,
                         telefono,
-                        direccion};
+                        direccion,
+                        ya_existe};
                 rowprev_estudiantesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowprev_estudiantesRow);
                 return rowprev_estudiantesRow;
@@ -6276,11 +6333,13 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnnombre = base.Columns["nombre"];
+                this.columnapellido = base.Columns["apellido"];
                 this.columncorreo = base.Columns["correo"];
                 this.columnfecha_nacimiento = base.Columns["fecha_nacimiento"];
                 this.columnnum_identidad = base.Columns["num_identidad"];
                 this.columntelefono = base.Columns["telefono"];
                 this.columndireccion = base.Columns["direccion"];
+                this.columnya_existe = base.Columns["ya_existe"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6288,6 +6347,8 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             private void InitClass() {
                 this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre);
+                this.columnapellido = new global::System.Data.DataColumn("apellido", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnapellido);
                 this.columncorreo = new global::System.Data.DataColumn("correo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncorreo);
                 this.columnfecha_nacimiento = new global::System.Data.DataColumn("fecha_nacimiento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -6298,6 +6359,9 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
                 base.Columns.Add(this.columntelefono);
                 this.columndireccion = new global::System.Data.DataColumn("direccion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndireccion);
+                this.columnya_existe = new global::System.Data.DataColumn("ya_existe", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnya_existe);
+                this.columnya_existe.DefaultValue = ((bool)(false));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6384,6 +6448,337 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "prev_estudiantesDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class load_excelDataTable : global::System.Data.TypedTableBase<load_excelRow> {
+            
+            private global::System.Data.DataColumn columnnombre;
+            
+            private global::System.Data.DataColumn columnapellido;
+            
+            private global::System.Data.DataColumn columncorreo;
+            
+            private global::System.Data.DataColumn columnfecha_nacimiento;
+            
+            private global::System.Data.DataColumn columnnum_identidad;
+            
+            private global::System.Data.DataColumn columntelefono;
+            
+            private global::System.Data.DataColumn columndireccion;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public load_excelDataTable() {
+                this.TableName = "load_excel";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal load_excelDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected load_excelDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn nombreColumn {
+                get {
+                    return this.columnnombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn apellidoColumn {
+                get {
+                    return this.columnapellido;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn correoColumn {
+                get {
+                    return this.columncorreo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn fecha_nacimientoColumn {
+                get {
+                    return this.columnfecha_nacimiento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn num_identidadColumn {
+                get {
+                    return this.columnnum_identidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn telefonoColumn {
+                get {
+                    return this.columntelefono;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn direccionColumn {
+                get {
+                    return this.columndireccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public load_excelRow this[int index] {
+                get {
+                    return ((load_excelRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event load_excelRowChangeEventHandler load_excelRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event load_excelRowChangeEventHandler load_excelRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event load_excelRowChangeEventHandler load_excelRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event load_excelRowChangeEventHandler load_excelRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Addload_excelRow(load_excelRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public load_excelRow Addload_excelRow(string nombre, string apellido, string correo, System.DateTime fecha_nacimiento, string num_identidad, string telefono, string direccion) {
+                load_excelRow rowload_excelRow = ((load_excelRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        nombre,
+                        apellido,
+                        correo,
+                        fecha_nacimiento,
+                        num_identidad,
+                        telefono,
+                        direccion};
+                rowload_excelRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowload_excelRow);
+                return rowload_excelRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                load_excelDataTable cln = ((load_excelDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new load_excelDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnnombre = base.Columns["nombre"];
+                this.columnapellido = base.Columns["apellido"];
+                this.columncorreo = base.Columns["correo"];
+                this.columnfecha_nacimiento = base.Columns["fecha_nacimiento"];
+                this.columnnum_identidad = base.Columns["num_identidad"];
+                this.columntelefono = base.Columns["telefono"];
+                this.columndireccion = base.Columns["direccion"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
+                this.columnapellido = new global::System.Data.DataColumn("apellido", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnapellido);
+                this.columncorreo = new global::System.Data.DataColumn("correo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncorreo);
+                this.columnfecha_nacimiento = new global::System.Data.DataColumn("fecha_nacimiento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha_nacimiento);
+                this.columnnum_identidad = new global::System.Data.DataColumn("num_identidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnum_identidad);
+                this.columntelefono = new global::System.Data.DataColumn("telefono", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntelefono);
+                this.columndireccion = new global::System.Data.DataColumn("direccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndireccion);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public load_excelRow Newload_excelRow() {
+                return ((load_excelRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new load_excelRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(load_excelRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.load_excelRowChanged != null)) {
+                    this.load_excelRowChanged(this, new load_excelRowChangeEvent(((load_excelRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.load_excelRowChanging != null)) {
+                    this.load_excelRowChanging(this, new load_excelRowChangeEvent(((load_excelRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.load_excelRowDeleted != null)) {
+                    this.load_excelRowDeleted(this, new load_excelRowChangeEvent(((load_excelRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.load_excelRowDeleting != null)) {
+                    this.load_excelRowDeleting(this, new load_excelRowChangeEvent(((load_excelRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Removeload_excelRow(load_excelRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsEstudiantes ds = new dsEstudiantes();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "load_excelDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -8722,6 +9117,22 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string apellido {
+                get {
+                    try {
+                        return ((string)(this[this.tableprev_estudiantes.apellidoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'apellido\' de la tabla \'prev_estudiantes\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableprev_estudiantes.apellidoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string correo {
                 get {
                     try {
@@ -8803,6 +9214,22 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool ya_existe {
+                get {
+                    try {
+                        return ((bool)(this[this.tableprev_estudiantes.ya_existeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ya_existe\' de la tabla \'prev_estudiantes\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableprev_estudiantes.ya_existeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsnombreNull() {
                 return this.IsNull(this.tableprev_estudiantes.nombreColumn);
             }
@@ -8811,6 +9238,18 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetnombreNull() {
                 this[this.tableprev_estudiantes.nombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsapellidoNull() {
+                return this.IsNull(this.tableprev_estudiantes.apellidoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetapellidoNull() {
+                this[this.tableprev_estudiantes.apellidoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8871,6 +9310,229 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetdireccionNull() {
                 this[this.tableprev_estudiantes.direccionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isya_existeNull() {
+                return this.IsNull(this.tableprev_estudiantes.ya_existeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setya_existeNull() {
+                this[this.tableprev_estudiantes.ya_existeColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class load_excelRow : global::System.Data.DataRow {
+            
+            private load_excelDataTable tableload_excel;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal load_excelRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableload_excel = ((load_excelDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tableload_excel.nombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'load_excel\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableload_excel.nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string apellido {
+                get {
+                    try {
+                        return ((string)(this[this.tableload_excel.apellidoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'apellido\' de la tabla \'load_excel\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableload_excel.apellidoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string correo {
+                get {
+                    try {
+                        return ((string)(this[this.tableload_excel.correoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'correo\' de la tabla \'load_excel\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableload_excel.correoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime fecha_nacimiento {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableload_excel.fecha_nacimientoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fecha_nacimiento\' de la tabla \'load_excel\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableload_excel.fecha_nacimientoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string num_identidad {
+                get {
+                    try {
+                        return ((string)(this[this.tableload_excel.num_identidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'num_identidad\' de la tabla \'load_excel\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableload_excel.num_identidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string telefono {
+                get {
+                    try {
+                        return ((string)(this[this.tableload_excel.telefonoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono\' de la tabla \'load_excel\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableload_excel.telefonoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string direccion {
+                get {
+                    try {
+                        return ((string)(this[this.tableload_excel.direccionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'direccion\' de la tabla \'load_excel\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableload_excel.direccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsnombreNull() {
+                return this.IsNull(this.tableload_excel.nombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetnombreNull() {
+                this[this.tableload_excel.nombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsapellidoNull() {
+                return this.IsNull(this.tableload_excel.apellidoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetapellidoNull() {
+                this[this.tableload_excel.apellidoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IscorreoNull() {
+                return this.IsNull(this.tableload_excel.correoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetcorreoNull() {
+                this[this.tableload_excel.correoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isfecha_nacimientoNull() {
+                return this.IsNull(this.tableload_excel.fecha_nacimientoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setfecha_nacimientoNull() {
+                this[this.tableload_excel.fecha_nacimientoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isnum_identidadNull() {
+                return this.IsNull(this.tableload_excel.num_identidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setnum_identidadNull() {
+                this[this.tableload_excel.num_identidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IstelefonoNull() {
+                return this.IsNull(this.tableload_excel.telefonoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SettelefonoNull() {
+                this[this.tableload_excel.telefonoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsdireccionNull() {
+                return this.IsNull(this.tableload_excel.direccionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetdireccionNull() {
+                this[this.tableload_excel.direccionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -9506,6 +10168,40 @@ namespace ERP_INTECOLI.Administracion.Estudiantes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public prev_estudiantesRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class load_excelRowChangeEvent : global::System.EventArgs {
+            
+            private load_excelRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public load_excelRowChangeEvent(load_excelRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public load_excelRow Row {
                 get {
                     return this.eventRow;
                 }
