@@ -141,5 +141,14 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             frmHistoarialAntiguedad frx = new frmHistoarialAntiguedad(row.id_estudiante);
             frx.ShowDialog();
         }
+
+        private void btnImportar_Click(object sender, EventArgs e)
+        {
+            frmImportarEstudiantes frm = new frmImportarEstudiantes(UsuarioLogeado, PuntoDeVentaActual);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                load_data();
+            }
+        }
     }
 }

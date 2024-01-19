@@ -320,7 +320,7 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.btnAtras.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnAtras.Location = new System.Drawing.Point(969, 17);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(145, 44);
+            this.btnAtras.Size = new System.Drawing.Size(118, 44);
             this.btnAtras.TabIndex = 51;
             this.btnAtras.Text = "Atras";
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
@@ -333,9 +333,9 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             this.cmdRefresh.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.cmdRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdRefresh.ImageOptions.Image")));
             this.cmdRefresh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.cmdRefresh.Location = new System.Drawing.Point(806, 17);
+            this.cmdRefresh.Location = new System.Drawing.Point(822, 17);
             this.cmdRefresh.Name = "cmdRefresh";
-            this.cmdRefresh.Size = new System.Drawing.Size(145, 44);
+            this.cmdRefresh.Size = new System.Drawing.Size(118, 44);
             this.cmdRefresh.TabIndex = 52;
             this.cmdRefresh.Text = "Refresh";
             this.cmdRefresh.Click += new System.EventHandler(this.cmdRefresh_Click);
