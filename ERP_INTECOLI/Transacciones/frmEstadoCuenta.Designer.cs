@@ -36,24 +36,26 @@ namespace ERP_INTECOLI.Transacciones
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.dsMovimientosSaldos1 = new ERP_INTECOLI.Administracion.Movimientos.dsMovimientosSaldos();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colid_row = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colid_student = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colid_documento = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coltipo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coltipon = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colfecha = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnum_doc = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colcredito = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldebito = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldoc_date = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldate_created = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_user_created = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colusuario_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_detalle_matricula = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNivel = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colseccion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colconcepto = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colnulo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colcargos = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colabonos = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colsaldo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.cmbCargarDatos = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtEstudiante = new DevExpress.XtraEditors.TextEdit();
             this.cmdF2 = new DevExpress.XtraEditors.SimpleButton();
+            this.colestado_transaccion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMovimientosSaldos1)).BeginInit();
@@ -100,7 +102,7 @@ namespace ERP_INTECOLI.Transacciones
             this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl1.DataMember = "estado_cuenta";
+            this.gridControl1.DataMember = "estado_cuenta_lines";
             this.gridControl1.DataSource = this.dsMovimientosSaldos1;
             this.gridControl1.Location = new System.Drawing.Point(1, 78);
             this.gridControl1.MainView = this.gridView1;
@@ -122,137 +124,139 @@ namespace ERP_INTECOLI.Transacciones
             this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridView1.Appearance.Row.Options.UseFont = true;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colid_row,
-            this.colid_student,
-            this.colid_estudiante,
-            this.colid_documento,
-            this.coltipo,
-            this.coltipon,
-            this.colfecha,
+            this.colid,
             this.colnum_doc,
+            this.colcredito,
+            this.coldebito,
+            this.coldoc_date,
+            this.coldate_created,
+            this.colid_user_created,
+            this.colusuario_name,
+            this.colid_estudiante,
+            this.colid_detalle_matricula,
+            this.colNivel,
+            this.colseccion,
             this.colconcepto,
-            this.colnulo,
-            this.colcargos,
-            this.colabonos,
-            this.colsaldo});
+            this.colsaldo,
+            this.colestado_transaccion});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // colid_row
+            // colid
             // 
-            this.colid_row.FieldName = "id_row";
-            this.colid_row.Name = "colid_row";
+            this.colid.FieldName = "id";
+            this.colid.Name = "colid";
             // 
-            // colid_student
+            // colnum_doc
             // 
-            this.colid_student.FieldName = "id_student";
-            this.colid_student.Name = "colid_student";
-            this.colid_student.OptionsColumn.AllowEdit = false;
+            this.colnum_doc.FieldName = "num_doc";
+            this.colnum_doc.Name = "colnum_doc";
+            this.colnum_doc.OptionsColumn.ReadOnly = true;
+            this.colnum_doc.Visible = true;
+            this.colnum_doc.VisibleIndex = 0;
+            this.colnum_doc.Width = 137;
+            // 
+            // colcredito
+            // 
+            this.colcredito.DisplayFormat.FormatString = "n2";
+            this.colcredito.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colcredito.FieldName = "credito";
+            this.colcredito.Name = "colcredito";
+            this.colcredito.OptionsColumn.ReadOnly = true;
+            this.colcredito.Visible = true;
+            this.colcredito.VisibleIndex = 8;
+            this.colcredito.Width = 90;
+            // 
+            // coldebito
+            // 
+            this.coldebito.DisplayFormat.FormatString = "n2";
+            this.coldebito.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.coldebito.FieldName = "debito";
+            this.coldebito.Name = "coldebito";
+            this.coldebito.OptionsColumn.ReadOnly = true;
+            this.coldebito.Visible = true;
+            this.coldebito.VisibleIndex = 7;
+            this.coldebito.Width = 103;
+            // 
+            // coldoc_date
+            // 
+            this.coldoc_date.DisplayFormat.FormatString = "d";
+            this.coldoc_date.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.coldoc_date.FieldName = "doc_date";
+            this.coldoc_date.Name = "coldoc_date";
+            this.coldoc_date.OptionsColumn.ReadOnly = true;
+            this.coldoc_date.Visible = true;
+            this.coldoc_date.VisibleIndex = 2;
+            this.coldoc_date.Width = 86;
+            // 
+            // coldate_created
+            // 
+            this.coldate_created.DisplayFormat.FormatString = "g";
+            this.coldate_created.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.coldate_created.FieldName = "date_created";
+            this.coldate_created.Name = "coldate_created";
+            // 
+            // colid_user_created
+            // 
+            this.colid_user_created.FieldName = "id_user_created";
+            this.colid_user_created.Name = "colid_user_created";
+            // 
+            // colusuario_name
+            // 
+            this.colusuario_name.FieldName = "usuario_name";
+            this.colusuario_name.Name = "colusuario_name";
+            this.colusuario_name.OptionsColumn.ReadOnly = true;
+            this.colusuario_name.Visible = true;
+            this.colusuario_name.VisibleIndex = 3;
+            this.colusuario_name.Width = 65;
             // 
             // colid_estudiante
             // 
             this.colid_estudiante.FieldName = "id_estudiante";
             this.colid_estudiante.Name = "colid_estudiante";
-            this.colid_estudiante.OptionsColumn.AllowEdit = false;
             // 
-            // colid_documento
+            // colid_detalle_matricula
             // 
-            this.colid_documento.FieldName = "id_documento";
-            this.colid_documento.Name = "colid_documento";
-            this.colid_documento.OptionsColumn.AllowEdit = false;
+            this.colid_detalle_matricula.FieldName = "id_detalle_matricula";
+            this.colid_detalle_matricula.Name = "colid_detalle_matricula";
             // 
-            // coltipo
+            // colNivel
             // 
-            this.coltipo.FieldName = "tipo";
-            this.coltipo.Name = "coltipo";
-            this.coltipo.OptionsColumn.AllowEdit = false;
+            this.colNivel.FieldName = "Nivel";
+            this.colNivel.Name = "colNivel";
+            this.colNivel.OptionsColumn.ReadOnly = true;
+            this.colNivel.Visible = true;
+            this.colNivel.VisibleIndex = 4;
+            this.colNivel.Width = 123;
             // 
-            // coltipon
+            // colseccion
             // 
-            this.coltipon.Caption = "Tipo";
-            this.coltipon.FieldName = "tipon";
-            this.coltipon.Name = "coltipon";
-            this.coltipon.OptionsColumn.AllowEdit = false;
-            this.coltipon.Visible = true;
-            this.coltipon.VisibleIndex = 0;
-            this.coltipon.Width = 101;
-            // 
-            // colfecha
-            // 
-            this.colfecha.Caption = "Fecha";
-            this.colfecha.DisplayFormat.FormatString = "d";
-            this.colfecha.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.colfecha.FieldName = "fecha";
-            this.colfecha.Name = "colfecha";
-            this.colfecha.OptionsColumn.AllowEdit = false;
-            this.colfecha.Visible = true;
-            this.colfecha.VisibleIndex = 1;
-            // 
-            // colnum_doc
-            // 
-            this.colnum_doc.Caption = "Número Documento";
-            this.colnum_doc.FieldName = "num_doc";
-            this.colnum_doc.Name = "colnum_doc";
-            this.colnum_doc.OptionsColumn.AllowEdit = false;
-            this.colnum_doc.Visible = true;
-            this.colnum_doc.VisibleIndex = 2;
-            this.colnum_doc.Width = 124;
+            this.colseccion.FieldName = "seccion";
+            this.colseccion.Name = "colseccion";
+            this.colseccion.OptionsColumn.ReadOnly = true;
+            this.colseccion.Visible = true;
+            this.colseccion.VisibleIndex = 5;
+            this.colseccion.Width = 82;
             // 
             // colconcepto
             // 
-            this.colconcepto.Caption = "Concepto";
             this.colconcepto.FieldName = "concepto";
             this.colconcepto.Name = "colconcepto";
-            this.colconcepto.OptionsColumn.AllowEdit = false;
+            this.colconcepto.OptionsColumn.ReadOnly = true;
             this.colconcepto.Visible = true;
-            this.colconcepto.VisibleIndex = 3;
-            this.colconcepto.Width = 254;
-            // 
-            // colnulo
-            // 
-            this.colnulo.Caption = "Anulado";
-            this.colnulo.FieldName = "nulo";
-            this.colnulo.Name = "colnulo";
-            this.colnulo.OptionsColumn.AllowEdit = false;
-            this.colnulo.Visible = true;
-            this.colnulo.VisibleIndex = 4;
-            this.colnulo.Width = 58;
-            // 
-            // colcargos
-            // 
-            this.colcargos.Caption = "Cargos";
-            this.colcargos.DisplayFormat.FormatString = "n2";
-            this.colcargos.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colcargos.FieldName = "cargos";
-            this.colcargos.Name = "colcargos";
-            this.colcargos.OptionsColumn.AllowEdit = false;
-            this.colcargos.Visible = true;
-            this.colcargos.VisibleIndex = 5;
-            this.colcargos.Width = 72;
-            // 
-            // colabonos
-            // 
-            this.colabonos.Caption = "Abonos";
-            this.colabonos.DisplayFormat.FormatString = "n2";
-            this.colabonos.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colabonos.FieldName = "abonos";
-            this.colabonos.Name = "colabonos";
-            this.colabonos.OptionsColumn.AllowEdit = false;
-            this.colabonos.Visible = true;
-            this.colabonos.VisibleIndex = 6;
-            this.colabonos.Width = 62;
+            this.colconcepto.VisibleIndex = 1;
+            this.colconcepto.Width = 144;
             // 
             // colsaldo
             // 
-            this.colsaldo.Caption = "Saldo";
             this.colsaldo.DisplayFormat.FormatString = "n2";
             this.colsaldo.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colsaldo.FieldName = "saldo";
             this.colsaldo.Name = "colsaldo";
-            this.colsaldo.OptionsColumn.AllowEdit = false;
+            this.colsaldo.OptionsColumn.ReadOnly = true;
             this.colsaldo.Visible = true;
-            this.colsaldo.VisibleIndex = 7;
-            this.colsaldo.Width = 60;
+            this.colsaldo.VisibleIndex = 9;
+            this.colsaldo.Width = 85;
             // 
             // button1
             // 
@@ -294,7 +298,7 @@ namespace ERP_INTECOLI.Transacciones
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 16);
+            this.label4.Size = new System.Drawing.Size(84, 16);
             this.label4.TabIndex = 21;
             this.label4.Text = "Estudiante:";
             // 
@@ -320,6 +324,15 @@ namespace ERP_INTECOLI.Transacciones
             this.cmdF2.Size = new System.Drawing.Size(48, 44);
             this.cmdF2.TabIndex = 50;
             this.cmdF2.Click += new System.EventHandler(this.cmdF2_Click);
+            // 
+            // colestado_transaccion
+            // 
+            this.colestado_transaccion.FieldName = "estado_transaccion";
+            this.colestado_transaccion.Name = "colestado_transaccion";
+            this.colestado_transaccion.OptionsColumn.ReadOnly = true;
+            this.colestado_transaccion.Visible = true;
+            this.colestado_transaccion.VisibleIndex = 6;
+            this.colestado_transaccion.Width = 72;
             // 
             // frmEstadoCuenta
             // 
@@ -353,24 +366,26 @@ namespace ERP_INTECOLI.Transacciones
         private System.Windows.Forms.RadioButton rdSoloHabilitados;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colid_row;
-        private DevExpress.XtraGrid.Columns.GridColumn colid_student;
-        private DevExpress.XtraGrid.Columns.GridColumn colid_estudiante;
-        private DevExpress.XtraGrid.Columns.GridColumn colid_documento;
-        private DevExpress.XtraGrid.Columns.GridColumn coltipo;
-        private DevExpress.XtraGrid.Columns.GridColumn coltipon;
-        private DevExpress.XtraGrid.Columns.GridColumn colfecha;
-        private DevExpress.XtraGrid.Columns.GridColumn colnum_doc;
-        private DevExpress.XtraGrid.Columns.GridColumn colconcepto;
-        private DevExpress.XtraGrid.Columns.GridColumn colnulo;
-        private DevExpress.XtraGrid.Columns.GridColumn colcargos;
-        private DevExpress.XtraGrid.Columns.GridColumn colabonos;
-        private DevExpress.XtraGrid.Columns.GridColumn colsaldo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button cmbCargarDatos;
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.TextEdit txtEstudiante;
         private DevExpress.XtraEditors.SimpleButton cmdF2;
         private Administracion.Movimientos.dsMovimientosSaldos dsMovimientosSaldos1;
+        private DevExpress.XtraGrid.Columns.GridColumn colid;
+        private DevExpress.XtraGrid.Columns.GridColumn colnum_doc;
+        private DevExpress.XtraGrid.Columns.GridColumn colcredito;
+        private DevExpress.XtraGrid.Columns.GridColumn coldebito;
+        private DevExpress.XtraGrid.Columns.GridColumn coldoc_date;
+        private DevExpress.XtraGrid.Columns.GridColumn coldate_created;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_user_created;
+        private DevExpress.XtraGrid.Columns.GridColumn colusuario_name;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_estudiante;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_detalle_matricula;
+        private DevExpress.XtraGrid.Columns.GridColumn colNivel;
+        private DevExpress.XtraGrid.Columns.GridColumn colseccion;
+        private DevExpress.XtraGrid.Columns.GridColumn colconcepto;
+        private DevExpress.XtraGrid.Columns.GridColumn colsaldo;
+        private DevExpress.XtraGrid.Columns.GridColumn colestado_transaccion;
     }
 }
