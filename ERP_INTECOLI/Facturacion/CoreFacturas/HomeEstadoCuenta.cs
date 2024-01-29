@@ -28,7 +28,13 @@ namespace JAGUAR_APP.Facturacion.CoreFacturas
             cmdAjusteSaldo.Visible = false;
         }
 
-      
+        public HomeEstadoCuenta(UserLogin pUser)
+        {
+            InitializeComponent();
+            this.UsuarioLogeado = pUser;
+            EstudianteActual = new Estudiante();
+            ValidarPermisoAjusteSaldo();
+        }
 
         public HomeEstadoCuenta(UserLogin pUser, PuntoVenta pPuntoDeVentaActual, FacturacionEquipo pEquipoActual, Int64 pIdEstudiante)
         {

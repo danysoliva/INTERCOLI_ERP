@@ -1,0 +1,1608 @@
+[
+  {
+    "grupoID": 1,
+    "grupo": "I.  POLÍTICAS Y PRÁCTICAS EN EL TRABAJO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En general, considero que la empresa es justa con sus empleados",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Recomendaría la empresa a mis amigos y parientes para que laboren en ella",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La empresa ofrece estabilidad laboral, siempre y cuando uno cumpla con los deberes y responsabilidades del puesto",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La política de promoción Interna o de ascensos es practicada en la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El respeto que la empresa brinda a sus empleados es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El sueldo que me pagan, de acuerdo al trabajo que realizo, considero que es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Recibo a tiempo mi pago de salario, horas extras u otro tipo de compensación? Si su respuesta es Nunca, explique:",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Conoce usted los valores y principios de la empresa?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Se practican esos valores y principios en la empresa?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "¿Considera que la empresa promueve la armonía entre la vida laboral y la vida familiar? Si su respuesta es Nunca, explique:",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 2,
+    "grupo": "II.  SATISFACCION EN EL TRABAJO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En mi área de trabajo existe el trabajo en equipo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Tengo libertad para proponer nuevas ideas y/o sugerir cambios en la forma de realizar mi trabajo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En el puesto que actualmente me desempeño, me permite poner en práctica mis conocimientos y habilidades",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Me siento satisfecho con el trabajo que realizo actualmente",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La empresa me brinda oportunidades de seguir creciendo profesionalmente",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Se ha sentido alguna vez discriminado por sus jefes / compañeros",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Se ha sentido acosado de parte de sus jefes / compañeros",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con el horario de trabajo que tengo asignado me siento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con la carga de trabajo que tengo asignada me siento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con respecto a la relación que tengo con mis compañeros me siento",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 3,
+    "grupo": "III.  SOBRE MI DESEMPEÑO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco los objetivos del departamento donde trabajo y de la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Comprendo mi rol en función de los objetivos del área y de la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco la contribución de mi trabajo para el alcance de objetivos de mi unidad y la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco y uso de guía los indicadores de desempeño mediante los cuales se mide mi trabajo (en caso que aplique)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco claramente cuales son las actividades que debo realizar para el logro de los indicadores",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 4,
+    "grupo": "IV.  JEFE INMEDIATO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El apoyo que recibo de mi jefe es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La preocupación de mi jefe por mis problemas laborales es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La preocupación de mi jefe por mis problemas personales es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La comunicación con mi jefe es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe se preocupa de mi capacitación para desempeñar mejor mi trabajo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Confió en las decisiones que toma mi jefe",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me informa a tiempo sobre lo que sucede en la empresa, así como objetivos y proyectos",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me respeta",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me da reconocimiento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Me reúno con mi jefe para la evaluación de mi trabajo y recibo retroalimentación en las áreas que debo mejorar",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 5,
+    "grupo": "V.  CONDICIONES FISICAS DEL LUGAR DE TRABAJO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El mobiliario y equipo que utilizo para realizar mi trabajo se encuentra",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La limpieza e higiene en el servicio sanitario es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Las condiciones físicas, ventilación e iluminación de mi lugar de trabajo son",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Existen riesgos en el lugar de trabajo? ¿Cuáles? Especifique:",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 6,
+    "grupo": "VI. SERVICIOS",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El área donde tomo mis alimentos (cafetería de la empresa) es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que la calidad de la comida que venden en la cafetería es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que el precio de la comida es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que las porciones de comidas servidas son ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La variedad de la comida (Menús) es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El trato que recibo del personal de la cafetería es ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El área donde recibo atención medica (Clínica) es ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El trato que recibo del personal de la Clínica es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Cuando me han dado medicamentos en la clínica los resultados han sido",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 7,
+    "grupo": "VII.  LIDERAZGO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "Conozco en persona a los ejecutivos de la empresa (Gerente General y Gerente de Planta)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "He departido con los ejecutivos de mi área en reuniones sociales y de trabajo que la empresa realiza",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La comunicación con el Gerente General / Gerente de Planta es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que la disponibilidad cuando he requerido apoyo del Gerente General / Gerente de Planta es ",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 8,
+    "grupo": "VIII.  PREGUNTA FINAL",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "En este momento, ¿Cómo calificaría su satisfacción general en nuestra empresa?",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 9,
+    "grupo": "IX.  OPINION",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 6,
+        "pregunta": "En términos generales, cómo evalúa al gerente, jefe o encargado de su área (puede evaluar a su jefe inmediato y al jefe de su jefe)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 6,
+        "pregunta": "Comentarios que nos ayude a mejorar su ambiente de trabajo y a nuestra empresa",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 10,
+    "grupo": "I.  POLÍTICAS Y PRÁCTICAS EN EL TRABAJO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En general, considero que la empresa es justa con sus empleados",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Recomendaría la empresa a mis amigos y parientes para que laboren en ella",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La empresa ofrece estabilidad laboral, siempre y cuando uno cumpla con los deberes y responsabilidades del puesto",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La política de promoción Interna o de ascensos es practicada en la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El respeto que la empresa brinda a sus empleados es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El sueldo que me pagan, de acuerdo al trabajo que realizo, considero que es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Recibo a tiempo mi pago de salario, horas extras u otro tipo de compensación? Si su respuesta es Nunca, explique:",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Conoce usted los valores y principios de la empresa?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Se practican esos valores y principios en la empresa?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "¿Considera que la empresa promueve la armonía entre la vida laboral y la vida familiar? Si su respuesta es Nunca, explique:",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 11,
+    "grupo": "II.  SATISFACCION EN EL TRABAJO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En mi área de trabajo existe el trabajo en equipo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Tengo libertad para proponer nuevas ideas y/o sugerir cambios en la forma de realizar mi trabajo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En el puesto que actualmente me desempeño, me permite poner en práctica mis conocimientos y habilidades",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Me siento satisfecho con el trabajo que realizo actualmente",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La empresa me brinda oportunidades de seguir creciendo profesionalmente",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Se ha sentido alguna vez discriminado por sus jefes / compañeros",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Se ha sentido acosado de parte de sus jefes / compañeros",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con el horario de trabajo que tengo asignado me siento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con la carga de trabajo que tengo asignada me siento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con respecto a la relación que tengo con mis compañeros me siento",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 12,
+    "grupo": "III.  SOBRE MI DESEMPEÑO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco los objetivos del departamento donde trabajo y de la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Comprendo mi rol en función de los objetivos del área y de la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco la contribución de mi trabajo para el alcance de objetivos de mi unidad y la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco y uso de guía los indicadores de desempeño mediante los cuales se mide mi trabajo (en caso que aplique)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco claramente cuales son las actividades que debo realizar para el logro de los indicadores",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 13,
+    "grupo": "IV.  JEFE INMEDIATO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El apoyo que recibo de mi jefe es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La preocupación de mi jefe por mis problemas laborales es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La preocupación de mi jefe por mis problemas personales es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La comunicación con mi jefe es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe se preocupa de mi capacitación para desempeñar mejor mi trabajo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Confió en las decisiones que toma mi jefe",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me informa a tiempo sobre lo que sucede en la empresa, así como objetivos y proyectos",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me respeta",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me da reconocimiento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Me reúno con mi jefe para la evaluación de mi trabajo y recibo retroalimentación en las áreas que debo mejorar",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 14,
+    "grupo": "V.  CONDICIONES FISICAS DEL LUGAR DE TRABAJO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El mobiliario y equipo que utilizo para realizar mi trabajo se encuentra",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La limpieza e higiene en el servicio sanitario es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Las condiciones físicas, ventilación e iluminación de mi lugar de trabajo son",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Existen riesgos en el lugar de trabajo? ¿Cuáles? Especifique:",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 15,
+    "grupo": "VI. SERVICIOS",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El área donde tomo mis alimentos (cafetería de la empresa) es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que la calidad de la comida que venden en la cafetería es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que el precio de la comida es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que las porciones de comidas servidas son ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La variedad de la comida (Menús) es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El trato que recibo del personal de la cafetería es ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El área donde recibo atención medica (Clínica) es ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El trato que recibo del personal de la Clínica es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Cuando me han dado medicamentos en la clínica los resultados han sido",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 16,
+    "grupo": "VII.  LIDERAZGO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "Conozco en persona a los ejecutivos de la empresa (Gerente General y Gerente de Planta)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "He departido con los ejecutivos de mi área en reuniones sociales y de trabajo que la empresa realiza",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La comunicación con el Gerente General / Gerente de Planta es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que la disponibilidad cuando he requerido apoyo del Gerente General / Gerente de Planta es ",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 17,
+    "grupo": "VIII.  PREGUNTA FINAL",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "En este momento, ¿Cómo calificaría su satisfacción general en nuestra empresa?",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 18,
+    "grupo": "IX.  OPINION",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 6,
+        "pregunta": "En términos generales, cómo evalúa al gerente, jefe o encargado de su área (puede evaluar a su jefe inmediato y al jefe de su jefe)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 6,
+        "pregunta": "Comentarios que nos ayude a mejorar su ambiente de trabajo y a nuestra empresa",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 37,
+    "grupo": "I.  POLÍTICAS Y PRÁCTICAS EN EL TRABAJO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "¿Considera que la empresa promueve la armonía entre la vida laboral y la vida familiar?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En general, considero que la empresa es justa con sus empleados",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Recomendaría la empresa a mis amigos y parientes para que laboren en ella",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La empresa ofrece estabilidad laboral, siempre y cuando uno cumpla con los deberes y responsabilidades del puesto",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La política de promoción Interna o de ascensos es practicada en la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Recibo a tiempo mi pago de salario, horas extras u otro tipo de compensación?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El respeto que la empresa brinda a sus empleados es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El sueldo que me pagan, de acuerdo al trabajo que realizo, considero que es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Conoce usted los valores y principios de la empresa?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Se practican esos valores y principios en la empresa?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "¿Considera que la empresa promueve la armonía entre la vida laboral y la vida familiar?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En general, considero que la empresa es justa con sus empleados",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Recomendaría la empresa a mis amigos y parientes para que laboren en ella",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La empresa ofrece estabilidad laboral, siempre y cuando uno cumpla con los deberes y responsabilidades del puesto",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La política de promoción Interna o de ascensos es practicada en la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Recibo a tiempo mi pago de salario, horas extras u otro tipo de compensación?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El respeto que la empresa brinda a sus empleados es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El sueldo que me pagan, de acuerdo al trabajo que realizo, considero que es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Conoce usted los valores y principios de la empresa?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Se practican esos valores y principios en la empresa?",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 38,
+    "grupo": "II.  SATISFACCION EN EL TRABAJO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En mi área de trabajo existe el trabajo en equipo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Tengo libertad para proponer nuevas ideas y/o sugerir cambios en la forma de realizar mi trabajo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En el puesto que actualmente me desempeño, me permite poner en práctica mis conocimientos y habilidades",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Me siento satisfecho con el trabajo que realizo actualmente",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La empresa me brinda oportunidades de seguir creciendo profesionalmente",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Se ha sentido alguna vez discriminado por sus jefes / compañeros",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Se ha sentido acosado de parte de sus jefes / compañeros",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con el horario de trabajo que tengo asignado me siento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con la carga de trabajo que tengo asignada me siento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con respecto a la relación que tengo con mis compañeros me siento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En mi área de trabajo existe el trabajo en equipo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Tengo libertad para proponer nuevas ideas y/o sugerir cambios en la forma de realizar mi trabajo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En el puesto que actualmente me desempeño, me permite poner en práctica mis conocimientos y habilidades",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Me siento satisfecho con el trabajo que realizo actualmente",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La empresa me brinda oportunidades de seguir creciendo profesionalmente",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Se ha sentido alguna vez discriminado por sus jefes / compañeros",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Se ha sentido acosado de parte de sus jefes / compañeros",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con el horario de trabajo que tengo asignado me siento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con la carga de trabajo que tengo asignada me siento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con respecto a la relación que tengo con mis compañeros me siento",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 39,
+    "grupo": "III.  SOBRE MI DESEMPEÑO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco los objetivos del departamento donde trabajo y de la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Comprendo mi rol en función de los objetivos del área y de la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco la contribución de mi trabajo para el alcance de objetivos de mi unidad y la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco y uso de guía los indicadores de desempeño mediante los cuales se mide mi trabajo (en caso que aplique)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco claramente cuales son las actividades que debo realizar para el logro de los indicadores",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco los objetivos del departamento donde trabajo y de la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Comprendo mi rol en función de los objetivos del área y de la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco la contribución de mi trabajo para el alcance de objetivos de mi unidad y la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco y uso de guía los indicadores de desempeño mediante los cuales se mide mi trabajo (en caso que aplique)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco claramente cuales son las actividades que debo realizar para el logro de los indicadores",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 40,
+    "grupo": "IV.  JEFE INMEDIATO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe se preocupa de mi capacitación para desempeñar mejor mi trabajo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Confió en las decisiones que toma mi jefe",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me informa a tiempo sobre lo que sucede en la empresa, así como objetivos y proyectos",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me respeta",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me da reconocimiento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Me reúno con mi jefe para la evaluación de mi trabajo y recibo retroalimentación en las áreas que debo mejorar",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El apoyo que recibo de mi jefe es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La preocupación de mi jefe por mis problemas laborales es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La preocupación de mi jefe por mis problemas personales es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La comunicación con mi jefe es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe se preocupa de mi capacitación para desempeñar mejor mi trabajo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Confió en las decisiones que toma mi jefe",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me informa a tiempo sobre lo que sucede en la empresa, así como objetivos y proyectos",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me respeta",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me da reconocimiento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Me reúno con mi jefe para la evaluación de mi trabajo y recibo retroalimentación en las áreas que debo mejorar",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El apoyo que recibo de mi jefe es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La preocupación de mi jefe por mis problemas laborales es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La preocupación de mi jefe por mis problemas personales es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La comunicación con mi jefe es",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 41,
+    "grupo": "V.  CONDICIONES FISICAS DEL LUGAR DE TRABAJO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El mobiliario y equipo que utilizo para realizar mi trabajo se encuentra",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La limpieza e higiene en el servicio sanitario es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Las condiciones físicas, ventilación e iluminación de mi lugar de trabajo son",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Existen riesgos en el lugar de trabajo?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El mobiliario y equipo que utilizo para realizar mi trabajo se encuentra",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La limpieza e higiene en el servicio sanitario es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Las condiciones físicas, ventilación e iluminación de mi lugar de trabajo son",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Existen riesgos en el lugar de trabajo?",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 42,
+    "grupo": "VI. SERVICIOS",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El área donde tomo mis alimentos (cafetería de la empresa) es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que la calidad de la comida que venden en la cafetería es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que el precio de la comida es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que las porciones de comidas servidas son ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La variedad de la comida (Menús) es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El trato que recibo del personal de la cafetería es ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El área donde recibo atención medica (Clínica) es ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El trato que recibo del personal de la Clínica es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Cuando me han dado medicamentos en la clínica los resultados han sido",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El área donde tomo mis alimentos (cafetería de la empresa) es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que la calidad de la comida que venden en la cafetería es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que el precio de la comida es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que las porciones de comidas servidas son ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La variedad de la comida (Menús) es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El trato que recibo del personal de la cafetería es ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El área donde recibo atención medica (Clínica) es ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El trato que recibo del personal de la Clínica es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Cuando me han dado medicamentos en la clínica los resultados han sido",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 43,
+    "grupo": "VII.  LIDERAZGO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La comunicación con el Gerente General / Gerente de Planta es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que la disponibilidad cuando he requerido apoyo del Gerente General / Gerente de Planta es ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "Conozco en persona a los ejecutivos de la empresa (Gerente General y Gerente de Planta)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "He departido con los ejecutivos de mi área en reuniones sociales y de trabajo que la empresa realiza",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La comunicación con el Gerente General / Gerente de Planta es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que la disponibilidad cuando he requerido apoyo del Gerente General / Gerente de Planta es ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "Conozco en persona a los ejecutivos de la empresa (Gerente General)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "He departido con los ejecutivos de mi área en reuniones sociales y de trabajo que la empresa realiza",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "Conozco en persona a los ejecutivos de la empresa (Gerente de Planta)",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 44,
+    "grupo": "VIII.  PREGUNTA FINAL",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "En este momento, ¿Cómo calificaría su satisfacción general en nuestra empresa?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "En este momento, ¿Cómo calificaría su satisfacción general en nuestra empresa?",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 45,
+    "grupo": "IX.  OPINION",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 6,
+        "pregunta": "En términos generales, cómo evalúa al gerente, jefe o encargado de su área (puede evaluar a su jefe inmediato y al jefe de su jefe)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 6,
+        "pregunta": "Comentarios que nos ayude a mejorar su ambiente de trabajo y a nuestra empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 6,
+        "pregunta": "En términos generales, cómo evalúa al gerente, jefe o encargado de su área (puede evaluar a su jefe inmediato y al jefe de su jefe)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 6,
+        "pregunta": "Comentarios que nos ayude a mejorar su ambiente de trabajo y a nuestra empresa",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 46,
+    "grupo": "I.  POLÍTICAS Y PRÁCTICAS EN EL TRABAJO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "¿Considera que la empresa promueve la armonía entre la vida laboral y la vida familiar? Si su respuesta es Nunca, explique:",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En general, considero que la empresa es justa con sus empleados",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Recomendaría la empresa a mis amigos y parientes para que laboren en ella",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La empresa ofrece estabilidad laboral, siempre y cuando uno cumpla con los deberes y responsabilidades del puesto",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La política de promoción Interna o de ascensos es practicada en la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Recibo a tiempo mi pago de salario, horas extras u otro tipo de compensación? Si su respuesta es Nunca, explique:",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El respeto que la empresa brinda a sus empleados es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El sueldo que me pagan, de acuerdo al trabajo que realizo, considero que es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Conoce usted los valores y principios de la empresa?",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Se practican esos valores y principios en la empresa?",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 47,
+    "grupo": "II.  SATISFACCION EN EL TRABAJO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En mi área de trabajo existe el trabajo en equipo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Tengo libertad para proponer nuevas ideas y/o sugerir cambios en la forma de realizar mi trabajo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "En el puesto que actualmente me desempeño, me permite poner en práctica mis conocimientos y habilidades",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Me siento satisfecho con el trabajo que realizo actualmente",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "La empresa me brinda oportunidades de seguir creciendo profesionalmente",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Se ha sentido alguna vez discriminado por sus jefes / compañeros",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Se ha sentido acosado de parte de sus jefes / compañeros",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con el horario de trabajo que tengo asignado me siento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con la carga de trabajo que tengo asignada me siento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 4,
+        "pregunta": "Con respecto a la relación que tengo con mis compañeros me siento",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 48,
+    "grupo": "III.  SOBRE MI DESEMPEÑO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco los objetivos del departamento donde trabajo y de la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Comprendo mi rol en función de los objetivos del área y de la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco la contribución de mi trabajo para el alcance de objetivos de mi unidad y la empresa",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco y uso de guía los indicadores de desempeño mediante los cuales se mide mi trabajo (en caso que aplique)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 5,
+        "pregunta": "Conozco claramente cuales son las actividades que debo realizar para el logro de los indicadores",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 49,
+    "grupo": "IV.  JEFE INMEDIATO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe se preocupa de mi capacitación para desempeñar mejor mi trabajo",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Confió en las decisiones que toma mi jefe",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me informa a tiempo sobre lo que sucede en la empresa, así como objetivos y proyectos",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me respeta",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Mi jefe me da reconocimiento",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 1,
+        "pregunta": "Me reúno con mi jefe para la evaluación de mi trabajo y recibo retroalimentación en las áreas que debo mejorar",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El apoyo que recibo de mi jefe es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La preocupación de mi jefe por mis problemas laborales es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La preocupación de mi jefe por mis problemas personales es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La comunicación con mi jefe es",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 50,
+    "grupo": "V.  CONDICIONES FISICAS DEL LUGAR DE TRABAJO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El mobiliario y equipo que utilizo para realizar mi trabajo se encuentra",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La limpieza e higiene en el servicio sanitario es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Las condiciones físicas, ventilación e iluminación de mi lugar de trabajo son",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "¿Existen riesgos en el lugar de trabajo? ¿Cuáles? Especifique:",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 51,
+    "grupo": "VI. SERVICIOS",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El área donde tomo mis alimentos (cafetería de la empresa) es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que la calidad de la comida que venden en la cafetería es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que el precio de la comida es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que las porciones de comidas servidas son ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La variedad de la comida (Menús) es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El trato que recibo del personal de la cafetería es ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El área donde recibo atención medica (Clínica) es ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "El trato que recibo del personal de la Clínica es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Cuando me han dado medicamentos en la clínica los resultados han sido",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 52,
+    "grupo": "VII.  LIDERAZGO",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "La comunicación con el Gerente General / Gerente de Planta es",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "Considero que la disponibilidad cuando he requerido apoyo del Gerente General / Gerente de Planta es ",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "Conozco en persona a los ejecutivos de la empresa (Gerente General y Gerente de Planta)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 3,
+        "pregunta": "He departido con los ejecutivos de mi área en reuniones sociales y de trabajo que la empresa realiza",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 53,
+    "grupo": "VIII.  PREGUNTA FINAL",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 2,
+        "pregunta": "En este momento, ¿Cómo calificaría su satisfacción general en nuestra empresa?",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 54,
+    "grupo": "IX.  OPINION",
+    "preguntas": [
+      {
+        "tipoRespuestaID": 6,
+        "pregunta": "En términos generales, cómo evalúa al gerente, jefe o encargado de su área (puede evaluar a su jefe inmediato y al jefe de su jefe)",
+        "respuestas": null
+      },
+      {
+        "tipoRespuestaID": 6,
+        "pregunta": "Comentarios que nos ayude a mejorar su ambiente de trabajo y a nuestra empresa",
+        "respuestas": null
+      }
+    ]
+  },
+  {
+    "grupoID": 55,
+    "grupo": "VII.  LIDERAZGO",
+    "preguntas": []
+  },
+  {
+    "grupoID": 56,
+    "grupo": "V.  CONDICIONES FISICAS DEL LUGAR DE TRABAJO",
+    "preguntas": []
+  }
+]

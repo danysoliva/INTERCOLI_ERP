@@ -274,7 +274,8 @@ namespace ERP_INTECOLI
 
         private void navEstadoCuentaOld_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmEstadoCuenta frm = new frmEstadoCuenta(this.UsuarioLogeado);
+            //frmEstadoCuenta frm = new frmEstadoCuenta(this.UsuarioLogeado);
+            HomeEstadoCuenta frm = new HomeEstadoCuenta(this.UsuarioLogeado);
             frm.MdiParent = this.MdiParent;
             frm.Show();
         }
