@@ -256,8 +256,10 @@ namespace ERP_INTECOLI
             {
 
                 mtx.MdiParent = this.MdiParent;
+
                 try
                 {
+                    mtx.WindowState = FormWindowState.Normal;
                     mtx.Show();
                 }
                 catch { }
@@ -1550,6 +1552,11 @@ namespace ERP_INTECOLI
                     CajaDialogo.Error("No tiene privilegios para esta función!\nPermiso Requerido #VT-27 (Historial Academico)");
                 }
             }
+        }
+
+        private void frmOpciones_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

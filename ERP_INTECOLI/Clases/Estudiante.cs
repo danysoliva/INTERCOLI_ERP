@@ -246,9 +246,21 @@ namespace ERP_INTECOLI.Clases
                 cmd2.Parameters.AddWithValue("@numero_identidad",  identidad);
                 cmd2.Parameters.AddWithValue("@nombres", Nombres);
                 cmd2.Parameters.AddWithValue("@apellidos", Apellidos);
-                cmd2.Parameters.AddWithValue("@direccion", Direccion);
-                cmd2.Parameters.AddWithValue("@fecha_nacimiento", FechaNacimiento);
-                cmd2.Parameters.AddWithValue("@fecha_ingreso", FechaIngreso);
+
+                if(string.IsNullOrEmpty(Direccion))
+                    cmd2.Parameters.AddWithValue("@direccion", DBNull.Value);
+                else
+                    cmd2.Parameters.AddWithValue("@direccion", Direccion);
+
+                if (FechaNacimiento.Year <= 1700)
+                    cmd2.Parameters.AddWithValue("@fecha_nacimiento", DBNull.Value);
+                else
+                    cmd2.Parameters.AddWithValue("@fecha_nacimiento", FechaNacimiento);
+
+                if (FechaIngreso.Year <= 1700)
+                    cmd2.Parameters.AddWithValue("@fecha_ingreso", DBNull.Value);
+                else
+                    cmd2.Parameters.AddWithValue("@fecha_ingreso", FechaIngreso);
 
                 if (IdNivelIngreso > 0)
                     cmd2.Parameters.AddWithValue("@nivel_id_ingreso", IdNivelIngreso);

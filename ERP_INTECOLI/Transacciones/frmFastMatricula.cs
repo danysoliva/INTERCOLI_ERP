@@ -104,6 +104,7 @@ namespace ERP_INTECOLI.Transacciones
                 vEstudiante.Nombres = txtNombre.Text;
                 vEstudiante.Apellidos = txtApellido.Text;
                 vEstudiante.FechaIngreso = dp.Now();
+                vEstudiante.identidad = txtIdentidad.Text;
                 vEstudiante.IdEstudiante = vEstudiante.InsertEstudiante(this.UsuarioLogueado);
 
                 if (InsertMatricula(this.UsuarioLogueado, IdEstudiante, Convert.ToDecimal(txtValor.Text)))

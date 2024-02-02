@@ -2131,13 +2131,13 @@ namespace ERP_INTECOLI
             // 
             // navUsuarios
             // 
-            this.navUsuarios.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navUsuarios.Appearance.Font = new System.Drawing.Font("Segoe UI", 12.25F);
             this.navUsuarios.Appearance.Options.UseFont = true;
-            this.navUsuarios.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navUsuarios.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 12.25F);
             this.navUsuarios.AppearanceHotTracked.Options.UseFont = true;
-            this.navUsuarios.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navUsuarios.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 12.25F);
             this.navUsuarios.AppearancePressed.Options.UseFont = true;
-            this.navUsuarios.Caption = "Usuarios y Permisos";
+            this.navUsuarios.Caption = "Usuarios & Asignación de Permisos";
             this.navUsuarios.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.userx32;
             this.navUsuarios.Name = "navUsuarios";
             this.navUsuarios.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navUsuarios_LinkClicked);
@@ -2150,7 +2150,7 @@ namespace ERP_INTECOLI
             this.navGestionPerm.AppearanceHotTracked.Options.UseFont = true;
             this.navGestionPerm.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.navGestionPerm.AppearancePressed.Options.UseFont = true;
-            this.navGestionPerm.Caption = "Gestion de Permisos";
+            this.navGestionPerm.Caption = "Mantenimiento de Permisos";
             this.navGestionPerm.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.control_de_accessox32;
             this.navGestionPerm.Name = "navGestionPerm";
             this.navGestionPerm.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGestionPerm_LinkClicked);
@@ -2163,7 +2163,7 @@ namespace ERP_INTECOLI
             this.navNivelesAccesos.AppearanceHotTracked.Options.UseFont = true;
             this.navNivelesAccesos.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.navNivelesAccesos.AppearancePressed.Options.UseFont = true;
-            this.navNivelesAccesos.Caption = "Niveles de Accesos";
+            this.navNivelesAccesos.Caption = "Nivel de Acceso de Usuario";
             this.navNivelesAccesos.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.control_de_accesox32;
             this.navNivelesAccesos.Name = "navNivelesAccesos";
             this.navNivelesAccesos.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navNivelesAccesos_LinkClicked);
@@ -2176,7 +2176,7 @@ namespace ERP_INTECOLI
             this.navGruposUser.AppearanceHotTracked.Options.UseFont = true;
             this.navGruposUser.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.navGruposUser.AppearancePressed.Options.UseFont = true;
-            this.navGruposUser.Caption = "Grupo de Usuarios";
+            this.navGruposUser.Caption = "Mantenimiento de Grupos";
             this.navGruposUser.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.gestion_de_equipos_x32;
             this.navGruposUser.Name = "navGruposUser";
             this.navGruposUser.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGruposUser_LinkClicked);
@@ -3531,7 +3531,9 @@ namespace ERP_INTECOLI
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.cmdHome);
             this.Name = "frmOpciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Opciones";
+            this.Load += new System.EventHandler(this.frmOpciones_Load);
             this.TabUsuarios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl7)).EndInit();
             this.TabMantenimientos.ResumeLayout(false);
