@@ -41,6 +41,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.colnum_identidad = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coltelefono = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldireccion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnImportar = new DevExpress.XtraEditors.SimpleButton();
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
@@ -51,7 +52,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.colid3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colpdv = new DevExpress.XtraGrid.Columns.GridColumn();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstudiantes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEstudiantes1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -101,6 +101,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.colnombre.Caption = "nombre";
             this.colnombre.FieldName = "nombre";
             this.colnombre.Name = "colnombre";
+            this.colnombre.OptionsColumn.ReadOnly = true;
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 0;
             // 
@@ -109,6 +110,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.gridapellido.Caption = "apellido";
             this.gridapellido.FieldName = "apellido";
             this.gridapellido.Name = "gridapellido";
+            this.gridapellido.OptionsColumn.ReadOnly = true;
             this.gridapellido.Visible = true;
             this.gridapellido.VisibleIndex = 1;
             // 
@@ -117,6 +119,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.colcorreo.Caption = "correo";
             this.colcorreo.FieldName = "correo";
             this.colcorreo.Name = "colcorreo";
+            this.colcorreo.OptionsColumn.ReadOnly = true;
             this.colcorreo.Visible = true;
             this.colcorreo.VisibleIndex = 2;
             // 
@@ -125,6 +128,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.colfecha_nacimiento.Caption = "fecha_nacimiento";
             this.colfecha_nacimiento.FieldName = "fecha_nacimiento";
             this.colfecha_nacimiento.Name = "colfecha_nacimiento";
+            this.colfecha_nacimiento.OptionsColumn.ReadOnly = true;
             this.colfecha_nacimiento.Visible = true;
             this.colfecha_nacimiento.VisibleIndex = 3;
             // 
@@ -133,6 +137,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.colnum_identidad.Caption = "num_identidad";
             this.colnum_identidad.FieldName = "num_identidad";
             this.colnum_identidad.Name = "colnum_identidad";
+            this.colnum_identidad.OptionsColumn.ReadOnly = true;
             this.colnum_identidad.Visible = true;
             this.colnum_identidad.VisibleIndex = 4;
             // 
@@ -141,6 +146,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.coltelefono.Caption = "Telefono";
             this.coltelefono.FieldName = "telefono";
             this.coltelefono.Name = "coltelefono";
+            this.coltelefono.OptionsColumn.ReadOnly = true;
             this.coltelefono.Visible = true;
             this.coltelefono.VisibleIndex = 5;
             // 
@@ -149,8 +155,17 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.coldireccion.Caption = "Direccion";
             this.coldireccion.FieldName = "direccion";
             this.coldireccion.Name = "coldireccion";
+            this.coldireccion.OptionsColumn.ReadOnly = true;
             this.coldireccion.Visible = true;
             this.coldireccion.VisibleIndex = 6;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Existe Num de Identidad";
+            this.gridColumn1.FieldName = "ya_existe";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 7;
             // 
             // btnImportar
             // 
@@ -266,14 +281,6 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
             this.simpleButton1.TabIndex = 67;
             this.simpleButton1.Text = "Descargar Plantilla";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Existe";
-            this.gridColumn1.FieldName = "ya_existe";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 7;
             // 
             // frmImportarEstudiantes
             // 
