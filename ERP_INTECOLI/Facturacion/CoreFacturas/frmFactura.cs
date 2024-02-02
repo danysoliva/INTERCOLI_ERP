@@ -2022,6 +2022,7 @@ namespace Eatery.Ventas
             try
             {
                 gridView1.DeleteRow(gridView1.FocusedRowHandle);
+                dsVentaSuccess1.AcceptChanges();
                 CalcularTotalFactura();
             }
             catch (Exception ec)

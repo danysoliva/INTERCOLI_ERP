@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.34301.259
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP_INTECOLI", "ERP_INTECOLI\ERP_INTECOLI.csproj", "{845AC5B7-F133-48D3-AF0E-DBB584D84A16}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Install_ERP", "Install_ERP\Install_ERP.vdproj", "{16011A7C-13EE-481E-9988-A654A4A98C96}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstallERP_SUCCESS", "InstallERP_SUCCESS\InstallERP_SUCCESS.vdproj", "{7724F053-558A-4C95-9D39-98C6F5A40483}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{845AC5B7-F133-48D3-AF0E-DBB584D84A16}.Release|Any CPU.Build.0 = Release|Any CPU
 		{845AC5B7-F133-48D3-AF0E-DBB584D84A16}.Release|x64.ActiveCfg = Release|x64
 		{845AC5B7-F133-48D3-AF0E-DBB584D84A16}.Release|x64.Build.0 = Release|x64
-		{16011A7C-13EE-481E-9988-A654A4A98C96}.Debug|Any CPU.ActiveCfg = Debug
-		{16011A7C-13EE-481E-9988-A654A4A98C96}.Debug|x64.ActiveCfg = Debug
-		{16011A7C-13EE-481E-9988-A654A4A98C96}.Release|Any CPU.ActiveCfg = Release
-		{16011A7C-13EE-481E-9988-A654A4A98C96}.Release|x64.ActiveCfg = Release
+		{7724F053-558A-4C95-9D39-98C6F5A40483}.Debug|Any CPU.ActiveCfg = Debug
+		{7724F053-558A-4C95-9D39-98C6F5A40483}.Debug|x64.ActiveCfg = Debug
+		{7724F053-558A-4C95-9D39-98C6F5A40483}.Release|Any CPU.ActiveCfg = Release
+		{7724F053-558A-4C95-9D39-98C6F5A40483}.Release|x64.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

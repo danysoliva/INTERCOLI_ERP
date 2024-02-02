@@ -29,6 +29,9 @@ namespace ERP_INTECOLI.Transacciones
             frmBuscarEstudiantes fx1 = new frmBuscarEstudiantes();
             if (fx1.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
             {
+                if(vEstudiante == null)
+                    vEstudiante = new Estudiante();
+
                 if (vEstudiante.RecuperarRegistro(fx1.ItemSeleccionado.id_estudiantes))
                 {
                     txtEstudiante.Text = vEstudiante.Nombres + " " + vEstudiante.Apellidos;
@@ -45,17 +48,21 @@ namespace ERP_INTECOLI.Transacciones
         {
             try
             {
-                string sql = @"ft_get_estado_cuenta_estudiante";
+                string sql = @"[dbo].[sp_get_estado_cuenta_estudiante_v2]";
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id_estudiante", estudianteSeleccionadoId);
-                cmd.Parameters.AddWithValue("@id_student", vEstudiante.IdStudent);
+                //if(vEstudiante.IdStudent == null) 
+                //    cmd.Parameters.AddWithValue("@id_student", DBNull.Value);
+                //else
+                //    cmd.Parameters.AddWithValue("@id_student", vEstudiante.IdStudent);
+
                 cmd.Parameters.AddWithValue("@ver_nulos", rdTodos.Checked);
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
-                dsMovimientosSaldos1.estado_cuenta.Clear();
-                adat.Fill(dsMovimientosSaldos1.estado_cuenta);
+                dsMovimientosSaldos1.estado_cuenta_lines.Clear();
+                adat.Fill(dsMovimientosSaldos1.estado_cuenta_lines);
 
             }
             catch (Exception ec)

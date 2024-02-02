@@ -39,6 +39,7 @@ namespace ERP_INTECOLI
             this.navMatriculaRapida = new DevExpress.XtraNavBar.NavBarItem();
             this.navReservaCupo = new DevExpress.XtraNavBar.NavBarItem();
             this.navEstadoCuentaOld = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem62 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem63 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem64 = new DevExpress.XtraNavBar.NavBarItem();
@@ -283,7 +284,6 @@ namespace ERP_INTECOLI
             this.navNotasCredito = new DevExpress.XtraNavBar.NavBarItem();
             this.navCierreCaja = new DevExpress.XtraNavBar.NavBarItem();
             this.navGeneracionPlanilla = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
             this.TabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl7)).BeginInit();
             this.TabMantenimientos.SuspendLayout();
@@ -427,6 +427,19 @@ namespace ERP_INTECOLI
             this.navEstadoCuentaOld.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.presupuestox32;
             this.navEstadoCuentaOld.Name = "navEstadoCuentaOld";
             this.navEstadoCuentaOld.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navEstadoCuentaOld_LinkClicked);
+            // 
+            // navBarItem7
+            // 
+            this.navBarItem7.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItem7.Appearance.Options.UseFont = true;
+            this.navBarItem7.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItem7.AppearanceHotTracked.Options.UseFont = true;
+            this.navBarItem7.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.navBarItem7.AppearancePressed.Options.UseFont = true;
+            this.navBarItem7.Caption = "Historial Academico";
+            this.navBarItem7.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem7.ImageOptions.SmallImage")));
+            this.navBarItem7.Name = "navBarItem7";
+            this.navBarItem7.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem7_LinkClicked);
             // 
             // navBarItem62
             // 
@@ -3508,19 +3521,6 @@ namespace ERP_INTECOLI
             this.navGeneracionPlanilla.ImageOptions.SmallImage = global::ERP_INTECOLI.Properties.Resources.contabilidad_x32;
             this.navGeneracionPlanilla.Name = "navGeneracionPlanilla";
             this.navGeneracionPlanilla.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navGeneracionPlanilla_LinkClicked);
-            // 
-            // navBarItem7
-            // 
-            this.navBarItem7.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navBarItem7.Appearance.Options.UseFont = true;
-            this.navBarItem7.AppearanceHotTracked.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navBarItem7.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarItem7.AppearancePressed.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.navBarItem7.AppearancePressed.Options.UseFont = true;
-            this.navBarItem7.Caption = "Historial Academico";
-            this.navBarItem7.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem7.ImageOptions.SmallImage")));
-            this.navBarItem7.Name = "navBarItem7";
-            this.navBarItem7.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem7_LinkClicked);
             // 
             // frmOpciones
             // 
