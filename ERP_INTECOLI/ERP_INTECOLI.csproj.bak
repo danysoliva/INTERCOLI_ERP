@@ -12,6 +12,23 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>https://drive.google.com/drive/folders/1zVET3b_gsJxSfc_HzFxp69XxMFKnGX-2%3fusp=drive_link/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>https://drive.google.com/drive/folders/1zVET3b_gsJxSfc_HzFxp69XxMFKnGX-2%3fusp=drive_link/</InstallUrl>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +48,40 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>58D92D2056CFE14B56A707F83EF92F159340168A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ERP_INTECOLI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'x64|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'x64|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\x64\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -73,10 +124,8 @@
     <Reference Include="DevExpress.XtraRichEdit.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeMap.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeMap.v23.1.23.1.4.0.Fakes">
-      <HintPath>FakesAssemblies\DevExpress.XtraTreeMap.v23.1.23.1.4.0.Fakes.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.XtraTreeMap.v23.1.UI, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Shared.v22.2, Version=22.2.20222.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Win.Misc.v22.2, Version=22.2.20222.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Win.UltraWinEditors.v22.2, Version=22.2.20222.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
@@ -111,10 +160,87 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accesos\AccesosUsuarios\AccesoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\AccesosUsuarios\AccesoUsuario.Designer.cs">
+      <DependentUpon>AccesoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesAdmin.Designer.cs">
+      <DependentUpon>xfrmAccesosTemporalesAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesCRUD.Designer.cs">
+      <DependentUpon>xfrmAccesosTemporalesCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\dsAccesos.cs">
+      <DependentUpon>dsAccesos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\dsAccesos.Designer.cs">
+      <DependentUpon>dsAccesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\dsAccesos1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAccesos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\GestionGrupos\CrearGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\GestionGrupos\CrearGrupo.Designer.cs">
+      <DependentUpon>CrearGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\GestionGrupos\EditarGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\GestionGrupos\EditarGrupo.Designer.cs">
+      <DependentUpon>EditarGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\GestionGrupos\PrincipalGestionGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\GestionGrupos\PrincipalGestionGrupos.Designer.cs">
+      <DependentUpon>PrincipalGestionGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\GrupoLosa\CrearGrupoLosa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\GrupoLosa\CrearGrupoLosa.Designer.cs">
+      <DependentUpon>CrearGrupoLosa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\GrupoLosa\EditarGrupoLosa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\GrupoLosa\EditarGrupoLosa.Designer.cs">
+      <DependentUpon>EditarGrupoLosa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\GrupoLosa\PrincipalGrupoLosa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\GrupoLosa\PrincipalGrupoLosa.Designer.cs">
+      <DependentUpon>PrincipalGrupoLosa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accesos\NivelAccesoSistema\NivelAccesoSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accesos\NivelAccesoSistema\NivelAccesoSistema.Designer.cs">
+      <DependentUpon>NivelAccesoSistema.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Caja\dsCaja.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCaja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmArqueoCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Caja\frmArqueoCaja.Designer.cs">
+      <DependentUpon>frmArqueoCaja.cs</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Caja\frmCaja.cs">
       <SubType>Form</SubType>
@@ -158,20 +284,74 @@
     <Compile Include="Administracion\Caja\frmTipoPago.Designer.cs">
       <DependentUpon>frmTipoPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\Cursos\frmCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Cursos\frmCursos.Designer.cs">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Cursos\frmNuevo_Editar_Curso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Cursos\frmNuevo_Editar_Curso.Designer.cs">
+      <DependentUpon>frmNuevo_Editar_Curso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Empresas\dsEmpresa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEmpresa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Empresas\frmCRUDEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Empresas\frmCRUDEmpresa.Designer.cs">
+      <DependentUpon>frmCRUDEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Empresas\frmEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Empresas\frmEmpresa.Designer.cs">
+      <DependentUpon>frmEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.Designer.cs">
+      <DependentUpon>frmEstadisticasPorResidencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmImportarEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmImportarEstudiantes.Designer.cs">
+      <DependentUpon>frmImportarEstudiantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administracion\Estudiantes\frmRecuentoGeneros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administracion\Estudiantes\frmRecuentoGeneros.Designer.cs">
       <DependentUpon>frmRecuentoGeneros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion\frmRecordatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\frmRecordatorio.Designer.cs">
+      <DependentUpon>frmRecordatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Niveles_Academicos\dsNivelesItems.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsNivelesItems.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\ClientesPuntoVentaLP.cs" />
     <Compile Include="Clases\Conf_TablesID.cs" />
+    <Compile Include="Clases\EstudianteEmpresa.cs" />
     <Compile Include="Clases\Factura.cs" />
     <Compile Include="Clases\FacturacionCierreDiaPuntoVenta.cs" />
     <Compile Include="Clases\FacturacionEquipo.cs" />
     <Compile Include="Clases\FacturaDetalle.cs" />
     <Compile Include="Clases\FacturaEstado.cs" />
+    <Compile Include="Clases\FacturaProveedores.cs" />
     <Compile Include="Clases\FacturasPagoMultiple.cs" />
     <Compile Include="Clases\Factura_SolicitudAutorizacion.cs" />
     <Compile Include="Clases\Impuesto.cs" />
@@ -179,12 +359,63 @@
     <Compile Include="Clases\ListaPrecioPuntoVenta.cs" />
     <Compile Include="Clases\ListaPrecios.cs" />
     <Compile Include="Clases\ListToDataTable.cs" />
+    <Compile Include="Clases\Niveles.cs" />
     <Compile Include="Clases\Notas_CreditoDebito.cs" />
     <Compile Include="Clases\NumberToLetters.cs" />
+    <Compile Include="Clases\OrdenesCompra.cs" />
     <Compile Include="Clases\ProductoTerminado.cs" />
+    <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Clases\PuntoVenta.cs" />
     <Compile Include="Clases\PuntoVentaEquipo.cs" />
     <Compile Include="Clases\ReciboH.cs" />
+    <Compile Include="Clases\Solicitud.cs" />
+    <Compile Include="Compras\dsCompras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCompras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\frmFacturasProveedoresMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\frmFacturasProveedoresMain.Designer.cs">
+      <DependentUpon>frmFacturasProveedoresMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\frmOrdenesCompraMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\frmOrdenesCompraMain.Designer.cs">
+      <DependentUpon>frmOrdenesCompraMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\frmSearchFacturasProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\frmSearchFacturasProveedor.Designer.cs">
+      <DependentUpon>frmSearchFacturasProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\frmSearchOrdenesC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\frmSearchOrdenesC.Designer.cs">
+      <DependentUpon>frmSearchOrdenesC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\frmSearchSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\frmSearchSolicitud.Designer.cs">
+      <DependentUpon>frmSearchSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\frmSolicitudesMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\frmSolicitudesMain.Designer.cs">
+      <DependentUpon>frmSolicitudesMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\rptOrdenCompra.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Compras\rptOrdenCompra.Designer.cs">
+      <DependentUpon>rptOrdenCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\ConsultaMiembros\dsMiembrosClase.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -195,6 +426,29 @@
     </Compile>
     <Compile Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.Designer.cs">
       <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMiembros\frmNuevosIngresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMiembros\frmNuevosIngresos.Designer.cs">
+      <DependentUpon>frmNuevosIngresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientosSaldos\dsEstSaldosCobrables.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEstSaldosCobrables.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaEstSaldosCobrables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaEstSaldosCobrables.Designer.cs">
+      <DependentUpon>frmConsultaEstSaldosCobrables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaMovimientosSaldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaMovimientosSaldos.Designer.cs">
+      <DependentUpon>frmConsultaMovimientosSaldos.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas\frmConsultaAnulados.cs">
       <SubType>Form</SubType>
@@ -213,6 +467,24 @@
     </Compile>
     <Compile Include="Consultas\frmSeguimientoSaldos.Designer.cs">
       <DependentUpon>frmSeguimientoSaldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\RangosPago\dsRangosPagos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRangosPagos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\RangosPago\frmRangosPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\RangosPago\frmRangosPago.Designer.cs">
+      <DependentUpon>frmRangosPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\RangosPago\dsRangosPagos.Designer.cs" />
+    <Compile Include="Consultas\RangosPago\frmRangosPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\RangosPago\frmRangosPago.Designer.cs">
+      <DependentUpon>frmRangosPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas\SaldosProyeccion\dsProyeccionSaldos.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -479,12 +751,6 @@
     <Compile Include="Facturacion\Configuraciones\xfrmEditPriceFromListaPrecio.Designer.cs">
       <DependentUpon>xfrmEditPriceFromListaPrecio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Configuraciones\xfrmListaPrecios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Facturacion\Configuraciones\xfrmListaPrecios.Designer.cs">
-      <DependentUpon>xfrmListaPrecios.cs</DependentUpon>
-    </Compile>
     <Compile Include="Facturacion\Configuraciones\xfrmListaPreciosClientesAplicaCRUD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -552,6 +818,14 @@
     </Compile>
     <Compile Include="Facturacion\CoreFacturas\dsSearchWindow.Designer.cs" />
     <Compile Include="Facturacion\CoreFacturas\dsVentas1.Designer.cs" />
+    <Compile Include="Facturacion\CoreFacturas\dsVentaSuccess.cs">
+      <DependentUpon>dsVentaSuccess.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\dsVentaSuccess.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsVentaSuccess.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\dsBusquedas1.Designer.cs" />
     <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmFacturaBackup.cs">
       <SubType>Form</SubType>
@@ -576,6 +850,12 @@
     </Compile>
     <Compile Include="Facturacion\CoreFacturas\frmAjusteKardexFactura.designer.cs">
       <DependentUpon>frmAjusteKardexFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmAjusteSaldoEstadoCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmAjusteSaldoEstadoCuenta.Designer.cs">
+      <DependentUpon>frmAjusteSaldoEstadoCuenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\CoreFacturas\frmConfirmationFactura.cs">
       <SubType>Form</SubType>
@@ -697,11 +977,40 @@
     <Compile Include="Facturacion\CoreFacturas\xfrmSelectCliente.Designer.cs">
       <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\frmFactura.cs">
+    <Compile Include="Facturacion\FacturacionAutomatica\dsConfigFacturaAutomatica.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConfigFacturaAutomatica.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmConfigFacturaEstudianteAuto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Facturacion\frmFactura.Designer.cs">
-      <DependentUpon>frmFactura.cs</DependentUpon>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmConfigFacturaEstudianteAuto.Designer.cs">
+      <DependentUpon>frmConfigFacturaEstudianteAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmDetalleFacturacionAutomaticaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmDetalleFacturacionAutomaticaView.Designer.cs">
+      <DependentUpon>frmDetalleFacturacionAutomaticaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmFacturasAutomaticasHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmFacturasAutomaticasHome.Designer.cs">
+      <DependentUpon>frmFacturasAutomaticasHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\xfrmSelectEstudiante_FactAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\xfrmSelectEstudiante_FactAuto.Designer.cs">
+      <DependentUpon>xfrmSelectEstudiante_FactAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\frmFacturaBK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\frmFacturaBK.Designer.cs">
+      <DependentUpon>frmFacturaBK.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\Mantenimientos\dsCRUDS_Facturacion.Designer.cs" />
     <Compile Include="Facturacion\Mantenimientos\dsMantenimiento.cs">
@@ -830,11 +1139,11 @@
     <Compile Include="Facturacion\Reportes\xfrmDialogFormatoFactura.Designer.cs">
       <DependentUpon>xfrmDialogFormatoFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmOpciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmOpciones.Designer.cs">
+      <DependentUpon>frmOpciones.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -853,6 +1162,51 @@
     </Compile>
     <Compile Include="frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistorialAcademico\dsHistorialAcademico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHistorialAcademico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HistorialAcademico\frmHomeHistorialAcademico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistorialAcademico\frmHomeHistorialAcademico.Designer.cs">
+      <DependentUpon>frmHomeHistorialAcademico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\dsMantenimiento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Productos\dsMantenimiento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Productos\frmItemsCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Productos\frmItemsCRUD.Designer.cs">
+      <DependentUpon>frmItemsCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Productos\frmItemsOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Productos\frmItemsOP.Designer.cs">
+      <DependentUpon>frmItemsOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Proveedor\frmProveedorCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Proveedor\frmProveedorCRUD.Designer.cs">
+      <DependentUpon>frmProveedorCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento\Proveedor\frmProveedorMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento\Proveedor\frmProveedorMain.Designer.cs">
+      <DependentUpon>frmProveedorMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -897,10 +1251,25 @@
     <Compile Include="Transacciones\frmReservaCupoTransaction.Designer.cs">
       <DependentUpon>frmReservaCupoTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\dsUsuarios.cs">
+      <DependentUpon>dsUsuarios.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\dsUsuarios.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsUsuarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\frmAddWindowToUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmAddWindowToUser.Designer.cs">
+      <DependentUpon>frmAddWindowToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\frmMantenimientoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmMantenimientoUsuarios.Designer.cs">
+      <DependentUpon>frmMantenimientoUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios\frmMantVentanas.cs">
       <SubType>Form</SubType>
@@ -914,6 +1283,57 @@
     <Compile Include="Usuarios\frmManVentanasOP.Designer.cs">
       <DependentUpon>frmManVentanasOP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\frmViewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\frmViewUser.Designer.cs">
+      <DependentUpon>frmViewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utileria\SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utileria\SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accesos\AccesosUsuarios\AccesoUsuario.resx">
+      <DependentUpon>AccesoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesAdmin.resx">
+      <DependentUpon>xfrmAccesosTemporalesAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesCRUD.resx">
+      <DependentUpon>xfrmAccesosTemporalesCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\GestionGrupos\CrearGrupo.resx">
+      <DependentUpon>CrearGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\GestionGrupos\EditarGrupo.resx">
+      <DependentUpon>EditarGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\GestionGrupos\PrincipalGestionGrupos.resx">
+      <DependentUpon>PrincipalGestionGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\GrupoLosa\CrearGrupoLosa.resx">
+      <DependentUpon>CrearGrupoLosa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\GrupoLosa\EditarGrupoLosa.resx">
+      <DependentUpon>EditarGrupoLosa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\GrupoLosa\PrincipalGrupoLosa.resx">
+      <DependentUpon>PrincipalGrupoLosa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accesos\NivelAccesoSistema\NivelAccesoSistema.resx">
+      <DependentUpon>NivelAccesoSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Caja\frmArqueoCaja.resx">
+      <DependentUpon>frmArqueoCaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Caja\frmCaja.resx">
       <DependentUpon>frmCaja.cs</DependentUpon>
     </EmbeddedResource>
@@ -935,11 +1355,62 @@
     <EmbeddedResource Include="Administracion\Caja\frmTipoPago.resx">
       <DependentUpon>frmTipoPago.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Cursos\frmCursos.resx">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Cursos\frmNuevo_Editar_Curso.resx">
+      <DependentUpon>frmNuevo_Editar_Curso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Empresas\frmCRUDEmpresa.resx">
+      <DependentUpon>frmCRUDEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Empresas\frmEmpresa.resx">
+      <DependentUpon>frmEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.resx">
+      <DependentUpon>frmEstadisticasPorResidencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Estudiantes\frmImportarEstudiantes.resx">
+      <DependentUpon>frmImportarEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Estudiantes\frmRecuentoGeneros.resx">
       <DependentUpon>frmRecuentoGeneros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\frmRecordatorio.resx">
+      <DependentUpon>frmRecordatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\frmFacturasProveedoresMain.resx">
+      <DependentUpon>frmFacturasProveedoresMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\frmOrdenesCompraMain.resx">
+      <DependentUpon>frmOrdenesCompraMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\frmSearchFacturasProveedor.resx">
+      <DependentUpon>frmSearchFacturasProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\frmSearchOrdenesC.resx">
+      <DependentUpon>frmSearchOrdenesC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\frmSearchSolicitud.resx">
+      <DependentUpon>frmSearchSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\frmSolicitudesMain.resx">
+      <DependentUpon>frmSolicitudesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\rptOrdenCompra.resx">
+      <DependentUpon>rptOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.resx">
       <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaMiembros\frmNuevosIngresos.resx">
+      <DependentUpon>frmNuevosIngresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaMovimientosSaldos\frmConsultaEstSaldosCobrables.resx">
+      <DependentUpon>frmConsultaEstSaldosCobrables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaMovimientosSaldos\frmConsultaMovimientosSaldos.resx">
+      <DependentUpon>frmConsultaMovimientosSaldos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmConsultaAnulados.resx">
       <DependentUpon>frmConsultaAnulados.cs</DependentUpon>
@@ -949,6 +1420,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmSeguimientoSaldos.resx">
       <DependentUpon>frmSeguimientoSaldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\RangosPago\frmRangosPago.resx">
+      <DependentUpon>frmRangosPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\SaldosProyeccion\frmConsultaTipoPago.resx">
       <DependentUpon>frmConsultaTipoPago.cs</DependentUpon>
@@ -1076,6 +1550,9 @@
     <EmbeddedResource Include="Facturacion\CoreFacturas\frmAjusteKardexFactura.resx">
       <DependentUpon>frmAjusteKardexFactura.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\CoreFacturas\frmAjusteSaldoEstadoCuenta.resx">
+      <DependentUpon>frmAjusteSaldoEstadoCuenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\CoreFacturas\frmConfirmationFactura.resx">
       <DependentUpon>frmConfirmationFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -1136,8 +1613,20 @@
     <EmbeddedResource Include="Facturacion\CoreFacturas\xfrmSelectCliente.resx">
       <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Facturacion\frmFactura.resx">
-      <DependentUpon>frmFactura.cs</DependentUpon>
+    <EmbeddedResource Include="Facturacion\FacturacionAutomatica\frmConfigFacturaEstudianteAuto.resx">
+      <DependentUpon>frmConfigFacturaEstudianteAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FacturacionAutomatica\frmDetalleFacturacionAutomaticaView.resx">
+      <DependentUpon>frmDetalleFacturacionAutomaticaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FacturacionAutomatica\frmFacturasAutomaticasHome.resx">
+      <DependentUpon>frmFacturasAutomaticasHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FacturacionAutomatica\xfrmSelectEstudiante_FactAuto.resx">
+      <DependentUpon>xfrmSelectEstudiante_FactAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\frmFacturaBK.resx">
+      <DependentUpon>frmFacturaBK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\Mantenimientos\Models\frmAddEquipoPuntoVenta.resx">
       <DependentUpon>frmAddEquipoPuntoVenta.cs</DependentUpon>
@@ -1196,8 +1685,8 @@
     <EmbeddedResource Include="Facturacion\Reportes\xfrmDialogFormatoFactura.resx">
       <DependentUpon>xfrmDialogFormatoFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmOpciones.resx">
+      <DependentUpon>frmOpciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -1207,6 +1696,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenu.resx">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialAcademico\frmHomeHistorialAcademico.resx">
+      <DependentUpon>frmHomeHistorialAcademico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\Productos\frmItemsCRUD.resx">
+      <DependentUpon>frmItemsCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\Productos\frmItemsOP.resx">
+      <DependentUpon>frmItemsOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\Proveedor\frmProveedorCRUD.resx">
+      <DependentUpon>frmProveedorCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento\Proveedor\frmProveedorMain.resx">
+      <DependentUpon>frmProveedorMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -1234,12 +1738,40 @@
     <EmbeddedResource Include="Transacciones\frmReservaCupoTransaction.resx">
       <DependentUpon>frmReservaCupoTransaction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmAddWindowToUser.resx">
+      <DependentUpon>frmAddWindowToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmMantenimientoUsuarios.resx">
+      <DependentUpon>frmMantenimientoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmMantVentanas.resx">
       <DependentUpon>frmMantVentanas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\frmManVentanasOP.resx">
       <DependentUpon>frmManVentanasOP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\frmViewUser.resx">
+      <DependentUpon>frmViewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utileria\SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Accesos\AccesosUsuarios\AccesoUsuario.resx.bak" />
+    <None Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesAdmin.resx.bak" />
+    <None Include="Accesos\dsAccesos.xsc">
+      <DependentUpon>dsAccesos.xsd</DependentUpon>
+    </None>
+    <None Include="Accesos\dsAccesos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAccesos1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Accesos\dsAccesos.xss">
+      <DependentUpon>dsAccesos.xsd</DependentUpon>
+    </None>
     <None Include="Administracion\Caja\dsCaja.xsc">
       <DependentUpon>dsCaja.xsd</DependentUpon>
     </None>
@@ -1261,6 +1793,17 @@
     </None>
     <None Include="Administracion\Cursos\dsCursos_.xss">
       <DependentUpon>dsCursos_.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Empresas\dsEmpresa.xsc">
+      <DependentUpon>dsEmpresa.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Empresas\dsEmpresa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEmpresa.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administracion\Empresas\dsEmpresa.xss">
+      <DependentUpon>dsEmpresa.xsd</DependentUpon>
     </None>
     <None Include="Administracion\Estudiantes\dsAntiguedad.xsc">
       <DependentUpon>dsAntiguedad.xsd</DependentUpon>
@@ -1339,6 +1882,17 @@
     <None Include="Administracion\Movimientos\dsMovimientosSaldos.xss">
       <DependentUpon>dsMovimientosSaldos.xsd</DependentUpon>
     </None>
+    <None Include="Administracion\Niveles_Academicos\dsNivelesItems.xsc">
+      <DependentUpon>dsNivelesItems.xsd</DependentUpon>
+    </None>
+    <None Include="Administracion\Niveles_Academicos\dsNivelesItems.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNivelesItems.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administracion\Niveles_Academicos\dsNivelesItems.xss">
+      <DependentUpon>dsNivelesItems.xsd</DependentUpon>
+    </None>
     <None Include="Administracion\Planilla\dsPlanilla.xsc">
       <DependentUpon>dsPlanilla.xsd</DependentUpon>
     </None>
@@ -1350,6 +1904,17 @@
     <None Include="Administracion\Planilla\dsPlanilla.xss">
       <DependentUpon>dsPlanilla.xsd</DependentUpon>
     </None>
+    <None Include="Compras\dsCompras.xsc">
+      <DependentUpon>dsCompras.xsd</DependentUpon>
+    </None>
+    <None Include="Compras\dsCompras.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCompras.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Compras\dsCompras.xss">
+      <DependentUpon>dsCompras.xsd</DependentUpon>
+    </None>
     <None Include="Consultas\ConsultaMiembros\dsMiembrosClase.xsc">
       <DependentUpon>dsMiembrosClase.xsd</DependentUpon>
     </None>
@@ -1360,6 +1925,17 @@
     </None>
     <None Include="Consultas\ConsultaMiembros\dsMiembrosClase.xss">
       <DependentUpon>dsMiembrosClase.xsd</DependentUpon>
+    </None>
+    <None Include="Consultas\ConsultaMovimientosSaldos\dsEstSaldosCobrables.xsc">
+      <DependentUpon>dsEstSaldosCobrables.xsd</DependentUpon>
+    </None>
+    <None Include="Consultas\ConsultaMovimientosSaldos\dsEstSaldosCobrables.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEstSaldosCobrables.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Consultas\ConsultaMovimientosSaldos\dsEstSaldosCobrables.xss">
+      <DependentUpon>dsEstSaldosCobrables.xsd</DependentUpon>
     </None>
     <None Include="Consultas\SaldosProyeccion\dsProyeccionSaldos.xsc">
       <DependentUpon>dsProyeccionSaldos.xsd</DependentUpon>
@@ -1384,6 +1960,7 @@
       <DependentUpon>dsRecordatorios.xsd</DependentUpon>
     </None>
     <Fakes Include="Fakes\DevExpress.XtraTreeMap.v23.1.fakes" />
+    <None Include="ERP_INTECOLI_TemporaryKey.pfx" />
     <None Include="Facturacion\Configuraciones\dsListaPrecios.xsc">
       <DependentUpon>dsListaPrecios.xsd</DependentUpon>
     </None>
@@ -1430,6 +2007,17 @@
     <None Include="Facturacion\CoreFacturas\dsVentas.xss">
       <DependentUpon>dsVentas.xsd</DependentUpon>
     </None>
+    <None Include="Facturacion\CoreFacturas\dsVentaSuccess.xsc">
+      <DependentUpon>dsVentaSuccess.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsVentaSuccess.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsVentaSuccess.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Facturacion\CoreFacturas\dsVentaSuccess.xss">
+      <DependentUpon>dsVentaSuccess.xsd</DependentUpon>
+    </None>
     <None Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\dsBusquedas.xsc">
       <DependentUpon>dsBusquedas.xsd</DependentUpon>
     </None>
@@ -1438,6 +2026,17 @@
       <DependentUpon>dsBusquedas.xsd</DependentUpon>
     </None>
     <None Include="Facturacion\CoreFacturas\frmSearch.resx.bak" />
+    <None Include="Facturacion\FacturacionAutomatica\dsConfigFacturaAutomatica.xsc">
+      <DependentUpon>dsConfigFacturaAutomatica.xsd</DependentUpon>
+    </None>
+    <None Include="Facturacion\FacturacionAutomatica\dsConfigFacturaAutomatica.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConfigFacturaAutomatica.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Facturacion\FacturacionAutomatica\dsConfigFacturaAutomatica.xss">
+      <DependentUpon>dsConfigFacturaAutomatica.xsd</DependentUpon>
+    </None>
     <None Include="Facturacion\Mantenimientos\dsCRUDS_Facturacion.xsc">
       <DependentUpon>dsCRUDS_Facturacion.xsd</DependentUpon>
     </None>
@@ -1474,6 +2073,39 @@
     </None>
     <None Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscal.resx.bak" />
     <None Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscalCRUD.resx.bak" />
+    <None Include="HistorialAcademico\dsHistorialAcademico.xsc">
+      <DependentUpon>dsHistorialAcademico.xsd</DependentUpon>
+    </None>
+    <None Include="HistorialAcademico\dsHistorialAcademico.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHistorialAcademico.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="HistorialAcademico\dsHistorialAcademico.xss">
+      <DependentUpon>dsHistorialAcademico.xsd</DependentUpon>
+    </None>
+    <None Include="Mantenimientos\dsMantenimiento.xsc">
+      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
+    </None>
+    <None Include="Mantenimientos\dsMantenimiento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMantenimiento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Mantenimientos\dsMantenimiento.xss">
+      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
+    </None>
+    <None Include="Mantenimiento\Productos\dsMantenimiento.xsc">
+      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
+    </None>
+    <None Include="Mantenimiento\Productos\dsMantenimiento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMantenimiento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Mantenimiento\Productos\dsMantenimiento.xss">
+      <DependentUpon>dsMantenimiento.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -1510,6 +2142,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DevExpress\" />
     <Folder Include="Finanzas\" />
     <Folder Include="RRHH\" />
   </ItemGroup>
@@ -1529,6 +2162,7 @@
     <Content Include="Resources\add_24x24.png" />
     <Content Include="Resources\add_32x32.png" />
     <Content Include="Resources\admin.png" />
+    <None Include="Resources\agregar_x32.png" />
     <Content Include="Resources\ajustes_kardex.png" />
     <Content Include="Resources\ajustes_kardex2.png" />
     <Content Include="Resources\Alerta64px.png" />
@@ -1543,15 +2177,20 @@
     <None Include="Resources\boletax32.png" />
     <None Include="Resources\bloquear_x32.png" />
     <Content Include="Resources\cerrar.png" />
+    <None Include="Resources\control-de-accesox32.png" />
+    <None Include="Resources\contabilidad_x32.png" />
+    <None Include="Resources\compras_x32.png" />
     <Content Include="Resources\control-de-accesso.png" />
     <None Include="Resources\control-de-accessox32.png" />
     <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Cash.512.png" />
+    <None Include="Resources\dinero_x32.png" />
     <Content Include="Resources\edit.png" />
     <None Include="Resources\edit1.png" />
     <Content Include="Resources\edit24px.png" />
     <Content Include="Resources\edit_24x24.png" />
     <Content Include="Resources\edit_32x32.png" />
     <Content Include="Resources\email_envelope_inbox_sending_mail_outbox_message_send_icon_231915.ico" />
+    <None Include="Resources\empleados_x32.png" />
     <Content Include="Resources\empresa.png" />
     <None Include="Resources\equipo_x32.png" />
     <Content Include="Resources\Estudiantex32.png" />
@@ -1568,6 +2207,9 @@
     <None Include="Resources\facturax32.png" />
     <None Include="Resources\libro-de-contabilidadx32.png" />
     <None Include="Resources\jefe_x128.png" />
+    <None Include="Resources\gestion-de-equipos_x32.png" />
+    <None Include="Resources\facturacion_x32.png" />
+    <None Include="Resources\factura_x32.png" />
     <Content Include="Resources\maestro x32.png" />
     <None Include="Resources\matriculax32.png" />
     <None Include="Resources\metodo-de-pago_x32.png" />
@@ -1582,6 +2224,8 @@
     <None Include="Resources\presupuestox32.png" />
     <None Include="Resources\proyeccion_32.png" />
     <None Include="Resources\presente_x32.png" />
+    <None Include="Resources\ordenador-portatilx32.png" />
+    <None Include="Resources\proveedor_x32.png" />
     <Content Include="Resources\reaload_24x24.png" />
     <Content Include="Resources\reaload_32x32.png" />
     <Content Include="Resources\refresh-button32px.png" />
@@ -1591,6 +2235,7 @@
     <None Include="Resources\reservax32.png" />
     <None Include="Resources\reservadox32.png" />
     <None Include="Resources\saldar_x32.png" />
+    <None Include="Resources\ruptura_x32.png" />
     <Content Include="Resources\salir_24.png" />
     <Content Include="Resources\Salir_32.png" />
     <Content Include="Resources\save.png" />
@@ -1605,10 +2250,23 @@
     <None Include="Resources\tarjeta-de-creditox16.png" />
     <None Include="Resources\transferencia-movilx16.png" />
     <None Include="Resources\seguro_32x.png" />
+    <None Include="Resources\transaccion_32x.png" />
     <Content Include="Resources\Upload-Folder-icon.png" />
     <None Include="Resources\userx32.png" />
     <Content Include="Resources\_click_24X24.png" />
     <Content Include="Resources\_click_32X32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

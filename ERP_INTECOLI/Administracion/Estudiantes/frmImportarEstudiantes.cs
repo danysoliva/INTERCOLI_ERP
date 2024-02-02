@@ -90,54 +90,35 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
                         dsEstudiantes1.prev_estudiantes.AcceptChanges();
 
 
-                        //foreach (dsEstudiantes.prev_estudiantesRow item in dsEstudiantes1.prev_estudiantes.Rows)
-                        //{
-                        //    if (!string.IsNullOrEmpty(item.num_identidad))
-                        //    {
-                        //        ValidacionNumIdentidad(item.num_identidad);
+                        for (int i = 0; i < gridView1.DataRowCount; i++)
+                        {
 
-                        //        if (Existe == true)
-                        //        {
-                        //            item.ya_existe = true;
-                        //        }
+                            DataRow row = gridView1.GetDataRow(i);
 
-                        //    }
-                            
-                        //}
+                            string numIdentidad = Convert.ToString(row.ItemArray[4]);
 
-                        //string Espacio = "";
+                            if (numIdentidad.Length > 1)
+                            {
+                                ValidacionNumIdentidad(numIdentidad);
 
-                        //foreach (dsEstudiantes.load_excelRow rowEexcel in dsEstu.load_excel.Rows)
-                        //{
-                        //    dsEstudiantes.load_excelRow rowWok = dsEstudiantes1.load_excel.Newload_excelRow();
+                                if (Existe)
+                                {
+                                    row["ya_existe"] = true;
+                                }
 
-                        //    rowWok.nombre = rowEexcel.nombre;
 
-                        //    if (string.IsNullOrEmpty(rowEexcel.apellido))
-                        //        rowWok.apellido = Espacio;
-                        //    else
-                        //        rowWok.apellido = rowEexcel.apellido;
+                                //if (Existe)
+                                //    row.ItemArray[7] = true;
+                                //else
+                                //    row.ItemArray[7] = false;}
 
-                        //    rowWok.correo = rowEexcel.correo;
+                            }
+                            else
+                            {
+                                row["ya_existe"] = false;
+                            }
 
-                        //    rowWok.fecha_nacimiento = rowEexcel.fecha_nacimiento;
-
-                        //    if (string.IsNullOrEmpty(rowEexcel.num_identidad))
-                        //        rowWok.num_identidad = Espacio;
-                        //    else
-                        //        rowWok.num_identidad = rowEexcel.num_identidad;
-
-                        //    rowWok.telefono = rowEexcel.telefono;
-
-                        //    if (string.IsNullOrEmpty(rowEexcel.direccion))
-                        //        rowWok.direccion = Espacio;
-                        //    else
-                        //        rowWok.direccion = rowEexcel.direccion;
-
-                        //    dsEstudiantes1.load_excel.Addload_excelRow(rowWok);
-
-                        //    dsEstudiantes1.load_excel.AcceptChanges();
-                        //}
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -177,7 +158,7 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
-            DialogResult r = CajaDialogo.Pregunta("Desea Guardar estos Registros como Estudiantes?");
+            DialogResult r = CajaDialogo.Pregunta("Desea Guardar estos Registros como Estudiantes?\nSe omitiran los Estudiantes que el Num Identidad existan en Sistema!");
             if (r != System.Windows.Forms.DialogResult.Yes)
                 return;
 
@@ -195,94 +176,95 @@ namespace ERP_INTECOLI.Administracion.Estudiantes
 
             foreach (dsEstudiantes.prev_estudiantesRow  item in dsEstudiantes1.prev_estudiantes.Rows)
             {
-                SqlTransaction transaction = null;
-
-                SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
-                bool Guardar = false;
-
-                try
+                if (item.ya_existe == false)
                 {
-                    conn.Open();
-                    transaction = conn.BeginTransaction("Transaction Order");
+                    SqlTransaction transaction = null;
 
-                    SqlCommand cmd = conn.CreateCommand();
-                    cmd.CommandText = "[sp_estudiantes_insert_new_estudiante]";
-                    cmd.Connection = conn;
-                    cmd.Transaction = transaction;
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    if(string.IsNullOrEmpty(item.nombre))
-                        cmd.Parameters.AddWithValue("@nombres", DBNull.Value);
-                    else
-                        cmd.Parameters.AddWithValue("@nombres", item.nombre);
+                    SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
+                    bool Guardar = false;
 
-                    if(string.IsNullOrEmpty(item.apellido))
-                        cmd.Parameters.AddWithValue("@apellidos", DBNull.Value);
-                    else
-                        cmd.Parameters.AddWithValue("@apellidos", item.apellido);
-
-                    if(string.IsNullOrEmpty(item.correo))
-                        cmd.Parameters.AddWithValue("@direccion", DBNull.Value);
-                    else
-                        cmd.Parameters.AddWithValue("@direccion", item.direccion);
-                    cmd.Parameters.AddWithValue("@fecha_nacimiento", item.fecha_nacimiento);
-
-                    cmd.Parameters.AddWithValue("@nivel_id_ingreso",DBNull.Value);
-                    cmd.Parameters.AddWithValue("@sexo", DBNull.Value);
-                    
-                    if(string.IsNullOrEmpty(item.correo))
-                        cmd.Parameters.AddWithValue("@correo", DBNull.Value);
-                    else
-                        cmd.Parameters.AddWithValue("@correo", item.correo);
-
-                    cmd.Parameters.AddWithValue("@id_usuario",UsuarioLogueado.Id);
-
-                    cmd.Parameters.AddWithValue("@proxima_fecha_pago", dp.Now().AddDays(30));
-                    cmd.Parameters.AddWithValue("@seguimiento_saldo", 1);
-                    cmd.Parameters.AddWithValue("@tipo_pago", 1);
-                    cmd.Parameters.AddWithValue("@id_zona", DBNull.Value);
-                    cmd.Parameters.AddWithValue("@id_estudiante_recomendo",DBNull.Value);
-                    cmd.Parameters.AddWithValue("@nombre_recomendo", DBNull.Value);
-                    cmd.Parameters.AddWithValue("@id_sucursal",gridPuntoVenta.EditValue);
-                    cmd.Parameters.AddWithValue("@numero_identidad",item.num_identidad);
-                    cmd.Parameters.AddWithValue("@IsEmpleado", 0);
-                    cmd.Parameters.AddWithValue("@dias_min_pago",1);
-                    cmd.Parameters.AddWithValue("@dias_max_pago",10);
-                    cmd.Parameters.AddWithValue("@id_punto_venta", gridPuntoVenta.EditValue);
-
-                    int id_header_estudiante = Convert.ToInt32(cmd.ExecuteScalar());
-
-                    if (id_header_estudiante > 0)
+                    try
                     {
-                        if (!string.IsNullOrEmpty(item.telefono))
+                        conn.Open();
+                        transaction = conn.BeginTransaction("Transaction Order");
+
+                        SqlCommand cmd = conn.CreateCommand();
+                        cmd.CommandText = "[sp_estudiantes_insert_new_estudiante]";
+                        cmd.Connection = conn;
+                        cmd.Transaction = transaction;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        if (string.IsNullOrEmpty(item.nombre))
+                            cmd.Parameters.AddWithValue("@nombres", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@nombres", item.nombre);
+
+                        if (string.IsNullOrEmpty(item.apellido))
+                            cmd.Parameters.AddWithValue("@apellidos", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@apellidos", item.apellido);
+
+                        if (string.IsNullOrEmpty(item.correo))
+                            cmd.Parameters.AddWithValue("@direccion", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@direccion", item.direccion);
+                        cmd.Parameters.AddWithValue("@fecha_nacimiento", item.fecha_nacimiento);
+
+                        cmd.Parameters.AddWithValue("@nivel_id_ingreso", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@sexo", DBNull.Value);
+
+                        if (string.IsNullOrEmpty(item.correo))
+                            cmd.Parameters.AddWithValue("@correo", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@correo", item.correo);
+
+                        cmd.Parameters.AddWithValue("@id_usuario", UsuarioLogueado.Id);
+
+                        cmd.Parameters.AddWithValue("@proxima_fecha_pago", dp.Now().AddDays(30));
+                        cmd.Parameters.AddWithValue("@seguimiento_saldo", 1);
+                        cmd.Parameters.AddWithValue("@tipo_pago", 1);
+                        cmd.Parameters.AddWithValue("@id_zona", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@id_estudiante_recomendo", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@nombre_recomendo", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@id_sucursal", gridPuntoVenta.EditValue);
+                        cmd.Parameters.AddWithValue("@numero_identidad", item.num_identidad);
+                        cmd.Parameters.AddWithValue("@IsEmpleado", 0);
+                        cmd.Parameters.AddWithValue("@dias_min_pago", 1);
+                        cmd.Parameters.AddWithValue("@dias_max_pago", 10);
+                        cmd.Parameters.AddWithValue("@id_punto_venta", gridPuntoVenta.EditValue);
+
+                        int id_header_estudiante = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        if (id_header_estudiante > 0)
                         {
-                            cmd.Parameters.Clear();
-                            cmd.CommandText = "[sp_estudiantes_insert_detalle_telefono]";
-                            cmd.Connection = conn;
-                            cmd.Transaction = transaction;
-                            cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("@id_estudiante", id_header_estudiante);
-                            cmd.Parameters.AddWithValue("@telefono", item.telefono);
-                            cmd.Parameters.AddWithValue("@tipo_telefono_id", 1); //tipos_telefono: 1 celular
-                            cmd.ExecuteNonQuery();
+                            if (!string.IsNullOrEmpty(item.telefono))
+                            {
+                                cmd.Parameters.Clear();
+                                cmd.CommandText = "[sp_estudiantes_insert_detalle_telefono]";
+                                cmd.Connection = conn;
+                                cmd.Transaction = transaction;
+                                cmd.CommandType = CommandType.StoredProcedure;
+                                cmd.Parameters.AddWithValue("@id_estudiante", id_header_estudiante);
+                                cmd.Parameters.AddWithValue("@telefono", item.telefono);
+                                cmd.Parameters.AddWithValue("@tipo_telefono_id", 1); //tipos_telefono: 1 celular
+                                cmd.ExecuteNonQuery();
+                            }
+
                         }
-                        
+
+                        transaction.Commit();
+                        Guardar = true;
+
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+
                     }
-
-                    transaction.Commit();
-                    Guardar = true;
-
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-
+                    catch (Exception ec)
+                    {
+                        transaction.Rollback();
+                        CajaDialogo.Error(ec.Message);
+                        Guardar = false;
+                    }
                 }
-                catch (Exception ec)
-                {
-                    transaction.Rollback();
-                    CajaDialogo.Error(ec.Message);
-                    Guardar = false;
-                }
-
-
 
             }
         }
