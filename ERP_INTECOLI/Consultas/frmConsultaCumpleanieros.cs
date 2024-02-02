@@ -82,5 +82,11 @@ namespace ERP_INTECOLI.Consultas
                 CajaDialogo.Error("No se pudo cargar la lista de cumpleañeros!", ec);
             }
         }
+
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;    
+            this.Close();
+        }
     }
 }

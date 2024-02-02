@@ -45,6 +45,7 @@ namespace ERP_INTECOLI.Usuarios
                     ValidoContrasenia = false;
                     txtPass.Text = "";
                     txtConfirmar.Text = "";
+                    chkUsuarioOculto.Checked = false;
                     break;
                 case TipoEdicion.Editar:
 
@@ -66,6 +67,8 @@ namespace ERP_INTECOLI.Usuarios
                     else
                         grdGrupo.EditValue = UserParametro.IdGrupo;
                     ValidoContrasenia = true;
+
+                    chkUsuarioOculto.Checked = UserParametro.UsuarioOculto;
                     break;
             }
         }
@@ -138,8 +141,9 @@ namespace ERP_INTECOLI.Usuarios
                         UserParametro.Habilitado = chkUsuarioHabilitado.Checked;
                         UserParametro.Super_user = chkSuperUsuario.Checked;
                         UserParametro.Password = txtPass.Text;
+                        UserParametro.UsuarioOculto = chkUsuarioOculto.Checked;
 
-                        string sql1 = @"sp_insert_nuevo_usuario";
+                        string sql1 = @"[sp_insert_nuevo_usuario_v2]";
                         try
                         {
                             SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
@@ -156,6 +160,8 @@ namespace ERP_INTECOLI.Usuarios
                             cmd.Parameters.AddWithValue("@utiliza_bloqueo", chkUtilizaBloqueo.Checked);
                             cmd.Parameters.AddWithValue("@user_db", cbxNivel.Text.Trim().ToLower());
                             cmd.Parameters.AddWithValue("@id_grupo", grdGrupo.EditValue);
+                            cmd.Parameters.AddWithValue("@usuario_oculto", chkUsuarioOculto.Checked);
+                            
                             cmd.ExecuteNonQuery();
 
                             CajaDialogo.Information("Guardado con Exito!");
@@ -172,7 +178,7 @@ namespace ERP_INTECOLI.Usuarios
                     case TipoEdicion.Editar:
                         try
                         {
-                            string sql = @"sp_update_usuario";
+                            string sql = @"[sp_update_usuario_v2]";
                             SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                             conn.Open();
                             SqlCommand cmd = new SqlCommand(sql, conn);
@@ -189,6 +195,7 @@ namespace ERP_INTECOLI.Usuarios
                             cmd.Parameters.AddWithValue("@user_db", cbxNivel.Text.Trim());
                             cmd.Parameters.AddWithValue("@user_id", IdUsuario);
                             cmd.Parameters.AddWithValue("@id_grupo", grdGrupo.EditValue);
+                            cmd.Parameters.AddWithValue("@usuario_oculto", chkUsuarioOculto.Checked);
                             cmd.ExecuteNonQuery();
 
                             CajaDialogo.Information("Guardado con Exito!");

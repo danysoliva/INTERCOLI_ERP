@@ -3531,7 +3531,6 @@ namespace ERP_INTECOLI
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.cmdHome);
             this.Name = "frmOpciones";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Opciones";
             this.Load += new System.EventHandler(this.frmOpciones_Load);
             this.TabUsuarios.ResumeLayout(false);

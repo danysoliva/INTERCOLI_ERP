@@ -43,6 +43,7 @@ namespace ERP_INTECOLI.Administracion.Consultas
             this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colfecha = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colvalor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cmdCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsProyeccionSaldos1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -51,7 +52,7 @@ namespace ERP_INTECOLI.Administracion.Consultas
             // txtValorProyeccion
             // 
             this.txtValorProyeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorProyeccion.Location = new System.Drawing.Point(465, 72);
+            this.txtValorProyeccion.Location = new System.Drawing.Point(475, 72);
             this.txtValorProyeccion.Name = "txtValorProyeccion";
             this.txtValorProyeccion.ReadOnly = true;
             this.txtValorProyeccion.Size = new System.Drawing.Size(123, 29);
@@ -92,7 +93,7 @@ namespace ERP_INTECOLI.Administracion.Consultas
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(-96, 161);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 16);
+            this.label2.Size = new System.Drawing.Size(87, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Fecha Hasta:";
             // 
@@ -102,7 +103,7 @@ namespace ERP_INTECOLI.Administracion.Consultas
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(-96, 132);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
+            this.label1.Size = new System.Drawing.Size(92, 16);
             this.label1.TabIndex = 10;
             this.label1.Text = "Fecha Desde:";
             // 
@@ -187,11 +188,30 @@ namespace ERP_INTECOLI.Administracion.Consultas
             this.colvalor.Visible = true;
             this.colvalor.VisibleIndex = 2;
             // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.BackColor = System.Drawing.Color.LightSalmon;
+            this.cmdCancelar.FlatAppearance.BorderColor = System.Drawing.Color.LightSalmon;
+            this.cmdCancelar.FlatAppearance.BorderSize = 2;
+            this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
+            this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdCancelar.Location = new System.Drawing.Point(475, 12);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(123, 47);
+            this.cmdCancelar.TabIndex = 20;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmdCancelar.UseVisualStyleBackColor = false;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
+            // 
             // frmSaldosAjustados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 624);
+            this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.txtValorProyeccion);
             this.Controls.Add(this.label3);
@@ -226,5 +246,6 @@ namespace ERP_INTECOLI.Administracion.Consultas
         private DevExpress.XtraGrid.Columns.GridColumn colnombre;
         private DevExpress.XtraGrid.Columns.GridColumn colfecha;
         private DevExpress.XtraGrid.Columns.GridColumn colvalor;
+        private System.Windows.Forms.Button cmdCancelar;
     }
 }

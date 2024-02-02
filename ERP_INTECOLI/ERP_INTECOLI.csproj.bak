@@ -84,48 +84,55 @@
     <OutputPath>bin\x64\x64\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Charts.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.CodeParser.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Dashboard.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Dashboard.v23.1.Win, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.Desktop.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.DataAccess.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.DataAccess.v23.1.UI, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Drawing.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Map.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Office.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Pdf.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v23.1.Export, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Sparkline.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.TreeMap.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v23.1.UI, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Xpo.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraBars.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v23.1.UI, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v23.1.Wizard, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v23.2.Win, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v23.2.UI, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Map.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Export, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.TreeMap.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v23.2.UI, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v23.2.UI, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v23.2.Wizard, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGauges.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGauges.v23.1.Presets, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGauges.v23.1.Win, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraMap.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraNavBar.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPivotGrid.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraReports.v23.1.Extensions, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraRichEdit.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeList.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeMap.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeMap.v23.1.UI, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraVerticalGrid.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v23.2.Presets, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v23.2.Win, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v23.2.Extensions, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v23.2.UI, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Shared.v22.2, Version=22.2.20222.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Win.Misc.v22.2, Version=22.2.20222.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Win.UltraWinEditors.v22.2, Version=22.2.20222.16, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
@@ -160,21 +167,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accesos\AccesosUsuarios\AccesoUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Accesos\AccesosUsuarios\AccesoUsuario.cs" />
     <Compile Include="Accesos\AccesosUsuarios\AccesoUsuario.Designer.cs">
       <DependentUpon>AccesoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesAdmin.cs" />
     <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesAdmin.Designer.cs">
       <DependentUpon>xfrmAccesosTemporalesAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesCRUD.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesCRUD.cs" />
     <Compile Include="Accesos\AccesosUsuarios\xfrmAccesosTemporalesCRUD.Designer.cs">
       <DependentUpon>xfrmAccesosTemporalesCRUD.cs</DependentUpon>
     </Compile>
@@ -189,45 +190,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsAccesos.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Accesos\GestionGrupos\CrearGrupo.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Accesos\GestionGrupos\CrearGrupo.cs" />
     <Compile Include="Accesos\GestionGrupos\CrearGrupo.Designer.cs">
       <DependentUpon>CrearGrupo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Accesos\GestionGrupos\EditarGrupo.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Accesos\GestionGrupos\EditarGrupo.cs" />
     <Compile Include="Accesos\GestionGrupos\EditarGrupo.Designer.cs">
       <DependentUpon>EditarGrupo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Accesos\GestionGrupos\PrincipalGestionGrupos.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Accesos\GestionGrupos\PrincipalGestionGrupos.cs" />
     <Compile Include="Accesos\GestionGrupos\PrincipalGestionGrupos.Designer.cs">
       <DependentUpon>PrincipalGestionGrupos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Accesos\GrupoLosa\CrearGrupoLosa.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Accesos\GrupoLosa\CrearGrupoLosa.cs" />
     <Compile Include="Accesos\GrupoLosa\CrearGrupoLosa.Designer.cs">
       <DependentUpon>CrearGrupoLosa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Accesos\GrupoLosa\EditarGrupoLosa.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Accesos\GrupoLosa\EditarGrupoLosa.cs" />
     <Compile Include="Accesos\GrupoLosa\EditarGrupoLosa.Designer.cs">
       <DependentUpon>EditarGrupoLosa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Accesos\GrupoLosa\PrincipalGrupoLosa.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Accesos\GrupoLosa\PrincipalGrupoLosa.cs" />
     <Compile Include="Accesos\GrupoLosa\PrincipalGrupoLosa.Designer.cs">
       <DependentUpon>PrincipalGrupoLosa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Accesos\NivelAccesoSistema\NivelAccesoSistema.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Accesos\NivelAccesoSistema\NivelAccesoSistema.cs" />
     <Compile Include="Accesos\NivelAccesoSistema\NivelAccesoSistema.Designer.cs">
       <DependentUpon>NivelAccesoSistema.cs</DependentUpon>
     </Compile>
@@ -236,63 +223,43 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCaja.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Caja\frmArqueoCaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Caja\frmArqueoCaja.cs" />
     <Compile Include="Administracion\Caja\frmArqueoCaja.Designer.cs">
       <DependentUpon>frmArqueoCaja.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Caja\frmCaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Caja\frmCaja.cs" />
     <Compile Include="Administracion\Caja\frmCaja.Designer.cs">
       <DependentUpon>frmCaja.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Caja\frmPagoEfectivo.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Caja\frmPagoEfectivo.cs" />
     <Compile Include="Administracion\Caja\frmPagoEfectivo.Designer.cs">
       <DependentUpon>frmPagoEfectivo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Caja\frmPagoTarjeta.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Caja\frmPagoTarjeta.cs" />
     <Compile Include="Administracion\Caja\frmPagoTarjeta.Designer.cs">
       <DependentUpon>frmPagoTarjeta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Caja\frmPagoTransferencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Caja\frmPagoTransferencia.cs" />
     <Compile Include="Administracion\Caja\frmPagoTransferencia.Designer.cs">
       <DependentUpon>frmPagoTransferencia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Caja\frmReprintBoleta.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Caja\frmReprintBoleta.cs" />
     <Compile Include="Administracion\Caja\frmReprintBoleta.Designer.cs">
       <DependentUpon>frmReprintBoleta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Caja\frmRePrintFactura.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Caja\frmRePrintFactura.cs" />
     <Compile Include="Administracion\Caja\frmRePrintFactura.Designer.cs">
       <DependentUpon>frmRePrintFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Caja\frmTipoPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Caja\frmTipoPago.cs" />
     <Compile Include="Administracion\Caja\frmTipoPago.Designer.cs">
       <DependentUpon>frmTipoPago.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Cursos\frmCursos.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Cursos\frmCursos.cs" />
     <Compile Include="Administracion\Cursos\frmCursos.Designer.cs">
       <DependentUpon>frmCursos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Cursos\frmNuevo_Editar_Curso.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Cursos\frmNuevo_Editar_Curso.cs" />
     <Compile Include="Administracion\Cursos\frmNuevo_Editar_Curso.Designer.cs">
       <DependentUpon>frmNuevo_Editar_Curso.cs</DependentUpon>
     </Compile>
@@ -301,39 +268,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsEmpresa.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Empresas\frmCRUDEmpresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Empresas\frmCRUDEmpresa.cs" />
     <Compile Include="Administracion\Empresas\frmCRUDEmpresa.Designer.cs">
       <DependentUpon>frmCRUDEmpresa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Empresas\frmEmpresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Empresas\frmEmpresa.cs" />
     <Compile Include="Administracion\Empresas\frmEmpresa.Designer.cs">
       <DependentUpon>frmEmpresa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.cs" />
     <Compile Include="Administracion\Estadisticas\frmEstadisticasPorResidencia.Designer.cs">
       <DependentUpon>frmEstadisticasPorResidencia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Estudiantes\frmImportarEstudiantes.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmImportarEstudiantes.cs" />
     <Compile Include="Administracion\Estudiantes\frmImportarEstudiantes.Designer.cs">
       <DependentUpon>frmImportarEstudiantes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Estudiantes\frmRecuentoGeneros.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmRecuentoGeneros.cs" />
     <Compile Include="Administracion\Estudiantes\frmRecuentoGeneros.Designer.cs">
       <DependentUpon>frmRecuentoGeneros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\frmRecordatorio.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\frmRecordatorio.cs" />
     <Compile Include="Administracion\frmRecordatorio.Designer.cs">
       <DependentUpon>frmRecordatorio.cs</DependentUpon>
     </Compile>
@@ -374,39 +329,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsCompras.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Compras\frmFacturasProveedoresMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Compras\frmFacturasProveedoresMain.cs" />
     <Compile Include="Compras\frmFacturasProveedoresMain.Designer.cs">
       <DependentUpon>frmFacturasProveedoresMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Compras\frmOrdenesCompraMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Compras\frmOrdenesCompraMain.cs" />
     <Compile Include="Compras\frmOrdenesCompraMain.Designer.cs">
       <DependentUpon>frmOrdenesCompraMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Compras\frmSearchFacturasProveedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Compras\frmSearchFacturasProveedor.cs" />
     <Compile Include="Compras\frmSearchFacturasProveedor.Designer.cs">
       <DependentUpon>frmSearchFacturasProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Compras\frmSearchOrdenesC.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Compras\frmSearchOrdenesC.cs" />
     <Compile Include="Compras\frmSearchOrdenesC.Designer.cs">
       <DependentUpon>frmSearchOrdenesC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Compras\frmSearchSolicitud.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Compras\frmSearchSolicitud.cs" />
     <Compile Include="Compras\frmSearchSolicitud.Designer.cs">
       <DependentUpon>frmSearchSolicitud.cs</DependentUpon>
     </Compile>
-    <Compile Include="Compras\frmSolicitudesMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Compras\frmSolicitudesMain.cs" />
     <Compile Include="Compras\frmSolicitudesMain.Designer.cs">
       <DependentUpon>frmSolicitudesMain.cs</DependentUpon>
     </Compile>
@@ -421,15 +364,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMiembrosClase.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.cs" />
     <Compile Include="Consultas\ConsultaMiembros\frmConsultarMiembroCurso.Designer.cs">
       <DependentUpon>frmConsultarMiembroCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\ConsultaMiembros\frmNuevosIngresos.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Consultas\ConsultaMiembros\frmNuevosIngresos.cs" />
     <Compile Include="Consultas\ConsultaMiembros\frmNuevosIngresos.Designer.cs">
       <DependentUpon>frmNuevosIngresos.cs</DependentUpon>
     </Compile>
@@ -438,33 +377,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsEstSaldosCobrables.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaEstSaldosCobrables.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaEstSaldosCobrables.cs" />
     <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaEstSaldosCobrables.Designer.cs">
       <DependentUpon>frmConsultaEstSaldosCobrables.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaMovimientosSaldos.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaMovimientosSaldos.cs" />
     <Compile Include="Consultas\ConsultaMovimientosSaldos\frmConsultaMovimientosSaldos.Designer.cs">
       <DependentUpon>frmConsultaMovimientosSaldos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\frmConsultaAnulados.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Consultas\frmConsultaAnulados.cs" />
     <Compile Include="Consultas\frmConsultaAnulados.Designer.cs">
       <DependentUpon>frmConsultaAnulados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\frmConsultaCumpleanieros.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Consultas\frmConsultaCumpleanieros.cs" />
     <Compile Include="Consultas\frmConsultaCumpleanieros.Designer.cs">
       <DependentUpon>frmConsultaCumpleanieros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\frmSeguimientoSaldos.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Consultas\frmSeguimientoSaldos.cs" />
     <Compile Include="Consultas\frmSeguimientoSaldos.Designer.cs">
       <DependentUpon>frmSeguimientoSaldos.cs</DependentUpon>
     </Compile>
@@ -473,9 +402,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsRangosPagos.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\RangosPago\frmRangosPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Consultas\RangosPago\frmRangosPago.cs" />
     <Compile Include="Consultas\RangosPago\frmRangosPago.Designer.cs">
       <DependentUpon>frmRangosPago.cs</DependentUpon>
     </Compile>
@@ -491,15 +418,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsProyeccionSaldos.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\SaldosProyeccion\frmConsultaTipoPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Consultas\SaldosProyeccion\frmConsultaTipoPago.cs" />
     <Compile Include="Consultas\SaldosProyeccion\frmConsultaTipoPago.Designer.cs">
       <DependentUpon>frmConsultaTipoPago.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\SaldosProyeccion\frmSaldosAjustados.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Consultas\SaldosProyeccion\frmSaldosAjustados.cs" />
     <Compile Include="Consultas\SaldosProyeccion\frmSaldosAjustados.Designer.cs">
       <DependentUpon>frmSaldosAjustados.cs</DependentUpon>
     </Compile>
@@ -518,39 +441,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsEstudiantes.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Estudiantes\frmagregar_rtn.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmagregar_rtn.cs" />
     <Compile Include="Administracion\Estudiantes\frmagregar_rtn.Designer.cs">
       <DependentUpon>frmagregar_rtn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Estudiantes\frmagregar_telefono.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmagregar_telefono.cs" />
     <Compile Include="Administracion\Estudiantes\frmagregar_telefono.Designer.cs">
       <DependentUpon>frmagregar_telefono.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Estudiantes\frmBuscarEstudiantes.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmBuscarEstudiantes.cs" />
     <Compile Include="Administracion\Estudiantes\frmBuscarEstudiantes.Designer.cs">
       <DependentUpon>frmBuscarEstudiantes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Estudiantes\frmEstudiantes.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmEstudiantes.cs" />
     <Compile Include="Administracion\Estudiantes\frmEstudiantes.Designer.cs">
       <DependentUpon>frmEstudiantes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Estudiantes\frmEstudiantesGroup.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmEstudiantesGroup.cs" />
     <Compile Include="Administracion\Estudiantes\frmEstudiantesGroup.Designer.cs">
       <DependentUpon>frmEstudiantesGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Estudiantes\frmHistoarialAntiguedad.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Estudiantes\frmHistoarialAntiguedad.cs" />
     <Compile Include="Administracion\Estudiantes\frmHistoarialAntiguedad.Designer.cs">
       <DependentUpon>frmHistoarialAntiguedad.cs</DependentUpon>
     </Compile>
@@ -559,9 +470,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsFactura.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Facturacion\frmList_Invoices.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Facturacion\frmList_Invoices.cs" />
     <Compile Include="Administracion\Facturacion\frmList_Invoices.Designer.cs">
       <DependentUpon>frmList_Invoices.cs</DependentUpon>
     </Compile>
@@ -600,33 +509,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsInstructores.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Instructores\frmAgregarInstructores.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Instructores\frmAgregarInstructores.cs" />
     <Compile Include="Administracion\Instructores\frmAgregarInstructores.Designer.cs">
       <DependentUpon>frmAgregarInstructores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Instructores\frmAgregarTelefono.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Instructores\frmAgregarTelefono.cs" />
     <Compile Include="Administracion\Instructores\frmAgregarTelefono.Designer.cs">
       <DependentUpon>frmAgregarTelefono.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Instructores\frmBuscarInstructores.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Instructores\frmBuscarInstructores.cs" />
     <Compile Include="Administracion\Instructores\frmBuscarInstructores.Designer.cs">
       <DependentUpon>frmBuscarInstructores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Matricula\ctl_Matricula.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Matricula\ctl_Matricula.cs" />
     <Compile Include="Administracion\Matricula\ctl_Matricula.Designer.cs">
       <DependentUpon>ctl_Matricula.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Matricula\ctl_mover_estudiante1.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Matricula\ctl_mover_estudiante1.cs" />
     <Compile Include="Administracion\Matricula\ctl_mover_estudiante1.Designer.cs">
       <DependentUpon>ctl_mover_estudiante1.cs</DependentUpon>
     </Compile>
@@ -640,33 +539,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsNuevoCursoMatricula.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Matricula\frmConsultarMatriculados.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Matricula\frmConsultarMatriculados.cs" />
     <Compile Include="Administracion\Matricula\frmConsultarMatriculados.Designer.cs">
       <DependentUpon>frmConsultarMatriculados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Matricula\frmEditSecciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Matricula\frmEditSecciones.cs" />
     <Compile Include="Administracion\Matricula\frmEditSecciones.Designer.cs">
       <DependentUpon>frmEditSecciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Matricula\frmMatricula.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Matricula\frmMatricula.cs" />
     <Compile Include="Administracion\Matricula\frmMatricula.Designer.cs">
       <DependentUpon>frmMatricula.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Matricula\frmMatriculaReal.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Matricula\frmMatriculaReal.cs" />
     <Compile Include="Administracion\Matricula\frmMatriculaReal.Designer.cs">
       <DependentUpon>frmMatriculaReal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Matricula\frmMostarDetallesCurso.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Matricula\frmMostarDetallesCurso.cs" />
     <Compile Include="Administracion\Matricula\frmMostarDetallesCurso.Designer.cs">
       <DependentUpon>frmMostarDetallesCurso.cs</DependentUpon>
     </Compile>
@@ -675,21 +564,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMovimientosSaldos.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Movimientos\frmMovimientosSaldos.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Movimientos\frmMovimientosSaldos.cs" />
     <Compile Include="Administracion\Movimientos\frmMovimientosSaldos.Designer.cs">
       <DependentUpon>frmMovimientosSaldos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Niveles_Academicos\frmNivelesOP.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Niveles_Academicos\frmNivelesOP.cs" />
     <Compile Include="Administracion\Niveles_Academicos\frmNivelesOP.Designer.cs">
       <DependentUpon>frmNivelesOP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Niveles_Academicos\frmNiveles_Academicos.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Niveles_Academicos\frmNiveles_Academicos.cs" />
     <Compile Include="Administracion\Niveles_Academicos\frmNiveles_Academicos.Designer.cs">
       <DependentUpon>frmNiveles_Academicos.cs</DependentUpon>
     </Compile>
@@ -701,9 +584,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPlanilla.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Planilla\frmGeneracionPlanilla.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Administracion\Planilla\frmGeneracionPlanilla.cs" />
     <Compile Include="Administracion\Planilla\frmGeneracionPlanilla.Designer.cs">
       <DependentUpon>frmGeneracionPlanilla.cs</DependentUpon>
     </Compile>
@@ -739,63 +620,43 @@
       <DependentUpon>dsListaPrecios.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\Configuraciones\Models\ListaPrecioProductosAplicaPDV.cs" />
-    <Compile Include="Facturacion\Configuraciones\xfrmCopiarListaPrecio.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmCopiarListaPrecio.cs" />
     <Compile Include="Facturacion\Configuraciones\xfrmCopiarListaPrecio.Designer.cs">
       <DependentUpon>xfrmCopiarListaPrecio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Configuraciones\xfrmEditPriceFromListaPrecio.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmEditPriceFromListaPrecio.cs" />
     <Compile Include="Facturacion\Configuraciones\xfrmEditPriceFromListaPrecio.Designer.cs">
       <DependentUpon>xfrmEditPriceFromListaPrecio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Configuraciones\xfrmListaPreciosClientesAplicaCRUD.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmListaPreciosClientesAplicaCRUD.cs" />
     <Compile Include="Facturacion\Configuraciones\xfrmListaPreciosClientesAplicaCRUD.Designer.cs">
       <DependentUpon>xfrmListaPreciosClientesAplicaCRUD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Configuraciones\xfrmListaPreciosCRUD.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmListaPreciosCRUD.cs" />
     <Compile Include="Facturacion\Configuraciones\xfrmListaPreciosCRUD.Designer.cs">
       <DependentUpon>xfrmListaPreciosCRUD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Configuraciones\xfrmListaPrecioView.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmListaPrecioView.cs" />
     <Compile Include="Facturacion\Configuraciones\xfrmListaPrecioView.Designer.cs">
       <DependentUpon>xfrmListaPrecioView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Configuraciones\xfrmPDVAsignadasView.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmPDVAsignadasView.cs" />
     <Compile Include="Facturacion\Configuraciones\xfrmPDVAsignadasView.Designer.cs">
       <DependentUpon>xfrmPDVAsignadasView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Configuraciones\xfrmSelectCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmSelectCliente.cs" />
     <Compile Include="Facturacion\Configuraciones\xfrmSelectCliente.Designer.cs">
       <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Configuraciones\xfrmSelectPDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmSelectPDV.cs" />
     <Compile Include="Facturacion\Configuraciones\xfrmSelectPDV.Designer.cs">
       <DependentUpon>xfrmSelectPDV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Configuraciones\xfrmSelectProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrmSelectProductos.cs" />
     <Compile Include="Facturacion\Configuraciones\xfrmSelectProductos.Designer.cs">
       <DependentUpon>xfrmSelectProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Configuraciones\xfrnListaPrecioAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Configuraciones\xfrnListaPrecioAdmin.cs" />
     <Compile Include="Facturacion\Configuraciones\xfrnListaPrecioAdmin.Designer.cs">
       <DependentUpon>xfrnListaPrecioAdmin.cs</DependentUpon>
     </Compile>
@@ -839,27 +700,19 @@
     <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmFacturaWithPDV.Designer.cs">
       <DependentUpon>frmFacturaWithPDV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmSearchWithPDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmSearchWithPDV.cs" />
     <Compile Include="Facturacion\CoreFacturas\FacturaParaPuntoDeVenta\frmSearchWithPDV.Designer.cs">
       <DependentUpon>frmSearchWithPDV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmAjusteKardexFactura.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmAjusteKardexFactura.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmAjusteKardexFactura.designer.cs">
       <DependentUpon>frmAjusteKardexFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmAjusteSaldoEstadoCuenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmAjusteSaldoEstadoCuenta.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmAjusteSaldoEstadoCuenta.Designer.cs">
       <DependentUpon>frmAjusteSaldoEstadoCuenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmConfirmationFactura.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmConfirmationFactura.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmConfirmationFactura.Designer.cs">
       <DependentUpon>frmConfirmationFactura.cs</DependentUpon>
     </Compile>
@@ -869,111 +722,75 @@
     <Compile Include="Facturacion\CoreFacturas\frmFactura.Designer.cs">
       <DependentUpon>frmFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmHomeFacturasEmitidas.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomeFacturasEmitidas.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmHomeFacturasEmitidas.Designer.cs">
       <DependentUpon>frmHomeFacturasEmitidas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmHomeNotasCreditoDebito.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomeNotasCreditoDebito.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmHomeNotasCreditoDebito.Designer.cs">
       <DependentUpon>frmHomeNotasCreditoDebito.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmHomePagoMultiple.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomePagoMultiple.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmHomePagoMultiple.Designer.cs">
       <DependentUpon>frmHomePagoMultiple.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmHomePagoMultipleSimple.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomePagoMultipleSimple.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmHomePagoMultipleSimple.Designer.cs">
       <DependentUpon>frmHomePagoMultipleSimple.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmHomeSolicitudesAutorizacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmHomeSolicitudesAutorizacion.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmHomeSolicitudesAutorizacion.Designer.cs">
       <DependentUpon>frmHomeSolicitudesAutorizacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmKardexFacturacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmKardexFacturacion.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmKardexFacturacion.designer.cs">
       <DependentUpon>frmKardexFacturacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmNavigationPageAutorizacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmNavigationPageAutorizacion.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmNavigationPageAutorizacion.Designer.cs">
       <DependentUpon>frmNavigationPageAutorizacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmNotaCRUD.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmNotaCRUD.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmNotaCRUD.Designer.cs">
       <DependentUpon>frmNotaCRUD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmPagoFactura.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmPagoFactura.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmPagoFactura.Designer.cs">
       <DependentUpon>frmPagoFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmPagoFacturaMultiple.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmPagoFacturaMultiple.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmPagoFacturaMultiple.Designer.cs">
       <DependentUpon>frmPagoFacturaMultiple.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmPTFromKardexFacturacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmPTFromKardexFacturacion.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmPTFromKardexFacturacion.designer.cs">
       <DependentUpon>frmPTFromKardexFacturacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmSearch.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmSearch.Designer.cs">
       <DependentUpon>frmSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\frmSearchDefault.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\frmSearchDefault.cs" />
     <Compile Include="Facturacion\CoreFacturas\frmSearchDefault.Designer.cs">
       <DependentUpon>frmSearchDefault.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\HomeEstadoCuenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\HomeEstadoCuenta.cs" />
     <Compile Include="Facturacion\CoreFacturas\HomeEstadoCuenta.designer.cs">
       <DependentUpon>HomeEstadoCuenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\xfrmDialogAutorizacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\xfrmDialogAutorizacion.cs" />
     <Compile Include="Facturacion\CoreFacturas\xfrmDialogAutorizacion.Designer.cs">
       <DependentUpon>xfrmDialogAutorizacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\xfrmDialogAutorizacionConfirmation.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\xfrmDialogAutorizacionConfirmation.cs" />
     <Compile Include="Facturacion\CoreFacturas\xfrmDialogAutorizacionConfirmation.Designer.cs">
       <DependentUpon>xfrmDialogAutorizacionConfirmation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\xfrmDialogGestionSolicitud.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\xfrmDialogGestionSolicitud.cs" />
     <Compile Include="Facturacion\CoreFacturas\xfrmDialogGestionSolicitud.Designer.cs">
       <DependentUpon>xfrmDialogGestionSolicitud.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\CoreFacturas\xfrmSelectCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\CoreFacturas\xfrmSelectCliente.cs" />
     <Compile Include="Facturacion\CoreFacturas\xfrmSelectCliente.Designer.cs">
       <DependentUpon>xfrmSelectCliente.cs</DependentUpon>
     </Compile>
@@ -982,33 +799,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsConfigFacturaAutomatica.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\FacturacionAutomatica\frmConfigFacturaEstudianteAuto.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmConfigFacturaEstudianteAuto.cs" />
     <Compile Include="Facturacion\FacturacionAutomatica\frmConfigFacturaEstudianteAuto.Designer.cs">
       <DependentUpon>frmConfigFacturaEstudianteAuto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\FacturacionAutomatica\frmDetalleFacturacionAutomaticaView.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmDetalleFacturacionAutomaticaView.cs" />
     <Compile Include="Facturacion\FacturacionAutomatica\frmDetalleFacturacionAutomaticaView.Designer.cs">
       <DependentUpon>frmDetalleFacturacionAutomaticaView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\FacturacionAutomatica\frmFacturasAutomaticasHome.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\frmFacturasAutomaticasHome.cs" />
     <Compile Include="Facturacion\FacturacionAutomatica\frmFacturasAutomaticasHome.Designer.cs">
       <DependentUpon>frmFacturasAutomaticasHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\FacturacionAutomatica\xfrmSelectEstudiante_FactAuto.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\FacturacionAutomatica\xfrmSelectEstudiante_FactAuto.cs" />
     <Compile Include="Facturacion\FacturacionAutomatica\xfrmSelectEstudiante_FactAuto.Designer.cs">
       <DependentUpon>xfrmSelectEstudiante_FactAuto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\frmFacturaBK.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\frmFacturaBK.cs" />
     <Compile Include="Facturacion\frmFacturaBK.Designer.cs">
       <DependentUpon>frmFacturaBK.cs</DependentUpon>
     </Compile>
@@ -1022,66 +829,46 @@
     <Compile Include="Facturacion\Mantenimientos\dsMantenimientosFacturacion.Designer.cs" />
     <Compile Include="Facturacion\Mantenimientos\Models\ClienteEmpresa.cs" />
     <Compile Include="Facturacion\Mantenimientos\Models\ClienteFacturacion.cs" />
-    <Compile Include="Facturacion\Mantenimientos\Models\frmAddEquipoPuntoVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\Models\frmAddEquipoPuntoVenta.cs" />
     <Compile Include="Facturacion\Mantenimientos\Models\frmAddEquipoPuntoVenta.Designer.cs">
       <DependentUpon>frmAddEquipoPuntoVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\Mantenimientos\Models\NumeracionFiscal.cs" />
     <Compile Include="Facturacion\Mantenimientos\Models\PDVBack.cs" />
-    <Compile Include="Facturacion\Mantenimientos\PDV_CRUD.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\PDV_CRUD.cs" />
     <Compile Include="Facturacion\Mantenimientos\PDV_CRUD.Designer.cs">
       <DependentUpon>PDV_CRUD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Mantenimientos\xformFacturacion_Clientes_CRUD.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xformFacturacion_Clientes_CRUD.cs" />
     <Compile Include="Facturacion\Mantenimientos\xformFacturacion_Clientes_CRUD.Designer.cs">
       <DependentUpon>xformFacturacion_Clientes_CRUD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Mantenimientos\xfrmClienteEmpresas.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xfrmClienteEmpresas.cs" />
     <Compile Include="Facturacion\Mantenimientos\xfrmClienteEmpresas.Designer.cs">
       <DependentUpon>xfrmClienteEmpresas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Mantenimientos\xfrmFacturacion_Clientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xfrmFacturacion_Clientes.cs" />
     <Compile Include="Facturacion\Mantenimientos\xfrmFacturacion_Clientes.Designer.cs">
       <DependentUpon>xfrmFacturacion_Clientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Mantenimientos\xfrm_PDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Mantenimientos\xfrm_PDV.cs" />
     <Compile Include="Facturacion\Mantenimientos\xfrm_PDV.Designer.cs">
       <DependentUpon>xfrm_PDV.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\Numeracion Fiscal\dsNumeracionFiscal1.Designer.cs" />
-    <Compile Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscal.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscal.cs" />
     <Compile Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscal.designer.cs">
       <DependentUpon>frmNumeracionFiscal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscalCRUD.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscalCRUD.cs" />
     <Compile Include="Facturacion\Numeracion Fiscal\frmNumeracionFiscalCRUD.designer.cs">
       <DependentUpon>frmNumeracionFiscalCRUD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Reportes\frmArqueoCaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Reportes\frmArqueoCaja.cs" />
     <Compile Include="Facturacion\Reportes\frmArqueoCaja.Designer.cs">
       <DependentUpon>frmArqueoCaja.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Reportes\frmCierreDiaHome.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Reportes\frmCierreDiaHome.cs" />
     <Compile Include="Facturacion\Reportes\frmCierreDiaHome.Designer.cs">
       <DependentUpon>frmCierreDiaHome.cs</DependentUpon>
     </Compile>
@@ -1133,9 +920,7 @@
     <Compile Include="Facturacion\Reportes\RPT_ND_NC_Local.designer.cs">
       <DependentUpon>RPT_ND_NC_Local.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\Reportes\xfrmDialogFormatoFactura.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Facturacion\Reportes\xfrmDialogFormatoFactura.cs" />
     <Compile Include="Facturacion\Reportes\xfrmDialogFormatoFactura.Designer.cs">
       <DependentUpon>xfrmDialogFormatoFactura.cs</DependentUpon>
     </Compile>
@@ -1157,9 +942,7 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMainMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="frmMainMenu.cs" />
     <Compile Include="frmMainMenu.Designer.cs">
       <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
@@ -1168,9 +951,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsHistorialAcademico.xsd</DependentUpon>
     </Compile>
-    <Compile Include="HistorialAcademico\frmHomeHistorialAcademico.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="HistorialAcademico\frmHomeHistorialAcademico.cs" />
     <Compile Include="HistorialAcademico\frmHomeHistorialAcademico.Designer.cs">
       <DependentUpon>frmHomeHistorialAcademico.cs</DependentUpon>
     </Compile>
@@ -1184,27 +965,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMantenimiento.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimiento\Productos\frmItemsCRUD.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Mantenimiento\Productos\frmItemsCRUD.cs" />
     <Compile Include="Mantenimiento\Productos\frmItemsCRUD.Designer.cs">
       <DependentUpon>frmItemsCRUD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimiento\Productos\frmItemsOP.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Mantenimiento\Productos\frmItemsOP.cs" />
     <Compile Include="Mantenimiento\Productos\frmItemsOP.Designer.cs">
       <DependentUpon>frmItemsOP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimiento\Proveedor\frmProveedorCRUD.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Mantenimiento\Proveedor\frmProveedorCRUD.cs" />
     <Compile Include="Mantenimiento\Proveedor\frmProveedorCRUD.Designer.cs">
       <DependentUpon>frmProveedorCRUD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimiento\Proveedor\frmProveedorMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Mantenimiento\Proveedor\frmProveedorMain.cs" />
     <Compile Include="Mantenimiento\Proveedor\frmProveedorMain.Designer.cs">
       <DependentUpon>frmProveedorMain.cs</DependentUpon>
     </Compile>
@@ -1221,33 +994,23 @@
     <Compile Include="Transacciones\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transacciones\frmAsistenciaManual.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Transacciones\frmAsistenciaManual.cs" />
     <Compile Include="Transacciones\frmAsistenciaManual.Designer.cs">
       <DependentUpon>frmAsistenciaManual.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transacciones\frmEstadoCuenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Transacciones\frmEstadoCuenta.cs" />
     <Compile Include="Transacciones\frmEstadoCuenta.Designer.cs">
       <DependentUpon>frmEstadoCuenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transacciones\frmFastMatricula.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Transacciones\frmFastMatricula.cs" />
     <Compile Include="Transacciones\frmFastMatricula.Designer.cs">
       <DependentUpon>frmFastMatricula.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transacciones\frmPostearMensualidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Transacciones\frmPostearMensualidad.cs" />
     <Compile Include="Transacciones\frmPostearMensualidad.Designer.cs">
       <DependentUpon>frmPostearMensualidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transacciones\frmReservaCupoTransaction.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Transacciones\frmReservaCupoTransaction.cs" />
     <Compile Include="Transacciones\frmReservaCupoTransaction.Designer.cs">
       <DependentUpon>frmReservaCupoTransaction.cs</DependentUpon>
     </Compile>
@@ -1259,39 +1022,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsUsuarios.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\frmAddWindowToUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Usuarios\frmAddWindowToUser.cs" />
     <Compile Include="Usuarios\frmAddWindowToUser.Designer.cs">
       <DependentUpon>frmAddWindowToUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\frmMantenimientoUsuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Usuarios\frmMantenimientoUsuarios.cs" />
     <Compile Include="Usuarios\frmMantenimientoUsuarios.Designer.cs">
       <DependentUpon>frmMantenimientoUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\frmMantVentanas.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Usuarios\frmMantVentanas.cs" />
     <Compile Include="Usuarios\frmMantVentanas.Designer.cs">
       <DependentUpon>frmMantVentanas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\frmManVentanasOP.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Usuarios\frmManVentanasOP.cs" />
     <Compile Include="Usuarios\frmManVentanasOP.Designer.cs">
       <DependentUpon>frmManVentanasOP.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\frmUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Usuarios\frmUser.cs" />
     <Compile Include="Usuarios\frmUser.Designer.cs">
       <DependentUpon>frmUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios\frmViewUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Usuarios\frmViewUser.cs" />
     <Compile Include="Usuarios\frmViewUser.Designer.cs">
       <DependentUpon>frmViewUser.cs</DependentUpon>
     </Compile>

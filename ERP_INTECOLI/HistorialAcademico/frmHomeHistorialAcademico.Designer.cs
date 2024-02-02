@@ -49,6 +49,7 @@
             this.colEstadoCurso = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            this.cmdCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtCliente.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -235,11 +236,30 @@
             this.xtraTabPage4.Size = new System.Drawing.Size(833, 480);
             this.xtraTabPage4.Text = "Certificados / Diplomas";
             // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.BackColor = System.Drawing.Color.LightSalmon;
+            this.cmdCancelar.FlatAppearance.BorderColor = System.Drawing.Color.LightSalmon;
+            this.cmdCancelar.FlatAppearance.BorderSize = 2;
+            this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
+            this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdCancelar.Location = new System.Drawing.Point(716, 5);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(120, 47);
+            this.cmdCancelar.TabIndex = 67;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmdCancelar.UseVisualStyleBackColor = false;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
+            // 
             // frmHomeHistorialAcademico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 588);
+            this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.labelControl3);
@@ -283,5 +303,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colfecha_fin;
         private DevExpress.XtraGrid.Columns.GridColumn colEstado;
         private DevExpress.XtraGrid.Columns.GridColumn colEstadoCurso;
+        private System.Windows.Forms.Button cmdCancelar;
     }
 }

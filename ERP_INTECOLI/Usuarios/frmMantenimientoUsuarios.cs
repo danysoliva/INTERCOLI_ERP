@@ -23,18 +23,20 @@ namespace ERP_INTECOLI.Usuarios
             InitializeComponent();
             UsuarioLogueado = pUserLog;
 
-            CargarUsuarios();
+            CargarUsuarios(false);
         }
 
-        private void CargarUsuarios()
+        private void CargarUsuarios(bool pMostrarOcultos)
         {
             try
             {
                 dsUsuarios1.Usuarios.Clear();
-                string sql = @"sp_carga_usuarios_para_mantenimiento";//"select * from admon.ft_carga_usuarios_para_mantenimiento();";
+                string sql = @"[sp_carga_usuarios_para_mantenimiento_v2]";//"select * from admon.ft_carga_usuarios_para_mantenimiento();";
                 SqlConnection conn = new SqlConnection(dp.ConnectionStringERP);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@mostrar_ocultos", pMostrarOcultos);
                 SqlDataAdapter adat = new SqlDataAdapter(cmd);
                 adat.Fill(dsUsuarios1.Usuarios);
             }
@@ -50,7 +52,7 @@ namespace ERP_INTECOLI.Usuarios
             frmUser fx = new frmUser(frmUser.TipoEdicion.Nuevo, UsuarioLogueado, "");
             if (fx.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                CargarUsuarios();
+                CargarUsuarios(toggleSwitch1.IsOn);
             }
         }
 
@@ -62,7 +64,7 @@ namespace ERP_INTECOLI.Usuarios
             frmUser frm = new frmUser(frmUser.TipoEdicion.Editar, UsuarioLogueado, row.alias);
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                CargarUsuarios();
+                CargarUsuarios(toggleSwitch1.IsOn);
             }
         }
 
@@ -74,6 +76,11 @@ namespace ERP_INTECOLI.Usuarios
 
             frmViewUser frm = new frmViewUser(row.id_usuario, row.nombre, row.habilitado, row.alias);
             frm.Show();
+        }
+
+        private void toggleSwitch1_Toggled(object sender, EventArgs e)
+        {
+            CargarUsuarios(toggleSwitch1.IsOn);
         }
     }
 }

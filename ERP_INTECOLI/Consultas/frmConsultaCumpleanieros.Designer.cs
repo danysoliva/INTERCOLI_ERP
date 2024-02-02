@@ -31,7 +31,12 @@ namespace ERP_INTECOLI.Consultas
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaCumpleanieros));
             this.gridMain = new DevExpress.XtraGrid.GridControl();
+            this.dsMiembrosClase1 = new ERP_INTECOLI.Consultas.ConsultaMiembros.dsMiembrosClase();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colfecha = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldia = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dtDesde = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -39,14 +44,10 @@ namespace ERP_INTECOLI.Consultas
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmdExportarExcel = new DevExpress.XtraEditors.SimpleButton();
-            this.colnombre = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colfecha = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coldia = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colid_estudiante = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dsMiembrosClase1 = new ERP_INTECOLI.Consultas.ConsultaMiembros.dsMiembrosClase();
+            this.cmdCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMiembrosClase1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridMain
@@ -59,10 +60,15 @@ namespace ERP_INTECOLI.Consultas
             this.gridMain.Location = new System.Drawing.Point(2, 103);
             this.gridMain.MainView = this.gridView1;
             this.gridMain.Name = "gridMain";
-            this.gridMain.Size = new System.Drawing.Size(476, 350);
+            this.gridMain.Size = new System.Drawing.Size(579, 350);
             this.gridMain.TabIndex = 34;
             this.gridMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // dsMiembrosClase1
+            // 
+            this.dsMiembrosClase1.DataSetName = "dsMiembrosClase";
+            this.dsMiembrosClase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -74,80 +80,6 @@ namespace ERP_INTECOLI.Consultas
             this.gridView1.GridControl = this.gridMain;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // dtDesde
-            // 
-            this.dtDesde.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDesde.Location = new System.Drawing.Point(78, 40);
-            this.dtDesde.Name = "dtDesde";
-            this.dtDesde.Size = new System.Drawing.Size(113, 21);
-            this.dtDesde.TabIndex = 33;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 16);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Desde:";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(207, 41);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 57);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Cargar Datos";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dtHasta
-            // 
-            this.dtHasta.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtHasta.Location = new System.Drawing.Point(78, 77);
-            this.dtHasta.Name = "dtHasta";
-            this.dtHasta.Size = new System.Drawing.Size(113, 21);
-            this.dtHasta.TabIndex = 30;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 16);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Hasta:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(143, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 25);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Cumpleañeros";
-            // 
-            // cmdExportarExcel
-            // 
-            this.cmdExportarExcel.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.cmdExportarExcel.Appearance.Options.UseFont = true;
-            this.cmdExportarExcel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.cmdExportarExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdExportarExcel.ImageOptions.Image")));
-            this.cmdExportarExcel.Location = new System.Drawing.Point(307, 41);
-            this.cmdExportarExcel.Name = "cmdExportarExcel";
-            this.cmdExportarExcel.Size = new System.Drawing.Size(143, 57);
-            this.cmdExportarExcel.TabIndex = 35;
-            this.cmdExportarExcel.Text = "Exportar a Excel";
-            this.cmdExportarExcel.Click += new System.EventHandler(this.cmdExportarExcel_Click);
             // 
             // colnombre
             // 
@@ -181,16 +113,104 @@ namespace ERP_INTECOLI.Consultas
             this.colid_estudiante.FieldName = "id_estudiante";
             this.colid_estudiante.Name = "colid_estudiante";
             // 
-            // dsMiembrosClase1
+            // dtDesde
             // 
-            this.dsMiembrosClase1.DataSetName = "dsMiembrosClase";
-            this.dsMiembrosClase1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dtDesde.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDesde.Location = new System.Drawing.Point(78, 40);
+            this.dtDesde.Name = "dtDesde";
+            this.dtDesde.Size = new System.Drawing.Size(113, 21);
+            this.dtDesde.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 16);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Desde:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(207, 41);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 57);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "Cargar Datos";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dtHasta
+            // 
+            this.dtHasta.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtHasta.Location = new System.Drawing.Point(78, 77);
+            this.dtHasta.Name = "dtHasta";
+            this.dtHasta.Size = new System.Drawing.Size(113, 21);
+            this.dtHasta.TabIndex = 30;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(28, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 16);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Hasta:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(143, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 25);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Cumpleañeros";
+            // 
+            // cmdExportarExcel
+            // 
+            this.cmdExportarExcel.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.cmdExportarExcel.Appearance.Options.UseFont = true;
+            this.cmdExportarExcel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.cmdExportarExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdExportarExcel.ImageOptions.Image")));
+            this.cmdExportarExcel.Location = new System.Drawing.Point(307, 41);
+            this.cmdExportarExcel.Name = "cmdExportarExcel";
+            this.cmdExportarExcel.Size = new System.Drawing.Size(143, 57);
+            this.cmdExportarExcel.TabIndex = 35;
+            this.cmdExportarExcel.Text = "Exportar a Excel";
+            this.cmdExportarExcel.Click += new System.EventHandler(this.cmdExportarExcel_Click);
+            // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.BackColor = System.Drawing.Color.LightSalmon;
+            this.cmdCancelar.FlatAppearance.BorderColor = System.Drawing.Color.LightSalmon;
+            this.cmdCancelar.FlatAppearance.BorderSize = 2;
+            this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.Image = global::ERP_INTECOLI.Properties.Resources.cerrar;
+            this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdCancelar.Location = new System.Drawing.Point(456, 41);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(120, 57);
+            this.cmdCancelar.TabIndex = 36;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cmdCancelar.UseVisualStyleBackColor = false;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
             // frmConsultaCumpleanieros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 454);
+            this.ClientSize = new System.Drawing.Size(582, 454);
+            this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdExportarExcel);
             this.Controls.Add(this.gridMain);
             this.Controls.Add(this.dtDesde);
@@ -202,8 +222,8 @@ namespace ERP_INTECOLI.Consultas
             this.Name = "frmConsultaCumpleanieros";
             this.Text = "frmConsultaCumpleanieros";
             ((System.ComponentModel.ISupportInitialize)(this.gridMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMiembrosClase1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +245,6 @@ namespace ERP_INTECOLI.Consultas
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private ConsultaMiembros.dsMiembrosClase dsMiembrosClase1;
+        private System.Windows.Forms.Button cmdCancelar;
     }
 }

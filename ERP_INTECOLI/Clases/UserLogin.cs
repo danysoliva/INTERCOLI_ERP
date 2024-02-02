@@ -54,6 +54,7 @@ namespace ERP_INTECOLI.Clases
         public int IdGrupo { get => _id_grupo; set => _id_grupo = value; }
         public string Apellido { get => apellido; set => apellido = value; }
         public string Primer_nombre { get => primer_nombre; set => primer_nombre = value; }
+        public bool UsuarioOculto { get; set; }
 
         private string aduser;
 
@@ -106,6 +107,7 @@ namespace ERP_INTECOLI.Clases
                     Primer_nombre = dr.GetString(10);
                     Apellido = dr.GetString(11);
                     IdGrupo = dr.GetInt32(12);
+                    UsuarioOculto = dr.GetBoolean(13);
                     x = true;
                 }
                 dr.Close();
